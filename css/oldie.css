@@ -1,93 +1,392 @@
 /*
-Syntax error: Undefined operation: "65em gte 42.5em".
-        on line 85 of /Users/simoncoudeville/Sites/netlash/chopstick/scss/mixins/_patterns.scss, in `respond-min'
-        from line 118 of /Users/simoncoudeville/Sites/netlash/chopstick/scss/_base.scss
-        from line 21 of /Users/simoncoudeville/Sites/netlash/chopstick/scss/screen.scss
-        from line 6 of /Users/simoncoudeville/Sites/netlash/chopstick/scss/oldie.scss
-
-Backtrace:
-/Users/simoncoudeville/Sites/netlash/chopstick/scss/mixins/_patterns.scss:85:in `respond-min'
-/Users/simoncoudeville/Sites/netlash/chopstick/scss/_base.scss:118
-/Users/simoncoudeville/Sites/netlash/chopstick/scss/screen.scss:21
-/Users/simoncoudeville/Sites/netlash/chopstick/scss/oldie.scss:6
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/script/operation.rb:93:in `_perform'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/script/node.rb:40:in `perform'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:202:in `visit_if'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:203:in `visit_if'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:264:in `visit_mixin'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:264:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:264:in `visit_mixin'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:264:in `visit_mixin'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:68:in `perform_arguments'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:259:in `visit_mixin'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:224:in `visit_import'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:224:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:224:in `visit_import'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:224:in `visit_import'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:224:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:224:in `visit_import'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:126:in `visit_root'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/engine.rb:315:in `_render'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/engine.rb:262:in `render'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `compile'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `compile'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/update_project.rb:45:in `perform'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:30
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:44:in `call'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:44
-/usr/bin/compass:19:in `load'
-/usr/bin/compass:19
+	oldie
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined operation: \"65em gte 42.5em\".\A         on line 85 of /Users/simoncoudeville/Sites/netlash/chopstick/scss/mixins/_patterns.scss, in `respond-min'\A         from line 118 of /Users/simoncoudeville/Sites/netlash/chopstick/scss/_base.scss\A         from line 21 of /Users/simoncoudeville/Sites/netlash/chopstick/scss/screen.scss\A         from line 6 of /Users/simoncoudeville/Sites/netlash/chopstick/scss/oldie.scss"; }
+/*
+	Chopstick settings
+*/
+/*
+	chopstick grid
+*/
+.test {
+  width: 20em;
+}
+
+/*
+	Chopstick typography mixins 
+*/
+/*
+	Chopstick patterns
+*/
+.row, .header .inner, .main-nav {
+  *zoom: 1;
+}
+.row:before, .header .inner:before, .main-nav:before, .row:after, .header .inner:after, .main-nav:after {
+  display: table;
+  content: "";
+}
+.row:after, .header .inner:after, .main-nav:after {
+  clear: both;
+}
+
+/*
+	reset
+*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+/*
+	base
+*/
+html {
+  background-color: white;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font: 500 16px/1.5 georgia, times, serif;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -moz-font-feature-settings: "liga", "dlig";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  -webkit-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  color: #333333;
+}
+
+::-moz-selection {
+  background-color: #333333;
+  color: #d9d9d9;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #333333;
+  color: #d9d9d9;
+  text-shadow: none;
+}
+
+/*
+	base typography
+*/
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-rendering: optimizelegibility;
+}
+
+h1,
+.h1 {
+  font-size: 2.375em;
+  line-height: 1.10526em;
+  margin-bottom: 0.63158em;
+}
+
+h2,
+.h2 {
+  font-size: 1.5em;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+
+h3,
+.h3 {
+  font-size: 1.25em;
+  line-height: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+h4,
+.h4 {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  margin-bottom: 1.33333em;
+}
+
+h5,
+.h5 {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  margin-bottom: 0.66667em;
+}
+
+p,
+ol,
+ul,
+dl,
+address {
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/*
+ 	base links
+*/
+a {
+  text-decoration: none;
+  color: red;
+}
+a:visited {
+  color: #990000;
+}
+a:hover {
+  text-decoration: underline;
+  color: #cc0000;
+}
+a:focus {
+  outline: thin dotted;
+  color: #660000;
+}
+a:hover, a:active {
+  outline: 0;
+}
+
+/* media queries
+------------------------------------------ */
+@media screen and (min-width: 30em) {
+  h1 {
+    font-size: 3em;
+    line-height: 1em;
+    margin-bottom: 0.5em;
+  }
+}
+@media screen and (min-width: 42.5em) {
+  body {
+    font-size: 112.5%;
+  }
+}
+@media screen and (min-width: 75em) {
+  body {
+    font-size: 125%;
+  }
+}
+/*
+	Chopstick frame
+*/
+.holder {
+  padding-top: 1.5em;
+  padding-bottom: 0em;
+}
+
+.row {
+  margin: 0 auto;
+  max-width: 33em;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*
+	header
+*/
+.logo {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.header .inner {
+  border-bottom: 1px solid #cccccc;
+}
+
+.main-nav {
+  list-style: none;
+  margin-left: 0;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/*
+	doormat
+*/
+.doormat-holder {
+  padding-bottom: 1.5em;
+}
+
+/* 
+	footer
+*/
+.footer-holder {
+  background-color: #e6e6e6;
+  padding-top: 1.5em;
+}
+
+/* media queries
+------------------------------------------ */
+@media screen and (min-width: 42.5em) {
+  .row {
+    padding: 0;
+  }
+
+  .logo {
+    float: left;
+    font-size: 0.875em;
+    line-height: 1.71429em;
+    margin-bottom: 1.71429em;
+  }
+
+  .main-nav {
+    float: right;
+    font-size: 0.875em;
+    line-height: 1.71429em;
+    margin-bottom: 1.71429em;
+  }
+  .main-nav li, .main-nav a {
+    display: block;
+    float: left;
+    zoom: 1;
+  }
+  .main-nav li {
+    margin-left: 30px;
+    margin-right: 0px;
+  }
+  .main-nav a {
+    color: #ff6666;
+    text-decoration: none;
+  }
+  .main-nav a:hover,
+  .main-nav .selected a {
+    color: #cc0000;
+  }
+
+  .intro-holder {
+    padding-top: 3em;
+  }
+}
+@media screen and (min-width: 60em) {
+  .holder {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+
+  .header {
+    width: 100%;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .row {
+    max-width: 1260px;
+  }
+
+  .doormat-holder {
+    padding-bottom: 3em;
+  }
+
+  .doormat-col-4 {
+    width: 50%;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .footer-holder {
+    padding-bottom: 0;
+  }
+
+  .footer {
+    width: 100%;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (min-width: 75em) {
+  .doormat-col-4 {
+    width: 33.33333%;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+/*
+	module: main
+*/
+/* media queries
+------------------------------------------ */
+@media screen and (min-width: 60em) {
+  .main-col-6 {
+    width: 50%;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .main-content {
+    width: 66.66667%;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+/*
+	module: intro
+*/
+.intro h1 {
+  font-weight: 300;
+}
+.intro p {
+  font-style: italic;
+}
+
+@media screen and (min-width: 60em) {
+  .intro-holder {
+    padding-top: 3em;
+  }
+
+  .intro h1 {
+    font-size: 4.5em;
+    line-height: 1em;
+    margin-bottom: 0.33333em;
+  }
+
+  .intro {
+    width: 100%;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

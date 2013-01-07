@@ -1,33 +1,33 @@
 
-/* Compass imports */
+// Compass imports
 
 @import "compass";
-//@import "compass/reset";
+//@import "compass/reset"; crazy shit
 
-/* chopstick settings */
+// chopstick settings 
 
 @import "settings";
 
-/* chopstick mixins */
+// chopstick mixins 
 
 @import "mixins/grid";
 @import "mixins/typography";
 @import "mixins/ui";
 @import "mixins/patterns";
 
-/* theme */
+// theme 
 
 @import "reset";
 @import "base";
 @import "frame";
 @import "usercontent";
 
-/* modules */
+// modules
 
 @import "modules/main";
 @import "modules/intro";
 
-/* print */
+// print 
 
 @import "print";
 

@@ -52,7 +52,7 @@ h5 {
 
 h1,
 .h1 { 
-	@include font-dimensions(40,2,1);
+	@include font-dimensions(38,1.75,1);
 }
 
 h2,
@@ -114,6 +114,14 @@ a {
 
 /* media queries
 ------------------------------------------ */
+
+@include respond-min($bp-min-w2-em) {
+	
+	h1 {
+		@include font-dimensions(48,2,1);
+	}
+
+}
 
 @include respond-min($bp-min-w3-em) {
 	

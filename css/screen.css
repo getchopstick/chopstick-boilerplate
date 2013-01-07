@@ -1,15 +1,12 @@
-/* Compass imports */
-/* chopstick settings */
 /*
 	Chopstick settings
 */
-/* chopstick mixins */
 /*
 	chopstick grid
 */
-/* line 33, ../scss/mixins/_grid.scss */
-.header, .doormat-col-3, .footer, .main-col-6, .main-col-4, .intro {
-  float: left; }
+.test {
+  width: 20em;
+}
 
 /*
 	Chopstick typography mixins 
@@ -17,22 +14,20 @@
 /*
 	Chopstick patterns
 */
-/* line 8, ../scss/mixins/_patterns.scss */
-.row, .main-nav {
-  *zoom: 1; }
-  /* line 12, ../scss/mixins/_patterns.scss */
-  .row:before, .main-nav:before, .row:after, .main-nav:after {
-    display: table;
-    content: ""; }
-  /* line 17, ../scss/mixins/_patterns.scss */
-  .row:after, .main-nav:after {
-    clear: both; }
+.row, .header .inner, .main-nav {
+  *zoom: 1;
+}
+.row:before, .header .inner:before, .main-nav:before, .row:after, .header .inner:after, .main-nav:after {
+  display: table;
+  content: "";
+}
+.row:after, .header .inner:after, .main-nav:after {
+  clear: both;
+}
 
-/* theme */
 /*
 	reset
 */
-/* line 5, ../scss/_reset.scss */
 html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -40,23 +35,23 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
-  background: transparent; }
+  background: transparent;
+}
 
-/* line 8, ../scss/_reset.scss */
 article, aside, figure, footer, header, hgroup, nav, section {
-  display: block; }
+  display: block;
+}
 
 /*
 	base
 */
-/* line 5, ../scss/_base.scss */
 html {
   background-color: white;
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
+  -ms-text-size-adjust: 100%;
+}
 
-/* line 12, ../scss/_base.scss */
 body {
   font: 500 16px/1.5 georgia, times, serif;
   -moz-font-feature-settings: "liga=1, dlig=1";
@@ -68,24 +63,24 @@ body {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizelegibility;
-  color: #333333; }
+  color: #333333;
+}
 
-/* line 26, ../scss/_base.scss */
 ::-moz-selection {
   background-color: #333333;
   color: #d9d9d9;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
-/* line 32, ../scss/_base.scss */
 ::selection {
   background-color: #333333;
   color: #d9d9d9;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
 /*
 	base typography
 */
-/* line 46, ../scss/_base.scss */
 h1,
 h2,
 h3,
@@ -94,229 +89,301 @@ h5 {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 700;
-  text-rendering: optimizelegibility; }
+  text-rendering: optimizelegibility;
+}
 
-/* line 54, ../scss/_base.scss */
 h1,
 .h1 {
-  font-size: 2.5em;
-  line-height: 1.2em;
-  margin-bottom: 0.6em; }
+  font-size: 2.375em;
+  line-height: 1.10526em;
+  margin-bottom: 0.63158em;
+}
 
-/* line 59, ../scss/_base.scss */
 h2,
 .h2 {
   font-size: 1.5em;
   line-height: 1em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+}
 
-/* line 64, ../scss/_base.scss */
 h3,
 .h3 {
   font-size: 1.25em;
   line-height: 1.2em;
-  margin-bottom: 1.2em; }
+  margin-bottom: 1.2em;
+}
 
-/* line 69, ../scss/_base.scss */
 h4,
 .h4 {
   font-size: 1.125em;
   line-height: 1.33333em;
-  margin-bottom: 1.33333em; }
+  margin-bottom: 1.33333em;
+}
 
-/* line 74, ../scss/_base.scss */
 h5,
 .h5 {
   font-size: 1.125em;
   line-height: 1.33333em;
-  margin-bottom: 0.66667em; }
+  margin-bottom: 0.66667em;
+}
 
-/* line 82, ../scss/_base.scss */
 p,
 ol,
 ul,
 dl,
 address {
   line-height: 1.5em;
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+}
 
 /*
  	base links
 */
-/* line 91, ../scss/_base.scss */
 a {
   text-decoration: none;
-  color: red; }
-  /* line 95, ../scss/_base.scss */
-  a:visited {
-    color: #990000; }
-  /* line 99, ../scss/_base.scss */
-  a:hover {
-    text-decoration: underline;
-    color: #cc0000; }
-  /* line 104, ../scss/_base.scss */
-  a:focus {
-    outline: thin dotted;
-    color: #660000; }
-  /* line 110, ../scss/_base.scss */
-  a:hover, a:active {
-    outline: 0; }
+  color: red;
+}
+a:visited {
+  color: #990000;
+}
+a:hover {
+  text-decoration: underline;
+  color: #cc0000;
+}
+a:focus {
+  outline: thin dotted;
+  color: #660000;
+}
+a:hover, a:active {
+  outline: 0;
+}
 
 /* media queries
 ------------------------------------------ */
+@media screen and (min-width: 30em) {
+  h1 {
+    font-size: 3em;
+    line-height: 1em;
+    margin-bottom: 0.5em;
+  }
+}
 @media screen and (min-width: 42.5em) {
-  /* line 120, ../scss/_base.scss */
   body {
-    font-size: 112.5%; } }
+    font-size: 112.5%;
+  }
+}
 @media screen and (min-width: 75em) {
-  /* line 128, ../scss/_base.scss */
   body {
-    font-size: 125%; } }
+    font-size: 125%;
+  }
+}
 /*
-	frame
+	Chopstick frame
 */
-/* line 5, ../scss/_frame.scss */
 .holder {
   padding-top: 1.5em;
-  padding-bottom: 1.5em; }
+  padding-bottom: 0em;
+}
 
-/* line 9, ../scss/_frame.scss */
 .row {
   margin: 0 auto;
-  max-width: 33em; }
-
-/* line 15, ../scss/_frame.scss */
-.header, .doormat-col-3, .footer, .main-col-6, .main-col-4, .intro {
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  max-width: 33em;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+}
 
 /*
 	header
 */
-/* line 23, ../scss/_frame.scss */
 .logo {
   font-size: 1em;
   line-height: 1.5em;
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+}
 
-/* line 31, ../scss/_frame.scss */
+.header .inner {
+  border-bottom: 1px solid #cccccc;
+}
+
 .main-nav {
   list-style: none;
   margin-left: 0;
   font-size: 1em;
   line-height: 1.5em;
   margin-bottom: 1.5em;
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: Helvetica, Arial, sans-serif;
+}
 
 /*
 	doormat
 */
+.doormat-holder {
+  padding-bottom: 1.5em;
+}
+
 /* 
 	footer
 */
+.footer-holder {
+  background-color: #e6e6e6;
+  padding-top: 1.5em;
+}
+
 /* media queries
 ------------------------------------------ */
 @media screen and (min-width: 42.5em) {
-  /* line 59, ../scss/_frame.scss */
+  .row {
+    padding: 0;
+  }
+
   .logo {
     float: left;
     font-size: 0.875em;
     line-height: 1.71429em;
-    margin-bottom: 1.71429em; }
+    margin-bottom: 1.71429em;
+  }
 
-  /* line 64, ../scss/_frame.scss */
   .main-nav {
     float: right;
     font-size: 0.875em;
     line-height: 1.71429em;
-    margin-bottom: 1.71429em; }
-    /* line 31, ../scss/mixins/_patterns.scss */
-    .main-nav li, .main-nav a {
-      display: block;
-      float: left;
-      zoom: 1; }
-    /* line 69, ../scss/_frame.scss */
-    .main-nav li {
-      margin-left: 30px;
-      margin-right: 0px; } }
+    margin-bottom: 1.71429em;
+  }
+  .main-nav li, .main-nav a {
+    display: block;
+    float: left;
+    zoom: 1;
+  }
+  .main-nav li {
+    margin-left: 30px;
+    margin-right: 0px;
+  }
+  .main-nav a {
+    color: #ff6666;
+    text-decoration: none;
+  }
+  .main-nav a:hover,
+  .main-nav .selected a {
+    color: #cc0000;
+  }
+
+  .intro-holder {
+    padding-top: 3em;
+  }
+}
 @media screen and (min-width: 60em) {
-  /* line 79, ../scss/_frame.scss */
+  .holder {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+
   .header {
     width: 100%;
+    float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 30px;
-    padding-right: 30px; }
+    padding-right: 30px;
+  }
 
-  /* line 83, ../scss/_frame.scss */
   .row {
-    max-width: 1260px; }
+    max-width: 1260px;
+  }
 
-  /* line 87, ../scss/_frame.scss */
-  .doormat-col-3 {
+  .doormat-holder {
+    padding-bottom: 3em;
+  }
+
+  .doormat-col-4 {
     width: 50%;
+    float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 30px;
-    padding-right: 30px; }
+    padding-right: 30px;
+  }
 
-  /* line 91, ../scss/_frame.scss */
+  .footer-holder {
+    padding-bottom: 0;
+  }
+
   .footer {
     width: 100%;
+    float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 30px;
-    padding-right: 30px; } }
+    padding-right: 30px;
+  }
+}
 @media screen and (min-width: 75em) {
-  /* line 99, ../scss/_frame.scss */
-  .doormat-col-3 {
-    width: 25%;
+  .doormat-col-4 {
+    width: 33.33333%;
+    float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 30px;
-    padding-right: 30px; } }
-/* modules */
+    padding-right: 30px;
+  }
+}
 /*
 	module: main
 */
 /* media queries
 ------------------------------------------ */
 @media screen and (min-width: 60em) {
-  /* line 22, ../scss/modules/_main.scss */
   .main-col-6 {
     width: 50%;
+    float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 30px;
-    padding-right: 30px; }
+    padding-right: 30px;
+  }
 
-  /* line 26, ../scss/modules/_main.scss */
-  .main-col-4 {
-    width: 33.33333%;
+  .main-content {
+    width: 66.66667%;
+    float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 30px;
-    padding-right: 30px; } }
+    padding-right: 30px;
+  }
+}
 /*
 	module: intro
 */
+.intro h1 {
+  font-weight: 300;
+}
+.intro p {
+  font-style: italic;
+}
+
 @media screen and (min-width: 60em) {
-  /* line 11, ../scss/modules/_intro.scss */
+  .intro-holder {
+    padding-top: 3em;
+  }
+
+  .intro h1 {
+    font-size: 4.5em;
+    line-height: 1em;
+    margin-bottom: 0.33333em;
+  }
+
   .intro {
     width: 100%;
+    float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 30px;
-    padding-right: 30px; } }
-/* print */
+    padding-right: 30px;
+  }
+}
