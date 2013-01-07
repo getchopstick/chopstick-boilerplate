@@ -1,0 +1,69 @@
+/*
+	chopstick grid
+*/
+
+// breakpoints calculated in em's
+
+$bp-min-w1-em: #{$bp-min-w1 / $basefontsize}em;
+$bp-min-w2-em: #{$bp-min-w2 / $basefontsize}em;
+$bp-min-w3-em: #{$bp-min-w3 / $basefontsize}em;
+$bp-min-w4-em: #{$bp-min-w4 / $basefontsize}em;
+$bp-min-w5-em: #{$bp-min-w5 / $basefontsize}em;
+
+// calculations
+
+$contextGridMargin: $contextGridGutter / 2;
+$contextGridWidth: ($contextGridGutter + $contextGridColumn) * $contextGridColumns - $contextGridGutter;
+$contextGridSubTotalWidth: $contextGridWidth + $contextGridGutter;
+$contextGridTotalWidth: $contextGridWidth + ($contextGridGutter * 2);
+
+// in em's based on the font-size
+
+$contextGridEmWidth: $contextGridWidth / $basefontsize;
+$contextGridSubTotalEmWidth: $contextGridSubTotalWidth / $basefontsize;
+
+// Responsive design formula in action
+
+$fluidGridColumn: $contextGridColumn / $contextGridSubTotalWidth * 100 ;
+$fluidGridGutter: ($contextGridGutter / $contextGridSubTotalWidth) * 100 ;
+$fluidGridMargin: (($contextGridGutter / 2) / $contextGridSubTotalWidth) * 100 ;
+
+// mixins
+
+%float-left {
+	float: left;
+}
+
+// horizontal padding based on the context grid gutter
+// use: @include px-padding-lr(#left, #right);
+
+@mixin px-padding-lr($left: 1, $right: 1) {
+	padding-left: $contextGridMargin * $left * 1px;
+	padding-right: $contextGridMargin * $right * 1px;
+}
+
+// horizontal margin based on the context grid gutter
+// use: @include px-margin-lr(#left, #right);
+
+@mixin px-margin-lr($left: 1, $right: 1) {
+	margin-left: $contextGridMargin * $left * 1px;
+	margin-right: $contextGridMargin * $right * 1px;
+}
+
+// classic border-box model
+// use: @include col-(#amount) + include an extra div and include px-padding-lr(#left, #right)
+
+@mixin col-($amount) {
+	width: ($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%; 
+	@extend %float-left;
+}
+
+// border-box box sizing
+// use: @include box-(#amount, #gutterleft, #gutterright);
+
+@mixin box-($amount, $left, $right) {
+	width: ($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%; 
+	@extend %float-left;
+	@include box-sizing(border-box);
+	@include px-padding-lr($left, $right);
+}

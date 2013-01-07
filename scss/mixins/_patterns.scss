@@ -1,0 +1,102 @@
+/*
+	Chopstick patterns
+*/
+
+// clearfix
+// use: @extend %clearfix;
+
+%clearfix {
+	*zoom : 1;
+	
+	&:before,
+	&:after {
+		display: table;
+		content : ""; 
+	}
+	
+	&:after {
+		clear : both; 
+	} 
+}
+
+// horizontal responsive navigation
+// use @include list-nav() / horizontal-nav;
+
+@mixin list-nav {
+	list-style: none;
+	margin-left: 0;
+}
+
+@mixin horizontal-nav {
+	li, a {
+		display: block;
+		float: left;
+		zoom: 1;
+	}
+}
+
+// baseline mixins
+
+// vertical padding based on the base line-height
+// use: @include padding-tb(#top, #bottom);
+
+@mixin padding-tb($top: 1, $bottom: 0) {
+	padding-top: $baselineheight * 1em * $top;
+	padding-bottom: $baselineheight * 1em * $bottom;
+}
+
+// padding-bottom based on the base line-height
+// use: @include padding-bottom(#bottom),
+
+@mixin padding-bottom($bottom: 1) {
+	padding-bottom: $baselineheight * 1em * $bottom;
+}
+
+// padding-top based on the base line-height
+// @include padding-top(#top);
+
+@mixin padding-top($top: 1) {
+	padding-bottom: $baselineheight * 1em * $top;
+}
+
+// vertical margin based on the base line-height
+// use: @include margin-tb(#top, #bottom)
+
+@mixin margin-tb($top: 1, $bottom: 0) {
+	margin-top: $baselineheight * 1em * $top;
+	margin-bottom: $baselineheight * 1em * $bottom;
+}
+
+// margin-bottom based on the base line-height
+// use: @include margin-bottom(#bottom)
+
+@mixin margin-bottom($bottom: 1) {
+	margin-bottom: $baselineheight * 1em * $bottom;
+}
+
+// Media query fix for old ie browsers by Jake Archibald
+// http://jakearchibald.github.com/sass-ie/
+// use: @include respond-min(#width);
+
+$fix-mqs: false !default;
+
+@mixin respond-min($width) {
+    @if $fix-mqs {
+        @if $fix-mqs >= $width {
+            @content;
+        }
+    }
+    @else {
+        @media screen and (min-width: $width) {
+            @content;
+        }
+    }
+}
+
+$old-ie: false !default;
+
+@mixin old-ie {
+    @if $old-ie {
+        @content;
+    }
+}

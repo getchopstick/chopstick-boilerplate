@@ -1,0 +1,15 @@
+/*
+	module: intro
+*/
+
+.intro {
+	@extend %mobile-col;
+}
+
+@include respond-min($bp-min-w4-em) {
+	
+	.intro {
+		@include box-(12,1,1);
+	}
+
+}

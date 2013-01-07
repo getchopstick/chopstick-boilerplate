@@ -1,0 +1,30 @@
+/*
+	module: main
+*/
+
+.main-col-6 {
+	@extend %mobile-col;
+}
+
+.main-col-4 {
+	@extend %mobile-col;
+}
+
+/* media queries
+------------------------------------------ */
+
+@include respond-min($bp-min-w3-em) {
+	
+}
+
+@include respond-min($bp-min-w4-em) {
+	
+	.main-col-6 {
+		@include box-(6,1,1);
+	}
+	
+	.main-col-4 {
+		@include box-(4,1,1);
+	}
+	
+}
