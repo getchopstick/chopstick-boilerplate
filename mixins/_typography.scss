@@ -1,38 +1,18 @@
-// Chopstick typography mixins 
+/*
+	Chopstick typography mixins 
+*/
+
+// baseline formula based on the baseline unit
+// use: @include font-dimensions(#font-size, #line-height, #margin-bottom, #padding-top)
 
 $baseline-unit: $basefontsize * $baselineheight;
 $basefontpercent: $basefontsize/16 * 100;
-
-// baseline formula
-
-@mixin font-size($font-size: 16){
-	font-size : #{$font-size / $basefontsize}em; 
-	margin-bottom: #{$baseline-unit / $font-size}em;
-	@if $font-size > ($baseline-unit * 5) {
-		line-height: ($baseline-unit / $font-size) * 6em;
-	}
-	@else if $font-size > ($baseline-unit * 4) {
-		line-height: ($baseline-unit / $font-size) * 5em;
-	}
-	@else if $font-size > ($baseline-unit * 3) {
-		line-height: ($baseline-unit / $font-size) * 4em;
-	}
-	@else if $font-size > ($baseline-unit * 2) {
-		line-height: ($baseline-unit / $font-size) * 3em;
-	}
-	@else if $font-size > $baseline-unit {
-		line-height: ($baseline-unit / $font-size) * 2em;
-	}
-	@else {
-		line-height: ($baseline-unit / $font-size) * 1em;
-	}
-}
-
-// custom baseline formula based on the baseline unit
 
 @mixin font-dimensions($fs: 18, $lh: 1, $mb: 1, $pt: 0){
 	font-size : #{$fs / $basefontsize}em; 
 	line-height: #{($baseline-unit / $fs) * $lh}em;
 	margin-bottom: #{($baseline-unit / $fs) * $mb}em;
-	padding-top: #{($baseline-unit / $fs) * $pt}em;
+	@if $pt > 0 {
+		padding-top: #{($baseline-unit / $fs) * $pt}em;
+	}
 }

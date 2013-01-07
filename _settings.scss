@@ -1,37 +1,39 @@
-// Chopstick settings
+/*
+	Chopstick settings
+*/
 
 // grid
 
-$contextGridGutter: 60;
-$contextGridColumn: 50;
-$contextGridColumns: 12;
+$contextGridGutter	: 60;
+$contextGridColumn	: 40;
+$contextGridColumns	: 12;
 
 // breakpoints
 
 $bp-min-w1: 320;
 $bp-min-w2: 480;
-$bp-min-w3: 768;
-$bp-min-w4: 992;
+$bp-min-w3: 680;
+$bp-min-w4: 960;
 $bp-min-w5: 1200;
 
 // typography
 
-$basefont : Helvetica, Arial, sans-serif;
-$basefontserif: georgia, times, serif;
-$basefontsize : 16;
-$basefontweight: 500;
-$baselineheight : 1.5;
-$baseheadingfont : $basefont;
-$baseheadingfontweight : 700;
+$basefont 				: Helvetica, Arial, sans-serif;
+$basefontserif			: georgia, times, serif;
+$basefontsize 			: 16;
+$basefontweight			: 500;
+$baselineheight 		: 1.5;
+$baseheadingfont 		: $basefont;
+$baseheadingfontweight 	: 700;
 
 // color palette
 
-$color1	: white;
-$color2	: #333;
-$color3	: red;
+$color1		: white;
+$color2		: #333;
+$color3		: red;
 
-$bodycolor 		: $color1;
-$textcolor		: $color2;
+$bodycolor 	: $color1;
+$textcolor	: $color2;
 
 // Links
 

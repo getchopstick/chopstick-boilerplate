@@ -1,8 +1,8 @@
 
 /* Compass imports */
 
-@import "compass/CSS3";
-@import "compass/reset";
+@import "compass";
+//@import "compass/reset";
 
 /* chopstick settings */
 
@@ -17,13 +17,15 @@
 
 /* theme */
 
+@import "reset";
 @import "base";
 @import "frame";
 @import "usercontent";
 
 /* modules */
 
-@import "modules/module";
+@import "modules/main";
+@import "modules/intro";
 
 /* print */
 

@@ -1,0 +1,103 @@
+/*
+	frame
+*/
+
+.holder {
+	@include padding-tb(1,1);
+}
+
+.row {
+	@extend %clearfix;
+	margin: 0 auto;
+	max-width: 33em;
+}
+
+%mobile-col {
+	@include box-(12,.5,.5);
+}
+
+/*
+	header
+*/
+
+.logo {
+	@include font-dimensions(16,1,1);
+}
+
+.header {
+	@extend %mobile-col;
+}
+
+.main-nav {
+	@include list-nav();
+	@include font-dimensions(16,1,1);
+	font-family: $basefont;
+	@extend %clearfix;
+}
+
+/*
+	doormat
+*/
+
+.doormat-col-3 {
+	@extend %mobile-col;
+}
+
+/* 
+	footer
+*/
+
+.footer {
+	@extend %mobile-col;
+}
+
+/* media queries
+------------------------------------------ */
+
+@include respond-min($bp-min-w3-em) {
+	
+	.logo {
+		float: left;
+		@include font-dimensions(14,1,1);
+	}
+	
+	.main-nav {	
+		@include horizontal-nav();
+		float: right;
+		@include font-dimensions(14,1,1);
+		
+		li {
+			@include px-margin-lr(1,0);
+		}
+		
+	}
+	
+}
+
+@include respond-min($bp-min-w4-em) {
+	
+	.header {
+		@include box-(12,1,1);
+	}
+	
+	.row {
+		max-width: #{$contextGridTotalWidth}px;
+	}
+	
+	.doormat-col-3 {
+		@include box-(6,1,1);
+	}
+	
+	.footer {
+		@include box-(12,1,1);
+	}
+	
+}
+
+@include respond-min($bp-min-w5-em) {
+	
+	.doormat-col-3 {
+		@include box-(3,1,1);
+	}
+	
+}
