@@ -1,0 +1,181 @@
+/* Compass imports */
+/* line 17, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* chopstick settings */
+/* chopstick mixins */
+/* theme */
+/*
+	base
+*/
+/* line 5, ../scss/_base.scss */
+html {
+  background-color: white;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/* line 12, ../scss/_base.scss */
+body {
+  font: 500 16px/1.5 georgia, times, serif;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -moz-font-feature-settings: "liga", "dlig";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  -webkit-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  color: #333333; }
+
+/* line 26, ../scss/_base.scss */
+::-moz-selection {
+  background-color: #333333;
+  color: #d9d9d9;
+  text-shadow: none; }
+
+/* line 32, ../scss/_base.scss */
+::selection {
+  background-color: #333333;
+  color: #d9d9d9;
+  text-shadow: none; }
+
+/*
+	base typography
+*/
+/* line 45, ../scss/_base.scss */
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-rendering: optimizelegibility; }
+
+/* line 53, ../scss/_base.scss */
+h1,
+.h1 {
+  font-size: 2.5em;
+  line-height: 1.2em;
+  margin-bottom: 0.6em;
+  padding-top: 0em; }
+
+/* line 58, ../scss/_base.scss */
+h2,
+.h2 {
+  font-size: 1.5em;
+  line-height: 1em;
+  margin-bottom: 1em;
+  padding-top: 0em; }
+
+/* line 63, ../scss/_base.scss */
+h3,
+.h3 {
+  font-size: 1.375em;
+  margin-bottom: 1.09091em;
+  line-height: 1.09091em; }
+
+/* line 68, ../scss/_base.scss */
+h4,
+.h4 {
+  font-size: 1.25em;
+  line-height: 1.2em;
+  margin-bottom: 1.2em;
+  padding-top: 0em; }
+
+/* line 73, ../scss/_base.scss */
+h5,
+.h5 {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  margin-bottom: 0.66667em;
+  padding-top: 0em; }
+
+/* line 81, ../scss/_base.scss */
+p,
+ol,
+ul,
+dl,
+address {
+  line-height: 1.5em;
+  margin-bottom: 1.5em; }
+
+/*
+ 	base links
+*/
+/* line 90, ../scss/_base.scss */
+a {
+  text-decoration: none;
+  color: red; }
+  /* line 94, ../scss/_base.scss */
+  a:visited {
+    color: #990000; }
+  /* line 98, ../scss/_base.scss */
+  a:hover {
+    text-decoration: underline;
+    color: #cc0000; }
+  /* line 103, ../scss/_base.scss */
+  a:focus {
+    outline: thin dotted;
+    color: #660000; }
+  /* line 109, ../scss/_base.scss */
+  a:hover, a:active {
+    outline: 0; }
+
+/* modules */
+/* print */

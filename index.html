@@ -1,0 +1,219 @@
+<!doctype html>
+
+<!-- HTML5 Mobile Boilerplate -->
+<!--[if IEMobile 7]><html class="no-js iem7"><![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
+<!-- HTML5 Boilerplate -->
+<!--[if lt IE 7]><html class="no-js oldie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js oldie lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js oldie lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+
+<title>Chopstick: SASS responsive grid system</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/screen.css">
+
+<!--[if (lt IE 9) & (!IEMobile)]>
+	<link rel="stylesheet" href="/css/oldie.css">
+<![endif]-->
+
+<!-- Customize modernizr !-->
+<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+<!-- For iPhone 4 -->
+<!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon.png"> -->
+<!-- For iPad 1-->
+<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon.png"> -->
+<!-- For the new iPad -->
+<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png"> -->
+<!-- For iPhone 3G, iPod Touch and Android -->
+<!-- <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png"> -->
+<!-- For Nokia -->
+<!-- <link rel="shortcut icon" href="img/apple-touch-icon.png"> -->
+<!-- For everything else -->
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta http-equiv="cleartype" content="on">
+</head>
+
+<body>
+<div class="holder intro-holder">
+	<div class="row header-row">
+		<div class="col-12">
+			<div class="inner">
+				<h1 class="logo">chopstick</h1>
+				<ul class="nav main-nav">
+					<li class="selected"><a href="#">Features</a></li>
+					<li><a href="#">Test page</a></li>
+					<li><a href="#">Docs</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<section class="row intro-row">
+		<div class="col-12">
+			<div class="inner intro">
+				<h1>Responsive frontend goodness.</h1>
+				<p class="tagline">Made by the kickass design team at Wijs</p>
+			</div>
+		</div>
+	</section>
+</div>
+<div class="holder main-holder">
+	<div class="row">
+		<div class="col-6 firstcol">
+			<div class="inner">
+				<h2>Generate your own fluid grid</h2>
+				<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+			</div>
+		</div>
+		<div class="col-6 lastcol">
+			<div class="inner">
+				<h2>Lorem ipsum dolor sit amet consectetuer.</h2>
+				<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-4 firstcol">
+			<div class="inner">
+				<h3>Fluid columns, fixed gutters</h3>
+				<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+			</div>
+		</div>
+		<div class="col-4">
+			<div class="inner">
+				<h3>Lorem dolor sit amet</h3>
+				<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+			</div>
+		</div>
+		<div class="col-4 lastcol">
+			<div class="inner">
+				<h3>Lorem ipsum sit amet</h3>
+				<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-8 row firstcol">
+			<div class="col-6 lastcol">
+				<div class="inner">
+					<h3>nested col-6 inside col-8</h3>
+					<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+				</div>
+			</div>
+			<div class="col-6 lastcol">
+				<div class="inner">
+					<h3>nested col-6 inside col-8</h3>
+					<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-4 lastcol">
+			<div class="inner">
+				<h3>col-4</h3>
+				<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-3 oddcol firstcol">
+			<div class="inner">
+				<h3>Lorem ipsum dolor sit</h3>
+				<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+			</div>
+		</div>
+		<div class="col-3 evencol">
+			<div class="inner">
+				<h3>Lorem dolor sit amet</h3>
+				<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+			</div>
+		</div>
+			<div class="col-3 oddcol">
+				<div class="inner">
+					<h3>Lorem dolor sit amet</h3>
+					<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+				</div>
+			</div>
+		<div class="col-3 evencol lastcol">
+			<div class="inner">
+				<h3>Lorem ipsum sit amet</h3>
+				<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="holder doormat-holder">
+	<div class="row doormat-row">
+		<div class="col-4 firstcol">
+			<div class="inner">
+				<h3>Lorem ipsum dolor sit</h3>
+				<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+			</div>
+		</div>
+		<div class="col-4">
+			<div class="inner">
+				<h3>Lorem dolor sit amet</h3>
+				<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+			</div>
+		</div>
+		<div class="col-4 lastcol">
+			<div class="inner">
+				<h3>Lorem ipsum sit amet</h3>
+				<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="holder doormat-holder">
+	<div class="row doormat-row">
+		<div class="col-85 firstcol">
+			<div class="inner">
+				<h3>Lorem ipsum dolor sit</h3>
+				<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+			</div>
+		</div>
+		<div class="col-35">
+			<div class="inner">
+				<h3>Lorem dolor sit amet</h3>
+				<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="holder footer-holder">
+	<div class="row footer-row">
+		<div class="col-12">
+			<div class="inner">
+				<p>&copy; 2012 Simon Coudeville</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.8.3.min.js"><\/script>')</script>
+
+
+<script src="js/plugins.js"></script>
+<script src="js/script-ck.js"></script>
+<script src="js/helper-ck.js"></script>
+<script>
+var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+s.parentNode.insertBefore(g,s)}(document,"script"));
+</script>
+</body>
+</html>
