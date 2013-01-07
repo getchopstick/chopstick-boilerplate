@@ -3,10 +3,26 @@
 */
 
 .intro {
-	@extend %mobile-col;
+	
+	h1 {
+		font-weight: 300;
+	}
+	
+	p {
+		font-style: italic;
+	}
+	
 }
 
 @include respond-min($bp-min-w4-em) {
+	
+	.intro-holder {
+		@include padding-top(2);
+	}
+	
+	.intro h1 {
+		@include font-dimensions(72,3,1);
+	}
 	
 	.intro {
 		@include box-(12,1,1);

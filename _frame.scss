@@ -1,19 +1,16 @@
 /*
-	frame
+	Chopstick frame
 */
 
 .holder {
-	@include padding-tb(1,1);
+	@include padding-tb(1,0);
 }
 
 .row {
 	@extend %clearfix;
 	margin: 0 auto;
 	max-width: 33em;
-}
-
-%mobile-col {
-	@include box-(12,.5,.5);
+	@include px-padding-lr(.5,.5);
 }
 
 /*
@@ -24,8 +21,9 @@
 	@include font-dimensions(16,1,1);
 }
 
-.header {
-	@extend %mobile-col;
+.header .inner {
+	border-bottom: 1px solid lighten($textcolor,60);
+	@extend %clearfix;
 }
 
 .main-nav {
@@ -39,22 +37,30 @@
 	doormat
 */
 
-.doormat-col-3 {
-	@extend %mobile-col;
+.doormat-holder {
+	@include padding-bottom(1);
 }
 
 /* 
 	footer
 */
 
-.footer {
-	@extend %mobile-col;
+.footer-holder {
+//	border-top: 1px solid lighten($textcolor,60);
+	background-color: lighten($textcolor,70);
+	@include padding-top(1);
 }
+
+
 
 /* media queries
 ------------------------------------------ */
 
 @include respond-min($bp-min-w3-em) {
+	
+	.row {
+		padding: 0;
+	}
 	
 	.logo {
 		float: left;
@@ -70,11 +76,29 @@
 			@include px-margin-lr(1,0);
 		}
 		
+		a {
+			color: lighten($color3,20);
+			text-decoration: none;
+		}
+		
+		a:hover,
+		.selected a {
+			color: darken($color3,10);
+		}
+		
+	}
+	
+	.intro-holder {
+		@include padding-top(2);
 	}
 	
 }
 
 @include respond-min($bp-min-w4-em) {
+	
+	.holder {
+		@include padding-tb(1,1);
+	}
 	
 	.header {
 		@include box-(12,1,1);
@@ -84,8 +108,16 @@
 		max-width: #{$contextGridTotalWidth}px;
 	}
 	
-	.doormat-col-3 {
+	.doormat-holder {
+		@include padding-bottom(2);
+	}
+	
+	.doormat-col-4 {
 		@include box-(6,1,1);
+	}
+	
+	.footer-holder {
+		padding-bottom: 0;
 	}
 	
 	.footer {
@@ -96,8 +128,8 @@
 
 @include respond-min($bp-min-w5-em) {
 	
-	.doormat-col-3 {
-		@include box-(3,1,1);
+	.doormat-col-4 {
+		@include box-(4,1,1);
 	}
 	
 }

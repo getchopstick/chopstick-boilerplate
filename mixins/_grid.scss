@@ -10,6 +10,10 @@ $bp-min-w3-em: #{$bp-min-w3 / $basefontsize}em;
 $bp-min-w4-em: #{$bp-min-w4 / $basefontsize}em;
 $bp-min-w5-em: #{$bp-min-w5 / $basefontsize}em;
 
+.test {
+	width: $bp-min-w1-em;
+}
+
 // calculations
 
 $contextGridMargin: $contextGridGutter / 2;
@@ -29,10 +33,6 @@ $fluidGridGutter: ($contextGridGutter / $contextGridSubTotalWidth) * 100 ;
 $fluidGridMargin: (($contextGridGutter / 2) / $contextGridSubTotalWidth) * 100 ;
 
 // mixins
-
-%float-left {
-	float: left;
-}
 
 // horizontal padding based on the context grid gutter
 // use: @include px-padding-lr(#left, #right);
@@ -63,7 +63,7 @@ $fluidGridMargin: (($contextGridGutter / 2) / $contextGridSubTotalWidth) * 100 ;
 
 @mixin box-($amount, $left, $right) {
 	width: ($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%; 
-	@extend %float-left;
+	float: left;
 	@include box-sizing(border-box);
 	@include px-padding-lr($left, $right);
 }
