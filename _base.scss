@@ -1,0 +1,112 @@
+/*
+	base
+*/
+
+html {
+	background-color: $bodycolor;
+	-webkit-overflow-scrolling: touch;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%; 
+}
+
+body {
+	font: $basefontweight #{$basefontsize}px/#{$baselineheight} $basefontserif ;
+	-moz-font-feature-settings:"liga=1, dlig=1"; 
+	-moz-font-feature-settings:"liga", "dlig";
+	-ms-font-feature-settings:"liga", "dlig"; 
+	-o-font-feature-settings:"liga", "dlig"; 
+	-webkit-font-feature-settings:"liga", "dlig"; 
+	font-feature-settings:"liga", "dlig";
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering : optimizelegibility;
+	color: $textcolor;
+}
+
+::-moz-selection {
+	background-color: $textcolor;
+	color: lighten($textcolor, 65%);
+	text-shadow: none; 
+}
+
+::selection {
+	background-color: $textcolor;
+	color: lighten($textcolor, 65%);
+	text-shadow: none; 
+}
+
+/*
+	base typography
+*/
+
+h1,
+h2,
+h3,
+h4 { 
+	margin: 0;
+	font-family: $baseheadingfont;
+	font-weight: $baseheadingfontweight;
+	text-rendering: optimizelegibility; 
+}
+
+h1,
+.h1 { 
+	@include font-dimensions(40,2,1);
+}
+
+h2,
+.h2 {
+	@include font-dimensions(24,1,1);
+}
+
+h3,
+.h3 {
+	@include font-size(22);
+}
+
+h4,
+.h4 {
+	@include font-dimensions(20,1,1);
+}
+
+h5,
+.h5 {
+	@include font-dimensions(18,1,.5);
+}
+
+p,
+ol,
+ul,
+dl,
+address {
+	line-height: #{$baselineheight}em;
+	margin-bottom : #{$baselineheight}em;
+}
+
+/*
+ 	base links
+*/
+
+a {
+	text-decoration: none;
+	color: $linkcolor;
+
+	&:visited {
+		color: $linkcolorvisited; 
+	}
+
+	&:hover {
+		text-decoration: underline;
+		color: $linkcolorhover; 
+	}
+
+	&:focus {
+		outline: thin dotted;
+		color: $linkcolorfocus; 
+	}
+
+	&:hover,
+	&:active {
+		outline: 0; 
+	}
+}
