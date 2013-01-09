@@ -28,7 +28,8 @@
 
 @mixin list-nav {
 	list-style: none;
-	margin-left: 0;
+	margin: 0;
+	padding: 0;
 }
 
 @mixin horizontal-nav {
@@ -72,41 +73,19 @@
 }
 
 // margin-bottom based on the base line-height
-// use: @include margin-bottom(#bottom)
+// use: @include margin-bottom(#bottom);
 
 @mixin margin-bottom($bottom: 1) {
 	margin-bottom: $baselineheight * 1em * $bottom;
 }
 
-// Media query fix for old ie browsers by Jake Archibald
-// http://jakearchibald.github.com/sass-ie/
-// use: @include respond-min(#width);
+// border-box polyfill helper
+// use: @include border-box;
 
-$fix-mqs: false !default;
-
-@mixin respond-min($width) {
-    @if $fix-mqs {
-        @if $fix-mqs >= $width {
-            @content;
-        }
-    }
-    @else {
-        @media screen and (min-width: $width) {
-            @content;
-        }
-    }
+@mixin border-box {
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    *behavior: url(/scripts/boxsizing.htc);
 }
 
-$old-ie: false !default;
-
-@mixin old-ie {
-    @if $old-ie {
-        @content;
-    }
-}
-
-/// functions
-
-@function calc-em($target-px, $context) {
-	@return ($target-px / $context) * 1em;
-}

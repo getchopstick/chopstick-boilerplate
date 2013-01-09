@@ -2,7 +2,7 @@
 // Compass imports
 
 @import "compass";
-//@import "compass/reset"; crazy shit
+//@import "compass/reset";
 
 // chopstick settings 
 
@@ -20,14 +20,17 @@
 @import "reset";
 @import "base";
 @import "frame";
+@import "forms";
 @import "usercontent";
 
 // modules
 
 @import "modules/main";
 @import "modules/intro";
+@import "modules/grid";
 
 // print 
 
-@import "print";
-
+@media print {
+	@import "print";
+}

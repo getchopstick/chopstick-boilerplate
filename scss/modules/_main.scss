@@ -5,12 +5,16 @@
 /* media queries
 ------------------------------------------ */
 
-@include respond-min($bp-min-w3-em) {
+@media only screen and (min-width: $bp-min-w2-em) {
+
+	.main-col-6 {
+		@include box-(12,1,1);
+	}
 	
 }
 
-@include respond-min($bp-min-w4-em) {
-	
+@media only screen and (min-width: $bp-min-w4-em) {
+
 	.main-col-6 {
 		@include box-(6,1,1);
 	}
