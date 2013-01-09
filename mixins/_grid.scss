@@ -2,19 +2,7 @@
 	chopstick grid
 */
 
-// breakpoints calculated in em's
-
-$bp-min-w1-em: #{$bp-min-w1 / $basefontsize}em;
-$bp-min-w2-em: #{$bp-min-w2 / $basefontsize}em;
-$bp-min-w3-em: #{$bp-min-w3 / $basefontsize}em;
-$bp-min-w4-em: #{$bp-min-w4 / $basefontsize}em;
-$bp-min-w5-em: #{$bp-min-w5 / $basefontsize}em;
-
-.test {
-	width: $bp-min-w1-em;
-}
-
-// calculations
+/// calculations
 
 $contextGridMargin: $contextGridGutter / 2;
 $contextGridWidth: ($contextGridGutter + $contextGridColumn) * $contextGridColumns - $contextGridGutter;
@@ -32,7 +20,20 @@ $fluidGridColumn: $contextGridColumn / $contextGridSubTotalWidth * 100 ;
 $fluidGridGutter: ($contextGridGutter / $contextGridSubTotalWidth) * 100 ;
 $fluidGridMargin: (($contextGridGutter / 2) / $contextGridSubTotalWidth) * 100 ;
 
-// mixins
+// The last breakpoint
+// based on the column-width, gutter-width and amount of columns
+
+$bp-min-w5: $contextGridSubTotalWidth;
+
+// breakpoints calculated in em's
+
+$bp-min-w1-em: #{$bp-min-w1 / $basefontsize}em;
+$bp-min-w2-em: #{$bp-min-w2 / $basefontsize}em;
+$bp-min-w3-em: #{$bp-min-w3 / $basefontsize}em;
+$bp-min-w4-em: #{$bp-min-w4 / $basefontsize}em;
+$bp-min-w5-em: #{$bp-min-w5 / $basefontsize}em;
+
+/// mixins
 
 // horizontal padding based on the context grid gutter
 // use: @include px-padding-lr(#left, #right);
@@ -50,12 +51,21 @@ $fluidGridMargin: (($contextGridGutter / 2) / $contextGridSubTotalWidth) * 100 ;
 	margin-right: $contextGridMargin * $right * 1px;
 }
 
-// classic border-box model
-// use: @include col-(#amount) + include an extra div and include px-padding-lr(#left, #right)
+// horizontal percentual margin
+// use: @include perc-margin-lr(#left, #right);
 
-@mixin col-($amount) {
-	width: ($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%; 
-	@extend %float-left;
+@mixin perc-margin-lr($left: 1, $right: 1) {
+	margin-left: $fluidGridMargin * $left * 1%;
+	margin-right: $fluidGridMargin * $right * 1%;
+}
+
+// fully percentual collumns and gutters
+// use: @include perc-col-(#amount, #gutterleft, #gutterright)
+
+@mixin perc-col-($amount, $pl, $pr) {
+	width: ($fluidGridColumn * $amount) + ($fluidGridMargin * (($amount * 2) - 2)) + 0%; 
+	@include perc-margin-lr($pl, $pr);
+	@include float-left;
 }
 
 // border-box box sizing
@@ -64,6 +74,13 @@ $fluidGridMargin: (($contextGridGutter / 2) / $contextGridSubTotalWidth) * 100 ;
 @mixin box-($amount, $left, $right) {
 	width: ($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%; 
 	float: left;
-	@include box-sizing(border-box);
+	@include border-box;
 	@include px-padding-lr($left, $right);
+}
+
+// last-col mixin to re-align the right edge
+// use: @extend .last-col;
+
+@mixin last-col() {
+	float: right;
 }

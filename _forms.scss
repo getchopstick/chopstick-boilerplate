@@ -1,0 +1,50 @@
+/*
+	Chopstick forms
+	That's a tuff one.
+*/
+
+input.inputText,
+input.inputPassword,
+input.inputSearch,
+input.inputDate,
+textarea {
+	@include border-box;
+	padding: .25em .5em;
+	border: 1px solid $mediumcolor;
+	font-family: $basefont;
+	@include font-dimensions(16,1,0,0);
+	color: lighten($darkcolor,30);
+	background-color: $whitecolor;
+	-webkit-appearance: none;
+
+
+	&:focus {
+		color: $darkcolor;
+		outline-color: $primarycolor;
+		border-color: darken($mediumcolor,20);
+	}
+
+}
+
+// buttons
+
+button,
+.button,
+a.button {
+	display: block;
+	float: left;
+	clear: both;
+	@include border-box;
+	border: none;
+	padding: .25em .5em;
+	margin: 0;
+	font-family: $basefont;
+	@include font-dimensions(16,1,1);
+	font-weight: 700;
+	cursor: pointer;
+	background-color: $primarycolor;
+	color: $whitecolor;
+	text-decoration: none;
+	-webkit-appearance: none;
+	-webkit-font-smoothing: antialiased;
+}

@@ -14,7 +14,9 @@ $bp-min-w1: 320;
 $bp-min-w2: 480;
 $bp-min-w3: 680;
 $bp-min-w4: 960;
-$bp-min-w5: 1200;
+// The "last" breakpoint is calculated in mixins/_grid.scss
+// uncomment this and comment there ^ if you want to override this.
+// $bp-min-w5: 1300;
 
 // typography
 
@@ -28,16 +30,15 @@ $baseheadingfontweight 	: 700;
 
 // color palette
 
-$color1		: white;
-$color2		: #333;
-$color3		: red;
+$whitecolor 	: white;
+$darkcolor 		: #333;
+$mediumcolor 	: #ccc;
 
-$bodycolor 	: $color1;
-$textcolor	: $color2;
+$primarycolor 	: red;
 
 // Links
 
-$linkcolor 		    : $color3;
+$linkcolor 		    : $primarycolor;
 $linkcolorhover 	: darken($linkcolor, 10);
 $linkcolorvisited   : darken($linkcolorhover, 10);
 $linkcolorfocus 	: darken($linkcolorvisited, 10);

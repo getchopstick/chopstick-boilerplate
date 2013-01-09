@@ -2,6 +2,10 @@
 	module: intro
 */
 
+.intro-holder {
+	@include padding-top(2);
+}
+
 .intro {
 	
 	h1 {
@@ -14,18 +18,25 @@
 	
 }
 
-@include respond-min($bp-min-w4-em) {
+/* media queries
+-------------------------------------- */
+
+@media only screen and (min-width: $bp-min-w2-em) {
 	
+	.intro {
+		@include box-(12,1,1);
+	}
+
+}
+
+@media only screen and (min-width: $bp-min-w4-em) {
+
 	.intro-holder {
 		@include padding-top(2);
 	}
 	
 	.intro h1 {
 		@include font-dimensions(72,3,1);
-	}
-	
-	.intro {
-		@include box-(12,1,1);
 	}
 
 }
