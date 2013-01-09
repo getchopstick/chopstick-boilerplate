@@ -1,0 +1,66 @@
+/*
+	module: grid
+*/
+
+@while $contextGridColumns > 0 { 
+		.grid-#{$contextGridColumns} {
+			margin-bottom: 1.5em;
+			
+			.inner {
+				padding: 1em;
+				font-family: $basefont;
+				@include font-dimensions(14,1,0);
+				font-weight: bold;
+				text-align: center;
+				background-color: #ccc;
+			}
+		}
+		$contextGridColumns: $contextGridColumns - 1;
+	}
+
+/* media queries
+-------------------------------------- */
+
+@media only screen and (min-width: $bp-min-w2-em) {
+
+
+	.grid-3,
+	.grid-4,
+	.grid-5,
+	.grid-7,
+	.grid-8,
+	.grid-9, {
+		@include box-(12,1,1);
+	}
+
+	.grid-6 {
+		@include box-(6,1,1);
+	}
+
+}
+
+@media only screen and (min-width: $bp-min-w3-em) {
+
+	.grid-3,
+	.grid-4 {
+		@include box-(6,1,1);
+	}
+
+}
+
+@media only screen and (min-width: $bp-min-w4-em) {
+
+	.grid-1 { @include box-(1,1,1); }
+	.grid-2 { @include box-(2,1,1); }
+	.grid-3 { @include box-(3,1,1); }
+	.grid-4 { @include box-(4,1,1); }
+	.grid-5 { @include box-(5,1,1); }
+	.grid-7 { @include box-(7,1,1); }
+	.grid-8 { @include box-(8,1,1); }
+	.grid-9 { @include box-(9,1,1); }
+
+	.last-col {
+		@include last-col;
+	}
+
+}
