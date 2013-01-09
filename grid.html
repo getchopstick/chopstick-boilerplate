@@ -1,0 +1,128 @@
+<!doctype html>
+
+<!-- HTML5 Mobile Boilerplate -->
+<!--[if IEMobile 7]><html class="no-js iem7"><![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
+<!-- HTML5 Boilerplate -->
+<!--[if lt IE 7]><html class="no-js oldie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js oldie lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js oldie lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+
+<title>Chopstick: SASS responsive grid system</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/screen.css">
+
+<!--[if (lt IE 9) & (!IEMobile)]>
+	<link rel="stylesheet" href="/css/oldie.css">
+<![endif]-->
+
+<!-- Customize modernizr !-->
+<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+<!-- For iPhone 4 -->
+<!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon.png"> -->
+<!-- For iPad 1-->
+<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon.png"> -->
+<!-- For the new iPad -->
+<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png"> -->
+<!-- For iPhone 3G, iPod Touch and Android -->
+<!-- <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png"> -->
+<!-- For Nokia -->
+<!-- <link rel="shortcut icon" href="img/apple-touch-icon.png"> -->
+<!-- For everything else -->
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta http-equiv="cleartype" content="on">
+</head>
+
+<body>
+<div class="holder header-holder">
+	<div class="row header-row">
+		<div class="header">
+			<div class="inner">
+				<h1 class="logo">chopstick</h1>
+				<ul class="main-nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="elements.html">Elements</a></li>
+					<li class="selected"><a href="grid.html">Grid</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="holder grid-holder">
+	<div class="row grid-row">
+		<div class="grid-3"><div class="inner">box-3</div></div>
+		<div class="grid-3"><div class="inner">box-3</div></div>
+		<div class="grid-3"><div class="inner">box-3</div></div>
+		<div class="grid-3 last-col"><div class="inner">box-3</div></div>
+	</div>
+	<div class="row grid-row">
+		<div class="grid-4"><div class="inner">box-4</div></div>
+		<div class="grid-4"><div class="inner">box-4</div></div>
+		<div class="grid-4 last-col"><div class="inner">box-4</div></div>
+	</div>
+	<div class="row grid-row">
+		<div class="grid-6"><div class="inner">box-6</div></div>
+		<div class="grid-6 last-col"><div class="inner">box-6</div></div>
+	</div>
+	<div class="row grid-row">
+		<div class="grid-5"><div class="inner">box-5</div></div>
+		<div class="grid-7 last-col"><div class="inner">box-7</div></div>
+	</div>
+	<div class="row grid-row">
+		<div class="grid-4"><div class="inner">box-4</div></div>
+		<div class="grid-8 last-col"><div class="inner">box-8</div></div>
+	</div>
+	<div class="row grid-row">
+		<div class="grid-3"><div class="inner">box-3</div></div>
+		<div class="grid-9 last-col"><div class="inner">box-9</div></div>
+	</div>
+	<div class="row grid-row">
+		<div class="grid-4"><div class="inner">box-4</div></div>
+		<div class="grid-8 last-col">
+			<div class="row inner-row">
+				<div class="grid-6"><div class="inner">box-6</div></div>
+				<div class="grid-6"><div class="inner">box-6</div></div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="holder footer-holder">
+	<div class="row footer-row">
+		<div class="footer">
+			<div class="inner">
+				<p>Copyright MMXIII Chopstick</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.8.3.min.js"><\/script>')</script>
+
+
+<script src="js/plugins.js"></script>
+<script src="js/script-ck.js"></script>
+<script src="js/helper-ck.js"></script>
+<script>
+var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+s.parentNode.insertBefore(g,s)}(document,"script"));
+</script>
+</body>
+</html>
