@@ -9,16 +9,16 @@
 
 %clearfix {
 	*zoom : 1;
-	
+
 	&:before,
 	&:after {
 		display: table;
-		content : ""; 
+		content : "";
 	}
-	
+
 	&:after {
-		clear : both; 
-	} 
+		clear : both;
+	}
 }
 
 /// Mixins
@@ -86,6 +86,6 @@
 	-webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
 }
 

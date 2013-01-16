@@ -163,7 +163,7 @@ caption {
 
 td,
 th {
-  padding: .25em 1em .25em 0;
+  padding: 0.25em 1em 0.25em 0;
 }
 
 /*
@@ -293,7 +293,7 @@ a:hover, a:active {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -338,7 +338,7 @@ a:hover, a:active {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -361,7 +361,7 @@ a:hover, a:active {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -372,7 +372,7 @@ a:hover, a:active {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -389,8 +389,8 @@ textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url(/scripts/boxsizing.htc);
-  padding: .25em .5em;
+  *behavior: url(/js/boxsizing.htc);
+  padding: 0.25em 0.5em;
   border: 1px solid #cccccc;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
@@ -419,9 +419,9 @@ a.button {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url(/scripts/boxsizing.htc);
+  *behavior: url(/js/boxsizing.htc);
   border: none;
-  padding: .25em .5em;
+  padding: 0.25em 0.5em;
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
@@ -449,7 +449,7 @@ a.button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -461,7 +461,7 @@ a.button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -472,7 +472,7 @@ a.button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -500,7 +500,7 @@ a.button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -701,7 +701,7 @@ a.button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -712,7 +712,7 @@ a.button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -725,7 +725,7 @@ a.button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -737,7 +737,7 @@ a.button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -748,7 +748,7 @@ a.button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -759,7 +759,7 @@ a.button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -770,7 +770,7 @@ a.button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -781,7 +781,7 @@ a.button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -792,7 +792,7 @@ a.button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -803,7 +803,7 @@ a.button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -814,7 +814,7 @@ a.button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(/scripts/boxsizing.htc);
+    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -852,7 +852,7 @@ a.button {
   }
 
   pre, blockquote {
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     page-break-inside: avoid;
   }
 
