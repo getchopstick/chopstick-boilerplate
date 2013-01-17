@@ -47,5 +47,5 @@ $primarycolor 	: red;
 
 $linkcolor 		    : $primarycolor;
 $linkcolorhover 	: darken($linkcolor, 10);
-$linkcolorvisited   : darken($linkcolorhover, 10);
-$linkcolorfocus 	: darken($linkcolorvisited, 10);
+$linkcolorfocus 	: darken($linkcolor, 10);
+$linkcolorvisited   : darken($linkcolor, 5);
