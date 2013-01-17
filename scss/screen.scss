@@ -1,10 +1,14 @@
-// Compass
-
-	@import "compass";
+/*
+	Comment or uncomment whatever you need in this file.
+*/
 
 // Settings
 
 	@import "settings";
+
+// Compass
+
+	@import "compass";
 
 // Modular Scale: https://github.com/scottkellum/modular-scale#installation
 
@@ -17,11 +21,12 @@
 	@import "mixins/ui";
 	@import "mixins/patterns";
 
-// Theme
+// Pick a reset
 
-	// Pick a reset:
 	// @import "compass/reset";
 	@import "reset";
+
+// Theme
 
 	@import "base";
 	@import "frame";
@@ -36,6 +41,4 @@
 
 // Print
 
-	@media print {
-		@import "print";
-	}
+	@media print {@import "print";}
