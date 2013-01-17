@@ -6,13 +6,10 @@
 
 	@import "settings";
 
-// Compass
+// External Frameworks
 
-	@import "compass";
-
-// Modular Scale: https://github.com/scottkellum/modular-scale#installation
-
-	// @import "modular-scale";
+	@import "compass"; /* http://compass-style.org/install */
+	// @import "modular-scale"; /* https://github.com/scottkellum/modular-scale#installation */
 
 // Mixins
 
