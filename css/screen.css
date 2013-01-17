@@ -174,7 +174,7 @@ a {
   color: red;
 }
 a:visited {
-  color: #990000;
+  color: #e60000;
 }
 a:hover {
   text-decoration: underline;
@@ -182,7 +182,7 @@ a:hover {
 }
 a:focus {
   outline: thin dotted;
-  color: #660000;
+  color: #cc0000;
 }
 a:hover, a:active {
   outline: 0;
