@@ -2,13 +2,13 @@
 	Chopstick settings
 */
 
-// grid
+// Grid
 
 $contextGridGutter	: 60;
 $contextGridColumn	: 40;
 $contextGridColumns	: 12;
 
-// breakpoints
+// Breakpoints
 
 $bp-min-w1: 320;
 $bp-min-w2: 480;
@@ -18,30 +18,33 @@ $bp-min-w4: 960;
 // uncomment this and comment there ^ if you want to override this.
 // $bp-min-w5: 1300;
 
-// typography
+// Typography
 
 $basefont 				: Helvetica, Arial, sans-serif;
-$basefontserif			: georgia, times, serif;
+$basefontserif			: Georgia, serif;
 $basefontsize 			: 16;
 $basefontweight			: 500;
 $baselineheight 		: 1.5;
 $baseheadingfont 		: $basefont;
 $baseheadingfontweight 	: 700;
 
-// modular scale settings
+// Modular scale settings
+
 $ratio: 1.5;
 $base-size: 16px 44px;
 
-// roundness
+// Roundness
+
 $radius: 3px;
 
-// color palette
+// Colors
 
-$whitecolor 	: white;
+$whitecolor 	: #fff;
 $darkcolor 		: #333;
 $mediumcolor 	: #ccc;
 
-$primarycolor 	: red;
+$primarycolor 	: #f00;
+$secondarycolor	: #00f;
 
 // Links
 

@@ -1,4 +1,5 @@
 # Require any additional compass plugins here.
+# require "modular-scale"
 
 # Set this to the root of your project when deployed:
 http_path = "/"
@@ -13,10 +14,8 @@ environment = :development
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
-
 line_comments = false
 color_output = false
-
 
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:

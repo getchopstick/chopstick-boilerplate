@@ -1,36 +1,41 @@
+// Compass
 
-// Compass imports
+	@import "compass";
 
-@import "compass";
-//@import "compass/reset";
+// Settings
 
-// chopstick settings 
+	@import "settings";
 
-@import "settings";
+// Modular Scale: https://github.com/scottkellum/modular-scale#installation
 
-// chopstick mixins 
+	// @import "modular-scale";
 
-@import "mixins/grid";
-@import "mixins/typography";
-@import "mixins/ui";
-@import "mixins/patterns";
+// Mixins
 
-// theme 
+	@import "mixins/grid";
+	@import "mixins/typography";
+	@import "mixins/ui";
+	@import "mixins/patterns";
 
-@import "reset";
-@import "base";
-@import "frame";
-@import "forms";
-@import "usercontent";
+// Theme
 
-// modules
+	// Pick a reset:
+	// @import "compass/reset";
+	@import "reset";
 
-@import "modules/main";
-@import "modules/intro";
-@import "modules/grid";
+	@import "base";
+	@import "frame";
+	@import "forms";
+	@import "usercontent";
 
-// print 
+// Modules
 
-@media print {
-	@import "print";
-}
+	@import "modules/main";
+	@import "modules/intro";
+	@import "modules/grid";
+
+// Print
+
+	@media print {
+		@import "print";
+	}

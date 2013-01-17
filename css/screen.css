@@ -49,7 +49,7 @@ html {
 }
 
 body {
-  font: 500 16px/1.5 georgia, times, serif;
+  font: 500 16px/1.5 Georgia, serif;
   -moz-font-feature-settings: "liga=1, dlig=1";
   -moz-font-feature-settings: "liga", "dlig";
   -ms-font-feature-settings: "liga", "dlig";
