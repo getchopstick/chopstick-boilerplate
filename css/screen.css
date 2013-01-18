@@ -170,6 +170,10 @@ th {
   padding: 0.25em 1em 0.25em 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 /*
  	base links
 */
