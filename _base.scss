@@ -6,16 +6,16 @@ html {
 	background-color: $whitecolor;
 	-webkit-overflow-scrolling: touch;
 	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%;
 }
 
 body {
-	font: $basefontweight #{$basefontsize}px/#{$baselineheight} $basefontserif ;
-	-moz-font-feature-settings:"liga=1, dlig=1"; 
+	font: $basefontweight $basefontsize/16*100%/#{$baselineheight} $basefontserif ;
+	-moz-font-feature-settings:"liga=1, dlig=1";
 	-moz-font-feature-settings:"liga", "dlig";
-	-ms-font-feature-settings:"liga", "dlig"; 
-	-o-font-feature-settings:"liga", "dlig"; 
-	-webkit-font-feature-settings:"liga", "dlig"; 
+	-ms-font-feature-settings:"liga", "dlig";
+	-o-font-feature-settings:"liga", "dlig";
+	-webkit-font-feature-settings:"liga", "dlig";
 	font-feature-settings:"liga", "dlig";
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
@@ -26,13 +26,13 @@ body {
 ::-moz-selection {
 	background-color: $darkcolor;
 	color: lighten($darkcolor, 65%);
-	text-shadow: none; 
+	text-shadow: none;
 }
 
 ::selection {
 	background-color: $darkcolor;
 	color: lighten($darkcolor, 65%);
-	text-shadow: none; 
+	text-shadow: none;
 }
 
 hr {
@@ -50,15 +50,15 @@ h1,
 h2,
 h3,
 h4,
-h5 { 
+h5 {
 	margin: 0;
 	font-family: $baseheadingfont;
 	font-weight: $baseheadingfontweight;
-	text-rendering: optimizelegibility; 
+	text-rendering: optimizelegibility;
 }
 
 h1,
-.h1 { 
+.h1 {
 	@include font-dimensions(38,1.75,1);
 }
 
@@ -128,22 +128,22 @@ a {
 	color: $linkcolor;
 
 	&:visited {
-		color: $linkcolorvisited; 
+		color: $linkcolorvisited;
 	}
 
 	&:hover {
 		text-decoration: underline;
-		color: $linkcolorhover; 
+		color: $linkcolorhover;
 	}
 
 	&:focus {
 		outline: thin dotted;
-		color: $linkcolorfocus; 
+		color: $linkcolorfocus;
 	}
 
 	&:hover,
 	&:active {
-		outline: 0; 
+		outline: 0;
 	}
 }
 
@@ -151,7 +151,7 @@ a {
 ------------------------------------------ */
 
 @media only screen and (min-width: $bp-min-w2-em) {
-	
+
 	h1 {
 		@include font-dimensions(48,2,1);
 	}
@@ -159,17 +159,17 @@ a {
 }
 
 @media only screen and (min-width: $bp-min-w3-em) {
-	
+
 	body {
 		font-size: 112.5%;
 	}
-	
+
 }
 
 @media only screen and (min-width: $bp-min-w5-em) {
-	
+
 	body {
 		font-size: 125%;
 	}
-	
+
 }
