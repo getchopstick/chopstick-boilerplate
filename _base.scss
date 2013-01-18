@@ -161,7 +161,7 @@ a {
 @media only screen and (min-width: $bp-min-w3-em) {
 
 	body {
-		font-size: 112.5%;
+		font-size: $basefontsize/16*112.5%;
 	}
 
 }
@@ -169,7 +169,7 @@ a {
 @media only screen and (min-width: $bp-min-w5-em) {
 
 	body {
-		font-size: 125%;
+		font-size: $basefontsize/16*125%;
 	}
 
 }
