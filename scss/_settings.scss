@@ -23,6 +23,7 @@ $bp-min-w4: 960;
 $basefont 				: Helvetica, Arial, sans-serif;
 $basefontserif			: Georgia, serif;
 $basefontsize 			: 16;
+$importantnumber        : 44;
 $basefontweight			: 500;
 $baselineheight 		: 1.5;
 $baseheadingfont 		: $basefont;
@@ -31,7 +32,7 @@ $baseheadingfontweight 	: 700;
 // Modular scale settings
 
 $ratio: 1.5;
-$base-size: 16px 44px;
+$base-size: $basefontsize/16*1em $importantnumber/16*1em;
 
 // Roundness
 
