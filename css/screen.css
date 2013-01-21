@@ -167,7 +167,7 @@ caption {
 
 td,
 th {
-  padding: 0.25em 1em 0.25em 0;
+  padding: .25em 1em .25em 0;
 }
 
 /*
@@ -394,7 +394,7 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   *behavior: url(/js/boxsizing.htc);
-  padding: 0.25em 0.5em;
+  padding: .25em .5em;
   border: 1px solid #cccccc;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
@@ -425,7 +425,7 @@ a.button {
   box-sizing: border-box;
   *behavior: url(/js/boxsizing.htc);
   border: none;
-  padding: 0.25em 0.5em;
+  padding: .25em .5em;
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
@@ -856,7 +856,7 @@ a.button {
   }
 
   pre, blockquote {
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
     page-break-inside: avoid;
   }
 

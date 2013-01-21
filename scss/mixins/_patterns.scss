@@ -89,3 +89,14 @@
     *behavior: url(/js/boxsizing.htc);
 }
 
+// progressive svg backgrounds with png fallback
+// requires modernizr class .svg
+// use: @include svb-bg("path/file", ".extension", 0 50%, no-repeat);
+
+@mixin mdrn-svg { .svg & { @content } }
+
+@mixin svg-bg($filename, $extension: '.png', $position: 0 0, $repeat: no-repeat) {
+    background: url($filename + $extension) $position $repeat;
+    @include mdrn-svg { background: url($filename + '.svg') $position $repeat; }
+}
+
