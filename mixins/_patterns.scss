@@ -91,12 +91,12 @@
 
 // progressive svg backgrounds with png fallback
 // requires modernizr class .svg
-// use: @include svb-bg("path/file", ".extension", 0 50%, no-repeat);
+// use: @include svb-bg("path/file", ".extension", #fff, 0 50%, no-repeat);
 
 @mixin mdrn-svg { .svg & { @content } }
 
-@mixin svg-bg($filename, $extension: '.png', $position: 0 0, $repeat: no-repeat) {
-    background: url($filename + $extension) $position $repeat;
-    @include mdrn-svg { background: url($filename + '.svg') $position $repeat; }
+@mixin svg-bg($filename, $extension: '.png', $bg-color: transparent, $position: 0 0, $repeat: no-repeat) {
+    background: $bg-color url($filename + $extension) $position $repeat;
+    @include mdrn-svg { background: $bg-color url($filename + '.svg') $position $repeat; }
 }
 
