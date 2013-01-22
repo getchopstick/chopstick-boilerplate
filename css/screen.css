@@ -169,6 +169,25 @@ img {
 }
 
 /*
+	responsive media embedding, like an iframe
+*/
+.media_embed {
+  width: 100%;
+  height: 0;
+  padding-bottom: 62.5%;
+  margin-bottom: 2.25em;
+  position: relative;
+  overflow: hidden;
+}
+.media_embed iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*
  	base links
 */
 a {
