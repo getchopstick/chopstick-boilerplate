@@ -12,11 +12,11 @@
 	margin: 0 auto;
 	max-width: 36em;
 	@include px-padding-lr(.5,.5);
-	
+
 	.row {
 		padding: 0;
 	}
-	
+
 }
 
 /*
@@ -24,31 +24,32 @@
 */
 
 .logo {
-	@include font-dimensions(16,1,1);
+	@include font-dimensions(16,1,0);
 }
 
 .header .inner {
 	border-bottom: 1px solid lighten($darkcolor,60);
 	@extend %clearfix;
+	@include padding-bottom(1);
 }
 
 .main-nav {
 	@include list-nav;
-	@include font-dimensions(16,1,1);
+	@include font-dimensions(16,1,0);
 	font-family: $basefont;
 	@extend %clearfix;
-	
+
 	a {
 		color: lighten($darkcolor,50);
 		text-decoration: none;
 		font-weight: bold;
 	}
-	
+
 	a:hover,
 	.selected a {
 		color: darken($primarycolor,0);
 	}
-	
+
 }
 
 /*
@@ -59,7 +60,7 @@
 	@include padding-bottom(1);
 }
 
-/* 
+/*
 	footer
 */
 
@@ -98,23 +99,23 @@
 }
 
 @media only screen and (min-width: $bp-min-w3-em) {
-	
+
 	.logo {
 		float: left;
-		@include font-dimensions(14,1,1);
+		@include font-dimensions(14,1,0);
 	}
-	
-	.main-nav {	
+
+	.main-nav {
 		@include horizontal-nav();
 		float: right;
-		@include font-dimensions(14,1,1);
-		
+		@include font-dimensions(14,1,0);
+
 		li {
 			@include px-margin-lr(1,0);
 		}
 
 	}
-	
+
 	.intro-holder {
 		@include padding-top(2);
 	}
@@ -126,23 +127,32 @@
 	.holder {
 		@include padding-tb(1,1);
 	}
-	
+
+	.header-holder {
+		@include padding-top(0);
+
+		.inner {
+			@include padding-tb(2,.5);
+		}
+
+	}
+
 	.header {
 		@include box-(12,1,1);
 	}
-	
+
 	.row {
 		max-width: #{$bp-min-w5}px;
 	}
-	
+
 	.doormat-holder {
 		@include padding-bottom(2);
 	}
-	
+
 	.footer-holder {
 		padding-bottom: 0;
 	}
-	
+
 	.footer {
 		@include box-(12,1,1);
 	}
@@ -153,5 +163,5 @@
 }
 
 @media only screen and (min-width: $bp-min-w5-em) {
-	
+
 }
