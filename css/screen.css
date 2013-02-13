@@ -251,6 +251,9 @@ a:hover, a:active {
 	header
 */
 .logo {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: normal;
   font-size: 1em;
   line-height: 1.5em;
   margin-bottom: 0em;

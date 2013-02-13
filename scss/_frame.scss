@@ -24,6 +24,9 @@
 */
 
 .logo {
+	font-family: $basefontserif;
+	font-style: italic;
+	font-weight: normal;
 	@include font-dimensions(16,1,0);
 }
 
