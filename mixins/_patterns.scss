@@ -40,6 +40,17 @@
 	}
 }
 
+// UI mixins
+// UI mixins
+@mixin box($color, $top: 1.5, $right: 1, $bottom: 1.5, $left: 1){
+	background-color: $color;
+	padding-top: $baselineheight * 1em * $top;
+	padding-bottom: $baselineheight * 1em * $bottom;
+	padding-left: $contextGridMargin * $left * 1px;
+	padding-right: $contextGridMargin * $right * 1px;
+}
+
+
 // baseline mixins
 
 // vertical padding based on the base line-height
