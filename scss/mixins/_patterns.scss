@@ -102,7 +102,7 @@
 
 // progressive svg backgrounds with png fallback
 // requires modernizr class .svg
-// use: @include svb-bg("path/file", ".extension", #fff, 0 50%, no-repeat);
+// use: @include svg-bg("path/file", ".extension", #fff, 0 50%, no-repeat);
 
 @mixin mdrn-svg { .svg & { @content } }
 
