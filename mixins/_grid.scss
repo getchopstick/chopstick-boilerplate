@@ -20,18 +20,8 @@ $fluidGridColumn: $contextGridColumn / $contextGridSubTotalWidth * 100 ;
 $fluidGridGutter: ($contextGridGutter / $contextGridSubTotalWidth) * 100 ;
 $fluidGridMargin: (($contextGridGutter / 2) / $contextGridSubTotalWidth) * 100 ;
 
-// The last breakpoint
-// based on the column-width, gutter-width and amount of columns
-
-$bp-min-w5: $contextGridSubTotalWidth;
-
-// breakpoints calculated in em's
-
-$bp-min-w1-em: #{$bp-min-w1 / $basefontsize}em;
-$bp-min-w2-em: #{$bp-min-w2 / $basefontsize}em;
-$bp-min-w3-em: #{$bp-min-w3 / $basefontsize}em;
-$bp-min-w4-em: #{$bp-min-w4 / $basefontsize}em;
-$bp-min-w5-em: #{$bp-min-w5 / $basefontsize}em;
+// the last breakpoint is colculated here based on the total with of the grid
+$bp5: #{$contextGridSubTotalWidth / $basefontsize}em;
 
 /// mixins
 
@@ -63,7 +53,7 @@ $bp-min-w5-em: #{$bp-min-w5 / $basefontsize}em;
 // use: @include perc-col-(#amount, #gutterleft, #gutterright)
 
 @mixin perc-col-($amount, $pl, $pr) {
-	width: ($fluidGridColumn * $amount) + ($fluidGridMargin * (($amount * 2) - 2)) + 0%; 
+	width: ($fluidGridColumn * $amount) + ($fluidGridMargin * (($amount * 2) - 2)) + 0%;
 	@include perc-margin-lr($pl, $pr);
 	@include float-left;
 }
@@ -72,7 +62,7 @@ $bp-min-w5-em: #{$bp-min-w5 / $basefontsize}em;
 // use: @include box-(#amount, #gutterleft, #gutterright);
 
 @mixin box-($amount, $left, $right) {
-	width: ($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%; 
+	width: ($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%;
 	float: left;
 	@include border-box;
 	@include px-padding-lr($left, $right);

@@ -2,22 +2,6 @@
 	Chopstick settings
 */
 
-// Grid
-
-$contextGridGutter	: 60;
-$contextGridColumn	: 40;
-$contextGridColumns	: 12;
-
-// Breakpoints
-
-$bp-min-w1: 320;
-$bp-min-w2: 480;
-$bp-min-w3: 680;
-$bp-min-w4: 960;
-// The "last" breakpoint is calculated in mixins/_grid.scss
-// uncomment this and comment there ^ if you want to override this.
-// $bp-min-w5: 1300;
-
 // Typography
 
 $basefont 				: Helvetica, Arial, sans-serif;
@@ -28,6 +12,22 @@ $basefontweight			: 500;
 $baselineheight 		: 1.5;
 $baseheadingfont 		: $basefont;
 $baseheadingfontweight 	: 700;
+
+// Grid
+
+$contextGridGutter	: 60;
+$contextGridColumn	: 40;
+$contextGridColumns	: 12;
+
+// Breakpoints calculated in em's
+
+$bp1: #{320 / $basefontsize}em;
+$bp2: #{480 / $basefontsize}em;
+$bp3: #{680 / $basefontsize}em;
+$bp4: #{960 / $basefontsize}em;
+
+// the last breakpoint is calculated in mixins/_grid.scss
+// $bp5: #{1200 / $basefontsize}em;
 
 // Modular scale settings
 

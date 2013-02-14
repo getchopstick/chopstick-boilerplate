@@ -2,10 +2,10 @@
 	module: grid
 */
 
-@while $contextGridColumns > 0 { 
+@while $contextGridColumns > 0 {
 		.grid-#{$contextGridColumns} {
 			margin-bottom: 1.5em;
-			
+
 			.inner {
 				padding: 1em;
 				font-family: $basefont;
@@ -21,7 +21,7 @@
 /* media queries
 -------------------------------------- */
 
-@media only screen and (min-width: $bp-min-w2-em) {
+@media only screen and (min-width: $bp2) {
 
 
 	.grid-3,
@@ -39,7 +39,7 @@
 
 }
 
-@media only screen and (min-width: $bp-min-w3-em) {
+@media only screen and (min-width: $bp3) {
 
 	.grid-3,
 	.grid-4 {
@@ -48,7 +48,7 @@
 
 }
 
-@media only screen and (min-width: $bp-min-w4-em) {
+@media only screen and (min-width: $bp4) {
 
 	.grid-1 { @include box-(1,1,1); }
 	.grid-2 { @include box-(2,1,1); }

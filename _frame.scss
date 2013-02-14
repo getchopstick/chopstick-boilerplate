@@ -78,11 +78,11 @@
 /* media queries
 ------------------------------------------ */
 
-@media only screen and (min-width: $bp-min-w1-em) {
+@media only screen and (min-width: $bp1) {
 
 }
 
-@media only screen and (min-width: $bp-min-w2-em) {
+@media only screen and (min-width: $bp2) {
 
 	.row {
 		padding: 0;
@@ -101,7 +101,7 @@
 
 }
 
-@media only screen and (min-width: $bp-min-w3-em) {
+@media only screen and (min-width: $bp3) {
 
 	.logo {
 		float: left;
@@ -125,7 +125,7 @@
 
 }
 
-@media only screen and (min-width: $bp-min-w4-em) {
+@media only screen and (min-width: $bp4) {
 
 	.holder {
 		@include padding-tb(1,1);
@@ -145,7 +145,7 @@
 	}
 
 	.row {
-		max-width: #{$bp-min-w5}px;
+		max-width: #{$contextGridSubTotalWidth}px;
 	}
 
 	.doormat-holder {
@@ -165,6 +165,6 @@
 	}
 }
 
-@media only screen and (min-width: $bp-min-w5-em) {
+@media only screen and (min-width: $bp5) {
 
 }
