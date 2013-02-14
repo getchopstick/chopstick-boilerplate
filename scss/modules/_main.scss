@@ -5,20 +5,20 @@
 /* media queries
 ------------------------------------------ */
 
-@media only screen and (min-width: $bp-min-w2-em) {
+@media only screen and (min-width: $bp2) {
 
 	.main-col-6 {
 		@include box-(12,1,1);
 	}
-	
+
 }
 
-@media only screen and (min-width: $bp-min-w4-em) {
+@media only screen and (min-width: $bp4) {
 
 	.main-col-6 {
 		@include box-(6,1,1);
 	}
-	
+
 	.main-content {
 		@include box-(8,1,1);
 	}

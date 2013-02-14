@@ -9,7 +9,7 @@
 	chopstick grid
 */
 /*
-	Chopstick typography mixins 
+	Chopstick typography mixins
 */
 /*
 	Chopstick patterns
@@ -545,7 +545,7 @@ a.button {
 
   .intro h1 {
     font-size: 4.5em;
-    line-height: 1em;
+    line-height: 1.33333em;
     margin-bottom: 0.33333em;
   }
 }
