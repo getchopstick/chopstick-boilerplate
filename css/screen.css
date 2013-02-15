@@ -46,7 +46,7 @@ article, aside, figure, footer, header, hgroup, nav, section {
 	base
 */
 html {
-  background-color: white;
+  background-color: #333333;
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -787,14 +787,12 @@ a.button {
   }
 
   .grid-3 {
-    width: 25%;
+    width: 20%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    display: inline;
     float: left;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 0;
   }
 
   .grid-4 {

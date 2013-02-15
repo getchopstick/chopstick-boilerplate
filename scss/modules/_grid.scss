@@ -52,7 +52,7 @@
 
 	.grid-1 { @include box-(1,1,1); }
 	.grid-2 { @include box-(2,1,1); }
-	.grid-3 { @include box-(3,1,1); }
+	.grid-3 { @include perc-col-(3,1,1); padding: 0; } // example of the percentual column mixin
 	.grid-4 { @include box-(4,1,1); }
 	.grid-5 { @include box-(5,1,1); }
 	.grid-7 { @include box-(7,1,1); }
