@@ -240,8 +240,8 @@ a:hover, a:active {
 .row {
   margin: 0 auto;
   max-width: 36em;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
 }
 .row .row {
   padding: 0;
@@ -357,6 +357,10 @@ a:hover, a:active {
     padding-bottom: 1.5em;
   }
 
+  .row {
+    max-width: 1200px;
+  }
+
   .header-holder {
     padding-top: 0em;
   }
@@ -374,10 +378,6 @@ a:hover, a:active {
     *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
-  }
-
-  .row {
-    max-width: 1200px;
   }
 
   .doormat-holder {
