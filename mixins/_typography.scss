@@ -8,11 +8,14 @@
 $baseline-unit: $basefontsize * $baselineheight;
 $basefontpercent: $basefontsize/16 * 100;
 
-@mixin font-dimensions($fs: 18, $lh: 1, $mb: 1, $pt: 0){
+@mixin font-dimensions($fs: 18, $lh: 1, $mb: 1, $pt: 0, $pb: 0){
 	font-size : #{$fs / $basefontsize}em;
 	line-height: #{($baseline-unit / $fs) * $lh}em;
 	margin-bottom: #{($baseline-unit / $fs) * $mb}em;
 	@if $pt > 0 {
 		padding-top: #{($baseline-unit / $fs) * $pt}em;
+	}
+	@if $pb > 0 {
+		padding-bottom: #{($baseline-unit / $fs) * $pt}em;
 	}
 }
