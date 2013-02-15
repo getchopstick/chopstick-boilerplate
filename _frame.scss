@@ -11,7 +11,7 @@
 	@extend %clearfix;
 	margin: 0 auto;
 	max-width: 36em;
-	@include px-padding-lr(.5,.5);
+	@include em-padding-lr(.5,.5);
 
 	.row {
 		padding: 0;
@@ -131,6 +131,11 @@
 		@include padding-tb(1,1);
 	}
 
+	.row {
+		max-width: #{$contextGridWidth}px;
+		// max-width: $bp5; // this is not the same since we increase the font-size at certain breakpoints so the em-value increases too.
+	}
+
 	.header-holder {
 		@include padding-top(0);
 
@@ -142,10 +147,6 @@
 
 	.header {
 		@include box-(12,1,1);
-	}
-
-	.row {
-		max-width: #{$contextGridWidth}px;
 	}
 
 	.doormat-holder {
@@ -163,8 +164,4 @@
 	.doormat-col-4 {
 		@include box-(4,1,1);
 	}
-}
-
-@media only screen and (min-width: $bp5) {
-
 }
