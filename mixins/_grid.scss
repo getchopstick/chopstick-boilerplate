@@ -5,23 +5,16 @@
 /// calculations
 
 $contextGridMargin: $contextGridGutter / 2;
-$contextGridWidth: ($contextGridGutter + $contextGridColumn) * $contextGridColumns - $contextGridGutter;
-$contextGridSubTotalWidth: $contextGridWidth + $contextGridGutter;
-$contextGridTotalWidth: $contextGridWidth + ($contextGridGutter * 2);
+$contextGridWidth: ($contextGridGutter + $contextGridColumn) * $contextGridColumns;
 
-// in em's based on the font-size
+// Responsive design formula for fully percentual columns & gutters
 
-$contextGridEmWidth: $contextGridWidth / $basefontsize;
-$contextGridSubTotalEmWidth: $contextGridSubTotalWidth / $basefontsize;
+$fluidGridColumn: $contextGridColumn / $contextGridWidth * 100 ;
+$fluidGridGutter: ($contextGridGutter / $contextGridWidth) * 100 ;
+$fluidGridMargin: ($contextGridMargin / $contextGridWidth) * 100 ;
 
-// Responsive design formula in action
-
-$fluidGridColumn: $contextGridColumn / $contextGridSubTotalWidth * 100 ;
-$fluidGridGutter: ($contextGridGutter / $contextGridSubTotalWidth) * 100 ;
-$fluidGridMargin: (($contextGridGutter / 2) / $contextGridSubTotalWidth) * 100 ;
-
-// the last breakpoint is colculated here based on the total with of the grid
-$bp5: #{$contextGridSubTotalWidth / $basefontsize}em;
+// the last breakpoint is calculated here based on the total with of the grid
+$bp5: #{$contextGridWidth / $basefontsize}em;
 
 /// mixins
 
