@@ -73,9 +73,25 @@ $bp5: #{$contextGridWidth / $basefontsize}em;
 @mixin box-($amount, $left, $right) {
 	width: ($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%;
 	float: left;
+	position: relative;
 	@include border-box;
 	@include px-padding-lr($left, $right);
 	// @include em-padding-lr($left, $right); // experimental
+}
+
+// push #amount of columns left
+// use @include push-(#amount);
+
+@mixin pushLeft($amount) {
+	left: ($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%;
+}
+
+@mixin pullRight($amount) {
+	right: ($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%;
+}
+
+@mixin pullLeft($amount) {
+	left: (($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%) * -1;
 }
 
 // last-col mixin to re-align the right edge

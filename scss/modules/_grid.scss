@@ -4,7 +4,7 @@
 
 @while $contextGridColumns > 0 {
 		.grid-#{$contextGridColumns} {
-			margin-bottom: 1.5em;
+			@include margin-bottom(1);
 
 			.inner {
 				padding: 1em;
@@ -18,6 +18,34 @@
 		$contextGridColumns: $contextGridColumns - 1;
 	}
 
+.grid-14 {
+	@include margin-bottom(1);
+
+	.inner {
+		padding: 1em;
+		font-family: $basefont;
+		@include font-dimensions(14,1,0);
+		font-weight: bold;
+		text-align: center;
+		background-color: #ccc;
+	}
+}
+
+.perc-3 {
+	@include perc-col-(12,1,1);
+	@include margin-bottom(1);
+
+	.inner {
+		padding: 1em;
+		font-family: $basefont;
+		@include font-dimensions(14,1,0);
+		font-weight: bold;
+		text-align: center;
+		background-color: #ccc;
+	}
+
+}
+
 /* media queries
 -------------------------------------- */
 
@@ -29,7 +57,8 @@
 	.grid-5,
 	.grid-7,
 	.grid-8,
-	.grid-9, {
+	.grid-9,
+	.grid-14 {
 		@include box-(12,1,1);
 	}
 
@@ -52,15 +81,43 @@
 
 	.grid-1 { @include box-(1,1,1); }
 	.grid-2 { @include box-(2,1,1); }
-	.grid-3 { @include perc-col-(3,1,1); padding: 0; } // example of the percentual column mixin
+	.grid-3 { @include box-(3,1,1); }
 	.grid-4 { @include box-(4,1,1); }
 	.grid-5 { @include box-(5,1,1); }
 	.grid-7 { @include box-(7,1,1); }
 	.grid-8 { @include box-(8,1,1); }
 	.grid-9 { @include box-(9,1,1); }
 
+	.perc-3 { @include perc-col-(3,1,1); } // example of the percentual column mixin
+
+	.pushLeft-3 { @include pushLeft(3); }
+	.pushLeft-4 { @include pushLeft(4); }
+	.pushLeft-5 { @include pushLeft(6); }
+	.pushLeft-6 { @include pushLeft(6); }
+	.pushLeft-7 { @include pushLeft(7); }
+	.pushLeft-8 { @include pushLeft(8); }
+	.pushLeft-9 { @include pushLeft(9); }
+
+	.pullLeft-3 { @include pullLeft(3); }
+	.pullLeft-4 { @include pullLeft(4); }
+	.pullLeft-5 { @include pullLeft(5); }
+	.pullLeft-6 { @include pullLeft(6); }
+	.pullLeft-7 { @include pullLeft(7); }
+	.pullLeft-8 { @include pullLeft(8); }
+	.pullLeft-9 { @include pullLeft(9); }
+
 	.last-col {
 		@include last-col;
+		margin-bottom: 0;
+	}
+
+}
+
+@media only screen and (min-width: $bp5) {
+
+	.grid-14{
+		@include box-(14,1,1);
+		@include pullLeft(2);
 	}
 
 }
