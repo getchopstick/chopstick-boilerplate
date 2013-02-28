@@ -19,23 +19,10 @@
 	<meta name="author" content="">
 	<title>Chopstick: SASS responsive grid system</title>
 
-	<!-- svg detection before css can load -->
-
-	<script>
-		var html = document.getElementsByTagName('html')[0];
-
-		(function flagSVG() {
-			var ns = {'svg': 'http://www.w3.org/2000/svg'};
-			if(document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1")) {
-				html.className += ' svg';
-			}
-		})();
-	</script>
+	<!-- Custom modernizr build: http://modernizr.com — load other JavaScript at the end of document -->
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/screen.css">
-
-	<!-- Custom modernizr build: http://modernizr.com — load other JavaScript at the end of document -->
 
 	<!-- Enable HTML5 in IE<9 -->
 	<!--[if lt IE 9  & (!IEMobile)]><script src="js/html5shiv.js"></script><![endif]-->
