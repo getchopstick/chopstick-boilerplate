@@ -7,10 +7,10 @@ html {
 	-webkit-overflow-scrolling: touch;
 	-webkit-text-size-adjust: 100%;
 	    -ms-text-size-adjust: 100%;
+	font: $basefontweight $basefontsize/16*100%/#{$baselineheight} $basefontserif ;
 }
 
 body {
-	font: $basefontweight $basefontsize/16*100%/#{$baselineheight} $basefontserif ;
 	-webkit-font-smoothing: antialiased;
 	        font-smoothing: antialiased;
 	text-rendering : optimizelegibility;
@@ -179,7 +179,7 @@ a {
 
 @media only screen and (min-width: $bp3) {
 
-	body {
+	html {
 		font-size: $basefontsize/16*112.5%;
 	}
 
@@ -187,7 +187,7 @@ a {
 
 @media only screen and (min-width: $bp5) {
 
-	body {
+	html {
 		font-size: $basefontsize/16*125%;
 	}
 
