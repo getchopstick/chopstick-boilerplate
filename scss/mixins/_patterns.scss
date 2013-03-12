@@ -73,6 +73,15 @@
 	zoom: 1;
 }
 
+// unified rounded borders
+
+@mixin rounded($tl,$tr,$br,$bl){
+	@include border-radius(($radius*$tl) ($radius*$tr) ($radius*$br) ($radius*$bl));
+}
+
+%rounded {
+	@include border-radius($radius);
+}
 
 // baseline mixins
 
