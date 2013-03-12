@@ -40,6 +40,21 @@
 	}
 }
 
+// Prevent Long URL’s From Breaking Out of Container
+// http://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+
+%word-break {
+	-ms-word-break: break-all;
+	word-break: break-all;
+
+	// Non standard for webkit
+	word-break: break-word;
+
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
 // UI mixins
 // UI mixins
 @mixin box($color, $top: 1.5, $right: 1, $bottom: 1.5, $left: 1){
