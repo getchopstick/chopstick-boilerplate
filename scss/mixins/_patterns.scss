@@ -56,13 +56,21 @@
 }
 
 // UI mixins
-// UI mixins
-@mixin box($color, $top: 1.5, $right: 1, $bottom: 1.5, $left: 1){
+
+@mixin block($color, $top: 1.5, $right: 1, $bottom: 1.5, $left: 1){
 	background-color: $color;
-	padding-top: $baselineheight * 1em * $top;
-	padding-bottom: $baselineheight * 1em * $bottom;
-	padding-left: $contextGridMargin * $left * 1px;
-	padding-right: $contextGridMargin * $right * 1px;
+	padding: #{$baselineheight * 1em * $top} #{$contextGridMargin * $right * 1px} #{$baselineheight * 1em * $bottom} #{$contextGridMargin * $left * 1px};
+}
+
+// Cross browser background opacity
+
+@mixin background-opacity($color, $alpha) {
+	$rgba: rgba($color, $alpha);
+	$ie-hex-str: ie-hex-str($rgba);
+	background-color: transparent;
+	background-color: $rgba;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+	zoom: 1;
 }
 
 
