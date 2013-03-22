@@ -14,14 +14,14 @@
 /*
 	Chopstick patterns
 */
-.row, .header .inner, .main-nav {
+.row, .header .inner, .main-nav ul {
   *zoom: 1;
 }
-.row:before, .header .inner:before, .main-nav:before, .row:after, .header .inner:after, .main-nav:after {
+.row:before, .header .inner:before, .main-nav ul:before, .row:after, .header .inner:after, .main-nav ul:after {
   display: table;
   content: "";
 }
-.row:after, .header .inner:after, .main-nav:after {
+.row:after, .header .inner:after, .main-nav ul:after {
   clear: both;
 }
 
@@ -50,7 +50,7 @@ html {
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  font: 500 100%/1.5 Georgia, serif;
+  font: 400 100%/1.5 Georgia, serif;
 }
 
 body {
@@ -95,40 +95,35 @@ h5 {
 
 h1,
 .h1 {
-  font-size: 38px;
-  font-size: 2.375rem;
+  font-size: 2.375em;
   line-height: 1.10526em;
   margin-bottom: 0.63158em;
 }
 
 h2,
 .h2 {
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   line-height: 1em;
   margin-bottom: 1em;
 }
 
 h3,
 .h3 {
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 1.25em;
   line-height: 1.2em;
   margin-bottom: 1.2em;
 }
 
 h4,
 .h4 {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 1.125em;
   line-height: 1.33333em;
   margin-bottom: 1.33333em;
 }
 
 h5,
 .h5 {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 1.125em;
   line-height: 1.33333em;
   margin-bottom: 0.66667em;
 }
@@ -218,8 +213,7 @@ a:hover, a:active {
 ------------------------------------------ */
 @media only screen and (min-width: 30em) {
   h1 {
-    font-size: 48px;
-    font-size: 3rem;
+    font-size: 3em;
     line-height: 1em;
     margin-bottom: 0.5em;
   }
@@ -257,29 +251,31 @@ a:hover, a:active {
 	header
 */
 .logo {
+  float: left;
   font-family: Georgia, serif;
   font-style: italic;
   font-weight: normal;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 1.5em;
   margin-bottom: 1.5em;
 }
 
 .header .inner {
   border-bottom: 1px solid #cccccc;
-  padding-bottom: 1.5em;
 }
 
 .main-nav {
+  float: left;
+  width: 100%;
+}
+.main-nav ul {
+  font-family: Helvetica, Arial, sans-serif;
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 1.5em;
-  margin-bottom: 0em;
-  font-family: Helvetica, Arial, sans-serif;
+  margin-bottom: 1.5em;
 }
 .main-nav a {
   color: #b3b3b3;
@@ -289,6 +285,30 @@ a:hover, a:active {
 .main-nav a:hover,
 .main-nav .selected a {
   color: red;
+}
+
+.mobile-nav .main-nav {
+  display: none;
+}
+
+.main-nav-trigger {
+  display: block;
+  float: right;
+  width: 2.1em;
+  height: 2.1em;
+  text-indent: -9999px;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+  background: #333333 url("../img/icon-menu.png") 50% no-repeat;
+}
+.svg .main-nav-trigger {
+  background: #333333 url("../img/icon-menu.svg") 50% no-repeat;
+}
+
+.svg .trigger-active,
+.trigger-active {
+  background-color: red;
 }
 
 /*
@@ -335,27 +355,46 @@ a:hover, a:active {
 @media only screen and (min-width: 42.5em) {
   .logo {
     float: left;
-    font-size: 14px;
-    font-size: 0.875rem;
+    font-size: 0.875em;
     line-height: 1.71429em;
     margin-bottom: 0em;
   }
 
+  .header-holder {
+    padding-top: 0em;
+  }
+  .header-holder .inner {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+
+  .mobile-nav .main-nav,
   .main-nav {
+    display: block !important;
+    width: auto;
     float: right;
-    font-size: 14px;
-    font-size: 0.875rem;
+  }
+  .mobile-nav .main-nav ul,
+  .main-nav ul {
+    font-size: 0.875em;
     line-height: 1.71429em;
     margin-bottom: 0em;
   }
-  .main-nav li, .main-nav a {
+  .mobile-nav .main-nav ul li, .mobile-nav .main-nav ul a,
+  .main-nav ul li,
+  .main-nav ul a {
     display: block;
     float: left;
     zoom: 1;
   }
+  .mobile-nav .main-nav li,
   .main-nav li {
     margin-left: 30px;
     margin-right: 0px;
+  }
+
+  .main-nav-trigger {
+    display: none;
   }
 
   .intro-holder {
@@ -377,7 +416,7 @@ a:hover, a:active {
   }
   .header-holder .inner {
     padding-top: 3em;
-    padding-bottom: 0.75em;
+    padding-bottom: 1.5em;
   }
 
   .header {
@@ -440,8 +479,7 @@ textarea {
   padding: .25em .5em;
   border: 1px solid #cccccc;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 1.5em;
   margin-bottom: 0em;
   color: gray;
@@ -472,8 +510,7 @@ a.button {
   padding: .25em .5em;
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 1.5em;
   margin-bottom: 1.5em;
   font-weight: 700;
@@ -564,8 +601,7 @@ a.button {
   }
 
   .intro h1 {
-    font-size: 72px;
-    font-size: 4.5rem;
+    font-size: 4.5em;
     line-height: 1.16667em;
     margin-bottom: 0.33333em;
   }
@@ -579,8 +615,7 @@ a.button {
 .grid-12 .inner {
   padding: 1em;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
   font-weight: bold;
@@ -594,8 +629,7 @@ a.button {
 .grid-11 .inner {
   padding: 1em;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
   font-weight: bold;
@@ -609,8 +643,7 @@ a.button {
 .grid-10 .inner {
   padding: 1em;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
   font-weight: bold;
@@ -624,8 +657,7 @@ a.button {
 .grid-9 .inner {
   padding: 1em;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
   font-weight: bold;
@@ -639,8 +671,7 @@ a.button {
 .grid-8 .inner {
   padding: 1em;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
   font-weight: bold;
@@ -654,8 +685,7 @@ a.button {
 .grid-7 .inner {
   padding: 1em;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
   font-weight: bold;
@@ -669,8 +699,7 @@ a.button {
 .grid-6 .inner {
   padding: 1em;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
   font-weight: bold;
@@ -684,8 +713,7 @@ a.button {
 .grid-5 .inner {
   padding: 1em;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
   font-weight: bold;
@@ -699,8 +727,7 @@ a.button {
 .grid-4 .inner {
   padding: 1em;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
   font-weight: bold;
@@ -714,8 +741,7 @@ a.button {
 .grid-3 .inner {
   padding: 1em;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
   font-weight: bold;
@@ -729,8 +755,7 @@ a.button {
 .grid-2 .inner {
   padding: 1em;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
   font-weight: bold;
@@ -744,8 +769,7 @@ a.button {
 .grid-1 .inner {
   padding: 1em;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
   font-weight: bold;
@@ -759,8 +783,7 @@ a.button {
 .grid-14 .inner {
   padding: 1em;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
   font-weight: bold;
@@ -779,8 +802,7 @@ a.button {
 .perc-3 .inner {
   padding: 1em;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
   font-weight: bold;

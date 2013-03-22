@@ -20,6 +20,7 @@
 	<title>Chopstick: SASS responsive grid system</title>
 
 	<!-- Custom modernizr build: http://modernizr.com — load other JavaScript at the end of document -->
+	<script src="js/modernizr.custom.js"></script>
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/screen.css">
@@ -39,11 +40,13 @@
 			<div class="header">
 				<div class="inner">
 					<h1 class="logo">chopstick</h1>
-					<ul class="main-nav">
-						<li class="selected"><a href="index.html">Home</a></li>
-						<li><a href="elements.html">Elements</a></li>
-						<li><a href="grid.html">Grid</a></li>
-					</ul>
+					<nav class="main-nav">
+						<ul>
+							<li class="selected"><a href="index.html">Home</a></li>
+							<li><a href="elements.html">Elements</a></li>
+							<li><a href="grid.html">Grid</a></li>
+						</ul>
+					</nav>
 				</div>
 			</div>
 		</div>
@@ -114,7 +117,7 @@
 	<!--[if lt IE 9  & (!IEMobile)]><script src="js/respond.min.js"></script><![endif]-->
 
 	<!-- Theme specific JavaScript. Add your other scripts here -->
-	<script src="js/theme.js"></script>
+	<script src="js/theme.min.js"></script>
 
 	<!-- Google Analytics -->
 	<script>
