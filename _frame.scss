@@ -24,6 +24,7 @@
 */
 
 .logo {
+	float: left;
 	font-family: $basefontserif;
 	font-style: italic;
 	font-weight: normal;
@@ -33,14 +34,20 @@
 .header .inner {
 	border-bottom: 1px solid lighten($darkcolor,60);
 	@extend %clearfix;
-	@include padding-bottom(1);
+	// @include padding-bottom(1);
 }
 
 .main-nav {
-	@include list-nav;
-	@include font-dimensions(16,1,0);
-	font-family: $basefont;
-	@extend %clearfix;
+
+	float: left;
+	width: 100%;
+
+	ul {
+		font-family: $basefont;
+		@include list-nav;
+		@include font-dimensions(16,1,1);
+		@extend %clearfix;
+	}
 
 	a {
 		color: lighten($darkcolor,50);
@@ -53,6 +60,25 @@
 		color: darken($primarycolor,0);
 	}
 
+}
+
+.mobile-nav .main-nav {
+	display: none;
+}
+
+.main-nav-trigger {
+ 	display: block;
+ 	float: right;
+ 	width: 2.1em;
+ 	height: 2.1em;
+ 	text-indent: -9999px;
+ 	@include font-dimensions(16,1,1);
+  	@include svg-bg("../img/icon-menu", ".png", $darkcolor, 50%, no-repeat);
+}
+
+.svg .trigger-active,
+.trigger-active {
+	background-color: $linkcolor;
 }
 
 /*
@@ -108,15 +134,34 @@
 		@include font-dimensions(14,1,0);
 	}
 
+	.header-holder {
+		@include padding-top(0);
+
+		.inner {
+			@include padding-tb(1,1);
+		}
+
+	}
+
+	.mobile-nav .main-nav,
 	.main-nav {
-		@include horizontal-nav();
+		display: block !important;
+		width: auto;
 		float: right;
-		@include font-dimensions(14,1,0);
+
+		ul {
+			@include horizontal-nav();
+			@include font-dimensions(14,1,0);
+		}
 
 		li {
 			@include px-margin-lr(1,0);
 		}
 
+	}
+
+	.main-nav-trigger {
+		display: none;
 	}
 
 	.intro-holder {
@@ -140,7 +185,7 @@
 		@include padding-top(0);
 
 		.inner {
-			@include padding-tb(2,.5);
+			@include padding-tb(2,1);
 		}
 
 	}
