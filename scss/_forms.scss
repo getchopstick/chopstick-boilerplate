@@ -8,7 +8,6 @@ input.inputPassword,
 input.inputSearch,
 input.inputDate,
 textarea {
-	@include border-box;
 	padding: .25em .5em;
 	border: 1px solid $mediumcolor;
 	font-family: $basefont;
@@ -34,7 +33,6 @@ a.button {
 	display: block;
 	float: left;
 	clear: both;
-	@include border-box;
 	border: none;
 	padding: .25em .5em;
 	margin: 0;

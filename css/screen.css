@@ -45,6 +45,13 @@ article, aside, figure, footer, header, hgroup, nav, section {
 /*
 	base
 */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(/js/boxsizing.htc);
+}
+
 html {
   background-color: #333333;
   -webkit-overflow-scrolling: touch;
@@ -161,7 +168,7 @@ caption {
 
 td,
 th {
-  padding: .25em 1em .25em 0;
+  padding: 0.25em 1em 0.25em 0;
 }
 
 img {
@@ -344,10 +351,6 @@ a:hover, a:active {
     width: 100%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -423,10 +426,6 @@ a:hover, a:active {
     width: 100%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -443,10 +442,6 @@ a:hover, a:active {
     width: 100%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -455,10 +450,6 @@ a:hover, a:active {
     width: 33.33333%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -472,11 +463,7 @@ input.inputPassword,
 input.inputSearch,
 input.inputDate,
 textarea {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  *behavior: url(/js/boxsizing.htc);
-  padding: .25em .5em;
+  padding: 0.25em 0.5em;
   border: 1px solid #cccccc;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
@@ -502,12 +489,8 @@ a.button {
   display: block;
   float: left;
   clear: both;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  *behavior: url(/js/boxsizing.htc);
   border: none;
-  padding: .25em .5em;
+  padding: 0.25em 0.5em;
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
@@ -533,10 +516,6 @@ a.button {
     width: 100%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -546,10 +525,6 @@ a.button {
     width: 50%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -558,10 +533,6 @@ a.button {
     width: 66.66667%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -587,10 +558,6 @@ a.button {
     width: 100%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -823,10 +790,6 @@ a.button {
     width: 100%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -835,10 +798,6 @@ a.button {
     width: 50%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -849,10 +808,6 @@ a.button {
     width: 50%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -862,10 +817,6 @@ a.button {
     width: 8.33333%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -874,10 +825,6 @@ a.button {
     width: 16.66667%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -886,10 +833,6 @@ a.button {
     width: 25%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -898,10 +841,6 @@ a.button {
     width: 33.33333%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -910,10 +849,6 @@ a.button {
     width: 41.66667%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -922,10 +857,6 @@ a.button {
     width: 58.33333%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -934,10 +865,6 @@ a.button {
     width: 66.66667%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -946,10 +873,6 @@ a.button {
     width: 75%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -1028,10 +951,6 @@ a.button {
     width: 116.66667%;
     float: left;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(/js/boxsizing.htc);
     padding-left: 30px;
     padding-right: 30px;
     left: -16.66667%;
@@ -1066,7 +985,7 @@ a.button {
   }
 
   pre, blockquote {
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     page-break-inside: avoid;
   }
 

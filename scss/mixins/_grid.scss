@@ -74,7 +74,6 @@ $bp5: #{$contextGridWidth / $basefontsize}em;
 	width: ($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%;
 	float: left;
 	position: relative;
-	@include border-box;
 	@include px-padding-lr($left, $right);
 	// @include em-padding-lr($left, $right); // experimental
 }
