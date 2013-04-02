@@ -24,6 +24,7 @@ a.button, .secondaryButton {
   border: none;
   padding: 0;
   margin: 0;
+  overflow: hidden;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 700;
   cursor: pointer;
@@ -504,6 +505,7 @@ textarea {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
   line-height: 1.5em;
+  height: 1.5em;
   margin-bottom: 0em;
   color: gray;
   background-color: white;
@@ -526,21 +528,19 @@ a.button {
   padding-right: 1.40625em;
   font-size: 0.875em;
   line-height: 2.57143em;
+  height: 2.57143em;
   margin-bottom: 0em;
   color: white;
   background-color: #cc0000;
   border: 1px solid #990000;
   border-top-color: #b30000;
   border-bottom-color: maroon;
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
-  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 1px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 1px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 1px rgba(0, 0, 0, 0);
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 button:hover,
@@ -567,6 +567,7 @@ a.button:visited {
   padding-right: 1.40625em;
   font-size: 0.875em;
   line-height: 2.57143em;
+  height: 2.57143em;
   margin-bottom: 0em;
   color: white;
   background-color: #1a1a1a;
@@ -619,6 +620,7 @@ a.button:visited {
     padding-right: 1.875em;
     font-size: 1em;
     line-height: 3em;
+    height: 3em;
     margin-bottom: 0em;
     display: inline-block;
     width: auto;

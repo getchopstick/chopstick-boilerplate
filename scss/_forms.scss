@@ -11,7 +11,7 @@ textarea {
 	padding: .25em .5em;
 	border: 1px solid $mediumcolor;
 	font-family: $basefont;
-	@include font-dimensions(16,1,0,0);
+	@include input-dimensions(16,1,0,0);
 	color: lighten($darkcolor,30);
 	background-color: $whitecolor;
 	-webkit-appearance: none;
@@ -31,7 +31,7 @@ button,
 .button,
 a.button {
 	@include button-small;
-	@include button-color($primarycolor, darken($primarycolor,10), white, false, true, .5, .25, .25);
+	@include button-color($primarycolor, darken($primarycolor,10), white, false, true, .5, .5, 0);
 }
 
 .secondaryButton {
