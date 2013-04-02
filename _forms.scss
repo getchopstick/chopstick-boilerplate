@@ -30,19 +30,23 @@ textarea {
 button,
 .button,
 a.button {
-	display: block;
-	float: left;
-	clear: both;
-	border: none;
-	padding: .25em .5em;
-	margin: 0;
-	font-family: $basefont;
-	@include font-dimensions(16,1,1);
-	font-weight: 700;
-	cursor: pointer;
-	background-color: $primarycolor;
-	color: $whitecolor;
-	text-decoration: none;
-	-webkit-appearance: none;
-	-webkit-font-smoothing: antialiased;
+	@include button-small;
+	@include button-color($primarycolor, darken($primarycolor,10), white, false, true, .5, .25, .25);
+}
+
+.secondaryButton {
+	@include button-small;
+	@include button-color($darkcolor, darken($darkcolor,10), white, true, true, .9, .25, .5);
+}
+
+@media only screen and (min-width: $bp3) {
+
+	button,
+	.button,
+	a.button,
+	.secondaryButton {
+		@include button-big;
+		@include button-inlineblock;
+	}
+
 }
