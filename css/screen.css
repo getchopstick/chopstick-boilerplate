@@ -12,6 +12,32 @@
 	Chopstick typography mixins
 */
 /*
+	button mixins
+*/
+button,
+.button,
+a.button, .secondaryButton {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+}
+button:hover,
+.button:hover, .secondaryButton:hover, button:visited,
+.button:visited, .secondaryButton:visited {
+  text-decoration: none;
+}
+
+/*
 	Chopstick patterns
 */
 .row, .header .inner, .main-nav ul {
@@ -23,6 +49,16 @@
 }
 .row:after, .header .inner:after, .main-nav ul:after {
   clear: both;
+}
+
+button,
+.button,
+a.button, .secondaryButton {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
 }
 
 /*
@@ -168,7 +204,7 @@ caption {
 
 td,
 th {
-  padding: 0.25em 1em 0.25em 0;
+  padding: .25em 1em .25em 0;
 }
 
 img {
@@ -463,7 +499,7 @@ input.inputPassword,
 input.inputSearch,
 input.inputDate,
 textarea {
-  padding: 0.25em 0.5em;
+  padding: .25em .5em;
   border: 1px solid #cccccc;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
@@ -486,25 +522,108 @@ textarea:focus {
 button,
 .button,
 a.button {
-  display: block;
-  float: left;
-  clear: both;
-  border: none;
-  padding: 0.25em 0.5em;
-  margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  line-height: 1.5em;
-  margin-bottom: 1.5em;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: red;
+  padding-left: 1.40625em;
+  padding-right: 1.40625em;
+  font-size: 0.875em;
+  line-height: 2.57143em;
+  margin-bottom: 0em;
   color: white;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -webkit-font-smoothing: antialiased;
+  background-color: #cc0000;
+  border: 1px solid #990000;
+  border-top-color: #b30000;
+  border-bottom-color: maroon;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 1px rgba(0, 0, 0, 0.25);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+button:hover,
+.button:hover,
+a.button:hover {
+  color: white;
+  background-color: red;
+}
+button:active, button:focus,
+.button:active,
+.button:focus,
+a.button:active,
+a.button:focus {
+  background-color: #e60000;
+}
+button:visited,
+.button:visited,
+a.button:visited {
+  color: white;
 }
 
+.secondaryButton {
+  padding-left: 1.40625em;
+  padding-right: 1.40625em;
+  font-size: 0.875em;
+  line-height: 2.57143em;
+  margin-bottom: 0em;
+  color: white;
+  background-color: #1a1a1a;
+  border: 1px solid black;
+  border-top-color: #0d0d0d;
+  border-bottom-color: black;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 1px rgba(0, 0, 0, 0.5);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #333333), color-stop(100%, #1a1a1a));
+  background-image: -webkit-linear-gradient(#333333, #1a1a1a);
+  background-image: -moz-linear-gradient(#333333, #1a1a1a);
+  background-image: -o-linear-gradient(#333333, #1a1a1a);
+  background-image: linear-gradient(#333333, #1a1a1a);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.9);
+}
+.secondaryButton:hover {
+  color: white;
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4d4d4d), color-stop(100%, #333333));
+  background-image: -webkit-linear-gradient(#4d4d4d, #333333);
+  background-image: -moz-linear-gradient(#4d4d4d, #333333);
+  background-image: -o-linear-gradient(#4d4d4d, #333333);
+  background-image: linear-gradient(#4d4d4d, #333333);
+}
+.secondaryButton:active, .secondaryButton:focus {
+  background-color: #262626;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #333333), color-stop(100%, #1a1a1a));
+  background-image: -webkit-linear-gradient(#333333, #1a1a1a);
+  background-image: -moz-linear-gradient(#333333, #1a1a1a);
+  background-image: -o-linear-gradient(#333333, #1a1a1a);
+  background-image: linear-gradient(#333333, #1a1a1a);
+}
+.secondaryButton:visited {
+  color: white;
+}
+
+@media only screen and (min-width: 42.5em) {
+  button,
+  .button,
+  a.button,
+  .secondaryButton {
+    padding-left: 1.875em;
+    padding-right: 1.875em;
+    font-size: 1em;
+    line-height: 3em;
+    margin-bottom: 0em;
+    display: inline-block;
+    width: auto;
+  }
+}
 /* Defaults */
 /*
 	module: main
@@ -985,7 +1104,7 @@ a.button {
   }
 
   pre, blockquote {
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
     page-break-inside: avoid;
   }
 

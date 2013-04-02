@@ -1,0 +1,105 @@
+/*
+	button mixins
+*/
+
+%button {
+	position: relative;
+	display: block;
+	width: 100%;
+	text-align: center;
+	border: none;
+	padding: 0;
+	margin: 0;
+	font-family: $baseheadingfont;
+	font-weight: 700;
+	cursor: pointer;
+	text-decoration: none;
+	-webkit-appearance: none;
+	-webkit-font-smoothing: antialiased;
+	@extend %rounded;
+
+	&:hover,
+	&:visited {
+		text-decoration: none;
+	}
+
+}
+
+@mixin button-big {
+	@extend %button;
+	@include em-padding-lr(1,1);
+	@include font-dimensions($basefontsize,2,0);
+}
+
+@mixin button-small {
+	@extend %button;
+	@include em-padding-lr(.75,.75);
+	@include font-dimensions(($basefontsize - 2),1.5,0);
+}
+
+@mixin button-tiny {
+	@extend %button;
+	@include em-padding-lr(.5,.5);
+	@include font-dimensions(($basefontsize - 4),1.25,0);
+}
+
+@mixin button-inlineblock() {
+	display: inline-block;
+	width: auto;
+}
+
+@mixin button-color($primarycolor, $secondarycolor, $textcolor, $gradient: false, $border: false, $text-shadow: 0, $inset-shadow: 0, $box-shadow: 0) {
+	color: $textcolor;
+	background-color: $secondarycolor;
+
+	// @include box-shadow(0 1px 0 rgba(255,255,255,.2) inset, 0 1px 1px rgba(black,.20));
+
+	@if $border {
+		border: 1px solid darken($secondarycolor,10);
+		border-top-color: darken($secondarycolor,5);
+		border-bottom-color: darken($secondarycolor,15);
+	}
+
+	@if $inset-shadow > 0 {
+		@include box-shadow(0 1px 0 rgba(255,255,255,$inset-shadow) inset);
+	}
+
+	@if $box-shadow > 0 {
+		@include box-shadow(0 1px 1px rgba(black,$box-shadow));
+	}
+
+	@if $inset-shadow > 0, $box-shadow > 0 {
+		@include box-shadow(0 1px 0 rgba(255,255,255,$inset-shadow) inset, 0 1px 1px rgba(black,$box-shadow));
+	}
+
+	@if $gradient {
+		@include background-image(linear-gradient($primarycolor, $secondarycolor));
+	}
+
+	@if $text-shadow > 0 {
+		@include text-shadow(1px 1px 0 rgba(0,0,0,$text-shadow));
+	}
+
+	&:hover {
+		color: $textcolor;
+		background-color: lighten($primarycolor,0);
+
+		@if $gradient {
+			@include background-image(linear-gradient(lighten($primarycolor,10), lighten($secondarycolor,10)));
+		}
+
+	}
+
+	&:active,
+	&:focus {
+		background-color: darken($primarycolor,5);
+
+		@if $gradient {
+			@include background-image(linear-gradient($primarycolor, $secondarycolor));
+		}
+	}
+
+	&:visited {
+		color: $textcolor;
+	}
+}
