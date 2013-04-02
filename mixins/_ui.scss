@@ -10,6 +10,7 @@
 	border: none;
 	padding: 0;
 	margin: 0;
+	overflow: hidden;
 	font-family: $baseheadingfont;
 	font-weight: 700;
 	cursor: pointer;
@@ -28,19 +29,19 @@
 @mixin button-big {
 	@extend %button;
 	@include em-padding-lr(1,1);
-	@include font-dimensions($basefontsize,2,0);
+	@include input-dimensions($basefontsize,2,0);
 }
 
 @mixin button-small {
 	@extend %button;
 	@include em-padding-lr(.75,.75);
-	@include font-dimensions(($basefontsize - 2),1.5,0);
+	@include input-dimensions(($basefontsize - 2),1.5,0);
 }
 
 @mixin button-tiny {
 	@extend %button;
 	@include em-padding-lr(.5,.5);
-	@include font-dimensions(($basefontsize - 4),1.25,0);
+	@include input-dimensions(($basefontsize - 4),1.25,0);
 }
 
 @mixin button-inlineblock() {
