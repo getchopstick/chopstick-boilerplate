@@ -143,11 +143,10 @@
     @include mdrn-svg { background: $bg-color url($filename + '.svg') $position $repeat; }
 }
 
-// breakpoint mixin
-// use: @include breakpoint(#point);
-
-@mixin breakpoint($point) {
-  @media screen and (min-width: $point) {
-    @content;
-  }
+// media query mixin
+// use: @include mq(#point, #query1, #query2);
+@mixin mq($point, $query1: min, $query2: width) {
+	@media screen and (#{$query1}-#{$query2}: $point / $basefontsize +em) {
+		@content;
+	}
 }
