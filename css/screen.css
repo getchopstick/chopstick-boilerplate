@@ -253,6 +253,18 @@ a:hover, a:active {
   outline: 0;
 }
 
+/* upgrade message for old browsers (.lt-ie7)
+------------------------------------------ */
+.chromeframe {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  background-color: #333333;
+  margin: 0;
+  padding: 1em;
+}
+
 /* media queries
 ------------------------------------------ */
 @media only screen and (min-width: 30em) {
