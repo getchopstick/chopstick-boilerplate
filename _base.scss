@@ -170,6 +170,18 @@ a {
 	}
 }
 
+/* upgrade message for old browsers (.lt-ie7)
+------------------------------------------ */
+.chromeframe {
+	font-family: $baseheadingfont;
+	font-weight: $baseheadingfontweight;
+	text-align: center;
+	color: $whitecolor;
+	background-color: $darkcolor;
+	margin: 0;
+	padding: 1em;
+}
+
 /* media queries
 ------------------------------------------ */
 
