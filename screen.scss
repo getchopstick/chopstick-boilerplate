@@ -11,31 +11,27 @@
 	@import "compass"; /* http://compass-style.org/install */
 	// @import "modular-scale"; /* https://github.com/scottkellum/modular-scale#installation */
 
-// Mixins
+// Shared
 
-	@import "mixins/grid";
-	@import "mixins/typography";
-	@import "mixins/ui";
-	@import "mixins/patterns";
-
-// Pick a reset
-
-	// @import "compass/reset";
-	@import "reset";
+	@import "shared/grid";
+	@import "shared/typography";
+	@import "shared/ui";
+	@import "shared/patterns";
 
 // Theme
 
-	@import "base";
-	@import "frame";
-	@import "forms";
-	@import "usercontent";
+	@import "theme/reset";
+	@import "theme/base";
+	@import "theme/frame";
+	@import "theme/forms";
+	@import "theme/usercontent";
 
 // Modules
 
-	@import "modules/main";
-	@import "modules/intro";
-	@import "modules/grid";
+	@import "theme/modules/main";
+	@import "theme/modules/intro";
+	@import "theme/modules/grid";
 
 // Print
 
-	@media print {@import "print";}
+	@media print {@import "theme/print";}

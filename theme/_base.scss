@@ -170,6 +170,50 @@ a {
 	}
 }
 
+/*
+	Chopstick forms
+*/
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+	padding: .25em .5em;
+	border: 1px solid $mediumcolor;
+	font-family: $basefont;
+	@include input-dimensions(16,1,0,0);
+	color: lighten($darkcolor,30);
+	background-color: $whitecolor;
+	-webkit-appearance: none;
+
+
+	&:focus {
+		color: $darkcolor;
+		outline-color: $primarycolor;
+		border-color: darken($mediumcolor,20);
+	}
+
+}
+
+// buttons
+
+input[type="submit"],
+button {
+	@include button-small;
+	@include button-color($primarycolor, darken($primarycolor,10), white, false, true, .5, .5, 0);
+}
+
+@media only screen and (min-width: $bp3) {
+
+	input[type="submit"],
+	button {
+		@include button-big;
+		@include button-inlineblock;
+	}
+
+}
+
+
 /* upgrade message for old browsers (.lt-ie7)
 ------------------------------------------ */
 .chromeframe {

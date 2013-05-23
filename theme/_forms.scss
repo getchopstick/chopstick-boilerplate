@@ -6,8 +6,7 @@
 input.inputText,
 input.inputPassword,
 input.inputSearch,
-input.inputDate,
-textarea {
+input.inputDate {
 	padding: .25em .5em;
 	border: 1px solid $mediumcolor;
 	font-family: $basefont;
@@ -27,7 +26,6 @@ textarea {
 
 // buttons
 
-button,
 .button,
 a.button {
 	@include button-small;
@@ -41,7 +39,6 @@ a.button {
 
 @media only screen and (min-width: $bp3) {
 
-	button,
 	.button,
 	a.button,
 	.secondaryButton {
