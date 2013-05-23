@@ -14,8 +14,8 @@
 /*
 	button mixins
 */
-button,
-.button,
+input[type="submit"],
+button, .button,
 a.button, .secondaryButton {
   position: relative;
   display: block;
@@ -32,9 +32,9 @@ a.button, .secondaryButton {
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
 }
-button:hover,
-.button:hover, .secondaryButton:hover, button:visited,
-.button:visited, .secondaryButton:visited {
+input[type="submit"]:hover,
+button:hover, .button:hover, .secondaryButton:hover, input[type="submit"]:visited,
+button:visited, .button:visited, .secondaryButton:visited {
   text-decoration: none;
 }
 
@@ -52,8 +52,8 @@ button:hover,
   clear: both;
 }
 
-button,
-.button,
+input[type="submit"],
+button, .button,
 a.button, .secondaryButton {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -253,6 +253,82 @@ a:hover, a:active {
   outline: 0;
 }
 
+/*
+	Chopstick forms
+*/
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: .25em .5em;
+  border: 1px solid #cccccc;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  height: 1.5em;
+  margin-bottom: 0em;
+  color: gray;
+  background-color: white;
+  -webkit-appearance: none;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  color: #333333;
+  outline-color: red;
+  border-color: #999999;
+}
+
+input[type="submit"],
+button {
+  padding-left: 1.40625em;
+  padding-right: 1.40625em;
+  font-size: 0.875em;
+  line-height: 2.57143em;
+  height: 2.57143em;
+  margin-bottom: 0em;
+  color: white;
+  background-color: #cc0000;
+  border: 1px solid #990000;
+  border-top-color: #b30000;
+  border-bottom-color: maroon;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 1px rgba(0, 0, 0, 0);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+input[type="submit"]:hover,
+button:hover {
+  color: white;
+  background-color: red;
+}
+input[type="submit"]:active, input[type="submit"]:focus,
+button:active,
+button:focus {
+  background-color: #e60000;
+}
+input[type="submit"]:visited,
+button:visited {
+  color: white;
+}
+
+@media only screen and (min-width: 42.5em) {
+  input[type="submit"],
+  button {
+    padding-left: 1.875em;
+    padding-right: 1.875em;
+    font-size: 1em;
+    line-height: 3em;
+    height: 3em;
+    margin-bottom: 0em;
+    display: inline-block;
+    width: auto;
+  }
+}
 /* upgrade message for old browsers (.lt-ie7)
 ------------------------------------------ */
 .chromeframe {
@@ -510,8 +586,7 @@ a:hover, a:active {
 input.inputText,
 input.inputPassword,
 input.inputSearch,
-input.inputDate,
-textarea {
+input.inputDate {
   padding: .25em .5em;
   border: 1px solid #cccccc;
   font-family: Helvetica, Arial, sans-serif;
@@ -526,14 +601,12 @@ textarea {
 input.inputText:focus,
 input.inputPassword:focus,
 input.inputSearch:focus,
-input.inputDate:focus,
-textarea:focus {
+input.inputDate:focus {
   color: #333333;
   outline-color: red;
   border-color: #999999;
 }
 
-button,
 .button,
 a.button {
   padding-left: 1.40625em;
@@ -555,20 +628,16 @@ a.button {
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 1px rgba(0, 0, 0, 0);
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
-button:hover,
 .button:hover,
 a.button:hover {
   color: white;
   background-color: red;
 }
-button:active, button:focus,
-.button:active,
-.button:focus,
+.button:active, .button:focus,
 a.button:active,
 a.button:focus {
   background-color: #e60000;
 }
-button:visited,
 .button:visited,
 a.button:visited {
   color: white;
@@ -624,7 +693,6 @@ a.button:visited {
 }
 
 @media only screen and (min-width: 42.5em) {
-  button,
   .button,
   a.button,
   .secondaryButton {
