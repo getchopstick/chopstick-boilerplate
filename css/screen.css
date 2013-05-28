@@ -1,11 +1,4 @@
 /*
-	Comment or uncomment whatever you need in this file.
-*/
-/*
-	Chopstick settings
-*/
-/* http://compass-style.org/install */
-/*
 	chopstick grid
 */
 /*
@@ -16,7 +9,8 @@
 */
 input[type="submit"],
 button, .button,
-a.button, .secondaryButton {
+a.button, .secondaryButton,
+a.secondaryButton {
   position: relative;
   display: block;
   width: 100%;
@@ -54,7 +48,8 @@ button:visited, .button:visited, .secondaryButton:visited {
 
 input[type="submit"],
 button, .button,
-a.button, .secondaryButton {
+a.button, .secondaryButton,
+a.secondaryButton {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -63,7 +58,7 @@ a.button, .secondaryButton {
 }
 
 /*
-	reset
+	Reset
 */
 html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
   margin: 0;
@@ -80,7 +75,9 @@ article, aside, figure, footer, header, hgroup, nav, section {
 }
 
 /*
-	base
+	Base
+	---
+	Default markup for the most common HTML elements, based on the settings file.
 */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -124,7 +121,7 @@ hr {
 }
 
 /*
-	base typography
+	Typography
 */
 h1,
 h2,
@@ -213,26 +210,7 @@ img {
 }
 
 /*
-	responsive media embedding, like an iframe
-*/
-.media_embed {
-  width: 100%;
-  height: 0;
-  padding-bottom: 62.5%;
-  margin-bottom: 2.25em;
-  position: relative;
-  overflow: hidden;
-}
-.media_embed iframe {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/*
- 	base links
+ 	Links
 */
 a {
   text-decoration: none;
@@ -254,7 +232,7 @@ a:hover, a:active {
 }
 
 /*
-	Chopstick forms
+	Forms
 */
 input[type="text"],
 input[type="email"],
@@ -329,8 +307,28 @@ button:visited {
     width: auto;
   }
 }
-/* upgrade message for old browsers (.lt-ie7)
------------------------------------------- */
+/*
+	Responsive media embedding, like an iframe
+*/
+.media_embed {
+  width: 100%;
+  height: 0;
+  padding-bottom: 62.5%;
+  margin-bottom: 2.25em;
+  position: relative;
+  overflow: hidden;
+}
+.media_embed iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*
+	Upgrade message for old browsers (.lt-ie7)
+*/
 .chromeframe {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -341,7 +339,7 @@ button:visited {
   padding: 1em;
 }
 
-/* media queries
+/* Media Queries
 ------------------------------------------ */
 @media only screen and (min-width: 30em) {
   h1 {
@@ -361,7 +359,7 @@ button:visited {
   }
 }
 /*
-	Chopstick frame
+	Frame
 */
 .holder {
   padding-top: 1.5em;
@@ -380,7 +378,7 @@ button:visited {
 }
 
 /*
-	header
+	Header
 */
 .logo {
   float: left;
@@ -444,14 +442,14 @@ button:visited {
 }
 
 /*
-	doormat
+	Doormat
 */
 .doormat-holder {
   padding-bottom: 1.5em;
 }
 
 /*
-	footer
+	Footer
 */
 .footer-holder {
   background-color: #333333;
@@ -580,33 +578,10 @@ button:visited {
   }
 }
 /*
-	Chopstick forms
-	That's a tuff one.
+	Forms
+	---
+	Object-oriented classes for form-like elements.
 */
-input.inputText,
-input.inputPassword,
-input.inputSearch,
-input.inputDate {
-  padding: .25em .5em;
-  border: 1px solid #cccccc;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  line-height: 1.5em;
-  height: 1.5em;
-  margin-bottom: 0em;
-  color: gray;
-  background-color: white;
-  -webkit-appearance: none;
-}
-input.inputText:focus,
-input.inputPassword:focus,
-input.inputSearch:focus,
-input.inputDate:focus {
-  color: #333333;
-  outline-color: red;
-  border-color: #999999;
-}
-
 .button,
 a.button {
   padding-left: 1.40625em;
@@ -643,7 +618,8 @@ a.button:visited {
   color: white;
 }
 
-.secondaryButton {
+.secondaryButton,
+a.secondaryButton {
   padding-left: 1.40625em;
   padding-right: 1.40625em;
   font-size: 0.875em;
@@ -671,7 +647,8 @@ a.button:visited {
   background-image: linear-gradient(#333333, #1a1a1a);
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.9);
 }
-.secondaryButton:hover {
+.secondaryButton:hover,
+a.secondaryButton:hover {
   color: white;
   background-color: #333333;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4d4d4d), color-stop(100%, #333333));
@@ -680,7 +657,9 @@ a.button:visited {
   background-image: -o-linear-gradient(#4d4d4d, #333333);
   background-image: linear-gradient(#4d4d4d, #333333);
 }
-.secondaryButton:active, .secondaryButton:focus {
+.secondaryButton:active, .secondaryButton:focus,
+a.secondaryButton:active,
+a.secondaryButton:focus {
   background-color: #262626;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #333333), color-stop(100%, #1a1a1a));
   background-image: -webkit-linear-gradient(#333333, #1a1a1a);
@@ -688,14 +667,16 @@ a.button:visited {
   background-image: -o-linear-gradient(#333333, #1a1a1a);
   background-image: linear-gradient(#333333, #1a1a1a);
 }
-.secondaryButton:visited {
+.secondaryButton:visited,
+a.secondaryButton:visited {
   color: white;
 }
 
 @media only screen and (min-width: 42.5em) {
   .button,
   a.button,
-  .secondaryButton {
+  .secondaryButton,
+  a.secondaryButton {
     padding-left: 1.875em;
     padding-right: 1.875em;
     font-size: 1em;
@@ -706,7 +687,9 @@ a.button:visited {
     width: auto;
   }
 }
-/* Defaults */
+/*
+	User Content Defaults
+*/
 /*
 	module: main
 */
@@ -1158,8 +1141,8 @@ a.button:visited {
   }
 }
 @media print {
-  /* 
-  	Chopstick Print styles 
+  /*
+  	Print stylesheet
   */
   * {
     background: transparent !important;

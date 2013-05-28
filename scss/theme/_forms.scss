@@ -1,30 +1,8 @@
 /*
-	Chopstick forms
-	That's a tuff one.
+	Forms
+	---
+	Object-oriented classes for form-like elements.
 */
-
-input.inputText,
-input.inputPassword,
-input.inputSearch,
-input.inputDate {
-	padding: .25em .5em;
-	border: 1px solid $mediumcolor;
-	font-family: $basefont;
-	@include input-dimensions(16,1,0,0);
-	color: lighten($darkcolor,30);
-	background-color: $whitecolor;
-	-webkit-appearance: none;
-
-
-	&:focus {
-		color: $darkcolor;
-		outline-color: $primarycolor;
-		border-color: darken($mediumcolor,20);
-	}
-
-}
-
-// buttons
 
 .button,
 a.button {
@@ -32,7 +10,8 @@ a.button {
 	@include button-color($primarycolor, darken($primarycolor,10), white, false, true, .5, .5, 0);
 }
 
-.secondaryButton {
+.secondaryButton,
+a.secondaryButton {
 	@include button-small;
 	@include button-color($darkcolor, darken($darkcolor,10), white, true, true, .9, .25, .5);
 }
@@ -41,7 +20,8 @@ a.button {
 
 	.button,
 	a.button,
-	.secondaryButton {
+	.secondaryButton,
+	a.secondaryButton {
 		@include button-big;
 		@include button-inlineblock;
 	}
