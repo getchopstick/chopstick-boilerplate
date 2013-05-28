@@ -19,7 +19,7 @@
 //   font-size: floor( ms(14px, 1, 1.618) ); // returns: 22px
 //   font-size:  ceil( ms(14px, 1, 1.618) ); // returns: 23px
 //  }
-@function ms($value, $increment, $ratio) {
+@function ms($value, $increment: $increment, $ratio: $ratio) {
   @if $increment > 0 {
     @for $i from 1 through $increment {
       $value: ($value * $ratio);
@@ -42,6 +42,6 @@
 //  div {
 //   font-size: gr(14px, 1); // returns: 22.652px
 //  }
-@function gr($value, $increment) {
+@function gr($value, $increment: $increment) {
   @return ms($value, $increment, 1.618)
 }
