@@ -9,7 +9,6 @@
 // External Frameworks
 
 	@import "compass"; /* http://compass-style.org/install */
-	// @import "modular-scale"; /* https://github.com/scottkellum/modular-scale#installation */
 
 // Shared
 
@@ -17,6 +16,7 @@
 	@import "shared/typography";
 	@import "shared/ui";
 	@import "shared/patterns";
+	@import "shared/functions";
 
 // Theme
 
