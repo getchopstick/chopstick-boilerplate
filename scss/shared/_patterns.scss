@@ -146,7 +146,7 @@
 // media query mixin
 // use: @include mq(#point, #query1, #query2);
 @mixin mq($point, $query1: min, $query2: width) {
-	@media screen and (#{$query1}-#{$query2}: $point / $basefontsize +em) {
+	@media screen and (#{$query1}-#{$query2}: $point) {
 		@content;
 	}
 }
