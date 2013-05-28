@@ -150,11 +150,3 @@
 		@content;
 	}
 }
-
-// Convert pixels to ems
-// eg. for a relational value of 12px write em(12) when the parent is the $basefontsize
-// if the parent is another value say 24px write em(12, 24)
-
-@function em($pxval, $base: $basefontsize) {
-  @return ($pxval / $base) * 1em;
-}
