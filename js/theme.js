@@ -7,7 +7,7 @@ var jsTheme =
 		console.log("javascript is locked and loaded!") // for testing purposes. Check your console. Delete after you finished reading this. :-)
 	}
 
-}
+};
 
 jsTheme.mobileNav =
 {
@@ -40,6 +40,6 @@ jsTheme.mobileNav =
 		});
 	}
 
-}
+};
 
 $(jsTheme.init);
