@@ -7,13 +7,13 @@ input.inputText,
 input.inputPassword,
 input.inputSearch,
 input.inputDate {
-	padding: .25em .5em;
+	padding: 0 .5em;
 	border: 1px solid $mediumcolor;
 	font-family: $basefont;
-	@include input-dimensions(16,1,0,0);
 	color: lighten($darkcolor,30);
 	background-color: $whitecolor;
 	-webkit-appearance: none;
+	@include input-dimensions(16,1.5,0,0);
 
 
 	&:focus {
