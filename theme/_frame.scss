@@ -1,5 +1,5 @@
 /*
-	Chopstick frame
+	Frame
 */
 
 .holder {
@@ -20,7 +20,7 @@
 }
 
 /*
-	header
+	Header
 */
 
 .logo {
@@ -82,7 +82,7 @@
 }
 
 /*
-	doormat
+	Doormat
 */
 
 .doormat-holder {
@@ -90,7 +90,7 @@
 }
 
 /*
-	footer
+	Footer
 */
 
 .footer-holder {
@@ -98,7 +98,6 @@
 	color: lighten($darkcolor,70);
 	@include padding-top(1);
 }
-
 
 
 /* media queries

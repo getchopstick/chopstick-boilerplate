@@ -1,0 +1,47 @@
+// Em calculator: convert pixels to ems
+// eg. for a relational value of 12px write em(12) when the parent is the $basefontsize
+// if the parent is another value say 24px write em(12, 24)
+@function em($pxval, $base: $basefontsize) {
+  @return ($pxval / $base) * 1em;
+}
+
+// Modular scale function
+// use ms($value, $increment, $ratio)
+// Example:
+//  div {
+//                     Increment Up GR with positive value
+//   font-size:        ms(14px,   1, 1.618); // returns: 22.652px
+//
+//                     Increment Down GR with negative value
+//   font-size:        ms(14px,  -1, 1.618); // returns: 8.653px
+//
+//                     Can be used with ceil(round up) or floor(round down)
+//   font-size: floor( ms(14px, 1, 1.618) ); // returns: 22px
+//   font-size:  ceil( ms(14px, 1, 1.618) ); // returns: 23px
+//  }
+@function ms($value, $increment: $increment, $ratio: $ratio) {
+  @if $increment > 0 {
+    @for $i from 1 through $increment {
+      $value: ($value * $ratio);
+    }
+  }
+
+  @if $increment < 0 {
+    $increment: abs($increment);
+    @for $i from 1 through $increment {
+      $value: ($value / $ratio);
+    }
+  }
+
+  @return $value;
+}
+
+// Golden ratio function
+// use gr($value, $increment, $ratio)
+// Example:
+//  div {
+//   font-size: gr(14px, 1); // returns: 22.652px
+//  }
+@function gr($value, $increment: $increment) {
+  @return ms($value, $increment, 1.618)
+}
