@@ -1,6 +1,6 @@
-/*
-	Comment or uncomment whatever you need in this file.
-*/
+//
+//	Comment or uncomment whatever you need in this file.
+//
 
 // Settings
 
@@ -8,8 +8,7 @@
 
 // External Frameworks
 
-	@import "compass"; /* http://compass-style.org/install */
-	// @import "modular-scale"; /* https://github.com/scottkellum/modular-scale#installation */
+	@import "compass"; // http://compass-style.org/install
 
 // Shared
 
@@ -17,8 +16,9 @@
 	@import "shared/typography";
 	@import "shared/ui";
 	@import "shared/patterns";
+	@import "shared/functions";
 
-// Theme
+// Theme: feel free to add or delete
 
 	@import "theme/reset";
 	@import "theme/base";
@@ -34,6 +34,7 @@
 // demo files
 
 	@import "theme/modules/demo-grid";
+
 
 // Print
 

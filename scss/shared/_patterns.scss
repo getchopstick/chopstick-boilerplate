@@ -145,15 +145,7 @@
 // media query mixin
 // use: @include mq(#point, #query1, #query2);
 @mixin mq($point, $query1: min, $query2: width) {
-	@media screen and (#{$query1}-#{$query2}: $point / $basefontsize +em) {
+	@media screen and (#{$query1}-#{$query2}: $point) {
 		@content;
 	}
-}
-
-// Convert pixels to ems
-// eg. for a relational value of 12px write em(12) when the parent is the $basefontsize
-// if the parent is another value say 24px write em(12, 24)
-
-@function em($pxval, $base: $basefontsize) {
-  @return ($pxval / $base) * 1em;
 }

@@ -1,6 +1,6 @@
-/*
-	Chopstick settings
-*/
+//
+//	Chopstick settings
+//
 
 // Typography
 
@@ -32,6 +32,7 @@ $bp4: #{960 / $basefontsize}em;
 // Modular scale settings
 
 $ratio: 1.5;
+$increment: 1;
 $base-size: $basefontsize/16*1em $importantnumber/16*1em;
 
 // Roundness
