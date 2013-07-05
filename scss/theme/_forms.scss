@@ -30,21 +30,23 @@ input.inputDate {
 .button,
 a.button {
 	@include button-small;
-	@include button-color($alpha-ui-color, darken($alpha-ui-color,10), white, false, true, .5, .5, 0);
+	@include button-color($alpha-ui-color, darken($alpha-ui-color,10), #fff, false, false, .5, .5, 0);
 }
 
-.secondaryButton,
-a.secondaryButton {
+.button-secondary,
+input.button-secondary,
+a.button-secondary {
 	@include button-small;
-	@include button-color($alpha-text-color, darken($alpha-text-color,10), white, true, true, .9, .25, .5);
+	@include button-color($alpha-text-color, darken($alpha-text-color,10), #fff, false, false, .9, .25, .5);
 }
 
 @media only screen and (min-width: $bp3) {
 
 	.button,
 	a.button,
-	.secondaryButton,
-	a.secondaryButton {
+	.button-secondary,
+	input.button-secondary,
+	a.button-secondary {
 		@include button-big;
 		@include button-inlineblock;
 	}

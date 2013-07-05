@@ -39,7 +39,7 @@ Everything that you can use.
 
 #### Grid
 
-`box-($amount, $left, $right)`: grid width (1, 2, 3, 8, . . .), gutter left & right
+`box-($amount, $left, $right)`: grid width (1, 2, 3, 8, . . .), gutter left & right.
 
 `push-left($amount)`:
 
@@ -64,8 +64,11 @@ Everything that you can use.
 #### Patterns
 
 `clearfix`:
+
 `list-nav`:
+
 `horizontal-nav`:
+
 `word-break`:
 
 #### Typography
