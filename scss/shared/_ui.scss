@@ -186,6 +186,9 @@
 */
 
 %pagination {
+	width: 100%;
+	overflow: hidden;
+
 	ul {
 		@include horizontal-list;
 		margin: #{$alpha-line-height}em 0;
@@ -194,4 +197,20 @@
 
 @mixin pagination {
 	@extend %pagination;
+}
+
+@mixin pagination-centered {
+	@extend %pagination;
+
+	.inner {
+		float: left;
+		position: relative;
+		left: 50%;
+	}
+
+		ul {
+			overflow: hidden;
+			position: relative;
+			left: -50%;
+		}
 }
