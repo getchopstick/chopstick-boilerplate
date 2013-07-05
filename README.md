@@ -19,7 +19,7 @@ The default theme uses settings from the settings file + components from the sha
 
 The SCSS part of Chopstick consists of two main folders: `scss/shared` and `scss/theme` and two main files: `scss/_settings.scss` and `scss/screen.scss`.
 
-The `scss/shared` folder contains all of the necessary mixins, includes, extends and other stuff to help you code quicker. Nothing in this folder is ever directly compiled to CSS. You need to reference components of Chopstick from within your theme’s SCSS code. 
+The `scss/shared` folder contains all of the necessary mixins, includes, extends and other stuff to help you code quicker. Nothing in this folder is ever directly compiled to CSS. You need to reference components of Chopstick from within your theme’s SCSS code.
 
 The `scss/theme` folder will contain your theme. Everything in this folder will be compiled to CSS if you import it in `screen.scss`. We have prepared what we believe are some sensible defaults in the directory root and theme-specific modules in the `modules` folder, but feel free to delete anything in this folder you don’t like. Also remember to remove the import rules from the `screen.scss` file.
 
@@ -68,15 +68,18 @@ Everything that you can use. [] means optional.
 
 
 #### UI
+`alert`: alert boxes. Available types: alert, alert-error, alert-success & alert-notice
+`pagination`: left aligned pagination
+`pagination-centered`: centered pagination
 
 
 
 ## Authors
 
-Simon Coudeville: <simon.coudeville@wijs.be>  
+Simon Coudeville: <simon.coudeville@wijs.be>
 [@simoncoudeville](http://twitter.com/simoncoudeville)
 
-Xavier Bertels: <xavier.bertels@wijs.be>  
+Xavier Bertels: <xavier.bertels@wijs.be>
 [@xavez](http://twitter.com/xavez)
 
 ## Credits
