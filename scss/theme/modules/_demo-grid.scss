@@ -89,21 +89,21 @@
 
 	.perc-3 { @include perc-col-(3,1,1); } // example of the percentual column mixin
 
-	.pushLeft-3 { @include pushLeft(3); }
-	.pushLeft-4 { @include pushLeft(4); }
-	.pushLeft-5 { @include pushLeft(6); }
-	.pushLeft-6 { @include pushLeft(6); }
-	.pushLeft-7 { @include pushLeft(7); }
-	.pushLeft-8 { @include pushLeft(8); }
-	.pushLeft-9 { @include pushLeft(9); }
+	.push-left-3 { @include push-left(3); }
+	.push-left-4 { @include push-left(4); }
+	.push-left-5 { @include push-left(6); }
+	.push-left-6 { @include push-left(6); }
+	.push-left-7 { @include push-left(7); }
+	.push-left-8 { @include push-left(8); }
+	.push-left-9 { @include push-left(9); }
 
-	.pullLeft-3 { @include pullLeft(3); }
-	.pullLeft-4 { @include pullLeft(4); }
-	.pullLeft-5 { @include pullLeft(5); }
-	.pullLeft-6 { @include pullLeft(6); }
-	.pullLeft-7 { @include pullLeft(7); }
-	.pullLeft-8 { @include pullLeft(8); }
-	.pullLeft-9 { @include pullLeft(9); }
+	.pull-left-3 { @include pull-left(3); }
+	.pull-left-4 { @include pull-left(4); }
+	.pull-left-5 { @include pull-left(5); }
+	.pull-left-6 { @include pull-left(6); }
+	.pull-left-7 { @include pull-left(7); }
+	.pull-left-8 { @include pull-left(8); }
+	.pull-left-9 { @include pull-left(9); }
 
 	.last-col {
 		margin-bottom: 0;
@@ -116,7 +116,7 @@
 
 	.grid-14 {
 		@include box-(14,1,1);
-		@include pullLeft(2);
+		@include pull-left(2);
 	}
 
 }

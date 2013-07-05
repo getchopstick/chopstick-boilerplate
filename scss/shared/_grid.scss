@@ -1,5 +1,5 @@
 /*
-	chopstick grid
+	Grid
 */
 
 /// calculations
@@ -34,20 +34,20 @@ $bp5: #{$contextGridWidth / $alpha-font-size}em;
 	padding-right: $contextGridMargin * $right * 1px;
 }
 
-// horizontal margin based on the context grid gutter
-// use: @include px-margin-lr(#left, #right);
-
-@mixin px-margin-lr($left: 1, $right: 1) {
-	margin-left: $contextGridMargin * $left * 1px;
-	margin-right: $contextGridMargin * $right * 1px;
-}
-
 // horizontal margin based on the context grid gutter in em
 // use: @include em-margin-lr(#left, #right);
 
 @mixin em-margin-lr($left: 1, $right: 1) {
 	margin-left: $contextGridMargin/$alpha-font-size * $left * 1em;
 	margin-right: $contextGridMargin/$alpha-font-size * $right * 1em;
+}
+
+// horizontal margin based on the context grid gutter
+// use: @include px-margin-lr(#left, #right);
+
+@mixin px-margin-lr($left: 1, $right: 1) {
+	margin-left: $contextGridMargin * $left * 1px;
+	margin-right: $contextGridMargin * $right * 1px;
 }
 
 // horizontal percentual margin
@@ -81,21 +81,21 @@ $bp5: #{$contextGridWidth / $alpha-font-size}em;
 // push #amount of columns left
 // use @include push-(#amount);
 
-@mixin pushLeft($amount) {
+@mixin push-left($amount) {
 	left: ($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%;
 }
 
-@mixin pullRight($amount) {
+@mixin pull-right($amount) {
 	right: ($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%;
 }
 
-@mixin pullLeft($amount) {
+@mixin pull-left($amount) {
 	left: (($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%) * -1;
 }
 
 // last-col mixin to re-align the right edge
 // use: @extend .last-col;
 
-@mixin last-col() {
+@mixin last-col {
 	float: right;
 }

@@ -1,11 +1,11 @@
 /*
-	chopstick grid
+	Grid
 */
 /*
-	Chopstick typography mixins
+	Typography
 */
 /*
-	button mixins
+	User Interface Elements
 */
 input[type="submit"],
 button, .button,
@@ -98,7 +98,7 @@ button:visited, .button:visited, .secondaryButton:visited {
 }
 
 /*
-	Chopstick patterns
+	Patterns
 */
 .row, .header .inner, .main-nav ul {
   *zoom: 1;
@@ -122,6 +122,9 @@ a.secondaryButton {
   border-radius: 3px;
 }
 
+/*
+  Functions
+*/
 /*
 	Reset
 */
@@ -1175,59 +1178,59 @@ a.secondaryButton:visited {
     float: left;
   }
 
-  .pushLeft-3 {
+  .push-left-3 {
     left: 25%;
   }
 
-  .pushLeft-4 {
+  .push-left-4 {
     left: 33.33333%;
   }
 
-  .pushLeft-5 {
+  .push-left-5 {
     left: 50%;
   }
 
-  .pushLeft-6 {
+  .push-left-6 {
     left: 50%;
   }
 
-  .pushLeft-7 {
+  .push-left-7 {
     left: 58.33333%;
   }
 
-  .pushLeft-8 {
+  .push-left-8 {
     left: 66.66667%;
   }
 
-  .pushLeft-9 {
+  .push-left-9 {
     left: 75%;
   }
 
-  .pullLeft-3 {
+  .pull-left-3 {
     left: -25%;
   }
 
-  .pullLeft-4 {
+  .pull-left-4 {
     left: -33.33333%;
   }
 
-  .pullLeft-5 {
+  .pull-left-5 {
     left: -41.66667%;
   }
 
-  .pullLeft-6 {
+  .pull-left-6 {
     left: -50%;
   }
 
-  .pullLeft-7 {
+  .pull-left-7 {
     left: -58.33333%;
   }
 
-  .pullLeft-8 {
+  .pull-left-8 {
     left: -66.66667%;
   }
 
-  .pullLeft-9 {
+  .pull-left-9 {
     left: -75%;
   }
 
