@@ -218,20 +218,28 @@ blockquote {
 table {
   text-align: left;
   width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.875em;
+  line-height: 1.71429em;
+  margin-bottom: 3.42857em;
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 
 caption {
   font-family: Helvetica, Arial, sans-serif;
   text-align: left;
-  color: gray;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #b3b3b3;
   padding-bottom: 0.75em;
   margin-bottom: 0.75em;
+  font-weight: 700;
+  text-align: center;
 }
 
 td,
 th {
   padding: .25em 1em .25em 0;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 img {
