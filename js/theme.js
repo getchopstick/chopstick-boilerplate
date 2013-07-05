@@ -4,6 +4,7 @@ var jsTheme =
 	init: function()
 	{
 		jsTheme.mobileNav.init();
+		jsTheme.forms.init();
 		console.log("javascript is locked and loaded!") // for testing purposes. Check your console. Delete after you finished reading this. :-)
 	}
 
@@ -37,6 +38,19 @@ jsTheme.mobileNav =
 		trigger.on('click', function() {
 			nav.toggle();
 			$(this).toggleClass("trigger-active");
+		});
+	}
+
+};
+
+jsTheme.forms =
+{
+	init: function()
+	{
+		$('.alert-box .close').on('click', function(e)
+		{
+			e.preventDefault();
+			$(this).parent('.alert-box').fadeOut(600);
 		});
 	}
 

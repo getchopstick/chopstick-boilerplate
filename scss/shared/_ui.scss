@@ -104,3 +104,79 @@
 		color: $textcolor;
 	}
 }
+
+/*
+	Alerts mixin
+*/
+
+%alert {
+	border-width: 1px;
+	border-style: solid;
+	padding: #{$baselineheight}em;
+	padding-bottom: 0;
+	margin-bottom: #{$baselineheight}em;
+	position: relative;
+
+	a {
+		@include opacity(.8);
+	}
+
+	a:hover,
+	a:active,
+	a:focus {
+		@include opacity(1);
+		text-decoration: none;
+	}
+
+	.close {
+		position: absolute;
+		top: #{$baselineheight/2}em;
+		right: #{$baselineheight/2}em;
+		display: block;
+		line-height: 1;
+	}
+}
+
+@mixin alert {
+	@extend %alert;
+	border-color: darken($mediumcolor,20%);
+	color: #FFF;
+	background-color: $mediumcolor;
+
+	a {
+		color: #FFF;
+	}
+}
+
+@mixin alert-error {
+	@extend %alert;
+	border-color: #8b0800;
+	color: #fae7e6;
+	background-color: #d00c00;
+
+	a {
+		color: #fae7e6;
+	}
+}
+
+@mixin alert-success {
+	@extend %alert;
+	border-color: #4c721f;
+	color: #f1f7eb;
+	background-color: #72aa2e;
+
+	a {
+		color: #f1f7eb;
+	}
+}
+
+@mixin alert-notice {
+	@extend %alert;
+	border-color: #e6901e;
+	color: #332d1c;
+	background-color: #ffe38a;
+
+	a {
+		color: #332d1c;
+	}
+}
