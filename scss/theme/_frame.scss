@@ -25,14 +25,14 @@
 
 .logo {
 	float: left;
-	font-family: $basefontserif;
+	font-family: $alpha-font-family;
 	font-style: italic;
 	font-weight: normal;
 	@include font-dimensions(16,1,1);
 }
 
 .header .inner {
-	border-bottom: 1px solid lighten($darkcolor,60);
+	border-bottom: 1px solid lighten($alpha-text-color,60);
 	@extend %clearfix;
 	// @include padding-bottom(1);
 }
@@ -43,21 +43,21 @@
 	width: 100%;
 
 	ul {
-		font-family: $basefont;
+		font-family: $alpha-font-family;
 		@include list-nav;
 		@include font-dimensions(16,1,1);
 		@extend %clearfix;
 	}
 
 	a {
-		color: lighten($darkcolor,50);
+		color: lighten($alpha-text-color,50);
 		text-decoration: none;
 		font-weight: bold;
 	}
 
 	a:hover,
 	.selected a {
-		color: darken($primarycolor,0);
+		color: darken($alpha-ui-color,0);
 	}
 
 }
@@ -73,12 +73,12 @@
  	height: 2.1em;
  	text-indent: -9999px;
  	@include font-dimensions(16,1,1);
-  	@include svg-bg("../img/icon-menu", ".png", $darkcolor, 50%, no-repeat);
+  	@include svg-bg("../img/icon-menu", ".png", $alpha-text-color, 50%, no-repeat);
 }
 
 .svg .trigger-active,
 .trigger-active {
-	background-color: $linkcolor;
+	background-color: $alpha-link-color;
 }
 
 /*
@@ -94,8 +94,8 @@
 */
 
 .footer-holder {
-	background-color: $darkcolor;
-	color: lighten($darkcolor,70);
+	background-color: $alpha-text-color;
+	color: lighten($alpha-text-color,70);
 	@include padding-top(1);
 }
 

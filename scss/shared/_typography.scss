@@ -5,14 +5,14 @@
 // baseline formula based on the baseline unit
 // use: @include font-dimensions(#font-size, #line-height, #margin-bottom, #padding-top)
 
-$baseline-unit: $basefontsize * $baselineheight;
-$basefontpercent: $basefontsize/16 * 100;
+$baseline-unit: $alpha-font-size * $alpha-line-height;
+$basefontpercent: $alpha-font-size/16 * 100;
 
 @mixin font-dimensions($fs: 16, $lh: 1, $mb: 1, $pt: 0, $pb: 0){
 	// use this for rems
 	// font-size: #{$fs}px;
-	// font-size: #{$fs / $basefontsize}rem;
-	font-size: #{$fs / $basefontsize}em;
+	// font-size: #{$fs / $alpha-font-size}rem;
+	font-size: #{$fs / $alpha-font-size}em;
 	line-height: #{($baseline-unit / $fs) * $lh}em;
 	margin-bottom: #{($baseline-unit / $fs) * $mb}em;
 	@if $pt > 0 {
@@ -26,8 +26,8 @@ $basefontpercent: $basefontsize/16 * 100;
 @mixin input-dimensions($fs: 16, $lh: 1, $mb: 1, $pt: 0, $pb: 0){
 	// use this for rems
 	// font-size: #{$fs}px;
-	// font-size: #{$fs / $basefontsize}rem;
-	font-size: #{$fs / $basefontsize}em;
+	// font-size: #{$fs / $alpha-font-size}rem;
+	font-size: #{$fs / $alpha-font-size}em;
 	line-height: #{($baseline-unit / $fs) * $lh}em;
 	height:  #{($baseline-unit / $fs) * $lh}em;
 	margin-bottom: #{($baseline-unit / $fs) * $mb}em;

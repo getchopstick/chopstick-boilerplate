@@ -14,7 +14,7 @@ $fluidGridGutter: ($contextGridGutter / $contextGridWidth) * 100 ;
 $fluidGridMargin: ($contextGridMargin / $contextGridWidth) * 100 ;
 
 // the last breakpoint is calculated here based on the total with of the grid
-$bp5: #{$contextGridWidth / $basefontsize}em;
+$bp5: #{$contextGridWidth / $alpha-font-size}em;
 
 /// mixins
 
@@ -22,8 +22,8 @@ $bp5: #{$contextGridWidth / $basefontsize}em;
 // use: @include em-padding-lr(#left, #right);
 
 @mixin em-padding-lr($left: 1, $right: 1) {
-	padding-left: $contextGridMargin/$basefontsize * $left * 1em;
-	padding-right: $contextGridMargin/$basefontsize * $right * 1em;
+	padding-left: $contextGridMargin/$alpha-font-size * $left * 1em;
+	padding-right: $contextGridMargin/$alpha-font-size * $right * 1em;
 }
 
 // horizontal padding based on the context grid gutter
@@ -46,8 +46,8 @@ $bp5: #{$contextGridWidth / $basefontsize}em;
 // use: @include em-margin-lr(#left, #right);
 
 @mixin em-margin-lr($left: 1, $right: 1) {
-	margin-left: $contextGridMargin/$basefontsize * $left * 1em;
-	margin-right: $contextGridMargin/$basefontsize * $right * 1em;
+	margin-left: $contextGridMargin/$alpha-font-size * $left * 1em;
+	margin-right: $contextGridMargin/$alpha-font-size * $right * 1em;
 }
 
 // horizontal percentual margin

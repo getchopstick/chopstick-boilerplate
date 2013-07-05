@@ -12,7 +12,7 @@
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
-	font-family: $basefont;
+	font-family: $alpha-font-family;
 	font-weight: 700;
 	cursor: pointer;
 	text-decoration: none;
@@ -29,19 +29,19 @@
 @mixin button-big {
 	@extend %button;
 	@include em-padding-lr(1,1);
-	@include input-dimensions($basefontsize,2,0);
+	@include input-dimensions($alpha-font-size,2,0);
 }
 
 @mixin button-small {
 	@extend %button;
 	@include em-padding-lr(.75,.75);
-	@include input-dimensions(($basefontsize - 2),1.5,0);
+	@include input-dimensions(($alpha-font-size - 2),1.5,0);
 }
 
 @mixin button-tiny {
 	@extend %button;
 	@include em-padding-lr(.5,.5);
-	@include input-dimensions(($basefontsize - 4),1.25,0);
+	@include input-dimensions(($alpha-font-size - 4),1.25,0);
 }
 
 @mixin button-inlineblock() {
@@ -49,16 +49,16 @@
 	width: auto;
 }
 
-@mixin button-color($primarycolor, $secondarycolor, $textcolor, $gradient: false, $border: false, $text-shadow: 0, $inset-shadow: 0, $box-shadow: 0) {
+@mixin button-color($alpha-ui-color, $beta-ui-color, $textcolor, $gradient: false, $border: false, $text-shadow: 0, $inset-shadow: 0, $box-shadow: 0) {
 	color: $textcolor;
-	background-color: $secondarycolor;
+	background-color: $beta-ui-color;
 
 	// @include box-shadow(0 1px 0 rgba(255,255,255,.2) inset, 0 1px 1px rgba(black,.20));
 
 	@if $border {
-		border: 1px solid darken($secondarycolor,10);
-		border-top-color: darken($secondarycolor,5);
-		border-bottom-color: darken($secondarycolor,15);
+		border: 1px solid darken($beta-ui-color,10);
+		border-top-color: darken($beta-ui-color,5);
+		border-bottom-color: darken($beta-ui-color,15);
 	}
 
 	@if $inset-shadow > 0 {
@@ -74,7 +74,7 @@
 	}
 
 	@if $gradient {
-		@include background-image(linear-gradient($primarycolor, $secondarycolor));
+		@include background-image(linear-gradient($alpha-ui-color, $beta-ui-color));
 	}
 
 	@if $text-shadow > 0 {
@@ -83,20 +83,20 @@
 
 	&:hover {
 		color: $textcolor;
-		background-color: lighten($primarycolor,0);
+		background-color: lighten($alpha-ui-color,0);
 
 		@if $gradient {
-			@include background-image(linear-gradient(lighten($primarycolor,10), lighten($secondarycolor,10)));
+			@include background-image(linear-gradient(lighten($alpha-ui-color,10), lighten($beta-ui-color,10)));
 		}
 
 	}
 
 	&:active,
 	&:focus {
-		background-color: darken($primarycolor,5);
+		background-color: darken($alpha-ui-color,5);
 
 		@if $gradient {
-			@include background-image(linear-gradient($primarycolor, $secondarycolor));
+			@include background-image(linear-gradient($alpha-ui-color, $beta-ui-color));
 		}
 	}
 
@@ -112,9 +112,9 @@
 %alert {
 	border-width: 1px;
 	border-style: solid;
-	padding: #{$baselineheight}em;
+	padding: #{$alpha-line-height}em;
 	padding-bottom: 0;
-	margin-bottom: #{$baselineheight}em;
+	margin-bottom: #{$alpha-line-height}em;
 	position: relative;
 
 	a {
@@ -130,8 +130,8 @@
 
 	.close {
 		position: absolute;
-		top: #{$baselineheight/2}em;
-		right: #{$baselineheight/2}em;
+		top: #{$alpha-line-height/2}em;
+		right: #{$alpha-line-height/2}em;
 		display: block;
 		line-height: 1;
 	}
@@ -139,9 +139,9 @@
 
 @mixin alert {
 	@extend %alert;
-	border-color: darken($mediumcolor,20%);
+	border-color: darken($gamma-ui-color,20%);
 	color: #FFF;
-	background-color: $mediumcolor;
+	background-color: $gamma-ui-color;
 
 	a {
 		color: #FFF;

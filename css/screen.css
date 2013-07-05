@@ -19,7 +19,7 @@ a.secondaryButton {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-weight: 700;
   cursor: pointer;
   text-decoration: none;
@@ -159,7 +159,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-weight: 400;
   text-rendering: optimizelegibility;
 }
@@ -229,7 +229,7 @@ blockquote {
 table {
   text-align: left;
   width: 100%;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   border-spacing: 0;
   border-collapse: collapse;
   font-size: 0.875em;
@@ -238,7 +238,7 @@ table {
 }
 
 caption {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   text-align: left;
   border-bottom: 1px solid #b3b3b3;
   font-weight: 700;
@@ -288,7 +288,7 @@ input[type="password"],
 textarea {
   padding: .25em .5em;
   border: 1px solid #cccccc;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   color: gray;
   background-color: white;
   -webkit-appearance: none;
@@ -302,7 +302,7 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 textarea:focus {
   color: #333333;
-  outline-color: red;
+  outgamma-ui-color: red;
   border-color: #999999;
 }
 
@@ -384,7 +384,7 @@ button:visited {
 	Upgrade message for old browsers (.lt-ie7)
 */
 .chromeframe {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-weight: 700;
   text-align: center;
   color: white;
@@ -446,7 +446,7 @@ button:visited {
   width: 100%;
 }
 .main-nav ul {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -635,7 +635,7 @@ input.inputSearch,
 input.inputDate {
   padding: 0 .5em;
   border: 1px solid #cccccc;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   color: gray;
   background-color: white;
   -webkit-appearance: none;
@@ -649,7 +649,7 @@ input.inputPassword:focus,
 input.inputSearch:focus,
 input.inputDate:focus {
   color: #333333;
-  outline-color: red;
+  outgamma-ui-color: red;
   border-color: #999999;
 }
 
@@ -836,7 +836,7 @@ a.secondaryButton:visited {
 }
 .grid-12 .inner {
   padding: 1em;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
@@ -850,7 +850,7 @@ a.secondaryButton:visited {
 }
 .grid-11 .inner {
   padding: 1em;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
@@ -864,7 +864,7 @@ a.secondaryButton:visited {
 }
 .grid-10 .inner {
   padding: 1em;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
@@ -878,7 +878,7 @@ a.secondaryButton:visited {
 }
 .grid-9 .inner {
   padding: 1em;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
@@ -892,7 +892,7 @@ a.secondaryButton:visited {
 }
 .grid-8 .inner {
   padding: 1em;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
@@ -906,7 +906,7 @@ a.secondaryButton:visited {
 }
 .grid-7 .inner {
   padding: 1em;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
@@ -920,7 +920,7 @@ a.secondaryButton:visited {
 }
 .grid-6 .inner {
   padding: 1em;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
@@ -934,7 +934,7 @@ a.secondaryButton:visited {
 }
 .grid-5 .inner {
   padding: 1em;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
@@ -948,7 +948,7 @@ a.secondaryButton:visited {
 }
 .grid-4 .inner {
   padding: 1em;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
@@ -962,7 +962,7 @@ a.secondaryButton:visited {
 }
 .grid-3 .inner {
   padding: 1em;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
@@ -976,7 +976,7 @@ a.secondaryButton:visited {
 }
 .grid-2 .inner {
   padding: 1em;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
@@ -990,7 +990,7 @@ a.secondaryButton:visited {
 }
 .grid-1 .inner {
   padding: 1em;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
@@ -1004,7 +1004,7 @@ a.secondaryButton:visited {
 }
 .grid-14 .inner {
   padding: 1em;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
@@ -1023,7 +1023,7 @@ a.secondaryButton:visited {
 }
 .perc-3 .inner {
   padding: 1em;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;

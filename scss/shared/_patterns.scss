@@ -59,7 +59,7 @@
 
 @mixin block($color, $top: 1.5, $right: 1, $bottom: 1.5, $left: 1){
 	background-color: $color;
-	padding: #{$baselineheight * 1em * $top} #{$contextGridMargin * $right * 1px} #{$baselineheight * 1em * $bottom} #{$contextGridMargin * $left * 1px};
+	padding: #{$alpha-line-height * 1em * $top} #{$contextGridMargin * $right * 1px} #{$alpha-line-height * 1em * $bottom} #{$contextGridMargin * $left * 1px};
 }
 
 // Cross browser background opacity
@@ -89,37 +89,37 @@
 // use: @include padding-tb(#top, #bottom);
 
 @mixin padding-tb($top: 1, $bottom: 0) {
-	padding-top: $baselineheight * 1em * $top;
-	padding-bottom: $baselineheight * 1em * $bottom;
+	padding-top: $alpha-line-height * 1em * $top;
+	padding-bottom: $alpha-line-height * 1em * $bottom;
 }
 
 // padding-bottom based on the base line-height
 // use: @include padding-bottom(#bottom),
 
 @mixin padding-bottom($bottom: 1) {
-	padding-bottom: $baselineheight * 1em * $bottom;
+	padding-bottom: $alpha-line-height * 1em * $bottom;
 }
 
 // padding-top based on the base line-height
 // @include padding-top(#top);
 
 @mixin padding-top($top: 1) {
-	padding-top: $baselineheight * 1em * $top;
+	padding-top: $alpha-line-height * 1em * $top;
 }
 
 // vertical margin based on the base line-height
 // use: @include margin-tb(#top, #bottom)
 
 @mixin margin-tb($top: 1, $bottom: 0) {
-	margin-top: $baselineheight * 1em * $top;
-	margin-bottom: $baselineheight * 1em * $bottom;
+	margin-top: $alpha-line-height * 1em * $top;
+	margin-bottom: $alpha-line-height * 1em * $bottom;
 }
 
 // margin-bottom based on the base line-height
 // use: @include margin-bottom(#bottom);
 
 @mixin margin-bottom($bottom: 1) {
-	margin-bottom: $baselineheight * 1em * $bottom;
+	margin-bottom: $alpha-line-height * 1em * $bottom;
 }
 
 // border-box polyfill helper

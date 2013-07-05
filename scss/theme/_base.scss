@@ -9,37 +9,37 @@
 }
 
 html {
-	background-color: $darkcolor;
+	background-color: $alpha-text-color;
 	-webkit-overflow-scrolling: touch;
 	-webkit-text-size-adjust: 100%;
 	    -ms-text-size-adjust: 100%;
-	font: $basefontweight $basefontsize/16*100%/#{$baselineheight} $basefontserif ;
+	font: $alpha-font-weight $alpha-font-size/16*100%/#{$alpha-line-height} $alpha-font-family ;
 }
 
 body {
 	-webkit-font-smoothing: antialiased;
 	        font-smoothing: antialiased;
 	text-rendering : optimizelegibility;
-	color: $darkcolor;
+	color: $alpha-text-color;
 }
 
 ::-moz-selection {
-	background-color: $darkcolor;
-	color: lighten($darkcolor, 65%);
+	background-color: $alpha-text-color;
+	color: lighten($alpha-text-color, 65%);
 	text-shadow: none;
 }
 
 ::selection {
-	background-color: $darkcolor;
-	color: lighten($darkcolor, 65%);
+	background-color: $alpha-text-color;
+	color: lighten($alpha-text-color, 65%);
 	text-shadow: none;
 }
 
 hr {
-	border: 1px solid lighten($darkcolor,60);
+	border: 1px solid lighten($alpha-text-color,60);
 	border-width: 1px 0 0;
 	clear: both;
-	margin: 0 0 $baselineheight * 1em;
+	margin: 0 0 $alpha-line-height * 1em;
 }
 
 /*
@@ -53,8 +53,8 @@ h4,
 h5,
 h6 {
 	margin: 0;
-	font-family: $headingfont;
-	font-weight: $basefontweight;
+	font-family: $beta-font-family;
+	font-weight: $alpha-font-weight;
 	text-rendering: optimizelegibility;
 }
 
@@ -71,17 +71,17 @@ h3 {
 }
 
 h4 {
-	font-weight: $headingfontweight;
+	font-weight: $beta-font-weight;
 	@include font-dimensions(ms(0),1,.5,.5);
 }
 
 h5 {
-	font-weight: $headingfontweight;
+	font-weight: $beta-font-weight;
 	@include font-dimensions(ms(0),1,.5,.5);
 }
 
 h6 {
-	font-weight: $headingfontweight;
+	font-weight: $beta-font-weight;
 	@include font-dimensions(ms(0),1,.5,.5);
 }
 
@@ -92,8 +92,8 @@ dl,
 table,
 address,
 pre {
-	line-height: #{$baselineheight}em;
-	margin-bottom: #{$baselineheight}em;
+	line-height: #{$alpha-line-height}em;
+	margin-bottom: #{$alpha-line-height}em;
 }
 
 ul,
@@ -105,17 +105,17 @@ blockquote {
 table {
 	text-align: left;
 	width: 100%;
-	font-family: $basefont;
+	font-family: $alpha-font-family;
 	border-spacing: 0;
 	border-collapse: collapse;
 	@include font-dimensions(14,1,2);
 }
 
 caption {
-	font-family: $basefont;
+	font-family: $alpha-font-family;
 	text-align: left;
-	border-bottom: 1px solid lighten($darkcolor,50);
-	font-weight: $headingfontweight;
+	border-bottom: 1px solid lighten($alpha-text-color,50);
+	font-weight: $beta-font-weight;
 	text-align: center;
 	@include padding-bottom(.5);
 	@include margin-bottom(.5);
@@ -124,7 +124,7 @@ caption {
 td,
 th {
 	padding: .25em 1em .25em 0;
-	border-bottom: 1px solid lighten($mediumcolor, 10);
+	border-bottom: 1px solid lighten($gamma-ui-color, 10);
 }
 
 img {
@@ -137,20 +137,20 @@ img {
 
 a {
 	text-decoration: none;
-	color: $linkcolor;
+	color: $alpha-link-color;
 
 	&:visited {
-		color: $linkcolorvisited;
+		color: $alpha-link-colorvisited;
 	}
 
 	&:hover {
 		text-decoration: underline;
-		color: $linkcolorhover;
+		color: $alpha-link-colorhover;
 	}
 
 	&:focus {
 		outline: thin dotted;
-		color: $linkcolorfocus;
+		color: $alpha-link-colorfocus;
 	}
 
 	&:hover,
@@ -170,18 +170,18 @@ input[type="email"],
 input[type="password"],
 textarea {
 	padding: .25em .5em;
-	border: 1px solid $mediumcolor;
-	font-family: $basefont;
-	color: lighten($darkcolor,30);
-	background-color: $whitecolor;
+	border: 1px solid $gamma-ui-color;
+	font-family: $alpha-font-family;
+	color: lighten($alpha-text-color,30);
+	background-color: $delta-ui-color;
 	-webkit-appearance: none;
 	@include input-dimensions(16,1,0,0);
 
 
 	&:focus {
-		color: $darkcolor;
-		outline-color: $primarycolor;
-		border-color: darken($mediumcolor,20);
+		color: $alpha-text-color;
+		outgamma-ui-color: $alpha-ui-color;
+		border-color: darken($gamma-ui-color,20);
 	}
 
 }
@@ -195,7 +195,7 @@ label {
 input[type="submit"],
 button {
 	@include button-small;
-	@include button-color($primarycolor, darken($primarycolor,10), white, false, true, .5, .5, 0);
+	@include button-color($alpha-ui-color, darken($alpha-ui-color,10), white, false, true, .5, .5, 0);
 }
 
 @media only screen and (min-width: $bp3) {
@@ -234,11 +234,11 @@ button {
 */
 
 .chromeframe {
-	font-family: $headingfont;
-	font-weight: $headingfontweight;
+	font-family: $beta-font-family;
+	font-weight: $beta-font-weight;
 	text-align: center;
-	color: $whitecolor;
-	background-color: $darkcolor;
+	color: $delta-ui-color;
+	background-color: $alpha-text-color;
 	margin: 0;
 	padding: 1em;
 }
@@ -253,7 +253,7 @@ button {
 @media only screen and (min-width: $bp3) {
 
 	html {
-		font-size: $basefontsize/16*112.5%;
+		font-size: $alpha-font-size/16*112.5%;
 	}
 
 }
@@ -261,7 +261,7 @@ button {
 @media only screen and (min-width: $bp5) {
 
 	html {
-		font-size: $basefontsize/16*125%;
+		font-size: $alpha-font-size/16*125%;
 	}
 
 }
