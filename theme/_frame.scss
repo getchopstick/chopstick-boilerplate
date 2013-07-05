@@ -28,7 +28,7 @@
 	font-family: $alpha-font-family;
 	font-style: italic;
 	font-weight: normal;
-	@include font-dimensions(16,1,1);
+	@include text-dimensions(16,1,1);
 }
 
 .header .inner {
@@ -45,7 +45,7 @@
 	ul {
 		font-family: $alpha-font-family;
 		@include list-nav;
-		@include font-dimensions(16,1,1);
+		@include text-dimensions(16,1,1);
 		@extend %clearfix;
 	}
 
@@ -72,7 +72,7 @@
  	width: 2.1em;
  	height: 2.1em;
  	text-indent: -9999px;
- 	@include font-dimensions(16,1,1);
+ 	@include text-dimensions(16,1,1);
   	@include svg-bg("../img/icon-menu", ".png", $alpha-text-color, 50%, no-repeat);
 }
 
@@ -130,7 +130,7 @@
 
 	.logo {
 		float: left;
-		@include font-dimensions(14,1,0);
+		@include text-dimensions(14,1,0);
 	}
 
 	.header-holder {
@@ -150,7 +150,7 @@
 
 		ul {
 			@include horizontal-nav();
-			@include font-dimensions(14,1,0);
+			@include text-dimensions(14,1,0);
 		}
 
 		li {
