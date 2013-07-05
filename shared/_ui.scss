@@ -180,3 +180,18 @@
 		color: #332d1c;
 	}
 }
+
+/*
+	Pagination mixin
+*/
+
+%pagination {
+	ul {
+		@include horizontal-list;
+		margin: #{$alpha-line-height}em 0;
+	}
+}
+
+@mixin pagination {
+	@extend %pagination;
+}

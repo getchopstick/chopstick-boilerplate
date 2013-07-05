@@ -1,21 +1,3 @@
 /*
 	module: forms
 */
-
-/* Alerts */
-
-.alert-box {
-	@include alert;
-}
-
-.alert-box.error {
-	@include alert-error;
-}
-
-.alert-box.success {
-	@include alert-success;
-}
-
-.alert-box.notice {
-	@include alert-notice;
-}
