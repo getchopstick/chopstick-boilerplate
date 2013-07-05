@@ -8,7 +8,7 @@
 $baseline-unit: $basefontsize * $baselineheight;
 $basefontpercent: $basefontsize/16 * 100;
 
-@mixin font-dimensions($fs: 18, $lh: 1, $mb: 1, $pt: 0, $pb: 0){
+@mixin font-dimensions($fs: 16, $lh: 1, $mb: 1, $pt: 0, $pb: 0){
 	// use this for rems
 	// font-size: #{$fs}px;
 	// font-size: #{$fs / $basefontsize}rem;
@@ -23,7 +23,7 @@ $basefontpercent: $basefontsize/16 * 100;
 	}
 }
 
-@mixin input-dimensions($fs: 18, $lh: 1, $mb: 1, $pt: 0, $pb: 0){
+@mixin input-dimensions($fs: 16, $lh: 1, $mb: 1, $pt: 0, $pb: 0){
 	// use this for rems
 	// font-size: #{$fs}px;
 	// font-size: #{$fs / $basefontsize}rem;

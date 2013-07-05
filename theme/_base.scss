@@ -50,36 +50,39 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
 	margin: 0;
-	font-family: $baseheadingfont;
-	font-weight: $baseheadingfontweight;
+	font-family: $headingfont;
+	font-weight: $basefontweight;
 	text-rendering: optimizelegibility;
 }
 
-h1,
-.h1 {
-	@include font-dimensions(38,1.75,1);
+h1 {
+	@include font-dimensions(ms(3),3,.5,1);
 }
 
-h2,
-.h2 {
-	@include font-dimensions(24,1,1);
+h2 {
+	@include font-dimensions(ms(2),2,.5,1);
 }
 
-h3,
-.h3 {
-	@include font-dimensions(20,1,1);
+h3 {
+	@include font-dimensions(ms(1),1,.5,.5);
 }
 
-h4,
-.h4 {
-	@include font-dimensions(18,1,1);
+h4 {
+	@include font-dimensions(ms(0),1,.5,.5);
+	font-weight: $headingfontweight;
 }
 
-h5,
-.h5 {
-	@include font-dimensions(18,1,.5);
+h5 {
+	@include font-dimensions(ms(0),1,.5,.5);
+	font-weight: $headingfontweight;
+}
+
+h6 {
+	@include font-dimensions(ms(0),1,.5,.5);
+	font-weight: $headingfontweight;
 }
 
 p,
@@ -225,8 +228,8 @@ button {
 */
 
 .chromeframe {
-	font-family: $baseheadingfont;
-	font-weight: $baseheadingfontweight;
+	font-family: $headingfont;
+	font-weight: $headingfontweight;
 	text-align: center;
 	color: $whitecolor;
 	background-color: $darkcolor;
@@ -238,10 +241,6 @@ button {
 ------------------------------------------ */
 
 @media only screen and (min-width: $bp2) {
-
-	h1 {
-		@include font-dimensions(48,2,1);
-	}
 
 }
 
