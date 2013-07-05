@@ -63,9 +63,9 @@ Everything that you can use. [] means optional.
 
 
 #### UI
-alert: alert boxes. Available types: alert, alert-error, alert-success & alert-notice
-pagination: left aligned pagination
-pagination-centered: centered pagination
+`alert`: alert boxes. Available types: alert, alert-error, alert-success & alert-notice
+`pagination`: left aligned pagination
+`pagination-centered`: centered pagination
 
 
 
