@@ -99,7 +99,11 @@ pre {
 ul,
 ol,
 blockquote {
-	margin-left: 1em;
+	padding-left: 1em;
+}
+
+blockquote {
+	font-style: italic;
 }
 
 table {
@@ -169,24 +173,32 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea {
+	@extend %rounded;
 	padding: .25em .5em;
 	border: 1px solid $gamma-ui-color;
 	font-family: $alpha-font-family;
-	color: lighten($alpha-text-color,30);
+	color: lighten($alpha-text-color, 30);
 	background-color: $delta-ui-color;
 	-webkit-appearance: none;
+	width: 100%;
 	@include input-dimensions(16,1,0,0);
 
 	&:focus {
 		color: $alpha-text-color;
-		outline-color: $alpha-ui-color;
-		border-color: darken($gamma-ui-color,20);
+		outline-color: $gamma-ui-color;
+		border-color: darken($gamma-ui-color, 20);
 	}
+}
 
+textarea {
+	height: auto;
 }
 
 label {
-	@include text-dimensions(16)
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	@include text-dimensions(16,1,0)
 }
 
 // Buttons
@@ -194,7 +206,7 @@ label {
 input[type="submit"],
 button {
 	@include button-small;
-	@include button-color($alpha-ui-color, darken($alpha-ui-color,10), white, false, true, .5, .5, 0);
+	@include button-color($alpha-ui-color, darken($alpha-ui-color,10), #fff, false, false, .5, .5, 0);
 }
 
 @media only screen and (min-width: $bp3) {
