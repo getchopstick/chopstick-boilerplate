@@ -29,12 +29,12 @@ The `scss/screen.scss` file will be compiled to `css/screen.css`. Everything you
 
 ### Contents
 
-Everything that you can use. [] means optional.
+Everything that you can use.
 
 #### Functions
 
-`em($pxval, [$base])`: em-calc
-`ms([$value], [$increment], [$ratio])`: modular scale
+`em($pxval, $base)`: em-calc
+`ms($value, $increment, $ratio)`: modular scale
 
 #### Grid
 
@@ -63,16 +63,14 @@ Everything that you can use. [] means optional.
 
 #### Typography
 
-`font-dimensions($fs, $lh, $mb, $pt, $pb)`: font-size, line-height, margin-bottom, padding-top, padding-bottom
-`input-dimensions($fs, $lh, $mb, $pt, $pb)`: font-size, line-height, margin-bottom, padding-top, padding-bottom
-
+`text-dimensions($fs, $lh, $mb, $pt, $pb)`: font-size, line-height, margin-bottom, padding-top, padding-bottom.
+`input-dimensions($fs, $lh, $mb, $pt, $pb)`: font-size, line-height, margin-bottom, padding-top, padding-bottom.
 
 #### UI
+
 `alert`: alert boxes. Available types: alert, alert-error, alert-success & alert-notice
 `pagination`: left aligned pagination
 `pagination-centered`: centered pagination
-
-
 
 ## Authors
 
