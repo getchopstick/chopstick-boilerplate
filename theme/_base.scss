@@ -183,6 +183,10 @@ textarea {
 
 }
 
+label {
+	@include font-dimensions(16)
+}
+
 // Buttons
 
 input[type="submit"],
