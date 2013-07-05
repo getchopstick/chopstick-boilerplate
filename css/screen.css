@@ -257,6 +257,12 @@ textarea:focus {
   border-color: #999999;
 }
 
+label {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+
 input[type="submit"],
 button {
   padding-left: 1.40625em;
