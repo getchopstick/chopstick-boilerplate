@@ -71,18 +71,18 @@ h3 {
 }
 
 h4 {
-	@include font-dimensions(ms(0),1,.5,.5);
 	font-weight: $headingfontweight;
+	@include font-dimensions(ms(0),1,.5,.5);
 }
 
 h5 {
-	@include font-dimensions(ms(0),1,.5,.5);
 	font-weight: $headingfontweight;
+	@include font-dimensions(ms(0),1,.5,.5);
 }
 
 h6 {
-	@include font-dimensions(ms(0),1,.5,.5);
 	font-weight: $headingfontweight;
+	@include font-dimensions(ms(0),1,.5,.5);
 }
 
 p,
@@ -106,19 +106,19 @@ table {
 	text-align: left;
 	width: 100%;
 	font-family: $basefont;
+	border-spacing: 0;
+	border-collapse: collapse;
 	@include font-dimensions(14,1,2);
-	border-spacing:0;
-	border-collapse:collapse;
 }
 
 caption {
 	font-family: $basefont;
 	text-align: left;
 	border-bottom: 1px solid lighten($darkcolor,50);
+	font-weight: $headingfontweight;
+	text-align: center;
 	@include padding-bottom(.5);
 	@include margin-bottom(.5);
-	font-weight: $baseheadingfontweight;
-	text-align: center;
 }
 
 td,
@@ -172,10 +172,10 @@ textarea {
 	padding: .25em .5em;
 	border: 1px solid $mediumcolor;
 	font-family: $basefont;
-	@include input-dimensions(16,1,0,0);
 	color: lighten($darkcolor,30);
 	background-color: $whitecolor;
 	-webkit-appearance: none;
+	@include input-dimensions(16,1,0,0);
 
 
 	&:focus {
@@ -216,9 +216,9 @@ button {
 	width: 100%;
 	height: 0;
 	padding-bottom: 62.5%;
-	@include margin-bottom(1.5);
 	position: relative;
 	overflow: hidden;
+	@include margin-bottom(1.5);
 
 	iframe {
 		width: 100%;
