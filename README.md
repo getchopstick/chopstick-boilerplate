@@ -63,10 +63,15 @@ Everything that you can use. [] means optional.
 
 #### Patterns
 
-
+`clearfix`:
+`list-nav`:
+`horizontal-nav`:
+`word-break`:
 
 #### Typography
 
+`font-dimensions($fs, $lh, $mb, $pt, $pb)`: font-size, line-height, margin-bottom, padding-top, padding-bottom
+`input-dimensions($fs, $lh, $mb, $pt, $pb)`: font-size, line-height, margin-bottom, padding-top, padding-bottom
 
 
 #### UI
