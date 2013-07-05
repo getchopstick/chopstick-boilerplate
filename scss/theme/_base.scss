@@ -177,10 +177,9 @@ textarea {
 	-webkit-appearance: none;
 	@include input-dimensions(16,1,0,0);
 
-
 	&:focus {
 		color: $alpha-text-color;
-		outgamma-ui-color: $alpha-ui-color;
+		outline-color: $alpha-ui-color;
 		border-color: darken($gamma-ui-color,20);
 	}
 
