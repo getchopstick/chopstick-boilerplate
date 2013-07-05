@@ -3,20 +3,20 @@
 */
 
 @while $contextGridColumns > 0 {
-		.grid-#{$contextGridColumns} {
-			@include margin-bottom(1);
+	.grid-#{$contextGridColumns} {
+		@include margin-bottom(1);
 
-			.inner {
-				padding: 1em;
-				font-family: $alpha-font-family;
-				@include font-dimensions(14,1,0);
-				font-weight: bold;
-				text-align: center;
-				background-color: #ccc;
-			}
+		.inner {
+			padding: 1em;
+			font-family: $alpha-font-family;
+			@include font-dimensions(14,1,0);
+			font-weight: bold;
+			text-align: center;
+			background-color: #ccc;
 		}
-		$contextGridColumns: $contextGridColumns - 1;
 	}
+	$contextGridColumns: $contextGridColumns - 1;
+}
 
 .grid-14 {
 	@include margin-bottom(1);
@@ -24,10 +24,10 @@
 	.inner {
 		padding: 1em;
 		font-family: $alpha-font-family;
-		@include font-dimensions(14,1,0);
 		font-weight: bold;
 		text-align: center;
 		background-color: #ccc;
+		@include font-dimensions(14,1,0);
 	}
 }
 
@@ -50,7 +50,6 @@
 -------------------------------------- */
 
 @media only screen and (min-width: $bp2) {
-
 
 	.grid-3,
 	.grid-4,
@@ -107,15 +106,15 @@
 	.pullLeft-9 { @include pullLeft(9); }
 
 	.last-col {
-		@include last-col;
 		margin-bottom: 0;
+		@include last-col;
 	}
 
 }
 
 @media only screen and (min-width: $bp5) {
 
-	.grid-14{
+	.grid-14 {
 		@include box-(14,1,1);
 		@include pullLeft(2);
 	}
