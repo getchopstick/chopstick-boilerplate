@@ -59,30 +59,30 @@ h6 {
 }
 
 h1 {
-	@include font-dimensions(ms(3),3,.5,1);
+	@include text-dimensions(ms(3),3,.5,1);
 }
 
 h2 {
-	@include font-dimensions(ms(2),2,.5,1);
+	@include text-dimensions(ms(2),2,.5,1);
 }
 
 h3 {
-	@include font-dimensions(ms(1),1,.5,.5);
+	@include text-dimensions(ms(1),1,.5,.5);
 }
 
 h4 {
 	font-weight: $beta-font-weight;
-	@include font-dimensions(ms(0),1,.5,.5);
+	@include text-dimensions(ms(0),1,.5,.5);
 }
 
 h5 {
 	font-weight: $beta-font-weight;
-	@include font-dimensions(ms(0),1,.5,.5);
+	@include text-dimensions(ms(0),1,.5,.5);
 }
 
 h6 {
 	font-weight: $beta-font-weight;
-	@include font-dimensions(ms(0),1,.5,.5);
+	@include text-dimensions(ms(0),1,.5,.5);
 }
 
 p,
@@ -108,7 +108,7 @@ table {
 	font-family: $alpha-font-family;
 	border-spacing: 0;
 	border-collapse: collapse;
-	@include font-dimensions(14,1,2);
+	@include text-dimensions(14,1,2);
 }
 
 caption {
@@ -186,7 +186,7 @@ textarea {
 }
 
 label {
-	@include font-dimensions(16)
+	@include text-dimensions(16)
 }
 
 // Buttons

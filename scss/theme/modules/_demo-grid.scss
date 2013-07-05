@@ -9,7 +9,7 @@
 		.inner {
 			padding: 1em;
 			font-family: $alpha-font-family;
-			@include font-dimensions(14,1,0);
+			@include text-dimensions(14,1,0);
 			font-weight: bold;
 			text-align: center;
 			background-color: #ccc;
@@ -27,7 +27,7 @@
 		font-weight: bold;
 		text-align: center;
 		background-color: #ccc;
-		@include font-dimensions(14,1,0);
+		@include text-dimensions(14,1,0);
 	}
 }
 
@@ -38,7 +38,7 @@
 	.inner {
 		padding: 1em;
 		font-family: $alpha-font-family;
-		@include font-dimensions(14,1,0);
+		@include text-dimensions(14,1,0);
 		font-weight: bold;
 		text-align: center;
 		background-color: #ccc;

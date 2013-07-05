@@ -3,12 +3,12 @@
 */
 
 // baseline formula based on the baseline unit
-// use: @include font-dimensions(#font-size, #line-height, #margin-bottom, #padding-top)
+// use: @include text-dimensions(#font-size, #line-height, #margin-bottom, #padding-top)
 
 $baseline-unit: $alpha-font-size * $alpha-line-height;
 $basefontpercent: $alpha-font-size/16 * 100;
 
-@mixin font-dimensions($fs: 16, $lh: 1, $mb: 1, $pt: 0, $pb: 0){
+@mixin text-dimensions($fs: 16, $lh: 1, $mb: 1, $pt: 0, $pb: 0){
 	// use this for rems
 	// font-size: #{$fs}px;
 	// font-size: #{$fs / $alpha-font-size}rem;
