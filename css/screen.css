@@ -65,7 +65,11 @@ button:visited, .button:visited, .secondaryButton:visited {
 /*
 	Pagination mixin
 */
-.pagination ul {
+.pagination, .pagination-centered {
+  width: 100%;
+  overflow: hidden;
+}
+.pagination ul, .pagination-centered ul {
   margin: 0;
   padding: 0;
   border: 0;
@@ -73,7 +77,7 @@ button:visited, .button:visited, .secondaryButton:visited {
   *zoom: 1;
   margin: 1.5em 0;
 }
-.pagination ul li {
+.pagination ul li, .pagination-centered ul li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
@@ -83,13 +87,13 @@ button:visited, .button:visited, .secondaryButton:visited {
   padding-left: 4px;
   padding-right: 4px;
 }
-.pagination ul li:first-child, .pagination ul li.first {
+.pagination ul li:first-child, .pagination-centered ul li:first-child, .pagination ul li.first, .pagination-centered ul li.first {
   padding-left: 0;
 }
-.pagination ul li:last-child {
+.pagination ul li:last-child, .pagination-centered ul li:last-child {
   padding-right: 0;
 }
-.pagination ul li.last {
+.pagination ul li.last, .pagination-centered ul li.last {
   padding-right: 0;
 }
 
@@ -1286,6 +1290,17 @@ a.secondaryButton:visited {
 }
 
 /* Pagination */
+.pagination-centered .inner {
+  float: left;
+  position: relative;
+  left: 50%;
+}
+.pagination-centered ul {
+  overflow: hidden;
+  position: relative;
+  left: -50%;
+}
+
 @media print {
   /*
   	Print stylesheet
