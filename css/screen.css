@@ -35,6 +35,33 @@ button:visited, .button:visited, .secondaryButton:visited {
 /*
 	Alerts mixin
 */
+.alert-box, .alert-box.error, .alert-box.success, .alert-box.notice {
+  border-width: 1px;
+  border-style: solid;
+  padding: 1.5em;
+  padding-bottom: 0;
+  margin-bottom: 1.5em;
+  position: relative;
+}
+.alert-box a, .alert-box.error a, .alert-box.success a, .alert-box.notice a {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+.alert-box a:hover,
+.alert-box a:active,
+.alert-box a:focus {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  text-decoration: none;
+}
+.alert-box .close {
+  position: absolute;
+  top: 0.75em;
+  right: 0.75em;
+  display: block;
+  line-height: 1;
+}
+
 /*
 	Pagination mixin
 */
@@ -44,6 +71,7 @@ button:visited, .button:visited, .secondaryButton:visited {
   border: 0;
   overflow: hidden;
   *zoom: 1;
+  margin: 1.5em 0;
 }
 .pagination ul li {
   list-style-image: none;
@@ -1220,6 +1248,44 @@ a.secondaryButton:visited {
 /*
 	module: UI
 */
+/* Alerts */
+.alert-box {
+  border-color: #999999;
+  color: #FFF;
+  background-color: #cccccc;
+}
+.alert-box a {
+  color: #FFF;
+}
+
+.alert-box.error {
+  border-color: #8b0800;
+  color: #fae7e6;
+  background-color: #d00c00;
+}
+.alert-box.error a {
+  color: #fae7e6;
+}
+
+.alert-box.success {
+  border-color: #4c721f;
+  color: #f1f7eb;
+  background-color: #72aa2e;
+}
+.alert-box.success a {
+  color: #f1f7eb;
+}
+
+.alert-box.notice {
+  border-color: #e6901e;
+  color: #332d1c;
+  background-color: #ffe38a;
+}
+.alert-box.notice a {
+  color: #332d1c;
+}
+
+/* Pagination */
 @media print {
   /*
   	Print stylesheet
