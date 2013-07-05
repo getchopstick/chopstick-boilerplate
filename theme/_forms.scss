@@ -9,18 +9,18 @@ input.inputPassword,
 input.inputSearch,
 input.inputDate {
 	padding: 0 .5em;
-	border: 1px solid $mediumcolor;
-	font-family: $basefont;
-	color: lighten($darkcolor,30);
-	background-color: $whitecolor;
+	border: 1px solid $gamma-ui-color;
+	font-family: $alpha-font-family;
+	color: lighten($alpha-text-color,30);
+	background-color: $delta-ui-color;
 	-webkit-appearance: none;
 	@include input-dimensions(16,1.5,0,0);
 
 
 	&:focus {
-		color: $darkcolor;
-		outline-color: $primarycolor;
-		border-color: darken($mediumcolor,20);
+		color: $alpha-text-color;
+		outgamma-ui-color: $alpha-ui-color;
+		border-color: darken($gamma-ui-color,20);
 	}
 
 }
@@ -30,13 +30,13 @@ input.inputDate {
 .button,
 a.button {
 	@include button-small;
-	@include button-color($primarycolor, darken($primarycolor,10), white, false, true, .5, .5, 0);
+	@include button-color($alpha-ui-color, darken($alpha-ui-color,10), white, false, true, .5, .5, 0);
 }
 
 .secondaryButton,
 a.secondaryButton {
 	@include button-small;
-	@include button-color($darkcolor, darken($darkcolor,10), white, true, true, .9, .25, .5);
+	@include button-color($alpha-text-color, darken($alpha-text-color,10), white, true, true, .9, .25, .5);
 }
 
 @media only screen and (min-width: $bp3) {

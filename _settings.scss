@@ -4,13 +4,13 @@
 
 // Typography
 
-$basefont				: Helvetica, Arial, sans-serif;
-$basefontserif			: Georgia, serif;
-$basefontsize 			: 16;
-$baselineheight 		: 1.5;
-$basefontweight			: 400;
-$headingfont	 		: $basefont;
-$headingfontweight 		: 700;
+$alpha-font-family		: Georgia, serif;
+$alpha-font-size 		: 16;
+$alpha-font-weight		: 400;
+$alpha-line-height 		: 1.5;
+
+$beta-font-family	 	: Helvetica, sans-serif;
+$beta-font-weight 		: 700;
 
 // Grid
 
@@ -20,20 +20,20 @@ $contextGridColumns	: 12;
 
 // Breakpoints calculated in em's
 
-$bp1: #{320 / $basefontsize}em;
-$bp2: #{480 / $basefontsize}em;
-$bp3: #{680 / $basefontsize}em;
-$bp4: #{960 / $basefontsize}em;
+$bp1: #{320 / $alpha-font-size}em;
+$bp2: #{480 / $alpha-font-size}em;
+$bp3: #{680 / $alpha-font-size}em;
+$bp4: #{960 / $alpha-font-size}em;
 
 // the last breakpoint is calculated in mixins/_grid.scss
-// $bp5: #{1200 / $basefontsize}em;
+// $bp5: #{1200 / $alpha-font-size}em;
 
 // Modular scale settings
 
 $ratio				: 1.618;
 $importantnumber	: 44;
 $increment			: 1;
-$base-size			: $basefontsize/16*1em $importantnumber/16*1em;
+$base-size			: $alpha-font-size/16*1em $importantnumber/16*1em;
 
 // Roundness
 
@@ -41,17 +41,18 @@ $radius: 3px;
 
 // Colors
 
-$whitecolor 	: #fff;
-$darkcolor 		: #333;
-$mediumcolor 	: #ccc;
+$alpha-text-color 	: #333;
+$beta-text-color 	: #666;
 
-$primarycolor 	: #f00;
-$secondarycolor	: #00f;
+$alpha-ui-color 	: #f00;
+$beta-ui-color		: #00f;
+$gamma-ui-color 	: #ccc;
+$delta-ui-color 	: #fff;
 
 // Links
 
-$linkcolor 		    : $primarycolor;
-$linkcolorhover 	: darken($linkcolor, 10);
-$linkcolorfocus 	: darken($linkcolor, 10);
-$linkcoloractive 	: lighten($linkcolor, 10);
-$linkcolorvisited   : darken($linkcolor, 5);
+$alpha-link-color 		    : $alpha-ui-color;
+$alpha-link-colorhover 		: darken($alpha-link-color, 10);
+$alpha-link-colorfocus 		: darken($alpha-link-color, 10);
+$alpha-link-coloractive 	: lighten($alpha-link-color, 10);
+$alpha-link-colorvisited	: darken($alpha-link-color, 5);

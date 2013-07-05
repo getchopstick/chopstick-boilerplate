@@ -8,7 +8,7 @@
 
 			.inner {
 				padding: 1em;
-				font-family: $basefont;
+				font-family: $alpha-font-family;
 				@include font-dimensions(14,1,0);
 				font-weight: bold;
 				text-align: center;
@@ -23,7 +23,7 @@
 
 	.inner {
 		padding: 1em;
-		font-family: $basefont;
+		font-family: $alpha-font-family;
 		@include font-dimensions(14,1,0);
 		font-weight: bold;
 		text-align: center;
@@ -37,7 +37,7 @@
 
 	.inner {
 		padding: 1em;
-		font-family: $basefont;
+		font-family: $alpha-font-family;
 		@include font-dimensions(14,1,0);
 		font-weight: bold;
 		text-align: center;
