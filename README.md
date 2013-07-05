@@ -34,6 +34,7 @@ Everything that you can use.
 #### Functions
 
 `em($pxval, $base)`: em-calc
+
 `ms($value, $increment, $ratio)`: modular scale
 
 #### Grid
@@ -41,15 +42,21 @@ Everything that you can use.
 `box-($amount, $left, $right)`: grid width (1, 2, 3, 8, . . .), gutter left & right
 
 `push-left($amount)`:
+
 `pull-right($amount)`:
+
 `pull-left($amount)`:
+
 `last-col`:
 
 `em-padding-lr($left, $right)`:
+
 `px-padding-lr($left, $right)`:
 
 `em-margin-lr($left, $right)`:
+
 `px-margin-lr($left, $right)`:
+
 `perc-margin-lr($left, $right)`:
 
 `perc-col-($amount, $pl, $pr)`:
@@ -64,12 +71,15 @@ Everything that you can use.
 #### Typography
 
 `text-dimensions($fs, $lh, $mb, $pt, $pb)`: font-size, line-height, margin-bottom, padding-top, padding-bottom.
+
 `input-dimensions($fs, $lh, $mb, $pt, $pb)`: font-size, line-height, margin-bottom, padding-top, padding-bottom.
 
 #### UI
 
 `alert`: alert boxes. Available types: alert, alert-error, alert-success & alert-notice
+
 `pagination`: left aligned pagination
+
 `pagination-centered`: centered pagination
 
 ## Authors
