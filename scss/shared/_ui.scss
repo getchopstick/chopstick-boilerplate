@@ -3,6 +3,7 @@
 */
 
 %button {
+	@extend %rounded;
 	position: relative;
 	display: block;
 	width: 100%;
@@ -17,7 +18,6 @@
 	text-decoration: none;
 	-webkit-appearance: none;
 	-webkit-font-smoothing: antialiased;
-	@extend %rounded;
 
 	&:hover,
 	&:visited {
