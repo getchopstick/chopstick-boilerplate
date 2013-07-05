@@ -188,6 +188,7 @@
 %pagination {
 	ul {
 		@include horizontal-list;
+		margin: #{$alpha-line-height}em 0;
 	}
 }
 
