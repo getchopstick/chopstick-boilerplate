@@ -27,6 +27,31 @@ The `scss/_settings.scss` file contains all of the settings and variables you ca
 
 The `scss/screen.scss` file will be compiled to `css/screen.css`. Everything you want to compile needs to be referenced in this file.
 
+### Contents
+
+Everything that you can use. [] means optional.
+
+#### Functions
+
+em($pxval, [$base]): em-calc
+ms([$value], [$increment], [$ratio]): modular scale
+
+#### Grid
+
+
+
+#### Patterns
+
+
+
+#### Typography
+
+
+
+#### UI
+
+
+
 ## Authors
 
 Simon Coudeville: <simon.coudeville@wijs.be>  

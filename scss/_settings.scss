@@ -4,14 +4,13 @@
 
 // Typography
 
-$basefont 				: Helvetica, Arial, sans-serif;
+$basefont				: Helvetica, Arial, sans-serif;
 $basefontserif			: Georgia, serif;
 $basefontsize 			: 16;
-$importantnumber        : 44;
-$basefontweight			: 400;
 $baselineheight 		: 1.5;
-$baseheadingfont 		: $basefont;
-$baseheadingfontweight 	: 700;
+$basefontweight			: 400;
+$headingfont	 		: $basefont;
+$headingfontweight 		: 700;
 
 // Grid
 
@@ -31,9 +30,10 @@ $bp4: #{960 / $basefontsize}em;
 
 // Modular scale settings
 
-$ratio: 1.5;
-$increment: 1;
-$base-size: $basefontsize/16*1em $importantnumber/16*1em;
+$ratio				: 1.618;
+$importantnumber	: 44;
+$increment			: 1;
+$base-size			: $basefontsize/16*1em $importantnumber/16*1em;
 
 // Roundness
 
@@ -53,4 +53,5 @@ $secondarycolor	: #00f;
 $linkcolor 		    : $primarycolor;
 $linkcolorhover 	: darken($linkcolor, 10);
 $linkcolorfocus 	: darken($linkcolor, 10);
+$linkcoloractive 	: lighten($linkcolor, 10);
 $linkcolorvisited   : darken($linkcolor, 5);

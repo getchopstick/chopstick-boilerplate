@@ -156,46 +156,57 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   text-rendering: optimizelegibility;
 }
 
-h1,
-.h1 {
-  font-size: 2.375em;
-  line-height: 1.10526em;
-  margin-bottom: 0.63158em;
+h1 {
+  font-size: 4.2358em;
+  line-height: 1.06237em;
+  margin-bottom: 0.17706em;
+  padding-top: 0.35412em;
 }
 
-h2,
-.h2 {
-  font-size: 1.5em;
-  line-height: 1em;
-  margin-bottom: 1em;
+h2 {
+  font-size: 2.61792em;
+  line-height: 1.14595em;
+  margin-bottom: 0.28649em;
+  padding-top: 0.57297em;
 }
 
-h3,
-.h3 {
-  font-size: 1.25em;
-  line-height: 1.2em;
-  margin-bottom: 1.2em;
+h3 {
+  font-size: 1.618em;
+  line-height: 0.92707em;
+  margin-bottom: 0.46354em;
+  padding-top: 0.46354em;
 }
 
-h4,
-.h4 {
-  font-size: 1.125em;
-  line-height: 1.33333em;
-  margin-bottom: 1.33333em;
+h4 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 0.75em;
+  padding-top: 0.75em;
+  font-weight: 700;
 }
 
-h5,
-.h5 {
-  font-size: 1.125em;
-  line-height: 1.33333em;
-  margin-bottom: 0.66667em;
+h5 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 0.75em;
+  padding-top: 0.75em;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 0.75em;
+  padding-top: 0.75em;
+  font-weight: 700;
 }
 
 p,
@@ -376,13 +387,6 @@ button:visited {
 
 /* Media Queries
 ------------------------------------------ */
-@media only screen and (min-width: 30em) {
-  h1 {
-    font-size: 3em;
-    line-height: 1em;
-    margin-bottom: 0.5em;
-  }
-}
 @media only screen and (min-width: 42.5em) {
   html {
     font-size: 112.5%;
