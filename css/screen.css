@@ -337,7 +337,7 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 textarea:focus {
   color: #333333;
-  outgamma-ui-color: red;
+  outline-color: red;
   border-color: #999999;
 }
 
@@ -684,7 +684,7 @@ input.inputPassword:focus,
 input.inputSearch:focus,
 input.inputDate:focus {
   color: #333333;
-  outgamma-ui-color: red;
+  outline-color: red;
   border-color: #999999;
 }
 
@@ -1040,12 +1040,12 @@ a.secondaryButton:visited {
 .grid-14 .inner {
   padding: 1em;
   font-family: Georgia, serif;
-  font-size: 0.875em;
-  line-height: 1.71429em;
-  margin-bottom: 0em;
   font-weight: bold;
   text-align: center;
   background-color: #ccc;
+  font-size: 0.875em;
+  line-height: 1.71429em;
+  margin-bottom: 0em;
 }
 
 .perc-3 {
@@ -1232,8 +1232,8 @@ a.secondaryButton:visited {
   }
 
   .last-col {
-    float: right;
     margin-bottom: 0;
+    float: right;
   }
 }
 @media only screen and (min-width: 75em) {

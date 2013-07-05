@@ -19,7 +19,7 @@ input.inputDate {
 
 	&:focus {
 		color: $alpha-text-color;
-		outgamma-ui-color: $alpha-ui-color;
+		outline-color: $alpha-ui-color;
 		border-color: darken($gamma-ui-color,20);
 	}
 
