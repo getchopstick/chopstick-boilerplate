@@ -33,12 +33,26 @@ Everything that you can use. [] means optional.
 
 #### Functions
 
-em($pxval, [$base]): em-calc
-ms([$value], [$increment], [$ratio]): modular scale
+`em($pxval, [$base])`: em-calc
+`ms([$value], [$increment], [$ratio])`: modular scale
 
 #### Grid
 
+`box-($amount, $left, $right)`: grid width (1, 2, 3, 8, . . .), gutter left & right
 
+`push-left($amount)`:
+`pull-right($amount)`:
+`pull-left($amount)`:
+`last-col`:
+
+`em-padding-lr($left, $right)`:
+`px-padding-lr($left, $right)`:
+
+`em-margin-lr($left, $right)`:
+`px-margin-lr($left, $right)`:
+`perc-margin-lr($left, $right)`:
+
+`perc-col-($amount, $pl, $pr)`:
 
 #### Patterns
 
