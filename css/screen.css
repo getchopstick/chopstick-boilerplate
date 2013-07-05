@@ -63,6 +63,37 @@ button:visited, .button:visited, .secondaryButton:visited {
 }
 
 /*
+	Pagination mixin
+*/
+.pagination ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+  margin: 1.5em 0;
+}
+.pagination ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.pagination ul li:first-child, .pagination ul li.first {
+  padding-left: 0;
+}
+.pagination ul li:last-child {
+  padding-right: 0;
+}
+.pagination ul li.last {
+  padding-right: 0;
+}
+
+/*
 	Chopstick patterns
 */
 .row, .header .inner, .main-nav ul {
@@ -1214,6 +1245,9 @@ a.secondaryButton:visited {
 /*
 	module: forms
 */
+/*
+	module: UI
+*/
 /* Alerts */
 .alert-box {
   border-color: #999999;
@@ -1251,6 +1285,7 @@ a.secondaryButton:visited {
   color: #332d1c;
 }
 
+/* Pagination */
 @media print {
   /*
   	Print stylesheet
