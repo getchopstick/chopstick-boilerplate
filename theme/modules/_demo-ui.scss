@@ -25,3 +25,7 @@
 .pagination {
 	@include pagination;
 }
+
+.pagination-centered {
+	@include pagination-centered;
+}
