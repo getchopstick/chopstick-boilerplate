@@ -93,6 +93,9 @@ Simon Coudeville: <simon.coudeville@wijs.be>
 Xavier Bertels: <xavier.bertels@wijs.be>
 [@xavez](http://twitter.com/xavez)
 
+Ad Eggermont: <ad.eggermont@wijs.be>
+[@AdEggermont](http://twitter.com/AdEggermont)
+
 ## Credits
 
 We owe a ton of credits to the following projects for inspiration:
