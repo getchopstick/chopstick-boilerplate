@@ -113,10 +113,7 @@ button:visited, .button:visited, .button-secondary:visited {
 }
 
 input[type="submit"],
-button, .button,
-a.button, .button-secondary,
-input.button-secondary,
-a.button-secondary, input[type="text"],
+button, .button, .button-secondary, input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea {
@@ -258,9 +255,10 @@ ul,
 dl,
 table,
 address,
+label,
 pre {
   line-height: 1.5em;
-  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 ul,
@@ -777,6 +775,15 @@ a.button-secondary:focus {
 input.button-secondary:visited,
 a.button-secondary:visited {
   color: white;
+}
+
+.error-label input,
+.error-label textarea {
+  border-color: #F00;
+}
+
+.error-text {
+  color: #F00;
 }
 
 @media only screen and (min-width: 42.5em) {

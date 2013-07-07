@@ -91,9 +91,10 @@ ul,
 dl,
 table,
 address,
+label,
 pre {
 	line-height: #{$alpha-line-height}em;
-	margin-bottom: #{$alpha-line-height}em;
+	padding-bottom: #{$alpha-line-height}em;
 }
 
 ul,

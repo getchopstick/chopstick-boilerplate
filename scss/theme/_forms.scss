@@ -25,7 +25,7 @@ input.inputDate {
 
 }
 
-// buttons
+// Buttons
 
 .button,
 a.button {
@@ -38,6 +38,17 @@ input.button-secondary,
 a.button-secondary {
 	@include button-small;
 	@include button-color($alpha-text-color, darken($alpha-text-color,10), #fff, false, false, .9, .25, .5);
+}
+
+// Messages
+
+.error-label input,
+.error-label textarea {
+	border-color: #F00;
+}
+
+.error-text {
+	color: #F00;
 }
 
 @media only screen and (min-width: $bp3) {
