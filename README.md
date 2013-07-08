@@ -5,7 +5,7 @@ Chopstick is a mobile-first responsive Design Framework, created and maintaned b
 
 ## Install
 
-Make sure you [install compass](http://compass-style.org/install). Optionally, you can use [CodeKit](http://incident57.com/codekit/).
+Make sure you [install compass](http://compass-style.org/install). Then simply use `compass watch` from a terminal and start making changes. Optionally, you can use [CodeKit](http://incident57.com/codekit/).
 
 ## Use
 
@@ -29,7 +29,7 @@ The `scss/screen.scss` file will be compiled to `css/screen.css`. Everything you
 
 ### Contents
 
-Everything that you can use.
+Everything that you can use will eventually be documented here.
 
 #### Functions
 
@@ -77,7 +77,7 @@ Everything that you can use.
 
 `input-dimensions($fs, $lh, $mb, $pt, $pb)`: font-size, line-height, margin-bottom, padding-top, padding-bottom.
 
-#### UI
+#### User Interface Elements
 
 `alert`: alert boxes. Available types: alert, alert-error, alert-success & alert-notice
 
