@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="cleartype" content="on">
+
+	<!-- Mobile settings http://t.co/dKP3o1e -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- About this document -->
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Chopstick: SASS responsive grid system</title>
+
+	<!-- Custom modernizr build: http://modernizr.com — load other JavaScript at the end of document -->
+	<script src="js/modernizr.custom.js"></script>
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/screen.css">
+
+	<!-- Enable HTML5 in IE<9 -->
+	<!--[if lt IE 9  & (!IEMobile)]><script src="js/html5shiv.js"></script><![endif]-->
+	<link rel="icon" href="/favicon.png">
+	<!--
+		Place all other favicons in website root (e.g. http://web.dev/favicon.ico).
+		Add your font license here, if necessary.
+	-->
+</head>
+
+<body>
+	<!--[if lt IE 7]>
+	<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+	<![endif]-->
+	<div class="holder header-holder">
+		<div class="row header-row">
+			<div class="header">
+				<div class="inner">
+					<h1 class="logo">chopstick</h1>
+					<nav class="main-nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li class="selected"><a href="elements.html">Elements</a></li>
+							<li><a href="grid.html">Grid</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="holder main-holder">
+		<div class="row main-row">
+			<div class="main-content">
+				<div class="content">
+					<h1>Level 1 heading</h1>
+					<p>Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus. Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Etiam viverra augue non enim.</p>
+					<p>Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus. Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Etiam viverra augue non enim.</p>
+
+					<h2>Level 02 Heading</h2>
+					<p>Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus. Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Etiam viverra augue non enim.</p>
+
+					<h3>Level 03 Heading</h3>
+					<p>Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus. Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Etiam viverra augue non enim.</p>
+
+					<h4>Level 04 Heading</h4>
+					<p>Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus. Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Etiam viverra augue non enim.</p>
+					<hr />
+					<h2>Buttons</h2>
+					<div class="row">
+						<div class="grid-6">
+						<p>
+							<a href="#" class="button">Anchor</a>
+						</p>
+						<p>
+							<button>Button</button>
+						</p>
+						<p>
+							<input type="submit" value="Input">
+						</p>
+						</div>
+						<div class="grid-6">
+						<p>
+							<a href="#" class="button-secondary">Anchor</a>
+						</p>
+						<p>
+							<button class="button-secondary">Button</button>
+						</p>
+						<p>
+							<input type="submit" class="button-secondary" value="Submit">
+						</p>
+						</div>
+					</div>
+					<hr />
+					<h2>Other stuff</h2>
+
+					<blockquote cite="http://wijs.be">
+						<p>Paragraph inside Blockquote: Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Sed scelerisque sagittis lorem.</p>
+						<p>Paragraph inside Blockquote: Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Sed scelerisque sagittis lorem.</p>
+					</blockquote>
+					<address>Address: Example address 224, Sweden</address>
+					<pre><strong>Preformated:</strong>Testing one row
+	and another</pre>
+					<p>
+						I am <a href="?abc123">the a tag</a> example<br />
+						I am <abbr title="test">the abbr tag</abbr> example<br />
+						I am <acronym>the acronym tag</acronym> example<br />
+						I am <b>the b tag</b> example<br />
+						I am <big>the big tag</big> example<br />
+						I am <cite>the cite tag</cite> example<br />
+						I am <code>the code tag</code> example<br />
+						I am <del>the del tag</del> example<br />
+						I am <dfn>the dfn tag</dfn> example<br />
+						I am <em>the em tag</em> example<br />
+						I am <font face="verdana">the font tag</font> example<br />
+						I am <i>the i tag</i> example<br />
+						I am <ins>the ins tag</ins> example<br />
+						I am <kbd>the kbd tag</kbd> example<br />
+						I am <q>the q tag <q>inside</q> a q tag</q> example<br />
+						I am <s>the s tag</s> example<br />
+						I am <samp>the samp tag</samp> example<br />
+						I am <small>the small tag</small> example<br />
+						I am <span>the span tag</span> example<br />
+						I am <strike>the strike tag</strike> example<br />
+						I am <strong>the strong tag</strong> example<br />
+						I am <sub>the sub tag</sub> example<br />
+						I am <sup>the sup tag</sup> example<br />
+						I am <tt>the tt tag</tt> example<br />
+						I am <var>the var tag</var> example<br />
+						I am <u>the u tag</u> example
+					</p>
+					<hr />
+					<ul>
+						<li>Unordered list 01</li>
+						<li>Unordered list 02</li>
+						<li>Unordered list 03
+							<ul>
+								<li>Unordered list inside list level 2</li>
+								<li>Unordered list inside list level 2
+									<ul>
+										<li>Unordered list inside list level 3</li>
+										<li>Unordered list inside list level 3</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+					<ol>
+						<li>Ordered list 01</li>
+						<li>Ordered list 02</li>
+						<li>Ordered list 03
+							<ol>
+								<li>Ordered list inside list level 2</li>
+								<li>Ordered list inside list level 2
+									<ol>
+										<li>Ordered list inside list level 3</li>
+										<li>Ordered list inside list level 3</li>
+									</ol>
+								</li>
+							</ol>
+						</li>
+					</ol>
+
+					<dl>
+						<dt>Description list title 01</dt>
+						<dd>Description list description 01</dd>
+						<dt>Description list title 02</dt>
+						<dd>Description list description 02</dd>
+						<dd>Description list description 03</dd>
+					</dl>
+
+					<table summary="Dit is de samenvatting">
+						<caption>Dit is de titel</caption>
+						<thead>
+						<tr>
+							<th id="year">Year</th>
+							<th id="opponent">Opponent</th>
+							<th id="record" abbr="Record">Season Record (W-L)</th>
+						</tr>
+						</thead>
+						<tfoot>
+						<tr>
+							<td headers="year">1900</td>
+							<td headers="opponent">Last</td>
+							<td headers="record">00-00</td>
+						</tr>
+						</tfoot>
+						<tbody>
+						<tr>
+							<td headers="year">1918</td>
+							<td headers="opponent">Chicago Cubs</td>
+							<td headers="record">75-51</td>
+						</tr>
+						<tr>
+							<td headers="year">1915</td>
+							<td headers="opponent">Philadelphia Phillies</td>
+							<td headers="record">101-50</td>
+						</tr>
+						<tr>
+							<td headers="year">1918</td>
+							<td headers="opponent">Chicago Cubs</td>
+							<td headers="record">75-51</td>
+						</tr>
+						<tr>
+							<td headers="year">1915</td>
+							<td headers="opponent">Philadelphia Phillies</td>
+							<td headers="record">101-50</td>
+						</tr>
+						</tbody>
+					</table>
+
+					<table summary="Wat betaal je in Belgi&euml; en in het buitenland voor telefoongesprekken vanaf je mobiele telefoon?">
+					  	<caption>Overzicht telefoontarieven</caption>
+						<thead>
+						<tr>
+
+						<td></td>
+						<th colspan="2" id="pre" abbr="Als u een voorafbetaalde kaart gebruikt">Voorafbetaald</th>
+						<th colspan="2" id="abo" abbr="Als u een abonnement heeft">Abonnement</th>
+						</tr>
+						<tr>
+						<td></td>
+						<th id="pre-overdag" abbr="betaalt u overdag">Overdag</th>
+
+						<th id="pre-savonds" abbr="betaalt u tijdens de avond">'s Avonds</th>
+						<th id="abo-overdag" abbr="betaalt u overdag">Overdag</th>
+						<th id="abo-savonds" abbr="betaalt u tijdens de avond">'s Avonds</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+
+						<th id="be" abbr="in België" colspan="5">Belgi&euml;</th>
+						</tr>
+						<tr>
+						<th headers="be" id="be-vast" abbr="als u naar vaste nummers belt">Vaste nummers</th>
+						<td headers="pre pre-overdag be-vast be">0,5 &euro;</td>
+						<td headers="pre pre-savonds be-vast be">0,25 &euro;</td>
+						<td headers="abo abo-overdag be-vast be">0,30 &euro;</td>
+
+						<td headers="abo abo-savonds be-vast be">0,15 &euro;</td>
+						</tr>
+						<tr>
+						<th headers="be" id="be-mobiel" abbr="als u naar mobiele nummers belt">Mobiele nummers</th>
+						<td headers="pre pre-overdag be-mobiel be">0,10 &euro;</td>
+						<td headers="pre pre-savonds be-mobiel be">0,05 &euro;</td>
+						<td headers="abo abo-overdag be-mobiel be">0,08 &euro;</td>
+
+						<td headers="abo abo-savonds be-mobiel be">0,04 &euro;</td>
+						</tr>
+						<tr>
+						<th headers="be" id="be-andere" abbr="als u naar andere operatoren belt">Andere operatoren</th>
+						<td headers="pre pre-overdag be-andere be">0,20 &euro;</td>
+						<td headers="pre pre-savonds be-andere be">0,10 &euro;</td>
+						<td headers="abo abo-overdag be-andere be">0,15 &euro;</td>
+
+						<td headers="abo abo-savonds be-andere be">0,10 &euro;</td>
+						</tr>
+						<tr>
+						<th id="bl" abbr="in het buitenland" colspan="5">Buitenland</th>
+						</tr>
+						<tr>
+						<th headers="bl" abbr="als u naar vaste nummers belt" id="bl-vast">Vaste nummers</th>
+
+						<td headers="pre pre-overdag bl-vast bl">1,00 &euro;</td>
+						<td headers="pre pre-savonds bl-vast bl">0,75 &euro;</td>
+						<td headers="abo abo-overdag bl-vast bl">0,80 &euro;</td>
+						<td headers="abo abo-savonds bl-vast bl">0,65 &euro;</td>
+						</tr>
+						<tr>
+						<th headers="bl" abbr="als u naar mobiele nummers belt" id="bl-mobiel">Mobiele nummers</th>
+
+						<td headers="pre pre-overdag bl-mobiel bl">0,60 &euro;</td>
+						<td headers="pre pre-savonds bl-mobiel bl">0,55 &euro;</td>
+						<td headers="abo abo-overdag bl-mobiel bl">0,58 &euro;</td>
+						<td headers="abo abo-savonds bl-mobiel bl">0,54 &euro;</td>
+						</tr>
+						<tr>
+						<th headers="bl" abbr="als u naar andere operatoren belt" id="bl-andere">Andere operatoren</th>
+
+						<td headers="pre pre-overdag bl-andere bl">0,70 &euro;</td>
+						<td headers="pre pre-savonds bl-andere bl">0,60 &euro;</td>
+						<td headers="abo abo-overdag bl-andere bl">0,65 &euro;</td>
+						<td headers="abo abo-savonds bl-andere bl">0,55 &euro;</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<hr/>
+				<h3>Example 1: Standard contact form </h3>
+				<form action="#" method="post">
+					<fieldset>
+						<label>Name<abbr title="Required field">*</abbr>
+							<input type="text" placeholder="Full Name" />
+						</label>
+
+						<label>Email address<abbr title="Required field">*</abbr>
+							<input type="email" placeholder="email@address.com" />
+						</label>
+
+						<label>Message<abbr title="Required field">*</abbr>
+							<textarea rows="5" cols="30"></textarea>
+						</label>
+
+						<button type="submit">Send</button>
+					</fieldset>
+				</form>
+				<hr/>
+				<h3>Example 2: Standard contact form (horizontal)</h3>
+				<form action="#" method="post">
+					<fieldset>
+						<label>Name<abbr title="Required field">*</abbr>
+							<input type="text" placeholder="Full Name" />
+						</label>
+
+						<label>Email address<abbr title="Required field">*</abbr>
+							<input type="email" placeholder="email@address.com" />
+						</label>
+
+						<label>Message<abbr title="Required field">*</abbr>
+							<textarea rows="5" cols="30"></textarea>
+						</label>
+
+						<button type="submit">Send</button>
+					</fieldset>
+				</form>
+				<hr/>
+				<h3>Example 3: Standard contact form (horizontal) with errors</h3>
+				<form action="" method="post" class="horizontal">
+					<fieldset>
+						<div class="alert-box error">
+							<p><strong>Cras sed ante</strong>. Phasellus in massa. Curabitur dolor eros, <a href="#">gravida et</a>, hendrerit ac, cursus non, massa. Aliquam lorem.</p>
+							<a href="#" class="close">&times;</a>
+						</div>
+
+						<label class="error-label">Name<abbr title="Required field">*</abbr>
+							<input type="text" value="" />
+							<span class="error-text">This field is required.</span>
+						</label>
+
+
+						<label class="error-label">Email address<abbr title="Required field">*</abbr>
+							<input type="email" value="" />
+							<span class="error-text">This field is required.</span>
+						</label>
+
+						<label class="error-label">Message<abbr title="Required field">*</abbr>
+							<textarea rows="5" cols="30">Lorem ipsum</textarea>
+							<span class="error-text">This field is required.</span>
+						</label>
+
+						<button type="submit">Send</button>
+					</fieldset>
+				</form>
+				<hr/>
+				<h3>Example 4: Register form</h3>
+				<form action="" method="post" class="horizontal">
+					<p>
+						<label>Nickname<abbr title="Required field">*</abbr></label>
+						<input type="text" value="" />
+						<small class="helpTxt">Profiel URL: http://www.example.com/<strong>your-nickname</strong></small>
+					</p>
+					<p>
+						<label>First-name<abbr title="Required field">*</abbr></label>
+						<input type="text" value="" />
+					</p>
+					<p>
+						<label>Last-name<abbr title="Required field">*</abbr></label>
+						<input type="text" value="" />
+					</p>
+					<div class="formSection">
+						<label>Date of birth<abbr title="Required field">*</abbr></label>
+						<div class="formSectionContent">
+							<div class="oneLiner">
+								<p class="smallInput firstChild">
+									<select class="select" size="1">
+										<option value="0">1</option>
+										<option value="1">2</option>
+										<option value="2">3</option>
+									</select>
+								</p>
+								<p>
+									<select class="select" size="1">
+										<option value="0">January</option>
+										<option value="1">February</option>
+										<option value="2">March</option>
+									</select>
+								</p>
+								<p class="smallInput">
+									<select class="select" size="1">
+										<option value="0">2010</option>
+										<option value="1">2009</option>
+										<option value="2">2008</option>
+									</select>
+								</p>
+								<small class="helpTxt">Hendrerit ac, cursus non, massa aliquam lorem.</small>
+							</div>
+						</div>
+					</div>
+					<div class="inputList">
+						<p class="label">Gender<abbr title="Required field">*</abbr></p>
+						<ul>
+							<li><label><input type="radio" class="inputRadio" value="lorem ipsum dolor" />Male</label></li>
+							<li><label><input type="radio" class="inputRadio" value="ipsum" />Female</label></li>
+						</ul>
+					</div>
+					<p>
+						<button type="submit">Register</button>
+					</p>
+				</form>
+				<hr/>
+				<h3>Messages</h3>
+				<div class="alert-box">
+					<h4>This is a title</h4>
+					<p><strong>Cras sed ante</strong>. Phasellus in massa. Curabitur dolor eros, <a href="#">gravida et</a>, hendrerit ac, cursus non, massa. Aliquam lorem.</p>
+					<a href="#" class="close">&times;</a>
+				</div>
+				<div class="alert-box error">
+					<h4>This is a title</h4>
+					<p><strong>Cras sed ante</strong>. Phasellus in massa. Curabitur dolor eros, <a href="#">gravida et</a>, hendrerit ac, cursus non, massa. Aliquam lorem.</p>
+					<a href="#" class="close">&times;</a>
+				</div>
+				<div class="alert-box success">
+					<h4>This is a title</h4>
+					<p><strong>Cras sed ante</strong>. Phasellus in massa. Curabitur dolor eros, <a href="#">gravida et</a>, hendrerit ac, cursus non, massa. Aliquam lorem.</p>
+					<a href="#" class="close">&times;</a>
+				</div>
+				<div class="alert-box notice">
+					<h4>This is a title</h4>
+					<p><strong>Cras sed ante</strong>. Phasellus in massa. Curabitur dolor eros, <a href="#">gravida et</a>, hendrerit ac, cursus non, massa. Aliquam lorem.</p>
+					<a href="#" class="close">&times;</a>
+				</div>
+				<hr />
+				<div class="pagination">
+					<div class="inner">
+						<ul>
+							<li class="previous-page"><span>&lt; Vorige</span></li>
+							<li class="current-page"><span>1</span></li>
+							<li><a href="#" title="Ga naar pagina 2" rel="nofollow">2</a></li>
+							<li><a href="#" title="Ga naar pagina 3" rel="nofollow">3</a></li>
+							<li><a href="#" title="Ga naar pagina 4" rel="nofollow">4</a></li>
+							<li><a href="#" title="Ga naar pagina 5" rel="nofollow">5</a></li>
+							<li><a href="#" title="Ga naar pagina 6" rel="nofollow">6</a></li>
+							<li><a href="#" title="Ga naar pagina 7" rel="nofollow">7</a></li>
+							<li class="ellipsis"><span>&hellip;</span></li>
+							<li><a href="#" title="Ga naar pagina 130" rel="nofollow">130</a></li>
+							<li><a href="#" title="Ga naar pagina 131" rel="nofollow">131</a></li>
+							<li class="next-page"><a href="#" rel="next nofollow" title="Volgende">Volgende &gt;</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="pagination-centered">
+					<div class="inner">
+						<ul>
+							<li class="previous-page"><span>&lt; Vorige</span></li>
+							<li class="current-page"><span>1</span></li>
+							<li><a href="#" title="Ga naar pagina 2" rel="nofollow">2</a></li>
+							<li><a href="#" title="Ga naar pagina 3" rel="nofollow">3</a></li>
+							<li><a href="#" title="Ga naar pagina 4" rel="nofollow">4</a></li>
+							<li><a href="#" title="Ga naar pagina 5" rel="nofollow">5</a></li>
+							<li><a href="#" title="Ga naar pagina 6" rel="nofollow">6</a></li>
+							<li><a href="#" title="Ga naar pagina 7" rel="nofollow">7</a></li>
+							<li class="ellipsis"><span>&hellip;</span></li>
+							<li><a href="#" title="Ga naar pagina 130" rel="nofollow">130</a></li>
+							<li><a href="#" title="Ga naar pagina 131" rel="nofollow">131</a></li>
+							<li class="next-page"><a href="#" rel="next nofollow" title="Volgende">Volgende &gt;</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Always Load jQuery First -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.8.3.min.js"><\/script>')</script>
+
+	<!-- Make responsive website responsive in IE7 & 8 -->
+	<!--[if IE 8 | IE 7]><script src="js/respond.min.js"></script><![endif]-->
+
+	<!-- Theme specific JavaScript. Add your other scripts here -->
+	<script src="js/theme.js"></script>
+
+	<!-- Google Analytics -->
+	<script>
+		var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+		g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+		s.parentNode.insertBefore(g,s)}(document,"script"));
+	</script>
+</body>
+</html>
