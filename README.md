@@ -87,13 +87,13 @@ Everything that you can use will eventually be documented here.
 
 ## Authors
 
-Simon Coudeville: <simon.coudeville@wijs.be>
+Simon Coudeville: 
 [@simoncoudeville](http://twitter.com/simoncoudeville)
 
-Xavier Bertels: <xavier.bertels@wijs.be>
+Xavier Bertels: 
 [@xavez](http://twitter.com/xavez)
 
-Ad Eggermont: <ad.eggermont@wijs.be>
+Ad Eggermont: 
 [@AdEggermont](http://twitter.com/AdEggermont)
 
 ## Credits
