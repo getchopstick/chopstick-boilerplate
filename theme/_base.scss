@@ -210,7 +210,7 @@ button {
 	@include button-color($alpha-ui-color, darken($alpha-ui-color,10), #fff, false, false, .5, .5, 0);
 }
 
-@media only screen and (min-width: $bp3) {
+@media (min-width: $bp3) {
 
 	input[type="submit"],
 	button {
@@ -258,11 +258,11 @@ button {
 /* Media Queries
 ------------------------------------------ */
 
-@media only screen and (min-width: $bp2) {
+@media (min-width: $bp2) {
 
 }
 
-@media only screen and (min-width: $bp3) {
+@media (min-width: $bp3) {
 
 	html {
 		font-size: $alpha-font-size/16*112.5%;
@@ -270,7 +270,7 @@ button {
 
 }
 
-@media only screen and (min-width: $bp5) {
+@media (min-width: $bp5) {
 
 	html {
 		font-size: $alpha-font-size/16*125%;
