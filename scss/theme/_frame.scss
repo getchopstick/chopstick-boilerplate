@@ -103,11 +103,11 @@
 /* media queries
 ------------------------------------------ */
 
-@media only screen and (min-width: $bp1) {
+@media (min-width: $bp1) {
 
 }
 
-@media only screen and (min-width: $bp2) {
+@media (min-width: $bp2) {
 
 	.row {
 		padding: 0;
@@ -126,7 +126,7 @@
 
 }
 
-@media only screen and (min-width: $bp3) {
+@media (min-width: $bp3) {
 
 	.logo {
 		float: left;
@@ -169,7 +169,7 @@
 
 }
 
-@media only screen and (min-width: $bp4) {
+@media (min-width: $bp4) {
 
 	.holder {
 		@include padding-tb(1,1);

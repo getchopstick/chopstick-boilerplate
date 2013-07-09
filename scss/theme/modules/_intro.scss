@@ -21,7 +21,7 @@
 /* media queries
 -------------------------------------- */
 
-@media only screen and (min-width: $bp2) {
+@media (min-width: $bp2) {
 
 	.intro {
 		@include box-(12,1,1);
@@ -29,7 +29,7 @@
 
 }
 
-@media only screen and (min-width: $bp4) {
+@media (min-width: $bp4) {
 
 	.intro-holder {
 		@include padding-top(2);

@@ -51,7 +51,7 @@ a.button-secondary {
 	color: #F00;
 }
 
-@media only screen and (min-width: $bp3) {
+@media (min-width: $bp3) {
 
 	.button,
 	a.button,

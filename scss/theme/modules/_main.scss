@@ -5,7 +5,7 @@
 /* media queries
 ------------------------------------------ */
 
-@media only screen and (min-width: $bp2) {
+@media (min-width: $bp2) {
 
 	.main-col-6 {
 		@include box-(12,1,1);
@@ -13,7 +13,7 @@
 
 }
 
-@media only screen and (min-width: $bp4) {
+@media (min-width: $bp4) {
 
 	.main-col-6 {
 		@include box-(6,1,1);

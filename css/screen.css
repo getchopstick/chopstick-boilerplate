@@ -398,7 +398,7 @@ button:visited {
   color: white;
 }
 
-@media only screen and (min-width: 42.5em) {
+@media (min-width: 42.5em) {
   input[type="submit"],
   button {
     padding-left: 1.875em;
@@ -445,12 +445,12 @@ button:visited {
 
 /* Media Queries
 ------------------------------------------ */
-@media only screen and (min-width: 42.5em) {
+@media (min-width: 42.5em) {
   html {
     font-size: 112.5%;
   }
 }
-@media only screen and (min-width: 75em) {
+@media (min-width: 75em) {
   html {
     font-size: 125%;
   }
@@ -556,7 +556,7 @@ button:visited {
 
 /* media queries
 ------------------------------------------ */
-@media only screen and (min-width: 30em) {
+@media (min-width: 30em) {
   .row {
     padding: 0;
   }
@@ -575,7 +575,7 @@ button:visited {
     padding-right: 30px;
   }
 }
-@media only screen and (min-width: 42.5em) {
+@media (min-width: 42.5em) {
   .logo {
     float: left;
     font-size: 0.875em;
@@ -624,7 +624,7 @@ button:visited {
     padding-top: 3em;
   }
 }
-@media only screen and (min-width: 60em) {
+@media (min-width: 60em) {
   .holder {
     padding-top: 1.5em;
     padding-bottom: 1.5em;
@@ -786,7 +786,7 @@ a.button-secondary:visited {
   color: #F00;
 }
 
-@media only screen and (min-width: 42.5em) {
+@media (min-width: 42.5em) {
   .button,
   a.button,
   .button-secondary,
@@ -810,7 +810,7 @@ a.button-secondary:visited {
 */
 /* media queries
 ------------------------------------------ */
-@media only screen and (min-width: 30em) {
+@media (min-width: 30em) {
   .main-col-6 {
     width: 100%;
     float: left;
@@ -819,7 +819,7 @@ a.button-secondary:visited {
     padding-right: 30px;
   }
 }
-@media only screen and (min-width: 60em) {
+@media (min-width: 60em) {
   .main-col-6 {
     width: 50%;
     float: left;
@@ -852,7 +852,7 @@ a.button-secondary:visited {
 
 /* media queries
 -------------------------------------- */
-@media only screen and (min-width: 30em) {
+@media (min-width: 30em) {
   .intro {
     width: 100%;
     float: left;
@@ -861,7 +861,7 @@ a.button-secondary:visited {
     padding-right: 30px;
   }
 }
-@media only screen and (min-width: 60em) {
+@media (min-width: 60em) {
   .intro-holder {
     padding-top: 3em;
   }
@@ -1078,7 +1078,7 @@ a.button-secondary:visited {
 
 /* media queries
 -------------------------------------- */
-@media only screen and (min-width: 30em) {
+@media (min-width: 30em) {
   .grid-3,
   .grid-4,
   .grid-5,
@@ -1101,7 +1101,7 @@ a.button-secondary:visited {
     padding-right: 30px;
   }
 }
-@media only screen and (min-width: 42.5em) {
+@media (min-width: 42.5em) {
   .grid-3,
   .grid-4 {
     width: 50%;
@@ -1111,7 +1111,7 @@ a.button-secondary:visited {
     padding-right: 30px;
   }
 }
-@media only screen and (min-width: 60em) {
+@media (min-width: 60em) {
   .grid-1 {
     width: 8.33333%;
     float: left;
@@ -1245,7 +1245,7 @@ a.button-secondary:visited {
     float: right;
   }
 }
-@media only screen and (min-width: 75em) {
+@media (min-width: 75em) {
   .grid-14 {
     width: 116.66667%;
     float: left;
