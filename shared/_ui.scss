@@ -27,24 +27,21 @@
 }
 
 @mixin button-big {
-	@extend %button;
 	@include em-padding-lr(1,1);
 	@include input-dimensions($alpha-font-size,2,0);
 }
 
 @mixin button-small {
-	@extend %button;
 	@include em-padding-lr(.75,.75);
 	@include input-dimensions(($alpha-font-size - 2),1.5,0);
 }
 
 @mixin button-tiny {
-	@extend %button;
 	@include em-padding-lr(.5,.5);
 	@include input-dimensions(($alpha-font-size - 4),1.25,0);
 }
 
-@mixin button-inlineblock() {
+@mixin button-inlineblock {
 	display: inline-block;
 	width: auto;
 }
