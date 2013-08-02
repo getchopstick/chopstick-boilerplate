@@ -13,7 +13,7 @@
 	margin: 0;
 	overflow: hidden;
 	font-family: $alpha-font-family;
-	font-weight: 700;
+	font-weight: $beta-font-weight;
 	cursor: pointer;
 	text-decoration: none;
 	-webkit-appearance: none;
@@ -137,11 +137,11 @@
 @mixin alert {
 	@extend %alert;
 	border-color: darken($gamma-ui-color,20%);
-	color: #FFF;
+	color: $delta-ui-color;
 	background-color: $gamma-ui-color;
 
 	a {
-		color: #FFF;
+		color: $delta-ui-color;
 	}
 }
 
