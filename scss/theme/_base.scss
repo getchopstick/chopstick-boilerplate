@@ -165,6 +165,15 @@ a {
 }
 
 /*
+	Fix a > img problem
+*/
+
+img {
+	vertical-align: top;
+	border: 0;
+}
+
+/*
 	Forms
 */
 

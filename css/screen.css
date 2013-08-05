@@ -113,7 +113,10 @@ button:visited, .button:visited, .button-secondary:visited {
 }
 
 input[type="submit"],
-button, .button, .button-secondary, input[type="text"],
+button, .button,
+a.button, .button-secondary,
+input.button-secondary,
+a.button-secondary, input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea {
@@ -322,6 +325,14 @@ a:focus {
 }
 a:hover, a:active {
   outline: 0;
+}
+
+/*
+	Fix a > img problem
+*/
+img {
+  vertical-align: top;
+  border: 0;
 }
 
 /*
