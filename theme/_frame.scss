@@ -4,7 +4,7 @@
 
 .holder {
 	@include padding-tb(1,0);
-	background-color: #fff;
+	background-color: $delta-ui-color;
 }
 
 .row {
@@ -27,8 +27,8 @@
 	float: left;
 	font-family: $alpha-font-family;
 	font-style: italic;
-	font-weight: normal;
-	@include text-dimensions(16,1,1);
+	font-weight: $alpha-font-weight;
+	@include text-dimensions($alpha-font-size,1,1);
 }
 
 .header .inner {
@@ -45,14 +45,14 @@
 	ul {
 		font-family: $alpha-font-family;
 		@include list-nav;
-		@include text-dimensions(16,1,1);
+		@include text-dimensions($alpha-font-size,1,1);
 		@extend %clearfix;
 	}
 
 	a {
 		color: lighten($alpha-text-color,50);
 		text-decoration: none;
-		font-weight: bold;
+		font-weight: $beta-font-weight;
 	}
 
 	a:hover,
@@ -72,7 +72,7 @@
  	width: 2.1em;
  	height: 2.1em;
  	text-indent: -9999px;
- 	@include text-dimensions(16,1,1);
+ 	@include text-dimensions($alpha-font-size,1,1);
   	@include svg-bg("../img/icon-menu", ".png", $alpha-text-color, 50%, no-repeat);
 }
 

@@ -10,9 +10,9 @@
 			padding: 1em;
 			font-family: $alpha-font-family;
 			@include text-dimensions(14,1,0);
-			font-weight: bold;
+			font-weight: $beta-font-weight;
 			text-align: center;
-			background-color: #ccc;
+			background-color: $gamma-ui-color;
 		}
 	}
 	$contextGridColumns: $contextGridColumns - 1;
@@ -26,7 +26,7 @@
 		font-family: $alpha-font-family;
 		font-weight: bold;
 		text-align: center;
-		background-color: #ccc;
+		background-color: $gamma-ui-color;
 		@include text-dimensions(14,1,0);
 	}
 }
@@ -39,9 +39,9 @@
 		padding: 1em;
 		font-family: $alpha-font-family;
 		@include text-dimensions(14,1,0);
-		font-weight: bold;
+		font-weight: $beta-font-weight;
 		text-align: center;
-		background-color: #ccc;
+		background-color: $gamma-ui-color;
 	}
 
 }

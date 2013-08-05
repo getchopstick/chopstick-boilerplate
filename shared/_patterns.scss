@@ -130,7 +130,7 @@
 
 // Progressive svg backgrounds with png fallback.
 // Requires modernizr class .svg.
-// @include svg-bg("path/file", ".extension", #fff, 0 50%, no-repeat);
+// @include svg-bg("path/file", ".extension", $delta-ui-color, 0 50%, no-repeat);
 
 @mixin mdrn-svg { .svg & { @content } }
 
