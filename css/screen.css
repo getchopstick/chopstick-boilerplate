@@ -113,10 +113,7 @@ button:visited, .button:visited, .button-secondary:visited {
 }
 
 input[type="submit"],
-button, .button,
-a.button, .button-secondary,
-input.button-secondary,
-a.button-secondary, input[type="text"],
+button, .button, .button-secondary, input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea {
