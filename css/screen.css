@@ -703,6 +703,21 @@ input.inputDate:focus {
   border-color: #999999;
 }
 
+::-webkit-input-placeholder {
+  font-family: Helvetica, sans-serif;
+  font-style: italic;
+}
+
+::-moz-placeholder {
+  font-family: Helvetica, sans-serif;
+  font-style: italic;
+}
+
+:-ms-input-placeholder {
+  font-family: Helvetica, sans-serif;
+  font-style: italic;
+}
+
 .button,
 a.button {
   padding-left: 1.40625em;
