@@ -182,7 +182,7 @@ textarea {
 	background-color: $delta-ui-color;
 	-webkit-appearance: none;
 	width: 100%;
-	@include input-dimensions(16,1,0,0);
+	@include input-dimensions($alpha-font-size,1,0,0);
 
 	&:focus {
 		color: $alpha-text-color;
@@ -199,7 +199,7 @@ label {
 	display: block;
 	width: 100%;
 	cursor: pointer;
-	@include text-dimensions(16,1,0)
+	@include text-dimensions($alpha-font-size,1,0)
 }
 
 // Buttons
