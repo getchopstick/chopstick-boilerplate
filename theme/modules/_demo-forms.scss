@@ -34,6 +34,22 @@
 		p.full-width {
 			@include box-(12,.5,.5);
 		}
+
+		.oneliner p.postfix {
+			@include box-(6,0,.5);
+
+			button {
+				@include postfix();
+			}
+		}
+
+		.oneliner p.prefix {
+			@include box-(6,.5,0);
+
+			input {
+				@include prefix();
+			}
+		}
 	}
 
 }
