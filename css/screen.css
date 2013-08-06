@@ -34,6 +34,9 @@ button:visited, .button:visited, .button-secondary:visited {
 }
 
 /*
+	Pre- & postfix mixins
+*/
+/*
 	Alerts mixin
 */
 .alert-box, .alert-box.error, .alert-box.success, .alert-box.notice {
@@ -1327,6 +1330,28 @@ a.button-secondary:visited {
     position: relative;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .example-form-grid .oneliner p.postfix {
+    width: 50%;
+    float: left;
+    position: relative;
+    padding-left: 0px;
+    padding-right: 15px;
+  }
+  .example-form-grid .oneliner p.postfix button {
+    border-radius: 0 3px 3px 0;
+    border-left: 0;
+  }
+  .example-form-grid .oneliner p.prefix {
+    width: 50%;
+    float: left;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 0px;
+  }
+  .example-form-grid .oneliner p.prefix input {
+    border-radius: 3px 0 0 3px;
+    border-right: 0;
   }
 }
 /*
