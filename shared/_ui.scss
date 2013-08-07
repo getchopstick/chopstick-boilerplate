@@ -50,7 +50,7 @@
 	color: $textcolor;
 	background-color: $beta-ui-color;
 
-	// @include box-shadow(0 1px 0 rgba(255,255,255,.2) inset, 0 1px 1px rgba(black,.20));
+	// box-shadow: 0 1px 0 rgba(255,255,255,.2) inset, 0 1px 1px rgba(black,.20);
 
 	@if $border {
 		border: 1px solid darken($beta-ui-color,10);
@@ -59,15 +59,15 @@
 	}
 
 	@if $inset-shadow > 0 {
-		@include box-shadow(0 1px 0 rgba(255,255,255,$inset-shadow) inset);
+		box-shadow: 0 1px 0 rgba(255,255,255,$inset-shadow) inset;
 	}
 
 	@if $box-shadow > 0 {
-		@include box-shadow(0 1px 1px rgba(black,$box-shadow));
+		box-shadow: 0 1px 1px rgba(black,$box-shadow);
 	}
 
 	@if $inset-shadow > 0, $box-shadow > 0 {
-		@include box-shadow(0 1px 0 rgba(255,255,255,$inset-shadow) inset, 0 1px 1px rgba(black,$box-shadow));
+		box-shadow: 0 1px 0 rgba(255,255,255,$inset-shadow) inset, 0 1px 1px rgba(black,$box-shadow);
 	}
 
 	@if $gradient {
@@ -75,7 +75,7 @@
 	}
 
 	@if $text-shadow > 0 {
-		@include text-shadow(1px 1px 0 rgba(0,0,0,$text-shadow));
+		text-shadow: 1px 1px 0 rgba(0,0,0,$text-shadow);
 	}
 
 	&:hover {
@@ -114,14 +114,9 @@
 	margin-bottom: #{$alpha-line-height}em;
 	position: relative;
 
-	a {
-		@include opacity(.8);
-	}
-
 	a:hover,
 	a:active,
 	a:focus {
-		@include opacity(1);
 		text-decoration: none;
 	}
 
@@ -187,7 +182,7 @@
 	overflow: hidden;
 
 	ul {
-		@include horizontal-list;
+		@include horizontal-nav;
 		margin: #{$alpha-line-height}em 0;
 	}
 }
