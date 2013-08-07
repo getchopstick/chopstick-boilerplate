@@ -8,14 +8,14 @@
 
 // Vendor Dependencies: do not delete this.
 
-	@import "compass"; // http://compass-style.org/install
+	// @import "compass"; // http://compass-style.org/install
 
 // Shared: do not delete any of this.
 
 	@import "shared/grid";
 	@import "shared/typography";
-	@import "shared/ui";
 	@import "shared/patterns";
+	@import "shared/ui";
 	@import "shared/functions";
 
 // Theme: feel free to delete any or all.

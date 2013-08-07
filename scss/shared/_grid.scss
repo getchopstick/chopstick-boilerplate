@@ -64,7 +64,8 @@ $bp5: #{$contextGridWidth / $alpha-font-size}em;
 @mixin perc-col-($amount, $pl, $pr) {
 	width: ($fluidGridColumn * $amount) + ($fluidGridMargin * (($amount * 2) - 2)) + 0%;
 	@include perc-margin-lr($pl, $pr);
-	@include float-left;
+	// @include float-left;
+	float: left;
 }
 
 // border-box box sizing
