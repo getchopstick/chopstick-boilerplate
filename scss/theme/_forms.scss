@@ -25,13 +25,29 @@ input.inputDate {
 
 }
 
+// Placeholders
+::-webkit-input-placeholder {
+	font-family: $beta-font-family;
+	font-style: italic;
+}
+
+::-moz-placeholder {
+	font-family: $beta-font-family;
+	font-style: italic;
+}
+
+:-ms-input-placeholder {
+	font-family: $beta-font-family;
+	font-style: italic;
+}
+
 // Buttons
 
 .button,
 a.button {
 	@extend %button;
 	@include button-small;
-	@include button-color($alpha-ui-color, darken($alpha-ui-color,10), #fff, false, false, .5, .5, 0);
+	@include button-color($alpha-ui-color, darken($alpha-ui-color,10), $delta-ui-color, false, false, .5, .5, 0);
 }
 
 .button-secondary,
@@ -39,18 +55,18 @@ input.button-secondary,
 a.button-secondary {
 	@extend %button;
 	@include button-small;
-	@include button-color($alpha-text-color, darken($alpha-text-color,10), #fff, false, false, .9, .25, .5);
+	@include button-color($alpha-text-color, darken($alpha-text-color,10), $delta-ui-color, false, false, .9, .25, .5);
 }
 
 // Messages
 
 .error-label input,
 .error-label textarea {
-	border-color: #F00;
+	border-color: $alpha-ui-color;
 }
 
 .error-text {
-	color: #F00;
+	color: $alpha-ui-color;
 }
 
 @media (min-width: $bp3) {

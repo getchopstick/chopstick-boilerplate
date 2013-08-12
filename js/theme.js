@@ -50,7 +50,7 @@ jsTheme.forms =
 		$('.alert-box .close').on('click', function(e)
 		{
 			e.preventDefault();
-			$(this).parent('.alert-box').fadeOut(600);
+			$(this).closest('.alert-box').fadeOut(600);
 		});
 	}
 

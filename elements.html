@@ -414,6 +414,83 @@
 					</p>
 				</form>
 				<hr/>
+				<h3>Example 5: Form build with grids</h3>
+				<form class="example-form-grid" action="#" method="post">
+					<fieldset>
+						<div class="row">
+							<p>
+								<label>Name<abbr title="Required field">*</abbr>
+									<input type="text" placeholder="Full Name" />
+								</label>
+							</p>
+							<p>
+								<label>Email address<abbr title="Required field">*</abbr>
+									<input type="email" placeholder="email@address.com" />
+								</label>
+							</p>
+						</div>
+
+						<div class="row">
+							<p class="street">
+								<label>Street<abbr title="Required field">*</abbr>
+									<input type="text" placeholder="Street" />
+								</label>
+							</p>
+							<p class="number">
+								<label>Number<abbr title="Required field">*</abbr>
+									<input type="text" placeholder="Number" />
+								</label>
+							</p>
+						</div>
+
+						<div class="row">
+							<p class="zip-code">
+								<label>Zip code<abbr title="Required field">*</abbr>
+									<input type="text" placeholder="Zip code" />
+								</label>
+							</p>
+							<p class="city">
+								<label>City<abbr title="Required field">*</abbr>
+									<input type="text" placeholder="City" />
+								</label>
+							</p>
+						</div>
+
+						<div class="row">
+							<p class="full-width">
+								<label>Message<abbr title="Required field">*</abbr>
+									<textarea rows="5" cols="30"></textarea>
+								</label>
+							</p>
+						</div>
+
+						<div class="row">
+							<p class="full-width">
+								<button type="submit">Send</button>
+							</p>
+						</div>
+					</fieldset>
+				</form>
+
+				<hr />
+
+				<h3>Example 6: Form with pre- en postfixes</h3>
+				<form class="example-form-grid" action="#" method="post">
+					<fieldset>
+						<div class="row oneliner">
+							<p class="prefix">
+								<label>
+									<input type="email" placeholder="email@address.com" />
+								</label>
+							</p>
+							<p class="postfix">
+								<button type="submit">Send</button>
+							</p>
+						</div>
+					</fieldset>
+				</form>
+
+				<hr />
 				<h3>Messages</h3>
 				<div class="alert-box">
 					<h4>This is a title</h4>

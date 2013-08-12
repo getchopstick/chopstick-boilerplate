@@ -59,6 +59,9 @@ button:visited, .button:visited, .button-secondary:visited {
 }
 
 /*
+	Pre- & postfix mixins
+*/
+/*
 	Alerts mixin
 */
 .alert-box, .alert-box.error, .alert-box.success, .alert-box.notice {
@@ -114,7 +117,7 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
   background: transparent;
 }
 
-article, aside, figure, footer, header, hgroup, nav, section {
+article, aside, figure, footer, header, hgroup, nav, section, main {
   display: block;
 }
 
@@ -299,6 +302,14 @@ a:hover, a:active {
 }
 
 /*
+	Fix a > img problem
+*/
+img {
+  vertical-align: top;
+  border: 0;
+}
+
+/*
 	Forms
 */
 input[type="text"],
@@ -431,7 +442,7 @@ button:visited {
 .holder {
   padding-top: 1.5em;
   padding-bottom: 0em;
-  background-color: #fff;
+  background-color: white;
 }
 
 .row {
@@ -451,7 +462,7 @@ button:visited {
   float: left;
   font-family: Georgia, serif;
   font-style: italic;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 1em;
   line-height: 1.5em;
   margin-bottom: 1.5em;
@@ -477,7 +488,7 @@ button:visited {
 .main-nav a {
   color: #b3b3b3;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
 }
 .main-nav a:hover,
 .main-nav .selected a {
@@ -673,6 +684,21 @@ input.inputDate:focus {
   border-color: #999999;
 }
 
+::-webkit-input-placeholder {
+  font-family: Helvetica, sans-serif;
+  font-style: italic;
+}
+
+::-moz-placeholder {
+  font-family: Helvetica, sans-serif;
+  font-style: italic;
+}
+
+:-ms-input-placeholder {
+  font-family: Helvetica, sans-serif;
+  font-style: italic;
+}
+
 .button,
 a.button {
   padding-left: 1.40625em;
@@ -739,11 +765,11 @@ a.button-secondary:visited {
 
 .error-label input,
 .error-label textarea {
-  border-color: #F00;
+  border-color: red;
 }
 
 .error-text {
-  color: #F00;
+  color: red;
 }
 
 @media (min-width: 42.5em) {
@@ -844,9 +870,9 @@ a.button-secondary:visited {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .grid-11 {
@@ -858,9 +884,9 @@ a.button-secondary:visited {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .grid-10 {
@@ -872,9 +898,9 @@ a.button-secondary:visited {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .grid-9 {
@@ -886,9 +912,9 @@ a.button-secondary:visited {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .grid-8 {
@@ -900,9 +926,9 @@ a.button-secondary:visited {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .grid-7 {
@@ -914,9 +940,9 @@ a.button-secondary:visited {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .grid-6 {
@@ -928,9 +954,9 @@ a.button-secondary:visited {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .grid-5 {
@@ -942,9 +968,9 @@ a.button-secondary:visited {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .grid-4 {
@@ -956,9 +982,9 @@ a.button-secondary:visited {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .grid-3 {
@@ -970,9 +996,9 @@ a.button-secondary:visited {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .grid-2 {
@@ -984,9 +1010,9 @@ a.button-secondary:visited {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .grid-1 {
@@ -998,9 +1024,9 @@ a.button-secondary:visited {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .grid-14 {
@@ -1011,7 +1037,7 @@ a.button-secondary:visited {
   font-family: Georgia, serif;
   font-weight: bold;
   text-align: center;
-  background-color: #ccc;
+  background-color: #cccccc;
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
@@ -1030,9 +1056,9 @@ a.button-secondary:visited {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-bottom: 0em;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 /* media queries
@@ -1216,17 +1242,84 @@ a.button-secondary:visited {
 /*
 	module: forms
 */
+.example-form-grid .row {
+  margin-left: -1.60256%;
+  margin-right: -1.60256%;
+}
+.example-form-grid p {
+  width: 100%;
+  float: left;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 0;
+}
+
+@media (min-width: 30em) {
+  .example-form-grid p {
+    width: 50%;
+    float: left;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .example-form-grid p.street,
+  .example-form-grid p.city {
+    width: 66.66667%;
+    float: left;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .example-form-grid p.number,
+  .example-form-grid p.zip-code {
+    width: 33.33333%;
+    float: left;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .example-form-grid p.full-width {
+    width: 100%;
+    float: left;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .example-form-grid .oneliner p.postfix {
+    width: 50%;
+    float: left;
+    position: relative;
+    padding-left: 0px;
+    padding-right: 15px;
+  }
+  .example-form-grid .oneliner p.postfix button {
+    border-radius: 0 3px 3px 0;
+    border-left: 0;
+  }
+  .example-form-grid .oneliner p.prefix {
+    width: 50%;
+    float: left;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 0px;
+  }
+  .example-form-grid .oneliner p.prefix input {
+    border-radius: 3px 0 0 3px;
+    border-right: 0;
+  }
+}
 /*
 	module: UI
 */
 /* Alerts */
 .alert-box {
   border-color: #999999;
-  color: #FFF;
+  color: white;
   background-color: #cccccc;
 }
 .alert-box a {
-  color: #FFF;
+  color: white;
 }
 
 .alert-box.error {

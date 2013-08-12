@@ -1,3 +1,55 @@
 /*
 	module: forms
 */
+
+.example-form-grid {
+	.row {
+		margin-left: -1.60256%;
+		margin-right: -1.60256%;
+	}
+
+		p {
+			@include box-(12,.5,.5);
+			padding-bottom: 0;
+		}
+}
+
+@media (min-width : $bp2) {
+
+	.example-form-grid {
+		p {
+			@include box-(6,.5,.5);
+		}
+
+		p.street,
+		p.city {
+			@include box-(8,.5,.5);
+		}
+
+		p.number,
+		p.zip-code {
+			@include box-(4,.5,.5);
+		}
+
+		p.full-width {
+			@include box-(12,.5,.5);
+		}
+
+		.oneliner p.postfix {
+			@include box-(6,0,.5);
+
+			button {
+				@include postfix();
+			}
+		}
+
+		.oneliner p.prefix {
+			@include box-(6,.5,0);
+
+			input {
+				@include prefix();
+			}
+		}
+	}
+
+}
