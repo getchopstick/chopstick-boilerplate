@@ -4,13 +4,13 @@
 
 // Typography
 
-$alpha-font-family		: Georgia, serif;
-$alpha-font-size 		: 16;
-$alpha-font-weight		: 400;
-$alpha-line-height 		: 1.5;
+$alpha-font-family	: Georgia, serif;
+$alpha-font-size	: 16;
+$alpha-font-weight	: 400;
+$alpha-line-height	: 1.5;
 
-$beta-font-family	 	: Helvetica, sans-serif;
-$beta-font-weight 		: 700;
+$beta-font-family	: Helvetica, sans-serif;
+$beta-font-weight	: 700;
 
 // Grid
 
@@ -51,8 +51,8 @@ $delta-ui-color 	: #fff;
 
 // Links
 
-$alpha-link-color 		    : $alpha-ui-color;
-$alpha-link-colorhover 		: darken($alpha-link-color, 10);
-$alpha-link-colorfocus 		: darken($alpha-link-color, 10);
-$alpha-link-coloractive 	: lighten($alpha-link-color, 10);
+$alpha-link-color			: $alpha-ui-color;
+$alpha-link-colorhover		: darken($alpha-link-color, 10);
+$alpha-link-colorfocus		: darken($alpha-link-color, 10);
+$alpha-link-coloractive		: lighten($alpha-link-color, 10);
 $alpha-link-colorvisited	: darken($alpha-link-color, 5);
