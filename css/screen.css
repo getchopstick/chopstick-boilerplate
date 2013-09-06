@@ -438,9 +438,11 @@ button {
   font-size: 1em;
   line-height: 1.5em;
   margin-bottom: 1.5em;
-  background: #333333 url("../img/icon-menu.png") 50% no-repeat; }
+  background: #333333 url("../img/icon-menu.png") 50% no-repeat;
+  background-size: auto; }
   .svg .main-nav-trigger {
-    background: #333333 url("../img/icon-menu.svg") 50% no-repeat; }
+    background: #333333 url("../img/icon-menu.svg") 50% no-repeat;
+    background-size: auto; }
 
 .svg .trigger-active,
 .trigger-active {
