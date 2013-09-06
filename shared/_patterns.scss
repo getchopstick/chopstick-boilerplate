@@ -134,9 +134,10 @@
 
 @mixin mdrn-svg { .svg & { @content } }
 
-@mixin svg-bg($filename, $extension: '.png', $bg-color: transparent, $position: 0 0, $repeat: no-repeat) {
+@mixin svg-bg($filename, $extension: '.png', $bg-color: transparent, $position: 0 0, $repeat: no-repeat, $size: auto) {
     background: $bg-color url($filename + $extension) $position $repeat;
-    @include mdrn-svg { background: $bg-color url($filename + '.svg') $position $repeat; }
+    background-size: $size;
+    @include mdrn-svg { background: $bg-color url($filename + '.svg') $position $repeat; background-size: $size; }
 }
 
 // Media query mixin.
