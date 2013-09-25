@@ -5,15 +5,15 @@ Chopstick is a mobile-first responsive Design Framework, initiated by [Wijs](htt
 
 ## Install
 
-Make sure you [install compass](http://compass-style.org/install). Then simply use `compass watch` from a terminal and start making changes. Optionally, you can use [CodeKit](http://incident57.com/codekit/).
+You can use GUI tool like [CodeKit](http://incident57.com/codekit/). If you prefer the command line, you can install Sass. Then simply use `sass --watch scss:css` and start designing.
 
 ## Use
 
-Using Chopstick is easy and light-weight. We try to keep the code as modular as possible. Simply put, you can look at it this way:
+We try to keep the code as modular as possible. Simplified put, you can look at it this way:
 
     Shared Library + Settings = Theme
 
-The default theme uses settings from the settings file + components from the shared library. You can remove the entire theme and just use some components from the shared library, as you see fit. We don’t like too much default generated code and neither should you.
+We have included a default theme that uses settings from the settings file + components from the shared library. You can remove the default theme and just use some components from the shared library, as you see fit. We don’t like too much default generated code and neither should you.
 
 For more information and examples please refer to the [documentation on our website](http://getchopstick.com/docs).
 
