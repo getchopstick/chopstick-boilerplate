@@ -71,7 +71,7 @@
 	}
 
 	@if $gradient {
-		background: linear-gradient($alpha-ui-color, $beta-ui-color));
+		background: linear-gradient($alpha-ui-color, $beta-ui-color);
 	}
 
 	@if $text-shadow > 0 {
@@ -93,7 +93,7 @@
 		background-color: darken($alpha-ui-color,5);
 
 		@if $gradient {
-			background: linear-gradient($alpha-ui-color, $beta-ui-color));
+			background: linear-gradient($alpha-ui-color, $beta-ui-color);
 		}
 	}
 
