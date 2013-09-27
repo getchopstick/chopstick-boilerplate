@@ -83,7 +83,7 @@
 		background-color: lighten($alpha-ui-color,0);
 
 		@if $gradient {
-			background: (linear-gradient(lighten($alpha-ui-color,10), lighten($beta-ui-color,10)));
+			background: linear-gradient(lighten($alpha-ui-color,10), lighten($beta-ui-color,10));
 		}
 
 	}
