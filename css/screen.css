@@ -159,42 +159,30 @@ h6 {
 
 h1 {
   font-size: 4.2358em;
-  line-height: 1.06237em;
-  margin-bottom: 0.17706em;
-  padding-top: 0.35412em; }
+  line-height: 1.13615;
+  padding-top: 0.30986em;
+  padding-bottom: 0.30986em; }
 
 h2 {
   font-size: 2.61792em;
-  line-height: 1.14595em;
-  margin-bottom: 0.28649em;
-  padding-top: 0.57297em; }
+  line-height: 1.16982;
+  padding-top: 0.50135em;
+  padding-bottom: 0.50135em; }
 
 h3 {
   font-size: 1.618em;
-  line-height: 0.92707em;
-  margin-bottom: 0.46354em;
-  padding-top: 0.46354em; }
+  line-height: 1.35198;
+  padding-top: 0.81119em;
+  padding-bottom: 0.2704em; }
 
-h4 {
-  font-weight: 700;
-  font-size: 1em;
-  line-height: 1.5em;
-  margin-bottom: 0.75em;
-  padding-top: 0.75em; }
-
-h5 {
-  font-weight: 700;
-  font-size: 1em;
-  line-height: 1.5em;
-  margin-bottom: 0.75em;
-  padding-top: 0.75em; }
-
+h4,
+h5,
 h6 {
   font-weight: 700;
   font-size: 1em;
-  line-height: 1.5em;
-  margin-bottom: 0.75em;
-  padding-top: 0.75em; }
+  line-height: 1.75;
+  padding-top: 1.3125em;
+  padding-bottom: 0.4375em; }
 
 p,
 ol,
@@ -370,12 +358,6 @@ button {
 
 /* Media Queries
 ------------------------------------------ */
-@media (min-width: 42.5em) {
-  html {
-    font-size: 112.5%; } }
-@media (min-width: 75em) {
-  html {
-    font-size: 125%; } }
 /*
 	Frame
 */
