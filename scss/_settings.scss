@@ -5,9 +5,10 @@
 // Typography
 
 $alpha-font-family	: Georgia, serif;
-$alpha-font-size	: 16;
+$alpha-font-size	: 16; // pixel-value
 $alpha-font-weight	: 400;
-$alpha-line-height	: 1.5;
+$alpha-line-height	: 1.5; // em-value
+$alpha-baseline-grid: 7; // pixel-value
 
 $beta-font-family	: Helvetica, sans-serif;
 $beta-font-weight	: 700;
@@ -32,8 +33,8 @@ $bp4: #{960 / $alpha-font-size}em;
 
 $ratio				: 1.618;
 $importantnumber	: 44;
-$increment			: 1;
-$base-size			: $alpha-font-size/16*1em $importantnumber/16*1em;
+$leading			: 1;
+$base-size			: $alpha-font-size/16*1em;
 
 // Roundness
 
