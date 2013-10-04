@@ -21,7 +21,7 @@ $bp5: #{$contextGridWidth / $alpha-font-size}em;
 // horizontal padding based on the context grid gutter in em
 // use: @include em-padding-lr(#left, #right);
 
-@mixin em-padding-lr($left: 1, $right: 1) {
+@mixin em-padding-lr($left: 1, $right: $left) {
 	padding-left: $contextGridMargin/$alpha-font-size * $left * 1em;
 	padding-right: $contextGridMargin/$alpha-font-size * $right * 1em;
 }
@@ -29,7 +29,7 @@ $bp5: #{$contextGridWidth / $alpha-font-size}em;
 // horizontal padding based on the context grid gutter
 // use: @include px-padding-lr(#left, #right);
 
-@mixin px-padding-lr($left: 1, $right: 1) {
+@mixin px-padding-lr($left: 1, $right: $left) {
 	padding-left: $contextGridMargin * $left * 1px;
 	padding-right: $contextGridMargin * $right * 1px;
 }
@@ -37,7 +37,7 @@ $bp5: #{$contextGridWidth / $alpha-font-size}em;
 // horizontal margin based on the context grid gutter in em
 // use: @include em-margin-lr(#left, #right);
 
-@mixin em-margin-lr($left: 1, $right: 1) {
+@mixin em-margin-lr($left: 1, $right: $left) {
 	margin-left: $contextGridMargin/$alpha-font-size * $left * 1em;
 	margin-right: $contextGridMargin/$alpha-font-size * $right * 1em;
 }
@@ -45,7 +45,7 @@ $bp5: #{$contextGridWidth / $alpha-font-size}em;
 // horizontal margin based on the context grid gutter
 // use: @include px-margin-lr(#left, #right);
 
-@mixin px-margin-lr($left: 1, $right: 1) {
+@mixin px-margin-lr($left: 1, $right: $left) {
 	margin-left: $contextGridMargin * $left * 1px;
 	margin-right: $contextGridMargin * $right * 1px;
 }
@@ -53,7 +53,7 @@ $bp5: #{$contextGridWidth / $alpha-font-size}em;
 // horizontal percentual margin
 // use: @include perc-margin-lr(#left, #right);
 
-@mixin perc-margin-lr($left: 1, $right: 1) {
+@mixin perc-margin-lr($left: 1, $right: $left) {
 	margin-left: $fluidGridMargin * $left * 1%;
 	margin-right: $fluidGridMargin * $right * 1%;
 }
