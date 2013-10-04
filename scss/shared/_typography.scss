@@ -40,7 +40,7 @@ $basefontpercent: $alpha-font-size/16 * 100;
 }
 
 
-// baseline formula based on the $alpha-baseline-grid variable
+// baseline formulas based on the $alpha-baseline-grid variable
 // use: @include grid-input-dimensions(#font-size, #padding-top, #padding-bottom, #leading)
 
 @mixin grid-input-dimensions($fs: 0, $pt: 0, $pb: 0, $l: $leading){
@@ -72,8 +72,6 @@ $basefontpercent: $alpha-font-size/16 * 100;
 	}
 
 }
-
-// Baseline grid aware text-dimensions
 
 @mixin grid-text-dimensions($fs: 0, $pt: 0, $pb: 0, $l: $leading) {
 
