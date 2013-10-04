@@ -56,7 +56,7 @@
 
 @mixin block($color, $top: 1.5, $right: 1, $bottom: 1.5, $left: 1){
 	background-color: $color;
-	padding: #{$alpha-line-height * 1em * $top} #{$contextGridMargin * $right * 1px} #{$alpha-line-height * 1em * $bottom} #{$contextGridMargin * $left * 1px};
+	padding: #{$alpha-line-height * 1em * $top} #{$grid-margin * $right * 1px} #{$alpha-line-height * 1em * $bottom} #{$grid-margin * $left * 1px};
 }
 
 // Cross browser background opacity.

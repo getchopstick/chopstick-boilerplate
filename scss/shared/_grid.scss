@@ -4,17 +4,17 @@
 
 /// calculations
 
-$contextGridMargin: $contextGridGutter / 2;
-$contextGridWidth: ($contextGridGutter + $contextGridColumn) * $contextGridColumns;
+$grid-margin: $grid-gutter / 2;
+$grid-width: ($grid-gutter + $grid-column) * $grid-columns;
 
 // Responsive design formula for fully percentual columns & gutters
 
-$fluidGridColumn: $contextGridColumn / $contextGridWidth * 100 ;
-$fluidGridGutter: ($contextGridGutter / $contextGridWidth) * 100 ;
-$fluidGridMargin: ($contextGridMargin / $contextGridWidth) * 100 ;
+$fluid-grid-column: $grid-column / $grid-width * 100 ;
+$fluid-grid-gutter: ($grid-gutter / $grid-width) * 100 ;
+$fluid-grid-margin: ($grid-margin / $grid-width) * 100 ;
 
 // the last breakpoint is calculated here based on the total with of the grid
-$bp5: #{$contextGridWidth / $alpha-font-size}em;
+$bp5: #{$grid-width / $alpha-font-size}em;
 
 /// mixins
 
@@ -22,47 +22,47 @@ $bp5: #{$contextGridWidth / $alpha-font-size}em;
 // use: @include em-padding-lr(#left, #right);
 
 @mixin em-padding-lr($left: 1, $right: $left) {
-	padding-left: $contextGridMargin/$alpha-font-size * $left * 1em;
-	padding-right: $contextGridMargin/$alpha-font-size * $right * 1em;
+	padding-left: $grid-margin/$alpha-font-size * $left * 1em;
+	padding-right: $grid-margin/$alpha-font-size * $right * 1em;
 }
 
 // horizontal padding based on the context grid gutter
 // use: @include px-padding-lr(#left, #right);
 
 @mixin px-padding-lr($left: 1, $right: $left) {
-	padding-left: $contextGridMargin * $left * 1px;
-	padding-right: $contextGridMargin * $right * 1px;
+	padding-left: $grid-margin * $left * 1px;
+	padding-right: $grid-margin * $right * 1px;
 }
 
 // horizontal margin based on the context grid gutter in em
 // use: @include em-margin-lr(#left, #right);
 
 @mixin em-margin-lr($left: 1, $right: $left) {
-	margin-left: $contextGridMargin/$alpha-font-size * $left * 1em;
-	margin-right: $contextGridMargin/$alpha-font-size * $right * 1em;
+	margin-left: $grid-margin/$alpha-font-size * $left * 1em;
+	margin-right: $grid-margin/$alpha-font-size * $right * 1em;
 }
 
 // horizontal margin based on the context grid gutter
 // use: @include px-margin-lr(#left, #right);
 
 @mixin px-margin-lr($left: 1, $right: $left) {
-	margin-left: $contextGridMargin * $left * 1px;
-	margin-right: $contextGridMargin * $right * 1px;
+	margin-left: $grid-margin * $left * 1px;
+	margin-right: $grid-margin * $right * 1px;
 }
 
 // horizontal percentual margin
 // use: @include perc-margin-lr(#left, #right);
 
 @mixin perc-margin-lr($left: 1, $right: $left) {
-	margin-left: $fluidGridMargin * $left * 1%;
-	margin-right: $fluidGridMargin * $right * 1%;
+	margin-left: $fluid-grid-margin * $left * 1%;
+	margin-right: $fluid-grid-margin * $right * 1%;
 }
 
 // fully percentual collumns and gutters
 // use: @include perc-col-(#amount, #gutterleft, #gutterright)
 
 @mixin perc-col-($amount, $pl, $pr) {
-	width: ($fluidGridColumn * $amount) + ($fluidGridMargin * (($amount * 2) - 2)) + 0%;
+	width: ($fluid-grid-column * $amount) + ($fluid-grid-margin * (($amount * 2) - 2)) + 0%;
 	@include perc-margin-lr($pl, $pr);
 	// @include float-left;
 	float: left;
@@ -72,7 +72,7 @@ $bp5: #{$contextGridWidth / $alpha-font-size}em;
 // use: @include box-(#amount, #gutterleft, #gutterright);
 
 @mixin box-($amount, $left, $right) {
-	width: ($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%;
+	width: ($fluid-grid-column * $amount) + ($fluid-grid-gutter * $amount) + 0%;
 	float: left;
 	position: relative;
 	@include px-padding-lr($left, $right);
@@ -83,15 +83,15 @@ $bp5: #{$contextGridWidth / $alpha-font-size}em;
 // use @include push-(#amount);
 
 @mixin push-left($amount) {
-	left: ($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%;
+	left: ($fluid-grid-column * $amount) + ($fluid-grid-gutter * $amount) + 0%;
 }
 
 @mixin pull-right($amount) {
-	right: ($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%;
+	right: ($fluid-grid-column * $amount) + ($fluid-grid-gutter * $amount) + 0%;
 }
 
 @mixin pull-left($amount) {
-	left: (($fluidGridColumn * $amount) + ($fluidGridGutter * $amount) + 0%) * -1;
+	left: (($fluid-grid-column * $amount) + ($fluid-grid-gutter * $amount) + 0%) * -1;
 }
 
 // last-col mixin to re-align the right edge
