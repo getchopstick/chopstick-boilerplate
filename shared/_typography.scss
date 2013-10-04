@@ -41,11 +41,11 @@ $basefontpercent: $alpha-font-size/16 * 100;
 
 
 // baseline formulas based on the $alpha-baseline-grid variable
-// use: @include grid-input-dimensions(#font-size, #padding-top, #padding-bottom, #leading)
+// use: @include baseline-dimensions(#modular-scale-increment, #padding-top, #padding-bottom, #leading)
 
-@mixin grid-input-dimensions($fs: 0, $pt: 0, $pb: 0, $l: $leading){
+@mixin baseline-dimensions($msi: 0, $pt: 0, $pb: 0, $l: $alpha-leading) {
 
-	@if $fs == 0 {
+	@if $msi == 0 {
 		font-size: 1em;
 		line-height: ((ceil($alpha-font-size/$alpha-baseline-grid)*$alpha-baseline-grid)+($alpha-baseline-grid*$l))/$alpha-font-size;
 
@@ -58,46 +58,16 @@ $basefontpercent: $alpha-font-size/16 * 100;
 		}
 	}
 
-	@if $fs != 0 {
-		font-size: ms($fs);
-		line-height: ((ceil(su(ms($fs)*$alpha-font-size)/$alpha-baseline-grid)*$alpha-baseline-grid)+($alpha-baseline-grid*$l))/su(ms($fs)*$alpha-font-size);
+	@if $msi != 0 {
+		font-size: ms($msi)/$alpha-font-size*1em;
+		line-height: ((ceil(ms($msi)/$alpha-baseline-grid)*$alpha-baseline-grid)+($alpha-baseline-grid*$l))/(ms($msi));
 
 		@if $pt > 0 {
-			padding-top: $alpha-baseline-grid/su(ms($fs)*$alpha-font-size)*$pt*1em;
+			padding-top: $alpha-baseline-grid*$pt/ms($msi)*1em;
 		}
 
 		@if $pb > 0 {
-			padding-bottom: $alpha-baseline-grid/su(ms($fs)*$alpha-font-size)*$pb*1em;
-		}
-	}
-
-}
-
-@mixin grid-text-dimensions($fs: 0, $pt: 0, $pb: 0, $l: $leading) {
-
-	@if $fs == 0 {
-		font-size: 1em;
-		line-height: ((ceil($alpha-font-size/$alpha-baseline-grid)*$alpha-baseline-grid)+($alpha-baseline-grid*$l))/$alpha-font-size;
-
-		@if $pt > 0 {
-			padding-top: $alpha-baseline-grid/$alpha-font-size*$pt*1em;
-		}
-
-		@if $pb > 0 {
-			padding-bottom: $alpha-baseline-grid/$alpha-font-size*$pb*1em;
-		}
-	}
-
-	@if $fs != 0 {
-		font-size: ms($fs);
-		line-height: ((ceil(su(ms($fs)*$alpha-font-size)/$alpha-baseline-grid)*$alpha-baseline-grid)+($alpha-baseline-grid*$l))/su(ms($fs)*$alpha-font-size);
-
-		@if $pt > 0 {
-			padding-top: $alpha-baseline-grid/su(ms($fs)*$alpha-font-size)*$pt*1em;
-		}
-
-		@if $pb > 0 {
-			padding-bottom: $alpha-baseline-grid/su(ms($fs)*$alpha-font-size)*$pb*1em;
+			padding-bottom: $alpha-baseline-grid*$pb/ms($msi)*1em;
 		}
 	}
 
