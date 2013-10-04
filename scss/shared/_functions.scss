@@ -2,7 +2,7 @@
   Functions
 */
 
-// Em calculator: convert pixels to ems
+// Em calculator: convert pixel values to ems
 // eg. for a relational value of 12px write em(12) when the parent is the $alpha-font-size
 // if the parent is another value say 24px write em(12, 24)
 @function em($pxval, $base: $alpha-font-size) {
@@ -10,7 +10,6 @@
 }
 
 // Strip units
-//
 @function su($value) {
     @return $value / ($value * 0 + 1);
 }
