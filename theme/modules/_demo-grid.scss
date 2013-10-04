@@ -2,8 +2,8 @@
 	module: grid
 */
 
-@while $contextGridColumns > 0 {
-	.grid-#{$contextGridColumns} {
+@while $grid-columns > 0 {
+	.grid-#{$grid-columns} {
 		@include margin-bottom(1);
 
 		.inner {
@@ -15,7 +15,7 @@
 			background-color: $gamma-ui-color;
 		}
 	}
-	$contextGridColumns: $contextGridColumns - 1;
+	$grid-columns: $grid-columns - 1;
 }
 
 .grid-14 {

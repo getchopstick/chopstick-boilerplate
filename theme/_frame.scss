@@ -176,7 +176,7 @@
 	}
 
 	.row {
-		max-width: #{$contextGridWidth}px;
+		max-width: #{$grid-width}px;
 		// max-width: $bp5; // this is not the same since we increase the font-size at certain breakpoints so the em-value increases too.
 	}
 
