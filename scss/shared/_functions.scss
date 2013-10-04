@@ -9,7 +9,13 @@
   @return ($pxval / $base) * 1em;
 }
 
-// Modular scale function
+// Strip units
+//
+@function su($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+// Modular scale
 // use ms($value, $increment, $ratio)
 // Example:
 //  div {
@@ -18,12 +24,8 @@
 //
 //                     Increment Down GR with negative value
 //   font-size:        ms(14px,  -1, 1.618); // returns: 8.653px
-//
-//                     Can be used with ceil(round up) or floor(round down)
-//   font-size: floor( ms(14px, 1, 1.618) ); // returns: 22px
-//   font-size:  ceil( ms(14px, 1, 1.618) ); // returns: 23px
 //  }
-@function ms($increment: $increment, $value: $alpha-font-size, $ratio: $ratio) {
+@function ms($increment, $value: $alpha-font-size, $ratio: $ratio) {
   @if $increment > 0 {
     @for $i from 1 through $increment {
       $value: ($value * $ratio);
