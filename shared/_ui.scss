@@ -16,6 +16,7 @@
 	font-weight: $beta-font-weight;
 	cursor: pointer;
 	text-decoration: none;
+	transition: all .22s ease-in-out;
 	-webkit-appearance: none;
 	-webkit-font-smoothing: antialiased;
 
@@ -26,19 +27,19 @@
 
 }
 
-@mixin button-big {
-	@include em-padding-lr(1,1);
-	@include input-dimensions($alpha-font-size,2,0);
+@mixin button-l {
+	@include em-padding-lr(1);
+	@include baseline-dimensions(1,3,3,0);
 }
 
-@mixin button-small {
-	@include em-padding-lr(.75,.75);
-	@include input-dimensions(($alpha-font-size - 2),1.5,0);
+@mixin button-m {
+	@include em-padding-lr(.75);
+	@include baseline-dimensions(0,2,2,0);
 }
 
-@mixin button-tiny {
-	@include em-padding-lr(.5,.5);
-	@include input-dimensions(($alpha-font-size - 4),1.25,0);
+@mixin button-s {
+	@include em-padding-lr(.5);
+	@include baseline-dimensions(0,1,1,0);
 }
 
 @mixin button-inlineblock {
@@ -196,7 +197,7 @@
 	overflow: hidden;
 
 	ul {
-		@include horizontal-nav;
+		@extend %horizontal-nav;
 		margin: #{$alpha-line-height}em 0;
 	}
 }
