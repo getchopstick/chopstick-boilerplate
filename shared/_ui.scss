@@ -2,13 +2,14 @@
 	User Interface Elements
 */
 
+// Buttons
+
 %button {
-	@extend %rounded;
+	border-radius: $radius;
 	position: relative;
 	display: block;
 	width: 100%;
 	text-align: center;
-	border: none;
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
@@ -17,6 +18,7 @@
 	cursor: pointer;
 	text-decoration: none;
 	transition: all .22s ease-in-out;
+	transition-property: background, color, border;
 	-webkit-appearance: none;
 	-webkit-font-smoothing: antialiased;
 
@@ -27,9 +29,11 @@
 
 }
 
+// Button sizes
+
 @mixin button-l {
 	@include em-padding-lr(1);
-	@include baseline-dimensions(1,3,3,0);
+	@include baseline-dimensions(1,2,2,0);
 }
 
 @mixin button-m {
@@ -42,70 +46,86 @@
 	@include baseline-dimensions(0,1,1,0);
 }
 
+// Button display
+
 @mixin button-inlineblock {
 	display: inline-block;
 	width: auto;
 }
 
-@mixin button-color($alpha-ui-color, $beta-ui-color, $textcolor, $gradient: false, $border: false, $text-shadow: 0, $inset-shadow: 0, $box-shadow: 0) {
-	color: $textcolor;
-	background-color: $beta-ui-color;
+// Button color
+// use: @mixin button-color(color1[,color2]);
 
-	// box-shadow: 0 1px 0 rgba(255,255,255,.2) inset, 0 1px 1px rgba(black,.20);
+@mixin button-color($c1: $alpha-ui-color, $c2: darken($c1, $depth)) {
 
-	@if $border {
-		border: 1px solid darken($beta-ui-color,10);
-		border-top-color: darken($beta-ui-color,5);
-		border-bottom-color: darken($beta-ui-color,15);
+	border: $border solid $c1;
+
+	background-color: $c1;
+	@if $depth > 0 {
+		background-image: linear-gradient($c1, $c2);
 	}
 
-	@if $inset-shadow > 0 {
-		box-shadow: 0 1px 0 rgba(255,255,255,$inset-shadow) inset;
+	@if $highlight {
+		box-shadow: inset 0 1px 0 rgba(#FFF, $highlight/100%);
 	}
 
-	@if $box-shadow > 0 {
-		box-shadow: 0 1px 1px rgba(black,$box-shadow);
+	@if lightness($c1) <= 50 {
+		color: mix(#fff, $c1, $contrast);
+	} @else {
+		color: mix(#000, $c1, $contrast);
 	}
 
-	@if $inset-shadow > 0, $box-shadow > 0 {
-		box-shadow: 0 1px 0 rgba(255,255,255,$inset-shadow) inset, 0 1px 1px rgba(black,$box-shadow);
-	}
-
-	@if $gradient {
-		background: linear-gradient($alpha-ui-color, $beta-ui-color);
-	}
-
-	@if $text-shadow > 0 {
-		text-shadow: 1px 1px 0 rgba(0,0,0,$text-shadow);
-	}
-
-	&:hover {
-		color: $textcolor;
-		background-color: lighten($alpha-ui-color,0);
-
-		@if $gradient {
-			background: linear-gradient(lighten($alpha-ui-color,10), lighten($beta-ui-color,10));
-		}
-
-	}
-
-	&:active,
+	&:hover,
 	&:focus {
-		background-color: darken($alpha-ui-color,5);
-
-		@if $gradient {
-			background: linear-gradient($alpha-ui-color, $beta-ui-color);
+		border: $border solid darken($c1, 100-$contrast);
+		background-color: darken($c1, 100-$contrast);
+		@if $depth > 0 {
+			background-image: linear-gradient(darken($c1, 100-$contrast), darken($c2, 100-$contrast));
 		}
+
+	}
+
+	&:focus {
+		text-decoration: underline;
+	}
+
+	&:active {
+		background-color: darken($c1, 100-$contrast);
+		@if $depth > 0 {
+			background-image: linear-gradient(darken($c2, 100-$contrast), darken($c1, 100-$contrast));
+		}
+
+		@if lightness($c1) <= 50 {
+			color: rgba(mix(#fff, $c1, $contrast), $contrast/100%);
+		} @else {
+			color: rgba(mix(#000, $c1, $contrast), $contrast/100%);
+		}
+
+		box-shadow: none;
 	}
 
 	&:visited {
-		color: $textcolor;
 	}
 }
 
-/*
-	Pre- & postfix mixins
-*/
+// Inputs
+
+@mixin input-l {
+	@include em-padding-lr(.25);
+	@include baseline-dimensions(1,2,2,0);
+}
+
+@mixin input-m {
+	@include em-padding-lr(.25);
+	@include baseline-dimensions(0,2,2,0);
+}
+
+@mixin input-s {
+	@include em-padding-lr(.25);
+	@include baseline-dimensions(0,1,1,0);
+}
+
+// Pre- & postfix mixins
 
 @mixin postfix {
 	border-radius: 0 $radius $radius 0;
@@ -117,12 +137,10 @@
 	border-right: 0;
 }
 
-/*
-	Alerts mixin
-*/
+// Alerts
 
 %alert {
-	border-width: 1px;
+	border-width: $border;
 	border-style: solid;
 	padding: #{$alpha-line-height}em;
 	padding-bottom: 0;
@@ -197,7 +215,7 @@
 	overflow: hidden;
 
 	ul {
-		@extend %horizontal-nav;
+		@include horizontal-nav;
 		margin: #{$alpha-line-height}em 0;
 	}
 }

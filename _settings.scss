@@ -37,19 +37,24 @@ $importantnumber	: 44;
 $leading			: 1;
 $base-size			: $alpha-font-size/16*1em;
 
-// Roundness
+// UI
 
-$radius: 3px;
+$radius			: 5px;
+$border			: 1px;
+$depth			: 0%; // Range: 0-100%
+$contrast		: 91%; // Range: 0-100%
+$shadow			: 21%; // Range: 0-100%
+$highlight		: 0%; // Range: 0-100%
 
 // Colors
 
-$alpha-text-color 	: #333;
-$beta-text-color 	: #666;
+$alpha-text-color 	: #444;
+$beta-text-color 	: #777;
 
-$alpha-ui-color 	: #f00;
-$beta-ui-color		: #00f;
-$gamma-ui-color 	: #ccc;
-$delta-ui-color 	: #fff;
+$alpha-ui-color 	: #F00; // Primary elements
+$beta-ui-color		: #CCC; // Secondary elements
+$gamma-ui-color 	: #DDD; // Used for borders
+$delta-ui-color 	: #FFF; // Used for backgrounds
 
 // Links
 
