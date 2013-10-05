@@ -23,9 +23,9 @@
 */
 input[type="submit"],
 button, .button,
-a.button, .button-secondary,
-input.button-secondary,
-a.button-secondary {
+a.button, .btn-secondary,
+input.btn-secondary,
+a.btn-secondary {
   border-radius: 5px;
   position: relative;
   display: block;
@@ -43,8 +43,8 @@ a.button-secondary {
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased; }
   input[type="submit"]:hover,
-  button:hover, .button:hover, .button-secondary:hover, input[type="submit"]:visited,
-  button:visited, .button:visited, .button-secondary:visited {
+  button:hover, .button:hover, .btn-secondary:hover, input[type="submit"]:visited,
+  button:visited, .button:visited, .btn-secondary:visited {
     text-decoration: none; }
 
 .alert-box, .alert-box.error, .alert-box.success, .alert-box.notice {
@@ -641,9 +641,9 @@ a.button {
     color: rgba(255, 232, 232, 0.91);
     box-shadow: none; }
 
-.button-secondary,
-input.button-secondary,
-a.button-secondary {
+.btn-secondary,
+input.btn-secondary,
+a.btn-secondary {
   padding-left: 0.9375em;
   padding-right: 0.9375em;
   font-size: 1em;
@@ -654,20 +654,20 @@ a.button-secondary {
   background-color: #cccccc;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
   color: #121212; }
-  .button-secondary:hover, .button-secondary:focus,
-  input.button-secondary:hover,
-  input.button-secondary:focus,
-  a.button-secondary:hover,
-  a.button-secondary:focus {
+  .btn-secondary:hover, .btn-secondary:focus,
+  input.btn-secondary:hover,
+  input.btn-secondary:focus,
+  a.btn-secondary:hover,
+  a.btn-secondary:focus {
     border: 1px solid #b5b5b5;
     background-color: #b5b5b5; }
-  .button-secondary:focus,
-  input.button-secondary:focus,
-  a.button-secondary:focus {
+  .btn-secondary:focus,
+  input.btn-secondary:focus,
+  a.btn-secondary:focus {
     text-decoration: underline; }
-  .button-secondary:active,
-  input.button-secondary:active,
-  a.button-secondary:active {
+  .btn-secondary:active,
+  input.btn-secondary:active,
+  a.btn-secondary:active {
     background-color: #b5b5b5;
     color: rgba(18, 18, 18, 0.91);
     box-shadow: none; }
@@ -682,9 +682,9 @@ a.button-secondary {
 @media (min-width: 42.5em) {
   .button,
   a.button,
-  .button-secondary,
-  input.button-secondary,
-  a.button-secondary {
+  .btn-secondary,
+  input.btn-secondary,
+  a.btn-secondary {
     padding-left: 1.40625em;
     padding-right: 1.40625em;
     font-size: 1em;

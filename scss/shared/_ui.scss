@@ -4,7 +4,7 @@
 
 // Buttons
 
-%button {
+%btn {
 	border-radius: $radius;
 	position: relative;
 	display: block;
@@ -31,32 +31,32 @@
 
 // Button sizes
 
-@mixin button-l {
+@mixin btn-l {
 	@include em-padding-lr(1);
 	@include baseline-dimensions(1,2,2,0);
 }
 
-@mixin button-m {
+@mixin btn-m {
 	@include em-padding-lr(.75);
 	@include baseline-dimensions(0,2,2,0);
 }
 
-@mixin button-s {
+@mixin btn-s {
 	@include em-padding-lr(.5);
 	@include baseline-dimensions(0,1,1,0);
 }
 
 // Button display
 
-@mixin button-inlineblock {
+@mixin btn-inlineblock {
 	display: inline-block;
 	width: auto;
 }
 
 // Button color
-// use: @mixin button-color(color1[,color2]);
+// use: @mixin btn-color(color1[,color2]);
 
-@mixin button-color($c1: $alpha-ui-color, $c2: darken($c1, $depth)) {
+@mixin btn-color($c1: $alpha-ui-color, $c2: darken($c1, $depth)) {
 
 	border: $border solid $c1;
 

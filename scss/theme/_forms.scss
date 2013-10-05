@@ -45,17 +45,17 @@ input.inputDate {
 
 .button,
 a.button {
-	@extend %button;
-	@include button-s;
-	@include button-color;
+	@extend %btn;
+	@include btn-s;
+	@include btn-color;
 }
 
-.button-secondary,
-input.button-secondary,
-a.button-secondary {
-	@extend %button;
-	@include button-s;
-	@include button-color($beta-ui-color);
+.btn-secondary,
+input.btn-secondary,
+a.btn-secondary {
+	@extend %btn;
+	@include btn-s;
+	@include btn-color($beta-ui-color);
 }
 
 // Messages
@@ -73,11 +73,11 @@ a.button-secondary {
 
 	.button,
 	a.button,
-	.button-secondary,
-	input.button-secondary,
-	a.button-secondary {
-		@include button-m;
-		@include button-inlineblock;
+	.btn-secondary,
+	input.btn-secondary,
+	a.btn-secondary {
+		@include btn-m;
+		@include btn-inlineblock;
 	}
 
 }
