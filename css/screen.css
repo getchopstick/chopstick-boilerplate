@@ -50,10 +50,9 @@ a.btn-secondary {
 .alert-box, .alert-box.error, .alert-box.success, .alert-box.notice {
   border-width: 1px;
   border-style: solid;
-  padding: 1.5em;
-  padding-bottom: 0;
   margin-bottom: 1.5em;
-  position: relative; }
+  position: relative;
+  padding: 0.875em 1.3125em; }
   .alert-box a:hover,
   .alert-box a:active,
   .alert-box a:focus {
@@ -63,7 +62,13 @@ a.btn-secondary {
     top: 0.75em;
     right: 0.75em;
     display: block;
-    line-height: 1; }
+    line-height: 1;
+    text-decoration: none; }
+  .alert-box p, .alert-box.error p, .alert-box.success p, .alert-box.notice p {
+    font-size: 1em;
+    line-height: 1.75;
+    padding-top: 0.4375em;
+    padding-bottom: 0.4375em; }
 
 /*
 	Pagination mixin
@@ -303,7 +308,7 @@ button {
   border: 1px solid red;
   background-color: red;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
-  color: #ffe8e8; }
+  color: rgba(255, 232, 232, 0.91); }
   input[type="submit"]:hover, input[type="submit"]:focus,
   button:hover,
   button:focus {
@@ -626,7 +631,7 @@ a.button {
   border: 1px solid red;
   background-color: red;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
-  color: #ffe8e8; }
+  color: rgba(255, 232, 232, 0.91); }
   .button:hover, .button:focus,
   a.button:hover,
   a.button:focus {
@@ -653,7 +658,7 @@ a.btn-secondary {
   border: 1px solid #cccccc;
   background-color: #cccccc;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
-  color: #121212; }
+  color: rgba(18, 18, 18, 0.91); }
   .btn-secondary:hover, .btn-secondary:focus,
   input.btn-secondary:hover,
   input.btn-secondary:focus,
@@ -1136,31 +1141,32 @@ a.btn-secondary {
 /* Alerts */
 .alert-box {
   border-color: #aaaaaa;
-  color: white;
-  background-color: #dddddd; }
+  background-color: #dddddd;
+  color: rgba(19, 19, 19, 0.91); }
   .alert-box a {
-    color: white; }
+    color: rgba(19, 19, 19, 0.91);
+    text-decoration: underline; }
 
 .alert-box.error {
   border-color: #8b0800;
-  color: #fae7e6;
-  background-color: #d00c00; }
+  background-color: #d00c00;
+  color: rgba(250, 233, 232, 0.91); }
   .alert-box.error a {
-    color: #fae7e6; }
+    color: rgba(250, 233, 232, 0.91); }
 
 .alert-box.success {
   border-color: #4c721f;
-  color: #f1f7eb;
-  background-color: #72aa2e; }
+  background-color: #72aa2e;
+  color: rgba(242, 247, 236, 0.91); }
   .alert-box.success a {
-    color: #f1f7eb; }
+    color: rgba(242, 247, 236, 0.91); }
 
 .alert-box.notice {
   border-color: #e6901e;
-  color: #332d1c;
-  background-color: #ffe38a; }
+  background-color: #ffe38a;
+  color: rgba(22, 20, 12, 0.91); }
   .alert-box.notice a {
-    color: #332d1c; }
+    color: rgba(22, 20, 12, 0.91); }
 
 /* Pagination */
 .pagination-centered .inner {

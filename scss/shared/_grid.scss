@@ -2,7 +2,7 @@
 	Grid
 */
 
-/// calculations
+// calculations
 
 $grid-margin: $grid-gutter / 2;
 $grid-width: ($grid-gutter + $grid-column) * $grid-columns;
@@ -16,7 +16,7 @@ $fluid-grid-margin: ($grid-margin / $grid-width) * 100 ;
 // the last breakpoint is calculated here based on the total with of the grid
 $bp5: #{$grid-width / $alpha-font-size}em;
 
-/// mixins
+// mixins
 
 // horizontal padding based on the context grid gutter in em
 // use: @include em-padding-lr(#left, #right);
