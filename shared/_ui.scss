@@ -69,11 +69,7 @@
 		box-shadow: inset 0 1px 0 rgba(#FFF, $highlight/100%);
 	}
 
-	@if lightness($c1) <= 50 {
-		color: mix(#fff, $c1, $contrast);
-	} @else {
-		color: mix(#000, $c1, $contrast);
-	}
+	@include text-color($c1);
 
 	&:hover,
 	&:focus {
@@ -142,10 +138,9 @@
 %alert {
 	border-width: $border;
 	border-style: solid;
-	padding: #{$alpha-line-height}em;
-	padding-bottom: 0;
 	margin-bottom: #{$alpha-line-height}em;
 	position: relative;
+	padding: em($alpha-baseline-grid*2) em($alpha-baseline-grid*3);
 
 	a:hover,
 	a:active,
@@ -159,50 +154,56 @@
 		right: #{$alpha-line-height/2}em;
 		display: block;
 		line-height: 1;
+		text-decoration: none;
+	}
+
+	p {
+		@include baseline-dimensions(0,1,1);
 	}
 }
 
 @mixin alert {
 	@extend %alert;
 	border-color: darken($gamma-ui-color,20%);
-	color: $delta-ui-color;
 	background-color: $gamma-ui-color;
+	@include text-color($gamma-ui-color);
 
 	a {
-		color: $delta-ui-color;
+		@include text-color($gamma-ui-color);
+		text-decoration: underline;
 	}
 }
 
 @mixin alert-error {
 	@extend %alert;
 	border-color: #8b0800;
-	color: #fae7e6;
 	background-color: #d00c00;
+	@include text-color(#d00c00);
 
 	a {
-		color: #fae7e6;
+		@include text-color(#d00c00);
 	}
 }
 
 @mixin alert-success {
 	@extend %alert;
 	border-color: #4c721f;
-	color: #f1f7eb;
 	background-color: #72aa2e;
+	@include text-color(#72aa2e);
 
 	a {
-		color: #f1f7eb;
+		@include text-color(#72aa2e);
 	}
 }
 
 @mixin alert-notice {
 	@extend %alert;
 	border-color: #e6901e;
-	color: #332d1c;
 	background-color: #ffe38a;
+	@include text-color(#ffe38a);
 
 	a {
-		color: #332d1c;
+		@include text-color(#ffe38a);
 	}
 }
 

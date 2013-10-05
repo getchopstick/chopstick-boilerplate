@@ -37,6 +37,16 @@
 	}
 }
 
+// Calculate text-color based on background-color
+
+@mixin text-color($c1) {
+	@if lightness($c1) <= 50 {
+		color: rgba(mix(#fff, $c1, $contrast), $contrast/100%);
+	} @else {
+		color: rgba(mix(#000, $c1, $contrast), $contrast/100%);
+	}
+}
+
 // Prevent Long URL’s From Breaking Out of Container.
 // http://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container
 
