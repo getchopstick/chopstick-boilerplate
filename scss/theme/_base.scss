@@ -208,7 +208,7 @@ label {
 input[type="submit"],
 button {
 	@extend %button;
-	@include button-small;
+	@include button-s;
 	@include button-color($alpha-ui-color, darken($alpha-ui-color,10), #fff, false, false, .5, .5, 0);
 }
 
@@ -216,7 +216,7 @@ button {
 
 	input[type="submit"],
 	button {
-		@include button-big;
+		@include button-m;
 		@include button-inlineblock;
 	}
 
@@ -267,7 +267,7 @@ button {
 @media (min-width: $bp3) {
 
 	html {
-		// font-size: $alpha-font-size/16*112.5%;
+		font-size: $alpha-font-size/16*112.5%;
 	}
 
 }
@@ -275,7 +275,7 @@ button {
 @media (min-width: $bp5) {
 
 	html {
-		// font-size: $alpha-font-size/16*125%;
+		font-size: $alpha-font-size/16*125%;
 	}
 
 }

@@ -1,4 +1,7 @@
 /*
+  Functions
+*/
+/*
 	Grid
 */
 /*
@@ -16,7 +19,10 @@
     clear: both; }
 
 input[type="submit"],
-button, .button, .button-secondary, input[type="text"],
+button, .button,
+a.button, .button-secondary,
+input.button-secondary,
+a.button-secondary, input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea {
@@ -42,6 +48,7 @@ a.button-secondary {
   font-weight: 700;
   cursor: pointer;
   text-decoration: none;
+  transition: all .22s ease-in-out;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased; }
   input[type="submit"]:hover,
@@ -81,14 +88,7 @@ a.button-secondary {
   overflow: hidden; }
   .pagination ul, .pagination-centered ul {
     margin: 1.5em 0; }
-    .pagination ul li, .pagination-centered ul li, .pagination ul a, .pagination-centered ul a {
-      display: block;
-      float: left;
-      zoom: 1; }
 
-/*
-  Functions
-*/
 /*
 	Reset
 */
@@ -293,12 +293,12 @@ label {
 
 input[type="submit"],
 button {
-  padding-left: 1.40625em;
-  padding-right: 1.40625em;
-  font-size: 0.875em;
-  line-height: 2.57143em;
-  height: 2.57143em;
-  margin-bottom: 0em;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  font-size: 1em;
+  line-height: 1.3125;
+  padding-top: 0.4375em;
+  padding-bottom: 0.4375em;
   color: white;
   background-color: #cc0000;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
@@ -319,12 +319,12 @@ button {
 @media (min-width: 42.5em) {
   input[type="submit"],
   button {
-    padding-left: 1.875em;
-    padding-right: 1.875em;
+    padding-left: 1.40625em;
+    padding-right: 1.40625em;
     font-size: 1em;
-    line-height: 3em;
-    height: 3em;
-    margin-bottom: 0em;
+    line-height: 1.3125;
+    padding-top: 0.875em;
+    padding-bottom: 0.875em;
     display: inline-block;
     width: auto; } }
 /*
@@ -358,6 +358,12 @@ button {
 
 /* Media Queries
 ------------------------------------------ */
+@media (min-width: 42.5em) {
+  html {
+    font-size: 112.5%; } }
+@media (min-width: 75em) {
+  html {
+    font-size: 125%; } }
 /*
 	Frame
 */
@@ -581,12 +587,12 @@ input.inputDate {
 
 .button,
 a.button {
-  padding-left: 1.40625em;
-  padding-right: 1.40625em;
-  font-size: 0.875em;
-  line-height: 2.57143em;
-  height: 2.57143em;
-  margin-bottom: 0em;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  font-size: 1em;
+  line-height: 1.3125;
+  padding-top: 0.4375em;
+  padding-bottom: 0.4375em;
   color: white;
   background-color: #cc0000;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
@@ -607,12 +613,12 @@ a.button {
 .button-secondary,
 input.button-secondary,
 a.button-secondary {
-  padding-left: 1.40625em;
-  padding-right: 1.40625em;
-  font-size: 0.875em;
-  line-height: 2.57143em;
-  height: 2.57143em;
-  margin-bottom: 0em;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  font-size: 1em;
+  line-height: 1.3125;
+  padding-top: 0.4375em;
+  padding-bottom: 0.4375em;
   color: white;
   background-color: #1a1a1a;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
@@ -648,12 +654,12 @@ a.button-secondary {
   .button-secondary,
   input.button-secondary,
   a.button-secondary {
-    padding-left: 1.875em;
-    padding-right: 1.875em;
+    padding-left: 1.40625em;
+    padding-right: 1.40625em;
     font-size: 1em;
-    line-height: 3em;
-    height: 3em;
-    margin-bottom: 0em;
+    line-height: 1.3125;
+    padding-top: 0.875em;
+    padding-bottom: 0.875em;
     display: inline-block;
     width: auto; } }
 /*

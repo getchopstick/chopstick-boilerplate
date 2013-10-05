@@ -46,7 +46,7 @@ input.inputDate {
 .button,
 a.button {
 	@extend %button;
-	@include button-small;
+	@include button-s;
 	@include button-color($alpha-ui-color, darken($alpha-ui-color,10), $delta-ui-color, false, false, .5, .5, 0);
 }
 
@@ -54,7 +54,7 @@ a.button {
 input.button-secondary,
 a.button-secondary {
 	@extend %button;
-	@include button-small;
+	@include button-s;
 	@include button-color($alpha-text-color, darken($alpha-text-color,10), $delta-ui-color, false, false, .9, .25, .5);
 }
 
@@ -76,7 +76,7 @@ a.button-secondary {
 	.button-secondary,
 	input.button-secondary,
 	a.button-secondary {
-		@include button-big;
+		@include button-m;
 		@include button-inlineblock;
 	}
 
