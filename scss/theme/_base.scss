@@ -83,10 +83,8 @@ ul,
 dl,
 table,
 address,
-label,
 pre {
-	line-height: #{$alpha-line-height}em;
-	padding-bottom: #{$alpha-line-height}em;
+	@include baseline-dimensions(0,1,2,1);
 }
 
 ul,
@@ -135,6 +133,7 @@ img {
 a {
 	text-decoration: none;
 	color: $alpha-link-color;
+	transition: color .22s ease-in-out;
 
 	&:visited {
 		color: $alpha-link-colorvisited;
@@ -169,21 +168,26 @@ img {
 	Forms
 */
 
+form {
+	padding: 0 0 em(14);
+}
+
 // Input elements
 
 input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea {
-	@extend %rounded;
-	padding: .25em .5em;
-	border: 1px solid $gamma-ui-color;
-	font-family: $alpha-font-family;
-	color: lighten($alpha-text-color, 30);
-	background-color: $delta-ui-color;
 	-webkit-appearance: none;
+	background-color: $delta-ui-color;
+	border-radius: $radius;
+	border: $border solid $gamma-ui-color;
+	color: lighten($alpha-text-color, 30);
+	font-family: $alpha-font-family;
+	margin: 0;
 	width: 100%;
-	@include input-dimensions($alpha-font-size,1,0,0);
+	@include border-box;
+	@include input-s;
 
 	&:focus {
 		color: $alpha-text-color;
@@ -200,7 +204,7 @@ label {
 	display: block;
 	width: 100%;
 	cursor: pointer;
-	@include text-dimensions($alpha-font-size,1,0)
+	@include baseline-dimensions(0,3,1);
 }
 
 // Buttons
@@ -209,15 +213,38 @@ input[type="submit"],
 button {
 	@extend %button;
 	@include button-s;
-	@include button-color($alpha-ui-color, darken($alpha-ui-color,10), #fff, false, false, .5, .5, 0);
+	@include button-color;
 }
 
 @media (min-width: $bp3) {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	textarea {
+		@include input-m;
+	}
 
 	input[type="submit"],
 	button {
 		@include button-m;
 		@include button-inlineblock;
+	}
+
+}
+
+@media (min-width: $bp5) {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	textarea {
+		@include input-l;
+	}
+
+	input[type="submit"],
+	button {
+		@include button-l;
 	}
 
 }
@@ -260,22 +287,10 @@ button {
 /* Media Queries
 ------------------------------------------ */
 
-@media (min-width: $bp2) {
-
-}
-
-@media (min-width: $bp3) {
-
-	html {
-		font-size: $alpha-font-size/16*112.5%;
-	}
-
-}
-
 @media (min-width: $bp5) {
 
 	html {
-		font-size: $alpha-font-size/16*125%;
+		font-size: $alpha-font-size/16*112.5%;
 	}
 
 }

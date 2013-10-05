@@ -18,16 +18,6 @@
   .row:after, .header .inner:after, .main-nav ul:after {
     clear: both; }
 
-input[type="submit"],
-button, .button,
-a.button, .button-secondary,
-input.button-secondary,
-a.button-secondary, input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea {
-  border-radius: 3px; }
-
 /*
 	User Interface Elements
 */
@@ -36,19 +26,20 @@ button, .button,
 a.button, .button-secondary,
 input.button-secondary,
 a.button-secondary {
+  border-radius: 5px;
   position: relative;
   display: block;
   width: 100%;
   text-align: center;
-  border: none;
   padding: 0;
   margin: 0;
   overflow: hidden;
-  font-family: Georgia, serif;
+  font-family: sans-serif;
   font-weight: 700;
   cursor: pointer;
   text-decoration: none;
   transition: all .22s ease-in-out;
+  transition-property: background, color, border;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased; }
   input[type="submit"]:hover,
@@ -56,12 +47,6 @@ a.button-secondary {
   button:visited, .button:visited, .button-secondary:visited {
     text-decoration: none; }
 
-/*
-	Pre- & postfix mixins
-*/
-/*
-	Alerts mixin
-*/
 .alert-box, .alert-box.error, .alert-box.success, .alert-box.notice {
   border-width: 1px;
   border-style: solid;
@@ -88,6 +73,10 @@ a.button-secondary {
   overflow: hidden; }
   .pagination ul, .pagination-centered ul {
     margin: 1.5em 0; }
+    .pagination ul li, .pagination-centered ul li, .pagination ul a, .pagination-centered ul a {
+      display: block;
+      float: left;
+      zoom: 1; }
 
 /*
 	Reset
@@ -115,30 +104,30 @@ article, aside, figure, footer, header, hgroup, nav, section, main {
   box-sizing: border-box; }
 
 html {
-  background-color: #333333;
+  background-color: #444444;
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  font: 400 100%/1.5 Georgia, serif; }
+  font: 400 100%/1.5 sans-serif; }
 
 body {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizelegibility;
-  color: #333333; }
+  color: #444444; }
 
 ::-moz-selection {
-  background-color: #333333;
-  color: #d9d9d9;
+  background-color: #444444;
+  color: #eaeaea;
   text-shadow: none; }
 
 ::selection {
-  background-color: #333333;
-  color: #d9d9d9;
+  background-color: #444444;
+  color: #eaeaea;
   text-shadow: none; }
 
 hr {
-  border: 1px solid #cccccc;
+  border: 1px solid #dddddd;
   border-width: 1px 0 0;
   clear: both;
   margin: 0 0 1.5em; }
@@ -153,7 +142,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: Helvetica, sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
   text-rendering: optimizelegibility; }
 
@@ -190,10 +179,11 @@ ul,
 dl,
 table,
 address,
-label,
 pre {
-  line-height: 1.5em;
-  padding-bottom: 1.5em; }
+  font-size: 1em;
+  line-height: 1.75;
+  padding-top: 0.4375em;
+  padding-bottom: 0.875em; }
 
 ul,
 ol,
@@ -206,7 +196,7 @@ blockquote {
 table {
   text-align: left;
   width: 100%;
-  font-family: Georgia, serif;
+  font-family: sans-serif;
   border-spacing: 0;
   border-collapse: collapse;
   font-size: 0.875em;
@@ -214,9 +204,9 @@ table {
   margin-bottom: 3.42857em; }
 
 caption {
-  font-family: Georgia, serif;
+  font-family: sans-serif;
   text-align: left;
-  border-bottom: 1px solid #b3b3b3;
+  border-bottom: 1px solid #c4c4c4;
   font-weight: 700;
   text-align: center;
   padding-bottom: 0.75em;
@@ -225,7 +215,7 @@ caption {
 td,
 th {
   padding: .25em 1em .25em 0;
-  border-bottom: 1px solid #e6e6e6; }
+  border-bottom: 1px solid #f7f7f7; }
 
 img {
   max-width: 100%; }
@@ -235,7 +225,8 @@ img {
 */
 a {
   text-decoration: none;
-  color: red; }
+  color: red;
+  transition: color .22s ease-in-out; }
   a:visited {
     color: #e60000; }
   a:hover {
@@ -257,28 +248,37 @@ img {
 /*
 	Forms
 */
+form {
+  padding: 0 0 0.875em; }
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea {
-  padding: .25em .5em;
-  border: 1px solid #cccccc;
-  font-family: Georgia, serif;
-  color: gray;
-  background-color: white;
   -webkit-appearance: none;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+  color: #919191;
+  font-family: sans-serif;
+  margin: 0;
   width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 0.46875em;
+  padding-right: 0.46875em;
   font-size: 1em;
-  line-height: 1.5em;
-  height: 1.5em;
-  margin-bottom: 0em; }
+  line-height: 1.3125;
+  padding-top: 0.4375em;
+  padding-bottom: 0.4375em; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="password"]:focus,
   textarea:focus {
-    color: #333333;
-    outline-color: #cccccc;
-    border-color: #999999; }
+    color: #444444;
+    outline-color: #dddddd;
+    border-color: #aaaaaa; }
 
 textarea {
   height: auto; }
@@ -288,8 +288,9 @@ label {
   width: 100%;
   cursor: pointer;
   font-size: 1em;
-  line-height: 1.5em;
-  margin-bottom: 0em; }
+  line-height: 1.75;
+  padding-top: 1.3125em;
+  padding-bottom: 0.4375em; }
 
 input[type="submit"],
 button {
@@ -299,24 +300,36 @@ button {
   line-height: 1.3125;
   padding-top: 0.4375em;
   padding-bottom: 0.4375em;
-  color: white;
-  background-color: #cc0000;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 1px rgba(0, 0, 0, 0);
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5); }
-  input[type="submit"]:hover,
-  button:hover {
-    color: white;
-    background-color: red; }
-  input[type="submit"]:active, input[type="submit"]:focus,
-  button:active,
+  border: 1px solid red;
+  background-color: red;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
+  color: #ffe8e8; }
+  input[type="submit"]:hover, input[type="submit"]:focus,
+  button:hover,
   button:focus {
-    background-color: #e60000; }
-  input[type="submit"]:visited,
-  button:visited {
-    color: white; }
+    border: 1px solid #d10000;
+    background-color: #d10000; }
+  input[type="submit"]:focus,
+  button:focus {
+    text-decoration: underline; }
+  input[type="submit"]:active,
+  button:active {
+    background-color: #d10000;
+    color: rgba(255, 232, 232, 0.91);
+    box-shadow: none; }
 
 @media (min-width: 42.5em) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    padding-left: 0.46875em;
+    padding-right: 0.46875em;
+    font-size: 1em;
+    line-height: 1.3125;
+    padding-top: 0.875em;
+    padding-bottom: 0.875em; }
+
   input[type="submit"],
   button {
     padding-left: 1.40625em;
@@ -327,6 +340,26 @@ button {
     padding-bottom: 0.875em;
     display: inline-block;
     width: auto; } }
+@media (min-width: 75em) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    padding-left: 0.46875em;
+    padding-right: 0.46875em;
+    font-size: 1.618em;
+    line-height: 1.08158;
+    padding-top: 0.54079em;
+    padding-bottom: 0.54079em; }
+
+  input[type="submit"],
+  button {
+    padding-left: 1.875em;
+    padding-right: 1.875em;
+    font-size: 1.618em;
+    line-height: 1.08158;
+    padding-top: 0.54079em;
+    padding-bottom: 0.54079em; } }
 /*
 	Responsive media embedding, like an iframe
 */
@@ -348,22 +381,19 @@ button {
 	Upgrade message for old browsers (.lt-ie7)
 */
 .chromeframe {
-  font-family: Helvetica, sans-serif;
+  font-family: sans-serif;
   font-weight: 700;
   text-align: center;
   color: white;
-  background-color: #333333;
+  background-color: #444444;
   margin: 0;
   padding: 1em; }
 
 /* Media Queries
 ------------------------------------------ */
-@media (min-width: 42.5em) {
-  html {
-    font-size: 112.5%; } }
 @media (min-width: 75em) {
   html {
-    font-size: 125%; } }
+    font-size: 112.5%; } }
 /*
 	Frame
 */
@@ -385,7 +415,7 @@ button {
 */
 .logo {
   float: left;
-  font-family: Georgia, serif;
+  font-family: sans-serif;
   font-style: italic;
   font-weight: 400;
   font-size: 1em;
@@ -393,13 +423,13 @@ button {
   margin-bottom: 1.5em; }
 
 .header .inner {
-  border-bottom: 1px solid #cccccc; }
+  border-bottom: 1px solid #dddddd; }
 
 .main-nav {
   float: left;
   width: 100%; }
   .main-nav ul {
-    font-family: Georgia, serif;
+    font-family: sans-serif;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -407,7 +437,7 @@ button {
     line-height: 1.5em;
     margin-bottom: 1.5em; }
   .main-nav a {
-    color: #b3b3b3;
+    color: #c4c4c4;
     text-decoration: none;
     font-weight: 700; }
   .main-nav a:hover,
@@ -426,10 +456,10 @@ button {
   font-size: 1em;
   line-height: 1.5em;
   margin-bottom: 1.5em;
-  background: #333333 url("../img/icon-menu.png") 50% no-repeat;
+  background: #444444 url("../img/icon-menu.png") 50% no-repeat;
   background-size: auto; }
   .svg .main-nav-trigger {
-    background: #333333 url("../img/icon-menu.svg") 50% no-repeat;
+    background: #444444 url("../img/icon-menu.svg") 50% no-repeat;
     background-size: auto; }
 
 .svg .trigger-active,
@@ -446,8 +476,8 @@ button {
 	Footer
 */
 .footer-holder {
-  background-color: #333333;
-  color: #e6e6e6;
+  background-color: #444444;
+  color: #f7f7f7;
   padding-top: 1.5em; }
 
 /* media queries
@@ -556,9 +586,9 @@ input.inputPassword,
 input.inputSearch,
 input.inputDate {
   padding: 0 .5em;
-  border: 1px solid #cccccc;
-  font-family: Georgia, serif;
-  color: gray;
+  border: 1px solid #dddddd;
+  font-family: sans-serif;
+  color: #919191;
   background-color: white;
   -webkit-appearance: none;
   font-size: 1em;
@@ -569,20 +599,20 @@ input.inputDate {
   input.inputPassword:focus,
   input.inputSearch:focus,
   input.inputDate:focus {
-    color: #333333;
+    color: #444444;
     outline-color: red;
-    border-color: #999999; }
+    border-color: #aaaaaa; }
 
 ::-webkit-input-placeholder {
-  font-family: Helvetica, sans-serif;
+  font-family: sans-serif;
   font-style: italic; }
 
 ::-moz-placeholder {
-  font-family: Helvetica, sans-serif;
+  font-family: sans-serif;
   font-style: italic; }
 
 :-ms-input-placeholder {
-  font-family: Helvetica, sans-serif;
+  font-family: sans-serif;
   font-style: italic; }
 
 .button,
@@ -593,22 +623,23 @@ a.button {
   line-height: 1.3125;
   padding-top: 0.4375em;
   padding-bottom: 0.4375em;
-  color: white;
-  background-color: #cc0000;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 1px rgba(0, 0, 0, 0);
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5); }
-  .button:hover,
-  a.button:hover {
-    color: white;
-    background-color: red; }
-  .button:active, .button:focus,
-  a.button:active,
+  border: 1px solid red;
+  background-color: red;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
+  color: #ffe8e8; }
+  .button:hover, .button:focus,
+  a.button:hover,
   a.button:focus {
-    background-color: #e60000; }
-  .button:visited,
-  a.button:visited {
-    color: white; }
+    border: 1px solid #d10000;
+    background-color: #d10000; }
+  .button:focus,
+  a.button:focus {
+    text-decoration: underline; }
+  .button:active,
+  a.button:active {
+    background-color: #d10000;
+    color: rgba(255, 232, 232, 0.91);
+    box-shadow: none; }
 
 .button-secondary,
 input.button-secondary,
@@ -619,27 +650,27 @@ a.button-secondary {
   line-height: 1.3125;
   padding-top: 0.4375em;
   padding-bottom: 0.4375em;
-  color: white;
-  background-color: #1a1a1a;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 1px rgba(0, 0, 0, 0.5);
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.9); }
-  .button-secondary:hover,
+  border: 1px solid #cccccc;
+  background-color: #cccccc;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
+  color: #121212; }
+  .button-secondary:hover, .button-secondary:focus,
   input.button-secondary:hover,
-  a.button-secondary:hover {
-    color: white;
-    background-color: #333333; }
-  .button-secondary:active, .button-secondary:focus,
-  input.button-secondary:active,
   input.button-secondary:focus,
-  a.button-secondary:active,
+  a.button-secondary:hover,
   a.button-secondary:focus {
-    background-color: #262626; }
-  .button-secondary:visited,
-  input.button-secondary:visited,
-  a.button-secondary:visited {
-    color: white; }
+    border: 1px solid #b5b5b5;
+    background-color: #b5b5b5; }
+  .button-secondary:focus,
+  input.button-secondary:focus,
+  a.button-secondary:focus {
+    text-decoration: underline; }
+  .button-secondary:active,
+  input.button-secondary:active,
+  a.button-secondary:active {
+    background-color: #b5b5b5;
+    color: rgba(18, 18, 18, 0.91);
+    box-shadow: none; }
 
 .error-label input,
 .error-label textarea {
@@ -726,154 +757,154 @@ a.button-secondary {
   margin-bottom: 1.5em; }
   .grid-12 .inner {
     padding: 1em;
-    font-family: Georgia, serif;
+    font-family: sans-serif;
     font-size: 0.875em;
     line-height: 1.71429em;
     margin-bottom: 0em;
     font-weight: 700;
     text-align: center;
-    background-color: #cccccc; }
+    background-color: #dddddd; }
 
 .grid-11 {
   margin-bottom: 1.5em; }
   .grid-11 .inner {
     padding: 1em;
-    font-family: Georgia, serif;
+    font-family: sans-serif;
     font-size: 0.875em;
     line-height: 1.71429em;
     margin-bottom: 0em;
     font-weight: 700;
     text-align: center;
-    background-color: #cccccc; }
+    background-color: #dddddd; }
 
 .grid-10 {
   margin-bottom: 1.5em; }
   .grid-10 .inner {
     padding: 1em;
-    font-family: Georgia, serif;
+    font-family: sans-serif;
     font-size: 0.875em;
     line-height: 1.71429em;
     margin-bottom: 0em;
     font-weight: 700;
     text-align: center;
-    background-color: #cccccc; }
+    background-color: #dddddd; }
 
 .grid-9 {
   margin-bottom: 1.5em; }
   .grid-9 .inner {
     padding: 1em;
-    font-family: Georgia, serif;
+    font-family: sans-serif;
     font-size: 0.875em;
     line-height: 1.71429em;
     margin-bottom: 0em;
     font-weight: 700;
     text-align: center;
-    background-color: #cccccc; }
+    background-color: #dddddd; }
 
 .grid-8 {
   margin-bottom: 1.5em; }
   .grid-8 .inner {
     padding: 1em;
-    font-family: Georgia, serif;
+    font-family: sans-serif;
     font-size: 0.875em;
     line-height: 1.71429em;
     margin-bottom: 0em;
     font-weight: 700;
     text-align: center;
-    background-color: #cccccc; }
+    background-color: #dddddd; }
 
 .grid-7 {
   margin-bottom: 1.5em; }
   .grid-7 .inner {
     padding: 1em;
-    font-family: Georgia, serif;
+    font-family: sans-serif;
     font-size: 0.875em;
     line-height: 1.71429em;
     margin-bottom: 0em;
     font-weight: 700;
     text-align: center;
-    background-color: #cccccc; }
+    background-color: #dddddd; }
 
 .grid-6 {
   margin-bottom: 1.5em; }
   .grid-6 .inner {
     padding: 1em;
-    font-family: Georgia, serif;
+    font-family: sans-serif;
     font-size: 0.875em;
     line-height: 1.71429em;
     margin-bottom: 0em;
     font-weight: 700;
     text-align: center;
-    background-color: #cccccc; }
+    background-color: #dddddd; }
 
 .grid-5 {
   margin-bottom: 1.5em; }
   .grid-5 .inner {
     padding: 1em;
-    font-family: Georgia, serif;
+    font-family: sans-serif;
     font-size: 0.875em;
     line-height: 1.71429em;
     margin-bottom: 0em;
     font-weight: 700;
     text-align: center;
-    background-color: #cccccc; }
+    background-color: #dddddd; }
 
 .grid-4 {
   margin-bottom: 1.5em; }
   .grid-4 .inner {
     padding: 1em;
-    font-family: Georgia, serif;
+    font-family: sans-serif;
     font-size: 0.875em;
     line-height: 1.71429em;
     margin-bottom: 0em;
     font-weight: 700;
     text-align: center;
-    background-color: #cccccc; }
+    background-color: #dddddd; }
 
 .grid-3 {
   margin-bottom: 1.5em; }
   .grid-3 .inner {
     padding: 1em;
-    font-family: Georgia, serif;
+    font-family: sans-serif;
     font-size: 0.875em;
     line-height: 1.71429em;
     margin-bottom: 0em;
     font-weight: 700;
     text-align: center;
-    background-color: #cccccc; }
+    background-color: #dddddd; }
 
 .grid-2 {
   margin-bottom: 1.5em; }
   .grid-2 .inner {
     padding: 1em;
-    font-family: Georgia, serif;
+    font-family: sans-serif;
     font-size: 0.875em;
     line-height: 1.71429em;
     margin-bottom: 0em;
     font-weight: 700;
     text-align: center;
-    background-color: #cccccc; }
+    background-color: #dddddd; }
 
 .grid-1 {
   margin-bottom: 1.5em; }
   .grid-1 .inner {
     padding: 1em;
-    font-family: Georgia, serif;
+    font-family: sans-serif;
     font-size: 0.875em;
     line-height: 1.71429em;
     margin-bottom: 0em;
     font-weight: 700;
     text-align: center;
-    background-color: #cccccc; }
+    background-color: #dddddd; }
 
 .grid-14 {
   margin-bottom: 1.5em; }
   .grid-14 .inner {
     padding: 1em;
-    font-family: Georgia, serif;
+    font-family: sans-serif;
     font-weight: bold;
     text-align: center;
-    background-color: #cccccc;
+    background-color: #dddddd;
     font-size: 0.875em;
     line-height: 1.71429em;
     margin-bottom: 0em; }
@@ -886,13 +917,13 @@ a.button-secondary {
   margin-bottom: 1.5em; }
   .perc-3 .inner {
     padding: 1em;
-    font-family: Georgia, serif;
+    font-family: sans-serif;
     font-size: 0.875em;
     line-height: 1.71429em;
     margin-bottom: 0em;
     font-weight: 700;
     text-align: center;
-    background-color: #cccccc; }
+    background-color: #dddddd; }
 
 /* media queries
 -------------------------------------- */
@@ -1088,7 +1119,7 @@ a.button-secondary {
     padding-left: 0px;
     padding-right: 15px; }
     .example-form-grid .oneliner p.postfix button {
-      border-radius: 0 3px 3px 0;
+      border-radius: 0 5px 5px 0;
       border-left: 0; }
   .example-form-grid .oneliner p.prefix {
     width: 50%;
@@ -1097,16 +1128,16 @@ a.button-secondary {
     padding-left: 15px;
     padding-right: 0px; }
     .example-form-grid .oneliner p.prefix input {
-      border-radius: 3px 0 0 3px;
+      border-radius: 5px 0 0 5px;
       border-right: 0; } }
 /*
 	module: UI
 */
 /* Alerts */
 .alert-box {
-  border-color: #999999;
+  border-color: #aaaaaa;
   color: white;
-  background-color: #cccccc; }
+  background-color: #dddddd; }
   .alert-box a {
     color: white; }
 
