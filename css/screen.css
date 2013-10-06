@@ -288,6 +288,18 @@ textarea {
 textarea {
   height: auto; }
 
+::-webkit-input-placeholder {
+  font-family: sans-serif;
+  font-style: italic; }
+
+::-moz-placeholder {
+  font-family: sans-serif;
+  font-style: italic; }
+
+:-ms-input-placeholder {
+  font-family: sans-serif;
+  font-style: italic; }
+
 label {
   display: block;
   width: 100%;
@@ -586,18 +598,6 @@ button {
 	---
 	Object-oriented classes for form-like elements.
 */
-::-webkit-input-placeholder {
-  font-family: sans-serif;
-  font-style: italic; }
-
-::-moz-placeholder {
-  font-family: sans-serif;
-  font-style: italic; }
-
-:-ms-input-placeholder {
-  font-family: sans-serif;
-  font-style: italic; }
-
 .btn,
 a.btn {
   padding-left: 0.9375em;
