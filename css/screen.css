@@ -807,9 +807,19 @@ a.btn-secondary {
   padding-top: 3em; }
 
 .intro h1 {
-  font-weight: 300; }
+  font-weight: 300;
+  font-size: 4.2358em;
+  line-height: 1.13615;
+  padding-top: 0.10329em;
+  padding-bottom: 0.10329em; }
 .intro p {
-  font-style: italic; }
+  color: #777777;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.3125;
+  padding-top: 0.4375em;
+  padding-bottom: 1.3125em; }
 
 /* media queries
 -------------------------------------- */
@@ -820,14 +830,6 @@ a.btn-secondary {
     position: relative;
     padding-left: 30px;
     padding-right: 30px; } }
-@media (min-width: 60em) {
-  .intro-holder {
-    padding-top: 3em; }
-
-  .intro h1 {
-    font-size: 4.5em;
-    line-height: 1.16667em;
-    margin-bottom: 0.33333em; } }
 /*
 	module: grid
 */
