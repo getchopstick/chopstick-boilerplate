@@ -256,11 +256,38 @@ img {
 form {
   padding: 0 0 0.875em; }
 
+legend,
+label {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 1.75;
+  padding-top: 1.3125em;
+  padding-bottom: 0.4375em; }
+
+input[type="input"],
 input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[name="field_country_code"],
+input[name="field_city_code"],
+input[name="field_phone_int"],
+select[multiple],
 textarea {
   -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   background-color: white;
   border-radius: 5px;
   border: 1px solid #dddddd;
@@ -277,9 +304,24 @@ textarea {
   line-height: 1.3125;
   padding-top: 0.4375em;
   padding-bottom: 0.4375em; }
+  input[type="input"]:focus,
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="password"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[type="number"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="week"]:focus,
+  input[type="time"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[name="field_country_code"]:focus,
+  input[name="field_city_code"]:focus,
+  input[name="field_phone_int"]:focus,
+  select[multiple]:focus,
   textarea:focus {
     color: #444444;
     outline-color: #dddddd;
@@ -299,15 +341,6 @@ textarea {
 :-ms-input-placeholder {
   font-family: sans-serif;
   font-style: italic; }
-
-label {
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  font-size: 1em;
-  line-height: 1.75;
-  padding-top: 1.3125em;
-  padding-bottom: 0.4375em; }
 
 input[type="submit"],
 button {
@@ -336,9 +369,24 @@ button {
     box-shadow: none; }
 
 @media (min-width: 42.5em) {
+  input[type="input"],
   input[type="text"],
   input[type="email"],
   input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="number"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[name="field_country_code"],
+  input[name="field_city_code"],
+  input[name="field_phone_int"],
+  select[multiple],
   textarea {
     padding-left: 0.46875em;
     padding-right: 0.46875em;
@@ -358,9 +406,24 @@ button {
     display: inline-block;
     width: auto; } }
 @media (min-width: 75em) {
+  input[type="input"],
   input[type="text"],
   input[type="email"],
   input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="number"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[name="field_country_code"],
+  input[name="field_city_code"],
+  input[name="field_phone_int"],
+  select[multiple],
   textarea {
     padding-left: 0.46875em;
     padding-right: 0.46875em;
