@@ -185,6 +185,8 @@
 
 @mixin alert {
 	@extend %alert;
+	border-radius: $radius;
+	cursor: pointer;
 	border-color: darken($gamma-ui-color,20%);
 	background-color: $gamma-ui-color;
 	@include text-color($gamma-ui-color);
