@@ -22,8 +22,8 @@
 	User Interface Elements
 */
 input[type="submit"],
-button, .button,
-a.button, .btn-secondary,
+button, .btn,
+a.btn, .btn-secondary,
 input.btn-secondary,
 a.btn-secondary {
   border-radius: 5px;
@@ -43,8 +43,8 @@ a.btn-secondary {
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased; }
   input[type="submit"]:hover,
-  button:hover, .button:hover, .btn-secondary:hover, input[type="submit"]:visited,
-  button:visited, .button:visited, .btn-secondary:visited {
+  button:hover, .btn:hover, .btn-secondary:hover, input[type="submit"]:visited,
+  button:visited, .btn:visited, .btn-secondary:visited {
     text-decoration: none; }
 
 .alert-box, .alert-box.error, .alert-box.success, .alert-box.notice {
@@ -586,28 +586,6 @@ button {
 	---
 	Object-oriented classes for form-like elements.
 */
-input.inputText,
-input.inputPassword,
-input.inputSearch,
-input.inputDate {
-  padding: 0 .5em;
-  border: 1px solid #dddddd;
-  font-family: sans-serif;
-  color: #919191;
-  background-color: white;
-  -webkit-appearance: none;
-  font-size: 1em;
-  line-height: 2.25em;
-  height: 2.25em;
-  margin-bottom: 0em; }
-  input.inputText:focus,
-  input.inputPassword:focus,
-  input.inputSearch:focus,
-  input.inputDate:focus {
-    color: #444444;
-    outline-color: red;
-    border-color: #aaaaaa; }
-
 ::-webkit-input-placeholder {
   font-family: sans-serif;
   font-style: italic; }
@@ -620,8 +598,8 @@ input.inputDate {
   font-family: sans-serif;
   font-style: italic; }
 
-.button,
-a.button {
+.btn,
+a.btn {
   padding-left: 0.9375em;
   padding-right: 0.9375em;
   font-size: 1em;
@@ -632,16 +610,16 @@ a.button {
   background-color: red;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
   color: rgba(255, 232, 232, 0.91); }
-  .button:hover, .button:focus,
-  a.button:hover,
-  a.button:focus {
+  .btn:hover, .btn:focus,
+  a.btn:hover,
+  a.btn:focus {
     border: 1px solid #d10000;
     background-color: #d10000; }
-  .button:focus,
-  a.button:focus {
+  .btn:focus,
+  a.btn:focus {
     text-decoration: underline; }
-  .button:active,
-  a.button:active {
+  .btn:active,
+  a.btn:active {
     background-color: #d10000;
     color: rgba(255, 232, 232, 0.91);
     box-shadow: none; }
@@ -685,8 +663,8 @@ a.btn-secondary {
   color: red; }
 
 @media (min-width: 42.5em) {
-  .button,
-  a.button,
+  .btn,
+  a.btn,
   .btn-secondary,
   input.btn-secondary,
   a.btn-secondary {
@@ -698,6 +676,18 @@ a.btn-secondary {
     padding-bottom: 0.875em;
     display: inline-block;
     width: auto; } }
+@media (min-width: 75em) {
+  .btn,
+  a.btn,
+  .btn-secondary,
+  input.btn-secondary,
+  a.btn-secondary {
+    padding-left: 1.875em;
+    padding-right: 1.875em;
+    font-size: 1.618em;
+    line-height: 1.08158;
+    padding-top: 0.54079em;
+    padding-bottom: 0.54079em; } }
 /*
 	User Content Defaults
 */

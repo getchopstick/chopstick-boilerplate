@@ -4,27 +4,6 @@
 	Object-oriented classes for form-like elements.
 */
 
-input.inputText,
-input.inputPassword,
-input.inputSearch,
-input.inputDate {
-	padding: 0 .5em;
-	border: 1px solid $gamma-ui-color;
-	font-family: $alpha-font-family;
-	color: lighten($alpha-text-color,30);
-	background-color: $delta-ui-color;
-	-webkit-appearance: none;
-	@include input-dimensions(16,1.5,0,0);
-
-
-	&:focus {
-		color: $alpha-text-color;
-		outline-color: $alpha-ui-color;
-		border-color: darken($gamma-ui-color,20);
-	}
-
-}
-
 // Placeholders
 ::-webkit-input-placeholder {
 	font-family: $beta-font-family;
@@ -41,10 +20,10 @@ input.inputDate {
 	font-style: italic;
 }
 
-// Buttons
+// buttons
 
-.button,
-a.button {
+.btn,
+a.btn {
 	@extend %btn;
 	@include btn-s;
 	@include btn-color;
@@ -71,13 +50,25 @@ a.btn-secondary {
 
 @media (min-width: $bp3) {
 
-	.button,
-	a.button,
+	.btn,
+	a.btn,
 	.btn-secondary,
 	input.btn-secondary,
 	a.btn-secondary {
 		@include btn-m;
 		@include btn-inlineblock;
+	}
+
+}
+
+@media (min-width: $bp5) {
+
+	.btn,
+	a.btn,
+	.btn-secondary,
+	input.btn-secondary,
+	a.btn-secondary {
+		@include btn-l;
 	}
 
 }
