@@ -676,6 +676,9 @@ a.btn-secondary {
 .error-text {
   color: red; }
 
+.help-block {
+  color: #777777; }
+
 @media (min-width: 42.5em) {
   .btn,
   a.btn,

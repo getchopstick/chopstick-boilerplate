@@ -360,58 +360,60 @@
 				<hr/>
 				<h3>Example 4: Register form</h3>
 				<form action="" method="post" class="horizontal">
-					<p>
-						<label>Nickname<abbr title="Required field">*</abbr></label>
-						<input type="text" value="" />
-						<small class="helpTxt">Profiel URL: http://www.example.com/<strong>your-nickname</strong></small>
-					</p>
-					<p>
-						<label>First-name<abbr title="Required field">*</abbr></label>
-						<input type="text" value="" />
-					</p>
-					<p>
-						<label>Last-name<abbr title="Required field">*</abbr></label>
-						<input type="text" value="" />
-					</p>
-					<div class="formSection">
-						<label>Date of birth<abbr title="Required field">*</abbr></label>
-						<div class="formSectionContent">
-							<div class="oneLiner">
-								<p class="smallInput firstChild">
-									<select class="select" size="1">
-										<option value="0">1</option>
-										<option value="1">2</option>
-										<option value="2">3</option>
-									</select>
-								</p>
-								<p>
-									<select class="select" size="1">
-										<option value="0">January</option>
-										<option value="1">February</option>
-										<option value="2">March</option>
-									</select>
-								</p>
-								<p class="smallInput">
-									<select class="select" size="1">
-										<option value="0">2010</option>
-										<option value="1">2009</option>
-										<option value="2">2008</option>
-									</select>
-								</p>
-								<small class="helpTxt">Hendrerit ac, cursus non, massa aliquam lorem.</small>
+					<fieldset>
+						<label>
+							Nickname<abbr title="Required field">*</abbr>
+							<input type="text" value="" />
+							<small class="help-block">Profiel URL: http://www.example.com/<strong>your-nickname</strong></small>
+						</label>
+						<label>
+							First-name<abbr title="Required field">*</abbr>
+							<input type="text" value="" />
+						</label>
+						<label>
+							Last-name<abbr title="Required field">*</abbr>
+							<input type="text" value="" />
+						</label>
+						<div class="formSection">
+							<label>Date of birth<abbr title="Required field">*</abbr></label>
+							<div class="formSectionContent">
+								<div class="oneLiner">
+									<p class="smallInput firstChild">
+										<select class="select" size="1">
+											<option value="0">1</option>
+											<option value="1">2</option>
+											<option value="2">3</option>
+										</select>
+									</p>
+									<p>
+										<select class="select" size="1">
+											<option value="0">January</option>
+											<option value="1">February</option>
+											<option value="2">March</option>
+										</select>
+									</p>
+									<p class="smallInput">
+										<select class="select" size="1">
+											<option value="0">2010</option>
+											<option value="1">2009</option>
+											<option value="2">2008</option>
+										</select>
+									</p>
+									<small class="help-block">Hendrerit ac, cursus non, massa aliquam lorem.</small>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="inputList">
-						<p class="label">Gender<abbr title="Required field">*</abbr></p>
-						<ul>
-							<li><label><input type="radio" class="inputRadio" value="lorem ipsum dolor" />Male</label></li>
-							<li><label><input type="radio" class="inputRadio" value="ipsum" />Female</label></li>
-						</ul>
-					</div>
-					<p>
-						<button type="submit">Register</button>
-					</p>
+						<div class="inputList">
+							<p class="label">Gender<abbr title="Required field">*</abbr></p>
+							<ul>
+								<li><label><input type="radio" class="inputRadio" value="lorem ipsum dolor" />Male</label></li>
+								<li><label><input type="radio" class="inputRadio" value="ipsum" />Female</label></li>
+							</ul>
+						</div>
+						<p>
+							<button type="submit">Register</button>
+						</p>
+					</fieldset>
 				</form>
 				<hr/>
 				<h3>Example 5: Form build with grids</h3>
