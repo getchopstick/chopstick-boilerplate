@@ -33,17 +33,17 @@
 
 @mixin btn-l {
 	@include em-padding-lr(1);
-	@include baseline-dimensions(1,2,2,0);
+	@include baseline-dimensions-form(1,2,2,0);
 }
 
 @mixin btn-m {
 	@include em-padding-lr(.75);
-	@include baseline-dimensions(0,2,2,0);
+	@include baseline-dimensions-form(0,2,2,0);
 }
 
 @mixin btn-s {
 	@include em-padding-lr(.5);
-	@include baseline-dimensions(0,1,1,0);
+	@include baseline-dimensions-form(0,1,1,0);
 }
 
 // Button display
@@ -106,19 +106,40 @@
 
 // Inputs
 
+@mixin baseline-dimensions-form($msi: 0, $pt: 0, $pb: 0, $l: $alpha-leading) {
+
+	@include baseline-dimensions($msi, $pt, $pb, $l);
+
+	@if $msi == 0 {
+		$line-height: ((ceil($alpha-font-size/$alpha-baseline-grid)*$alpha-baseline-grid)+($alpha-baseline-grid*$l))/$alpha-font-size;
+		$padding-top: $alpha-baseline-grid/$alpha-font-size*$pt*1em;
+		$padding-bottom: $alpha-baseline-grid/$alpha-font-size*$pb*1em;
+		$border-width: em(su($border));
+		height: $line-height + $padding-top + $padding-bottom;
+	}
+
+	@if $msi != 0 {
+		$line-height: ((ceil(ms($msi)/$alpha-baseline-grid)*$alpha-baseline-grid)+($alpha-baseline-grid*$l))/(ms($msi));
+		$padding-top: $alpha-baseline-grid*$pt/ms($msi)*1em;
+		$padding-bottom: $alpha-baseline-grid*$pb/ms($msi)*1em;
+		height: $line-height + $padding-top + $padding-bottom;
+	}
+
+}
+
 @mixin input-l {
 	@include em-padding-lr(.25);
-	@include baseline-dimensions(1,2,2,0);
+	@include baseline-dimensions-form(1,2,2,0);
 }
 
 @mixin input-m {
 	@include em-padding-lr(.25);
-	@include baseline-dimensions(0,2,2,0);
+	@include baseline-dimensions-form(0,2,2,0);
 }
 
 @mixin input-s {
 	@include em-padding-lr(.25);
-	@include baseline-dimensions(0,1,1,0);
+	@include baseline-dimensions-form(0,1,1,0);
 }
 
 // Pre- & postfix mixins

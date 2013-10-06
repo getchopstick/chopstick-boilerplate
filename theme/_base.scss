@@ -240,6 +240,10 @@ button {
 		@include input-m;
 	}
 
+	textarea {
+		height: auto;
+	}
+
 	input[type="submit"],
 	button {
 		@include btn-m;
@@ -255,6 +259,10 @@ button {
 	input[type="password"],
 	textarea {
 		@include input-l;
+	}
+
+	textarea {
+		height: auto;
 	}
 
 	input[type="submit"],
