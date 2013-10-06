@@ -303,7 +303,8 @@ textarea {
   font-size: 1em;
   line-height: 1.3125;
   padding-top: 0.4375em;
-  padding-bottom: 0.4375em; }
+  padding-bottom: 0.4375em;
+  height: 2.1875em; }
   input[type="input"]:focus,
   input[type="text"]:focus,
   input[type="email"]:focus,
@@ -350,6 +351,7 @@ button {
   line-height: 1.3125;
   padding-top: 0.4375em;
   padding-bottom: 0.4375em;
+  height: 2.1875em;
   border: 1px solid red;
   background-color: red;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
@@ -393,7 +395,11 @@ button {
     font-size: 1em;
     line-height: 1.3125;
     padding-top: 0.875em;
-    padding-bottom: 0.875em; }
+    padding-bottom: 0.875em;
+    height: 3.0625em; }
+
+  textarea {
+    height: auto; }
 
   input[type="submit"],
   button {
@@ -403,6 +409,7 @@ button {
     line-height: 1.3125;
     padding-top: 0.875em;
     padding-bottom: 0.875em;
+    height: 3.0625em;
     display: inline-block;
     width: auto; } }
 @media (min-width: 75em) {
@@ -430,7 +437,11 @@ button {
     font-size: 1.618em;
     line-height: 1.08158;
     padding-top: 0.54079em;
-    padding-bottom: 0.54079em; }
+    padding-bottom: 0.54079em;
+    height: 2.16316em; }
+
+  textarea {
+    height: auto; }
 
   input[type="submit"],
   button {
@@ -439,7 +450,8 @@ button {
     font-size: 1.618em;
     line-height: 1.08158;
     padding-top: 0.54079em;
-    padding-bottom: 0.54079em; } }
+    padding-bottom: 0.54079em;
+    height: 2.16316em; } }
 /*
 	Responsive media embedding, like an iframe
 */
@@ -669,6 +681,7 @@ a.btn {
   line-height: 1.3125;
   padding-top: 0.4375em;
   padding-bottom: 0.4375em;
+  height: 2.1875em;
   border: 1px solid red;
   background-color: red;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
@@ -696,6 +709,7 @@ a.btn-secondary {
   line-height: 1.3125;
   padding-top: 0.4375em;
   padding-bottom: 0.4375em;
+  height: 2.1875em;
   border: 1px solid #cccccc;
   background-color: #cccccc;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
@@ -737,6 +751,7 @@ a.btn-secondary {
     line-height: 1.3125;
     padding-top: 0.875em;
     padding-bottom: 0.875em;
+    height: 3.0625em;
     display: inline-block;
     width: auto; } }
 @media (min-width: 75em) {
@@ -750,7 +765,8 @@ a.btn-secondary {
     font-size: 1.618em;
     line-height: 1.08158;
     padding-top: 0.54079em;
-    padding-bottom: 0.54079em; } }
+    padding-bottom: 0.54079em;
+    height: 2.16316em; } }
 /*
 	User Content Defaults
 */
