@@ -1215,6 +1215,8 @@ a.btn-secondary {
 */
 /* Alerts */
 .alert-box {
+  border-radius: 5px;
+  cursor: pointer;
   border-color: #aaaaaa;
   background-color: #dddddd;
   color: rgba(19, 19, 19, 0.91); }
