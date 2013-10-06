@@ -740,6 +740,7 @@ a.btn-secondary {
   color: red; }
 
 .help-block {
+  display: block;
   color: #777777; }
 
 @media (min-width: 42.5em) {
@@ -1154,7 +1155,7 @@ a.btn-secondary {
 .example-form-grid .row {
   margin-left: -1.60256%;
   margin-right: -1.60256%; }
-.example-form-grid p {
+.example-form-grid label {
   width: 100%;
   float: left;
   position: relative;
@@ -1163,48 +1164,48 @@ a.btn-secondary {
   padding-bottom: 0; }
 
 @media (min-width: 30em) {
-  .example-form-grid p {
+  .example-form-grid label {
     width: 50%;
     float: left;
     position: relative;
     padding-left: 15px;
     padding-right: 15px; }
-  .example-form-grid p.street,
-  .example-form-grid p.city {
+  .example-form-grid .street,
+  .example-form-grid .city {
     width: 66.66667%;
     float: left;
     position: relative;
     padding-left: 15px;
     padding-right: 15px; }
-  .example-form-grid p.number,
-  .example-form-grid p.zip-code {
+  .example-form-grid .number,
+  .example-form-grid .zip-code {
     width: 33.33333%;
     float: left;
     position: relative;
     padding-left: 15px;
     padding-right: 15px; }
-  .example-form-grid p.full-width {
+  .example-form-grid .full-width {
     width: 100%;
     float: left;
     position: relative;
     padding-left: 15px;
     padding-right: 15px; }
-  .example-form-grid .oneliner p.postfix {
+  .example-form-grid .oneliner .postfix {
     width: 50%;
     float: left;
     position: relative;
     padding-left: 0px;
     padding-right: 15px; }
-    .example-form-grid .oneliner p.postfix button {
+    .example-form-grid .oneliner .postfix button {
       border-radius: 0 5px 5px 0;
       border-left: 0; }
-  .example-form-grid .oneliner p.prefix {
+  .example-form-grid .oneliner .prefix {
     width: 50%;
     float: left;
     position: relative;
     padding-left: 15px;
     padding-right: 0px; }
-    .example-form-grid .oneliner p.prefix input {
+    .example-form-grid .oneliner .prefix input {
       border-radius: 5px 0 0 5px;
       border-right: 0; } }
 /*
