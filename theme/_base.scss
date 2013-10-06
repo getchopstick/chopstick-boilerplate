@@ -275,6 +275,10 @@ button {
 		@include input-m;
 	}
 
+	textarea {
+		height: auto;
+	}
+
 	input[type="submit"],
 	button {
 		@include btn-m;
@@ -305,6 +309,10 @@ button {
 	select[multiple],
 	textarea {
 		@include input-l;
+	}
+
+	textarea {
+		height: auto;
 	}
 
 	input[type="submit"],
