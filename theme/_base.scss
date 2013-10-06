@@ -200,6 +200,21 @@ textarea {
 	height: auto;
 }
 
+::-webkit-input-placeholder {
+	font-family: $beta-font-family;
+	font-style: italic;
+}
+
+::-moz-placeholder {
+	font-family: $beta-font-family;
+	font-style: italic;
+}
+
+:-ms-input-placeholder {
+	font-family: $beta-font-family;
+	font-style: italic;
+}
+
 label {
 	display: block;
 	width: 100%;
