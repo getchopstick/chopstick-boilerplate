@@ -1,0 +1,5 @@
+name: Chopstick
+
+source:      .
+destination: ./_build
+exclude:     [LICENSE.md, README.md, CONTRIBUTE.md]
