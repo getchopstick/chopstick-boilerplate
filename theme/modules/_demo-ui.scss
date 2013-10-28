@@ -1,8 +1,8 @@
-/*
-	module: UI
-*/
+//
+// module: UI
+//
 
-/* Alerts */
+// Alerts
 
 .alert-box {
 	@include alert;
@@ -20,7 +20,7 @@
 	@include alert-notice;
 }
 
-/* Pagination */
+// Pagination
 
 .pagination {
 	@include pagination;

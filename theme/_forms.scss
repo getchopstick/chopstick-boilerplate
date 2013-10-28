@@ -1,8 +1,8 @@
-/*
-	Forms
-	---
-	Object-oriented classes for form-like elements.
-*/
+//
+// Forms
+// ---
+// Object-oriented classes for form-like elements.
+//
 
 // buttons
 
@@ -36,6 +36,10 @@ a.btn-secondary {
 	display: block;
 	color: $beta-text-color;
 }
+
+//
+// Media Queries
+//
 
 @media (min-width: $bp3) {
 

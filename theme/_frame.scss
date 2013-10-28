@@ -1,6 +1,6 @@
-/*
-	Frame
-*/
+//
+// Frame
+//
 
 .holder {
 	@include padding-tb(1,0);
@@ -19,9 +19,9 @@
 
 }
 
-/*
-	Header
-*/
+//
+// Header
+//
 
 .logo {
 	float: left;
@@ -81,17 +81,17 @@
 	background-color: $alpha-link-color;
 }
 
-/*
-	Doormat
-*/
+//
+// Doormat
+//
 
 .doormat-holder {
 	@include padding-bottom(1);
 }
 
-/*
-	Footer
-*/
+//
+// Footer
+//
 
 .footer-holder {
 	background-color: $alpha-text-color;
@@ -99,9 +99,9 @@
 	@include padding-top(1);
 }
 
-
-/* media queries
------------------------------------------- */
+//
+// Media Queries
+//
 
 @media (min-width: $bp1) {
 

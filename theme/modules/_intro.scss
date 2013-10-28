@@ -1,6 +1,6 @@
-/*
-	module: intro
-*/
+//
+// module: intro
+//
 
 .intro-holder {
 	@include padding-top(2);
@@ -22,8 +22,9 @@
 
 }
 
-/* media queries
--------------------------------------- */
+//
+// Media Queries
+//
 
 @media (min-width: $bp2) {
 
