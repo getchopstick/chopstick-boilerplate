@@ -1,6 +1,6 @@
-/*
-	module: grid
-*/
+//
+// module: grid
+//
 
 @while $grid-columns > 0 {
 	.grid-#{$grid-columns} {
@@ -46,8 +46,9 @@
 
 }
 
-/* media queries
--------------------------------------- */
+//
+// Media Queries
+//
 
 @media (min-width: $bp2) {
 
