@@ -20,8 +20,8 @@
 }
 
 // Horizontal responsive navigation.
-// @include list-nav;
-// @include horizontal-nav;
+// @include list-nav on <ul> or <ol>;
+// @include horizontal-nav on <ul> or <ol>;
 
 @mixin list-nav {
 	list-style: none;
