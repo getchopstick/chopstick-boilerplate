@@ -27,12 +27,12 @@ $bp2: #{480 / $alpha-font-size}em;
 $bp3: #{680 / $alpha-font-size}em;
 $bp4: #{960 / $alpha-font-size}em;
 
-// the last breakpoint is calculated in mixins/_grid.scss
+// the last breakpoint is calculated in shared/_grid.scss
 // $bp5: #{1200 / $alpha-font-size}em;
 
 // Modular scale settings
 
-$ratio				: 1.618;
+$ratio				: 1.414;
 $importantnumber	: 44;
 $leading			: 1;
 $base-size			: $alpha-font-size/16*1em;
