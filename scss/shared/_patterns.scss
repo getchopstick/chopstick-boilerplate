@@ -87,10 +87,6 @@
 	border-radius:($radius*$tl) ($radius*$tr) ($radius*$br) ($radius*$bl);
 }
 
-%rounded {
-	border-radius: $radius;
-}
-
 // Baseline mixins
 
 // Vertical padding based on the base line-height
