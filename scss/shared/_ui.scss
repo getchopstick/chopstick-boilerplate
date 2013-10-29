@@ -231,13 +231,21 @@
 */
 
 %pagination {
+	@extend %clearfix;
 	width: 100%;
 	overflow: hidden;
 
 	ul {
-		@include horizontal-nav;
 		margin: #{$alpha-line-height}em 0;
+		@include horizontal-nav;
 	}
+
+	a,
+	span {
+		display: block;
+		float: left;
+	}
+
 }
 
 @mixin pagination {
