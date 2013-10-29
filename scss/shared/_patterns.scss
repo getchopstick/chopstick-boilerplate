@@ -81,12 +81,6 @@
 	zoom: 1;
 }
 
-// Unified rounded borders.
-
-@mixin rounded($tl,$tr,$br,$bl){
-	border-radius:($radius*$tl) ($radius*$tr) ($radius*$br) ($radius*$bl);
-}
-
 // Baseline mixins
 
 // Vertical padding based on the base line-height
