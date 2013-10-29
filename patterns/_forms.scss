@@ -1,10 +1,4 @@
-//
-// Forms
-// ---
-// Object-oriented classes for form-like elements.
-//
-
-// buttons
+// Buttons
 
 .btn,
 a.btn {
@@ -15,6 +9,7 @@ a.btn {
 
 .btn-secondary,
 input.btn-secondary,
+input[type="submit"].btn-secondary,
 a.btn-secondary {
 	@extend %btn;
 	@include btn-s;
@@ -47,6 +42,7 @@ a.btn-secondary {
 	a.btn,
 	.btn-secondary,
 	input.btn-secondary,
+	input[type="submit"].btn-secondary,
 	a.btn-secondary {
 		@include btn-m;
 		@include btn-inlineblock;
@@ -60,6 +56,7 @@ a.btn-secondary {
 	a.btn,
 	.btn-secondary,
 	input.btn-secondary,
+	input[type="submit"].btn-secondary,
 	a.btn-secondary {
 		@include btn-l;
 	}

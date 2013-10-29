@@ -91,16 +91,12 @@
 			background-image: linear-gradient(darken($c2, 100-$contrast), darken($c1, 100-$contrast));
 		}
 
-		@if lightness($c1) <= 50 {
-			color: rgba(mix(#fff, $c1, $contrast), $contrast/100%);
-		} @else {
-			color: rgba(mix(#000, $c1, $contrast), $contrast/100%);
-		}
-
 		box-shadow: none;
+		@include text-color($c1);
 	}
 
 	&:visited {
+		@include text-color($c1);
 	}
 }
 

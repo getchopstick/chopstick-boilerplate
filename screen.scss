@@ -13,25 +13,30 @@
 // Shared: do not delete any of this.
 
 	@import "shared/functions";
+	@import "shared/mixins";
 	@import "shared/grid";
 	@import "shared/typography";
-	@import "shared/patterns";
 	@import "shared/ui";
+
+// Patterns: feel free to include only what you need.
+
+	@import "patterns/reset";
+	@import "patterns/forms";
+	@import "patterns/alerts";
+	@import "patterns/pagination";
+	@import "patterns/helpers";
 
 // Theme: feel free to delete any or all.
 
-	@import "theme/reset";
 	@import "theme/base";
 	@import "theme/frame";
-	@import "theme/forms";
 
-// Demo Modules: for demo purpose only. Replace this with your own modules.
+	// Theme Demo Modules: for demo purpose only. Replace this with your own modules.
 
-	@import "theme/modules/main";
-	@import "theme/modules/intro";
-	@import "theme/modules/demo-grid";
-	@import "theme/modules/demo-forms";
-	@import "theme/modules/demo-ui";
+		@import "theme/modules/main";
+		@import "theme/modules/intro";
+		@import "theme/modules/demo-grid";
+		@import "theme/modules/demo-forms";
 
 // Print
 

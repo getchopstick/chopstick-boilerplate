@@ -323,41 +323,6 @@ button {
 }
 
 //
-// Responsive media embedding, like an iframe
-//
-
-.media-embed {
-	width: 100%;
-	height: 0;
-	padding-bottom: 62.5%;
-	position: relative;
-	overflow: hidden;
-	@include margin-bottom(1.5);
-
-	iframe {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
-}
-
-//
-// Upgrade message for old browsers (.lt-ie7)
-//
-
-.chromeframe {
-	font-family: $beta-font-family;
-	font-weight: $beta-font-weight;
-	text-align: center;
-	color: $delta-ui-color;
-	background-color: $alpha-text-color;
-	margin: 0;
-	padding: 1em;
-}
-
-//
 // Media Queries
 //
 
