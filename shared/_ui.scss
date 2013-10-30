@@ -78,6 +78,7 @@
 		@if $depth > 0 {
 			background-image: linear-gradient(darken($c1, 100-$contrast), darken($c2, 100-$contrast));
 		}
+		@include text-color(darken($c1, 100-$contrast));
 
 	}
 
@@ -92,7 +93,7 @@
 		}
 
 		box-shadow: none;
-		@include text-color($c1);
+		@include text-color(darken($c1, 100-$contrast));
 	}
 
 	&:visited {
