@@ -21,6 +21,7 @@
 // Patterns: feel free to include only what you need.
 
 	@import "patterns/reset";
+	@import "patterns/grid";
 	@import "patterns/forms";
 	@import "patterns/alerts";
 	@import "patterns/pagination";
@@ -33,10 +34,9 @@
 
 	// Theme Demo Modules: for demo purpose only. Replace this with your own modules.
 
-		@import "theme/modules/main";
-		@import "theme/modules/intro";
-		@import "theme/modules/demo-grid";
-		@import "theme/modules/demo-forms";
+		@import "theme/modules/home";
+		@import "theme/modules/elements";
+		@import "theme/modules/grid";
 
 // Print
 

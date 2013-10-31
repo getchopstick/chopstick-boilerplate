@@ -1,6 +1,10 @@
 //
-// module: forms
+// module: elements
 //
+
+.main-content {
+	@include box-(12,1,1);
+}
 
 .example-form-grid {
 	.row {
@@ -54,6 +58,14 @@
 				@include prefix;
 			}
 		}
+	}
+
+}
+
+@media (min-width: $bp4) {
+
+	.main-content {
+		@include box-(8,1,1);
 	}
 
 }
