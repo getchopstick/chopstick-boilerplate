@@ -6,25 +6,27 @@
 	@include box-(12,1,1);
 }
 
-.example-form-grid {
-	.row {
-		margin-left: -1.60256%;
-		margin-right: -1.60256%;
+	.v-styleguide .section-title {
+		color: $beta-text-color;
+		font-weight: $beta-font-weight;
+		border-bottom: 3px solid $beta-text-color;
+		margin-bottom: 14/$alpha-font-size*1em;
+		@include baseline-dimensions(1,1,1,0);
 	}
 
-		label {
-			@include box-(12,.5,.5);
-			padding-bottom: 0;
-		}
-}
+	.v-styleguide .scss {
+		display: inline-block;
+		color: $beta-text-color;
+		background: #F0F0F0;
+		border: 1px solid $beta-ui-color;
+		border-radius: $radius;
+		padding: 3px;
+	}
 
-.v-styleguide .section-title {
-	color: $beta-text-color;
-	font-weight: $beta-font-weight;
-	border-bottom: 3px solid $beta-text-color;
-	margin-bottom: 14/$alpha-font-size*1em;
-	@include baseline-dimensions(1,1,1,0);
-}
+	.example-form-grid label {
+		padding-bottom: 0;
+		@include box-(12,.5,.5);
+	}
 
 //
 // Media Queries
