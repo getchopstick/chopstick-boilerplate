@@ -1,5 +1,2 @@
 title: Chopstick
-
-source:      .
-destination: ./_build
-exclude:     [LICENSE.md, README.md, CONTRIBUTE.md]
+exclude: ['_site', 'scss','*scss','Gem*','Guard*','*rb','.sass-cache','.git*','config.rb','*.md']
