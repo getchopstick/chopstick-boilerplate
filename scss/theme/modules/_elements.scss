@@ -1,6 +1,10 @@
-/*
-	module: forms
-*/
+//
+// module: elements
+//
+
+.main-content {
+	@include box-(12,1,1);
+}
 
 .example-form-grid {
 	.row {
@@ -8,48 +12,60 @@
 		margin-right: -1.60256%;
 	}
 
-		p {
+		label {
 			@include box-(12,.5,.5);
 			padding-bottom: 0;
 		}
 }
 
+//
+// Media Queries
+//
+
 @media (min-width : $bp2) {
 
 	.example-form-grid {
-		p {
+		label {
 			@include box-(6,.5,.5);
 		}
 
-		p.street,
-		p.city {
+		.street,
+		.city {
 			@include box-(8,.5,.5);
 		}
 
-		p.number,
-		p.zip-code {
+		.number,
+		.zip-code {
 			@include box-(4,.5,.5);
 		}
 
-		p.full-width {
+		.full-width {
 			@include box-(12,.5,.5);
 		}
 
-		.oneliner p.postfix {
+		.oneliner .postfix {
 			@include box-(6,0,.5);
 
 			button {
-				@include postfix();
+				@include postfix;
 			}
 		}
 
-		.oneliner p.prefix {
+		.oneliner .prefix {
 			@include box-(6,.5,0);
 
 			input {
-				@include prefix();
+				@include prefix;
 			}
 		}
+	}
+
+}
+
+@media (min-width: $bp4) {
+
+	.main-content {
+		@include box-(8,1,1);
 	}
 
 }

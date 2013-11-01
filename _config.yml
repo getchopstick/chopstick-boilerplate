@@ -1,4 +1,4 @@
-name: Chopstick
+title: Chopstick
 
 source:      .
 destination: ./_build

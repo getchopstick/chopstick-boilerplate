@@ -20,8 +20,8 @@
 }
 
 // Horizontal responsive navigation.
-// @include list-nav;
-// @include horizontal-nav;
+// @include list-nav on <ul> or <ol>;
+// @include horizontal-nav on <ul> or <ol>;
 
 @mixin list-nav {
 	list-style: none;
@@ -40,10 +40,11 @@
 // Calculate text-color based on background-color
 
 @mixin text-color($c1) {
-	@if lightness($c1) <= 50 {
-		color: rgba(mix(#fff, $c1, $contrast), $contrast/100%);
+	// Calculations based on https://vimeo.com/60224584
+	@if (.2126*red($c1) + .7152*green($c1) + .0722*blue($c1))/255 <= .5 {
+		color: #FFF;
 	} @else {
-		color: rgba(mix(#000, $c1, $contrast), $contrast/100%);
+		color: #000;
 	}
 }
 
@@ -78,16 +79,6 @@
 	background-color: $rgba;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
 	zoom: 1;
-}
-
-// Unified rounded borders.
-
-@mixin rounded($tl,$tr,$br,$bl){
-	border-radius:($radius*$tl) ($radius*$tr) ($radius*$br) ($radius*$bl);
-}
-
-%rounded {
-	border-radius: $radius;
 }
 
 // Baseline mixins

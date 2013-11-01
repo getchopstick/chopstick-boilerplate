@@ -1,5 +1,5 @@
 //
-//	Chopstick settings
+// Chopstick settings
 //
 
 // Typography
@@ -16,23 +16,24 @@ $beta-font-weight	: 700;
 
 // Grid
 
-$grid-gutter	: 60;
-$grid-column	: 40;
+$grid-gutter	: 20;
+$grid-column	: 60;
 $grid-columns	: 12;
 
-// Breakpoints calculated in em's
+// Breakpoints calculated in em's, always based on 16px base-value
 
-$bp1: #{320 / $alpha-font-size}em;
-$bp2: #{480 / $alpha-font-size}em;
-$bp3: #{680 / $alpha-font-size}em;
-$bp4: #{960 / $alpha-font-size}em;
+$bp1: 320/16*1em;
+$bp2: 480/16*1em;
+$bp3: 680/16*1em;
+$bp4: 960/16*1em;
+$bp5: 1140/16*1em;
 
-// the last breakpoint is calculated in mixins/_grid.scss
+// the last breakpoint is calculated in shared/_grid.scss
 // $bp5: #{1200 / $alpha-font-size}em;
 
 // Modular scale settings
 
-$ratio				: 1.618;
+$ratio				: 1.414;
 $importantnumber	: 44;
 $leading			: 1;
 $base-size			: $alpha-font-size/16*1em;
@@ -51,7 +52,7 @@ $highlight		: 0%; // Range: 0-100%
 $alpha-text-color 	: #444;
 $beta-text-color 	: #777;
 
-$alpha-ui-color 	: #F00; // Primary elements
+$alpha-ui-color 	: #0A69E7; // Primary elements
 $beta-ui-color		: #CCC; // Secondary elements
 $gamma-ui-color 	: #DDD; // Used for borders
 $delta-ui-color 	: #FFF; // Used for backgrounds
