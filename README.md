@@ -1,11 +1,19 @@
 Chopstick
 =========
 
-Chopstick is a mobile-first responsive Design Framework, initiated by [Wijs](http://wijs.be) in Ghent, Belgium.
+Chopstick is a mobile-first responsive Design Framework.
 
 ## Install
 
-You can use GUI tool like [CodeKit](http://incident57.com/codekit/). If you prefer the command line, you can install Sass. Then simply use `sass --watch scss:css` and start designing.
+First, `cd` into the project root (where this file is).
+
+If this is the first time, run the following commands:
+
+    gem update --system && gem install bundler
+    bundle install
+    bundle exec guard
+
+Next time, just `cd` into the project root and `bundle exec guard`.
 
 ## Use
 
@@ -16,17 +24,6 @@ We try to keep the code as modular as possible. Simplified put, you can look at 
 We have included a default theme that uses settings from the settings file + components from the shared library. You can remove the default theme and just use some components from the shared library, as you see fit. We don’t like too much default generated code and neither should you.
 
 For more information and examples please refer to the [documentation on our website](http://getchopstick.com/docs).
-
-## Authors
-
-Simon Coudeville: 
-[@simoncoudeville](http://twitter.com/simoncoudeville)
-
-Xavier Bertels: 
-[@xavez](http://twitter.com/xavez)
-
-Ad Eggermont: 
-[@AdEggermont](http://twitter.com/AdEggermont)
 
 ## Credits
 
