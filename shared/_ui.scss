@@ -78,6 +78,7 @@
 		@if $depth > 0 {
 			background-image: linear-gradient(darken($c1, 100-$contrast), darken($c2, 100-$contrast));
 		}
+		@include text-color(darken($c1, 100-$contrast));
 
 	}
 
@@ -91,16 +92,12 @@
 			background-image: linear-gradient(darken($c2, 100-$contrast), darken($c1, 100-$contrast));
 		}
 
-		@if lightness($c1) <= 50 {
-			color: rgba(mix(#fff, $c1, $contrast), $contrast/100%);
-		} @else {
-			color: rgba(mix(#000, $c1, $contrast), $contrast/100%);
-		}
-
 		box-shadow: none;
+		@include text-color(darken($c1, 100-$contrast));
 	}
 
 	&:visited {
+		@include text-color($c1);
 	}
 }
 
@@ -185,6 +182,8 @@
 
 @mixin alert {
 	@extend %alert;
+	border-radius: $radius;
+	cursor: pointer;
 	border-color: darken($gamma-ui-color,20%);
 	background-color: $gamma-ui-color;
 	@include text-color($gamma-ui-color);
@@ -233,13 +232,21 @@
 */
 
 %pagination {
+	@extend %clearfix;
 	width: 100%;
 	overflow: hidden;
 
 	ul {
-		@include horizontal-nav;
 		margin: #{$alpha-line-height}em 0;
+		@include horizontal-nav;
 	}
+
+	a,
+	span {
+		display: block;
+		float: left;
+	}
+
 }
 
 @mixin pagination {

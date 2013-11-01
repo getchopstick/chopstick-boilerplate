@@ -1,8 +1,8 @@
-/*
-	Base
-	---
-	Default markup for the most common HTML elements, based on the settings file.
-*/
+//
+// Base
+// ---
+// Default markup for the most common HTML elements, based on the settings file.
+//
 
 *, *:before, *:after {
 	@include border-box;
@@ -42,9 +42,9 @@ hr {
 	margin: 0 0 $alpha-line-height * 1em;
 }
 
-/*
-	Typography
-*/
+//
+// Typography
+//
 
 h1,
 h2,
@@ -126,9 +126,9 @@ img {
 	max-width: 100%;
 }
 
-/*
- 	Links
-*/
+//
+// Links
+//
 
 a {
 	text-decoration: none;
@@ -155,18 +155,18 @@ a {
 	}
 }
 
-/*
-	Fix a > img problem
-*/
+//
+// Fix a > img problem
+//
 
 img {
 	vertical-align: top;
 	border: 0;
 }
 
-/*
-	Forms
-*/
+//
+// Forms
+//
 
 form {
 	padding: 0 0 em(14);
@@ -322,43 +322,9 @@ button {
 
 }
 
-/*
-	Responsive media embedding, like an iframe
-*/
-
-.media_embed {
-	width: 100%;
-	height: 0;
-	padding-bottom: 62.5%;
-	position: relative;
-	overflow: hidden;
-	@include margin-bottom(1.5);
-
-	iframe {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
-}
-
-/*
-	Upgrade message for old browsers (.lt-ie7)
-*/
-
-.chromeframe {
-	font-family: $beta-font-family;
-	font-weight: $beta-font-weight;
-	text-align: center;
-	color: $delta-ui-color;
-	background-color: $alpha-text-color;
-	margin: 0;
-	padding: 1em;
-}
-
-/* Media Queries
------------------------------------------- */
+//
+// Media Queries
+//
 
 @media (min-width: $bp5) {
 

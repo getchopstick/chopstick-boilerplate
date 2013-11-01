@@ -1,27 +1,24 @@
-/*
-	Frame
-*/
+//
+// Frame
+//
 
 .holder {
-	@include padding-tb(1,0);
 	background-color: $delta-ui-color;
+	@include padding-tb(1,0);
 }
 
-.row {
-	@extend %clearfix;
-	margin: 0 auto;
-	max-width: 36em;
-	@include em-padding-lr(.5,.5);
+//
+// Header
+//
 
-	.row {
-		padding: 0;
+.header {
+	@include box-(12,1,1);
+
+	.inner {
+		@extend %clearfix;
+		border-bottom: 1px solid lighten($alpha-text-color,60);
 	}
-
 }
-
-/*
-	Header
-*/
 
 .logo {
 	float: left;
@@ -31,22 +28,16 @@
 	@include text-dimensions($alpha-font-size,1,1);
 }
 
-.header .inner {
-	border-bottom: 1px solid lighten($alpha-text-color,60);
-	@extend %clearfix;
-	// @include padding-bottom(1);
-}
-
 .main-nav {
 
 	float: left;
 	width: 100%;
 
 	ul {
+		@extend %clearfix;
 		font-family: $alpha-font-family;
 		@include list-nav;
 		@include text-dimensions($alpha-font-size,1,1);
-		@extend %clearfix;
 	}
 
 	a {
@@ -81,17 +72,21 @@
 	background-color: $alpha-link-color;
 }
 
-/*
-	Doormat
-*/
+//
+// Doormat
+//
 
 .doormat-holder {
 	@include padding-bottom(1);
 }
 
-/*
-	Footer
-*/
+	.doormat-col-4 {
+		@include box-(12,1,1);
+	}
+
+//
+// Footer
+//
 
 .footer-holder {
 	background-color: $alpha-text-color;
@@ -99,32 +94,13 @@
 	@include padding-top(1);
 }
 
-
-/* media queries
------------------------------------------- */
-
-@media (min-width: $bp1) {
-
-}
-
-@media (min-width: $bp2) {
-
-	.row {
-		padding: 0;
-
-		.row {
-			@include px-margin-lr(-1,-1);
-		}
-
-	}
-
-	.header,
-	.footer,
-	.doormat-col-4 {
+	.footer {
 		@include box-(12,1,1);
 	}
 
-}
+//
+// Media Queries
+//
 
 @media (min-width: $bp3) {
 
@@ -163,21 +139,12 @@
 		display: none;
 	}
 
-	.intro-holder {
-		@include padding-top(2);
-	}
-
 }
 
 @media (min-width: $bp4) {
 
 	.holder {
 		@include padding-tb(1,1);
-	}
-
-	.row {
-		max-width: #{$grid-width}px;
-		// max-width: $bp5; // this is not the same since we increase the font-size at certain breakpoints so the em-value increases too.
 	}
 
 	.header-holder {
@@ -189,23 +156,24 @@
 
 	}
 
-	.header {
-		@include box-(12,1,1);
-	}
+		.header {
+			@include box-(12,1,1);
+		}
 
 	.doormat-holder {
 		@include padding-bottom(2);
 	}
 
+		.doormat-col-4 {
+			@include box-(4,1,1);
+		}
+
 	.footer-holder {
 		padding-bottom: 0;
 	}
 
-	.footer {
-		@include box-(12,1,1);
-	}
+		.footer {
+			@include box-(12,1,1);
+		}
 
-	.doormat-col-4 {
-		@include box-(4,1,1);
-	}
 }
