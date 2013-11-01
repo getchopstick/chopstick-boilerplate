@@ -18,6 +18,14 @@
 		}
 }
 
+.v-styleguide .section-title {
+	color: $beta-text-color;
+	font-weight: $beta-font-weight;
+	border-bottom: 3px solid $beta-text-color;
+	margin-bottom: 14/$alpha-font-size*1em;
+	@include baseline-dimensions(1,1,1,0);
+}
+
 //
 // Media Queries
 //
@@ -58,14 +66,6 @@
 				@include prefix;
 			}
 		}
-	}
-
-}
-
-@media (min-width: $bp4) {
-
-	.main-content {
-		@include box-(8,1,1);
 	}
 
 }

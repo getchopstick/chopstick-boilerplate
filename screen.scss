@@ -22,6 +22,7 @@
 
 	@import "patterns/reset";
 	@import "patterns/grid";
+	@import "patterns/buttons";
 	@import "patterns/forms";
 	@import "patterns/alerts";
 	@import "patterns/pagination";
@@ -35,7 +36,7 @@
 	// Theme Demo Modules: for demo purpose only. Replace this with your own modules.
 
 		@import "theme/modules/home";
-		@import "theme/modules/elements";
+		@import "theme/modules/styleguide";
 		@import "theme/modules/grid";
 
 // Print
