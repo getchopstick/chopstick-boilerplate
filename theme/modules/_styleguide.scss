@@ -33,6 +33,7 @@
 @media (min-width : $bp2) {
 
 	.example-form-grid {
+
 		label {
 			@include box-(6,.5,.5);
 		}
@@ -66,6 +67,7 @@
 				@include prefix;
 			}
 		}
+
 	}
 
 }
