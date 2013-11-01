@@ -1,0 +1,356 @@
+<h3>Example 1: Standard contact form </h3>
+
+<form action="#" method="post">
+	<fieldset>
+		<label>Name<abbr title="Required field">*</abbr>
+			<input type="text" placeholder="Full Name" />
+		</label>
+
+		<label>Email address<abbr title="Required field">*</abbr>
+			<input type="email" placeholder="email@address.com" />
+		</label>
+
+		<label>Message<abbr title="Required field">*</abbr>
+			<textarea rows="5" cols="30"></textarea>
+		</label>
+
+		<button type="submit">Send</button>
+	</fieldset>
+</form>
+
+<h3>Example 2: Standard contact form (horizontal)</h3>
+
+<form action="#" method="post">
+	<fieldset>
+		<label>Name<abbr title="Required field">*</abbr>
+			<input type="text" placeholder="Full Name" />
+		</label>
+
+		<label>Email address<abbr title="Required field">*</abbr>
+			<input type="email" placeholder="email@address.com" />
+		</label>
+
+		<label>Message<abbr title="Required field">*</abbr>
+			<textarea rows="5" cols="30"></textarea>
+		</label>
+
+		<button type="submit">Send</button>
+	</fieldset>
+</form>
+
+<h3>Example 3: Standard contact form (horizontal) with errors</h3>
+
+<form action="" method="post" class="horizontal">
+	<fieldset>
+		<div class="alert-box error">
+			<p><strong>Cras sed ante</strong>. Phasellus in massa. Curabitur dolor eros, <a href="#">gravida et</a>, hendrerit ac, cursus non, massa. Aliquam lorem.</p>
+			<a href="#" class="close">&times;</a>
+		</div>
+
+		<label class="error-label">Name<abbr title="Required field">*</abbr>
+			<input type="text" value="" />
+			<span class="error-text">This field is required.</span>
+		</label>
+
+
+		<label class="error-label">Email address<abbr title="Required field">*</abbr>
+			<input type="email" value="" />
+			<span class="error-text">This field is required.</span>
+		</label>
+
+		<label class="error-label">Message<abbr title="Required field">*</abbr>
+			<textarea rows="5" cols="30">Lorem ipsum</textarea>
+			<span class="error-text">This field is required.</span>
+		</label>
+
+		<button type="submit">Send</button>
+	</fieldset>
+</form>
+
+<h3>Example 4: Register form</h3>
+
+<form action="" method="post" class="horizontal">
+	<p>
+		<label>Nickname<abbr title="Required field">*</abbr></label>
+		<input type="text" value="" />
+		<small class="helpTxt">Profiel URL: http://www.example.com/<strong>your-nickname</strong></small>
+	</p>
+	<p>
+		<label>First-name<abbr title="Required field">*</abbr></label>
+		<input type="text" value="" />
+	</p>
+	<p>
+		<label>Last-name<abbr title="Required field">*</abbr></label>
+		<input type="text" value="" />
+	</p>
+	<div class="formSection">
+		<label>Date of birth<abbr title="Required field">*</abbr></label>
+		<div class="formSectionContent">
+			<div class="oneLiner">
+				<p class="smallInput firstChild">
+					<select class="select" size="1">
+						<option value="0">1</option>
+						<option value="1">2</option>
+						<option value="2">3</option>
+					</select>
+				</p>
+				<p>
+					<select class="select" size="1">
+						<option value="0">January</option>
+						<option value="1">February</option>
+						<option value="2">March</option>
+					</select>
+				</p>
+				<p class="smallInput">
+					<select class="select" size="1">
+						<option value="0">2010</option>
+						<option value="1">2009</option>
+						<option value="2">2008</option>
+					</select>
+				</p>
+				<small class="helpTxt">Hendrerit ac, cursus non, massa aliquam lorem.</small>
+			</div>
+		</div>
+	</div>
+	<div class="inputList">
+		<p class="label">Gender<abbr title="Required field">*</abbr></p>
+		<ul>
+			<li><label><input type="radio" class="inputRadio" value="lorem ipsum dolor" />Male</label></li>
+			<li><label><input type="radio" class="inputRadio" value="ipsum" />Female</label></li>
+		</ul>
+	</div>
+	<p>
+		<button type="submit">Register</button>
+	</p>
+</form>
+
+<h3>Example 5: Form build with grids</h3>
+
+<form class="example-form-grid" action="#" method="post">
+	<fieldset>
+		<div class="row">
+			<p>
+				<label>Name<abbr title="Required field">*</abbr>
+					<input type="text" placeholder="Full Name" />
+				</label>
+			</p>
+			<p>
+				<label>Email address<abbr title="Required field">*</abbr>
+					<input type="email" placeholder="email@address.com" />
+				</label>
+			</p>
+		</div>
+
+		<div class="row">
+			<p class="street">
+				<label>Street<abbr title="Required field">*</abbr>
+					<input type="text" placeholder="Street" />
+				</label>
+			</p>
+			<p class="number">
+				<label>Number<abbr title="Required field">*</abbr>
+					<input type="text" placeholder="Number" />
+				</label>
+			</p>
+		</div>
+
+		<div class="row">
+			<p class="zip-code">
+				<label>Zip code<abbr title="Required field">*</abbr>
+					<input type="text" placeholder="Zip code" />
+				</label>
+			</p>
+			<p class="city">
+				<label>City<abbr title="Required field">*</abbr>
+					<input type="text" placeholder="City" />
+				</label>
+			</p>
+		</div>
+
+		<div class="row">
+			<p class="full-width">
+				<label>Message<abbr title="Required field">*</abbr>
+					<textarea rows="5" cols="30"></textarea>
+				</label>
+			</p>
+		</div>
+
+		<div class="row">
+			<p class="full-width">
+				<button type="submit">Send</button>
+			</p>
+		</div>
+	</fieldset>
+</form>
+
+<hr />
+
+<h3>Example 6: Form with pre- en postfixes</h3>
+<form class="example-form-grid" action="#" method="post">
+	<fieldset>
+		<div class="row oneliner">
+			<p class="prefix">
+				<input type="email" placeholder="email@address.com" />
+			</p>
+			<p class="postfix">
+				<button type="submit">Send</button>
+			</p>
+		</div>
+	</fieldset>
+</form>
+
+<hr />
+
+<h3>Example 7: overview of all input elements</h3>
+<form class="example-form-grid" action="#" method="post">
+	<fieldset>
+		<div>
+			<label>Text input</label>
+			<input type="text">
+		</div>
+		<div>
+			<label>Text input with placeholder</label>
+			<input type="text" placeholder="I'm placeholder text">
+		</div>
+		<div>
+			<label>Readonly input</label>
+			<input type="text" value="Read only text input" readonly>
+		</div>
+		<div>
+			<label>Disabled input</label>
+			<input type="text" value="Disabled text input" disabled>
+		</div>
+		<div>
+			<label>Required input <span class="required">*</span></label>
+			<input type="text" required>
+		</div>
+		<div>
+			<label>Email input</label>
+			<input type="email">
+		</div>
+		<div>
+			<label>Search input</label>
+			<input type="search">
+		</div>
+		<div>
+			<label>Speech recognition input</label>
+			<input type="text" id="speech" name="speech" x-webkit-speech="">
+		</div>
+		<div>
+			<label>Tel input</label>
+			<input type="tel">
+		</div>
+		<div>
+			<label>Phone (International)</label>
+			<input name="field_country_code" maxlength="3" /> -
+			<input name="field_city_code" maxlength="4" />
+			-
+			<input name="field_phone_int" maxlength="8" />
+		</div>
+		<div>
+			<label>URL input</label>
+			<input type="url" placeholder="http://">
+		</div>
+		<div>
+			<label>Password input</label>
+			<input type="password" value="password">
+		</div>
+		<div>
+			<label>Select field</label>
+			<select>
+				<option>Option 01</option>
+				<option>Option 02</option>
+			</select>
+		</div>
+		<div>
+			<label>Multiple select field</label>
+			<select multiple size="5">
+				<option>Option 1</option>
+				<option>Option 2</option>
+				<option>Option 3</option>
+				<option>Option 4</option>
+				<option>Option 5</option>
+				<option>Option 6</option>
+				<option>Option 7</option>
+				<option>Option 8</option>
+				<option>Option 9</option>
+				<option>Option 10</option>
+			</select>
+		</div>
+		<div>
+			<label>Radio input</label>
+			<input type="radio" name="rad">
+		</div>
+		<div>
+			<label>Checkbox input</label>
+			<input type="checkbox">
+		</div>
+		<div>
+			<label>
+				<input type="radio" name="rad">
+				Radio input
+			</label>
+		</div>
+		<div>
+			<label>
+				<input type="checkbox">
+				Checkbox input
+			</label>
+		</div>
+		<div>
+			<label>File input</label>
+			<input type="file">
+		</div>
+		<div>
+			<label>Textarea</label>
+			<textarea cols="30" rows="5" >Textarea text</textarea>
+		</div>
+		<div>
+			<label>Color input</label>
+			<input type="color" value="#000000">
+		</div>
+		<div>
+			<label>Number input</label>
+			<input type="number" value="5" min="0" max="10">
+		</div>
+		<div>
+			<label>Range input</label>
+			<input type="range" id="range" value="0" min="0" max="100">
+			<output for="range">
+				0
+			</output>
+			<script>
+				if (document.querySelector) {
+					document.querySelector('#range').onchange = function(e) {
+						e.target.nextElementSibling.innerText = e.target.value;
+					}
+				}
+			</script>
+		</div>
+		<div>
+			<label>Date input</label>
+			<input type="date">
+		</div>
+		<div>
+			<label>Month input</label>
+			<input type="month">
+		</div>
+		<div>
+			<label>Week input</label>
+			<input type="week">
+		</div>
+		<div>
+			<label>Time input</label>
+			<input type="time">
+		</div>
+		<div>
+			<label>Datetime input</label>
+			<input type="datetime">
+		</div>
+		<div>
+			<label>Datetime-local input</label>
+			<input type="datetime-local">
+		</div>
+	</fieldset>
+</form>
+

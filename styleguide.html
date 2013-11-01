@@ -1,7 +1,27 @@
 ---
-layout: styleguide
+layout: default
 title: Patterns
 section: styleguide
 ---
+<div class="holder main-holder">
+	<div class="row main-row">
+		<div class="main-content">
 
-{% include library/pattern.html %}
+			<h2 class="section-title">Base Elements</h2>
+			{% include patterns/base.html %}
+			<hr />
+			<h2 class="section-title">Buttons</h2>
+			{% include patterns/buttons.html %}
+			<hr />
+			<h2 class="section-title">Forms</h2>
+			{% include patterns/forms.html %}
+			<hr />
+			<h2 class="section-title">Alerts</h2>
+			{% include patterns/alerts.html %}
+			<hr />
+			<h2 class="section-title">Pagination</h2>
+			{% include patterns/pagination.html %}
+
+		</div>
+	</div>
+</div>
