@@ -1,0 +1,4 @@
+[subtree "scss"]
+    url = git@github.com:getchopstick/chopstick.git
+    path = scss
+    branch = master
