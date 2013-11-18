@@ -1,0 +1,99 @@
+/*
+	Grid
+*/
+
+// calculations
+
+$grid-margin: $grid-gutter / 2;
+$grid-width: ($grid-gutter + $grid-column) * $grid-columns;
+
+// Responsive design formula for fully percentual columns & gutters
+
+$fluid-grid-column: $grid-column / $grid-width * 100 ;
+$fluid-grid-gutter: ($grid-gutter / $grid-width) * 100 ;
+$fluid-grid-margin: ($grid-margin / $grid-width) * 100 ;
+
+// mixins
+
+// horizontal padding based on the context grid gutter in em
+// use: @include em-padding-lr(#left, #right);
+
+@mixin em-padding-lr($left: 1, $right: $left) {
+	padding-left: $grid-margin/$alpha-font-size * $left * 1em;
+	padding-right: $grid-margin/$alpha-font-size * $right * 1em;
+}
+
+// horizontal padding based on the context grid gutter
+// use: @include px-padding-lr(#left, #right);
+
+@mixin px-padding-lr($left: 1, $right: $left) {
+	padding-left: $grid-margin * $left * 1px;
+	padding-right: $grid-margin * $right * 1px;
+}
+
+// horizontal margin based on the context grid gutter in em
+// use: @include em-margin-lr(#left, #right);
+
+@mixin em-margin-lr($left: 1, $right: $left) {
+	margin-left: $grid-margin/$alpha-font-size * $left * 1em;
+	margin-right: $grid-margin/$alpha-font-size * $right * 1em;
+}
+
+// horizontal margin based on the context grid gutter
+// use: @include px-margin-lr(#left, #right);
+
+@mixin px-margin-lr($left: 1, $right: $left) {
+	margin-left: $grid-margin * $left * 1px;
+	margin-right: $grid-margin * $right * 1px;
+}
+
+// horizontal percentual margin
+// use: @include perc-margin-lr(#left, #right);
+
+@mixin perc-margin-lr($left: 1, $right: $left) {
+	margin-left: $fluid-grid-margin * $left * 1%;
+	margin-right: $fluid-grid-margin * $right * 1%;
+}
+
+// fully percentual collumns and gutters
+// use: @include perc-col-(#amount, #gutterleft, #gutterright)
+
+@mixin perc-col-($amount, $pl, $pr) {
+	width: ($fluid-grid-column * $amount) + ($fluid-grid-margin * (($amount * 2) - 2)) + 0%;
+	@include perc-margin-lr($pl, $pr);
+	// @include float-left;
+	float: left;
+}
+
+// border-box box sizing
+// use: @include box-(#amount, #gutterleft, #gutterright);
+
+@mixin box-($amount, $left, $right) {
+	width: ($fluid-grid-column * $amount) + ($fluid-grid-gutter * $amount) + 0%;
+	float: left;
+	position: relative;
+	@include px-padding-lr($left, $right);
+	// @include em-padding-lr($left, $right); // experimental
+}
+
+// push #amount of columns left
+// use @include push-(#amount);
+
+@mixin push-left($amount) {
+	left: ($fluid-grid-column * $amount) + ($fluid-grid-gutter * $amount) + 0%;
+}
+
+@mixin pull-right($amount) {
+	right: ($fluid-grid-column * $amount) + ($fluid-grid-gutter * $amount) + 0%;
+}
+
+@mixin pull-left($amount) {
+	left: (($fluid-grid-column * $amount) + ($fluid-grid-gutter * $amount) + 0%) * -1;
+}
+
+// last-col mixin to re-align the right edge
+// use: @extend .last-col;
+
+@mixin last-col {
+	float: right;
+}

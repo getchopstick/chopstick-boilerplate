@@ -1,0 +1,48 @@
+// Buttons
+
+.btn,
+a.btn {
+	@extend %btn;
+	@include btn-s;
+	@include btn-color;
+}
+
+.btn-secondary,
+input.btn-secondary,
+input[type="submit"].btn-secondary,
+a.btn-secondary {
+	@extend %btn;
+	@include btn-s;
+	@include btn-color($beta-ui-color);
+}
+
+//
+// Media Queries
+//
+
+@media (min-width: $bp3) {
+
+	.btn,
+	a.btn,
+	.btn-secondary,
+	input.btn-secondary,
+	input[type="submit"].btn-secondary,
+	a.btn-secondary {
+		@include btn-m;
+		@include btn-inlineblock;
+	}
+
+}
+
+@media (min-width: $bp5) {
+
+	.btn,
+	a.btn,
+	.btn-secondary,
+	input.btn-secondary,
+	input[type="submit"].btn-secondary,
+	a.btn-secondary {
+		@include btn-l;
+	}
+
+}

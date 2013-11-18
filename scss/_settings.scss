@@ -1,0 +1,66 @@
+//
+// Chopstick settings
+//
+
+// Typography
+
+$alpha-font-family	: sans-serif;
+$alpha-font-size	: 16; // pixel-value
+$alpha-font-weight	: 400;
+$alpha-line-height	: 1.5; // em-value
+$alpha-baseline-grid: 7; // pixel-value
+$alpha-leading		: 1; // multiplier
+
+$beta-font-family	: sans-serif;
+$beta-font-weight	: 700;
+
+// Grid
+
+$grid-gutter	: 20;
+$grid-column	: 60;
+$grid-columns	: 12;
+
+// Breakpoints calculated in em's, always based on 16px base-value
+
+$bp1: 320/16*1em;
+$bp2: 480/16*1em;
+$bp3: 680/16*1em;
+$bp4: 960/16*1em;
+$bp5: 1140/16*1em;
+
+// the last breakpoint is calculated in shared/_grid.scss
+// $bp5: #{1200 / $alpha-font-size}em;
+
+// Modular scale settings
+
+$ratio				: 1.414;
+$importantnumber	: 44;
+$leading			: 1;
+$base-size			: $alpha-font-size/16*1em;
+
+// UI
+
+$radius			: 5px;
+$border			: 1px;
+$depth			: 0%; // Range: 0-100%
+$contrast		: 91%; // Range: 0-100%
+$shadow			: 21%; // Range: 0-100%
+$highlight		: 0%; // Range: 0-100%
+
+// Colors
+
+$alpha-text-color 	: #444;
+$beta-text-color 	: #777;
+
+$alpha-ui-color 	: #0A69E7; // Primary elements
+$beta-ui-color		: #CCC; // Secondary elements
+$gamma-ui-color 	: #DDD; // Used for borders
+$delta-ui-color 	: #FFF; // Used for backgrounds
+
+// Links
+
+$alpha-link-color			: $alpha-ui-color;
+$alpha-link-colorhover		: darken($alpha-link-color, 10);
+$alpha-link-colorfocus		: darken($alpha-link-color, 10);
+$alpha-link-coloractive		: lighten($alpha-link-color, 10);
+$alpha-link-colorvisited	: darken($alpha-link-color, 5);
