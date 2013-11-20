@@ -5,33 +5,31 @@ Chopstick is a mobile-first responsive Design Framework.
 
 ## Install
 
-First, `cd` into the project root (where this file is).
-
-If this is the first time, run the following commands:
+First, `cd` into the project root (where this file is). Run the following commands:
 
     gem update --system && gem install bundler
     bundle install
-    bundle exec guard
-
-Next time, just `cd` into the project root and `bundle exec guard`.
 
 ## Use
 
-We try to keep the code as modular as possible. Simplified put, you can look at it this way:
+To use Chopstick Boilerplate, just `cd` into the project root and run `bundle exec guard`.
 
-    Shared Library + Settings = Theme
+We try to keep the code as modular as possible. So you can comment out what you don’t use. Simply put:
 
-We have included a default theme that uses settings from the settings file + components from the shared library. You can remove the default theme and just use some components from the shared library, as you see fit. We don’t like too much default generated code and neither should you.
+    Settings + Mixins + Patterns = Chopstick Boilerplate
+
+The boilerplate can be used as a **styleguide**, to build **static websites** or to speed up making **HTML prototypes**.
+
+It uses a settings file + mixins + patterns. You can remove the default theme folder and just use some components from the patterns, as you see fit. We don’t like too much default generated code and neither should you.
 
 For more information and examples please refer to the [documentation on our website](http://getchopstick.com/docs).
 
 ## Git subtree instructions
 
-Chopstick (the scss folder) is included as a git subtree.
+Chopstick (the `scss` folder) is included as a git subtree.
 
-To push to the subtree: `git subtree push-all` or `git subtree push --prefix=scss`
-
-To pull to the subtree: `git subtree pull-all` or `git subtree pull --prefix=scss`
+To push to the subtree: `git subtree push --prefix=scss`
+To pull to the subtree: `git subtree pull --prefix=scss`
 
 The location and branch of the subtree are defined in the `.gittrees` file.
 
