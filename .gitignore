@@ -2,3 +2,4 @@
 .DS_Store
 _site/
 css/
+bower_components/
