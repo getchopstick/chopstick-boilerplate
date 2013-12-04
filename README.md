@@ -10,6 +10,13 @@ First, `cd` into the project root (where this file is). Run the following comman
     gem update --system && gem install bundler
     bundle install
 
+Next, load the necessary dependencies with bower by running `bower install`. 
+
+All dependencies and their respective version are defined in the `bower.json` file.
+
+[Bower](http://bower.io/) depends on [Node](http://nodejs.org/) and [npm](https://npmjs.org/). It's installed globally using npm:
+`npm install -g bower`.
+
 ## Use
 
 To use Chopstick Boilerplate, just `cd` into the project root and run `bundle exec guard`.
