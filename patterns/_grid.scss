@@ -10,8 +10,14 @@
 
 // Calculate grid classes
 
+%fullwidth {
+  @include box-($grid-columns,1,1);
+}
+
 @for $i from 1 through $grid-columns {
-	.grid-#{$i} {@include box-($grid-columns,1,1);}
+	.grid-#{$i} {
+ 		@extend %fullwidth;
+	}
 }
 
 //
