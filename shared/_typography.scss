@@ -19,7 +19,7 @@ $basefontpercent: $alpha-font-size/16 * 100;
 		padding-top: #{($baseline-unit / $fs) * $pt}em;
 	}
 	@if $pb > 0 {
-		padding-bottom: #{($baseline-unit / $fs) * $pt}em;
+		padding-bottom: #{($baseline-unit / $fs) * $pb}em;
 	}
 }
 
