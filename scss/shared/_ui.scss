@@ -196,34 +196,34 @@
 
 @mixin alert-error {
 	@extend %alert;
-	border-color: #8b0800;
-	background-color: #d00c00;
-	@include text-color(#d00c00);
+	border-color: darken($error-color,10);
+	background-color: $error-color;
+	@include text-color($error-color);
 
 	a {
-		@include text-color(#d00c00);
+		@include text-color($error-color);
 	}
 }
 
 @mixin alert-success {
 	@extend %alert;
-	border-color: #4c721f;
-	background-color: #72aa2e;
-	@include text-color(#72aa2e);
+	border-color: darken($success-color,10);
+	background-color: $success-color;
+	@include text-color($success-color);
 
 	a {
-		@include text-color(#72aa2e);
+		@include text-color($success-color);
 	}
 }
 
 @mixin alert-notice {
 	@extend %alert;
-	border-color: #e6901e;
-	background-color: #ffe38a;
-	@include text-color(#ffe38a);
+	border-color: darken($notice-color,20);
+	background-color: $notice-color;
+	@include text-color($notice-color);
 
 	a {
-		@include text-color(#ffe38a);
+		@include text-color($notice-color);
 	}
 }
 
