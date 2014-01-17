@@ -1,15 +1,38 @@
-// Messages
 
-.error-label input,
-.error-label textarea {
-	border-color: $alpha-ui-color;
+// errors
+
+.error-area {
+	color: $error-color;
+
+	input[type="input"],
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="url"],
+	input[type="number"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[name="field_country_code"],
+	input[name="field_city_code"],
+	input[name="field_phone_int"],
+	select[multiple],
+	textarea {
+		border-color: $error-color;
+
+		&:focus {
+			border-color: $error-color;
+		}
+
+	}
+
 }
 
-.error-text {
-	color: #d00c00;
-}
-
-.help-block {
+.error-help {
 	display: block;
-	color: $beta-text-color;
 }

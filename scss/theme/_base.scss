@@ -211,6 +211,7 @@ textarea {
 	font-family: $alpha-font-family;
 	margin: 0;
 	width: 100%;
+	display: block;
 	@include border-box;
 	@include input-s;
 
