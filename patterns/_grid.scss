@@ -10,8 +10,14 @@
 
 // Calculate grid classes
 
-@for $i from 1 to $grid-columns {
-	.grid-#{$i} {@include box-($grid-columns,1,1);}
+%fullwidth {
+  @include box-($grid-columns,1,1);
+}
+
+@for $i from 1 through $grid-columns {
+	.grid-#{$i} {
+ 		@extend %fullwidth;
+	}
 }
 
 //
@@ -22,7 +28,7 @@
 
 	// Calculate grid classes
 
-	@for $i from 1 to $grid-columns {
+	@for $i from 1 through $grid-columns {
 		.bp2-grid-#{$i} {@include box-($i,1,1);}
 	}
 
@@ -35,7 +41,7 @@
 
 	// Calculate grid classes
 
-	@for $i from 1 to $grid-columns {
+	@for $i from 1 through $grid-columns {
 		.grid-#{$i} {@include box-($i,1,1);}
 		.push-left-#{$i} {@include push-left($i);}
 		.pull-left-#{$i} {@include pull-left($i);}
