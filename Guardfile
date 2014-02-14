@@ -10,14 +10,15 @@ if File.exists?("./config.rb")
 end
 
 # Jekyll
-guard 'jekyll', :config => ['_config.yml'] do
-  watch(%r{(.*)\.(css|html|php|js)$})
+guard 'jekyll-plus', :config => ['_config.yml'] do
+  watch /.*/
+  ignore /_site/
 end
 
 # LiveReload https://github.com/guard/guard-livereload
 require 'find'
 if Find.find(Dir.pwd).detect{|dir|dir=~/.+\.(css|html|js)$/}
   guard 'livereload', :grace_period => 0.5 do
-    watch(%r{^_site/.+\.(css|html|js)$})
+    watch(%r{.+\.(css|html|js)$})
   end
 end
