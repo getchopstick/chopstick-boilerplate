@@ -35,6 +35,9 @@ GEM
     guard-jekyll (1.4.0)
       guard (>= 1.1.0)
       jekyll
+    guard-jekyll-plus (1.4.9)
+      guard (>= 1.1.0)
+      jekyll (>= 1.0.0)
     guard-livereload (2.0.0)
       em-websocket (~> 0.5)
       guard (~> 2.0)
@@ -93,8 +96,9 @@ DEPENDENCIES
   guard
   guard-compass
   guard-jekyll
+  guard-jekyll-plus
   guard-livereload
   jekyll
-  modular-scale
-  sass
+  modular-scale (~> 1.0.6)
+  sass (~> 3.2)
   yajl-ruby
