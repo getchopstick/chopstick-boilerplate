@@ -37,8 +37,29 @@
 
 	@for $i from 1 through $grid-columns {
 		.grid-#{$i} {@include box-($i,1,1);}
+		.bp3-grid-#{$i} {@include box-($i,1,1);}
 		.push-left-#{$i} {@include push-left($i);}
 		.pull-left-#{$i} {@include pull-left($i);}
+	}
+
+}
+
+@media (min-width: $bp4) {
+
+	// Calculate grid classes
+
+	@for $i from 1 through $grid-columns {
+		.bp4-grid-#{$i} {@include box-($i,1,1);}
+	}
+
+}
+
+@media (min-width: $bp4) {
+
+	// Calculate grid classes
+
+	@for $i from 1 through $grid-columns {
+		.bp5-grid-#{$i} {@include box-($i,1,1);}
 	}
 
 }
