@@ -1,0 +1,160 @@
+//
+// Forms
+// ---
+// Default markup for the form elements, based on the settings file.
+//
+
+form {
+	padding: 0 0 em(14);
+}
+
+legend,
+label {
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	@include baseline-dimensions(0,3,1);
+}
+
+// Input elements
+
+input[type="input"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[name="field_country_code"],
+input[name="field_city_code"],
+input[name="field_phone_int"],
+select[multiple],
+textarea {
+	-webkit-appearance: none;
+	-webkit-font-smoothing: antialiased;
+			font-smoothing: antialiased;
+	background-color: $delta-ui-color;
+	border-radius: $radius;
+	border: $border solid $gamma-ui-color;
+	color: lighten($alpha-text-color, 30);
+	font-family: $alpha-font-family;
+	margin: 0;
+	width: 100%;
+	display: block;
+	@include border-box;
+	@include input-s;
+
+	&:focus {
+		color: $alpha-text-color;
+		outline-color: $gamma-ui-color;
+		border-color: darken($gamma-ui-color, 20);
+	}
+}
+
+textarea {
+	height: auto;
+}
+
+// Placeholders
+
+::-webkit-input-placeholder {
+	font-family: $beta-font-family;
+	font-style: italic;
+}
+
+::-moz-placeholder {
+	font-family: $beta-font-family;
+	font-style: italic;
+}
+
+:-ms-input-placeholder {
+	font-family: $beta-font-family;
+	font-style: italic;
+}
+
+// Buttons
+
+input[type="submit"],
+button {
+	@extend %btn;
+	@include btn-s;
+	@include btn-color;
+}
+
+@media (min-width: $bp3) {
+
+	input[type="input"],
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="url"],
+	input[type="number"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[name="field_country_code"],
+	input[name="field_city_code"],
+	input[name="field_phone_int"],
+	select[multiple],
+	textarea {
+		@include input-m;
+	}
+
+	textarea {
+		height: auto;
+	}
+
+	input[type="submit"],
+	button {
+		@include btn-m;
+		@include btn-inlineblock;
+	}
+
+}
+
+@media (min-width: $bp5) {
+
+	input[type="input"],
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="url"],
+	input[type="number"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[name="field_country_code"],
+	input[name="field_city_code"],
+	input[name="field_phone_int"],
+	select[multiple],
+	textarea {
+		@include input-l;
+	}
+
+	textarea {
+		height: auto;
+	}
+
+	input[type="submit"],
+	button {
+		@include btn-l;
+	}
+
+}
