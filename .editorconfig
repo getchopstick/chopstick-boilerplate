@@ -18,3 +18,18 @@ insert_final_newline = true
 
 [*.md]
 trim_trailing_whitespace = false
+
+[{Guardfile,.Guardfile}]
+# Indentation style
+indent_style = space
+indent_size = 2
+
+[*.json]
+# Indentation style
+indent_style = space
+indent_size = 2
+
+[*.yml]
+# Indentation style
+indent_style = space
+indent_size = 2
