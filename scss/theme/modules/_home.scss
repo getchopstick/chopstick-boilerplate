@@ -4,6 +4,10 @@
 
 .intro-holder {
 	@include padding-top(2);
+
+	@include mq($bp3) {
+		@include padding-top(2);
+	}
 }
 
 .intro {
@@ -25,24 +29,8 @@
 
 .main-col-6 {
 	@include box-(12,1,1);
-}
 
-//
-// Media Queries
-//
-
-@media (min-width: $bp3) {
-
-	.intro-holder {
-		@include padding-top(2);
-	}
-
-}
-
-@media (min-width: $bp4) {
-
-	.main-col-6 {
+	@include mq($bp4) {
 		@include box-(6,1,1);
 	}
-
 }

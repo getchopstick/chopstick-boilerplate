@@ -4,62 +4,65 @@
 	@extend %clearfix;
 	margin: 0 auto;
 	max-width: $grid-width/$alpha-font-size*1em;
-	.row {padding: 0;}
+
+	.row {
+		padding: 0;
+	}
 }
 
+.row .row {
+	padding: 0;
+
+	@include mq($bp2) {
+		@include px-margin-lr(-1,-1);
+	}
+}
+
+.last-col {
+	@include mq($bp2) {
+		@include last-col;
+	}
+}
 
 // Calculate grid classes
-
 @for $i from 1 through $grid-columns {
-	.grid-#{$i} {@include box-($grid-columns,1,1);}
-}
+	.grid-#{$i} {
+		@include box-($grid-columns,1,1);
 
-//
-// Media Queries
-//
-
-@media (min-width: $bp2) {
-
-	// Calculate grid classes
-
-	@for $i from 1 through $grid-columns {
-		.bp2-grid-#{$i} {@include box-($i,1,1);}
+		@include mq($bp3) {
+			@include box-($i,1,1);
+		}
 	}
 
-	.row .row {@include px-margin-lr(-1,-1);}
-	.last-col {@include last-col;}
-
-}
-
-@media (min-width: $bp3) {
-
-	// Calculate grid classes
-
-	@for $i from 1 through $grid-columns {
-		.grid-#{$i} {@include box-($i,1,1);}
-		.bp3-grid-#{$i} {@include box-($i,1,1);}
-		.push-left-#{$i} {@include push-left($i);}
-		.pull-left-#{$i} {@include pull-left($i);}
+	@include mq($bp2) {
+		.bp2-grid-#{$i} {
+			@include box-($i,1,1);
+		}
 	}
 
-}
+	@include mq($bp3) {
+		.bp3-grid-#{$i} {
+			@include box-($i,1,1);
+		}
 
-@media (min-width: $bp4) {
+		.push-left-#{$i} {
+			@include push-left($i);
+		}
 
-	// Calculate grid classes
-
-	@for $i from 1 through $grid-columns {
-		.bp4-grid-#{$i} {@include box-($i,1,1);}
+		.pull-left-#{$i} {
+			@include pull-left($i);
+		}
 	}
 
-}
-
-@media (min-width: $bp5) {
-
-	// Calculate grid classes
-
-	@for $i from 1 through $grid-columns {
-		.bp5-grid-#{$i} {@include box-($i,1,1);}
+	@include mq($bp4) {
+		.bp4-grid-#{$i} {
+			@include box-($i,1,1);
+		}
 	}
 
+	@include mq($bp5) {
+		.bp5-grid-#{$i} {
+			@include box-($i,1,1);
+		}
+	}
 }

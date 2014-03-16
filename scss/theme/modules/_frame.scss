@@ -5,6 +5,10 @@
 .holder {
 	background-color: $delta-ui-color;
 	@include padding-tb(1,0);
+
+	@include mq($bp4) {
+		@include padding-tb(1,1);
+	}
 }
 
 //
@@ -14,11 +18,31 @@
 .header {
 	@include box-(12,1,1);
 
-	.inner {
+	@include mq($bp4) {
+		@include box-(12,1,1);
+	}
+}
+
+	.header .inner {
 		@extend %clearfix;
 		border-bottom: 1px solid lighten($alpha-text-color,60);
 	}
+
+.header-holder {
+	@include mq($bp3) {
+		@include padding-top(0);
+	}
 }
+
+	.header-holder .inner {
+		@include mq($bp3) {
+			@include padding-tb(1,1);
+		}
+
+		@include mq($bp4) {
+			@include padding-tb(2,1);
+		}
+	}
 
 .logo {
 	float: left;
@@ -26,10 +50,14 @@
 	font-style: italic;
 	font-weight: $alpha-font-weight;
 	@include text-dimensions($alpha-font-size,1,1);
+
+	@include mq($bp3) {
+		float: left;
+		@include text-dimensions(14,1,0);
+	}
 }
 
 .main-nav {
-
 	float: left;
 	width: 100%;
 
@@ -50,76 +78,15 @@
 	.selected a {
 		color: darken($alpha-ui-color,0);
 	}
-
 }
 
 .mobile-nav .main-nav {
 	display: none;
 }
 
-.main-nav-trigger {
- 	display: block;
- 	float: right;
- 	width: 2.1em;
- 	height: 2.1em;
- 	text-indent: -9999px;
- 	@include text-dimensions($alpha-font-size,1,1);
-  	@include svg-bg("../img/icon-menu", ".png", $alpha-text-color, 50%, no-repeat);
-}
-
-.svg .trigger-active,
-.trigger-active {
-	background-color: $alpha-link-color;
-}
-
-//
-// Doormat
-//
-
-.doormat-holder {
-	@include padding-bottom(1);
-}
-
-	.doormat-col-4 {
-		@include box-(12,1,1);
-	}
-
-//
-// Footer
-//
-
-.footer-holder {
-	background-color: $alpha-text-color;
-	color: lighten($alpha-text-color,70);
-	@include padding-top(1);
-}
-
-	.footer {
-		@include box-(12,1,1);
-	}
-
-//
-// Media Queries
-//
-
-@media (min-width: $bp3) {
-
-	.logo {
-		float: left;
-		@include text-dimensions(14,1,0);
-	}
-
-	.header-holder {
-		@include padding-top(0);
-
-		.inner {
-			@include padding-tb(1,1);
-		}
-
-	}
-
-	.mobile-nav .main-nav,
-	.main-nav {
+.main-nav,
+.mobile-nav .main-nav {
+	@include mq($bp3) {
 		display: block !important;
 		width: auto;
 		float: right;
@@ -132,48 +99,68 @@
 		li {
 			@include px-margin-lr(1,0);
 		}
-
 	}
+}
 
-	.main-nav-trigger {
+.main-nav-trigger {
+	display: block;
+	float: right;
+	width: 2.1em;
+	height: 2.1em;
+	text-indent: -9999px;
+	@include text-dimensions($alpha-font-size,1,1);
+	@include svg-bg("../img/icon-menu", ".png", $alpha-text-color, 50%, no-repeat);
+
+	@include mq($bp3) {
 		display: none;
 	}
-
 }
 
-@media (min-width: $bp4) {
+.svg .trigger-active,
+.trigger-active {
+	background-color: $alpha-link-color;
+}
 
-	.holder {
-		@include padding-tb(1,1);
-	}
 
-	.header-holder {
-		@include padding-top(0);
 
-		.inner {
-			@include padding-tb(2,1);
-		}
+//
+// Doormat
+//
 
-	}
+.doormat-holder {
+	@include padding-bottom(1);
 
-		.header {
-			@include box-(12,1,1);
-		}
-
-	.doormat-holder {
+	@include mq($bp4) {
 		@include padding-bottom(2);
 	}
+}
 
-		.doormat-col-4 {
+	.doormat-col-4 {
+		@include box-(12,1,1);
+
+		@include mq($bp4) {
 			@include box-(4,1,1);
 		}
-
-	.footer-holder {
-		padding-bottom: 0;
 	}
 
-		.footer {
+//
+// Footer
+//
+
+.footer-holder {
+	background-color: $alpha-text-color;
+	color: lighten($alpha-text-color,70);
+	@include padding-top(1);
+
+	@include mq($bp4) {
+		padding-bottom: 0;
+	}
+}
+
+	.footer {
+		@include box-(12,1,1);
+
+		@include mq($bp4) {
 			@include box-(12,1,1);
 		}
-
-}
+	}

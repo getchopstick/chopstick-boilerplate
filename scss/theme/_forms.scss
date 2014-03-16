@@ -56,6 +56,14 @@ textarea {
 		outline-color: $gamma-ui-color;
 		border-color: darken($gamma-ui-color, 20);
 	}
+
+	@include mq($bp3) {
+		@include input-m;
+	}
+
+	@include mq($bp5) {
+		@include input-l;
+	}
 }
 
 textarea {
@@ -86,75 +94,13 @@ button {
 	@extend %btn;
 	@include btn-s;
 	@include btn-color;
-}
 
-@media (min-width: $bp3) {
-
-	input[type="input"],
-	input[type="text"],
-	input[type="email"],
-	input[type="password"],
-	input[type="search"],
-	input[type="tel"],
-	input[type="url"],
-	input[type="number"],
-	input[type="date"],
-	input[type="month"],
-	input[type="week"],
-	input[type="time"],
-	input[type="datetime"],
-	input[type="datetime-local"],
-	input[name="field_country_code"],
-	input[name="field_city_code"],
-	input[name="field_phone_int"],
-	select[multiple],
-	textarea {
+	@include mq($bp3) {
 		@include input-m;
-	}
-
-	textarea {
-		height: auto;
-	}
-
-	input[type="submit"],
-	button {
-		@include btn-m;
 		@include btn-inlineblock;
 	}
 
-}
-
-@media (min-width: $bp5) {
-
-	input[type="input"],
-	input[type="text"],
-	input[type="email"],
-	input[type="password"],
-	input[type="search"],
-	input[type="tel"],
-	input[type="url"],
-	input[type="number"],
-	input[type="date"],
-	input[type="month"],
-	input[type="week"],
-	input[type="time"],
-	input[type="datetime"],
-	input[type="datetime-local"],
-	input[name="field_country_code"],
-	input[name="field_city_code"],
-	input[name="field_phone_int"],
-	select[multiple],
-	textarea {
+	@include mq($bp5) {
 		@include input-l;
 	}
-
-	textarea {
-		height: auto;
-	}
-
-	input[type="submit"],
-	button {
-		@include btn-l;
-	}
-
 }
