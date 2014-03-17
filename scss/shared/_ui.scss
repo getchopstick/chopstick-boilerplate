@@ -188,6 +188,8 @@
 	background-color: $gamma-ui-color;
 	@include text-color($gamma-ui-color);
 
+	strong {@include text-color($gamma-ui-color);}
+
 	a {
 		@include text-color($gamma-ui-color);
 		text-decoration: underline;
@@ -200,6 +202,8 @@
 	background-color: $error-color;
 	@include text-color($error-color);
 
+	strong {@include text-color($error-color);}
+
 	a {
 		@include text-color($error-color);
 	}
@@ -211,6 +215,8 @@
 	background-color: $success-color;
 	@include text-color($success-color);
 
+	strong {@include text-color($success-color);}
+
 	a {
 		@include text-color($success-color);
 	}
@@ -221,6 +227,8 @@
 	border-color: darken($notice-color,20);
 	background-color: $notice-color;
 	@include text-color($notice-color);
+
+	strong {@include text-color($notice-color);}
 
 	a {
 		@include text-color($notice-color);
