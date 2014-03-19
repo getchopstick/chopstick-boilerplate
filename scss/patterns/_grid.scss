@@ -28,10 +28,6 @@
 @for $i from 1 through $grid-columns {
 	.grid-#{$i} {
 		@include box-($grid-columns,1,1);
-
-		@include mq($bp3) {
-			@include box-($i,1,1);
-		}
 	}
 
 	@include mq($bp2) {
@@ -41,6 +37,10 @@
 	}
 
 	@include mq($bp3) {
+		.grid-#{$i} {
+			@include box-($i,1,1);
+		}
+
 		.bp3-grid-#{$i} {
 			@include box-($i,1,1);
 		}
