@@ -4,7 +4,7 @@ notification :off
 
 # Sass/Compass https://github.com/guard/guard-compass
 if File.exists?("./config.rb")
-  guard :compass do
+  guard :compass, compile_on_start: true do
     watch(%r{(.*)\.s[ac]ss$})
   end
 end
