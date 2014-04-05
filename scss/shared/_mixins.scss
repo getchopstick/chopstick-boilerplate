@@ -148,3 +148,13 @@
 		@content;
 	}
 }
+
+// Vertically center any object within its container. Works in IE9 and up.
+// @include vertial-center;
+@mixin vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
