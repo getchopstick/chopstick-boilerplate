@@ -1,24 +1,3 @@
-/*
-	Patterns
-*/
-
-// Clearfix.
-// @extend %clearfix;
-
-%clearfix {
-	*zoom : 1;
-
-	&:before,
-	&:after {
-		display: table;
-		content : "";
-	}
-
-	&:after {
-		clear : both;
-	}
-}
-
 // Horizontal responsive navigation.
 // @include list-nav on <ul> or <ol>;
 // @include horizontal-nav on <ul> or <ol>;
