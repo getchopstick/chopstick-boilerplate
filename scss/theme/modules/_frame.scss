@@ -150,17 +150,13 @@
 .footer-holder {
 	background-color: $alpha-text-color;
 	color: lighten($alpha-text-color,70);
-	@include padding-top(1);
+	@include padding-tb(1,1);
 
-	@include mq($bp4) {
-		padding-bottom: 0;
+	p {
+		padding: 0;
 	}
 }
 
 	.footer {
 		@include box-(12,1,1);
-
-		@include mq($bp4) {
-			@include box-(12,1,1);
-		}
 	}
