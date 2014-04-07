@@ -58,7 +58,7 @@
 
 @mixin btn-color($c1: $alpha-ui-color, $c2: lighten($c1, $depth)) {
 
-	border: $border solid $c1;
+	border: $border-width $border-style $c1;
 
 	background-color: $c1;
 	@if $depth > 0 {
@@ -73,7 +73,7 @@
 
 	&:hover,
 	&:focus {
-		border: $border solid lighten($c1, 100-$contrast);
+		border: $border-width $border-style lighten($c1, 100-$contrast);
 		background-color: lighten($c1, 100-$contrast);
 		@if $depth > 0 {
 			background-image: linear-gradient(lighten($c1, 100-$contrast), lighten($c2, 100-$contrast));
@@ -111,7 +111,6 @@
 		$line-height: ((ceil($alpha-font-size/$alpha-baseline-grid)*$alpha-baseline-grid)+($alpha-baseline-grid*$l))/$alpha-font-size;
 		$padding-top: $alpha-baseline-grid/$alpha-font-size*$pt*1em;
 		$padding-bottom: $alpha-baseline-grid/$alpha-font-size*$pb*1em;
-		$border-width: em(su($border));
 		height: $line-height + $padding-top + $padding-bottom;
 	}
 
@@ -154,11 +153,15 @@
 // Alerts
 
 %alert {
-	border-width: $border;
-	border-style: solid;
-	margin-bottom: #{$alpha-line-height}em;
 	position: relative;
 	padding: em($alpha-baseline-grid*2) em($alpha-baseline-grid*3);
+	margin-bottom: em($alpha-baseline-grid*2);
+	cursor: pointer;
+	@include block-skin;
+
+	a {
+		text-decoration: underline;
+	}
 
 	a:hover,
 	a:active,
@@ -166,7 +169,7 @@
 		text-decoration: none;
 	}
 
-	.close {
+	a.close {
 		position: absolute;
 		top: #{$alpha-line-height/2}em;
 		right: #{$alpha-line-height/2}em;
@@ -182,25 +185,17 @@
 
 @mixin alert {
 	@extend %alert;
-	border-radius: $radius;
-	cursor: pointer;
-	border-color: darken($gamma-ui-color,20%);
-	background-color: $gamma-ui-color;
-	@include text-color($gamma-ui-color);
 
 	strong {@include text-color($gamma-ui-color);}
 
 	a {
 		@include text-color($gamma-ui-color);
-		text-decoration: underline;
 	}
 }
 
 @mixin alert-error {
 	@extend %alert;
-	border-color: darken($error-color,10);
-	background-color: $error-color;
-	@include text-color($error-color);
+	@include block-skin($error-color);
 
 	strong {@include text-color($error-color);}
 
@@ -211,9 +206,7 @@
 
 @mixin alert-success {
 	@extend %alert;
-	border-color: darken($success-color,10);
-	background-color: $success-color;
-	@include text-color($success-color);
+	@include block-skin($success-color);
 
 	strong {@include text-color($success-color);}
 
@@ -224,9 +217,7 @@
 
 @mixin alert-notice {
 	@extend %alert;
-	border-color: darken($notice-color,20);
-	background-color: $notice-color;
-	@include text-color($notice-color);
+	@include block-skin($notice-color);
 
 	strong {@include text-color($notice-color);}
 

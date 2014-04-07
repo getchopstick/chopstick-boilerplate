@@ -42,7 +42,7 @@ textarea {
 			font-smoothing: antialiased;
 	background-color: $delta-ui-color;
 	border-radius: $radius;
-	border: $border solid $gamma-ui-color;
+	border: $border-width $border-style $gamma-ui-color;
 	color: lighten($alpha-text-color, 30);
 	font-family: $alpha-font-family;
 	margin: 0;
