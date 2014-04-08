@@ -122,7 +122,7 @@
 // Media query mixin.
 // @include mq(#point, #query1, #query2);
 @mixin mq($point, $query1: min, $query2: width) {
-	@media screen and (#{$query1}-#{$query2}: $point) {
+	@media (#{$query1}-#{$query2}: $point) {
 		@content;
 	}
 }
