@@ -15,30 +15,30 @@
 // </article>
 
 .media {
-    @extend %clearfix;
-    display: block;
+	@extend %clearfix;
+	display: block;
 
-    @include margin-tb(0, 1);
+	@include margin-tb(0, 1);
 }
 
-    .media__img,
-    .media__img--rev {
-        @include margin-bottom(1);
+	.media__img,
+	.media__img--rev {
+		@include margin-bottom(1);
 
-        @include mq($bp3) {
-            @include margin-bottom(0);
-        }
-    }
+		@include mq($bp3) {
+			@include margin-bottom(0);
+		}
+	}
 
-    .media__img {
-        float: left;
-    }
+	.media__img {
+		float: left;
+	}
 
-    .media__img--rev {
-        float: right;
-    }
+	.media__img--rev {
+		float: right;
+	}
 
-    .media__body {
-        overflow: hidden;
-        @include em-padding-lr(1, 1);
-    }
+	.media__body {
+		overflow: hidden;
+		@include em-padding-lr(1, 1);
+	}
