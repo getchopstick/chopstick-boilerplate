@@ -3,12 +3,13 @@
 source "http://rubygems.org"
 
 group :development do
-
 	# CSS Preprocessing
-	gem 'sass', "~> 3.2"
+	gem 'sass', '~> 3.2'
 	gem 'compass'
-	gem 'modular-scale', "~> 1.0.6"
-	gem 'jekyll', "~> 1.5.1"
+	gem 'autoprefixer-rails', '~> 1.1.20140410'
+
+	# Jekyll
+	gem 'jekyll', '~> 1.5.1'
 
 	# Guard Specific
 	gem 'guard'
