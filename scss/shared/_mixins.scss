@@ -102,8 +102,6 @@
 // @include border-box;
 
 @mixin border-box {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -130,9 +128,7 @@
 // Vertically center any object within its container. Works in IE9 and up.
 // @include vertical-center;
 @mixin vertical-center {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }

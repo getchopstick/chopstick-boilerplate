@@ -1,5 +1,20 @@
 # Require any additional compass plugins here.
-# require 'modular-scale'
+require 'autoprefixer-rails'
+
+# Autoprefixer settings
+on_stylesheet_saved do |file|
+	css = File.read(file)
+	File.open(file, 'w') do |io|
+		io << AutoprefixerRails.process(css, browsers: [
+			'last 2 version',
+			'> 1%',
+			'ie 8',
+			'ie 9',
+			'ios 6',
+			'android 4'
+		])
+	end
+end
 
 # Set this to the root of your project when deployed:
 http_path = "/"
