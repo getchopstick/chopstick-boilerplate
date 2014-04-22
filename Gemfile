@@ -5,7 +5,7 @@ source "http://rubygems.org"
 group :development do
 	# CSS Preprocessing
 	gem 'sass', '~> 3.2'
-	gem 'compass'
+	gem 'compass', '~> 0.12.6'
 	gem 'autoprefixer-rails', '~> 1.1.20140410'
 
 	# Jekyll

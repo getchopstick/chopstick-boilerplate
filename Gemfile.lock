@@ -91,7 +91,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails (~> 1.1.20140410)
-  compass
+  compass (~> 0.12.6)
   guard
   guard-compass
   guard-jekyll-plus
