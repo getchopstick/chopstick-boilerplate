@@ -2,6 +2,14 @@
 
 You are free to contribute to Chopstick via GitHub Pull Requests. We have a couple of simple guidelines we try to follow, of which most are taken from the [CSS Tricks Sass Style Guide](http://css-tricks.com/sass-style-guide)
 
+## How to pull request
+
+1. [Fork](https://github.com/getchopstick/chopstick-boilerplate/fork) this repo.
+2. Create a branch `git checkout -b feature--name`
+3. Commit your changes `git commit -am "New feature"`
+4. Push to the branch `git push origin feature--name`
+5. Open a [Pull Request](https://github.com/getchopstick/chopstick-boilerplate/pulls)
+
 ## SCSS order
 
 1. @extends
