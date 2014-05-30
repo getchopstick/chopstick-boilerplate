@@ -38,8 +38,7 @@ input[name="field_phone_int"],
 select[multiple],
 textarea {
 	-webkit-appearance: none;
-	-webkit-font-smoothing: antialiased;
-			font-smoothing: antialiased;
+	font-smoothing: antialiased;
 	background-color: $delta-ui-color;
 	border-radius: $radius;
 	border: $border-width $border-style $gamma-ui-color;
