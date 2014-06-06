@@ -4,12 +4,12 @@ source "http://rubygems.org"
 
 group :development do
 	# CSS Preprocessing
-	gem 'sass', '~> 3.2'
-	gem 'compass', '~> 0.12.6'
-	gem 'autoprefixer-rails', '~> 1.1.20140410'
+	gem 'sass'
+	gem 'compass'
+	gem 'autoprefixer-rails'
 
 	# Jekyll
-	gem 'jekyll', '~> 1.5.1'
+	gem 'jekyll'
 
 	# Guard Specific
 	gem 'guard'
