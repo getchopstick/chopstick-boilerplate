@@ -1,25 +1,32 @@
 Chopstick
 =========
 
-Chopstick is a mobile-first responsive Design Framework.
+Chopstick is a mobile-first responsive Design Framework built with [Sass](http://sass-lang.com).
+
+## Requirements
+
+1. [Ruby](https://www.ruby-lang.org) and [rubygems](https://rubygems.org)
+2. [Node](http://nodejs.org) and [npm](https://npmjs.org)
 
 ## Install
 
-First, `cd` into the project root (where this file is). Run the following commands:
+You only need to do this once in a new project.
+First, `cd` into the project root (where this file is).
+Install [bundler](http://bundler.io) and the necessary Ruby dependencies:
 
     gem update --system && gem install bundler
     bundle install
 
-Next, load the necessary dependencies with bower by running `bower install`. 
-
-All dependencies and their respective version are defined in the `bower.json` file.
-
-[Bower](http://bower.io/) depends on [Node](http://nodejs.org/) and [npm](https://npmjs.org/). It's installed globally using npm:
-`npm install -g bower`.
+Install [bower](http://bower.io) and the necessary JavaScript dependencies:
+	
+	npm install -g bower
+	bower install
 
 ## Use
 
-To use Chopstick Boilerplate, just `cd` into the project root and run `bundle exec guard`.
+To use Chopstick Boilerplate, `cd` into the project root and run:
+
+	bundle exec guard
 
 We try to keep the code as modular as possible. So you can comment out what you don’t use. Simply put:
 
