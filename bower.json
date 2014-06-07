@@ -1,7 +1,7 @@
 {
   "name": "chopstick-boilerplate",
   "dependencies": {
-    "jquery": "1.10.2",
+    "jquery": "~1.11.1",
     "html5shiv": "~3.7.0",
     "respond": "~1.4.1"
   }
