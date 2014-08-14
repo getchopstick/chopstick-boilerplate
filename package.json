@@ -1,0 +1,22 @@
+{
+  "name": "Chopstick-boilerplate",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:getchopstick/chopstick-boilerplate.git"
+  },
+  "description": "Chopstick is a mobile-first responsive Design Framework built with Sass",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "~3.8.5",
+    "browser-sync": "~0.8.2",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-concat": "~2.2.0",
+    "gulp-filesize": "0.0.6",
+    "gulp-plumber": "~0.5.6",
+    "gulp-sass": "~0.7.1",
+    "gulp-util": "~2.2.20",
+    "gulp-watch": "~0.5.4",
+    "gulp-combine-media-queries": "0.0.1"
+  }
+}
