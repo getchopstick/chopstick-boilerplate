@@ -40,9 +40,14 @@ ol,
 ul,
 dl,
 table,
-address,
-pre {
+address {
 	@include baseline-dimensions(0,1,2,1);
+}
+
+pre {
+	font-size: 90%;
+	tab-size: 2;
+	overflow: auto;
 }
 
 ul,
