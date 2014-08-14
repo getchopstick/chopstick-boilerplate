@@ -18,6 +18,7 @@
 	@include padding-tb(0,0);
 	display: block;
 	overflow: auto;
+	font-size: 90%;
 	width: 100%;
 	color: $alpha-text-color;
 	border: $border-width $border-style $gamma-ui-color;
