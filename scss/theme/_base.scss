@@ -5,15 +5,17 @@
 //
 
 *, *:before, *:after {
-	@include border-box;
+  box-sizing: inherit;
 }
 
 html {
-	background-color: $alpha-text-color;
+	box-sizing: border-box;
+	font: $alpha-font-weight $alpha-font-size/16*100%/#{$alpha-line-height} $alpha-font-family ;
 	-webkit-overflow-scrolling: touch;
 	-webkit-text-size-adjust: 100%;
 	    -ms-text-size-adjust: 100%;
-	font: $alpha-font-weight $alpha-font-size/16*100%/#{$alpha-line-height} $alpha-font-family ;
+	background-color: $alpha-text-color;
+
 	@include mq($bp5) {
 		font-size: $alpha-font-size/16*112.5%;
 	}

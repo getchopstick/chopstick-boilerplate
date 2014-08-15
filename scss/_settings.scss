@@ -4,94 +4,125 @@
 
 // Debug
 
-$debug-mode: false;
+$debug-mode					: false; // toggles the debug mode
 
 // Typography
 
-$show-baseline-grid: false; // toggle the visibility of the baseline (true/false)
-$baseline-holder: holder; // set the classname of the element which will show the baseline
-$grid-color: rgba(#000,0.1); // set the baseline grid color and opacity
+$show-baseline-grid			: false; // toggle the visibility of the baseline (true/false)
+$baseline-holder 			: holder; // set the classname of the element which will show the baseline
+$grid-color 				: rgba(#000,0.1); // set the baseline grid color and opacity
 
-$alpha-font-family	: sans-serif;
-$alpha-font-size	: 16; // pixel-value
-$alpha-font-weight	: 400;
-$alpha-line-height	: 1.5; // em-value
-$alpha-baseline-grid: 7; // pixel-value
-$alpha-leading		: 1; // multiplier
+$alpha-font-family			: sans-serif;
+$alpha-font-size			: 16; // pixel-value
+$alpha-font-weight			: 400;
+$alpha-line-height			: 1.5; // em-value
+$alpha-baseline-grid		: 7; // pixel-value
+$alpha-leading				: 1; // multiplier
 
-$beta-font-family	: sans-serif;
-$beta-font-weight	: 700;
+$beta-font-family			: sans-serif;
+$beta-font-weight			: 700;
 
 // Grid
 
-$grid-gutter	: 20;
-$grid-column	: 80;
-$grid-columns	: 12;
+$grid-gutter				: 20;
+$grid-column				: 80;
+$grid-columns				: 12;
 
 // Breakpoints calculated in em's, always based on 16px base-value
 
-$bp1: 320/16*1em;
-$bp2: 480/16*1em;
-$bp3: 680/16*1em;
-$bp4: 960/16*1em;
-$bp5: 1140/16*1em;
+$bp1						: 320/16*1em;
+$bp2 						: 480/16*1em;
+$bp3						: 680/16*1em;
+$bp4						: 960/16*1em;
+$bp5						: 1140/16*1em;
 
 // the last breakpoint is calculated in shared/_grid.scss
 // $bp5: #{1200 / $alpha-font-size}em;
 
 // Modular scale settings
 
-$ratio				: 1.414;
-$importantnumber	: 44;
-$leading			: 1;
-$base-size			: $alpha-font-size/16*1em;
+$ratio						: 1.414;
+$importantnumber			: 44;
+$leading					: 1;
+$base-size					: $alpha-font-size/16*1em;
 
 // manual modular scale font sizes
 // based on http://modularscale.com/scale/?px1=16&px2=18&ra1=1.333&ra2=0
 
-$ms-2 				: 12;
-$ms-1 				: 14;
-$ms1 			 	: 18;
-$ms2 			 	: 21;
-$ms3 			 	: 23;
-$ms4 			 	: 28;
-$ms5 			 	: 31;
-$ms6 			 	: 37;
-$ms7 			 	: 42;
-$ms8 			 	: 50;
-$ms10 			 	: 56;
-$ms11			 	: 67;
-$ms12			 	: 75;
-$ms13			 	: 89;
-$ms14			 	: 100;
+$ms-2						: 12;
+$ms-1						: 14;
+$ms1						: 18;
+$ms2						: 21;
+$ms3						: 23;
+$ms4						: 28;
+$ms5						: 31;
+$ms6						: 37;
+$ms7						: 42;
+$ms8						: 50;
+$ms10 						: 56;
+$ms11						: 67;
+$ms12						: 75;
+$ms13						: 89;
+$ms14						: 100;
 
 // UI
 
-$radius			: 5px;
-$border-width	: 1px;
-$border-style	: solid;
-$depth			: 0%; // Range: 0-100%
-$contrast		: 91%; // Range: 0-100%
-$shadow			: 21%; // Range: 0-100%
-$highlight		: 0%; // Range: 0-100%
+$radius						: 5px;
+$border-width				: 1px;
+$border-style				: solid;
+$depth						: 0%; // Range: 0-100%
+$contrast					: 91%; // Range: 0-100%
+$shadow						: 21%; // Range: 0-100%
+$highlight					: 0%; // Range: 0-100%
 
-// Colors
+//
+// Color variables (defaults by https://github.com/mrmrs/colors)
+//
+// - Cool
+// - Warm
+// - Gray Scale
+// - Semantic
+//
 
-$alpha-text-color	: #444;
-$beta-text-color	: #777;
+// Cool
 
-$alpha-ui-color		: #0A69E7; // Primary elements
-$beta-ui-color		: #CCC; // Secondary elements
-$gamma-ui-color		: #DDD; // Used for borders
-$delta-ui-color		: #FFF; // Used for backgrounds
+$aqua						: #7FDBFF;
+$blue						: #0074D9;
+$navy						: #001F3F;
+$teal						: #39CCCC;
+$green						: #2ECC40;
+$olive						: #3D9970;
+$lime						: #01FF70;
 
-$error-color 		: red;
-$success-color 		: green;
-$notice-color 		: yellow;
+// Warm
 
-$error-color 		: #d00c00;
-$success-color 		: #72aa2e;
-$notice-color 		: #ffe38a;
+$yellow						: #FFDC00;
+$orange						: #FF851B;
+$red						: #FF4136;
+$fuchsia					: #F012BE;
+$purple						: #B10DC9;
+$maroon						: #85144B;
+
+// Gray Scale
+
+$white						: #fff;
+$silver						: #ddd;
+$gray						: #aaa;
+$black						: #111;
+
+// Semantic classes
+
+$alpha-text-color			: $black;
+$beta-text-color			: $gray;
+
+$alpha-ui-color				: $blue; // Primary elements
+$beta-ui-color				: $gray; // Secondary elements
+$gamma-ui-color				: $silver; // Used for borders
+$delta-ui-color				: $white; // Used for backgrounds
+
+$error-color 				: $red;
+$success-color 				: $green;
+$notice-color 				: $yellow;
 
 // Links
 
