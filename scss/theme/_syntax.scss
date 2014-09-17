@@ -16,6 +16,7 @@
 
 .highlighttable {
 	@include padding-tb(0,0);
+	@include margin-tb(.5,.5);
 	display: block;
 	overflow: auto;
 	font-size: 90%;
