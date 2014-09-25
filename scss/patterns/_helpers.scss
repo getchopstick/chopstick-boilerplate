@@ -16,3 +16,8 @@
 		left: 0;
 	}
 }
+
+// Basis class to easily hide elements (for js toggle functionality, ...)
+.is-hidden.is-hidden {
+	display: none;
+}

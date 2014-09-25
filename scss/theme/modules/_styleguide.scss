@@ -15,12 +15,14 @@
 	}
 
 	.v-styleguide .scss {
-		display: inline-block;
-		color: $beta-text-color;
-		background: #F0F0F0;
-		border: 1px solid $beta-ui-color;
+		@include margin-tb(0, 1);
+		@include padding-tb(.5, .5);
+		@include px-padding-lr(1,1);
+		display: block;
+		color: $alpha-text-color;
+		background-color: lighten($gamma-ui-color,10);
+		border: $border-width $border-style $gamma-ui-color;
 		border-radius: $radius;
-		padding: 3px;
 	}
 
 	.example-form-grid {
