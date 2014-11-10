@@ -24,9 +24,12 @@
 }
 
 // A better way to hide text
-// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+// @extend %hide-text;
+
 %hide-text {
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
 }
