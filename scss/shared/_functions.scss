@@ -1,10 +1,11 @@
-/*
-  Functions
-*/
+//
+// Functions
+// 
 
 // Em calculator: convert pixel values to ems
 // eg. for a relational value of 12px write em(12) when the parent is the $alpha-font-size
 // if the parent is another value say 24px write em(12, 24)
+
 @function em($pxval, $base: $alpha-font-size) {
 	@return ($pxval / $base) * 1em;
 }
@@ -25,6 +26,7 @@
 //        font-size: ms(14px,  -1, 1.618); // returns: 8.653px
 //    }
 //
+
 @function ms($increment, $value: $alpha-font-size, $ratio: $ratio) {
 	@if $increment > 0 {
 		@for $i from 1 through $increment {

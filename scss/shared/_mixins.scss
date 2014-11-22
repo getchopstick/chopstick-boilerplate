@@ -1,3 +1,7 @@
+//
+// Mixins
+// 
+
 // Horizontal responsive navigation.
 // @include list-nav on <ul> or <ol>;
 // @include horizontal-nav on <ul> or <ol>;
@@ -31,6 +35,7 @@
 
 // Make a block with various properties
 // @include block-skin;
+
 @mixin block-skin($bgcolor: $gamma-ui-color, $fgcolor: $alpha-text-color, $block-radius: $radius, $block-border-width: $border-width, $block-border-style: $border-style) {
 
 	background-color: $bgcolor;
@@ -50,6 +55,7 @@
 }
 
 // Cross browser background opacity.
+
 @mixin background-opacity($color, $alpha) {
 	$rgba: rgba($color, $alpha);
 	$ie-hex-str: ie-hex-str($rgba);
@@ -119,6 +125,7 @@
 
 // Media query mixin.
 // @include mq(#point, #query1, #query2);
+
 @mixin mq($point, $query1: min, $query2: width) {
 	@media (#{$query1}-#{$query2}: $point) {
 		@content;
@@ -127,6 +134,7 @@
 
 // Vertically center any object within its container. Works in IE9 and up.
 // @include vertical-center;
+
 @mixin vertical-center {
 	position: relative;
 	top: 50%;
