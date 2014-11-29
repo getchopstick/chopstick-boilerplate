@@ -15,7 +15,26 @@
 // ---
 
 var settings = {
-	baseDir : './_site', // Directory served by browsersync (= Jekyll build folder)
+	browserSync :  {
+		server: {
+			baseDir: './_site',
+			reloadDelay: 2000,
+			debounce: 200,
+			notify: true,
+			ghostMode: {
+				clicks: true,
+				location: true,
+				forms: true,
+				scroll: false
+			}
+		}
+	},
+	nodeSass : {
+		errLogToConsole: true
+	},
+	cmq : {
+		log: true
+	},
 	prefix : [ // Autoprefixer settings
 		'last 2 version',
 		'> 1%',
@@ -59,11 +78,14 @@ var plumber = require('gulp-plumber');
 var watch = require('gulp-watch');
 var filesize = require('gulp-filesize');
 var browserSync = require('browser-sync');
+var gulpFilter = require('gulp-filter');
+var sourcemaps = require('gulp-sourcemaps');
 
 // STYLESHEETS
-var sass = require('gulp-sass');
-var prefix = require('gulp-autoprefixer');
+var nodeSass = require('gulp-sass'); // Node sass > faster, less features
 var cmq = require('gulp-combine-media-queries');
+var prefix = require('gulp-autoprefixer');
+var please = require('gulp-pleeease')
 
 // MESSAGES
 var messages = {
@@ -76,19 +98,34 @@ var messages = {
 // ---
 
 gulp.task('scss', function () {
-	return gulp.src(source.scss)
+	var filter = gulpFilter(['!*.map', '*.css']);
+
+	var task = gulp.src(source.scss)
 		.pipe(plumber())
-		.pipe(sass({
-			errLogToConsole: true
-		}))
-		.pipe(prefix(settings.prefix))
-		.pipe(cmq({
-			log: true
-		}))
+
+		// run nodeSass with sourcemaps
+		.pipe(sourcemaps.init())
+		.pipe(nodeSass(settings.nodeSass))
+		.pipe(sourcemaps.write('../css'))
+
+		// filter out the sourcemap
+		.pipe(filter)
 		.pipe(filesize())
+		.pipe(prefix(settings.prefix))
+		.pipe(cmq(settings.cmq))
+
+		// write
 		.pipe(gulp.dest(target.jekyllCSS))
 		.pipe(browserSync.reload({stream:true}))
-		.pipe(gulp.dest(target.css));
+		.pipe(gulp.dest(target.css))
+
+	// write the sourcemap
+	filter.restore({end: true})
+		.pipe(gulp.dest(target.jekyllCSS))
+		.pipe(browserSync.reload({stream:true}))
+		.pipe(gulp.dest(target.css))
+
+	return task;
 });
 
 
@@ -111,20 +148,7 @@ gulp.task('jekyll--rebuild', ['jekyll--build'], function () {
 });
 
 gulp.task('browsersync', function() {
-	browserSync.init(null, {
-		server: {
-			baseDir: settings.baseDir,
-			reloadDelay: 2000,
-			debounce: 200,
-			notify: true,
-			ghostMode: {
-				clicks: true,
-				location: true,
-				forms: true,
-				scroll: false
-			}
-		}
-	});
+	browserSync.init(null, settings.browserSync);
 });
 
 
