@@ -92,7 +92,6 @@ var sourcemaps = require('gulp-sourcemaps');
 var nodeSass = require('gulp-sass'); // Node sass > faster, less features
 var cmq = require('gulp-combine-media-queries');
 var prefix = require('gulp-autoprefixer');
-var please = require('gulp-pleeease')
 
 // JAVASCRIPT
 var concat = require('gulp-concat');
