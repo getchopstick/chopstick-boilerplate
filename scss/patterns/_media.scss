@@ -22,25 +22,23 @@
 
 .media {
 	@extend %clearfix;
-	display: block;
-
 	@include margin-tb(0, 1);
 }
 
 	.media__img,
-	.media__img--rev {
+	.media__img--reverse {
+		float: left;
 		@include margin-bottom(1);
-
 		@include mq($bp3) {
 			@include margin-bottom(0);
 		}
+
+		img {
+			display: block;
+		}
 	}
 
-	.media__img {
-		float: left;
-	}
-
-	.media__img--rev {
+	.media__img--reverse {
 		float: right;
 	}
 
