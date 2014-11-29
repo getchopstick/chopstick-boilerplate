@@ -22,11 +22,26 @@ Install [bower](http://bower.io) and the necessary JavaScript dependencies:
 	npm install -g bower
 	bower install
 
+Install [gulp](http://gulpjs.com/) and the necessary JavaScript dependencies:
+	
+	npm install --global gulp
+	npm install
+
 ## Use
 
-To use Chopstick Boilerplate, `cd` into the project root and run:
+We use Gulp as our task runner. There are some basic tasks defined but these can be easily extended by changing the `gulpfile.js`.
 
-	bundle exec guard
+To compile Chopstick Boilerplate, `cd` into the project root and run:
+
+	gulp
+
+This will compile the `scss` and build the Jekyll site.
+
+For development there is also a watch task wich will load a browsersync server and watch your all your files (*.html, *.md, *.scss, *.js, *.jpg, *.png, *.svg) for changes:
+
+	gulp watch
+
+Browsersync also works as a server for your devices. More info can be found on the [browsersync site](http://www.browsersync.io/).
 
 We try to keep the code as modular as possible. So you can comment out what you don’t use. Simply put:
 
@@ -54,4 +69,5 @@ We owe a ton of credits to the following projects for inspiration:
 * Boilerplate
 * Foundation and Bootstrap
 * Semantic Grid System
+* Inuit CSS
 * SMACSS
