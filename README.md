@@ -1,7 +1,7 @@
-Chopstick
-=========
+Chopstick Boilerplate
+=====================
 
-Chopstick is a mobile-first responsive Design Framework built with [Sass](http://sass-lang.com).
+Chopstick Boilerplate is a mobile-first responsive Design Boilerplate built with Sass, Jekyll and Gulp.
 
 ## Requirements
 
@@ -22,9 +22,9 @@ Install [bower](http://bower.io) and the necessary JavaScript dependencies:
 	npm install -g bower
 	bower install
 
-Install [gulp](http://gulpjs.com/) and the necessary JavaScript dependencies:
+Install [gulp](http://gulpjs.com/) and the necessary gulp dependencies:
 
-	npm install --global gulp
+	npm install -g gulp
 	npm install
 
 ## Use
