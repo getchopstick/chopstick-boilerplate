@@ -112,13 +112,40 @@ $black						: #111;
 
 // Semantic classes
 
-$alpha-text-color			: $black;
-$beta-text-color			: $gray;
+$alpha-neutral				: $white;
+$beta-neutral				: $black;
 
-$alpha-ui-color				: $blue; // Primary elements
-$beta-ui-color				: $gray; // Secondary elements
-$gamma-ui-color				: $silver; // Used for borders
-$delta-ui-color				: $white; // Used for backgrounds
+$alpha-text-color			: $black;
+$alpha-text-color-light		: mix($alpha-text-color, $alpha-neutral, 50%);
+$alpha-text-color-dark		: mix($alpha-text-color, $beta-neutral, 50%);
+
+$beta-text-color			: $alpha-text-color-light;
+$beta-text-color-light		: mix($beta-text-color, $alpha-neutral, 50%);
+$beta-text-color-dark		: mix($beta-text-color, $beta-neutral, 50%);
+
+// Primary elements
+$alpha-ui-color				: $blue;
+$alpha-ui-color-light		: mix($alpha-ui-color, $alpha-neutral, 50%);
+$alpha-ui-color-dark		: mix($alpha-ui-color, $beta-neutral, 50%);
+
+// Secondary elements
+$beta-ui-color				: $gray;
+$beta-ui-color-light		: mix($beta-ui-color, $alpha-neutral, 50%);
+$beta-ui-color-dark			: mix($beta-ui-color, $beta-neutral, 50%);
+
+// Used for borders
+$gamma-ui-color				: $silver;
+$gamma-ui-color-light		: mix($gamma-ui-color, $alpha-neutral, 50%);
+$gamma-ui-color-dark		: mix($gamma-ui-color, $beta-neutral, 50%);
+
+// Used for backgrounds
+$delta-ui-color				: $white;
+$delta-ui-color-light		: mix($delta-ui-color, $alpha-neutral, 50%);
+$delta-ui-color-dark		: mix($delta-ui-color, $beta-neutral, 50%);
+
+$border-color 				: $alpha-text-color;
+$border-color-light			: mix($border-color, $alpha-neutral, 50%);
+$border-color-dark			: mix($border-color, $beta-neutral, 50%);
 
 $error-color 				: $red;
 $success-color 				: $green;
