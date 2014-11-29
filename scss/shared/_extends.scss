@@ -22,3 +22,14 @@
 	word-break: break-all;
 	hyphens: auto;
 }
+
+// A better way to hide text
+// @extend %hide-text;
+
+%hide-text {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
