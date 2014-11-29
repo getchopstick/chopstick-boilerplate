@@ -5,8 +5,9 @@
 // 1. SETTINGS
 // 2. PLUGINS
 // 3. STYLESHEETS
-// 4. JEKYLL & BROWSER SYNC
-// 5. WORKFLOW
+// 4. JAVASCRIPT
+// 5. JEKYLL & BROWSER SYNC
+// 6. WORKFLOW
 //
 
 
@@ -47,6 +48,10 @@ var settings = {
 
 var source = {
 	scss : 'scss/**/*.scss', // SCSS source files
+	js : [
+		'js/theme.js',
+		'js/_components/*.js'
+	],
 	jekyll : [ // Files that trigger a Jekyll rebuild
 		'img/*.png',
 		'img/*.jpg',
@@ -63,6 +68,8 @@ var source = {
 var target = {
 	css : 'css/', // CSS target
 	jekyllCSS : '_site/css/', // Jekyll CSS target for stylesheet injection
+	js : 'js/',
+	jekyllJS : '_site/js/',
 	site : '_site/' // Jekyll build folder
 };
 
@@ -86,6 +93,9 @@ var nodeSass = require('gulp-sass'); // Node sass > faster, less features
 var cmq = require('gulp-combine-media-queries');
 var prefix = require('gulp-autoprefixer');
 var please = require('gulp-pleeease')
+
+// JAVASCRIPT
+var concat = require('gulp-concat');
 
 // MESSAGES
 var messages = {
@@ -130,7 +140,24 @@ gulp.task('scss', function () {
 
 
 // ---
-// 4. JEKYLL & BROWSER SYNC
+// 4. JAVASCRIPT
+// ---
+
+gulp.task('js', function () {
+	return gulp.src(source.js)
+		.pipe(plumber())
+		.pipe(concat('theme.concat.js'))
+		.pipe(gulp.dest(target.jekyllJS))
+		.pipe(gulp.dest(target.js));
+});
+
+gulp.task('js--reload', ['js'], function () {
+  browserSync.reload();
+});
+
+
+// ---
+// 5. JEKYLL & BROWSER SYNC
 // ---
 
 // @TODO: how do we keep this task running on errors? .pipe(plumber()) does not work on a return.
@@ -153,11 +180,12 @@ gulp.task('browsersync', function() {
 
 
 // ---
-// 5. WORKFLOW
+// 6. WORKFLOW
 // ---
 
 gulp.task('default', [
 	'scss',
+	'js',
 	'jekyll--build'
 ]);
 
@@ -165,5 +193,6 @@ gulp.task('watch', [
 		'browsersync',
 	], function(){
 		watch({glob: source.scss}, function(){gulp.start('scss');});
+		watch({glob: source.js}, function(){gulp.start('js--reload');});
 		watch({glob: source.jekyll}, function(){gulp.start('jekyll--rebuild');});
 });
