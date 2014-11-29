@@ -25,12 +25,11 @@
 	@include margin-tb(0, 1);
 }
 
-	.media__img,
-	.media__img--reverse {
+	.media__img {
 		float: left;
 		@include margin-bottom(1);
 		@include mq($bp3) {
-			@include margin-bottom(0);
+			margin-bottom: 0;
 		}
 
 		img {
