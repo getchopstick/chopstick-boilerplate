@@ -53,15 +53,6 @@ It uses a settings file + mixins + patterns. You can remove the default theme fo
 
 For more information and examples please refer to the [documentation on our website](http://getchopstick.com/docs).
 
-## Git subtree instructions
-
-Chopstick (the `scss` folder) is included as a git subtree.
-
-To push to the subtree: `git subtree push --prefix=scss`
-To pull to the subtree: `git subtree pull --prefix=scss`
-
-The location and branch of the subtree are defined in the `.gittrees` file.
-
 ## Credits
 
 We owe a ton of credits to the following projects for inspiration:
