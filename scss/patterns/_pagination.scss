@@ -3,7 +3,6 @@
 */
 
 .pagination {
-
 	a,
 	span {
 		padding: 0 10px;
@@ -18,18 +17,6 @@
 	@include pagination;
 }
 
-.pagination-centered {
-
-	a,
-	span {
-		padding: 0 10px;
-		border: 1px solid $gamma-ui-color;
-		margin-left: -1px;
-	}
-
-	span {
-		color: $beta-text-color;
-	}
-
+.pagination--centered {
 	@include pagination-centered;
 }
