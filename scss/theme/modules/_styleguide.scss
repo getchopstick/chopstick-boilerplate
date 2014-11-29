@@ -15,15 +15,22 @@
 	}
 
 	.v-styleguide .scss {
-		@include margin-tb(0, 1);
-		@include padding-tb(.5, .5);
-		@include px-padding-lr(1,1);
 		display: block;
 		color: $alpha-text-color;
 		background-color: lighten($gamma-ui-color,10);
 		border: $border-width $border-style $gamma-ui-color;
 		border-radius: $radius;
+		@include margin-tb(0, 1);
+		@include padding-tb(.5, .5);
+		@include px-padding-lr(1,1);
 	}
+
+	.v-styleguide .color {
+		width: 100%;
+		height: 60px;
+		box-shadow: 0 0 1px 3px $white, 0 0 5px 2px rgba($black,.33);
+	}
+
 
 	.example-form-grid {
 		label {
