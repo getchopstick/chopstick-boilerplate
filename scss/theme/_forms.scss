@@ -5,7 +5,8 @@
 //
 
 form {
-	padding: 0 0 em(14);
+	// padding: 0 0 em(14);
+	@include margin-bottom(1);
 }
 
 legend,
@@ -13,7 +14,7 @@ label {
 	display: block;
 	width: 100%;
 	cursor: pointer;
-	@include baseline-dimensions(0,3,1);
+	@include text-dimensions($alpha-font-size,1,.5);
 }
 
 // Input elements

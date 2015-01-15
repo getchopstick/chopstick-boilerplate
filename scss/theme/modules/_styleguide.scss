@@ -9,9 +9,8 @@
 	.v-styleguide .section-title {
 		color: $beta-text-color;
 		font-weight: $beta-font-weight;
-		border-bottom: 3px solid $beta-text-color;
-		margin-bottom: 14/$alpha-font-size*1em;
-		@include baseline-dimensions(1,1,1,0);
+		border-bottom: 1px solid $beta-text-color;
+		@include text-dimensions($alpha-font-size,1,1,0,1);
 	}
 
 	.v-styleguide .scss {

@@ -17,22 +17,22 @@ h6 {
 }
 
 h1 {
-	@include baseline-dimensions(3,3,3);
+	@include text-dimensions($ms6,1.75,1);
 }
 
 h2 {
-	@include baseline-dimensions(2,3,3);
+	@include text-dimensions($ms4,1.5,1);
 }
 
 h3 {
-	@include baseline-dimensions(1,3,1);
+	@include text-dimensions($ms2,1.25,1);
 }
 
 h4,
 h5,
 h6 {
 	font-weight: $beta-font-weight;
-	@include baseline-dimensions(0,3,1);
+	@include text-dimensions($alpha-font-size,1,1);
 }
 
 p,
@@ -41,7 +41,7 @@ ul,
 dl,
 table,
 address {
-	@include baseline-dimensions(0,1,2,1);
+	@include text-dimensions($alpha-font-size,1,1);
 }
 
 pre {
