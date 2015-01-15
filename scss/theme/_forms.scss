@@ -87,20 +87,20 @@ textarea {
 	font-style: italic;
 }
 
-// Buttons
+// // Buttons
 
-input[type="submit"],
-button {
-	@extend %btn;
-	@include btn-s;
-	@include btn-color;
+// input[type="submit"],
+// button {
+// 	@extend %btn;
+// 	@include btn-s;
+// 	@include btn-color;
 
-	@include mq($bp3) {
-		@include input-m;
-		@include btn-inlineblock;
-	}
+// 	@include mq($bp3) {
+// 		@include input-m;
+// 		@include btn-inlineblock;
+// 	}
 
-	@include mq($bp5) {
-		@include input-l;
-	}
-}
+// 	@include mq($bp5) {
+// 		@include input-l;
+// 	}
+// }

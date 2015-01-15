@@ -12,15 +12,16 @@ input[type="submit"].btn-secondary,
 a.btn-secondary {
 	@extend %btn;
 	@include btn-s;
+	@include btn-inlineblock;
 
 	@include mq($bp3) {
 		@include btn-m;
-		@include btn-inlineblock;
 	}
 
 	@include mq($bp5) {
 		@include btn-l;
 	}
+
 }
 
 .btn,

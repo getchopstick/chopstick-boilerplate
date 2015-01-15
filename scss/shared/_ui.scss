@@ -32,18 +32,18 @@
 // Button sizes
 
 @mixin btn-l {
-	@include em-padding-lr(1);
-	@include baseline-dimensions-form(1,2,2,0);
+	@include px-padding-lr(2,2);
+	@include text-dimensions($alpha-font-size,1,0,.75,.75);
 }
 
 @mixin btn-m {
-	@include em-padding-lr(.75);
-	@include baseline-dimensions-form(0,2,2,0);
+	@include px-padding-lr(1.5,1.5);
+	@include text-dimensions($ms-1,1,0,.5,.5);
 }
 
 @mixin btn-s {
-	@include em-padding-lr(.5);
-	@include baseline-dimensions-form(0,1,1,0);
+	@include px-padding-lr(2,2);
+	@include text-dimensions($ms-1,1,0,.25,.25);
 }
 
 // Button display
