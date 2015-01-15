@@ -3,11 +3,15 @@
 //
 
 .intro-holder {
-	@include padding-top(2);
 
-	@include mq($bp3) {
-		@include padding-top(2);
+	@include mq($bp4) {
+		@include padding-tb(4,3);
 	}
+
+	@include mq($bp5) {
+		@include padding-tb(7,6);
+	}
+
 }
 
 .intro {

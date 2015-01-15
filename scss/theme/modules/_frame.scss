@@ -4,11 +4,13 @@
 
 .holder {
 	background-color: $delta-ui-color;
+	border-bottom: 1px solid $beta-ui-color-light;
 	@include padding-tb(1,0);
 
 	@include mq($bp4) {
-		@include padding-tb(1,1);
+		@include padding-tb(2,1);
 	}
+
 }
 
 //
@@ -17,44 +19,33 @@
 
 .header {
 	@include box-(12,1,1);
-
-	@include mq($bp4) {
-		@include box-(12,1,1);
-	}
 }
 
 	.header .inner {
 		@extend %clearfix;
-		border-bottom: 1px solid lighten($alpha-text-color,60);
+		border-bottom: 1px solid $beta-ui-color-light;
 	}
 
 .header-holder {
-	@include mq($bp3) {
-		@include padding-top(0);
+	padding: 0;
+	border: none;
+
+	@include mq($bp4) {
+		padding: 0;
 	}
+
 }
-
-	.header-holder .inner {
-		@include mq($bp3) {
-			@include padding-tb(1,1);
-		}
-
-		@include mq($bp4) {
-			@include padding-tb(2,1);
-		}
-	}
 
 .logo {
 	float: left;
 	font-family: $alpha-font-family;
-	font-style: italic;
 	font-weight: $alpha-font-weight;
-	@include text-dimensions($alpha-font-size,1,1);
+	@include text-dimensions($alpha-font-size,1,0,1,1);
 
 	@include mq($bp3) {
-		float: left;
-		@include text-dimensions(14,1,0);
+		@include text-dimensions(14,1,0,1,1);
 	}
+
 }
 
 .main-nav {
@@ -65,13 +56,19 @@
 		@extend %clearfix;
 		font-family: $alpha-font-family;
 		@include list-nav;
-		@include text-dimensions($alpha-font-size,1,1);
 	}
 
 	a {
 		color: lighten($alpha-text-color,50);
 		text-decoration: none;
 		font-weight: $beta-font-weight;
+		@include text-dimensions($alpha-font-size,1,0,1,1);
+
+		@include mq($bp3) {
+			@include text-dimensions(14,1,0,1,1);
+		}
+
+
 	}
 
 	a:hover,
@@ -93,11 +90,10 @@
 
 		ul {
 			@include horizontal-nav();
-			@include text-dimensions(14,1,0);
 		}
 
 		li {
-			@include px-margin-lr(1,0);
+			@include px-margin-lr(2,0);
 		}
 	}
 }
@@ -127,21 +123,13 @@
 // Doormat
 //
 
-.doormat-holder {
-	@include padding-bottom(1);
+.doormat-col-4 {
+	@include box-(12,1,1);
 
 	@include mq($bp4) {
-		@include padding-bottom(2);
+		@include box-(4,1,1);
 	}
 }
-
-	.doormat-col-4 {
-		@include box-(12,1,1);
-
-		@include mq($bp4) {
-			@include box-(4,1,1);
-		}
-	}
 
 //
 // Footer
