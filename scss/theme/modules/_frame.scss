@@ -123,8 +123,6 @@
 	background-color: $alpha-link-color;
 }
 
-
-
 //
 // Doormat
 //
@@ -144,7 +142,6 @@
 .footer-holder {
 	background-color: $alpha-text-color;
 	color: lighten($alpha-text-color,70);
-	@include padding-tb(1,1);
 
 	p {
 		padding: 0;
