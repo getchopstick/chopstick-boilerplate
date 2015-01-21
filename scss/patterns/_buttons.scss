@@ -2,37 +2,118 @@
   Buttons
 */
 
-.btn,
-a.btn,
-input.btn,
-input[type="submit"].btn,
-.btn-secondary,
-input.btn-secondary,
-input[type="submit"].btn-secondary,
-a.btn-secondary {
-	@extend %btn;
-	@include btn-s;
-	@include btn-inlineblock;
+.btn {
+	display: inline-block;
+	margin-bottom: 0; // For input.btn
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+	border: 1px solid transparent;
+	white-space: nowrap;
+	border-radius: $radius;
+	font-family: $alpha-font-family;
+	font-weight: $beta-font-weight;
+	transition: all .1s ease-in-out;
+	transition-property: background, color, border;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-font-smoothing: antialiased;
 
-	@include mq($bp3) {
-		@include btn-m;
+	&:hover,
+	&:focus {
+		text-decoration: none;
 	}
 
-	@include mq($bp5) {
-		@include btn-l;
+	&:active {
+		outline: 0;
+		background-image: none;
+	}
+
+	@include btn-md;
+
+}
+
+// btn display
+
+.btn--block {
+	display: block;
+	width: 100%;
+}
+
+.btn--fll {
+	@include btn-float(left);
+}
+
+.btn--flr {
+	@include btn-float(right);
+}
+
+// btn sizes
+
+.btn--sm {
+	@include btn-sm {}
+}
+
+.btn--lg {
+	@include btn-lg {}
+}
+
+// colors
+
+.btn--alpha-ui {
+	background-color: $alpha-ui-color;
+
+	&,
+	&:visited {
+		color: #fff;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: lighten($alpha-ui-color,10);
+		color: #fff;
+	}
+
+	&:active {
+		background-color: $alpha-ui-color;
 	}
 
 }
 
-.btn,
-a.btn {
-	@include btn-color;
+.btn--beta-ui {
+	background-color: $beta-ui-color;
+
+	&,
+	&:visited {
+		color: #fff;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: lighten($beta-ui-color,10);
+		color: #fff;
+	}
+
+	&:active {
+		background-color: $beta-ui-color;
+	}
 }
 
-.btn-secondary,
-input.btn-secondary,
-input[type="submit"].btn-secondary,
-a.btn-secondary {
-	@include btn-color($beta-ui-color);
+// btn-rows
+
+.btn-row {
+	@extend %clearfix;
+	position: relative;
+
+	.btn--fll {
+		@include px-margin-right(1);
+	}
+
+	.btn--flr {
+		@include px-margin-right(1);
+	}
+
 }
 
