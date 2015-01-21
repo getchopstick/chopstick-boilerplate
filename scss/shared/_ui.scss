@@ -42,7 +42,7 @@
 }
 
 @mixin btn-s {
-	@include px-padding-lr(2,2);
+	@include px-padding-lr(1,1);
 	@include text-dimensions($ms-1,1,0,.25,.25);
 }
 
