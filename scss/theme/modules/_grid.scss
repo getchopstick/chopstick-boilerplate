@@ -4,7 +4,8 @@
 
 .v-grid .row > div[class*="grid"] {
 	background: darken($gamma-ui-color, 10);
-	@include margin-tb(.5,.5);
+	@include margin-bottom(1);
+
 	.inner {
 		background: $gamma-ui-color;
 		text-align: center;
