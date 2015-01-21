@@ -19,12 +19,13 @@
 
 .header {
 	@include box-(12,1,1);
-}
 
-	.header .inner {
+	.inner {
 		@extend %clearfix;
 		border-bottom: 1px solid $beta-ui-color-light;
 	}
+
+}
 
 .header-holder {
 	padding: 0;
@@ -44,8 +45,8 @@
 }
 
 .main-nav {
-	float: left;
 	width: 100%;
+	float: left;
 
 	ul {
 		@extend %clearfix;
@@ -81,6 +82,7 @@
 	.selected a {
 		color: darken($alpha-ui-color,0);
 	}
+
 }
 
 .mobile-nav .main-nav {
@@ -89,6 +91,7 @@
 
 .main-nav,
 .mobile-nav .main-nav {
+
 	@include mq($bp3) {
 		display: block !important;
 		width: auto;
@@ -101,23 +104,25 @@
 		li {
 			@include px-margin-lr(2,0);
 		}
+
 	}
+
 }
 
 .main-nav-trigger {
 	display: block;
-	float: right;
-	// width: 2.1em;
 	height: 2em;
 	width: 2em;
-	text-indent: -9999px;
 	margin-top: 1.25em;
+	float: right;
+	text-indent: -9999px;
 	@include text-dimensions($alpha-font-size,1,0);
 	@include svg-bg("../img/icon-menu", ".png", $alpha-text-color, 50%, no-repeat);
 
 	@include mq($bp3) {
 		display: none;
 	}
+
 }
 
 .svg .trigger-active,
@@ -135,6 +140,7 @@
 	@include mq($bp4) {
 		@include box-(4,1,1);
 	}
+
 }
 
 //
@@ -148,6 +154,7 @@
 	p {
 		padding: 0;
 	}
+
 }
 
 	.footer {

@@ -19,6 +19,7 @@ html {
 	@include mq($bp5) {
 		font-size: $alpha-font-size/16*112.5%;
 	}
+
 }
 
 body {
