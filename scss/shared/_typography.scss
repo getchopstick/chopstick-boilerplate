@@ -1,6 +1,6 @@
 //
 // Typography
-// 
+//
 
 // baseline formula based on the $alpha-line-height variable
 // use: @include text-dimensions(#font-size, #line-height, #margin-bottom, #padding-top)
@@ -10,10 +10,11 @@ $basefontpercent: $alpha-font-size/16 * 100;
 
 @mixin text-dimensions($fs: 16, $lh: 1, $mb: 1, $pt: 0, $pb: 0){
 	// use this for rems
-	// font-size: #{$fs}px;
-	// font-size: #{$fs / $alpha-font-size}rem;
-	font-size: #{$fs / $alpha-font-size}em;
+	font-size: #{$fs}px;
+	font-size: #{$fs / $alpha-font-size}rem;
+	// font-size: #{$fs / $alpha-font-size}em;
 	line-height: #{($baseline-unit / $fs) * $lh}em;
+	// line-height: $alpha-line-height;
 	margin-bottom: #{($baseline-unit / $fs) * $mb}em;
 	@if $pt > 0 {
 		padding-top: #{($baseline-unit / $fs) * $pt}em;
