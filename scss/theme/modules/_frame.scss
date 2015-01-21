@@ -41,11 +41,6 @@
 	font-family: $alpha-font-family;
 	font-weight: $alpha-font-weight;
 	@include text-dimensions($alpha-font-size,1,0,1,1);
-
-	@include mq($bp3) {
-		@include text-dimensions(14,1,0,1,1);
-	}
-
 }
 
 .main-nav {
@@ -55,17 +50,28 @@
 	ul {
 		@extend %clearfix;
 		font-family: $alpha-font-family;
+		border-top: 1px solid $beta-ui-color-light;
 		@include list-nav;
+		@include margin-bottom(.75);
+		@include padding-top(.75);
+
+		@include mq($bp3) {
+			border-top: none;
+			padding-top: 0;
+			margin-bottom: 0;
+		}
+
 	}
 
 	a {
+		display: block;
 		color: lighten($alpha-text-color,50);
 		text-decoration: none;
 		font-weight: $beta-font-weight;
-		@include text-dimensions($alpha-font-size,1,0,1,1);
+		@include text-dimensions($alpha-font-size,1,0,.25,.25);
 
 		@include mq($bp3) {
-			@include text-dimensions(14,1,0,1,1);
+			@include padding-tb(1,1);
 		}
 
 
