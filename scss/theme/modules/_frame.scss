@@ -107,10 +107,12 @@
 .main-nav-trigger {
 	display: block;
 	float: right;
-	width: 2.1em;
-	height: 2.1em;
+	// width: 2.1em;
+	height: 2em;
+	width: 2em;
 	text-indent: -9999px;
-	@include text-dimensions($alpha-font-size,1,1);
+	margin-top: 1.25em;
+	@include text-dimensions($alpha-font-size,1,0);
 	@include svg-bg("../img/icon-menu", ".png", $alpha-text-color, 50%, no-repeat);
 
 	@include mq($bp3) {
