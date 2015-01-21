@@ -41,7 +41,21 @@
 	float: left;
 	font-family: $alpha-font-family;
 	font-weight: $alpha-font-weight;
-	@include text-dimensions($alpha-font-size,1,0,1,1);
+	@include text-dimensions($alpha-font-size,1,0);
+
+	a {
+		display: block;
+		text-decoration: none;
+		color: $beta-text-color;
+		@include text-dimensions($alpha-font-size,1,0,1,1);
+
+		&:hover,
+		&:focus {
+			color: $alpha-text-color;
+		}
+
+	}
+
 }
 
 .main-nav {
