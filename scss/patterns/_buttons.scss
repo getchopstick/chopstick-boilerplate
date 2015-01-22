@@ -4,7 +4,8 @@
 
 .btn {
 	display: inline-block;
-	margin-bottom: 0; // For input.btn
+	// margin-bottom: 0; // For input.btn
+	margin: 0;
 	text-align: center;
 	vertical-align: middle;
 	touch-action: manipulation;
@@ -18,6 +19,9 @@
 	transition: all .1s ease-in-out;
 	transition-property: background, color, border;
 	outline: none;
+	// line-height: normal;
+	box-sizing: content-box;
+
 	-webkit-appearance: none;
 	-webkit-font-smoothing: antialiased;
 
@@ -53,17 +57,18 @@
 // btn sizes
 
 .btn--sm {
-	@include btn-sm {}
+	@include btn-sm;
 }
 
 .btn--lg {
-	@include btn-lg {}
+	@include btn-lg;
 }
 
 // colors
 
 .btn--alpha-ui {
 	background-color: $alpha-ui-color;
+	border-color: $alpha-ui-color;
 
 	&,
 	&:visited {
@@ -117,3 +122,11 @@
 
 }
 
+// firefox inner border fix
+
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}

@@ -6,17 +6,17 @@
 
 @mixin btn-lg {
 	@include px-padding-lr(2,2);
-	@include text-dimensions($alpha-font-size,1,0,.75,.75);
+	@include input-dimensions($ms-2,1,0,.75,.75);
 }
 
 @mixin btn-md {
 	@include px-padding-lr(1.5,1.5);
-	@include text-dimensions($ms-2,1,0,.5,.5);
+	@include input-dimensions($ms-2,1,0,.5,.5);
 }
 
 @mixin btn-sm {
-	@include px-padding-lr(1,1);
-	@include text-dimensions($ms-3,1,0,.25,.25);
+	@include px-padding-lr(.75,.75);
+	@include input-dimensions($ms-3,1,0,.25,.25);
 }
 
 // Button display
@@ -97,19 +97,19 @@
 
 }
 
-@mixin input-l {
-	@include em-padding-lr(.25);
-	@include baseline-dimensions-form(1,2,2,0);
+@mixin input-lg {
+	@include px-padding-lr(1,1);
+	@include input-dimensions($ms-2,2,0,.75,.75);
 }
 
-@mixin input-m {
-	@include em-padding-lr(.25);
-	@include baseline-dimensions-form(0,2,2,0);
+@mixin input-md {
+	@include px-padding-lr(.75,.75);
+	@include input-dimensions($ms-2,1.75,0,.5,.5);
 }
 
-@mixin input-s {
-	@include em-padding-lr(.25);
-	@include baseline-dimensions-form(0,1,1,0);
+@mixin input-sm {
+	@include px-padding-lr(.5,.5);
+	@include input-dimensions($ms-3,1.25,0,.25,.25);
 }
 
 // Pre- & postfix mixins

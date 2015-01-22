@@ -1,49 +1,31 @@
 <h3>Example 1: Standard contact form </h3>
 
 <form action="#" method="post">
+	<div class="alert-box error">
+		<p><strong>Cras sed ante</strong>. Phasellus in massa. Curabitur dolor eros, <a href="#">gravida et</a>, hendrerit ac, cursus non, massa. Aliquam lorem.</p>
+		<a href="#" class="close">&times;</a>
+	</div>
 	<fieldset>
-		<label>Name<abbr title="Required field">*</abbr>
-			<input type="text" placeholder="Full Name" />
-		</label>
-
-		<label>Email address<abbr title="Required field">*</abbr>
-			<input type="email" placeholder="email@address.com" />
-		</label>
-
-		<label>Message<abbr title="Required field">*</abbr>
-			<textarea rows="5" cols="30"></textarea>
-		</label>
-
-		<button type="submit" class="btn">Send</button>
-	</fieldset>
-</form>
-
-<h3>Example 2: Standard contact form with messages</h3>
-
-<form action="" method="post">
-	<fieldset>
-		<div class="alert-box error">
-			<p><strong>Cras sed ante</strong>. Phasellus in massa. Curabitur dolor eros, <a href="#">gravida et</a>, hendrerit ac, cursus non, massa. Aliquam lorem.</p>
-			<a href="#" class="close">&times;</a>
-		</div>
-
-		<label class="error-area">Name<abbr title="Required field">*</abbr>
-			<input type="text" value="" />
-			<span class="error-arrea error-help">This field is required.</span>
-		</label>
-
-
-		<label class="error-area">Email address<abbr title="Required field">*</abbr>
-			<input type="email" value="" />
-			<span class="error-arrea error-help">This field is required.</span>
-		</label>
-
-		<label class="error-area">Message<abbr title="Required field">*</abbr>
-			<textarea rows="5" cols="30">Lorem ipsum</textarea>
-			<span class="error-area error-help">This field is required.</span>
-		</label>
-
-		<button type="submit" class="btn">Send</button>
+		<p>
+			<label for="form-field-1">Name<abbr title="Required field">*</abbr></label>
+			<input id="form-field-1" type="text" placeholder="Full Name" />
+		</p>
+		<p>
+			<label for="form-field-2">Name<abbr title="Required field">*</abbr></label>
+			<input id="form-field-2" type="text" placeholder="Full Name" />
+		</p>
+		<p>
+			<label for="form-field-3">Email address<abbr title="Required field">*</abbr></label>
+			<input id="form-field-3" class="input--error" type="email" placeholder="email@address.com" />
+			<span class="form__error">This field is required.</span>
+		</p>
+		<p>
+			<label for="form-field-4">Message<abbr title="Required field">*</abbr></label>
+			<textarea id="form-field-4" rows="5" cols="30"></textarea>
+		</p>
+		<p>
+			<button type="submit" class="btn btn--alpha-ui">Send</button>
+		</p>
 	</fieldset>
 </form>
 
@@ -106,10 +88,34 @@
 	<fieldset>
 		<div class="row oneliner">
 			<p class="prefix">
+				<input class="input--sm" type="email" placeholder="email@address.com" />
+			</p>
+			<p class="postfix">
+				<button class="btn btn--sm btn--beta-ui" type="submit" class="btn">Send</button>
+			</p>
+		</div>
+	</fieldset>
+</form>
+<form class="example-form-grid" action="#" method="post">
+	<fieldset>
+		<div class="row oneliner">
+			<p class="prefix">
 				<input type="email" placeholder="email@address.com" />
 			</p>
 			<p class="postfix">
-				<button type="submit" class="btn">Send</button>
+				<button class="btn btn--alpha-ui" type="submit" class="btn">Send</button>
+			</p>
+		</div>
+	</fieldset>
+</form>
+<form class="example-form-grid" action="#" method="post">
+	<fieldset>
+		<div class="row oneliner">
+			<p class="prefix">
+				<input class="input--lg" type="email" placeholder="email@address.com" />
+			</p>
+			<p class="postfix">
+				<button class="btn btn--lg btn--beta-ui" type="submit" class="btn">Send</button>
 			</p>
 		</div>
 	</fieldset>

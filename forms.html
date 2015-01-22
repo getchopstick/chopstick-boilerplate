@@ -1,0 +1,48 @@
+---
+layout: default
+title: Forms
+section: Forms
+---
+<div class="holder main-holder">
+	<div class="row main-row">
+		<div class="main-content">
+
+			<h2 class="section-title">Forms</h2>
+			<div class="row">
+				<div class="grid-7">
+					{% include patterns/forms.html %}
+				</div>
+				<div class="grid-5">
+					<pre class="scss">patterns/_forms.scss</pre>
+					<a href="#" class="js-toggle" data-target=".snippet--forms">
+						<i class="icon icon--toggle"></i>HTML snippet
+					</a>
+					<div class="snippet snippet--forms is-hidden">
+						{% highlight html linenos=table %}
+							{% include patterns/forms.html %}
+						{% endhighlight %}
+					</div>
+				</div>
+			</div>
+
+			<h2 class="section-title">Buttons</h2>
+			<div class="row">
+				<div class="grid-7">
+					{% include patterns/buttons.html %}
+				</div>
+				<div class="grid-5">
+					<pre class="scss">patterns/_buttons.scss</pre>
+					<a href="#" class="js-toggle" data-target=".snippet--buttons">
+						<i class="icon icon--toggle"></i>HTML snippet
+					</a>
+					<div class="snippet snippet--buttons is-hidden">
+						{% highlight html linenos=table %}
+							{% include patterns/buttons.html %}
+						{% endhighlight %}
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

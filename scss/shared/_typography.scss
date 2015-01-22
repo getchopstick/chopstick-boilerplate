@@ -12,9 +12,7 @@ $basefontpercent: $alpha-font-size/16 * 100;
 	// use this for rems
 	font-size: #{$fs}px;
 	font-size: #{$fs / $alpha-font-size}rem;
-	// font-size: #{$fs / $alpha-font-size}em;
 	line-height: #{($baseline-unit / $fs) * $lh}em;
-	// line-height: $alpha-line-height;
 	margin-bottom: #{($baseline-unit / $fs) * $mb}em;
 	@if $pt > 0 {
 		padding-top: #{($baseline-unit / $fs) * $pt}em;
@@ -24,19 +22,55 @@ $basefontpercent: $alpha-font-size/16 * 100;
 	}
 }
 
-@mixin input-dimensions($fs: 16, $lh: 1, $mb: 1, $pt: 0, $pb: 0){
-	// use this for rems
-	// font-size: #{$fs}px;
-	// font-size: #{$fs / $alpha-font-size}rem;
-	font-size: #{$fs / $alpha-font-size}em;
-	line-height: #{($baseline-unit / $fs) * $lh}em;
-	height:  #{($baseline-unit / $fs) * $lh}em;
-	margin-bottom: #{($baseline-unit / $fs) * $mb}em;
+@mixin input-dimensions($fs: 1, $lh: 1, $mb: 0, $pt: 0, $pb: 0, $mt: 0){
+	font-size: #{$fs}px;
+	font-size: $fs/$alpha-font-size*1rem;
+	line-height: $alpha-line-height;
+
+	@if $mb > 0 {
+		margin-bottom: $mb * $alpha-font-size * 1px;
+		margin-bottom: $mb * 1rem;
+	}
+
+	@if $mt > 0 {
+		margin-top: $mt * $alpha-font-size * 1px;
+		margin-top: $mt * 1rem;
+	}
+
 	@if $pt > 0 {
-		padding-top: #{($baseline-unit / $fs) * $pt}em;
+		padding-top: $pt * $alpha-font-size * 1px;
+		padding-top: $pt * 1rem;
 	}
 	@if $pb > 0 {
-		padding-bottom: #{($baseline-unit / $fs) * $pt}em;
+		padding-bottom: $pb * $alpha-font-size * 1px;
+		padding-bottom: $pb * 1rem;
+	}
+}
+
+@mixin button-dimensions($fs: 1, $lh: 1, $mb: 0, $pt: 0, $pb: 0, $mt: 0){
+	font-size: #{$fs}px;
+	font-size: $fs/$alpha-font-size*1rem;
+	height: #{($baseline-unit / $fs) * $lh}em;
+	// line-height: #{($baseline-unit / $fs) * $lh}em;
+	line-height: #{$baseline-unit * $lh - 2}px;
+
+	@if $mb > 0 {
+		margin-bottom: $mb * $alpha-font-size * 1px;
+		margin-bottom: $mb * 1rem;
+	}
+
+	@if $mt > 0 {
+		margin-top: $mt * $alpha-font-size * 1px;
+		margin-top: $mt * 1rem;
+	}
+
+	@if $pt > 0 {
+		padding-top: $pt * $alpha-font-size * 1px;
+		padding-top: $pt * 1rem;
+	}
+	@if $pb > 0 {
+		padding-bottom: $pb * $alpha-font-size * 1px;
+		padding-bottom: $pb * 1rem;
 	}
 }
 
