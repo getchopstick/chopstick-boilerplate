@@ -5,12 +5,12 @@
 // Button sizes
 
 @mixin btn-lg {
-	@include px-padding-lr(2,2);
+	@include px-padding-lr(1.5,1.5);
 	@include input-dimensions($ms-2,1,0,.75,.75);
 }
 
 @mixin btn-md {
-	@include px-padding-lr(1.5,1.5);
+	@include px-padding-lr(1.25,1.25);
 	@include input-dimensions($ms-2,1,0,.5,.5);
 }
 

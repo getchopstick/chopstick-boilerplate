@@ -22,6 +22,10 @@
 
 }
 
+.col {
+	@include px-padding-lr(1,1);
+}
+
 .last-col {
 
 	@include mq($bp2) {

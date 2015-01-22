@@ -89,6 +89,7 @@
 
 .btn--beta-ui {
 	background-color: $beta-ui-color;
+	border-color: $beta-ui-color;
 
 	&,
 	&:visited {
@@ -106,9 +107,9 @@
 	}
 }
 
-// btn-rows
+// btn-group
 
-.btn-row {
+.btn-group {
 	@extend %clearfix;
 	position: relative;
 

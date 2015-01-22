@@ -4,11 +4,6 @@
 // Default markup for the form elements, based on the settings file.
 //
 
-form {
-	// padding: 0 0 em(14);
-	@include margin-bottom(1);
-}
-
 legend,
 label {
 	display: block;

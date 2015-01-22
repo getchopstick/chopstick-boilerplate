@@ -32,14 +32,8 @@
 
 
 	.example-form-grid {
-		label {
-			@include box-(12,1,1);
-		}
 
 		@include mq($bp2) {
-			label {
-				@include box-(6,1,1);
-			}
 
 			.name {
 				@include box-(6,1,.5)
