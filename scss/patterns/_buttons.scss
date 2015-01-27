@@ -23,6 +23,8 @@
 	box-sizing: content-box;
 
 	-webkit-appearance: none;
+   	-moz-appearance:    none;
+   	appearance:         none;
 	-webkit-font-smoothing: antialiased;
 
 	&:hover,

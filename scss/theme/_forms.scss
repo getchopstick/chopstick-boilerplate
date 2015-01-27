@@ -31,9 +31,11 @@ input[type="datetime-local"],
 input[name="field_country_code"],
 input[name="field_city_code"],
 input[name="field_phone_int"],
-select[multiple],
 textarea {
 	-webkit-appearance: none;
+	-moz-appearance:    none;
+	-ms-appearance: 	none;
+	appearance:         none;
 	font-smoothing: antialiased;
 	background-color: $delta-ui-color;
 	border-radius: $radius;
@@ -45,6 +47,7 @@ textarea {
 	display: block;
 	outline: none;
 	line-height: normal;
+	border-radius: $radius;
 	@include input-md;
 
 	&:focus {
@@ -79,6 +82,14 @@ textarea {
 	height: auto;
 	resize: none;
 }
+
+// select, depends on the project. Use a custom select plugin to properly style these.
+
+select,
+select[multiple] {
+
+}
+
 
 // Placeholders
 
