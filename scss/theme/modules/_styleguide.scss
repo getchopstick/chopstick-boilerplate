@@ -8,10 +8,11 @@
 
 	.v-styleguide .section-title {
 		color: $beta-text-color;
-		font-weight: $beta-font-weight;
+		// font-weight: $beta-font-weight;
 		border-bottom: 1px solid $beta-ui-color-light;
 		@include padding-bottom(1);
-		@include text-dimensions($alpha-font-size,1);
+		@include padding-top(1);
+		@include text-dimensions($alpha-font-size,1,2);
 	}
 
 	.v-styleguide .scss {
