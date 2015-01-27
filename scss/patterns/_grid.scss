@@ -8,15 +8,6 @@
 	max-width: $grid-width/$alpha-font-size*1em;
 
 	.row {
-		padding: 0;
-	}
-
-}
-
-.row .row {
-	padding: 0;
-
-	@include mq($bp2) {
 		@include px-margin-lr(-1,-1);
 	}
 
