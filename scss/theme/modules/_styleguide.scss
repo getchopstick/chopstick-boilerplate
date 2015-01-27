@@ -9,8 +9,9 @@
 	.v-styleguide .section-title {
 		color: $beta-text-color;
 		font-weight: $beta-font-weight;
-		border-bottom: 1px solid $beta-text-color;
-		@include text-dimensions($alpha-font-size,1,1,0,1);
+		border-bottom: 1px solid $beta-ui-color-light;
+		@include padding-bottom(1);
+		@include text-dimensions($alpha-font-size,1);
 	}
 
 	.v-styleguide .scss {
@@ -62,7 +63,10 @@
 				@include box-(12,1,1);
 			}
 
-			.oneliner .postfix {
+
+		}
+
+		.oneliner .postfix {
 				@include box-(6,0,1);
 			}
 
@@ -77,5 +81,5 @@
 				.oneliner .prefix input {
 					@include prefix;
 				}
-		}
+
 	}

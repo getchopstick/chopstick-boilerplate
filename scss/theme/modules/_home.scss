@@ -3,13 +3,18 @@
 //
 
 .intro-holder {
+	border-bottom: 1px solid $beta-ui-color-light;
+
+	@include mq($bp2) {
+		@include padding-tb(2,1);
+	}
 
 	@include mq($bp4) {
-		@include padding-tb(4,3);
+		@include padding-tb(6,5);
 	}
 
 	@include mq($bp5) {
-		@include padding-tb(7,6);
+		@include padding-tb(10,9);
 	}
 
 }

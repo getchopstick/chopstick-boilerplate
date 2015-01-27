@@ -4,11 +4,10 @@
 
 .holder {
 	background-color: $delta-ui-color;
-	border-bottom: 1px solid $beta-ui-color-light;
-	@include padding-tb(1,0);
+	@include padding-top(1);
 
-	@include mq($bp4) {
-		@include padding-tb(2,1);
+	@include mq($bp2) {
+		@include px-padding-lr(1,1);
 	}
 
 }
@@ -31,8 +30,14 @@
 	padding: 0;
 	border: none;
 
+	@include mq($bp2) {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
 	@include mq($bp4) {
-		padding: 0;
+		padding-top: 0;
+		padding-bottom: 0;
 	}
 
 }
@@ -41,7 +46,8 @@
 	float: left;
 	font-family: $alpha-font-family;
 	font-weight: $alpha-font-weight;
-	@include text-dimensions($alpha-font-size,1,0);
+	margin-bottom: 0;
+	@include text-dimensions($alpha-font-size,1);
 
 	a {
 		display: block;
@@ -52,6 +58,10 @@
 		&:hover,
 		&:focus {
 			color: $alpha-text-color;
+		}
+
+		@include mq($bp3) {
+			@include padding-tb(1.25,1.25);
 		}
 
 	}
@@ -86,7 +96,7 @@
 		@include text-dimensions($alpha-font-size,1,0,.25,.25);
 
 		@include mq($bp3) {
-			@include padding-tb(1,1);
+			@include padding-tb(1.25,1.25);
 		}
 
 
@@ -127,7 +137,7 @@
 	display: block;
 	height: 2em;
 	width: 2em;
-	margin-top: 1.25em;
+	margin-top: 0.75em;
 	float: right;
 	text-indent: -9999px;
 	@include text-dimensions($alpha-font-size,1,0);
@@ -145,8 +155,37 @@
 }
 
 //
+// main
+//
+
+.main-holder {
+	border-bottom: 1px solid $beta-ui-color-light;
+
+	@include mq($bp2) {
+		@include padding-tb(2,1);
+	}
+
+	@include mq($bp5) {
+		@include padding-tb(3,2);
+	}
+
+}
+
+//
 // Doormat
 //
+
+.doormat-holder {
+
+	@include mq($bp2) {
+		@include padding-tb(2,1);
+	}
+
+	@include mq($bp5) {
+		@include padding-tb(3,2);
+	}
+
+}
 
 .doormat-col-4 {
 	@include box-(12,1,1);

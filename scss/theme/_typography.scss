@@ -10,29 +10,29 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0;
 	font-family: $beta-font-family;
 	font-weight: $alpha-font-weight;
 	text-rendering: optimizelegibility;
+	@include margin-bottom(1);
 }
 
 h1 {
-	@include text-dimensions($ms6,1.75,1);
+	@include text-dimensions($ms6,1.75);
 }
 
 h2 {
-	@include text-dimensions($ms4,1.5,1);
+	@include text-dimensions($ms4,1.5);
 }
 
 h3 {
-	@include text-dimensions($ms2,1.25,1);
+	@include text-dimensions($ms2,1.25);
 }
 
 h4,
 h5,
 h6 {
 	font-weight: $beta-font-weight;
-	@include text-dimensions($alpha-font-size,1,1);
+	@include text-dimensions($alpha-font-size,1);
 }
 
 p,
@@ -41,7 +41,8 @@ ul,
 dl,
 table,
 address {
-	@include text-dimensions($alpha-font-size,1,1);
+	@include text-dimensions($alpha-font-size,1);
+	@include margin-bottom(1);
 }
 
 pre {
