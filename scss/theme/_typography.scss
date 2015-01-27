@@ -72,6 +72,13 @@ caption {
 
 img {
 	max-width: 100%;
+
+	// google maps images fix https://coderwall.com/p/nl1lba/img-max-width-100-breaks-google-maps
+
+	.gmap & {
+		max-width: none;
+	}
+
 }
 
 small,
