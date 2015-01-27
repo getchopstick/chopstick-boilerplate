@@ -33,11 +33,7 @@ $basefontpercent: $alpha-font-size/16 * 100;
 
 @mixin input-dimensions($fs: 1, $lh: 1, $mb: 0, $pt: 0, $pb: 0, $mt: 0){
 	font-size: #{$fs}px;
-	// font-size: $fs/$alpha-font-size*1rem;
-	line-height: $alpha-line-height;
-	// line-height: #{($baseline-unit / $fs) * $lh}em;
-	// line-height: normal;
-	// height: #{($baseline-unit / $fs) * $lh}em;
+	font-size: $fs/$alpha-font-size*1rem;
 
 	@if $mb > 0 {
 		@include margin-bottom($mb);
