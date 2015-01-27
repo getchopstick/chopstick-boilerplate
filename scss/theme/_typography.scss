@@ -17,7 +17,7 @@ h6 {
 }
 
 h1 {
-	@include text-dimensions($ms6,1.75);
+	@include text-dimensions($ms6,2);
 }
 
 h2 {
@@ -72,6 +72,11 @@ caption {
 
 img {
 	max-width: 100%;
+}
+
+small,
+.small {
+	@include text-dimensions($ms-1,1,1);
 }
 
 //
