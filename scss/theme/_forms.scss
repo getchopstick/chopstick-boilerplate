@@ -90,6 +90,22 @@ select[multiple] {
 
 }
 
+// checkboxes and radio's
+
+.input--option {
+	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.label--option {
+	margin: 0;
+	padding: 0;
+	width: auto;
+	display: inline-block;
+}
+
+
 
 // Placeholders
 
