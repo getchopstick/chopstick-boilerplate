@@ -43,15 +43,13 @@ textarea {
 	margin: 0;
 	width: 100%;
 	display: block;
-	// line-height: normal;
-	// @include border-box;
-	// box-sizing: content-box;
+	outline: none;
 	@include input-md;
 
 	&:focus {
 		color: $alpha-text-color;
-		outline-color: $gamma-ui-color;
-		border-color: darken($gamma-ui-color, 20);
+		border-color: $alpha-ui-color;
+		box-shadow: 0 0 2px rgba($alpha-ui-color,.5);
 	}
 
 	&.input--error {
@@ -59,6 +57,7 @@ textarea {
 
 		&:focus {
 			border-color: $error-color;
+			box-shadow: 0 0 2px rgba($error-color,.5);
 		}
 
 	}
@@ -77,6 +76,7 @@ textarea {
 
 textarea {
 	height: auto;
+	resize: none;
 }
 
 // Placeholders

@@ -11,12 +11,12 @@
 
 @mixin btn-md {
 	@include px-padding-lr(1.25,1.25);
-	@include input-dimensions($ms-2,1,0,.5,.5);
+	@include input-dimensions($ms-2,1,0,.55,.45);
 }
 
 @mixin btn-sm {
 	@include px-padding-lr(.75,.75);
-	@include input-dimensions($ms-3,1,0,.25,.25);
+	@include input-dimensions($ms-3,1,0,.3,.2);
 }
 
 // Button display
