@@ -4,7 +4,7 @@
 
 .holder {
 	background-color: $delta-ui-color;
-	@include padding-top(1);
+	@include padding-top(1.5);
 
 	@include mq($bp2) {
 		@include px-padding-lr(1,1);
@@ -162,11 +162,11 @@
 	border-bottom: 1px solid $beta-ui-color-light;
 
 	@include mq($bp2) {
-		@include padding-tb(2,1);
+		@include padding-tb(2,.5);
 	}
 
 	@include mq($bp5) {
-		@include padding-tb(3,2);
+		@include padding-tb(3,1.5);
 	}
 
 }
@@ -178,11 +178,11 @@
 .doormat-holder {
 
 	@include mq($bp2) {
-		@include padding-tb(2,1);
+		@include padding-tb(2,.5);
 	}
 
 	@include mq($bp5) {
-		@include padding-tb(3,2);
+		@include padding-tb(3,1.5);
 	}
 
 }

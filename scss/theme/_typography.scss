@@ -13,7 +13,7 @@ h6 {
 	font-family: $beta-font-family;
 	font-weight: $alpha-font-weight;
 	text-rendering: optimizelegibility;
-	@include margin-bottom(1);
+	@include margin-bottom($alpha-line-height);
 }
 
 h1 {
@@ -42,7 +42,7 @@ dl,
 table,
 address {
 	@include text-dimensions($alpha-font-size,1);
-	@include margin-bottom(1);
+	@include margin-bottom($alpha-line-height);
 }
 
 pre {
@@ -83,7 +83,7 @@ img {
 
 small,
 .small {
-	@include text-dimensions($ms-1,1,1);
+	@include text-dimensions($ms-1,1,$alpha-line-height);
 }
 
 //
