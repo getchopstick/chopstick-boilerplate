@@ -151,6 +151,15 @@ $error-color 				: $red;
 $success-color 				: $green;
 $notice-color 				: $yellow;
 
+// Greyscale of alpha-ui-color
+
+$grey-00 : hsl(hue($alpha-ui-color),10,45);
+$grey-01 : hsl(hue($alpha-ui-color),10,55);
+$grey-02 : hsl(hue($alpha-ui-color),15,65);
+$grey-03 : hsl(hue($alpha-ui-color),15,75);
+$grey-04 : hsl(hue($alpha-ui-color),15,85);
+$grey-05 : hsl(hue($alpha-ui-color),25,95);
+
 // Links
 
 $alpha-link-color			: $alpha-ui-color;
