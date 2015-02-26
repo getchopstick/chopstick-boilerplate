@@ -174,7 +174,7 @@ gulp.task('jekyll--rebuild', ['jekyll--build'], function () {
 });
 
 gulp.task('browsersync', function() {
-	browserSync.init(null, settings.browserSync);
+	browserSync.init(settings.browserSync);
 });
 
 
