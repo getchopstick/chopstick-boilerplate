@@ -2,6 +2,6 @@
 .DS_Store
 _site/
 css/
-bower_components/
+vendor/
 node_modules/
 npm-debug.log
