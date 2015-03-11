@@ -26,6 +26,13 @@
 	@import "tools.alerts";
 	@import "tools.ui";
 
+// Base
+
+	@import "base.base";
+	@import "base.debug";
+	@import "base.forms";
+	@import "base.typography";
+
 // Components
 
 	@import "components.frame";
@@ -34,8 +41,9 @@
 	@import "components.styleguide-syntax";
 	@import "components.styleguide";
 
-// objects
+// Objects
 
+	@import "objects.grid";
 	@import "objects.alerts";
 	@import "objects.buttons";
 	@import "objects.helpers";
@@ -45,18 +53,6 @@
 	@import "objects.tables";
 	@import "objects.colors";
 
-// Patterns: feel free to include only what you need.
-
-	// @import "patterns/grid";
-
-
-// Theme: feel free to delete any or all.
-
-	// @import "theme/base";
-	// @import "theme/typography";
-	// @import "theme/forms";
-	// @import "theme/debug";
-
 // Print
 
-	@media print {@import "theme/print";}
+	@media print {@import "base.print";}
