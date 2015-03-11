@@ -59,6 +59,7 @@
  *      - components.styleguide-syntax
  *
  *  5. Trumps
+ *      - trumps.widths
  *      - trumps.hacks
  *      - trumps.debug
  *      - trumps.baseline-grid
@@ -115,6 +116,7 @@
     @import "components.styleguide-syntax";
 
     /* 5. Trumps */
+    @import "trumps.widths";
     @import "trumps.hacks";
     @import "trumps.debug";
     @import "trumps.baseline-grid";

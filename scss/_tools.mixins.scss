@@ -120,13 +120,42 @@
     @include mdrn-svg { background: $bg-color url($filename + '.svg') $position $repeat; background-size: $size; }
 }
 
-// Media query mixin.
+//
+// Media Query mixin (old version)
 // @include mq(#point, #query1, #query2);
-
+//
 @mixin mq($point, $query1: min, $query2: width) {
     @media (#{$query1}-#{$query2}: $point) {
         @content;
     }
+}
+
+//
+// Media Query mixin (new version)
+// @include mq(#point);
+//
+
+@mixin media-query($mq) {
+  // Loop through the list of breakpoints we’ve provided in our settings file.
+  @each $breakpoint in $breakpoints {
+
+    // Grab the alias and the condition from their respective locations in
+    // the list.
+    $alias:     nth($breakpoint, 1);
+    $condition: nth($breakpoint, 2);
+
+    // If the media query we’ve specified has an alias and a condition...
+    @if ($mq == $alias and $condition) {
+
+      // ...tell the mixin that we’ve found it...
+      $breakpoint-found: true;
+
+      // ...and spit it out here.
+      @media #{$condition} {
+        @content;
+      }
+    }
+  }
 }
 
 // Vertically center any object within its container. Works in IE9 and up.

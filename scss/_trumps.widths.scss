@@ -1,0 +1,33 @@
+/*
+  Widths
+*/
+
+// By default we will create halves, thirds, quarters, and fifths.
+$columns: (
+  2,
+  3,
+  4,
+  5
+) !default;
+
+// Loop through each of our column sizes and generate its width classes.
+@each $column in $columns {
+  @include widths($column);
+}
+
+// Loop over our breakpoints defined in _settings.responsive.scss
+@each $breakpoint in $breakpoints {
+
+  // Get the name of the breakpoint.
+  $alias: nth($breakpoint, 1);
+
+  @include media-query($alias) {
+
+    // Loop through each of our column sizes and generate its responsive width
+    // classes.
+    @each $column in $columns {
+      @include widths($column, -#{$alias});
+    }
+
+  }
+}
