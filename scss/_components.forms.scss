@@ -1,20 +1,20 @@
 // Input sizes
-.input--sm {
+.c-input--sm {
     @include input-sm;
 }
 
-.input--lg {
+.c-input--lg {
     @include input-lg;
 }
 
 // checkboxes and radio's
-.input--option {
+.c-input--option {
     margin: 0;
     display: inline-block;
     vertical-align: middle;
 }
 
-.label--option {
+.c-label--option {
     margin: 0;
     padding: 0;
     width: auto;
@@ -22,13 +22,13 @@
 }
 
 // Errors
-.form__error {
+.c-form__error {
     display: block;
     color: $error-color;
     @include padding-top(.25);
 }
 
-.input--error  {
+.c-input--error  {
     border-color: $error-color;
 
     &:focus {
