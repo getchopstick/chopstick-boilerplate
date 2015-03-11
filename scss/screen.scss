@@ -1,7 +1,3 @@
-//
-// Comment or uncomment whatever you need in this file.
-//
-
 // Settings
 
     @import "settings.global";
@@ -23,21 +19,18 @@
     @import "tools.pagination";
     @import "tools.alerts";
 
-// Base
+// Generic
 
-    @import "base.reset";
-    @import "base.base";
-    @import "base.forms";
-    @import "base.typography";
-    @import "base.debug";
+    @import "generic.normalize";
+    @import "generic.reset";
+    @import "generic.box-sizing";
 
-// Components
+// Elements
 
-    @import "components.frame";
-    @import "components.grid";
-    @import "components.home";
-    @import "components.styleguide-syntax";
-    @import "components.styleguide";
+    @import "element.page";
+    @import "elements.typography";
+    @import "elements.images";
+    @import "elements.forms";
 
 // Objects
 
@@ -51,6 +44,18 @@
     @import "objects.tables";
     @import "objects.colors";
 
-// Print
+// Components
 
-    @media print {@import "base.print";}
+    @import "components.frame";
+    @import "components.grid";
+    @import "components.home";
+    @import "components.forms";
+    @import "components.styleguide";
+    @import "components.styleguide-syntax";
+
+// Trumps
+
+    @import "trumps.hacks";
+    @import "trumps.debug";
+    @import "trumps.baseline-grid";
+    @import "trumps.print";

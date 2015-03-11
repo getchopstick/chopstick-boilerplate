@@ -1,0 +1,38 @@
+// Input sizes
+.input--sm {
+    @include input-sm;
+}
+
+.input--lg {
+    @include input-lg;
+}
+
+// checkboxes and radio's
+.input--option {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.label--option {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: inline-block;
+}
+
+// Errors
+.form__error {
+    display: block;
+    color: $error-color;
+    @include padding-top(.25);
+}
+
+.input--error  {
+    border-color: $error-color;
+
+    &:focus {
+        border-color: $error-color;
+        box-shadow: 0 0 2px rgba($error-color,.5);
+    }
+}

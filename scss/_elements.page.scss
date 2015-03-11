@@ -1,25 +1,17 @@
-//
-// Base
-// ---
-// Default markup for the most common HTML elements, based on the settings file.
-//
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
+/*
+    Elements: forms
+    ---
+    Default markup for the most common HTML elements
+*/
 
 html {
-    box-sizing: border-box;
     font: $alpha-font-weight $alpha-font-size/16*100%/#{$alpha-line-height} $alpha-font-family ;
     -webkit-overflow-scrolling: touch;
-    -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
     background-color: $alpha-text-color;
 
     @include mq($bp5) {
         font-size: $alpha-font-size/16*112.5%;
     }
-
 }
 
 body {
@@ -38,21 +30,4 @@ body {
     background-color: $alpha-text-color;
     color: lighten($alpha-text-color, 65%);
     text-shadow: none;
-}
-
-hr {
-    border: 1px solid $beta-ui-color-light;
-    border-width: 1px 0 0;
-    clear: both;
-    margin-top: 0;
-    @include margin-bottom(1);
-}
-
-//
-// Fix a > img problem
-//
-
-img {
-    vertical-align: top;
-    border: 0;
 }

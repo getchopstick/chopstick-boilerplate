@@ -1,0 +1,15 @@
+//
+// Baseline grid
+// ---
+// This can be toggled in the _settings.sccs file (default is false)
+// There are also options to set the color of the grid and the classname (default is '.holder')
+// (inspired by the baseline grid in OOCSS --> http://bit.ly/PF6NhY)
+//
+@if $show-baseline-grid == true {
+
+    .#{$baseline-holder} {
+        background-image: linear-gradient(transparent 50%, $grid-color 50%); // draw the baseline grid
+        background-size: em($alpha-baseline-grid) em($alpha-baseline-grid); // calculate the baselinegrid in em's
+    }
+
+}
