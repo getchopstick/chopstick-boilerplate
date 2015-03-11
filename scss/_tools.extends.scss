@@ -3,9 +3,9 @@
 //
 
 // Clearfix.
-// @extend %clearfix;
+// @mixin clearfix
 
-%clearfix {
+@mixin clearfix {
 	*zoom : 1;
 
 	&:before,
@@ -22,7 +22,7 @@
 // Prevent Long URL’s From Breaking Out of Container.
 // http://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container
 
-%word-break {
+@mixin word-break {
 	word-break: break-all;
 	hyphens: auto;
 }
@@ -30,7 +30,7 @@
 // A better way to hide text
 // @extend %hide-text;
 
-%hide-text {
+@mixin hide-text {
 	font: 0/0 a;
 	color: transparent;
 	text-shadow: none;
