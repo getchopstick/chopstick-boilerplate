@@ -1,0 +1,76 @@
+// Alerts
+
+%alert {
+	position: relative;
+	padding: em($alpha-baseline-grid*2) em($alpha-baseline-grid*3);
+	@include margin-bottom(1);
+	cursor: pointer;
+	@include block-skin;
+
+	a {
+		text-decoration: underline;
+	}
+
+	a:hover,
+	a:active,
+	a:focus {
+		text-decoration: none;
+	}
+
+	a.close {
+		position: absolute;
+		top: #{$alpha-line-height/2}em;
+		right: #{$alpha-line-height/2}em;
+		display: block;
+		line-height: 1;
+		text-decoration: none;
+	}
+
+	p {
+		margin-bottom: 0;
+		// @include text-dimensions($alpha-font-size,1);
+	}
+}
+
+@mixin alert {
+	@extend %alert;
+
+	strong {@include text-color($gamma-ui-color);}
+
+	a {
+		@include text-color($gamma-ui-color);
+	}
+}
+
+@mixin alert-error {
+	@extend %alert;
+	@include block-skin($error-color);
+
+	strong {@include text-color($error-color);}
+
+	a {
+		@include text-color($error-color);
+	}
+}
+
+@mixin alert-success {
+	@extend %alert;
+	@include block-skin($success-color);
+
+	strong {@include text-color($success-color);}
+
+	a {
+		@include text-color($success-color);
+	}
+}
+
+@mixin alert-notice {
+	@extend %alert;
+	@include block-skin($notice-color);
+
+	strong {@include text-color($notice-color);}
+
+	a {
+		@include text-color($notice-color);
+	}
+}

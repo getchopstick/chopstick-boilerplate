@@ -1,0 +1,72 @@
+// Button sizes
+
+@mixin btn-lg {
+	@include px-padding-lr(1.5,1.5);
+	@include input-dimensions($ms-1,1,0,1.05,.95);
+}
+
+@mixin btn-md {
+	@include px-padding-lr(1.25,1.25);
+	@include input-dimensions($ms-1,1,0,.8,.7);
+}
+
+@mixin btn-sm {
+	@include px-padding-lr(.75,.75);
+	@include input-dimensions($ms-2,1,0,.55,.45);
+}
+
+// Button display
+
+@mixin btn-inlineblock {
+	display: inline-block;
+	width: auto;
+}
+
+@mixin btn-float($float:left) {
+	display: block;
+	float: $float;
+}
+
+// Button color
+// use: @mixin btn-color(color1[,color2]);
+
+@mixin btn-color($c1: $alpha-ui-color, $c2: lighten($c1, $depth)) {
+
+	border: $border-width $border-style $c1;
+
+	background-color: $c1;
+	@if $depth > 0 {
+		background-image: linear-gradient($c1, $c2);
+	}
+
+	@if $highlight {
+		box-shadow: inset 0 1px 0 rgba(#FFF, $highlight/100%);
+	}
+
+	@include text-color($c1);
+
+	&:hover,
+	&:focus {
+		border: $border-width $border-style lighten($c1, 100-$contrast);
+		background-color: lighten($c1, 100-$contrast);
+		@if $depth > 0 {
+			background-image: linear-gradient(lighten($c1, 100-$contrast), lighten($c2, 100-$contrast));
+		}
+		@include text-color(lighten($c1, 100-$contrast));
+
+	}
+
+	&:active {
+		background-color: lighten($c1, 100-$contrast);
+		@if $depth > 0 {
+			background-image: linear-gradient(lighten($c2, 100-$contrast), lighten($c1, 100-$contrast));
+		}
+
+		box-shadow: none;
+		@include text-color(lighten($c1, 100-$contrast));
+	}
+
+	&:visited {
+		@include text-color($c1);
+	}
+}

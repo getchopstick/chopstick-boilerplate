@@ -2,7 +2,9 @@
 // Comment or uncomment whatever you need in this file.
 //
 
-// Settings: open and tweak this file.
+	@import "base.reset";
+
+// Settings
 
 	@import "settings.global";
 	@import "settings.grid";
@@ -11,18 +13,36 @@
 	@import "settings.ms";
 	@import "settings.ui";
 
-// Vendor Dependencies: add things like bourbon or compass imports here.
+// Tools
 
-	// @import "compass";
+	@import "tools.buttons";
+	@import "tools.extends";
+	@import "tools.functions";
+	@import "tools.grid";
+	@import "tools.inputs";
+	@import "tools.mixins";
+	@import "tools.pagination";
+	@import "tools.typography";
+	@import "tools.alerts";
+	@import "tools.ui";
 
-// Shared: do not delete any of this.
+// Components
 
-	@import "shared/functions";
-	@import "shared/extends";
-	@import "shared/mixins";
-	@import "shared/grid";
-	@import "shared/typography";
-	@import "shared/ui";
+	@import "components.frame";
+	@import "components.grid";
+	@import "components.home";
+	@import "components.styleguide-syntax";
+	@import "components.styleguide";
+
+// objects
+
+	@import "objects.alerts";
+	@import "objects.buttons";
+	@import "objects.helpers";
+	@import "objects.icons";
+	@import "objects.media";
+	@import "objects.pagination";
+	@import "objects.tables";
 
 // Patterns: feel free to include only what you need.
 

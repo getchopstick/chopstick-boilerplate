@@ -1,0 +1,86 @@
+//
+// module: elements
+//
+
+.main-content {
+	@include box-(12,1,1);
+}
+
+	.v-styleguide .section-title {
+		color: $beta-text-color;
+		// font-weight: $beta-font-weight;
+		border-bottom: 1px solid $beta-ui-color-light;
+		@include padding-bottom(1);
+		@include padding-top(1);
+		@include text-dimensions($alpha-font-size,1,2);
+	}
+
+	.v-styleguide .scss {
+		display: block;
+		color: $alpha-text-color;
+		background-color: lighten($gamma-ui-color,10);
+		border: $border-width $border-style $gamma-ui-color;
+		border-radius: $radius;
+		@include margin-tb(0, 1);
+		@include padding-tb(.5, .5);
+		@include px-padding-lr(1,1);
+	}
+
+	.v-styleguide .color {
+		width: 100%;
+		height: 60px;
+		box-shadow: 0 0 1px 3px $white, 0 0 5px 2px rgba($black,.33);
+	}
+
+
+	.example-form-grid {
+
+		@include mq($bp2) {
+
+			.name {
+				@include box-(6,1,.5)
+			}
+
+			.email {
+				@include box-(6,.5,1)
+			}
+
+			.street {
+				@include box-(8,1,.5);
+			}
+
+			.city {
+				@include box-(8,.5,1);
+			}
+
+			.number {
+				@include box-(4,.5,1);
+			}
+			.zip-code {
+				@include box-(4,1,.5);
+			}
+
+			.full-width {
+				@include box-(12,1,1);
+			}
+
+
+		}
+
+		.oneliner .postfix {
+				@include box-(6,0,1);
+			}
+
+				.oneliner .postfix button {
+					@include postfix;
+				}
+
+			.oneliner .prefix {
+				@include box-(6,1,0);
+			}
+
+				.oneliner .prefix input {
+					@include prefix;
+				}
+
+	}

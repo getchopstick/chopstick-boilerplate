@@ -1,0 +1,26 @@
+/*
+  Icons
+*/
+
+.icon {
+	@extend %hide-text;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: 1px;
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+	.icon--toggle {
+		background-image: url('../img/png/toggle--sprite.png');
+
+		.svg & {
+			background-image: url('../img/svg/toggle--sprite.svg');
+		}
+
+		.is-toggled & {
+			background-position: center -16px;
+		}
+	}

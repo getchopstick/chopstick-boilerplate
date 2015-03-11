@@ -1,0 +1,36 @@
+// Inputs
+
+@mixin baseline-dimensions-form($msi: 0, $pt: 0, $pb: 0, $l: $alpha-leading) {
+
+	@include baseline-dimensions($msi, $pt, $pb, $l);
+
+	@if $msi == 0 {
+		$line-height: ((ceil($alpha-font-size/$alpha-baseline-grid)*$alpha-baseline-grid)+($alpha-baseline-grid*$l))/$alpha-font-size;
+		$padding-top: $alpha-baseline-grid/$alpha-font-size*$pt*1em;
+		$padding-bottom: $alpha-baseline-grid/$alpha-font-size*$pb*1em;
+		height: $line-height + $padding-top + $padding-bottom;
+	}
+
+	@if $msi != 0 {
+		$line-height: ((ceil(ms($msi)/$alpha-baseline-grid)*$alpha-baseline-grid)+($alpha-baseline-grid*$l))/(ms($msi));
+		$padding-top: $alpha-baseline-grid*$pt/ms($msi)*1em;
+		$padding-bottom: $alpha-baseline-grid*$pb/ms($msi)*1em;
+		height: $line-height + $padding-top + $padding-bottom;
+	}
+
+}
+
+@mixin input-lg {
+	@include px-padding-lr(1,1);
+	@include input-dimensions($ms-1,1,0,1,1);
+}
+
+@mixin input-md {
+	@include px-padding-lr(.75,.75);
+	@include input-dimensions($ms-1,1,0,.75,.75);
+}
+
+@mixin input-sm {
+	@include px-padding-lr(.5,.5);
+	@include input-dimensions($ms-2,1,0,.5,.5);
+}

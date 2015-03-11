@@ -1,0 +1,44 @@
+//
+// module: home
+//
+
+.intro-holder {
+	border-bottom: 1px solid $beta-ui-color-light;
+
+	@include mq($bp2) {
+		@include padding-tb(2,.5);
+	}
+
+	@include mq($bp4) {
+		@include padding-tb(6,4.5);
+	}
+
+	@include mq($bp5) {
+		@include padding-tb(10,8.5);
+	}
+
+}
+
+.intro {
+	@include box-(12,1,1);
+
+	h1 {
+		font-weight: 300;
+	}
+
+	p {
+		color: $beta-text-color;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+
+}
+
+.main-col-6 {
+	@include box-(12,1,1);
+
+	@include mq($bp4) {
+		@include box-(6,1,1);
+	}
+
+}

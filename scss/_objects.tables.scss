@@ -1,0 +1,54 @@
+/*
+  Tables
+*/
+
+table {
+	text-align: left;
+	width: 100%;
+	font-family: $alpha-font-family;
+	border-spacing: 0;
+	border-collapse: collapse;
+	@include text-dimensions(14,1,2);
+}
+
+tr {
+	border-bottom: 1px solid lighten($gamma-ui-color, 5);
+}
+
+th, thead {
+	display: none;
+}
+
+td {
+	display: block;
+	padding: .25em 1em .25em 0;
+
+	&:before {
+		content: attr(headers)": ";
+		font-weight: bold;
+
+		// options
+			width: 50%; // faux th width
+			display: inline-block;
+		// end options
+	}
+}
+
+@include mq($bp2) {
+	thead {
+		display: table-header-group;
+	}
+
+	th {
+		display: table-cell;
+		padding: .25em 1em .25em 0;
+	}
+
+	td {
+		display: table-cell;
+
+		&:before {
+			display: none;
+		}
+	}
+}

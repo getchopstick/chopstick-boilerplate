@@ -1,0 +1,41 @@
+//
+// Pagination mixin
+//
+
+%pagination {
+	@extend %clearfix;
+	width: 100%;
+	overflow: hidden;
+
+	ul {
+		margin: #{$alpha-line-height}em 0;
+		@include horizontal-nav;
+	}
+
+	a,
+	span {
+		display: block;
+		float: left;
+	}
+
+}
+
+@mixin pagination {
+	@extend %pagination;
+}
+
+@mixin pagination-centered {
+	@extend %pagination;
+
+	.inner {
+		float: left;
+		position: relative;
+		left: 50%;
+	}
+
+		ul {
+			overflow: hidden;
+			position: relative;
+			left: -50%;
+		}
+}
