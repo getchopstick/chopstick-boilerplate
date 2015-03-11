@@ -2,7 +2,7 @@
 // Frame
 //
 
-.holder {
+.c-holder {
     background-color: $delta-ui-color;
     @include padding-top(1.5);
 
@@ -16,18 +16,17 @@
 // Header
 //
 
-.header {
+.c-header {
     @include box-(12,1,1);
-
-    .inner {
-        border-bottom: 1px solid $beta-ui-color-light;
-
-        @include clearfix;
-    }
-
 }
 
-.header-holder {
+.c-header__inner {
+    border-bottom: 1px solid $beta-ui-color-light;
+
+    @include clearfix;
+}
+
+.c-header-holder {
     padding: 0;
     border: none;
 
@@ -43,98 +42,89 @@
 
 }
 
-.logo {
+.c-logo {
     float: left;
     font-family: $alpha-font-family;
     font-weight: $alpha-font-weight;
     margin-bottom: 0;
     @include text-dimensions($alpha-font-size,1);
+}
 
-    a {
-        display: block;
-        text-decoration: none;
-        color: $beta-text-color;
-        @include text-dimensions($alpha-font-size,1,0,1,1);
+.c-logo__link {
+    display: block;
+    text-decoration: none;
+    color: $beta-text-color;
+    @include text-dimensions($alpha-font-size,1,0,1,1);
 
-        &:hover,
-        &:focus {
-            color: $alpha-text-color;
-        }
+    &:hover,
+    &:focus {
+	color: $alpha-text-color;
+    }
 
-        @include mq($bp3) {
-            @include padding-tb(1.25,1.25);
-        }
-
+    @include mq($bp3) {
+	@include padding-tb(1.25,1.25);
     }
 
 }
 
-.main-nav {
+.c-main-nav {
     width: 100%;
     float: left;
 
-    ul {
-        font-family: $alpha-font-family;
-        border-top: 1px solid $beta-ui-color-light;
-        @include list-nav;
-        @include margin-bottom(.75);
-        @include padding-top(.75);
+    @include mq($bp3) {
+	display: block !important;
+	width: auto;
+	float: right;
 
-        @include mq($bp3) {
-            border-top: none;
-            padding-top: 0;
-            margin-bottom: 0;
+
+	li {
+	    @include px-margin-lr(2,0);
         }
 
-        @include clearfix;
-    }
-
-    a {
-        display: block;
-        color: lighten($alpha-text-color,50);
-        text-decoration: none;
-        font-weight: $beta-font-weight;
-        @include text-dimensions($alpha-font-size,1,0,.25,.25);
-
-        @include mq($bp3) {
-            @include padding-tb(1.25,1.25);
-        }
-
-
-    }
-
-    a:hover,
-    .selected a {
-        color: darken($alpha-ui-color,0);
     }
 
 }
 
-.mobile-nav .main-nav {
-    display: none;
-}
-
-.main-nav,
-.mobile-nav .main-nav {
+.c-main-nav__list {
+    font-family: $alpha-font-family;
+    border-top: 1px solid $beta-ui-color-light;
+    @include list-nav;
+    @include margin-bottom(.75);
+    @include padding-top(.75);
 
     @include mq($bp3) {
-        display: block !important;
-        width: auto;
-        float: right;
+	border-top: none;
+	padding-top: 0;
+	margin-bottom: 0;
 
-        ul {
-            @include horizontal-nav();
-        }
-
-        li {
-            @include px-margin-lr(2,0);
-        }
-
+	@include horizontal-nav();
     }
 
+    @include clearfix;
 }
 
-.main-nav-trigger {
+.c-main-nav__list-item {
+    @include px-margin-lr(2,0);
+}
+
+.c-main-nav__link {
+    display: block;
+    color: lighten($alpha-text-color,50);
+    text-decoration: none;
+    font-weight: $beta-font-weight;
+    @include text-dimensions($alpha-font-size,1,0,.25,.25);
+
+    @include mq($bp3) {
+	@include padding-tb(1.25,1.25);
+    }
+
+    &:hover,
+    .is-selected > a {
+	color: darken($alpha-ui-color,0);
+    }
+}
+
+.c-main-nav-trigger {
     display: block;
     height: 2em;
     width: 2em;
@@ -165,7 +155,7 @@
 // main
 //
 
-.main-holder {
+.c-main-holder {
     border-bottom: 1px solid $beta-ui-color-light;
 
     @include mq($bp2) {
@@ -178,11 +168,9 @@
 
 }
 
-//
 // Doormat
-//
 
-.doormat-holder {
+.c-doormat-holder {
 
     @include mq($bp2) {
         @include padding-tb(2,.5);
@@ -194,29 +182,21 @@
 
 }
 
-.doormat-col-4 {
+.c-doormat-col-4 {
     @include box-(12,1,1);
 
     @include mq($bp4) {
         @include box-(4,1,1);
     }
-
 }
 
-//
 // Footer
-//
 
-.footer-holder {
+.c-footer-holder {
     background-color: $alpha-text-color;
     color: lighten($alpha-text-color,70);
-
-    p {
-        padding: 0;
-    }
-
 }
 
-    .footer {
-        @include box-(12,1,1);
-    }
+.c-footer {
+    @include box-(12,1,1);
+}
