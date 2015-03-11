@@ -2,7 +2,9 @@
 // Comment or uncomment whatever you need in this file.
 //
 
-// Settings: open and tweak this file.
+	@import "base.reset";
+
+// Settings
 
 	@import "settings.global";
 	@import "settings.grid";
@@ -11,7 +13,7 @@
 	@import "settings.ms";
 	@import "settings.ui";
 
-// Shared: do not delete any of this.
+// Tools
 
 	@import "tools.buttons";
 	@import "tools.extends";
@@ -23,6 +25,24 @@
 	@import "tools.typography";
 	@import "tools.alerts";
 	@import "tools.ui";
+
+// Components
+
+	@import "components.frame";
+	@import "components.grid";
+	@import "components.home";
+	@import "components.styleguide-syntax";
+	@import "components.styleguide";
+
+// objects
+
+	@import "objects.alerts";
+	@import "objects.buttons";
+	@import "objects.helpers";
+	@import "objects.icons";
+	@import "objects.media";
+	@import "objects.pagination";
+	@import "objects.tables";
 
 // Patterns: feel free to include only what you need.
 
