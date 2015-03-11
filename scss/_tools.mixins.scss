@@ -7,28 +7,28 @@
 // @include horizontal-nav on <ul> or <ol>;
 
 @mixin list-nav {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 @mixin horizontal-nav {
-	li, a {
-		display: block;
-		float: left;
-		zoom: 1;
-	}
+    li, a {
+        display: block;
+        float: left;
+        zoom: 1;
+    }
 }
 
 // Calculate text-color based on background-color
 
 @mixin text-color($c1) {
-	// Calculations based on https://vimeo.com/60224584
-	@if (.2126*red($c1) + .7152*green($c1) + .0722*blue($c1))/255 <= .5 {
-		color: mix(#FFF,$c1,95%);
-	} @else {
-		color: mix(#000,$c1,70%);
-	}
+    // Calculations based on https://vimeo.com/60224584
+    @if (.2126*red($c1) + .7152*green($c1) + .0722*blue($c1))/255 <= .5 {
+        color: mix(#FFF,$c1,95%);
+    } @else {
+        color: mix(#000,$c1,70%);
+    }
 }
 
 // UI mixins.
@@ -38,74 +38,74 @@
 
 @mixin block-skin($bgcolor: $gamma-ui-color, $fgcolor: $alpha-text-color, $block-radius: $radius, $block-border-width: $border-width, $block-border-style: $border-style) {
 
-	background-color: $bgcolor;
-	border-color: darken($bgcolor,100%-$contrast);
-	border-style: $border-style;
+    background-color: $bgcolor;
+    border-color: darken($bgcolor,100%-$contrast);
+    border-style: $border-style;
 
-	@if (su($block-radius) > 0) {
-		border-radius: $block-radius;
-	}
+    @if (su($block-radius) > 0) {
+        border-radius: $block-radius;
+    }
 
-	@if (su($block-border-width) > 0) {
-		border-width: $block-border-width;
-	}
+    @if (su($block-border-width) > 0) {
+        border-width: $block-border-width;
+    }
 
-	@include text-color($bgcolor);
+    @include text-color($bgcolor);
 
 }
 
 // Cross browser background opacity.
 
 @mixin background-opacity($color, $alpha) {
-	$rgba: rgba($color, $alpha);
-	$ie-hex-str: ie-hex-str($rgba);
-	background-color: transparent;
-	background-color: $rgba;
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
-	zoom: 1;
+    $rgba: rgba($color, $alpha);
+    $ie-hex-str: ie-hex-str($rgba);
+    background-color: transparent;
+    background-color: $rgba;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+    zoom: 1;
 }
 
 // Baseline mixins
 
 @mixin padding-tb($top: 1, $bottom: 0) {
-	padding-top: $top * $alpha-font-size * 1px;
-	padding-top: $top * 1rem;
-	padding-bottom: $bottom * $alpha-font-size * 1px;
-	padding-bottom: $bottom * 1rem;
+    padding-top: $top * $alpha-font-size * 1px;
+    padding-top: $top * 1rem;
+    padding-bottom: $bottom * $alpha-font-size * 1px;
+    padding-bottom: $bottom * 1rem;
 }
 
 @mixin padding-bottom($bottom: 1) {
-	padding-bottom: $bottom * $alpha-font-size * 1px;
-	padding-bottom: $bottom * 1rem;
+    padding-bottom: $bottom * $alpha-font-size * 1px;
+    padding-bottom: $bottom * 1rem;
 }
 
 @mixin padding-top($top: 1) {
-	padding-top: $top * $alpha-font-size * 1px;
-	padding-top: $top * 1rem;
+    padding-top: $top * $alpha-font-size * 1px;
+    padding-top: $top * 1rem;
 }
 
 @mixin margin-tb($top: 1, $bottom: 0) {
-	margin-top: $top * $alpha-font-size * 1px;
-	margin-top: $top * 1rem;
-	margin-bottom: $bottom * $alpha-font-size * 1px;
-	margin-bottom: $bottom * 1rem;
+    margin-top: $top * $alpha-font-size * 1px;
+    margin-top: $top * 1rem;
+    margin-bottom: $bottom * $alpha-font-size * 1px;
+    margin-bottom: $bottom * 1rem;
 }
 
 @mixin margin-bottom($bottom: 1) {
-	margin-bottom: $bottom * $alpha-font-size * 1px;
-	margin-bottom: $bottom * 1rem;
+    margin-bottom: $bottom * $alpha-font-size * 1px;
+    margin-bottom: $bottom * 1rem;
 }
 
 @mixin margin-top($top: 1) {
-	margin-top: $top * $alpha-font-size * 1px;
-	margin-top: $top * 1rem;
+    margin-top: $top * $alpha-font-size * 1px;
+    margin-top: $top * 1rem;
 }
 
 // Border-box polyfill helper.
 // @include border-box;
 
 @mixin border-box {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 // Progressive svg backgrounds with png fallback.
@@ -115,27 +115,27 @@
 @mixin mdrn-svg { .svg & { @content } }
 
 @mixin svg-bg($filename, $extension: '.png', $bg-color: transparent, $position: 0 0, $repeat: no-repeat, $size: auto) {
-	background: $bg-color url($filename + $extension) $position $repeat;
-	background-size: $size;
-	@include mdrn-svg { background: $bg-color url($filename + '.svg') $position $repeat; background-size: $size; }
+    background: $bg-color url($filename + $extension) $position $repeat;
+    background-size: $size;
+    @include mdrn-svg { background: $bg-color url($filename + '.svg') $position $repeat; background-size: $size; }
 }
 
 // Media query mixin.
 // @include mq(#point, #query1, #query2);
 
 @mixin mq($point, $query1: min, $query2: width) {
-	@media (#{$query1}-#{$query2}: $point) {
-		@content;
-	}
+    @media (#{$query1}-#{$query2}: $point) {
+        @content;
+    }
 }
 
 // Vertically center any object within its container. Works in IE9 and up.
 // @include vertical-center;
 
 @mixin vertical-center {
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 // Clearfix.

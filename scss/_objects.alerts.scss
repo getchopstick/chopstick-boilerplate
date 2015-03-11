@@ -3,17 +3,17 @@
 */
 
 .alert-box {
-	@include alert;
+    @include alert;
 }
 
 .alert-box.error {
-	@include alert-error;
+    @include alert-error;
 }
 
 .alert-box.success {
-	@include alert-success;
+    @include alert-success;
 }
 
 .alert-box.notice {
-	@include alert-notice;
+    @include alert-notice;
 }

@@ -7,12 +7,12 @@
 // if the parent is another value say 24px write em(12, 24)
 
 @function em($pxval, $base: $alpha-font-size) {
-	@return ($pxval / $base) * 1em;
+    @return ($pxval / $base) * 1em;
 }
 
 // Strip units
 @function su($value) {
-	@return $value / ($value * 0 + 1);
+    @return $value / ($value * 0 + 1);
 }
 
 // Modular scale
@@ -28,18 +28,18 @@
 //
 
 @function ms($increment, $value: $alpha-font-size, $ratio: $ratio) {
-	@if $increment > 0 {
-		@for $i from 1 through $increment {
-			$value: ($value * $ratio);
-		}
-	}
+    @if $increment > 0 {
+        @for $i from 1 through $increment {
+            $value: ($value * $ratio);
+        }
+    }
 
-	@if $increment < 0 {
-		$increment: abs($increment);
-		@for $i from 1 through $increment {
-			$value: ($value / $ratio);
-		}
-	}
+    @if $increment < 0 {
+        $increment: abs($increment);
+        @for $i from 1 through $increment {
+            $value: ($value / $ratio);
+        }
+    }
 
-	@return $value;
+    @return $value;
 }

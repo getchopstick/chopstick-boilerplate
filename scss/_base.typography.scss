@@ -10,29 +10,29 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $beta-font-family;
-	font-weight: $alpha-font-weight;
-	text-rendering: optimizelegibility;
-	@include margin-bottom($alpha-line-height);
+    font-family: $beta-font-family;
+    font-weight: $alpha-font-weight;
+    text-rendering: optimizelegibility;
+    @include margin-bottom($alpha-line-height);
 }
 
 h1 {
-	@include text-dimensions($ms6,2);
+    @include text-dimensions($ms6,2);
 }
 
 h2 {
-	@include text-dimensions($ms4,1.5);
+    @include text-dimensions($ms4,1.5);
 }
 
 h3 {
-	@include text-dimensions($ms2,1.25);
+    @include text-dimensions($ms2,1.25);
 }
 
 h4,
 h5,
 h6 {
-	font-weight: $beta-font-weight;
-	@include text-dimensions($alpha-font-size,1);
+    font-weight: $beta-font-weight;
+    @include text-dimensions($alpha-font-size,1);
 }
 
 p,
@@ -41,49 +41,49 @@ ul,
 dl,
 table,
 address {
-	@include text-dimensions($alpha-font-size,1);
-	@include margin-bottom($alpha-line-height);
+    @include text-dimensions($alpha-font-size,1);
+    @include margin-bottom($alpha-line-height);
 }
 
 pre {
-	tab-size: 2;
-	overflow: auto;
+    tab-size: 2;
+    overflow: auto;
 }
 
 ul,
 ol,
 blockquote {
-	padding-left: 2em;
+    padding-left: 2em;
 }
 
 blockquote {
-	font-style: italic;
+    font-style: italic;
 }
 
 caption {
-	font-family: $alpha-font-family;
-	text-align: left;
-	border-bottom: 1px solid lighten($alpha-text-color,50);
-	font-weight: $beta-font-weight;
-	text-align: center;
-	@include padding-bottom(.5);
-	@include margin-bottom(.5);
+    font-family: $alpha-font-family;
+    text-align: left;
+    border-bottom: 1px solid lighten($alpha-text-color,50);
+    font-weight: $beta-font-weight;
+    text-align: center;
+    @include padding-bottom(.5);
+    @include margin-bottom(.5);
 }
 
 img {
-	max-width: 100%;
+    max-width: 100%;
 
-	// google maps images fix https://coderwall.com/p/nl1lba/img-max-width-100-breaks-google-maps
+    // google maps images fix https://coderwall.com/p/nl1lba/img-max-width-100-breaks-google-maps
 
-	.gmap & {
-		max-width: none;
-	}
+    .gmap & {
+        max-width: none;
+    }
 
 }
 
 small,
 .small {
-	@include text-dimensions($ms-1,1,$alpha-line-height);
+    @include text-dimensions($ms-1,1,$alpha-line-height);
 }
 
 //
@@ -91,28 +91,28 @@ small,
 //
 
 a {
-	text-decoration: none;
-	color: $alpha-link-color;
-	transition: color .22s ease-in-out;
+    text-decoration: none;
+    color: $alpha-link-color;
+    transition: color .22s ease-in-out;
 
-	&:visited {
-		color: $alpha-link-colorvisited;
-	}
+    &:visited {
+        color: $alpha-link-colorvisited;
+    }
 
-	&:hover {
-		text-decoration: underline;
-		color: $alpha-link-colorhover;
-	}
+    &:hover {
+        text-decoration: underline;
+        color: $alpha-link-colorhover;
+    }
 
-	&:focus {
-		outline: thin dotted;
-		color: $alpha-link-colorfocus;
-	}
+    &:focus {
+        outline: thin dotted;
+        color: $alpha-link-colorfocus;
+    }
 
-	&:hover,
-	&:active {
-		outline: 0;
-	}
+    &:hover,
+    &:active {
+        outline: 0;
+    }
 
 }
 
@@ -126,9 +126,9 @@ a {
 //
 @if $show-baseline-grid == true {
 
-	.#{$baseline-holder} {
-		background-image: linear-gradient(transparent 50%, $grid-color 50%); // draw the baseline grid
-		background-size: em($alpha-baseline-grid) em($alpha-baseline-grid); // calculate the baselinegrid in em's
-	}
+    .#{$baseline-holder} {
+        background-image: linear-gradient(transparent 50%, $grid-color 50%); // draw the baseline grid
+        background-size: em($alpha-baseline-grid) em($alpha-baseline-grid); // calculate the baselinegrid in em's
+    }
 
 }

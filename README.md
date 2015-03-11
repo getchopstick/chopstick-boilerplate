@@ -22,18 +22,18 @@ You only need to do this once in a new project.
 First, `cd` into the project root (where this file is).
 Install [bundler](http://bundler.io) and the necessary Ruby dependencies:
 
-	gem update --system && gem install bundler
-	bundle install
+    gem update --system && gem install bundler
+    bundle install
 
 Install [bower](http://bower.io) and the necessary JavaScript dependencies:
-	
-	npm install -g bower
-	bower install
+    
+    npm install -g bower
+    bower install
 
 Install [gulp](http://gulpjs.com/) and the necessary gulp dependencies:
 
-	npm install -g gulp
-	npm install
+    npm install -g gulp
+    npm install
 
 ### Use
 
@@ -41,13 +41,13 @@ We use Gulp as our task runner. There are some basic tasks defined but these can
 
 To compile Chopstick Boilerplate, `cd` into the project root and run:
 
-	gulp
+    gulp
 
 This will compile the `scss` and build the Jekyll site.
 
 For development there is also a watch task wich will load a browsersync server and watch your all your files (*.html, *.md, *.scss, *.js, *.jpg, *.png, *.svg) for changes:
 
-	gulp watch
+    gulp watch
 
 Browsersync also works as a server for your devices. More info can be found on the [browsersync site](http://www.browsersync.io/).
 
