@@ -67,11 +67,6 @@ module.exports = {
     ]
   },
 
-  imagemin : {
-    src : 'img/*',
-    dest : '_site/img'
-  },
-
   compressjs : {
     src : 'js/*.js',
     dest : '_site/js/'
