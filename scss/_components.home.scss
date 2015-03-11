@@ -2,7 +2,7 @@
 // module: home
 //
 
-.intro-holder {
+.c-intro-holder {
     border-bottom: 1px solid $beta-ui-color-light;
 
     @include mq($bp2) {
@@ -19,7 +19,7 @@
 
 }
 
-.intro {
+.c-intro {
     @include box-(12,1,1);
 
     h1 {
@@ -34,7 +34,7 @@
 
 }
 
-.main-col-6 {
+.c-main-col-6 {
     @include box-(12,1,1);
 
     @include mq($bp4) {

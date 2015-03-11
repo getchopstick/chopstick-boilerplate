@@ -9,22 +9,11 @@
     @include mq($bp2) {
         @include px-padding-lr(1,1);
     }
-
 }
 
 //
 // Header
 //
-
-.c-header {
-    @include box-(12,1,1);
-}
-
-.c-header__inner {
-    border-bottom: 1px solid $beta-ui-color-light;
-
-    @include clearfix;
-}
 
 .c-header-holder {
     padding: 0;
@@ -40,6 +29,16 @@
         padding-bottom: 0;
     }
 
+}
+
+.c-header {
+    @include box-(12,1,1);
+}
+
+.c-header__inner {
+    border-bottom: 1px solid $beta-ui-color-light;
+
+    @include clearfix;
 }
 
 .c-logo {
@@ -146,8 +145,8 @@
 
 }
 
-.svg .trigger-active,
-.trigger-active {
+.svg .c-trigger-active,
+.c-trigger-active {
     background-color: $alpha-link-color;
 }
 
@@ -180,14 +179,6 @@
         @include padding-tb(3,1.5);
     }
 
-}
-
-.c-doormat-col-4 {
-    @include box-(12,1,1);
-
-    @include mq($bp4) {
-        @include box-(4,1,1);
-    }
 }
 
 // Footer
