@@ -5,11 +5,11 @@
 // Pre- & postfix mixins
 
 @mixin postfix {
-	border-radius: 0 $radius $radius 0;
-	border-left: 0;
+    border-radius: 0 $radius $radius 0;
+    border-left: 0;
 }
 
 @mixin prefix {
-	border-radius: $radius 0 0 $radius;
-	border-right: 0;
+    border-radius: $radius 0 0 $radius;
+    border-right: 0;
 }

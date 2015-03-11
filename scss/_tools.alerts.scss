@@ -1,55 +1,55 @@
 // Alerts
 
 @mixin alert-settings {
-	position: relative;
-	padding: em($alpha-baseline-grid*2) em($alpha-baseline-grid*3);
-	@include margin-bottom(1);
-	cursor: pointer;
-	@include block-skin;
+    position: relative;
+    padding: em($alpha-baseline-grid*2) em($alpha-baseline-grid*3);
+    @include margin-bottom(1);
+    cursor: pointer;
+    @include block-skin;
 
-	a {
-		text-decoration: underline;
-	}
+    a {
+        text-decoration: underline;
+    }
 
-	a:hover,
-	a:active,
-	a:focus {
-		text-decoration: none;
-	}
+    a:hover,
+    a:active,
+    a:focus {
+        text-decoration: none;
+    }
 
-	a.close {
-		position: absolute;
-		top: #{$alpha-line-height/2}em;
-		right: #{$alpha-line-height/2}em;
-		display: block;
-		line-height: 1;
-		text-decoration: none;
-	}
+    a.close {
+        position: absolute;
+        top: #{$alpha-line-height/2}em;
+        right: #{$alpha-line-height/2}em;
+        display: block;
+        line-height: 1;
+        text-decoration: none;
+    }
 
-	p {
-		margin-bottom: 0;
-		// @include text-dimensions($alpha-font-size,1);
-	}
+    p {
+        margin-bottom: 0;
+        // @include text-dimensions($alpha-font-size,1);
+    }
 }
 
 @mixin alert {
-	strong {
+    strong {
         @include text-color($gamma-ui-color);
     }
 
-	a {
-		@include text-color($gamma-ui-color);
-	}
+    a {
+        @include text-color($gamma-ui-color);
+    }
 
     @include alert-settings;
 }
 
 @mixin alert-error {
-	strong {@include text-color($error-color);}
+    strong {@include text-color($error-color);}
 
-	a {
-		@include text-color($error-color);
-	}
+    a {
+        @include text-color($error-color);
+    }
 
     @include block-skin($error-color);
     @include alert-settings;
@@ -57,11 +57,11 @@
 
 @mixin alert-success {
 
-	strong {@include text-color($success-color);}
+    strong {@include text-color($success-color);}
 
-	a {
-		@include text-color($success-color);
-	}
+    a {
+        @include text-color($success-color);
+    }
 
     @include alert-settings;
     @include block-skin($success-color);
@@ -69,11 +69,11 @@
 
 @mixin alert-notice {
 
-	strong {@include text-color($notice-color);}
+    strong {@include text-color($notice-color);}
 
-	a {
-		@include text-color($notice-color);
-	}
+    a {
+        @include text-color($notice-color);
+    }
 
     @include alert-settings;
     @include block-skin($success-color);

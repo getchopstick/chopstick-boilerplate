@@ -15,27 +15,27 @@
 // green     #859900  operators, other keywords
 
 .highlighttable {
-	@include padding-tb(0,0);
-	@include margin-tb(.5,.5);
-	display: block;
-	overflow: auto;
-	font-size: 90%;
-	width: 100%;
-	color: $alpha-text-color;
-	border: $border-width $border-style $gamma-ui-color;
-	border-radius: $radius;
+    @include padding-tb(0,0);
+    @include margin-tb(.5,.5);
+    display: block;
+    overflow: auto;
+    font-size: 90%;
+    width: 100%;
+    color: $alpha-text-color;
+    border: $border-width $border-style $gamma-ui-color;
+    border-radius: $radius;
 }
 
-	.linenos {
-		@include px-padding-lr(.5,.5);
-		color: $beta-text-color;
-		background-color: lighten($gamma-ui-color,10);
-		border-right: 1px solid $gamma-ui-color;
-	}
+    .linenos {
+        @include px-padding-lr(.5,.5);
+        color: $beta-text-color;
+        background-color: lighten($gamma-ui-color,10);
+        border-right: 1px solid $gamma-ui-color;
+    }
 
-	.code {
-		@include px-padding-lr(1,0);
-	}
+    .code {
+        @include px-padding-lr(1,0);
+    }
 
 .highlight .c { color: #586e75 } /* Comment */
 .highlight .err { color: #93a1a1 } /* Error */

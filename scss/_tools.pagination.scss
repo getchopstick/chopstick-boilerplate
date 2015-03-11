@@ -3,39 +3,39 @@
 //
 
 %pagination {
-	width: 100%;
-	overflow: hidden;
+    width: 100%;
+    overflow: hidden;
 
-	ul {
-		margin: #{$alpha-line-height}em 0;
-		@include horizontal-nav;
-	}
+    ul {
+        margin: #{$alpha-line-height}em 0;
+        @include horizontal-nav;
+    }
 
-	a,
-	span {
-		display: block;
-		float: left;
-	}
+    a,
+    span {
+        display: block;
+        float: left;
+    }
 
-	@include clearfix;
+    @include clearfix;
 }
 
 @mixin pagination {
-	@extend %pagination;
+    @extend %pagination;
 }
 
 @mixin pagination-centered {
-	@extend %pagination;
+    @extend %pagination;
 
-	.inner {
-		float: left;
-		position: relative;
-		left: 50%;
-	}
+    .inner {
+        float: left;
+        position: relative;
+        left: 50%;
+    }
 
-		ul {
-			overflow: hidden;
-			position: relative;
-			left: -50%;
-		}
+        ul {
+            overflow: hidden;
+            position: relative;
+            left: -50%;
+        }
 }
