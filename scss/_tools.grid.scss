@@ -100,7 +100,6 @@ $fluid-grid-margin: ($grid-margin / $grid-width) * 100 ;
 }
 
 // last-col mixin to re-align the right edge
-// use: @extend .last-col;
 
 @mixin last-col {
 	float: right;

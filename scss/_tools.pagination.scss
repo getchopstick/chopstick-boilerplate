@@ -2,7 +2,7 @@
 // Pagination mixin
 //
 
-%pagination {
+@mixin pagination {
 	width: 100%;
 	overflow: hidden;
 
@@ -20,13 +20,7 @@
 	@include clearfix;
 }
 
-@mixin pagination {
-	@extend %pagination;
-}
-
 @mixin pagination-centered {
-	@extend %pagination;
-
 	.inner {
 		float: left;
 		position: relative;
@@ -38,4 +32,6 @@
 			position: relative;
 			left: -50%;
 		}
+
+    @include pagination;
 }
