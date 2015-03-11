@@ -1,5 +1,71 @@
-// Settings
+/*
+ *  Chopstick index
+ *  ---
+ *  Chopstick is a framework based on the [ITCSS](http://itcss.io/)
+ *  architecture and a series of principles. It creates a structure
+ *  to easily set-up and build bespoke web projects.
+ *  ---
+ *  The settings and tools layer don't compile any code.
+ *  Therefore they get the number 0 and are put in single line comments.
+ *  ---
+ *
+ *  0. Settings
+ *      - settings.global
+ *      - settings.grid
+ *      - settings.colors
+ *      - settings.typography
+ *      - settings.ms
+ *      - settings.ui
+ *
+ *  0. Tools
+ *      - tools.functions
+ *      - tools.mixins
+ *      - tools.grid
+ *      - tools.typography
+ *      - tools.ui
+ *      - tools.buttons
+ *      - tools.inputs
+ *      - tools.pagination
+ *      - tools.alerts
+ *
+ *  1. Generic
+ *      - generic.normalize
+ *      - generic.reset
+ *      - generic.box-sizing
+ *
+ *  2. Elements
+ *      - elements.page
+ *      - elements.typography
+ *      - elements.images
+ *      - elements.forms
+ *
+ *  3. Objects
+ *      - objects.grid
+ *      - objects.alerts
+ *      - objects.buttons
+ *      - objects.helpers
+ *      - objects.icons
+ *      - objects.media
+ *      - objects.pagination
+ *      - objects.tables
+ *      - objects.colors
+ *
+ *  4. Components
+ *      - components.frame
+ *      - components.grid
+ *      - components.home
+ *      - components.forms
+ *      - components.styleguide
+ *      - components.styleguide-syntax
+ *
+ *  5. Trumps
+ *      - trumps.hacks
+ *      - trumps.debug
+ *      - trumps.baseline-grid
+ *      - trumps.print
+ */
 
+    // 0. Settings
     @import "settings.global";
     @import "settings.grid";
     @import "settings.colors";
@@ -7,8 +73,7 @@
     @import "settings.ms";
     @import "settings.ui";
 
-// Tools
-
+    // 0. Tools
     @import "tools.functions";
     @import "tools.mixins";
     @import "tools.grid";
@@ -19,21 +84,18 @@
     @import "tools.pagination";
     @import "tools.alerts";
 
-// Generic
-
+    /* 1. Generic */
     @import "generic.normalize";
     @import "generic.reset";
     @import "generic.box-sizing";
 
-// Elements
-
+    /* 2. Elements */
     @import "elements.page";
     @import "elements.typography";
     @import "elements.images";
     @import "elements.forms";
 
-// Objects
-
+    /* 3. Objects */
     @import "objects.grid";
     @import "objects.alerts";
     @import "objects.buttons";
@@ -44,8 +106,7 @@
     @import "objects.tables";
     @import "objects.colors";
 
-// Components
-
+    /* 4. Components */
     @import "components.frame";
     @import "components.grid";
     @import "components.home";
@@ -53,8 +114,7 @@
     @import "components.styleguide";
     @import "components.styleguide-syntax";
 
-// Trumps
-
+    /* 5. Trumps */
     @import "trumps.hacks";
     @import "trumps.debug";
     @import "trumps.baseline-grid";
