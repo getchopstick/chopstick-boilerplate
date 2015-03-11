@@ -20,11 +20,17 @@ You are free to contribute to Chopstick via GitHub Pull Requests. We have a coup
 5. Open a [Pull Request](https://github.com/getchopstick/chopstick-boilerplate/pulls)
 
 
+## Coding style
+
+We use [Editorconfig](http://editorconfig.org/) to maintain a consistent coding style. Please take care of proper spacing and indenting.
+
+
 ## Naming and namespaces
 We use the [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) naming methodology:
-`.block` for sole root of the component (eg: .c-widget)
-`.block__element` for a component part of the block (eg: .c-widget__title)
-`.block--modifier` for a variant or extension of the block (eg: .c-widget--full)
+
+- `.block` for sole root of the component (eg: .c-widget)
+- `.block__element` for a component part of the block (eg: .c-widget__title)
+- `.block--modifier` for a variant or extension of the block (eg: .c-widget--full)
 
 Follow these rules for namespacing:
 - `.o-` for object classes (eg: .o-media)
