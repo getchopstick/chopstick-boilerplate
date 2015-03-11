@@ -7,7 +7,7 @@ var gulp = require('gulp');
 
 // task
 gulp.task('default', [
-	'scss',
-	'js',
-	'jekyll--build'
+    'scss',
+    'js',
+    'jekyll--build'
 ]);

@@ -4,8 +4,8 @@
 
 // plugins
 var gulp = require('gulp'),
-	imagemin = require('gulp-imagemin'),
-	pngquant = require('imagemin-pngquant');
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant');
 
 // configfile
 var config = require('../config').imagemin;

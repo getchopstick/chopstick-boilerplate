@@ -4,7 +4,7 @@
 
 // plugins
 var gulp = require('gulp'),
-	svg2png = require('gulp-svg2png');
+    svg2png = require('gulp-svg2png');
 
 // configfile
 var config = require('../config').svg2png;

@@ -5,7 +5,7 @@
 
 // plugins
 var gulp = require('gulp'),
-	uglyfly = require('gulp-uglyfly');
+    uglyfly = require('gulp-uglyfly');
 
 var config = require('../config').compressjs;
 

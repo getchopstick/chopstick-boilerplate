@@ -4,7 +4,7 @@
 
 // plugins
 var gulp = require('gulp'),
-	browserSync = require('browser-sync');
+    browserSync = require('browser-sync');
 
 // configfile
 var config = require('../config').browsersync;
@@ -12,10 +12,9 @@ var config = require('../config').browsersync;
 
 // tasks
 gulp.task('browsersync', function() {
-	browserSync.init(config);
+    browserSync.init(config);
 });
 
 gulp.task('browsersyncReload', function() {
-	browserSync.reload();
+    browserSync.reload();
 });
-

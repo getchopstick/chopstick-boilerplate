@@ -20,6 +20,7 @@
     "gulp-sass": "^1.1.0",
     "gulp-sourcemaps": "^1.2.8",
     "gulp-util": "~2.2.20",
-    "gulp-watch": "~0.5.4"
+    "gulp-watch": "~0.5.4",
+    "require-dir": "^0.1.0"
   }
 }

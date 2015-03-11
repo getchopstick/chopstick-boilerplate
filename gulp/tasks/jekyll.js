@@ -13,15 +13,14 @@ var config = require('../config').jekyll;
 
 // tasks
 gulp.task('jekyll--build', function (done) {
-	browserSync.notify(config.buildMessage);
-	return cp
-		.spawn('jekyll', ['build'], {
-			stdio: 'inherit'
-		})
-		.on('close', done);
+    browserSync.notify(config.buildMessage);
+    return cp
+        .spawn('jekyll', ['build'], {
+            stdio: 'inherit'
+        })
+        .on('close', done);
 });
 
 gulp.task('jekyll--rebuild', ['jekyll--build'], function () {
-	browserSync.reload();
+    browserSync.reload();
 });
-
