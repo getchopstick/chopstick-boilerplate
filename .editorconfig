@@ -7,7 +7,7 @@ root = true
 [*]
 
 # Indentation style
-indent_style = tab
+indent_style = space
 indent_size = 4
 
 # Settings
@@ -15,6 +15,16 @@ end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
+
+[*.css]
+# Indentation style
+indent_style = space
+indent_size = 4
+
+[*.scss]
+# Indentation style
+indent_style = space
+indent_size = 4
 
 [*.js]
 # Indentation style
