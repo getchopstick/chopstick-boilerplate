@@ -2,11 +2,14 @@
 
 You are free to contribute to Chopstick via GitHub Pull Requests. We have a couple of simple guidelines we try to follow, of which most are taken from the [CSS Tricks Sass Style Guide](http://css-tricks.com/sass-style-guide)
 
+
 ## Git branch model
 [A successful git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 
+
 ## Releases
 [Semantic versioning](http://semver.org/)
+
 
 ## How to pull request
 
@@ -16,31 +19,49 @@ You are free to contribute to Chopstick via GitHub Pull Requests. We have a coup
 4. Push to the branch `git push origin feature--name`
 5. Open a [Pull Request](https://github.com/getchopstick/chopstick-boilerplate/pulls)
 
+
+## Naming and namespaces
+We use the [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) naming methodology:
+`.block` for sole root of the component (eg: .c-widget)
+`.block__element` for a component part of the block (eg: .c-widget__title)
+`.block--modifier` for a variant or extension of the block (eg: .c-widget--full)
+
+Follow these rules for namespacing:
+- `.o-` for object classes (eg: .o-media)
+- `.c-` for component classes (eg: .c-widget)
+- `.t-` for theming classes (eg: .t-header)
+- `.u-` for utility classes (eg: .u-1-of-2)
+- `.is-`/`.has-` for stateful classes (eg: .is-active)
+- `._` for temporary hacks/fixes (eg: ._)
+
+
 ## SCSS order
 
-1. @extends
-2. Regular styles
-3. @includes
-4. Nested selectors
+1. Regular styles
+2. @includes
 
 Example:
 
-    .weather {
-      @extends %module; 
+    .c-component {
       background: #fff;
       @include transition(all 0.3s ease);
-      > h3 {
-        border-bottom: 1px solid white;
-      }
     }
+
+
+## Extends
+
+Don't use @extends as they have a tendency to cause css bloat and long selectors. 
+
 
 ## Nesting
 
-Never nest more than three levels deep, never nest more than 50 lines long. This keeps code readable and usable.
+Try to avoid nesting. We follow a single-depth-class-based architecture. 
+
 
 ## Global files
 
 Only `@include` in the global screen.scss file. Never write SCSS directly in screen.scss. Order of importing is always as described in `screen.scss`.
+
 
 ## Be generous with comments
 
