@@ -2,48 +2,21 @@
 // User Interface Elements
 //
 
-// Buttons
-
-%btn {
-	border-radius: $radius;
-	position: relative;
-	display: block;
-	width: 100%;
-	text-align: center;
-	padding: 0;
-	margin: 0;
-	overflow: hidden;
-	font-family: $alpha-font-family;
-	font-weight: $beta-font-weight;
-	cursor: pointer;
-	text-decoration: none;
-	transition: all .22s ease-in-out;
-	transition-property: background, color, border;
-	-webkit-appearance: none;
-	-webkit-font-smoothing: antialiased;
-
-	&:hover,
-	&:visited {
-		text-decoration: none;
-	}
-
-}
-
 // Button sizes
 
-@mixin btn-l {
-	@include em-padding-lr(1);
-	@include baseline-dimensions-form(1,2,2,0);
+@mixin btn-lg {
+	@include px-padding-lr(1.5,1.5);
+	@include input-dimensions($ms-1,1,0,1.05,.95);
 }
 
-@mixin btn-m {
-	@include em-padding-lr(.75);
-	@include baseline-dimensions-form(0,2,2,0);
+@mixin btn-md {
+	@include px-padding-lr(1.25,1.25);
+	@include input-dimensions($ms-1,1,0,.8,.7);
 }
 
-@mixin btn-s {
-	@include em-padding-lr(.5);
-	@include baseline-dimensions-form(0,1,1,0);
+@mixin btn-sm {
+	@include px-padding-lr(.75,.75);
+	@include input-dimensions($ms-2,1,0,.55,.45);
 }
 
 // Button display
@@ -51,6 +24,11 @@
 @mixin btn-inlineblock {
 	display: inline-block;
 	width: auto;
+}
+
+@mixin btn-float($float:left) {
+	display: block;
+	float: $float;
 }
 
 // Button color
@@ -80,10 +58,6 @@
 		}
 		@include text-color(lighten($c1, 100-$contrast));
 
-	}
-
-	&:focus {
-		text-decoration: underline;
 	}
 
 	&:active {
@@ -123,19 +97,19 @@
 
 }
 
-@mixin input-l {
-	@include em-padding-lr(.25);
-	@include baseline-dimensions-form(1,2,2,0);
+@mixin input-lg {
+	@include px-padding-lr(1,1);
+	@include input-dimensions($ms-1,1,0,1,1);
 }
 
-@mixin input-m {
-	@include em-padding-lr(.25);
-	@include baseline-dimensions-form(0,2,2,0);
+@mixin input-md {
+	@include px-padding-lr(.75,.75);
+	@include input-dimensions($ms-1,1,0,.75,.75);
 }
 
-@mixin input-s {
-	@include em-padding-lr(.25);
-	@include baseline-dimensions-form(0,1,1,0);
+@mixin input-sm {
+	@include px-padding-lr(.5,.5);
+	@include input-dimensions($ms-2,1,0,.5,.5);
 }
 
 // Pre- & postfix mixins
@@ -155,7 +129,7 @@
 %alert {
 	position: relative;
 	padding: em($alpha-baseline-grid*2) em($alpha-baseline-grid*3);
-	margin-bottom: em($alpha-baseline-grid*2);
+	@include margin-bottom(1);
 	cursor: pointer;
 	@include block-skin;
 
@@ -179,7 +153,8 @@
 	}
 
 	p {
-		@include baseline-dimensions(0,1,1);
+		margin-bottom: 0;
+		// @include text-dimensions($alpha-font-size,1);
 	}
 }
 
@@ -228,7 +203,7 @@
 
 //
 // Pagination mixin
-// 
+//
 
 %pagination {
 	@extend %clearfix;

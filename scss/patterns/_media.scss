@@ -22,15 +22,12 @@
 
 .media {
 	@extend %clearfix;
-	@include margin-tb(0, 1);
 }
 
 	.media__img {
 		float: left;
+		@include px-padding-lr(1,0);
 		@include margin-bottom(1);
-		@include mq($bp3) {
-			margin-bottom: 0;
-		}
 
 		img {
 			display: block;
@@ -39,9 +36,10 @@
 
 	.media__img--reverse {
 		float: right;
+		@include px-padding-lr(0,1);
 	}
 
 	.media__body {
 		overflow: hidden;
-		@include em-padding-lr(1, 1);
+		@include px-padding-lr(1,1);
 	}

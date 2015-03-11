@@ -4,16 +4,12 @@
 // Default markup for the form elements, based on the settings file.
 //
 
-form {
-	padding: 0 0 em(14);
-}
-
 legend,
 label {
 	display: block;
 	width: 100%;
 	cursor: pointer;
-	@include baseline-dimensions(0,3,1);
+	@include text-dimensions($alpha-font-size,1,0,0,.25);
 }
 
 // Input elements
@@ -35,9 +31,11 @@ input[type="datetime-local"],
 input[name="field_country_code"],
 input[name="field_city_code"],
 input[name="field_phone_int"],
-select[multiple],
 textarea {
 	-webkit-appearance: none;
+	-moz-appearance:    none;
+	-ms-appearance: 	none;
+	appearance:         none;
 	font-smoothing: antialiased;
 	background-color: $delta-ui-color;
 	border-radius: $radius;
@@ -47,26 +45,64 @@ textarea {
 	margin: 0;
 	width: 100%;
 	display: block;
-	@include border-box;
-	@include input-s;
+	outline: none;
+	line-height: normal;
+	border-radius: $radius;
+	@include input-md;
 
 	&:focus {
 		color: $alpha-text-color;
-		outline-color: $gamma-ui-color;
-		border-color: darken($gamma-ui-color, 20);
+		border-color: $alpha-ui-color;
+		box-shadow: 0 0 2px rgba($alpha-ui-color,.5);
 	}
 
-	@include mq($bp3) {
-		@include input-m;
+	&.input--error {
+		border-color: $error-color;
+
+		&:focus {
+			border-color: $error-color;
+			box-shadow: 0 0 2px rgba($error-color,.5);
+		}
+
 	}
 
-	@include mq($bp5) {
-		@include input-l;
+	// sizes
+
+	&.input--sm {
+		@include input-sm;
 	}
+
+	&.input--lg {
+		@include input-lg;
+	}
+
 }
 
 textarea {
 	height: auto;
+	resize: none;
+}
+
+// select, depends on the project. Use a custom select plugin to properly style these.
+
+select,
+select[multiple] {
+
+}
+
+// checkboxes and radio's
+
+.input--option {
+	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.label--option {
+	margin: 0;
+	padding: 0;
+	width: auto;
+	display: inline-block;
 }
 
 // Placeholders
@@ -86,20 +122,10 @@ textarea {
 	font-style: italic;
 }
 
-// Buttons
+// errors
 
-input[type="submit"],
-button {
-	@extend %btn;
-	@include btn-s;
-	@include btn-color;
-
-	@include mq($bp3) {
-		@include input-m;
-		@include btn-inlineblock;
-	}
-
-	@include mq($bp5) {
-		@include input-l;
-	}
+.form__error {
+	display: block;
+	color: $error-color;
+	@include padding-top(.25);
 }

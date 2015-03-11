@@ -15,7 +15,7 @@ $grid-color 				: rgba(#000,.1); // set the baseline grid color and opacity
 $alpha-font-family			: sans-serif;
 $alpha-font-size			: 16; // pixel-value
 $alpha-font-weight			: 400;
-$alpha-line-height			: 1.5; // em-value
+$alpha-line-height			: 1.5;
 $alpha-baseline-grid		: 7; // pixel-value
 $alpha-leading				: 1; // multiplier
 
@@ -24,8 +24,8 @@ $beta-font-weight			: 700;
 
 // Grid
 
-$grid-gutter				: 20;
-$grid-column				: 80;
+$grid-gutter				: 32;
+$grid-column				: 72;
 $grid-columns				: 12;
 
 // Breakpoints calculated in em's, always based on 16px base-value
@@ -49,6 +49,7 @@ $base-size					: $alpha-font-size/16*1em;
 // manual modular scale font sizes
 // based on http://modularscale.com/scale/?px1=16&px2=18&ra1=1.333&ra2=0
 
+$ms-3                       : 11;
 $ms-2						: 12;
 $ms-1						: 14;
 $ms1						: 18;

@@ -8,37 +8,41 @@
 	max-width: $grid-width/$alpha-font-size*1em;
 
 	.row {
-		padding: 0;
-	}
-}
-
-.row .row {
-	padding: 0;
-
-	@include mq($bp2) {
 		@include px-margin-lr(-1,-1);
 	}
+
+}
+
+.col {
+	@include px-padding-lr(1,1);
 }
 
 .last-col {
+
 	@include mq($bp2) {
 		@include last-col;
 	}
+
 }
 
 // Calculate grid classes
+
 @for $i from 1 through $grid-columns {
+
 	.grid-#{$i} {
 		@include box-($grid-columns,1,1);
 	}
 
 	@include mq($bp2) {
+
 		.bp2-grid-#{$i} {
 			@include box-($i,1,1);
 		}
+
 	}
 
 	@include mq($bp3) {
+
 		.grid-#{$i} {
 			@include box-($i,1,1);
 		}
@@ -54,17 +58,23 @@
 		.pull-left-#{$i} {
 			@include pull-left($i);
 		}
+
 	}
 
 	@include mq($bp4) {
+
 		.bp4-grid-#{$i} {
 			@include box-($i,1,1);
 		}
+
 	}
 
 	@include mq($bp5) {
+
 		.bp5-grid-#{$i} {
 			@include box-($i,1,1);
 		}
+
 	}
+
 }

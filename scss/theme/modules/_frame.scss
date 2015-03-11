@@ -4,11 +4,12 @@
 
 .holder {
 	background-color: $delta-ui-color;
-	@include padding-tb(1,0);
+	@include padding-top(1.5);
 
-	@include mq($bp4) {
-		@include padding-tb(1,1);
+	@include mq($bp2) {
+		@include px-padding-lr(1,1);
 	}
+
 }
 
 //
@@ -18,66 +19,94 @@
 .header {
 	@include box-(12,1,1);
 
-	@include mq($bp4) {
-		@include box-(12,1,1);
-	}
-}
-
-	.header .inner {
+	.inner {
 		@extend %clearfix;
-		border-bottom: 1px solid lighten($alpha-text-color,60);
+		border-bottom: 1px solid $beta-ui-color-light;
 	}
+
+}
 
 .header-holder {
-	@include mq($bp3) {
-		@include padding-top(0);
+	padding: 0;
+	border: none;
+
+	@include mq($bp2) {
+		padding-top: 0;
+		padding-bottom: 0;
 	}
+
+	@include mq($bp4) {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
 }
-
-	.header-holder .inner {
-		@include mq($bp3) {
-			@include padding-tb(1,1);
-		}
-
-		@include mq($bp4) {
-			@include padding-tb(2,1);
-		}
-	}
 
 .logo {
 	float: left;
 	font-family: $alpha-font-family;
-	font-style: italic;
 	font-weight: $alpha-font-weight;
-	@include text-dimensions($alpha-font-size,1,1);
+	margin-bottom: 0;
+	@include text-dimensions($alpha-font-size,1);
 
-	@include mq($bp3) {
-		float: left;
-		@include text-dimensions(14,1,0);
+	a {
+		display: block;
+		text-decoration: none;
+		color: $beta-text-color;
+		@include text-dimensions($alpha-font-size,1,0,1,1);
+
+		&:hover,
+		&:focus {
+			color: $alpha-text-color;
+		}
+
+		@include mq($bp3) {
+			@include padding-tb(1.25,1.25);
+		}
+
 	}
+
 }
 
 .main-nav {
-	float: left;
 	width: 100%;
+	float: left;
 
 	ul {
 		@extend %clearfix;
 		font-family: $alpha-font-family;
+		border-top: 1px solid $beta-ui-color-light;
 		@include list-nav;
-		@include text-dimensions($alpha-font-size,1,1);
+		@include margin-bottom(.75);
+		@include padding-top(.75);
+
+		@include mq($bp3) {
+			border-top: none;
+			padding-top: 0;
+			margin-bottom: 0;
+		}
+
 	}
 
 	a {
+		display: block;
 		color: lighten($alpha-text-color,50);
 		text-decoration: none;
 		font-weight: $beta-font-weight;
+		@include text-dimensions($alpha-font-size,1,0,.25,.25);
+
+		@include mq($bp3) {
+			@include padding-tb(1.25,1.25);
+		}
+
+
 	}
 
 	a:hover,
 	.selected a {
 		color: darken($alpha-ui-color,0);
 	}
+
 }
 
 .mobile-nav .main-nav {
@@ -86,6 +115,7 @@
 
 .main-nav,
 .mobile-nav .main-nav {
+
 	@include mq($bp3) {
 		display: block !important;
 		width: auto;
@@ -93,27 +123,30 @@
 
 		ul {
 			@include horizontal-nav();
-			@include text-dimensions(14,1,0);
 		}
 
 		li {
-			@include px-margin-lr(1,0);
+			@include px-margin-lr(2,0);
 		}
+
 	}
+
 }
 
 .main-nav-trigger {
 	display: block;
+	height: 2em;
+	width: 2em;
+	margin-top: 0.75em;
 	float: right;
-	width: 2.1em;
-	height: 2.1em;
 	text-indent: -9999px;
-	@include text-dimensions($alpha-font-size,1,1);
+	@include text-dimensions($alpha-font-size,1,0);
 	@include svg-bg("../img/icon-menu", ".png", $alpha-text-color, 50%, no-repeat);
 
 	@include mq($bp3) {
 		display: none;
 	}
+
 }
 
 .svg .trigger-active,
@@ -121,27 +154,47 @@
 	background-color: $alpha-link-color;
 }
 
+//
+// main
+//
 
+.main-holder {
+	border-bottom: 1px solid $beta-ui-color-light;
+
+	@include mq($bp2) {
+		@include padding-tb(2,.5);
+	}
+
+	@include mq($bp5) {
+		@include padding-tb(3,1.5);
+	}
+
+}
 
 //
 // Doormat
 //
 
 .doormat-holder {
-	@include padding-bottom(1);
 
-	@include mq($bp4) {
-		@include padding-bottom(2);
+	@include mq($bp2) {
+		@include padding-tb(2,.5);
 	}
+
+	@include mq($bp5) {
+		@include padding-tb(3,1.5);
+	}
+
 }
 
-	.doormat-col-4 {
-		@include box-(12,1,1);
+.doormat-col-4 {
+	@include box-(12,1,1);
 
-		@include mq($bp4) {
-			@include box-(4,1,1);
-		}
+	@include mq($bp4) {
+		@include box-(4,1,1);
 	}
+
+}
 
 //
 // Footer
@@ -150,11 +203,11 @@
 .footer-holder {
 	background-color: $alpha-text-color;
 	color: lighten($alpha-text-color,70);
-	@include padding-tb(1,1);
 
 	p {
 		padding: 0;
 	}
+
 }
 
 	.footer {

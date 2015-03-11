@@ -1,6 +1,6 @@
 //
 // Mixins
-// 
+//
 
 // Horizontal responsive navigation.
 // @include list-nav on <ul> or <ol>;
@@ -67,41 +67,38 @@
 
 // Baseline mixins
 
-// Vertical padding based on the base line-height
-// @include padding-tb(#top, #bottom);
-
 @mixin padding-tb($top: 1, $bottom: 0) {
-	padding-top: $alpha-line-height * 1em * $top;
-	padding-bottom: $alpha-line-height * 1em * $bottom;
+	padding-top: $top * $alpha-font-size * 1px;
+	padding-top: $top * 1rem;
+	padding-bottom: $bottom * $alpha-font-size * 1px;
+	padding-bottom: $bottom * 1rem;
 }
-
-// Padding-bottom based on the base line-height
-// @include padding-bottom(#bottom),
 
 @mixin padding-bottom($bottom: 1) {
-	padding-bottom: $alpha-line-height * 1em * $bottom;
+	padding-bottom: $bottom * $alpha-font-size * 1px;
+	padding-bottom: $bottom * 1rem;
 }
-
-// Padding-top based on the base line-height
-// @include padding-top(#top);
 
 @mixin padding-top($top: 1) {
-	padding-top: $alpha-line-height * 1em * $top;
+	padding-top: $top * $alpha-font-size * 1px;
+	padding-top: $top * 1rem;
 }
-
-// Vertical margin based on the base line-height
-// @include margin-tb(#top, #bottom)
 
 @mixin margin-tb($top: 1, $bottom: 0) {
-	margin-top: $alpha-line-height * 1em * $top;
-	margin-bottom: $alpha-line-height * 1em * $bottom;
+	margin-top: $top * $alpha-font-size * 1px;
+	margin-top: $top * 1rem;
+	margin-bottom: $bottom * $alpha-font-size * 1px;
+	margin-bottom: $bottom * 1rem;
 }
 
-// Margin-bottom based on the base line-height
-// @include margin-bottom(#bottom);
-
 @mixin margin-bottom($bottom: 1) {
-	margin-bottom: $alpha-line-height * 1em * $bottom;
+	margin-bottom: $bottom * $alpha-font-size * 1px;
+	margin-bottom: $bottom * 1rem;
+}
+
+@mixin margin-top($top: 1) {
+	margin-top: $top * $alpha-font-size * 1px;
+	margin-top: $top * 1rem;
 }
 
 // Border-box polyfill helper.

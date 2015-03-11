@@ -8,10 +8,11 @@
 
 	.v-styleguide .section-title {
 		color: $beta-text-color;
-		font-weight: $beta-font-weight;
-		border-bottom: 3px solid $beta-text-color;
-		margin-bottom: 14/$alpha-font-size*1em;
-		@include baseline-dimensions(1,1,1,0);
+		// font-weight: $beta-font-weight;
+		border-bottom: 1px solid $beta-ui-color-light;
+		@include padding-bottom(1);
+		@include padding-top(1);
+		@include text-dimensions($alpha-font-size,1,2);
 	}
 
 	.v-styleguide .scss {
@@ -33,14 +34,8 @@
 
 
 	.example-form-grid {
-		label {
-			@include box-(12,1,1);
-		}
 
 		@include mq($bp2) {
-			label {
-				@include box-(6,1,1);
-			}
 
 			.name {
 				@include box-(6,1,.5)
@@ -69,7 +64,10 @@
 				@include box-(12,1,1);
 			}
 
-			.oneliner .postfix {
+
+		}
+
+		.oneliner .postfix {
 				@include box-(6,0,1);
 			}
 
@@ -84,5 +82,5 @@
 				.oneliner .prefix input {
 					@include prefix;
 				}
-		}
+
 	}

@@ -31,6 +31,14 @@ $fluid-grid-margin: ($grid-margin / $grid-width) * 100 ;
 	padding-right: $grid-margin * $right * 1px;
 }
 
+@mixin px-margin-left($left: 1) {
+	margin-left: $grid-margin * $left * 1px;
+}
+
+@mixin px-margin-right($right: 1) {
+	margin-right: $grid-margin * $right * 1px;
+}
+
 // horizontal margin based on the context grid gutter in em
 // use: @include em-margin-lr(#left, #right);
 

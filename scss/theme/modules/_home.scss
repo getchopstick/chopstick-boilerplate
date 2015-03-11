@@ -3,11 +3,20 @@
 //
 
 .intro-holder {
-	@include padding-top(2);
+	border-bottom: 1px solid $beta-ui-color-light;
 
-	@include mq($bp3) {
-		@include padding-top(2);
+	@include mq($bp2) {
+		@include padding-tb(2,.5);
 	}
+
+	@include mq($bp4) {
+		@include padding-tb(6,4.5);
+	}
+
+	@include mq($bp5) {
+		@include padding-tb(10,8.5);
+	}
+
 }
 
 .intro {
@@ -15,14 +24,12 @@
 
 	h1 {
 		font-weight: 300;
-		@include baseline-dimensions(3,1,1,1);
 	}
 
 	p {
 		color: $beta-text-color;
 		text-transform: uppercase;
 		font-weight: 700;
-		@include baseline-dimensions(0,1,3,0);
 	}
 
 }
@@ -33,4 +40,5 @@
 	@include mq($bp4) {
 		@include box-(6,1,1);
 	}
+
 }
