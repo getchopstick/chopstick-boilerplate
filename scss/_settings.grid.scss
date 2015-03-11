@@ -27,10 +27,14 @@ $breakpoints: (
   "xl" "screen and (min-width: #{$bp5})",
 ) !default;
 
-// By default we will create halves, thirds, quarters, and fifths.
+// New grid variables
+$columns-gutter: 1 !default; // This number is based on the baseline
 $columns: (
   2,
   3,
   4,
   5
 ) !default;
+
+
+

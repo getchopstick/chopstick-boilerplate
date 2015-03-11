@@ -2,14 +2,6 @@
   Widths
 */
 
-// By default we will create halves, thirds, quarters, and fifths.
-$columns: (
-  2,
-  3,
-  4,
-  5
-) !default;
-
 // Loop through each of our column sizes and generate its width classes.
 @each $column in $columns {
   @include widths($column);
@@ -28,6 +20,5 @@ $columns: (
     @each $column in $columns {
       @include widths($column, -#{$alias});
     }
-
   }
 }

@@ -17,3 +17,15 @@
 .v-grid .row .row > div[class*="grid"] {
     margin: 0;
 }
+
+
+// Visualise grid boxes (for demo purposes)
+.c-grid-test {
+    background-color: $grey-04;
+}
+
+.c-grid-test__item {
+    background-color: $grey-05;
+    text-align: center;
+    @include padding-tb(.5,.5);
+}

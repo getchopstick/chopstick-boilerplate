@@ -78,3 +78,21 @@
     }
 
 }
+
+// New grid system
+.o-layout {
+    margin: 0 auto;
+    @include clearfix;
+}
+
+.o-layout--gutter {
+    @include px-margin-lr(-($columns-gutter),-($columns-gutter));
+}
+
+    .o-layout__item {
+        float: left;
+
+        .o-layout--gutter & {
+            @include px-padding-lr($columns-gutter,$columns-gutter);
+        }
+    }
