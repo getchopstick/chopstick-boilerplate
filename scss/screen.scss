@@ -43,34 +43,19 @@
 	@import "objects.media";
 	@import "objects.pagination";
 	@import "objects.tables";
+	@import "objects.colors";
 
 // Patterns: feel free to include only what you need.
 
-	@import "patterns/reset";
-	@import "patterns/grid";
-	@import "patterns/colors";
-	@import "patterns/buttons";
-	@import "patterns/alerts";
-	@import "patterns/pagination";
-	@import "patterns/helpers";
-	@import "patterns/media";
-	@import "patterns/tables";
-	@import "patterns/icons";
+	// @import "patterns/grid";
+
 
 // Theme: feel free to delete any or all.
 
-	@import "theme/base";
-	@import "theme/typography";
-	@import "theme/forms";
-	@import "theme/debug";
-
-	// Theme Demo Modules: for boilerplate purpose only. Replace this with your own modules.
-
-		@import "theme/modules/frame";
-		@import "theme/modules/home";
-		@import "theme/modules/styleguide";
-		@import "theme/modules/styleguide-syntax";
-		@import "theme/modules/grid";
+	// @import "theme/base";
+	// @import "theme/typography";
+	// @import "theme/forms";
+	// @import "theme/debug";
 
 // Print
 
