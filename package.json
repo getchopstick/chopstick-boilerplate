@@ -15,12 +15,16 @@
     "gulp-concat": "^2.4.2",
     "gulp-filesize": "0.0.6",
     "gulp-filter": "^1.0.2",
+    "gulp-imagemin": "^2.2.1",
     "gulp-minify-css": "^0.3.11",
     "gulp-plumber": "~0.5.6",
     "gulp-sass": "^1.1.0",
     "gulp-sourcemaps": "^1.2.8",
+    "gulp-svg2png": "^0.3.0",
+    "gulp-uglyfly": "^1.4.1",
     "gulp-util": "~2.2.20",
     "gulp-watch": "~0.5.4",
+    "imagemin-pngquant": "^4.0.0",
     "require-dir": "^0.1.0"
   }
 }
