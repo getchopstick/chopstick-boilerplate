@@ -4,54 +4,53 @@
 
 // Settings
 
-	@import "settings.global";
-	@import "settings.grid";
-	@import "settings.colors";
-	@import "settings.typography";
-	@import "settings.ms";
-	@import "settings.ui";
+    @import "settings.global";
+    @import "settings.grid";
+    @import "settings.colors";
+    @import "settings.typography";
+    @import "settings.ms";
+    @import "settings.ui";
 
 // Tools
 
-	@import "tools.functions";
-	@import "tools.extends"; // @TODO: replace extends by mixins, remove this file after
-	@import "tools.mixins";
-	@import "tools.grid";
-	@import "tools.typography";
-	@import "tools.ui";
-	@import "tools.buttons";
-	@import "tools.inputs";
-	@import "tools.pagination";
-	@import "tools.alerts";
+    @import "tools.functions";
+    @import "tools.mixins";
+    @import "tools.grid";
+    @import "tools.typography";
+    @import "tools.ui";
+    @import "tools.buttons";
+    @import "tools.inputs";
+    @import "tools.pagination";
+    @import "tools.alerts";
 
 // Base
 
-	@import "base.reset";
-	@import "base.base";
-	@import "base.forms";
-	@import "base.typography";
-	@import "base.debug";
+    @import "base.reset";
+    @import "base.base";
+    @import "base.forms";
+    @import "base.typography";
+    @import "base.debug";
 
 // Components
 
-	@import "components.frame";
-	@import "components.grid";
-	@import "components.home";
-	@import "components.styleguide-syntax";
-	@import "components.styleguide";
+    @import "components.frame";
+    @import "components.grid";
+    @import "components.home";
+    @import "components.styleguide-syntax";
+    @import "components.styleguide";
 
 // Objects
 
-	@import "objects.grid";
-	@import "objects.alerts";
-	@import "objects.buttons";
-	@import "objects.helpers";
-	@import "objects.icons";
-	@import "objects.media";
-	@import "objects.pagination";
-	@import "objects.tables";
-	@import "objects.colors";
+    @import "objects.grid";
+    @import "objects.alerts";
+    @import "objects.buttons";
+    @import "objects.helpers";
+    @import "objects.icons";
+    @import "objects.media";
+    @import "objects.pagination";
+    @import "objects.tables";
+    @import "objects.colors";
 
 // Print
 
-	@media print {@import "base.print";}
+    @media print {@import "base.print";}
