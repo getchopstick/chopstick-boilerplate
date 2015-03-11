@@ -4,7 +4,12 @@
 
 // Settings: open and tweak this file.
 
-	@import "settings";
+	@import "settings.global";
+	@import "settings.grid";
+	@import "settings.colors";
+	@import "settings.typography";
+	@import "settings.ms";
+	@import "settings.ui";
 
 // Vendor Dependencies: add things like bourbon or compass imports here.
 
