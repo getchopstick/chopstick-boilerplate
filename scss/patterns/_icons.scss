@@ -14,10 +14,10 @@
 }
 
 	.icon--toggle {
-		background-image: url('../img/toggle--sprite.png');
+		background-image: url('../img/png/toggle--sprite.png');
 
 		.svg & {
-			background-image: url('../img/toggle--sprite.svg');
+			background-image: url('../img/svg/toggle--sprite.svg');
 		}
 
 		.is-toggled & {

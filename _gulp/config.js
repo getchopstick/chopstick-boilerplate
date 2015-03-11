@@ -17,7 +17,7 @@ module.exports = {
         'ios 6',
         'android 4'
     ],
-    settings : { 
+    settings : {
       errLogToConsole: true, // sass errors will be logged to the console instead of generating a gutil.PluginError object.
       sync: true, // sass.renderSync will be called, help when memory and/or cpu usage
       indentedSyntax: true, // Enable .sass syntax!
@@ -26,7 +26,10 @@ module.exports = {
   },
 
   js : {
-    src : 'js/theme.js', // source js file
+    src : [  // source js file
+        'js/theme.js',
+        'js/_components/*.js'
+    ],
     concatFilename : 'theme.concat.js', // result filename
     jekyllJsDest : '_site/js/',
     jsDest : 'js/'
@@ -83,12 +86,8 @@ module.exports = {
     dest : "./img/png"
   },
 
-  cmq : {
-    log: true
-  },
-
-  nodeSass : {
+  sass : {
     errLogToConsole: true
   }
-  
+
 };
