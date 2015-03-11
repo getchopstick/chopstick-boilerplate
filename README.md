@@ -9,32 +9,6 @@ It uses the following tools
 - [Jekyll](http://jekyllrb.com/) as a static site generator
 - [Gulp](http://gulpjs.com/) as a build system
 
-
-## What is the Chopstick framework
-Chopstick is a framework based on the [ITCSS](http://itcss.io/) architecture and a series of principles. It creates a structure to easily set-up and build bespoke web projects.
-
-
-## Principles
-Chopstick is build upon these principles. Please keep these in mind when contributing and/or using this framework.
-
-### Low specificity
-A single-depth-class-based architecture based on the [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) naming methodology.
-
-### Highly decoupled 
-Avoid reliance on other bits.
-- Separation of Concerns: let each piece of code solve its own problems 
-- Single Responsibility Principle: one thing, one thing only, one thing well
-- Open/Closed Principle: add via extension, not modification
-
-### Highly composable
-- We build the bits that build the bits 
-- Make everything opt-in and configurable: expose API-like CSS
-
-### Keep it simple
-- The Principle of Least Surprise: make sure expectations are met, and nothing else
-- Murphy’s Law: Pick the option that is the most resilient, even if it is the most boring one
-
-
 ## Setup and usage
 
 ### Requirements
@@ -88,6 +62,43 @@ It uses a settings file + mixins + patterns. You can remove the default theme fo
 For more information and examples please refer to the [documentation on our website](http://getchopstick.com/docs).
 
 
+## What is the Chopstick framework
+Chopstick is a framework based on the [ITCSS](http://itcss.io/) architecture and a series of principles. It creates a structure to easily set-up and build bespoke web projects.
+
+
+## Why do we make Chopstick framework
+- Maintain sensible defaults
+- Enforce a global coding style
+- Create a scalable system for both small and big web projects
+
+
+## Chopstick principles
+Chopstick is build upon the following principles. Please keep these in mind when contributing and/or using this framework.
+
+### Low specificity
+A single-depth-class-based architecture based on the [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) naming methodology.
+
+### Highly decoupled 
+Avoid reliance on other bits.
+- Separation of Concerns: let each piece of code solve its own problems 
+- Single Responsibility Principle: one thing, one thing only, one thing well
+- Open/Closed Principle: add via extension, not modification
+
+### Highly composable
+- We build the bits that build the bits 
+- Make everything opt-in and configurable: expose API-like CSS
+
+### Keep it simple
+- The Principle of Least Surprise: make sure expectations are met, and nothing else
+- Murphy’s Law: Pick the option that is the most resilient, even if it is the most boring one
+
+
+## What’s in a name
+The origin of the Chopstick name:
+- Chopstick originated as frontend companion of Fork CMS. Both are developed and maintained by [Wijs](https://wijs.be/en)
+- Inspired by the Karate Kid movies, Chopstick is a deadly and precise [fly squating tool](https://www.youtube.com/watch?v=J1gAHil89Z4).
+
+
 ## Roadmap
 
 ### 0.4
@@ -121,12 +132,6 @@ Stable current version.
 3. Add configurable javascript patterns
 4. Add configurable theming layer
 5. Self-updating style-guide
-
-
-## What’s in a name
-The origin of the Chopstick name:
-- Chopstick originated as frontend companion of Fork CMS. Both are developed and maintained by [Wijs](https://wijs.be/en)
-- Inspired by the Karate Kid movies, Chopstick is a deadly and precise [fly squating tool](https://www.youtube.com/watch?v=J1gAHil89Z4).
 
 
 ## Credits
