@@ -1,6 +1,6 @@
 // Alerts
 
-%alert {
+@mixin alert-settings {
 	position: relative;
 	padding: em($alpha-baseline-grid*2) em($alpha-baseline-grid*3);
 	@include margin-bottom(1);
@@ -33,44 +33,48 @@
 }
 
 @mixin alert {
-	@extend %alert;
-
-	strong {@include text-color($gamma-ui-color);}
+	strong {
+        @include text-color($gamma-ui-color);
+    }
 
 	a {
 		@include text-color($gamma-ui-color);
 	}
+
+    @include alert-settings;
 }
 
 @mixin alert-error {
-	@extend %alert;
-	@include block-skin($error-color);
-
 	strong {@include text-color($error-color);}
 
 	a {
 		@include text-color($error-color);
 	}
+
+    @include block-skin($error-color);
+    @include alert-settings;
 }
 
 @mixin alert-success {
-	@extend %alert;
-	@include block-skin($success-color);
 
 	strong {@include text-color($success-color);}
 
 	a {
 		@include text-color($success-color);
 	}
+
+    @include alert-settings;
+    @include block-skin($success-color);
 }
 
 @mixin alert-notice {
-	@extend %alert;
-	@include block-skin($notice-color);
 
 	strong {@include text-color($notice-color);}
 
 	a {
 		@include text-color($notice-color);
 	}
+
+    @include alert-settings;
+    @include block-skin($success-color);
 }

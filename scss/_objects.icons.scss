@@ -3,7 +3,6 @@
 */
 
 .icon {
-	@extend %hide-text;
 	display: inline-block;
 	width: 16px;
 	height: 16px;
@@ -11,6 +10,8 @@
 	top: 1px;
 	background-repeat: no-repeat;
 	background-position: center top;
+
+    @include hide-text;
 }
 
 	.icon--toggle {

@@ -109,7 +109,6 @@
 // btn-group
 
 .btn-group {
-	@extend %clearfix;
 	position: relative;
 
 	.btn--fll {
@@ -120,6 +119,7 @@
 		@include px-margin-right(1);
 	}
 
+	@include clearfix;
 }
 
 // firefox inner border fix

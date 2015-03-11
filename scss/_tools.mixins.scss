@@ -137,3 +137,36 @@
 	top: 50%;
 	transform: translateY(-50%);
 }
+
+// Clearfix.
+// @mixin clearfix
+
+@mixin clearfix {
+    *zoom : 1;
+
+    &:before,
+    &:after {
+        display: table;
+        content : "";
+    }
+
+    &:after {
+        clear : both;
+    }
+}
+
+// Prevent Long URL’s From Breaking Out of Container.
+// http://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container
+
+@mixin word-break {
+    word-break: break-all;
+    hyphens: auto;
+}
+
+@mixin hide-text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
