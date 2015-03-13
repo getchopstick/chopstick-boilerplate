@@ -79,20 +79,45 @@
 
 }
 
-// New grid system
-.o-layout {
-    margin: 0 auto;
-    @include clearfix;
+// New object > holder
+.o-holder {
+    @include padding-tb(1,1);
 }
 
-.o-layout--gutter {
+    .o-holder--big {
+        @include padding-tb(2,2);
+    }
+
+    .u-bgcolor-alpha {
+
+    }
+
+/*
+  Object: new grid
+*/
+
+.o-container {
+    margin: 0 auto;
+    max-width: $grid-width/$alpha-font-size*1em;
+}
+
+// No gutters
+.o-grid {
+    @include clearfix;
+    // @include px-padding-lr($columns-gutter,$columns-gutter);
+}
+
+// Default gutter
+.o-grid--gutter {
     @include px-margin-lr(-($columns-gutter),-($columns-gutter));
 }
 
-    .o-layout__item {
+    // Grid item, takes the full width by default
+    .o-grid__item {
         float: left;
+        width: 100%;
 
-        .o-layout--gutter & {
+        .o-grid--gutter & {
             @include px-padding-lr($columns-gutter,$columns-gutter);
         }
     }

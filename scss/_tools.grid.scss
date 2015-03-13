@@ -109,7 +109,7 @@ $fluid-grid-margin: ($grid-margin / $grid-width) * 100 ;
 // to have, and an optional suffix for responsive widths. E.g. to create thirds
 // and quarters for a small breakpoint:
 
-// @include widths(3 4, -sm);
+// @include widths(3 4, -$bp);
 
 @mixin widths($columns, $breakpoint: null) {
 
@@ -120,8 +120,8 @@ $fluid-grid-margin: ($grid-margin / $grid-width) * 100 ;
     // denominator.
     @for $numerator from 1 through $denominator {
 
-      // Build a class in the format `.u-3/4` or `.u-3-of-4`.
-      .u-#{$numerator}-of-#{$denominator}#{$breakpoint} {
+      // Build a class in the format `.u-3/4`
+      .u-#{$numerator}\/#{$denominator}#{$breakpoint} {
         width: ($numerator / $denominator) * 100% !important;
       }
     }

@@ -41,6 +41,7 @@
  *
  *  3. Objects
  *      - objects.grid
+ *      - objects.holder
  *      - objects.alerts
  *      - objects.buttons
  *      - objects.helpers
@@ -48,7 +49,6 @@
  *      - objects.media
  *      - objects.pagination
  *      - objects.tables
- *      - objects.colors
  *
  *  4. Components
  *      - components.frame
@@ -60,6 +60,7 @@
  *
  *  5. Trumps
  *      - trumps.widths
+ *      - trumps.colors
  *      - trumps.hacks
  *      - trumps.debug
  *      - trumps.baseline-grid
@@ -98,6 +99,7 @@
 
     /* 3. Objects */
     @import "objects.grid";
+    @import "objects.holder";
     @import "objects.alerts";
     @import "objects.buttons";
     @import "objects.helpers";
@@ -105,7 +107,6 @@
     @import "objects.media";
     @import "objects.pagination";
     @import "objects.tables";
-    @import "objects.colors";
 
     /* 4. Components */
     @import "components.frame";
@@ -117,6 +118,7 @@
 
     /* 5. Trumps */
     @import "trumps.widths";
+    @import "trumps.colors";
     @import "trumps.hacks";
     @import "trumps.debug";
     @import "trumps.baseline-grid";
