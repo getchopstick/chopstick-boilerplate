@@ -38,8 +38,8 @@ Follow these rules for namespacing:
 - `.t-` for theming classes (eg: .t-header)
 - `.u-` for utility classes (eg: .u-1-of-2)
 - `.is-`/`.has-` for stateful classes (eg: .is-active)
-- `._` for temporary hacks/fixes (eg: ._)
-
+- .js for javascript hooks
+- `._` for temporary hacks/fixes
 
 ## SCSS order
 
@@ -56,12 +56,12 @@ Example:
 
 ## Extends
 
-Don't use @extends as they have a tendency to cause css bloat and long selectors. 
+Don't use @extends as they have a tendency to cause css bloat and long selectors.
 
 
 ## Nesting
 
-Try to avoid nesting. We follow a single-depth-class-based architecture. 
+Try to avoid nesting. We follow a single-depth-class-based architecture.
 
 
 ## Global files
@@ -72,4 +72,3 @@ Only `@include` in the global screen.scss file. Never write SCSS directly in scr
 ## Be generous with comments
 
 Comments get filtered out when compiling. If you do *anything* that can not be immediately understood: comment it.
-

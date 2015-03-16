@@ -1,7 +1,7 @@
 Chopstick Boilerplate
 =====================
 
-Chopstick Boilerplate is a mobile-first responsive Design Boilerplate using the Chopstick framework. 
+Chopstick Boilerplate is a mobile-first responsive Design Boilerplate using the Chopstick framework.
 
 It uses the following tools
 - [Bower](http://bower.io/) as a dependency manager
@@ -26,7 +26,7 @@ Install [bundler](http://bundler.io) and the necessary Ruby dependencies:
     bundle install
 
 Install [bower](http://bower.io) and the necessary JavaScript dependencies:
-    
+
     npm install -g bower
     bower install
 
@@ -78,14 +78,14 @@ Chopstick is build upon the following principles. Please keep these in mind when
 ### Low specificity
 A single-depth-class-based architecture based on the [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) naming methodology.
 
-### Highly decoupled 
+### Highly decoupled
 Avoid reliance on other bits.
-- Separation of Concerns: let each piece of code solve its own problems 
+- Separation of Concerns: let each piece of code solve its own problems
 - Single Responsibility Principle: one thing, one thing only, one thing well
 - Open/Closed Principle: add via extension, not modification
 
 ### Highly composable
-- We build the bits that build the bits 
+- We build the bits that build the bits
 - Make everything opt-in and configurable: expose API-like CSS
 
 ### Keep it simple
@@ -105,7 +105,7 @@ The origin of the Chopstick name:
 Stable current version.
 
 ### 0.5
-1. convert to ITCSS architecture 
+1. convert to ITCSS architecture
 2. use only single depth BEM classnames
 - no nesting
 - no extends > only mixins
@@ -115,23 +115,30 @@ Stable current version.
 - .t- for theming classes
 - .u- for utility classes
 - .is-/.has- for stateful classes
+- .js for javascript hooks
 - ._ for temporary hacks/fixes
 
 ### 0.6
-1. make everything modular and configurable 
+1. make everything modular and configurable
 - start with the basics, options are default off
 - everything is a variable
 
-### v1.0
+### v0.7
 1. convert chopstick .scss to a dependency (npm and bower)
 2. update documentation/website
 
-### v2.0
+### v0.8
 1. Add, maintain and optimize objects
-2. Add configurable components (API like ui-kit)
-3. Add configurable javascript patterns
-4. Add configurable theming layer
-5. Self-updating style-guide
+
+### v0.9
+1. Add configurable components (API like ui-kit)
+2. Add configurable theming layer
+
+### v0.10
+1. Add configurable javascript patterns
+
+### v1.0
+1. Self-updating style-guide
 
 
 ## Credits
