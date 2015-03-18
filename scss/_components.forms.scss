@@ -1,13 +1,19 @@
-// Input sizes
-.c-input--sm {
+/*
+    Component: forms
+    ---
+    Form component
+*/
+
+// Input sizes > @TODO: make it work with just a class!
+input.c-input--sm {
     @include input-sm;
 }
 
-.c-input--lg {
+input.c-input--lg {
     @include input-lg;
 }
 
-// checkboxes and radio's
+// Checkboxes and radio's
 .c-input--option {
     margin: 0;
     display: inline-block;
@@ -28,7 +34,7 @@
     @include padding-top(.25);
 }
 
-.c-input--error  {
+input.c-input--error  {
     border-color: $error-color;
 
     &:focus {

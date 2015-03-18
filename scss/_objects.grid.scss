@@ -1,5 +1,7 @@
 /*
-  Object: grid
+    Object: grid
+    ---
+    Old grid system
 */
 
 .row {
@@ -79,7 +81,9 @@
 }
 
 /*
-  Object: new grid
+    Object: grid
+    ---
+    New grid system, works together with utility width classes
 */
 
 .o-container {
@@ -88,17 +92,19 @@
 }
 
 // No gutters
+
 .o-grid {
     @include clearfix;
-    // @include px-padding-lr($columns-gutter,$columns-gutter);
 }
 
 // Default gutter
+
 .o-grid--gutter {
     @include px-margin-lr(-($columns-gutter),-($columns-gutter));
 }
 
     // Grid item, takes the full width by default
+
     .o-grid__item {
         float: left;
         width: 100%;

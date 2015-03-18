@@ -1,5 +1,8 @@
-// Button sizes
-
+//
+//  Tools: Buttons
+//  ---
+//  ...
+//
 @mixin btn-lg {
     @include px-padding-lr(1.5,1.5);
     @include input-dimensions($ms-1,1,0,1.05,.95);

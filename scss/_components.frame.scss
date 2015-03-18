@@ -1,6 +1,8 @@
-//
-// Frame
-//
+/*
+    Component: Frame
+    ---
+    Scaffolding
+*/
 
 .c-holder {
     background-color: $delta-ui-color;
@@ -11,9 +13,7 @@
     }
 }
 
-//
 // Header
-//
 
 .c-header-holder {
     padding: 0;
@@ -150,9 +150,7 @@
     background-color: $alpha-link-color;
 }
 
-//
-// main
-//
+// Main
 
 .c-main-holder {
     border-bottom: 1px solid $beta-ui-color-light;

@@ -1,21 +1,22 @@
-//
-// module: elements
-//
+/*
+    Component: styleguide
+    ---
+    Styleguide demo styles
+*/
 
-.main-content {
+.c-main-content {
     @include box-(12,1,1);
 }
 
-    .c-styleguide .section-title {
+    .c-styleguide .c-section-title {
         color: $beta-text-color;
-        // font-weight: $beta-font-weight;
         border-bottom: 1px solid $beta-ui-color-light;
         @include padding-bottom(1);
         @include padding-top(1);
         @include text-dimensions($alpha-font-size,1,2);
     }
 
-    .c-styleguide .scss {
+    .c-styleguide .c-scss {
         display: block;
         color: $alpha-text-color;
         background-color: lighten($gamma-ui-color,10);
@@ -26,61 +27,28 @@
         @include px-padding-lr(1,1);
     }
 
-    .c-styleguide .color {
+    .c-styleguide .c-color {
         width: 100%;
         height: 60px;
         box-shadow: 0 0 1px 3px $white, 0 0 5px 2px rgba($black,.33);
     }
 
 
-    .example-form-grid {
+    .c-example-form-grid {
 
-        @include mq($bp2) {
-
-            .name {
-                @include box-(6,1,.5)
-            }
-
-            .email {
-                @include box-(6,.5,1)
-            }
-
-            .street {
-                @include box-(8,1,.5);
-            }
-
-            .city {
-                @include box-(8,.5,1);
-            }
-
-            .number {
-                @include box-(4,.5,1);
-            }
-            .zip-code {
-                @include box-(4,1,.5);
-            }
-
-            .full-width {
-                @include box-(12,1,1);
-            }
-
-
-        }
-
-        .oneliner .postfix {
+        .c-oneliner .c-postfix {
                 @include box-(6,0,1);
             }
 
-                .oneliner .postfix button {
+                .c-oneliner .c-postfix button {
                     @include postfix;
                 }
 
-            .oneliner .prefix {
+            .c-oneliner .c-prefix {
                 @include box-(6,1,0);
             }
 
-                .oneliner .prefix input {
+                .c-oneliner .c-prefix input {
                     @include prefix;
                 }
-
     }
