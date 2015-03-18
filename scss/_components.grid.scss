@@ -2,7 +2,7 @@
 // module: grid
 //
 
-.v-grid .row > div[class*="grid"] {
+.c-grid .row > div[class*="grid"] {
     background: darken($gamma-ui-color, 10);
     @include margin-bottom(1);
 
@@ -14,7 +14,7 @@
 
 }
 
-.v-grid .row .row > div[class*="grid"] {
+.c-grid .row .row > div[class*="grid"] {
     margin: 0;
 }
 
