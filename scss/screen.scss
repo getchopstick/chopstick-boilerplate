@@ -38,6 +38,7 @@
  *      - elements.typography
  *      - elements.images
  *      - elements.forms
+ *      - elements.tables
  *
  *  3. Objects
  *      - objects.grid
@@ -47,7 +48,6 @@
  *      - objects.media
  *      - objects.media-embed
  *      - objects.pagination
- *      - objects.tables
  *
  *  4. Components
  *      - components.frame
@@ -97,6 +97,7 @@
     @import "elements.typography";
     @import "elements.images";
     @import "elements.forms";
+    @import "elements.tables";
 
     /* 3. Objects */
     @import "objects.grid";
@@ -106,7 +107,6 @@
     @import "objects.media";
     @import "objects.media-embed";
     @import "objects.pagination";
-    @import "objects.tables";
 
     /* 4. Components */
     @import "components.frame";
