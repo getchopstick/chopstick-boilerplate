@@ -44,9 +44,8 @@
  *      - objects.holder
  *      - objects.alerts
  *      - objects.buttons
- *      - objects.media-embed
- *      - objects.icons
  *      - objects.media
+ *      - objects.media-embed
  *      - objects.pagination
  *      - objects.tables
  *
@@ -55,6 +54,7 @@
  *      - components.grid
  *      - components.home
  *      - components.forms
+ *      - components.icons
  *      - components.styleguide
  *      - components.styleguide-syntax
  *
@@ -103,9 +103,8 @@
     @import "objects.holder";
     @import "objects.alerts";
     @import "objects.buttons";
-    @import "objects.media-embed";
-    @import "objects.icons";
     @import "objects.media";
+    @import "objects.media-embed";
     @import "objects.pagination";
     @import "objects.tables";
 
@@ -114,6 +113,7 @@
     @import "components.grid";
     @import "components.home";
     @import "components.forms";
+    @import "components.icons";
     @import "components.styleguide";
     @import "components.styleguide-syntax";
 
