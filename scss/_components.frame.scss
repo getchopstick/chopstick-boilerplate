@@ -145,8 +145,8 @@
 
 }
 
-.svg .c-trigger-active,
-.c-trigger-active {
+.svg .c-is-active,
+.c-is-active {
     background-color: $alpha-link-color;
 }
 
@@ -178,7 +178,14 @@
     @include mq($bp5) {
         @include padding-tb(3,1.5);
     }
+}
 
+.c-doormat-col-4 {
+    @include box-(12,1,1);
+
+    @include mq($bp4) {
+        @include box-(4,1,1);
+    }
 }
 
 // Footer

@@ -18,7 +18,6 @@
 }
 
 .last-col {
-
     @include mq($bp2) {
         @include last-col;
     }
@@ -78,19 +77,6 @@
     }
 
 }
-
-// New object > holder
-.o-holder {
-    @include padding-tb(1,1);
-}
-
-    .o-holder--big {
-        @include padding-tb(2,2);
-    }
-
-    .u-bgcolor-alpha {
-
-    }
 
 /*
   Object: new grid

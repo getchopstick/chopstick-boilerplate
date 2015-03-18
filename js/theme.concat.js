@@ -16,10 +16,10 @@ jsTheme.forms =
 {
     init: function()
     {
-        $('.alert-box').on('click', function(e)
+        $('.c-alert-box').on('click', function(e)
         {
             e.preventDefault();
-            $(this).closest('.alert-box').fadeOut(300);
+            $(this).closest('.c-alert-box').fadeOut(300);
         });
     }
 };
@@ -36,22 +36,22 @@ jsTheme.mobileNav =
     //
     enableMobileNav: function()
     {
-        $("html").addClass("mobile-nav");
+        $("html").addClass("c-mobile-nav");
     },
 
     // build mobile nav
     buildMobileNav: function()
     {
-        var navHolder = $('.header .inner');
+        var navHolder = $('.c-header .inner');
 
-        navHolder.prepend('<span class="main-nav-trigger">menu</span>');
+        navHolder.prepend('<span class="c-main-nav-trigger">menu</span>');
 
-        var trigger = $('.main-nav-trigger');
-        var nav = $('.main-nav');
+        var trigger = $('.c-main-nav-trigger');
+        var nav = $('.c-main-nav');
 
         trigger.on('click', function() {
             nav.toggle();
-            $(this).toggleClass("trigger-active");
+            $(this).toggleClass("is-active");
         });
     }
 };
