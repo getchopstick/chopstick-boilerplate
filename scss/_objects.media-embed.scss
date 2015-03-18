@@ -1,8 +1,8 @@
 /*
-  Helpers
+  Media embed
+  ---
+  Responsive media embedding, like an iframe
 */
-
-// Responsive media embedding, like an iframe
 
 .media-embed {
     width: 100%;
@@ -19,9 +19,4 @@
         top: 0;
         left: 0;
     }
-}
-
-// Basis class to easily hide elements (for js toggle functionality, ...)
-.is-hidden {
-    display: none;
 }
