@@ -2,10 +2,10 @@ jsTheme.forms =
 {
     init: function()
     {
-        $('.alert-box').on('click', function(e)
+        $('.c-alert-box').on('click', function(e)
         {
             e.preventDefault();
-            $(this).closest('.alert-box').fadeOut(300);
+            $(this).closest('.c-alert-box').fadeOut(300);
         });
     }
 };

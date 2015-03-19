@@ -1,8 +1,10 @@
 /*
-  Buttons
+    Objects: buttons
+    ---
+    Button styling
 */
 
-.btn {
+.o-btn {
     display: inline-block;
     margin: 0;
     text-align: center;
@@ -40,32 +42,32 @@
 
 // btn display
 
-.btn--block {
+.o-btn--block {
     display: block;
     width: 100%;
 }
 
-.btn--fll {
+.o-btn--fll {
     @include btn-float(left);
 }
 
-.btn--flr {
+.o-btn--flr {
     @include btn-float(right);
 }
 
 // btn sizes
 
-.btn--sm {
+.o-btn--sm {
     @include btn-sm;
 }
 
-.btn--lg {
+.o-btn--lg {
     @include btn-lg;
 }
 
 // colors
 
-.btn--alpha-ui {
+.o-btn--alpha-ui {
     background-color: $alpha-ui-color;
     border-color: $alpha-ui-color;
 
@@ -86,7 +88,7 @@
 
 }
 
-.btn--beta-ui {
+.o-btn--beta-ui {
     background-color: $beta-ui-color;
     border-color: $beta-ui-color;
 
@@ -108,14 +110,14 @@
 
 // btn-group
 
-.btn-group {
+.o-btn-group {
     position: relative;
 
-    .btn--fll {
+    .o-btn--fll {
         @include px-margin-right(1);
     }
 
-    .btn--flr {
+    .o-btn--flr {
         @include px-margin-right(1);
     }
 

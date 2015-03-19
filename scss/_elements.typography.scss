@@ -47,7 +47,6 @@ address {
 
 pre {
     tab-size: 2;
-    overflow: auto;
 }
 
 ul,
@@ -82,9 +81,7 @@ hr {
     @include margin-bottom(1);
 }
 
-//
 // Links
-//
 
 a {
     text-decoration: none;

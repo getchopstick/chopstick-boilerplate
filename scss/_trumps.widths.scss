@@ -1,15 +1,19 @@
 /*
-  Widths
+    Trumps: Widths
+    ---
+    Width utility classes
 */
 
 // Loop through each of our column sizes and generate its width classes.
 // eg. u-1/2
+
 @each $column in $columns {
   @include widths($column);
 }
 
 // -bp1 breakpoint
 // eg. u-1/2-bp1
+
 @include mq($bp1) {
   @each $column in $columns {
     @include widths($column, -bp1);
@@ -18,6 +22,7 @@
 
 // -bp2 breakpoint
 // eg. u-1/2-bp2
+
 @include mq($bp2) {
   @each $column in $columns {
     @include widths($column, -bp2);
@@ -26,6 +31,7 @@
 
 // -bp3 breakpoint
 // eg. u-1/2-bp3
+
 @include mq($bp3) {
   @each $column in $columns {
     @include widths($column, -bp3);
@@ -34,6 +40,7 @@
 
 // -bp4 breakpoint
 // eg. u-1/2-bp4
+
 @include mq($bp4) {
   @each $column in $columns {
     @include widths($column, -bp4);
@@ -42,6 +49,7 @@
 
 // -bp5 breakpoint
 // eg. u-1/2-bp5
+
 @include mq($bp5) {
   @each $column in $columns {
     @include widths($column, -bp5);

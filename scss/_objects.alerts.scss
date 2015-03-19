@@ -1,19 +1,23 @@
 /*
-  Alerts
+    Objects: alerts
+    ---
+    Alert boxes
 */
 
-.alert-box {
+// @TODO: rewrite because this looks broken, js is also missing
+
+.o-alert-box {
     @include alert;
 }
 
-.alert-box.error {
+.o-alert-box--error {
     @include alert-error;
 }
 
-.alert-box.success {
+.o-alert-box--success {
     @include alert-success;
 }
 
-.alert-box.notice {
+.o-alert-box--notice {
     @include alert-notice;
 }

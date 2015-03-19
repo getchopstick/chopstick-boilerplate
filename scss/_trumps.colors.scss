@@ -1,5 +1,7 @@
 /*
-  Trumps: background color utilities
+    Trumps: Colors
+    ---
+    Background color utilities
 */
 
 .u-bgcolor-alpha-neutral { background-color: $alpha-neutral}
@@ -30,10 +32,10 @@
 .u-bgcolor-delta-ui-dark { background-color: $delta-ui-color-dark}
 
 .u-bgcolor-alpha-link { background-color: $alpha-link-color}
-.u-bgcolor-alpha-linkhover { background-color: $alpha-link-colorhover}
-.u-bgcolor-alpha-linkfocus { background-color: $alpha-link-colorfocus}
-.u-bgcolor-alpha-linkactive { background-color: $alpha-link-coloractive}
-.u-bgcolor-alpha-linkvisited { background-color: $alpha-link-colorvisited}
+.u-bgcolor-alpha-link-hover { background-color: $alpha-link-colorhover}
+.u-bgcolor-alpha-link-focus { background-color: $alpha-link-colorfocus}
+.u-bgcolor-alpha-link-active { background-color: $alpha-link-coloractive}
+.u-bgcolor-alpha-link-visited { background-color: $alpha-link-colorvisited}
 
 .u-bgcolor-grey-00 { background-color: $grey-00 }
 .u-bgcolor-grey-01 { background-color: $grey-01 }

@@ -38,30 +38,31 @@
  *      - elements.typography
  *      - elements.images
  *      - elements.forms
+ *      - elements.tables
  *
  *  3. Objects
  *      - objects.grid
  *      - objects.holder
  *      - objects.alerts
  *      - objects.buttons
- *      - objects.helpers
- *      - objects.icons
  *      - objects.media
+ *      - objects.media-embed
  *      - objects.pagination
- *      - objects.tables
  *
  *  4. Components
  *      - components.frame
  *      - components.grid
  *      - components.home
  *      - components.forms
+ *      - components.icons
  *      - components.styleguide
  *      - components.styleguide-syntax
  *
  *  5. Trumps
  *      - trumps.widths
  *      - trumps.colors
- *      - trumps.hacks
+ *      - trumps.states
+ *      - trumps.shame
  *      - trumps.debug
  *      - trumps.baseline-grid
  *      - trumps.print
@@ -96,30 +97,31 @@
     @import "elements.typography";
     @import "elements.images";
     @import "elements.forms";
+    @import "elements.tables";
 
     /* 3. Objects */
     @import "objects.grid";
     @import "objects.holder";
     @import "objects.alerts";
     @import "objects.buttons";
-    @import "objects.helpers";
-    @import "objects.icons";
     @import "objects.media";
+    @import "objects.media-embed";
     @import "objects.pagination";
-    @import "objects.tables";
 
     /* 4. Components */
     @import "components.frame";
     @import "components.grid";
     @import "components.home";
     @import "components.forms";
+    @import "components.icons";
     @import "components.styleguide";
     @import "components.styleguide-syntax";
 
     /* 5. Trumps */
     @import "trumps.widths";
     @import "trumps.colors";
-    @import "trumps.hacks";
+    @import "trumps.states";
+    @import "trumps.shame";
     @import "trumps.debug";
     @import "trumps.baseline-grid";
     @import "trumps.print";

@@ -1,8 +1,10 @@
 /*
-  Pagination
+    Object: Pagination
+    ---
+    Pagination
 */
 
-.pagination {
+.o-pagination {
     a,
     span {
         padding: 0 10px;
@@ -17,6 +19,6 @@
     @include pagination;
 }
 
-.pagination--centered {
+.o-pagination--centered {
     @include pagination-centered;
 }

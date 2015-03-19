@@ -1,15 +1,15 @@
-<div class="holder header-holder">
+<div class="c-holder c-header-holder">
     <div class="row header-row">
-        <div class="header">
-            <div class="inner">
-                <h1 class="logo">
-                    <a href="index.html">chopstick</a>
+        <div class="c-header">
+            <div class="c-header__inner">
+                <h1 class="c-logo">
+                    <a href="index.html" class="c-logo__link">chopstick</a>
                 </h1>
-                <nav class="main-nav">
-                    <ul>
-                        <li {% if page.url contains "index" %}class="selected"{% endif %}><a href="index.html">Home</a></li>
-                        <li {% if page.url contains "styleguide" %}class="selected"{% endif %}><a href="styleguide.html">Styleguide</a></li>
-                        <li {% if page.url contains "grid" %}class="selected"{% endif %}><a href="grid.html">Grid</a></li>
+                <nav class="c-main-nav">
+                    <ul class="c-main-nav__list">
+                        <li class="c-main-nav__list-item {% if page.url contains "index" %}is-selected{% endif %}"><a href="index.html" class="c-main-nav__link">Home</a></li>
+                        <li class="c-main-nav__list-item {% if page.url contains "styleguide" %}is-selected{% endif %}"><a href="styleguide.html" class="c-main-nav__link">Styleguide</a></li>
+                        <li class="c-main-nav__list-item {% if page.url contains "grid" %}is-selected{% endif %}"><a href="grid.html" class="c-main-nav__link">Grid</a></li>
                     </ul>
                 </nav>
             </div>
