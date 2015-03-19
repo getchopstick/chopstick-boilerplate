@@ -124,21 +124,23 @@ Stable current version.
 - everything is a variable
 
 ### v0.7
-1. convert chopstick .scss to a dependency (npm and bower)
-2. update documentation/website
+1. Add necessary/missing objects
+2. Optimize existing objects
 
 ### v0.8
-1. Add, maintain and optimize objects
-
-### v0.9
 1. Add configurable components (API like ui-kit)
 2. Add configurable theming layer
+3. Redesign/optimize start theme
+
+### v0.9
+1. convert chopstick .scss to a dependency (npm and bower) and integrate it into the boilerplate
 
 ### v0.10
 1. Add configurable javascript patterns
 
 ### v1.0
-1. Self-updating style-guide
+1. Create a self-updating style-guide
+2. Update website and write complete documentation and starter guide
 
 
 ## Credits
