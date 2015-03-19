@@ -7,38 +7,13 @@
 .c-holder {
     background-color: $delta-ui-color;
     @include padding-top(1.5);
-
-    @include mq($bp2) {
-        @include px-padding-lr(1,1);
-    }
+    @include px-padding-lr(1,1);
 }
 
 // Header
 
 .c-header-holder {
-    padding: 0;
-    border: none;
-
-    @include mq($bp2) {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-
-    @include mq($bp4) {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-
-}
-
-.c-header {
-    @include box-(12,1,1);
-}
-
-.c-header__inner {
     border-bottom: 1px solid $beta-ui-color-light;
-
-    @include clearfix;
 }
 
 .c-logo {
