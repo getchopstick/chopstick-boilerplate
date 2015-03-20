@@ -10,52 +10,52 @@
 // use: @include em-padding-lr(#left, #right);
 
 @mixin em-padding-lr($left: 1, $right: $left) {
-	padding-left: $left * 1em;
-	padding-left: $left * 1rem;
-	padding-right: $right * 1em;
-	padding-right: $right * 1rem;
+    padding-left: $left * 1em;
+    padding-left: $left * 1rem;
+    padding-right: $right * 1em;
+    padding-right: $right * 1rem;
 }
 
 // horizontal padding based on the alpha font size
 // use: @include px-padding-lr(#left, #right);
 
 @mixin px-padding-lr($left: 1, $right: $left) {
-	padding-left: $left * $alpha-font-size * 1px;
-	padding-right: $right * $alpha-font-size * 1px;
+    padding-left: $left * $alpha-font-size * 1px;
+    padding-right: $right * $alpha-font-size * 1px;
 }
 
 @mixin px-padding-left($left: 1) {
-	padding-left: $left * $alpha-font-size  * 1px;
+    padding-left: $left * $alpha-font-size  * 1px;
 }
 
 @mixin px-padding-right($right: 1) {
-	padding-right: $right * $alpha-font-size * 1px;
+    padding-right: $right * $alpha-font-size * 1px;
 }
 
 // horizontal margin based on the alpha font size in rem
 // use: @include em-margin-lr(#left, #right);
 
 @mixin em-margin-lr($left: 1, $right: $left) {
-	margin-left: $left * 1em;
-	margin-left: $left * 1rem;
-	margin-right: $right * 1em;
-	margin-right: $right * 1rem;
+    margin-left: $left * 1em;
+    margin-left: $left * 1rem;
+    margin-right: $right * 1em;
+    margin-right: $right * 1rem;
 }
 
 // horizontal margin based on the alpha font size
 // use: @include px-margin-lr(#left, #right);
 
 @mixin px-margin-lr($left: 1, $right: $left) {
-	margin-left: $left * $alpha-font-size * 1px;
-	margin-right: $right * $alpha-font-size * 1px;
+    margin-left: $left * $alpha-font-size * 1px;
+    margin-right: $right * $alpha-font-size * 1px;
 }
 
 @mixin px-margin-left($left: 1) {
-	margin-left: $left * $alpha-font-size * 1px;
+    margin-left: $left * $alpha-font-size * 1px;
 }
 
 @mixin px-margin-right($right: 1) {
-	margin-right: $right * $alpha-font-size * 1px;
+    margin-right: $right * $alpha-font-size * 1px;
 }
 
 // Vertical spacing
