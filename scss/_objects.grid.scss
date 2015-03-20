@@ -27,7 +27,7 @@
         float: left;
         width: 100%;
 
-        .o-grid--gutter & {
+        .o-grid--gutter > & {
             @include px-padding-lr($columns-gutter,$columns-gutter);
         }
     }

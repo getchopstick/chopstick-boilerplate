@@ -39,21 +39,10 @@
         @include text-dimensions(14,.8,0,.5,.3);
     }
 
-    .c-example-form-grid {
+    .c-oneliner .c-postfix button {
+        @include postfix;
+    }
 
-        .c-oneliner .c-postfix {
-                @include box-(6,0,1);
-            }
-
-                .c-oneliner .c-postfix button {
-                    @include postfix;
-                }
-
-            .c-oneliner .c-prefix {
-                @include box-(6,1,0);
-            }
-
-                .c-oneliner .c-prefix input {
-                    @include prefix;
-                }
+    .c-oneliner .c-prefix input {
+        @include prefix;
     }
