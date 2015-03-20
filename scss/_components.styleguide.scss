@@ -38,11 +38,3 @@
         min-height: 55px;
         @include text-dimensions(14,.8,0,.5,.3);
     }
-
-    .c-oneliner .c-postfix button {
-        @include postfix;
-    }
-
-    .c-oneliner .c-prefix input {
-        @include prefix;
-    }

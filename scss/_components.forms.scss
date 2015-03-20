@@ -13,6 +13,15 @@ input.c-input--lg {
     @include input-lg;
 }
 
+// Postfix & prefix > @TODO: make it work with just a class!
+.c-oneliner .c-postfix button {
+    @include postfix;
+}
+
+.c-oneliner .c-prefix input {
+    @include prefix;
+}
+
 // Checkboxes and radio's
 .c-input--option {
     margin: 0;
