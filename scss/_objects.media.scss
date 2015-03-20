@@ -23,7 +23,7 @@
 
     .o-media__img {
         float: left;
-        @include px-padding-lr(1,0);
+        @include px-padding-lr(0,1);
         @include margin-bottom(1);
 
         img {
@@ -33,10 +33,9 @@
 
     .o-media__img--reverse {
         float: right;
-        @include px-padding-lr(0,1);
+        @include px-padding-lr(1,0);
     }
 
     .o-media__body {
         overflow: hidden;
-        @include px-padding-lr(1,1);
     }

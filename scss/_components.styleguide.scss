@@ -8,7 +8,7 @@
     @include box-(12,1,1);
 }
 
-    .c-styleguide .c-section-title {
+    .c-section-title {
         color: $beta-text-color;
         border-bottom: 1px solid $beta-ui-color-light;
         @include padding-bottom(1);
@@ -16,7 +16,7 @@
         @include text-dimensions($alpha-font-size,1,2);
     }
 
-    .c-styleguide .c-scss {
+    .c-scss {
         display: block;
         color: $alpha-text-color;
         background-color: lighten($gamma-ui-color,10);
@@ -27,12 +27,17 @@
         @include px-padding-lr(1,1);
     }
 
-    .c-styleguide .c-color {
+    .c-swatch {
         width: 100%;
         height: 60px;
         box-shadow: 0 0 1px 3px $white, 0 0 5px 2px rgba($black,.33);
     }
 
+    .c-swatch-caption {
+        color: $beta-text-color;
+        min-height: 55px;
+        @include text-dimensions(14,.8,0,.5,.3);
+    }
 
     .c-example-form-grid {
 
