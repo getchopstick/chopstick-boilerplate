@@ -67,42 +67,6 @@
     zoom: 1;
 }
 
-// Baseline mixins
-
-@mixin padding-tb($top: 1, $bottom: 0) {
-    padding-top: $top * $alpha-font-size * 1px;
-    padding-top: $top * 1rem;
-    padding-bottom: $bottom * $alpha-font-size * 1px;
-    padding-bottom: $bottom * 1rem;
-}
-
-@mixin padding-bottom($bottom: 1) {
-    padding-bottom: $bottom * $alpha-font-size * 1px;
-    padding-bottom: $bottom * 1rem;
-}
-
-@mixin padding-top($top: 1) {
-    padding-top: $top * $alpha-font-size * 1px;
-    padding-top: $top * 1rem;
-}
-
-@mixin margin-tb($top: 1, $bottom: 0) {
-    margin-top: $top * $alpha-font-size * 1px;
-    margin-top: $top * 1rem;
-    margin-bottom: $bottom * $alpha-font-size * 1px;
-    margin-bottom: $bottom * 1rem;
-}
-
-@mixin margin-bottom($bottom: 1) {
-    margin-bottom: $bottom * $alpha-font-size * 1px;
-    margin-bottom: $bottom * 1rem;
-}
-
-@mixin margin-top($top: 1) {
-    margin-top: $top * $alpha-font-size * 1px;
-    margin-top: $top * 1rem;
-}
-
 // Border-box polyfill helper.
 // @include border-box;
 

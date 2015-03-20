@@ -37,11 +37,10 @@
     @include padding-top(.75);
 
     @include mq($bp3) {
-	border-top: none;
-	padding-top: 0;
-	margin-bottom: 0;
-
-	@include horizontal-nav();
+        border-top: none;
+        padding-top: 0;
+        margin-bottom: 0;
+        @include horizontal-nav();
     }
 
     @include clearfix;
@@ -59,7 +58,7 @@
     @include text-dimensions($alpha-font-size,1,0,.25,.25);
 
     @include mq($bp3) {
-	@include padding-tb(1.25,1.25);
+        @include padding-tb(1.25,1.25);
     }
 
     &:hover,

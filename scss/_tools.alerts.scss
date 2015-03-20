@@ -7,8 +7,8 @@
 @mixin alert-settings {
     position: relative;
     padding: em($alpha-baseline-grid*2) em($alpha-baseline-grid*3);
-    @include margin-bottom(1);
     cursor: pointer;
+    @include margin-bottom(1);
     @include block-skin;
 
     a {

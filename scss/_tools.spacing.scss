@@ -1,69 +1,113 @@
 //
 //  Tools: Spacing
 //  ---
-//  Mixins to add padding and margin @TODO: make it work with the new grid variables!
+//  Mixins to add padding and margin
 //
 
+// Horizontal spacing
 
-$grid-gutter   : 32;
-$grid-column   : 72;
-$grid-columns  : 12;
-
-// calculations
-
-$grid-margin: $grid-gutter / 2;
-$grid-width: ($grid-gutter + $grid-column) * $grid-columns;
-
-// Responsive design formula for fully percentual columns & gutters
-
-$fluid-grid-column: $grid-column / $grid-width * 100 ;
-$fluid-grid-gutter: ($grid-gutter / $grid-width) * 100 ;
-$fluid-grid-margin: ($grid-margin / $grid-width) * 100 ;
-
-// horizontal padding based on the context grid gutter in em
+// horizontal padding based on the alpha font size in rem
 // use: @include em-padding-lr(#left, #right);
 
 @mixin em-padding-lr($left: 1, $right: $left) {
-	padding-left: $grid-margin/$alpha-font-size * $left * 1em;
-	padding-right: $grid-margin/$alpha-font-size * $right * 1em;
+	padding-left: $left * 1em;
+	padding-left: $left * 1rem;
+	padding-right: $right * 1em;
+	padding-right: $right * 1rem;
 }
 
-// horizontal padding based on the context grid gutter
+// horizontal padding based on the alpha font size
 // use: @include px-padding-lr(#left, #right);
 
 @mixin px-padding-lr($left: 1, $right: $left) {
-	padding-left: $grid-margin * $left * 1px;
-	padding-right: $grid-margin * $right * 1px;
+	padding-left: $left * $alpha-font-size * 1px;
+	padding-right: $right * $alpha-font-size * 1px;
 }
 
-@mixin px-margin-left($left: 1) {
-	margin-left: $grid-margin * $left * 1px;
+@mixin px-padding-left($left: 1) {
+	padding-left: $left * $alpha-font-size  * 1px;
 }
 
-@mixin px-margin-right($right: 1) {
-	margin-right: $grid-margin * $right * 1px;
+@mixin px-padding-right($right: 1) {
+	padding-right: $right * $alpha-font-size * 1px;
 }
 
-// horizontal margin based on the context grid gutter in em
+// horizontal margin based on the alpha font size in rem
 // use: @include em-margin-lr(#left, #right);
 
 @mixin em-margin-lr($left: 1, $right: $left) {
-	margin-left: $grid-margin/$alpha-font-size * $left * 1em;
-	margin-right: $grid-margin/$alpha-font-size * $right * 1em;
+	margin-left: $left * 1em;
+	margin-left: $left * 1rem;
+	margin-right: $right * 1em;
+	margin-right: $right * 1rem;
 }
 
-// horizontal margin based on the context grid gutter
+// horizontal margin based on the alpha font size
 // use: @include px-margin-lr(#left, #right);
 
 @mixin px-margin-lr($left: 1, $right: $left) {
-	margin-left: $grid-margin * $left * 1px;
-	margin-right: $grid-margin * $right * 1px;
+	margin-left: $left * $alpha-font-size * 1px;
+	margin-right: $right * $alpha-font-size * 1px;
 }
 
-// horizontal percentual margin
-// use: @include perc-margin-lr(#left, #right);
+@mixin px-margin-left($left: 1) {
+	margin-left: $left * $alpha-font-size * 1px;
+}
 
-@mixin perc-margin-lr($left: 1, $right: $left) {
-	margin-left: $fluid-grid-margin * $left * 1%;
-	margin-right: $fluid-grid-margin * $right * 1%;
+@mixin px-margin-right($right: 1) {
+	margin-right: $right * $alpha-font-size * 1px;
+}
+
+// Vertical spacing
+
+// vertical padding based on the alpha font size in rem
+// use: @include padding-tb(#top, #bottom);
+
+@mixin padding-tb($top: 1, $bottom: 0) {
+    padding-top: $top * $alpha-font-size * 1px;
+    padding-top: $top * 1rem;
+    padding-bottom: $bottom * $alpha-font-size * 1px;
+    padding-bottom: $bottom * 1rem;
+}
+
+// vertical padding based on the alpha font size in rem
+// use: @include padding-bottom(#bottom);
+
+@mixin padding-bottom($bottom: 1) {
+    padding-bottom: $bottom * $alpha-font-size * 1px;
+    padding-bottom: $bottom * 1rem;
+}
+
+// vertical padding based on the alpha font size in rem
+// use: @include padding-top(#top);
+
+@mixin padding-top($top: 1) {
+    padding-top: $top * $alpha-font-size * 1px;
+    padding-top: $top * 1rem;
+}
+
+// vertical margin based on the alpha font size in rem
+// use: @include margin-tb(#top, #bottom);
+
+@mixin margin-tb($top: 1, $bottom: 0) {
+    margin-top: $top * $alpha-font-size * 1px;
+    margin-top: $top * 1rem;
+    margin-bottom: $bottom * $alpha-font-size * 1px;
+    margin-bottom: $bottom * 1rem;
+}
+
+// vertical margin based on the alpha font size in rem
+// use: @include margin-bottom(#bottom);
+
+@mixin margin-bottom($bottom: 1) {
+    margin-bottom: $bottom * $alpha-font-size * 1px;
+    margin-bottom: $bottom * 1rem;
+}
+
+// vertical margin based on the alpha font size in rem
+// use: @include margin-top(#top);
+
+@mixin margin-top($top: 1) {
+    margin-top: $top * $alpha-font-size * 1px;
+    margin-top: $top * 1rem;
 }
