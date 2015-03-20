@@ -1,43 +1,11 @@
 //
-//  Settings: Old grid system
+//  Settings: Grid system
 //  ---
-//  ...
+//  Set your amount of columns and gutter width
 //
-
-
-// Settings
-
-$grid-gutter                : 32;
-$grid-column                : 72;
-$grid-columns               : 12;
-
-// Breakpoints calculated in em's, always based on 16px base-value
-
-$bp1                        : 320/16*1em;
-$bp2                        : 480/16*1em;
-$bp3                        : 680/16*1em;
-$bp4                        : 960/16*1em;
-$bp5                        : 1140/16*1em;
-
-//
-//  Settings: New grid system
-//  ---
-//  ...
-//
-
-// Create an array of named breakpoints and their conditions.
-
-$breakpoints: (
-  "xs" "screen and (max-width: #{$bp1})",
-  "sm" "screen and (min-width: #{$bp2}) and (max-width: #{$bp4})",
-  "md" "screen and (min-width: #{$bp3})",
-  "lg" "screen and (max-width: #{$bp4})",
-  "xl" "screen and (min-width: #{$bp5})",
-) !default;
-
-// New grid variables
 
 $columns-gutter: 1 !default; // This number is based on the baseline
+
 $columns: (
   2,
   3,

@@ -113,7 +113,6 @@
 // Doormat
 
 .c-doormat-holder {
-
     @include mq($bp2) {
         @include padding-tb(2,.5);
     }
@@ -123,21 +122,9 @@
     }
 }
 
-.c-doormat-col-4 {
-    @include box-(12,1,1);
-
-    @include mq($bp4) {
-        @include box-(4,1,1);
-    }
-}
-
 // Footer
 
 .c-footer-holder {
     background-color: $alpha-text-color;
     color: lighten($alpha-text-color,70);
-}
-
-.c-footer {
-    @include box-(12,1,1);
 }

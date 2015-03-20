@@ -11,6 +11,7 @@
  *
  *  0. Settings
  *      - settings.global
+ *      - settings.breakpoints
  *      - settings.grid
  *      - settings.colors
  *      - settings.typography
@@ -21,6 +22,7 @@
  *      - tools.functions
  *      - tools.mixins
  *      - tools.grid
+ *      - tools.spacing
  *      - tools.typography
  *      - tools.ui
  *      - tools.buttons
@@ -72,6 +74,7 @@
 
     // 0. Settings
     @import "settings.global";
+    @import "settings.breakpoints";
     @import "settings.grid";
     @import "settings.colors";
     @import "settings.typography";
@@ -82,6 +85,7 @@
     @import "tools.functions";
     @import "tools.mixins";
     @import "tools.grid";
+    @import "tools.spacing";
     @import "tools.typography";
     @import "tools.ui";
     @import "tools.buttons";

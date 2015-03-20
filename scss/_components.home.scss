@@ -22,8 +22,6 @@
 }
 
 .c-intro {
-    @include box-(12,1,1);
-
     h1 {
         font-weight: 300;
     }
@@ -32,15 +30,6 @@
         color: $beta-text-color;
         text-transform: uppercase;
         font-weight: 700;
-    }
-
-}
-
-.c-main-col-6 {
-    @include box-(12,1,1);
-
-    @include mq($bp4) {
-        @include box-(6,1,1);
     }
 
 }
