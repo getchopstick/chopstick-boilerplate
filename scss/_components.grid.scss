@@ -4,33 +4,15 @@
     Grid demo styling
 */
 
-// Visualise old grid boxes (for demo purposes)
 
-.c-grid .row > div[class*="grid"] {
-    background: darken($gamma-ui-color, 10);
-    @include margin-bottom(1);
-
-    .inner {
-        background: $gamma-ui-color;
-        text-align: center;
-        @include padding-tb (.5,.5);
-    }
-
-}
-
-.c-grid .row .row > div[class*="grid"] {
-    margin: 0;
-}
-
-
-// Visualise new grid boxes (for demo purposes)
-
+// Visualise grid boxes (for demo purposes)
 .c-grid-test {
-    background-color: $grey-04;
+
 }
 
-.c-grid-test__item {
-    background-color: $grey-05;
-    text-align: center;
-    @include padding-tb(.5,.5);
-}
+    .c-grid-test__item {
+        background-color: $grey-05;
+        text-align: center;
+        @include padding-tb(.5,.5);
+        @include margin-tb(1,1);
+    }

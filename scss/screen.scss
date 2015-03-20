@@ -61,6 +61,7 @@
  *
  *  5. Trumps
  *      - trumps.widths
+ *      - trumps.push
  *      - trumps.colors
  *      - trumps.states
  *      - trumps.shame
@@ -121,6 +122,7 @@
 
     /* 5. Trumps */
     @import "trumps.widths";
+    @import "trumps.push";
     @import "trumps.colors";
     @import "trumps.states";
     @import "trumps.shame";
