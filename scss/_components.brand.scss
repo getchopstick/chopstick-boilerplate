@@ -1,0 +1,22 @@
+.c-logo {
+    float: left;
+    font-family: $alpha-font-family;
+    font-weight: $alpha-font-weight;
+    margin-bottom: 0;
+    @include text-dimensions($alpha-font-size,1,0,1,1);
+
+    @include mq($bp3) {
+        @include padding-tb(1.25,1.25);
+    }
+}
+
+    .c-logo__link {
+        display: block;
+        text-decoration: none;
+        color: $beta-text-color;
+
+        &:hover,
+        &:focus {
+            color: $alpha-text-color;
+        }
+    }

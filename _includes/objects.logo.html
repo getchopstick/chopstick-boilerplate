@@ -1,0 +1,15 @@
+{% if page.section != 'home' %}
+    <p class="c-logo">
+        <a href="index.html" class="c-logo__link">
+{% else %}
+    <h1 class="c-logo">
+{% endif %}
+
+    {{ site.title }}
+
+{% if page.section != 'home' %}
+        </a>
+    </p>
+{% else %}
+    </h1>
+{% endif %}

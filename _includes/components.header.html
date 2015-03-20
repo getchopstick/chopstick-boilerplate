@@ -2,9 +2,8 @@
     <div class="o-container">
         <div class="o-grid">
             <div class="o-grid__item">
-                <h1 class="c-logo">
-                    <a href="index.html" class="c-logo__link">chopstick</a>
-                </h1>
+                {% include objects.logo.html %}
+
                 <nav class="c-main-nav">
                     <ul class="c-main-nav__list">
                         <li class="c-main-nav__list-item {% if page.url contains "index" %}is-selected{% endif %}"><a href="index.html" class="c-main-nav__link">Home</a></li>

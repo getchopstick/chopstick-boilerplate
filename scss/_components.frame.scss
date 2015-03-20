@@ -16,47 +16,19 @@
     border-bottom: 1px solid $beta-ui-color-light;
 }
 
-.c-logo {
-    float: left;
-    font-family: $alpha-font-family;
-    font-weight: $alpha-font-weight;
-    margin-bottom: 0;
-    @include text-dimensions($alpha-font-size,1);
-}
-
-.c-logo__link {
-    display: block;
-    text-decoration: none;
-    color: $beta-text-color;
-    @include text-dimensions($alpha-font-size,1,0,1,1);
-
-    &:hover,
-    &:focus {
-	color: $alpha-text-color;
-    }
-
-    @include mq($bp3) {
-	@include padding-tb(1.25,1.25);
-    }
-
-}
-
 .c-main-nav {
     width: 100%;
     float: left;
 
     @include mq($bp3) {
-	display: block !important;
-	width: auto;
-	float: right;
+        display: block !important;
+        width: auto;
+        float: right;
 
-
-	li {
-	    @include px-margin-lr(2,0);
+        li {
+            @include px-margin-lr(2,0);
         }
-
     }
-
 }
 
 .c-main-nav__list {
