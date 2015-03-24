@@ -1,9 +1,9 @@
-jsTheme.mobileNav =
+chopstick.mobileNav =
 {
     init: function()
     {
-        jsTheme.mobileNav.enableMobileNav();
-        jsTheme.mobileNav.buildMobileNav();
+        chopstick.mobileNav.enableMobileNav();
+        chopstick.mobileNav.buildMobileNav();
     },
 
     // CSS is based on the class .mobile-nav

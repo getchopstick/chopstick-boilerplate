@@ -1,11 +1,11 @@
-jsTheme.forms =
+chopstick.forms =
 {
     init: function()
     {
-        $('.c-alert-box').on('click', function(e)
+        $('.o-alert-box').on('click', function(e)
         {
             e.preventDefault();
-            $(this).closest('.c-alert-box').fadeOut(300);
+            $(this).closest('.o-alert-box').fadeOut(300);
         });
     }
 };
