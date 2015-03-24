@@ -4,7 +4,7 @@ var chopstick =
     init: function()
     {
         chopstick.loadObject(chopstick.mobileNav, 'chopstick.mobileNav');
-        chopstick.loadObject(chopstick.forms, 'chopstick.forms');
+        chopstick.loadObject(chopstick.alerts, 'chopstick.alerts');
         chopstick.loadObject(chopstick.toggle, 'chopstick.toggle');
 
         console.log("javascript is locked and loaded!") // for testing purposes. Check your console. Delete after you finished reading this. :-)

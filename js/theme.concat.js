@@ -4,7 +4,7 @@ var chopstick =
     init: function()
     {
         chopstick.loadObject(chopstick.mobileNav, 'chopstick.mobileNav');
-        chopstick.loadObject(chopstick.forms, 'chopstick.forms');
+        chopstick.loadObject(chopstick.alerts, 'chopstick.alerts');
         chopstick.loadObject(chopstick.toggle, 'chopstick.toggle');
 
         console.log("javascript is locked and loaded!") // for testing purposes. Check your console. Delete after you finished reading this. :-)
@@ -39,22 +39,41 @@ var chopstick =
     }
  };
 
-chopstick.forms =
+chopstick.alerts =
 {
+    settings:
+    {
+        alertbox: $('.o-alert-box')
+    },
+
     init: function()
     {
-        $('.o-alert-box').on('click', function(e)
+        settings = this.settings;
+        chopstick.alerts.closeAlertBox();
+    },
+
+    closeAlertBox: function ()
+    {
+        settings.alertbox.on('click', function(e)
         {
             e.preventDefault();
-            $(this).closest('.o-alert-box').fadeOut(300);
+            $(this).closest(settings.alertbox).fadeOut(300);
         });
     }
 };
 
 chopstick.mobileNav =
 {
+    settings:
+    {
+        navHolder: $('.c-header .inner')
+        trigger: $('.c-main-nav-trigger'),
+        nav: $('.c-main-nav')
+    },
     init: function()
     {
+        settings = this.settings;
+
         chopstick.mobileNav.enableMobileNav();
         chopstick.mobileNav.buildMobileNav();
     },
@@ -69,15 +88,10 @@ chopstick.mobileNav =
     // build mobile nav
     buildMobileNav: function()
     {
-        var navHolder = $('.c-header .inner');
+        settings.navHolder.prepend('<span class="c-main-nav-trigger">menu</span>');
 
-        navHolder.prepend('<span class="c-main-nav-trigger">menu</span>');
-
-        var trigger = $('.c-main-nav-trigger');
-        var nav = $('.c-main-nav');
-
-        trigger.on('click', function() {
-            nav.toggle();
+        settings.trigger.on('click', function() {
+            settings.nav.toggle();
             $(this).toggleClass("is-active");
         });
     }

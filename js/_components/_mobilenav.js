@@ -1,7 +1,15 @@
 chopstick.mobileNav =
 {
+    settings:
+    {
+        navHolder: $('.c-header .inner')
+        trigger: $('.c-main-nav-trigger'),
+        nav: $('.c-main-nav')
+    },
     init: function()
     {
+        settings = this.settings;
+
         chopstick.mobileNav.enableMobileNav();
         chopstick.mobileNav.buildMobileNav();
     },
@@ -16,15 +24,10 @@ chopstick.mobileNav =
     // build mobile nav
     buildMobileNav: function()
     {
-        var navHolder = $('.c-header .inner');
+        settings.navHolder.prepend('<span class="c-main-nav-trigger">menu</span>');
 
-        navHolder.prepend('<span class="c-main-nav-trigger">menu</span>');
-
-        var trigger = $('.c-main-nav-trigger');
-        var nav = $('.c-main-nav');
-
-        trigger.on('click', function() {
-            nav.toggle();
+        settings.trigger.on('click', function() {
+            settings.nav.toggle();
             $(this).toggleClass("is-active");
         });
     }
