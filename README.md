@@ -45,7 +45,7 @@ To compile Chopstick Boilerplate, `cd` into the project root and run:
 
 This will compile the `scss` and build the Jekyll site.
 
-For development there is also a watch task wich will load a browsersync server and watch your all your files (*.html, *.md, *.scss, *.js, *.jpg, *.png, *.svg) for changes:
+For development there is also a watch task wich will load a browsersync server and watch your all your files (`*.html, *.md, *.scss, *.js, *.jpg, *.png, *.svg`) for changes:
 
     gulp watch
 
@@ -73,7 +73,7 @@ Chopstick is a framework based on the [ITCSS](http://itcss.io/) architecture and
 
 
 ## Chopstick principles
-Chopstick is build upon the following principles. Please keep these in mind when contributing and/or using this framework.
+Chopstick is built upon the following principles. Please keep these in mind when contributing and/or using this framework.
 
 ### Low specificity
 A single-depth-class-based architecture based on the [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) naming methodology.
@@ -95,16 +95,16 @@ Avoid reliance on other bits.
 
 ## What’s in a name
 The origin of the Chopstick name:
-- Chopstick originated as frontend companion of Fork CMS. Both are developed and maintained by [Wijs](https://wijs.be/en)
+- Chopstick originated as front-end companion of Fork CMS. Both are developed and maintained by [Wijs](https://wijs.be/en)
 - Inspired by the Karate Kid movies, Chopstick is a deadly and precise [fly squating tool](https://www.youtube.com/watch?v=J1gAHil89Z4).
 
 
 ## Roadmap
 
-### 0.4
+### v0.4
 Stable current version.
 
-### 0.5
+### v0.5
 1. convert to ITCSS architecture
 2. use only single depth BEM classnames
 - no nesting
@@ -118,7 +118,7 @@ Stable current version.
 - .js for javascript hooks
 - ._ for temporary hacks/fixes
 
-### 0.6
+### v0.6
 1. make everything modular and configurable
 - start with the basics, options are default off
 - everything is a variable
