@@ -4,7 +4,7 @@
     Button styling
 */
 
-.o-btn {
+.c-btn {
     display: inline-block;
     margin: 0;
     text-align: center;
@@ -42,44 +42,44 @@
 
 // btn display
 
-.o-btn--block {
+.c-btn--block {
     display: block;
     width: 100%;
 }
 
-.o-btn--fll {
+.c-btn--fll {
     @include btn-float(left);
 }
 
-.o-btn--flr {
+.c-btn--flr {
     @include btn-float(right);
 }
 
 // btn sizes
 
-.o-btn--sm {
+.c-btn--sm {
     @include btn-sm;
 }
 
-.o-btn--lg {
+.c-btn--lg {
     @include btn-lg;
 }
 
 // colors
 
-.o-btn--alpha-ui {
+.c-btn--alpha-ui {
     background-color: $alpha-ui-color;
     border-color: $alpha-ui-color;
 
     &,
     &:visited {
-        color: #fff;
+        color: $white;
     }
 
     &:hover,
     &:focus {
         background-color: lighten($alpha-ui-color,10);
-        color: #fff;
+        color: $white;
     }
 
     &:active {
@@ -88,19 +88,19 @@
 
 }
 
-.o-btn--beta-ui {
+.c-btn--beta-ui {
     background-color: $beta-ui-color;
     border-color: $beta-ui-color;
 
     &,
     &:visited {
-        color: #fff;
+        color: $white;
     }
 
     &:hover,
     &:focus {
         background-color: lighten($beta-ui-color,10);
-        color: #fff;
+        color: $white;
     }
 
     &:active {
@@ -110,14 +110,14 @@
 
 // btn-group
 
-.o-btn-group {
+.c-btn-group {
     position: relative;
 
-    .o-btn--fll {
+    .c-btn--fll {
         @include px-margin-right(1);
     }
 
-    .o-btn--flr {
+    .c-btn--flr {
         @include px-margin-right(1);
     }
 

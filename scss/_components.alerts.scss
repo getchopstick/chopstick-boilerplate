@@ -6,18 +6,18 @@
 
 // @TODO: rewrite because this looks broken, js is also missing
 
-.o-alert-box {
+.c-alert-box {
     @include alert;
 }
 
-.o-alert-box--error {
+.c-alert-box--error {
     @include alert-error;
 }
 
-.o-alert-box--success {
+.c-alert-box--success {
     @include alert-success;
 }
 
-.o-alert-box--notice {
+.c-alert-box--notice {
     @include alert-notice;
 }

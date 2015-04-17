@@ -4,7 +4,7 @@
     Pagination
 */
 
-.o-pagination {
+.c-pagination {
     a,
     span {
         padding: 0 10px;
@@ -19,6 +19,6 @@
     @include pagination;
 }
 
-.o-pagination--centered {
+.c-pagination--centered {
     @include pagination-centered;
 }
