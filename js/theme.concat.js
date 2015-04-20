@@ -43,7 +43,7 @@ chopstick.alerts =
 {
     settings:
     {
-        alertbox: $('.o-alert-box')
+        alertbox: $('.js-alert-box')
     },
 
     init: function()
@@ -66,10 +66,10 @@ chopstick.mobileNav =
 {
     settings:
     {
-        navHolder: $('.c-header .inner')
-        trigger: $('.c-main-nav-trigger'),
-        nav: $('.c-main-nav')
+        navHolder: $('.js-nav-holder'),
+        trigger: $('.js-nav-trigger'),
     },
+
     init: function()
     {
         settings = this.settings;
@@ -78,8 +78,6 @@ chopstick.mobileNav =
         chopstick.mobileNav.buildMobileNav();
     },
 
-    // CSS is based on the class .mobile-nav
-    //
     enableMobileNav: function()
     {
         $("html").addClass("c-mobile-nav");
@@ -88,10 +86,8 @@ chopstick.mobileNav =
     // build mobile nav
     buildMobileNav: function()
     {
-        settings.navHolder.prepend('<span class="c-main-nav-trigger">menu</span>');
-
         settings.trigger.on('click', function() {
-            settings.nav.toggle();
+            $('.js-nav').toggle();
             $(this).toggleClass("is-active");
         });
     }

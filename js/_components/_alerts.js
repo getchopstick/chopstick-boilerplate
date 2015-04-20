@@ -2,7 +2,7 @@ chopstick.alerts =
 {
     settings:
     {
-        alertbox: $('.o-alert-box')
+        alertbox: $('.js-alert-box')
     },
 
     init: function()

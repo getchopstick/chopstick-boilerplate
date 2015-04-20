@@ -1,10 +1,11 @@
-<div class="o-holder c-holder c-header-holder">
+<div class="js-nav-holder o-holder c-holder c-header-holder">
+    <span class="js-nav-trigger">menu</span>
     <div class="o-container">
         <div class="o-grid">
             <div class="o-grid__item">
                 {% include objects.logo.html %}
 
-                <nav class="c-main-nav">
+                <nav class="js-nav c-main-nav">
                     <ul class="c-main-nav__list">
                         <li class="c-main-nav__list-item {% if page.url contains "index" %}is-selected{% endif %}"><a href="index.html" class="c-main-nav__link">Home</a></li>
                         <li class="c-main-nav__list-item {% if page.url contains "styleguide" %}is-selected{% endif %}"><a href="styleguide.html" class="c-main-nav__link">Styleguide</a></li>
