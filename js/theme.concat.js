@@ -26,7 +26,6 @@ var chopstick =
         // check if object exists
         if(typeof obj != 'undefined') {
 
-<<<<<<< HEAD
             // check if object has a method init
             if (typeof obj.init == 'undefined') {
                 // we will throw an error so the designer / developer know there's a problem
@@ -41,10 +40,6 @@ var chopstick =
  };
 
 chopstick.alerts =
-=======
-
-jsTheme.forms =
->>>>>>> feature-itcss
 {
     settings:
     {
@@ -53,7 +48,6 @@ jsTheme.forms =
 
     init: function()
     {
-<<<<<<< HEAD
         settings = this.settings;
         chopstick.alerts.closeAlertBox();
     },
@@ -64,12 +58,18 @@ jsTheme.forms =
         {
             e.preventDefault();
             $(this).closest(settings.alertbox).fadeOut(300);
-=======
+        });
+    }
+};
+
+jsTheme.forms =
+{
+    init: function()
+    {
         $('.o-alert-box').on('click', function(e)
         {
             e.preventDefault();
             $(this).closest('.o-alert-box').fadeOut(300);
->>>>>>> feature-itcss
         });
     }
 };
