@@ -12,6 +12,7 @@ var jsTheme =
 
 $(jsTheme.init);
 
+
 jsTheme.forms =
 {
     init: function()
