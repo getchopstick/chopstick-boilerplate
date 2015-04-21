@@ -136,3 +136,5 @@ chopstick.toggle =
         });
     }
 };
+
+$(chopstick.init);

@@ -7,7 +7,7 @@
 html {
     font: $alpha-font-weight $alpha-font-size/16*100%/#{$alpha-line-height} $alpha-font-family ;
     -webkit-overflow-scrolling: touch;
-    background-color: $alpha-text-color;
+    background-color: darken($delta-ui-color-dark,40%);
 
     @include mq($bp5) {
         font-size: $alpha-font-size/16*112.5%;

@@ -67,10 +67,6 @@ $delta-ui-color             : $white;
 $delta-ui-color-light       : mix($delta-ui-color, $alpha-neutral, 50%);
 $delta-ui-color-dark        : mix($delta-ui-color, $beta-neutral, 50%);
 
-$border-color               : $alpha-text-color;
-$border-color-light         : mix($border-color, $alpha-neutral, 50%);
-$border-color-dark          : mix($border-color, $beta-neutral, 50%);
-
 $error-color                : $red;
 $success-color              : $green;
 $notice-color               : $yellow;

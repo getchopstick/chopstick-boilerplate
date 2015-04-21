@@ -13,15 +13,7 @@
         background-color: $delta-ui-color;
     }
 
-    // Header
-    .c-holder--header {
-        border-bottom: 1px solid $beta-ui-color-light;
+    .c-holder--beta {
+        color: $beta-text-color-light;
+        background-color: darken($delta-ui-color-dark,40%);
     }
-
-    // Footer
-    .c-holder--footer {
-        background-color: $alpha-text-color;
-        color: lighten($alpha-text-color,70);
-    }
-
-

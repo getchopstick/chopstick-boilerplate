@@ -6,7 +6,7 @@
 
 .c-section-title {
     color: $beta-text-color;
-    border-bottom: 1px solid $beta-ui-color-light;
+    border-bottom: 1px solid $gamma-ui-color;
     @include padding-bottom(1);
     @include padding-top(1);
     @include text-dimensions($alpha-font-size,1,2);
