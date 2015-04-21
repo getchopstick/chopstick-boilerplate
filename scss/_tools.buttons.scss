@@ -3,37 +3,37 @@
 //  ---
 //  ...
 //
-@mixin btn-lg {
+@mixin button-lg {
     @include px-padding-lr(1.5,1.5);
     @include input-dimensions($ms-1,1,0,1.05,.95);
 }
 
-@mixin btn-md {
+@mixin button-md {
     @include px-padding-lr(1.25,1.25);
     @include input-dimensions($ms-1,1,0,.8,.7);
 }
 
-@mixin btn-sm {
+@mixin button-sm {
     @include px-padding-lr(.75,.75);
     @include input-dimensions($ms-2,1,0,.55,.45);
 }
 
 // Button display
 
-@mixin btn-inlineblock {
+@mixin button-inlineblock {
     display: inline-block;
     width: auto;
 }
 
-@mixin btn-float($float:left) {
+@mixin button-float($float:left) {
     display: block;
     float: $float;
 }
 
 // Button color
-// use: @mixin btn-color(color1[,color2]);
+// use: @mixin button-color(color1[,color2]);
 
-@mixin btn-color($c1: $alpha-ui-color, $c2: lighten($c1, $depth)) {
+@mixin button-color($c1: $alpha-ui-color, $c2: lighten($c1, $depth)) {
 
     border: $border-width $border-style $c1;
 

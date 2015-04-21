@@ -4,7 +4,9 @@
     Button styling
 */
 
-.c-btn {
+$button-color-alpha    : $alpha-ui-color;
+
+.c-button {
     display: inline-block;
     margin: 0;
     text-align: center;
@@ -36,38 +38,38 @@
         background-image: none;
     }
 
-    @include btn-md;
+    @include button-md;
 
 }
 
-// btn display
+// button display
 
-.c-btn--block {
+.c-button--block {
     display: block;
     width: 100%;
 }
 
-.c-btn--fll {
-    @include btn-float(left);
+.c-button--fll {
+    @include button-float(left);
 }
 
-.c-btn--flr {
-    @include btn-float(right);
+.c-button--flr {
+    @include button-float(right);
 }
 
-// btn sizes
+// button sizes
 
-.c-btn--sm {
-    @include btn-sm;
+.c-button--sm {
+    @include button-sm;
 }
 
-.c-btn--lg {
-    @include btn-lg;
+.c-button--lg {
+    @include button-lg;
 }
 
 // colors
 
-.c-btn--alpha-ui {
+.c-button--alpha-ui {
     background-color: $alpha-ui-color;
     border-color: $alpha-ui-color;
 
@@ -88,7 +90,7 @@
 
 }
 
-.c-btn--beta-ui {
+.c-button--beta-ui {
     background-color: $beta-ui-color;
     border-color: $beta-ui-color;
 
@@ -108,16 +110,16 @@
     }
 }
 
-// btn-group
+// button-group
 
-.c-btn-group {
+.c-button-group {
     position: relative;
 
-    .c-btn--fll {
+    .c-button--fll {
         @include px-margin-right(1);
     }
 
-    .c-btn--flr {
+    .c-button--flr {
         @include px-margin-right(1);
     }
 
