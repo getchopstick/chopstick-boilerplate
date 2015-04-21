@@ -4,12 +4,40 @@
     Form component
 */
 
+// Input elements
+
+.c-input-text {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    -ms-appearance:     none;
+    appearance:         none;
+    font-smoothing: antialiased;
+    background-color: $delta-ui-color;
+    border-radius: $radius;
+    border: $border-width $border-style $gamma-ui-color;
+    color: lighten($alpha-text-color, 30);
+    font-family: $alpha-font-family;
+    margin: 0;
+    width: 100%;
+    display: block;
+    outline: none;
+    line-height: normal;
+    border-radius: $radius;
+    @include input-md;
+
+    &:focus {
+        color: $alpha-text-color;
+        border-color: $alpha-ui-color;
+        box-shadow: 0 0 2px rgba($alpha-ui-color,.5);
+    }
+}
+
 // Input sizes > @TODO: make it work with just a class!
-input.c-input--sm {
+.c-input--sm {
     @include input-sm;
 }
 
-input.c-input--lg {
+.c-input--lg {
     @include input-lg;
 }
 
@@ -47,8 +75,8 @@ input.c-input--lg {
 
 // > @TODO: make it work with just a class!
 
-input.c-input--error  {
-    border-color: $error-color;
+.c-input--error  {
+    border: 1px solid $error-color;
 
     &:focus {
         border-color: $error-color;
