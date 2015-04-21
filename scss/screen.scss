@@ -45,11 +45,8 @@
  *  3. Objects
  *      - objects.grid
  *      - objects.holder
- *      - objects.alerts
- *      - objects.buttons
  *      - objects.media
  *      - objects.media-embed
- *      - objects.pagination
  *
  *  4. Components
  *      - components.frame
@@ -58,6 +55,9 @@
  *      - components.brand
  *      - components.forms
  *      - components.icons
+ *      - components.alerts
+ *      - components.buttons
+ *      - components.pagination
  *      - components.styleguide
  *      - components.styleguide-syntax
  *
@@ -108,11 +108,8 @@
     /* 3. Objects */
     @import "objects.grid";
     @import "objects.holder";
-    @import "objects.alerts";
-    @import "objects.buttons";
     @import "objects.media";
     @import "objects.media-embed";
-    @import "objects.pagination";
 
     /* 4. Components */
     @import "components.frame";
@@ -121,6 +118,9 @@
     @import "components.brand";
     @import "components.forms";
     @import "components.icons";
+    @import "components.alerts";
+    @import "components.buttons";
+    @import "components.pagination";
     @import "components.styleguide";
     @import "components.styleguide-syntax";
 

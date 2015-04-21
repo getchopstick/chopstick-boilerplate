@@ -9,7 +9,6 @@
     padding: em($alpha-baseline-grid*2) em($alpha-baseline-grid*3);
     cursor: pointer;
     @include margin-bottom(1);
-    @include block-skin;
 
     a {
         text-decoration: underline;
@@ -32,7 +31,6 @@
 
     p {
         margin-bottom: 0;
-        // @include text-dimensions($alpha-font-size,1);
     }
 }
 
@@ -67,8 +65,8 @@
         @include text-color($success-color);
     }
 
-    @include alert-settings;
     @include block-skin($success-color);
+    @include alert-settings;
 }
 
 @mixin alert-notice {
@@ -79,6 +77,6 @@
         @include text-color($notice-color);
     }
 
+    @include block-skin($notice-color);
     @include alert-settings;
-    @include block-skin($success-color);
 }

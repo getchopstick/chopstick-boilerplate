@@ -1,0 +1,23 @@
+/*
+    Components: alerts
+    ---
+    Alert boxes
+*/
+
+// @TODO: js is also missing
+
+.c-alert-box {
+    @include alert;
+}
+
+.c-alert-box--error {
+    @include alert-error;
+}
+
+.c-alert-box--success {
+    @include alert-success;
+}
+
+.c-alert-box--notice {
+    @include alert-notice;
+}

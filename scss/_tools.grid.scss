@@ -20,7 +20,7 @@
         @for $numerator from 1 through $denominator {
 
             // Build a class in the format `.u-3/4`
-            .u-#{$numerator}\/#{$denominator}#{$breakpoint} {
+            .u-#{$numerator}-of-#{$denominator}#{$breakpoint} {
                 width: ($numerator / $denominator) * 100% !important;
             }
         }
@@ -43,7 +43,7 @@
         @for $numerator from 1 through $denominator {
 
             // Build a class in the format `.u-3/4`
-            .u-push-#{$numerator}\/#{$denominator}#{$breakpoint} {
+            .u-push-#{$numerator}-of-#{$denominator}#{$breakpoint} {
                 margin-left: ($numerator / $denominator) * 100% !important;
             }
         }
