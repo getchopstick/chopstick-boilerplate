@@ -15,11 +15,13 @@ input.c-input--lg {
 
 // Postfix & prefix > @TODO: make it work with just a class!
 .c-oneliner .c-postfix button {
-    @include postfix;
+    border-radius: 0 $radius $radius 0;
+    border-left: 0;
 }
 
 .c-oneliner .c-prefix input {
-    @include prefix;
+    border-radius: $radius 0 0 $radius;
+    border-right: 0;
 }
 
 // Checkboxes and radio's
@@ -42,6 +44,8 @@ input.c-input--lg {
     color: $error-color;
     @include padding-top(.25);
 }
+
+// > @TODO: make it work with just a class!
 
 input.c-input--error  {
     border-color: $error-color;
