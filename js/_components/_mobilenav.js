@@ -1,13 +1,19 @@
-jsTheme.mobileNav =
+chopstick.mobileNav =
 {
-    init: function()
+    settings:
     {
-        jsTheme.mobileNav.enableMobileNav();
-        jsTheme.mobileNav.buildMobileNav();
+        navHolder: $('.js-nav-holder'),
+        trigger: $('.js-nav-trigger'),
     },
 
-    // CSS is based on the class .mobile-nav
-    //
+    init: function()
+    {
+        settings = this.settings;
+
+        chopstick.mobileNav.enableMobileNav();
+        chopstick.mobileNav.buildMobileNav();
+    },
+
     enableMobileNav: function()
     {
         $("html").addClass("c-mobile-nav");
@@ -16,15 +22,8 @@ jsTheme.mobileNav =
     // build mobile nav
     buildMobileNav: function()
     {
-        var navHolder = $('.c-header .inner');
-
-        navHolder.prepend('<span class="c-main-nav-trigger">menu</span>');
-
-        var trigger = $('.c-main-nav-trigger');
-        var nav = $('.c-main-nav');
-
-        trigger.on('click', function() {
-            nav.toggle();
+        settings.trigger.on('click', function() {
+            $('.js-nav').toggle();
             $(this).toggleClass("is-active");
         });
     }

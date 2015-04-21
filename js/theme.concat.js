@@ -1,16 +1,66 @@
-var jsTheme =
+var chopstick =
 {
     // init, something like a constructor
     init: function()
     {
-        jsTheme.mobileNav.init();
-        jsTheme.forms.init();
-        jsTheme.toggle.init();
+        chopstick.loadObject(chopstick.mobileNav, 'chopstick.mobileNav');
+        chopstick.loadObject(chopstick.alerts, 'chopstick.alerts');
+        chopstick.loadObject(chopstick.toggle, 'chopstick.toggle');
+
         console.log("javascript is locked and loaded!") // for testing purposes. Check your console. Delete after you finished reading this. :-)
+    },
+
+    /**
+     * This function will load an object by a given name
+     *
+     * If the object doesn't exist no error will be thrown
+     * But if object exists but doesn't have an init method it will throw an error
+     *
+     * If everything is ok we'll initiate the given object
+     */
+    loadObject: function(obj, name)
+    {
+        // create object based on a name
+        // var objName = window[objName];
+
+        // check if object exists
+        if(typeof obj != 'undefined') {
+
+            // check if object has a method init
+            if (typeof obj.init == 'undefined') {
+                // we will throw an error so the designer / developer know there's a problem
+                throw new Error('ERROR: "' + name + '" does not have an init function');
+
+            } else {
+                // everything is fine so initiate
+                obj.init();
+            }
+        }
+    }
+ };
+
+chopstick.alerts =
+{
+    settings:
+    {
+        alertbox: $('.js-alert-box')
+    },
+
+    init: function()
+    {
+        settings = this.settings;
+        chopstick.alerts.closeAlertBox();
+    },
+
+    closeAlertBox: function ()
+    {
+        settings.alertbox.on('click', function(e)
+        {
+            e.preventDefault();
+            $(this).closest(settings.alertbox).fadeOut(300);
+        });
     }
 };
-
-$(jsTheme.init);
 
 jsTheme.forms =
 {
@@ -24,16 +74,22 @@ jsTheme.forms =
     }
 };
 
-jsTheme.mobileNav =
+chopstick.mobileNav =
 {
-    init: function()
+    settings:
     {
-        jsTheme.mobileNav.enableMobileNav();
-        jsTheme.mobileNav.buildMobileNav();
+        navHolder: $('.js-nav-holder'),
+        trigger: $('.js-nav-trigger'),
     },
 
-    // CSS is based on the class .mobile-nav
-    //
+    init: function()
+    {
+        settings = this.settings;
+
+        chopstick.mobileNav.enableMobileNav();
+        chopstick.mobileNav.buildMobileNav();
+    },
+
     enableMobileNav: function()
     {
         $("html").addClass("c-mobile-nav");
@@ -42,21 +98,14 @@ jsTheme.mobileNav =
     // build mobile nav
     buildMobileNav: function()
     {
-        var navHolder = $('.c-header .inner');
-
-        navHolder.prepend('<span class="c-main-nav-trigger">menu</span>');
-
-        var trigger = $('.c-main-nav-trigger');
-        var nav = $('.c-main-nav');
-
-        trigger.on('click', function() {
-            nav.toggle();
+        settings.trigger.on('click', function() {
+            $('.js-nav').toggle();
             $(this).toggleClass("is-active");
         });
     }
 };
 
-jsTheme.toggle =
+chopstick.toggle =
 {
     init: function() {
         // The toggle is called with the '.js-toggle' class and one or more data-targets

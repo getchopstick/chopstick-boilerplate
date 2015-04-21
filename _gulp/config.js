@@ -28,7 +28,9 @@ module.exports = {
   js : {
     src : [  // source js file
         'js/theme.js',
-        'js/_components/*.js'
+        'js/_components/*.js',
+        'js/loader.js'
+
     ],
     concatFilename : 'theme.concat.js', // result filename
     jekyllJsDest : '_site/js/',

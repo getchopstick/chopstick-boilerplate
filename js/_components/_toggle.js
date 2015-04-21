@@ -1,4 +1,4 @@
-jsTheme.toggle =
+chopstick.toggle =
 {
     init: function() {
         // The toggle is called with the '.js-toggle' class and one or more data-targets
