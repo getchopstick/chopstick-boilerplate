@@ -1,4 +1,4 @@
-jsTheme.forms =
+chopstick.forms =
 {
     init: function()
     {
