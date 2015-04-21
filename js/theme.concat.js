@@ -62,7 +62,7 @@ chopstick.alerts =
     }
 };
 
-jsTheme.forms =
+chopstick.forms =
 {
     init: function()
     {
