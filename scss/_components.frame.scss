@@ -4,16 +4,6 @@
     Scaffolding
 */
 
-.c-holder {
-    background-color: $delta-ui-color;
-}
-
-// Header
-
-.c-header-holder {
-    border-bottom: 1px solid $beta-ui-color-light;
-}
-
 .c-main-nav {
     width: 100%;
     float: left;
@@ -119,11 +109,4 @@
     @include mq($bp5) {
         @include padding-tb(3,1.5);
     }
-}
-
-// Footer
-
-.c-footer-holder {
-    background-color: $alpha-text-color;
-    color: lighten($alpha-text-color,70);
 }

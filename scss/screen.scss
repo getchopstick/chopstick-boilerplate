@@ -44,7 +44,6 @@
  *
  *  3. Objects
  *      - objects.grid
- *      - objects.holder
  *      - objects.media
  *      - objects.media-embed
  *
@@ -54,6 +53,7 @@
  *      - components.home
  *      - components.brand
  *      - components.forms
+ *      - components.holder
  *      - components.icons
  *      - components.alerts
  *      - components.buttons
@@ -107,7 +107,6 @@
 
     /* 3. Objects */
     @import "objects.grid";
-    @import "objects.holder";
     @import "objects.media";
     @import "objects.media-embed";
 
@@ -117,6 +116,7 @@
     @import "components.home";
     @import "components.brand";
     @import "components.forms";
+    @import "components.holder";
     @import "components.icons";
     @import "components.alerts";
     @import "components.buttons";

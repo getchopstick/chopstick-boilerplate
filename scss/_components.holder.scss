@@ -1,0 +1,27 @@
+/*
+    Object: holder
+    ---
+    Creates a horizontal row with padding
+*/
+
+.c-holder {
+    @include padding-tb(1,1);
+    @include px-padding-lr(1,1);
+}
+
+    .c-holder--alpha {
+        background-color: $delta-ui-color;
+    }
+
+    // Header
+    .c-holder--header {
+        border-bottom: 1px solid $beta-ui-color-light;
+    }
+
+    // Footer
+    .c-holder--footer {
+        background-color: $alpha-text-color;
+        color: lighten($alpha-text-color,70);
+    }
+
+
