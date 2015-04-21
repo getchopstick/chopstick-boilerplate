@@ -10,9 +10,9 @@ var gulp = require('gulp'),
 var config = require('../config');
 
 // task
-gulp.task('watch', ['browsersync'], 
+gulp.task('watch', ['browsersync'],
     function(){
-        watch({glob: config.scss.src}, function(){gulp.start('scss');});
-        watch({glob: config.js.src}, function(){gulp.start('js--reload');});
-        watch({glob: config.watch.jekyllSource}, function(){gulp.start('jekyll--rebuild');});
+        watch(config.scss.src, function(){gulp.start('scss');});
+        watch(config.js.src, function(){gulp.start('js--reload');});
+        watch(config.watch.jekyllSource, function(){gulp.start('jekyll--rebuild');});
 });
