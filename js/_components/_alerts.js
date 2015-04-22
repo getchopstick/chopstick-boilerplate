@@ -2,7 +2,7 @@ chopstick.alerts =
 {
     settings:
     {
-        alertbox: $('.js-alert-box')
+        alertbox: $('.js-hide-alert')
     },
 
     init: function()

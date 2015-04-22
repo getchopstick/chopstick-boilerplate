@@ -42,7 +42,7 @@
     a {
         @include text-color($gamma-ui-color);
     }
-
+    @include block-skin;
     @include alert-settings;
 }
 

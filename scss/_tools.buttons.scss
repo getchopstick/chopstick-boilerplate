@@ -3,20 +3,17 @@
 //  ---
 //  ...
 //
-@mixin button-lg {
-    @include px-padding-lr(1.5,1.5);
-    @include input-dimensions($ms-1,1,0,1.05,.95);
+/* @mixin button-lg {
+    padding: em(14.5) em(20);
 }
 
 @mixin button-md {
-    @include px-padding-lr(1.25,1.25);
-    @include input-dimensions($ms-1,1,0,.8,.7);
+    padding: em(10.5) em(15);
 }
 
 @mixin button-sm {
-    @include px-padding-lr(.75,.75);
-    @include input-dimensions($ms-2,1,0,.55,.45);
-}
+    padding: em(5) em(10);
+} */
 
 // Button display
 

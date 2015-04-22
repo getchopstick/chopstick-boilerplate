@@ -43,7 +43,7 @@ chopstick.alerts =
 {
     settings:
     {
-        alertbox: $('.js-alert-box')
+        alertbox: $('.js-hide-alert')
     },
 
     init: function()
@@ -58,18 +58,6 @@ chopstick.alerts =
         {
             e.preventDefault();
             $(this).closest(settings.alertbox).fadeOut(300);
-        });
-    }
-};
-
-chopstick.forms =
-{
-    init: function()
-    {
-        $('.o-alert-box').on('click', function(e)
-        {
-            e.preventDefault();
-            $(this).closest('.o-alert-box').fadeOut(300);
         });
     }
 };
