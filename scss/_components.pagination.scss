@@ -19,6 +19,6 @@
     @include pagination;
 }
 
-.c-pagination--centered {
-    @include pagination-centered;
-}
+    .c-pagination--centered {
+        @include pagination-centered;
+    }

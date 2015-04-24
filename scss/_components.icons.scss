@@ -16,17 +16,17 @@
     @include hide-text;
 }
 
-// ---
-// Modifiers
-// ---
-.c-icon--toggle {
-    background-image: url('../img/png/toggle--sprite.png');
+    // ---
+    // Modifiers
+    // ---
+    .c-icon--toggle {
+        background-image: url('../img/png/toggle--sprite.png');
 
-    .svg & {
-        background-image: url('../img/svg/toggle--sprite.svg');
-    }
+        .svg & {
+            background-image: url('../img/svg/toggle--sprite.svg');
+        }
 
-    .is-toggled & {
-        background-position: center -16px;
+        .is-toggled & {
+            background-position: center -16px;
+        }
     }
-}
