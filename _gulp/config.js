@@ -6,7 +6,13 @@
 module.exports = {
 
   scss: {
+    screen : 'scss/screen.scss',
     src : 'scss/**/*.scss',
+    settings : {
+        bundleExec: true,
+        sourcemap: true,
+        style: 'compact'
+    },
     cssDest : 'css/',
     jekyllCssDes : '_site/css/',
     prefix : [                          // Autoprefixer supported browsers
@@ -16,13 +22,7 @@ module.exports = {
         'ie 9',
         'ios 6',
         'android 4'
-    ],
-    settings : {
-      errLogToConsole: true, // sass errors will be logged to the console instead of generating a gutil.PluginError object.
-      sync: true, // sass.renderSync will be called, help when memory and/or cpu usage
-      indentedSyntax: true, // Enable .sass syntax!
-      errLogToConsole: true
-    }
+    ]
   },
 
   js : {
@@ -81,10 +81,6 @@ module.exports = {
         verbose: false // Logs progress information (optional; default=false)
     },
     dest : "./img/png"
-  },
-
-  sass : {
-    errLogToConsole: true
   }
 
 };
