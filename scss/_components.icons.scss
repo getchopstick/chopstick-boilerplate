@@ -1,7 +1,7 @@
 /*
     Component: icons
     ---
-    Icon styling
+    Icons
 */
 
 .c-icon {
@@ -16,17 +16,14 @@
     @include hide-text;
 }
 
-    // ---
-    // Modifiers
-    // ---
-    .c-icon--toggle {
-        background-image: url('../img/png/toggle--sprite.png');
+.c-icon--toggle {
+    background-image: url('../img/png/toggle--sprite.png');
 
-        .svg & {
-            background-image: url('../img/svg/toggle--sprite.svg');
-        }
-
-        .is-toggled & {
-            background-position: center -16px;
-        }
+    .svg & {
+        background-image: url('../img/svg/toggle--sprite.svg');
     }
+
+    .is-toggled & {
+        background-position: center -16px;
+    }
+}

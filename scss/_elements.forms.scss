@@ -4,6 +4,14 @@
     Default markup for the form elements
 */
 
+fieldset {
+    // Only add margin top when 2 elements follow each other
+    // (http://alistapart.com/article/axiomatic-css-and-lobotomized-owls)
+    * + & {
+        @include margin-top(1);
+    }
+}
+
 legend,
 label {
     display: block;

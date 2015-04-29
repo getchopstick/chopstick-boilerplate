@@ -3,16 +3,14 @@
 // ---
 
 // plugins
-var gulp = require('gulp'),
-    watch = require('gulp-watch');
+var gulp = require('gulp');
 
-//configs
+// configs
 var config = require('../config');
 
 // task
-gulp.task('watch', ['browsersync'],
-    function(){
-        watch(config.scss.src, function(){gulp.start('scss');});
-        watch(config.js.src, function(){gulp.start('js--reload');});
-        watch(config.watch.jekyllSource, function(){gulp.start('jekyll--rebuild');});
+gulp.task('watch', ['browsersync'], function () {
+    gulp.watch(config.scss.src, ['scss']);
+    gulp.watch(config.js.src, ['js--reload']);
+    gulp.watch(config.watch.jekyllSource, ['jekyll--rebuild']);
 });

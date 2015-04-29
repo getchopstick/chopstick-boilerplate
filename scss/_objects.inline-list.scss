@@ -1,0 +1,14 @@
+/*
+    Object: Inline list
+    ---
+    Inline list with no bullets
+*/
+
+.o-list-inline {
+    list-style: none;
+    padding-left: 0;
+}
+
+    .o-list-inline__item {
+        display: inline-block;
+    }

@@ -13,7 +13,12 @@ h6 {
     font-family: $beta-font-family;
     font-weight: $alpha-font-weight;
     text-rendering: optimizelegibility;
-    @include margin-bottom($alpha-line-height);
+
+    // Only add margin top when 2 elements follow each other
+    // (http://alistapart.com/article/axiomatic-css-and-lobotomized-owls)
+    * + & {
+        @include margin-top($alpha-line-height);
+    }
 }
 
 h1 {
@@ -42,7 +47,12 @@ dl,
 table,
 address {
     @include text-dimensions($alpha-font-size,1);
-    @include margin-bottom($alpha-line-height);
+
+    // Only add margin top when 2 elements follow each other
+    // (http://alistapart.com/article/axiomatic-css-and-lobotomized-owls)
+    * + & {
+        @include margin-top($alpha-line-height);
+    }
 }
 
 pre {
@@ -78,7 +88,7 @@ hr {
     border-width: 1px 0 0;
     clear: both;
     margin-top: 0;
-    @include margin-bottom(1);
+    @include margin-tb(1,1);
 }
 
 // Links

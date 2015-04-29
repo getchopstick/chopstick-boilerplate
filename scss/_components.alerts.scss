@@ -4,20 +4,61 @@
     Alert boxes
 */
 
-// @TODO: js is also missing
-
 .c-alert-box {
-    @include alert;
+    position: relative;
+    @include padding-tb(1,1);
+    @include px-padding-lr(1,1);
+    @include block-skin;
+
+    // Only add margin top when 2 elements follow each other
+    // (http://alistapart.com/article/axiomatic-css-and-lobotomized-owls)
+    * + & {
+        @include margin-top(1);
+    }
+
+    & .c-alert-box__link {
+        @include text-color($gamma-ui-color);
+    }
 }
 
 .c-alert-box--error {
-    @include alert-error;
+    @include block-skin($error-color);
+
+    & .c-alert-box__link {
+        @include text-color($error-color);
+    }
 }
 
 .c-alert-box--success {
-    @include alert-success;
+    @include block-skin($success-color);
+
+    & .c-alert-box__link {
+        @include text-color($success-color);
+    }
 }
 
 .c-alert-box--notice {
-    @include alert-notice;
+    @include block-skin($notice-color);
+
+    & .c-alert-box__link {
+        @include text-color($notice-color);
+    }
 }
+
+    .c-alert-box__link {
+        text-decoration: underline;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+
+    .c-alert-box__close {
+        cursor: pointer;
+        position: absolute;
+        top: #{$alpha-line-height/6}em;
+        right: #{$alpha-line-height/3}em;
+        line-height: 1;
+        text-decoration: none;
+    }

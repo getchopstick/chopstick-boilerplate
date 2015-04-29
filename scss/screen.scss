@@ -26,8 +26,6 @@
  *      - tools.typography
  *      - tools.buttons
  *      - tools.inputs
- *      - tools.pagination
- *      - tools.alerts
  *
  *  1. Generic
  *      - generic.normalize
@@ -47,9 +45,7 @@
  *      - objects.media-embed
  *
  *  4. Components
- *      - components.frame
- *      - components.grid
- *      - components.home
+ *      - components.navigation
  *      - components.brand
  *      - components.forms
  *      - components.holder
@@ -89,8 +85,6 @@
     @import "tools.typography";
     @import "tools.buttons";
     @import "tools.inputs";
-    @import "tools.pagination";
-    @import "tools.alerts";
 
     /* 1. Generic */
     @import "generic.normalize";
@@ -108,11 +102,10 @@
     @import "objects.grid";
     @import "objects.media";
     @import "objects.media-embed";
+    @import "objects.inline-list";
 
     /* 4. Components */
-    @import "components.frame";
-    @import "components.grid";
-    @import "components.home";
+    @import "components.navigation";
     @import "components.brand";
     @import "components.forms";
     @import "components.holder";

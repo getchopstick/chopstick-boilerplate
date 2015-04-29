@@ -1,0 +1,83 @@
+/*
+    Component: navigation
+    ---
+    Site navigation, breadcrumbs, etc.
+*/
+
+.c-main-nav {
+    width: 100%;
+    float: left;
+
+    @include mq($bp3) {
+        display: block !important;
+        width: auto;
+        float: right;
+
+        li {
+            @include px-margin-lr(2,0);
+        }
+    }
+}
+
+    .c-main-nav__list {
+        font-family: $alpha-font-family;
+        border-top: 1px solid $beta-ui-color-light;
+        @include list-nav;
+        @include margin-bottom(.75);
+        @include padding-top(.75);
+
+        @include mq($bp3) {
+            border-top: none;
+            padding-top: 0;
+            margin-bottom: 0;
+            @include horizontal-nav();
+        }
+
+        @include clearfix;
+    }
+
+    .c-main-nav__list-item {
+        @include px-margin-lr(2,0);
+    }
+
+    .c-main-nav__link {
+        display: block;
+        color: lighten($alpha-text-color,50);
+        text-decoration: none;
+        font-weight: $beta-font-weight;
+        @include text-dimensions($alpha-font-size,1,0,.25,.25);
+
+        @include mq($bp3) {
+            @include padding-tb(1.25,1.25);
+        }
+
+        &:hover,
+        .is-selected > a {
+    	color: darken($alpha-ui-color,0);
+        }
+    }
+
+.c-main-nav-trigger {
+    display: block;
+    height: 2em;
+    width: 2em;
+    margin-top: 0.75em;
+    float: right;
+    text-indent: -9999px;
+    background-color: $alpha-text-color;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    @include text-dimensions($alpha-font-size,1,0);
+
+    .svg & {
+        background-image: url('../img/svg/icon-menu.svg');
+    }
+
+    @include mq($bp3) {
+        display: none;
+    }
+
+    &.is-active {
+        background-color: $alpha-link-color;
+    }
+}

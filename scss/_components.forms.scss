@@ -1,7 +1,7 @@
 /*
     Component: forms
     ---
-    Form component
+    Form styling, input sizes, etc.
 */
 
 // Input elements
@@ -30,33 +30,56 @@
         border-color: $alpha-ui-color;
         box-shadow: 0 0 2px rgba($alpha-ui-color,.5);
     }
+
+    &.has-error {
+        border: 1px solid $error-color;
+
+        &:focus {
+            border-color: $error-color;
+            box-shadow: 0 0 2px rgba($error-color,.5);
+        }
+    }
 }
 
-// Input sizes > @TODO: make it work with just a class!
-.c-input--sm {
+.c-input-option {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+// Input sizes
+.c-input-text--sm {
     @include input-sm;
 }
 
-.c-input--lg {
+.c-input-text--lg {
     @include input-lg;
 }
 
-// Postfix & prefix > @TODO: make it work with just a class!
-.c-oneliner .c-postfix button {
-    border-radius: 0 $radius $radius 0;
-    border-left: 0;
-}
-
-.c-oneliner .c-prefix input {
+// Input modifiers
+.c-input-text--prefix {
     border-radius: $radius 0 0 $radius;
     border-right: 0;
 }
 
-// Checkboxes and radio's
-.c-input--option {
-    margin: 0;
-    display: inline-block;
-    vertical-align: middle;
+// Input states
+.c-input-text.has-error  {
+    border: 1px solid $error-color;
+
+    &:focus {
+        border-color: $error-color;
+        box-shadow: 0 0 2px rgba($error-color,.5);
+    }
+}
+
+// Labels
+.c-label {
+    color: $beta-text-color;
+    @include text-dimensions($ms-1,1);
+
+    &.has-error {
+        color: $error-color;
+    }
 }
 
 .c-label--option {
@@ -67,17 +90,9 @@
 }
 
 // Errors
-.c-form__error {
+.c-inline-error {
     display: block;
     color: $error-color;
-    @include padding-top(.25);
-}
-
-.c-input--error  {
-    border: 1px solid $error-color;
-
-    &:focus {
-        border-color: $error-color;
-        box-shadow: 0 0 2px rgba($error-color,.5);
-    }
+    text-align: right;
+    @include text-dimensions($ms-2,1);
 }

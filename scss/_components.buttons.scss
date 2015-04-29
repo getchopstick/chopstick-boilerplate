@@ -1,7 +1,7 @@
 /*
     Components: buttons
     ---
-    Button styling
+    Button sizes, styles, etc.
 */
 
 .c-button {
@@ -35,99 +35,106 @@
     }
 }
 
-    // button display
+// Button display
 
-    .c-button--block {
-        display: block;
-        width: 100%;
+.c-button--block {
+    display: block;
+    width: 100%;
+}
+
+.c-button--fll {
+    @include button-float(left);
+}
+
+.c-button--flr {
+    @include button-float(right);
+}
+
+// Button sizes
+
+.c-button--sm {
+    padding: em(5) em(10);
+}
+
+.c-button--md {
+    padding: em(10.5) em(15);
+}
+
+.c-button--lg {
+    padding: em(14.5) em(20);
+}
+
+// Button colors
+
+.c-button--alpha {
+    background-color: $alpha-ui-color;
+    border-color: $alpha-ui-color;
+
+    &,
+    &:visited {
+        color: $white;
     }
 
+    &:hover,
+    &:focus {
+        background-color: lighten($alpha-ui-color,10);
+        color: $white;
+    }
+
+    &:active {
+        background-color: $alpha-ui-color;
+    }
+
+}
+
+.c-button--beta {
+    background-color: $beta-ui-color;
+    border-color: $beta-ui-color;
+
+    &,
+    &:visited {
+        color: $white;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: lighten($beta-ui-color,10);
+        color: $white;
+    }
+
+    &:active {
+        background-color: $beta-ui-color;
+    }
+}
+
+// Modifiers
+
+.c-button--postfix {
+    border-radius: 0 $radius $radius 0;
+    border-left: 0;
+}
+
+// Button-group
+
+.c-button-group {
+    position: relative;
+
     .c-button--fll {
-        @include button-float(left);
+        @include px-margin-right(1);
     }
 
     .c-button--flr {
-        @include button-float(right);
+        @include px-margin-right(1);
     }
 
-    // button sizes
+    @include clearfix;
+}
 
-    .c-button--sm {
-        padding: em(5) em(10);
-    }
+// firefox inner border fix
 
-    .c-button--md {
-        padding: em(10.5) em(15);
-    }
-
-    .c-button--lg {
-        padding: em(14.5) em(20);
-    }
-
-    // colors
-
-    .c-button--alpha {
-        background-color: $alpha-ui-color;
-        border-color: $alpha-ui-color;
-
-        &,
-        &:visited {
-            color: $white;
-        }
-
-        &:hover,
-        &:focus {
-            background-color: lighten($alpha-ui-color,10);
-            color: $white;
-        }
-
-        &:active {
-            background-color: $alpha-ui-color;
-        }
-
-    }
-
-    .c-button--beta {
-        background-color: $beta-ui-color;
-        border-color: $beta-ui-color;
-
-        &,
-        &:visited {
-            color: $white;
-        }
-
-        &:hover,
-        &:focus {
-            background-color: lighten($beta-ui-color,10);
-            color: $white;
-        }
-
-        &:active {
-            background-color: $beta-ui-color;
-        }
-    }
-
-    // button-group
-
-    .c-button-group {
-        position: relative;
-
-        .c-button--fll {
-            @include px-margin-right(1);
-        }
-
-        .c-button--flr {
-            @include px-margin-right(1);
-        }
-
-        @include clearfix;
-    }
-
-    // firefox inner border fix
-
-    button::-moz-focus-inner,
-    input[type="button"]::-moz-focus-inner,
-    input[type="submit"]::-moz-focus-inner {
-        border: 0;
-        padding: 0;
-    }
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}

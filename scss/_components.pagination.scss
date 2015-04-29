@@ -5,20 +5,21 @@
 */
 
 .c-pagination {
-    a,
-    span {
-        padding: 0 10px;
-        border: 1px solid $gamma-ui-color;
-        margin-left: -1px;
-    }
-
-    span {
-        color: $beta-text-color;
-    }
-
-    @include pagination;
+    border: 1px solid $gamma-ui-color;
 }
 
-    .c-pagination--centered {
-        @include pagination-centered;
+.c-pagination--centered {
+    text-align: center;
+}
+
+    .c-pagination__item {
+        & + & {
+            border-left: 1px dotted $gamma-ui-color;
+        }
+    }
+
+    .c-pagination__link {
+        display: block;
+        @include px-padding-lr(.3,.3);
+        @include padding-tb(.3,.3);
     }

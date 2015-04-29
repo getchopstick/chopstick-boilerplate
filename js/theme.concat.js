@@ -4,7 +4,7 @@ var chopstick =
     init: function()
     {
         chopstick.loadObject(chopstick.mobileNav, 'chopstick.mobileNav');
-        chopstick.loadObject(chopstick.alerts, 'chopstick.alerts');
+        chopstick.loadObject(chopstick.hide, 'chopstick.hide');
         chopstick.loadObject(chopstick.toggle, 'chopstick.toggle');
 
         console.log("javascript is locked and loaded!") // for testing purposes. Check your console. Delete after you finished reading this. :-)
@@ -39,25 +39,25 @@ var chopstick =
     }
  };
 
-chopstick.alerts =
+chopstick.hide =
 {
     settings:
     {
-        alertbox: $('.js-hide-alert')
+        hide: $('.js-hide')
     },
 
     init: function()
     {
         settings = this.settings;
-        chopstick.alerts.closeAlertBox();
+        chopstick.hide.hideContent();
     },
 
-    closeAlertBox: function ()
+    hideContent: function ()
     {
-        settings.alertbox.on('click', function(e)
+        settings.hide.on('click', function(e)
         {
             e.preventDefault();
-            $(this).closest(settings.alertbox).fadeOut(300);
+            $(this).closest(settings.hide).parent().addClass('is-hidden');
         });
     }
 };

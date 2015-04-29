@@ -10,16 +10,16 @@ section: styleguide
 
             <div class="o-grid o-grid--gutter">
                 <div class="o-grid__item u-2-of-3-bp4">
-                    {% include objects.base.html %}
+                    {% include elements.base.html %}
                 </div>
                 <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">_base.scss</pre>
+                    <pre class="c-scss">_elements.base.scss</pre>
                     <a href="#" class="js-toggle" data-target=".js-snippet-base">
                         <i class="c-icon c-icon--toggle"></i>HTML snippet
                     </a>
                     <div class="js-snippet-base is-hidden">
                         {% highlight html linenos=table %}
-                            {% include objects.base.html %}
+                            {% include elements.base.html %}
                         {% endhighlight %}
                     </div>
                 </div>
@@ -31,16 +31,16 @@ section: styleguide
 
             <div class="o-grid o-grid--gutter">
                 <div class="o-grid__item u-2-of-3-bp4">
-                    {% include objects.colors.html %}
+                    {% include trumps.colors.html %}
                 </div>
                 <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">_colors.scss</pre>
+                    <pre class="c-scss">_trumps.colors.scss</pre>
                     <a href="#" class="js-toggle" data-target=".js-snippet-colors">
                         <i class="c-icon c-icon--toggle"></i>HTML snippet
                     </a>
                     <div class="js-snippet-colors is-hidden">
                         {% highlight html linenos=table %}
-                            {% include objects.colors.html %}
+                            {% include trumps.colors.html %}
                         {% endhighlight %}
                     </div>
                 </div>
@@ -52,16 +52,16 @@ section: styleguide
 
             <div class="o-grid o-grid--gutter">
                 <div class="o-grid__item u-2-of-3-bp4">
-                    {% include objects.buttons.html %}
+                    {% include components.buttons.html %}
                 </div>
                 <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">objects._buttons.scss</pre>
+                    <pre class="c-scss">._components.buttons.scss</pre>
                     <a href="#" class="js-toggle" data-target=".js-snippet-buttons">
                         <i class="c-icon c-icon--toggle"></i>HTML snippet
                     </a>
                     <div class="js-snippet-buttons is-hidden">
                         {% highlight html linenos=table %}
-                            {% include objects.buttons.html %}
+                            {% include components.buttons.html %}
                         {% endhighlight %}
                     </div>
                 </div>
@@ -73,16 +73,16 @@ section: styleguide
 
             <div class="o-grid o-grid--gutter">
                 <div class="o-grid__item u-2-of-3-bp4">
-                    {% include objects.forms.html %}
+                    {% include components.forms.html %}
                 </div>
                 <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">objects._forms.scss</pre>
+                    <pre class="c-scss">._components.forms.scss</pre>
                     <a href="#" class="js-toggle" data-target=".js-snippet-forms">
                         <i class="c-icon c-icon--toggle"></i>HTML snippet
                     </a>
                     <div class="js-snippet-forms is-hidden">
                         {% highlight html linenos=table %}
-                            {% include objects.forms.html %}
+                            {% include components.forms.html %}
                         {% endhighlight %}
                     </div>
                 </div>
@@ -94,16 +94,16 @@ section: styleguide
 
             <div class="o-grid o-grid--gutter">
                 <div class="o-grid__item u-2-of-3-bp4">
-                    {% include objects.alerts.html %}
+                    {% include components.alerts.html %}
                 </div>
                 <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">objects._alerts.scss</pre>
+                    <pre class="c-scss">._components.alerts.scss</pre>
                     <a href="#" class="js-toggle" data-target=".js-snippet-alerts">
                         <i class="c-icon c-icon--toggle"></i>HTML snippet
                     </a>
                     <div class="js-snippet-alerts is-hidden">
                         {% highlight html linenos=table %}
-                            {% include objects.alerts.html %}
+                            {% include components.alerts.html %}
                         {% endhighlight %}
                     </div>
                 </div>
@@ -115,16 +115,16 @@ section: styleguide
 
             <div class="o-grid o-grid--gutter">
                 <div class="o-grid__item u-2-of-3-bp4">
-                    {% include objects.pagination.html %}
+                    {% include components.pagination.html %}
                 </div>
                 <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">objects._pagination.scss</pre>
+                    <pre class="c-scss">._components.pagination.scss</pre>
                     <a href="#" class="js-toggle" data-target=".js-snippet-pagination">
                         <i class="c-icon c-icon--toggle"></i>HTML snippet
                     </a>
                     <div class="js-snippet-pagination is-hidden">
                         {% highlight html linenos=table %}
-                            {% include objects.pagination.html %}
+                            {% include components.pagination.html %}
                         {% endhighlight %}
                     </div>
                 </div>
@@ -136,16 +136,16 @@ section: styleguide
 
             <div class="o-grid o-grid--gutter">
                 <div class="o-grid__item u-2-of-3-bp4">
-                    {% include objects.helpers.html %}
+                    {% include trumps.helpers.html %}
                 </div>
                 <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">objects._helpers.scss</pre>
+                    <pre class="c-scss">._trumps.helpers.scss</pre>
                     <a href="#" class="js-toggle" data-target=".js-snippet-helpers">
                         <i class="c-icon c-icon--toggle"></i>HTML snippet
                     </a>
                     <div class="js-snippet-helpers is-hidden">
                         {% highlight html linenos=table %}
-                            % include objects.helpers.html %}
+                            % include trumps.helpers.html %}
                         {% endhighlight %}
                     </div>
                 </div>
@@ -160,7 +160,7 @@ section: styleguide
                     {% include objects.media.html %}
                 </div>
                 <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">objects._media.scss</pre>
+                    <pre class="c-scss">._objects.media.scss</pre>
                     <a href="#" class="js-toggle" data-target=".js-snippet-media">
                         <i class="c-icon c-icon--toggle"></i>HTML snippet
                     </a>
