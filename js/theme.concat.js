@@ -80,15 +80,15 @@ chopstick.mobileNav =
 
     enableMobileNav: function()
     {
-        $("html").addClass("c-mobile-nav");
+        $('html').addClass('has-mobile-nav');
     },
 
     // build mobile nav
     buildMobileNav: function()
     {
         settings.trigger.on('click', function() {
-            $('.js-nav').toggle();
-            $(this).toggleClass("is-active");
+            $('.js-nav').toggleClass('is-visible');
+            $(this).toggleClass('is-active');
         });
     }
 };
@@ -106,7 +106,7 @@ chopstick.toggle =
             e.preventDefault();
 
             // Split the targets if multiple
-            var targets = $(this).data("target").replace(" ", "").split(",");
+            var targets = $(this).data('target').replace(' ', '').split(',');
 
             // Loop trough targets and toggle the 'is-hidden' class
             for (var i = targets.length - 1; i >= 0; i--) {

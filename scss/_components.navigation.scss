@@ -4,43 +4,47 @@
     Site navigation, breadcrumbs, etc.
 */
 
-.c-main-nav {
+.c-nav-main {
     width: 100%;
     float: left;
+    display: none;
 
     @include mq($bp3) {
-        display: block !important;
+        display: block;
         width: auto;
         float: right;
+    }
 
-        li {
-            @include px-margin-lr(2,0);
-        }
+    &.is-visible {
+        display: block;
     }
 }
 
-    .c-main-nav__list {
+    .c-nav-main__list {
         font-family: $alpha-font-family;
-        border-top: 1px solid $beta-ui-color-light;
         @include list-nav;
-        @include margin-bottom(.75);
-        @include padding-top(.75);
+        @include clearfix;
 
         @include mq($bp3) {
             border-top: none;
-            padding-top: 0;
-            margin-bottom: 0;
-            @include horizontal-nav();
+            @include horizontal-nav;
+        }
+    }
+
+    .c-nav-main__list-item {
+        & + & {
+            border-top: 1px dotted $grey-04;
         }
 
-        @include clearfix;
+        @include mq($bp3) {
+            & + & {
+                border-top: 0;
+                @include px-margin-lr(2,0);
+            }
+        }
     }
 
-    .c-main-nav__list-item {
-        @include px-margin-lr(2,0);
-    }
-
-    .c-main-nav__link {
+    .c-nav-main__link {
         display: block;
         color: lighten($alpha-text-color,50);
         text-decoration: none;
@@ -57,12 +61,15 @@
         }
     }
 
-.c-main-nav-trigger {
+.c-nav-main-trigger {
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
     display: block;
     height: 2em;
     width: 2em;
-    margin-top: 0.75em;
-    float: right;
     text-indent: -9999px;
     background-color: $alpha-text-color;
     background-repeat: no-repeat;

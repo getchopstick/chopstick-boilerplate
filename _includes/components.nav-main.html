@@ -1,0 +1,15 @@
+<nav class="c-nav-main js-nav">
+    <ul class="c-nav-main__list">
+        <li class="c-nav-main__list-item {% if page.url contains "index" %}is-selected{% endif %}">
+            <a href="index.html" class="c-nav-main__link">Home</a>
+        </li>
+        <li class="c-nav-main__list-item {% if page.url contains "styleguide" %}is-selected{% endif %}">
+            <a href="styleguide.html" class="c-nav-main__link">Styleguide</a>
+        </li>
+        <li class="c-nav-main__list-item {% if page.url contains "grid" %}is-selected{% endif %}">
+            <a href="grid.html" class="c-nav-main__link">Grid</a>
+        </li>
+    </ul>
+</nav>
+
+<span class="c-nav-main-trigger js-nav-trigger">Menu</span>
