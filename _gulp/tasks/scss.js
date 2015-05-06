@@ -3,7 +3,7 @@
 // ---
 
 // plugins
-var gulp = require('gulp');
+var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     gulpFilter = require('gulp-filter'),
     sass = require('gulp-sass'),
@@ -44,6 +44,6 @@ gulp.task('scss', function () {
 
         .pipe(gulp.dest(config.jekyllCssDes))
         .pipe(browserSync.reload({stream:true}))
-        .pipe(gulp.dest(config.cssDest))
+        .pipe(gulp.dest(config.cssDest));
 
 });
