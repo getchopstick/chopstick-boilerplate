@@ -3,9 +3,9 @@
 // ---
 
 // plugins
-var gulp = require('gulp');
-var browserSync = require('browser-sync');
-var cp = require('child_process');
+var gulp = require('gulp'),
+    browserSync = require('browser-sync'),
+    cp = require('child_process');
 
 
 // configfile

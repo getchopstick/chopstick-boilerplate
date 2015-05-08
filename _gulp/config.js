@@ -78,10 +78,6 @@ module.exports = {
         verbose: false // Logs progress information (optional; default=false)
     },
     dest : "./img/png"
-  },
-
-  sass : {
-    errLogToConsole: true
   }
 
 };
