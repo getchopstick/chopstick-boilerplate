@@ -172,5 +172,26 @@ section: styleguide
                 </div>
             </div>
         </div>
+
+        <div class="c-section">
+            <h2 class="c-section-title">Panels</h2>
+
+            <div class="o-grid o-grid--gutter">
+                <div class="o-grid__item u-2-of-3-bp4">
+                    {% include components.panels.html %}
+                </div>
+                <div class="o-grid__item u-1-of-3-bp4">
+                    <pre class="c-scss">._components.panels.scss</pre>
+                    <a href="#" class="js-toggle" data-target=".js-snippet-media">
+                        <i class="c-icon c-icon--toggle"></i>HTML snippet
+                    </a>
+                    <div class="js-snippet-media is-hidden">
+                        {% highlight html linenos=table %}
+                            {% include components.panels.html %}
+                        {% endhighlight %}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

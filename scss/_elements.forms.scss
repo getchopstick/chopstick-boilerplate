@@ -5,11 +5,7 @@
 */
 
 fieldset {
-    // Only add margin top when 2 elements follow each other
-    // (http://alistapart.com/article/axiomatic-css-and-lobotomized-owls)
-    * + & {
-        @include margin-top(1);
-    }
+    @include margin-bottom(1);
 }
 
 legend,

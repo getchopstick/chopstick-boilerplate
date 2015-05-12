@@ -1,61 +1,61 @@
 //
 //  Tools: Spacing
 //  ---
-//  Mixins to add padding and margin
+//  Mixins to add padding and margin in rem with $px-fallback
 //
 
 // Horizontal spacing
 
 // horizontal padding based on the alpha font size in rem
-// use: @include em-padding-lr(#left, #right);
+// use: @include padding-lr(#left, #right);
 
-@mixin em-padding-lr($left: 1, $right: $left) {
-    padding-left: $left * 1em;
+@mixin padding-lr($left: 1, $right: $left) {
+  @if $px-fallback {
+    padding-left: $left * $alpha-font-size  * 1px;
+    padding-right: $right * $alpha-font-size  * 1px;
+  }
     padding-left: $left * 1rem;
-    padding-right: $right * 1em;
     padding-right: $right * 1rem;
 }
 
-// horizontal padding based on the alpha font size
-// use: @include px-padding-lr(#left, #right);
-
-@mixin px-padding-lr($left: 1, $right: $left) {
-    padding-left: $left * $alpha-font-size * 1px;
-    padding-right: $right * $alpha-font-size * 1px;
-}
-
-@mixin px-padding-left($left: 1) {
+@mixin padding-left($left: 1) {
+  @if $px-fallback {
     padding-left: $left * $alpha-font-size  * 1px;
+  }
+    padding-left: $left * 1rem;
 }
 
-@mixin px-padding-right($right: 1) {
+@mixin padding-right($right: 1) {
+  @if $px-fallback {
     padding-right: $right * $alpha-font-size * 1px;
+  }
+    padding-right: $right * 1rem;
 }
 
 // horizontal margin based on the alpha font size in rem
-// use: @include em-margin-lr(#left, #right);
+// use: @include margin-lr(#left, #right);
 
-@mixin em-margin-lr($left: 1, $right: $left) {
-    margin-left: $left * 1em;
+@mixin margin-lr($left: 1, $right: $left) {
+  @if $px-fallback {
+    margin-left: $left * $alpha-font-size * 1px;
+    margin-right: $right * $alpha-font-size * 1px;
+  }
     margin-left: $left * 1rem;
-    margin-right: $right * 1em;
     margin-right: $right * 1rem;
 }
 
-// horizontal margin based on the alpha font size
-// use: @include px-margin-lr(#left, #right);
-
-@mixin px-margin-lr($left: 1, $right: $left) {
+@mixin margin-left($left: 1) {
+  @if $px-fallback {
     margin-left: $left * $alpha-font-size * 1px;
-    margin-right: $right * $alpha-font-size * 1px;
+  }
+  margin-left: $left * 1rem;
 }
 
-@mixin px-margin-left($left: 1) {
-    margin-left: $left * $alpha-font-size * 1px;
-}
-
-@mixin px-margin-right($right: 1) {
+@mixin margin-right($right: 1) {
+  @if $px-fallback {
     margin-right: $right * $alpha-font-size * 1px;
+  }
+    margin-right: $right * 1rem;
 }
 
 // Vertical spacing
@@ -64,25 +64,25 @@
 // use: @include padding-tb(#top, #bottom);
 
 @mixin padding-tb($top: 1, $bottom: 0) {
+  @if $px-fallback {
     padding-top: $top * $alpha-font-size * 1px;
-    padding-top: $top * 1rem;
     padding-bottom: $bottom * $alpha-font-size * 1px;
+  }
+    padding-top: $top * 1rem;
     padding-bottom: $bottom * 1rem;
 }
-
-// vertical padding based on the alpha font size in rem
-// use: @include padding-bottom(#bottom);
 
 @mixin padding-bottom($bottom: 1) {
+  @if $px-fallback {
     padding-bottom: $bottom * $alpha-font-size * 1px;
+  }
     padding-bottom: $bottom * 1rem;
 }
 
-// vertical padding based on the alpha font size in rem
-// use: @include padding-top(#top);
-
 @mixin padding-top($top: 1) {
+  @if $px-fallback {
     padding-top: $top * $alpha-font-size * 1px;
+  }
     padding-top: $top * 1rem;
 }
 
@@ -90,24 +90,24 @@
 // use: @include margin-tb(#top, #bottom);
 
 @mixin margin-tb($top: 1, $bottom: 0) {
+  @if $px-fallback {
     margin-top: $top * $alpha-font-size * 1px;
-    margin-top: $top * 1rem;
     margin-bottom: $bottom * $alpha-font-size * 1px;
+  }
+    margin-top: $top * 1rem;
     margin-bottom: $bottom * 1rem;
 }
-
-// vertical margin based on the alpha font size in rem
-// use: @include margin-bottom(#bottom);
 
 @mixin margin-bottom($bottom: 1) {
+  @if $px-fallback {
     margin-bottom: $bottom * $alpha-font-size * 1px;
+  }
     margin-bottom: $bottom * 1rem;
 }
 
-// vertical margin based on the alpha font size in rem
-// use: @include margin-top(#top);
-
 @mixin margin-top($top: 1) {
+  @if $px-fallback {
     margin-top: $top * $alpha-font-size * 1px;
+  }
     margin-top: $top * 1rem;
 }

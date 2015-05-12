@@ -10,15 +10,21 @@
 
 @mixin list-nav {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    padding-left: 0;
 }
 
 @mixin horizontal-nav {
-    li, a {
+    list-style: none;
+    padding-right: 0;
+
+    > li {
+        float: left;
+        display: block;
+    }
+
+    > li > a {
         display: block;
         float: left;
-        zoom: 1;
     }
 }
 
@@ -80,10 +86,10 @@
 
 @mixin mdrn-svg { .svg & { @content } }
 
-@mixin svg-bg($filename, $extension: '.png', $bg-color: transparent, $position: 0 0, $repeat: no-repeat, $size: auto) {
-    background: $bg-color url($filename + $extension) $position $repeat;
+@mixin svg-bg($filename, $folder:'../img/', $extension: '.png', $bg-color: transparent, $position: 0 0, $repeat: no-repeat, $size: auto) {
+    background: $bg-color url($folder + 'png/' + $filename + $extension) $position $repeat;
     background-size: $size;
-    @include mdrn-svg { background: $bg-color url($filename + '.svg') $position $repeat; background-size: $size; }
+    @include mdrn-svg { background: $bg-color url($folder + 'svg/' + $filename + '.svg') $position $repeat; background-size: $size; }
 }
 
 //

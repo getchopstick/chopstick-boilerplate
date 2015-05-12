@@ -18,7 +18,7 @@
 // Default gutter
 
 .o-grid--gutter {
-    @include px-margin-lr(-($columns-gutter),-($columns-gutter));
+    @include margin-lr(-($columns-gutter),-($columns-gutter));
 }
 
     // Grid item, takes the full width by default
@@ -28,6 +28,6 @@
         width: 100%;
 
         .o-grid--gutter > & {
-            @include px-padding-lr($columns-gutter,$columns-gutter);
+            @include padding-lr($columns-gutter,$columns-gutter);
         }
     }

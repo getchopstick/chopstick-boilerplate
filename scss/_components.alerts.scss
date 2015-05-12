@@ -6,15 +6,10 @@
 
 .c-alert-box {
     position: relative;
-    @include padding-tb(1,1);
-    @include px-padding-lr(1,1);
+    @include padding-top(1);
+    @include padding-lr(1,1);
     @include block-skin;
-
-    // Only add margin top when 2 elements follow each other
-    // (http://alistapart.com/article/axiomatic-css-and-lobotomized-owls)
-    * + & {
-        @include margin-top(1);
-    }
+    @include margin-bottom(1);
 
     & .c-alert-box__link {
         @include text-color($gamma-ui-color);

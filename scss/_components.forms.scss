@@ -90,9 +90,11 @@
 }
 
 // Errors
-.c-inline-error {
+.c-alert-inline {
     display: block;
-    color: $error-color;
     text-align: right;
     @include text-dimensions($ms-2,1);
+}
+.c-alert-inline--error {
+    color: $error-color;
 }

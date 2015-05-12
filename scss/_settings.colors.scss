@@ -33,13 +33,16 @@ $maroon                     : #85144B;
 
 $white                      : #fff;
 $silver                     : #ddd;
-$gray                       : #aaa;
+$grey                       : #aaa;
+$gray                       : $grey;
 $black                      : #111;
 
-// Semantic classes
+// Neutral colors
 
 $alpha-neutral              : $white;
 $beta-neutral               : $black;
+
+// Text colors
 
 $alpha-text-color           : $black;
 $alpha-text-color-light     : mix($alpha-text-color, $alpha-neutral, 50%);
@@ -49,25 +52,31 @@ $beta-text-color            : $alpha-text-color-light;
 $beta-text-color-light      : mix($beta-text-color, $alpha-neutral, 50%);
 $beta-text-color-dark       : mix($beta-text-color, $beta-neutral, 50%);
 
-// Primary elements
+// Alpha colors
+
 $alpha-ui-color             : $blue;
 $alpha-ui-color-light       : mix($alpha-ui-color, $alpha-neutral, 50%);
 $alpha-ui-color-dark        : mix($alpha-ui-color, $beta-neutral, 50%);
 
-// Secondary elements
+// Beta colors
+
 $beta-ui-color              : $gray;
 $beta-ui-color-light        : mix($beta-ui-color, $alpha-neutral, 50%);
 $beta-ui-color-dark         : mix($beta-ui-color, $beta-neutral, 50%);
 
-// Used for borders
+// Gamma colors
+
 $gamma-ui-color             : $silver;
 $gamma-ui-color-light       : mix($gamma-ui-color, $alpha-neutral, 50%);
 $gamma-ui-color-dark        : mix($gamma-ui-color, $beta-neutral, 50%);
 
-// Used for backgrounds
+// Delta colors
+
 $delta-ui-color             : $white;
 $delta-ui-color-light       : mix($delta-ui-color, $alpha-neutral, 50%);
 $delta-ui-color-dark        : mix($delta-ui-color, $beta-neutral, 50%);
+
+// Notification colors
 
 $error-color                : $red;
 $success-color              : $green;
@@ -76,13 +85,19 @@ $notice-color               : $yellow;
 // Greyscale of alpha-ui-color
 
 $grey-00 : hsl(hue($alpha-ui-color),10,45);
+$gray-00 : $grey-00;
 $grey-01 : hsl(hue($alpha-ui-color),10,55);
+$gray-01 : $grey-01;
 $grey-02 : hsl(hue($alpha-ui-color),15,65);
+$gray-02 : $grey-02;
 $grey-03 : hsl(hue($alpha-ui-color),15,75);
+$gray-03 : $grey-03;
 $grey-04 : hsl(hue($alpha-ui-color),15,85);
+$gray-04 : $grey-04;
 $grey-05 : hsl(hue($alpha-ui-color),25,95);
+$gray-05 : $grey-05;
 
-// Links
+// Link colors
 
 $alpha-link-color           : $alpha-ui-color;
 $alpha-link-colorhover      : darken($alpha-link-color, 10);

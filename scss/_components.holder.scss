@@ -5,8 +5,8 @@
 */
 
 .c-holder {
-    @include padding-tb(1,1);
-    @include px-padding-lr(1,1);
+    @include padding-tb(1,0);
+    @include padding-lr(1,1);
 }
 
     .c-holder--alpha {

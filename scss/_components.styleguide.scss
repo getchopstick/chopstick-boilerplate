@@ -20,7 +20,7 @@
     border-radius: $radius;
     @include margin-tb(0, 1);
     @include padding-tb(.5, .5);
-    @include px-padding-lr(1,1);
+    @include padding-lr(1,1);
 }
 
 .c-swatch {

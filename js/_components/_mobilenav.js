@@ -16,15 +16,15 @@ chopstick.mobileNav =
 
     enableMobileNav: function()
     {
-        $("html").addClass("c-mobile-nav");
+        $('html').addClass('has-mobile-nav');
     },
 
     // build mobile nav
     buildMobileNav: function()
     {
         settings.trigger.on('click', function() {
-            $('.js-nav').toggle();
-            $(this).toggleClass("is-active");
+            $('.js-nav').toggleClass('is-visible');
+            $(this).toggleClass('is-active');
         });
     }
 };

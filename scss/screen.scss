@@ -59,6 +59,7 @@
  *  5. Trumps
  *      - trumps.widths
  *      - trumps.push
+ *      - trumps.spacing
  *      - trumps.colors
  *      - trumps.borders
  *      - trumps.states
@@ -102,6 +103,7 @@
     @import "objects.grid";
     @import "objects.media";
     @import "objects.media-embed";
+    @import "objects.navigation";
     @import "objects.inline-list";
 
     /* 4. Components */
@@ -113,12 +115,14 @@
     @import "components.alerts";
     @import "components.buttons";
     @import "components.pagination";
+    @import "components.panels";
     @import "components.styleguide";
     @import "components.styleguide-syntax";
 
     /* 5. Trumps */
     @import "trumps.widths";
     @import "trumps.push";
+    @import "trumps.spacing";
     @import "trumps.colors";
     @import "trumps.borders";
     @import "trumps.states";
