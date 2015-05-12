@@ -59,6 +59,7 @@
  *  5. Trumps
  *      - trumps.widths
  *      - trumps.push
+ *      - trumps.spacing
  *      - trumps.colors
  *      - trumps.borders
  *      - trumps.states
@@ -119,6 +120,7 @@
     /* 5. Trumps */
     @import "trumps.widths";
     @import "trumps.push";
+    @import "trumps.spacing";
     @import "trumps.colors";
     @import "trumps.borders";
     @import "trumps.states";
