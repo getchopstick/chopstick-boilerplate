@@ -26,7 +26,7 @@
 
 @mixin input-lg {
     @include padding-lr(1,1);
-    @include input-dimensions($ms-1,1,0,1,1);
+    @include input-dimensions($alpha-font-size,1,0,1,1);
 }
 
 @mixin input-md {
