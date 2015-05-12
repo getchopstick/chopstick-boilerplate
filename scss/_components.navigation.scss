@@ -8,6 +8,7 @@
     width: 100%;
     float: left;
     display: none;
+    font-family: $alpha-font-family;
 
     @include mq($bp3) {
         display: block;
@@ -21,17 +22,15 @@
 }
 
     .c-nav-main__list {
-        font-family: $alpha-font-family;
-        @include list-nav;
-        @include clearfix;
+        border-top: 1px dotted $grey-04;
 
         @include mq($bp3) {
             border-top: none;
-            @include horizontal-nav;
+            margin-bottom: 0;
         }
     }
 
-    .c-nav-main__list-item {
+    .c-nav-main__item {
         & + & {
             border-top: 1px dotted $grey-04;
         }
@@ -45,7 +44,6 @@
     }
 
     .c-nav-main__link {
-        display: block;
         color: lighten($alpha-text-color,50);
         text-decoration: none;
         font-weight: $beta-font-weight;
@@ -57,7 +55,7 @@
 
         &:hover,
         .is-selected > a {
-    	color: darken($alpha-ui-color,0);
+    	   color: darken($alpha-ui-color,0);
         }
     }
 
