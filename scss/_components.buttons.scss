@@ -53,15 +53,21 @@
 // Button sizes
 
 .c-button--sm {
-    padding: em(5) em(10);
+    // padding: em(5) em(10);
+    @include padding-lr(.75,.75);
+    @include input-dimensions($ms-2,1,0,.5,.5);    
 }
 
 .c-button--md {
-    padding: em(10.5) em(15);
+    // padding: em(10.5) em(15);
+    @include padding-lr(1,1);    
+    @include input-dimensions($ms-1,1,0,.75,.75);    
 }
 
 .c-button--lg {
-    padding: em(14.5) em(20);
+    // padding: em(14.5) em(20);
+    @include padding-lr(1.25,1.25);
+    @include input-dimensions($alpha-font-size,1,0,1,1);
 }
 
 // Button colors
@@ -111,7 +117,6 @@
 
 .c-button--postfix {
     border-radius: 0 $radius $radius 0;
-    border-left: 0;
 }
 
 // Button-group
