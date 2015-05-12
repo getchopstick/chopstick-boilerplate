@@ -6,7 +6,7 @@
 
 .c-holder {
     @include padding-tb(1,0);
-    @include px-padding-lr(1,1);
+    @include padding-lr(1,1);
 }
 
     .c-holder--alpha {

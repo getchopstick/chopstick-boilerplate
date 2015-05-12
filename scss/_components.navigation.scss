@@ -39,7 +39,7 @@
         @include mq($bp3) {
             & + & {
                 border-top: 0;
-                @include px-margin-lr(2,0);
+                @include margin-lr(2,0);
             }
         }
     }

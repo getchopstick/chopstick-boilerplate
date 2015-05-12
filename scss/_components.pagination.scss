@@ -20,6 +20,6 @@
 
     .c-pagination__link {
         display: block;
-        @include px-padding-lr(.3,.3);
+        @include padding-lr(.3,.3);
         @include padding-tb(.3,.3);
     }

@@ -7,7 +7,7 @@
 .c-alert-box {
     position: relative;
     @include padding-tb(1,1);
-    @include px-padding-lr(1,1);
+    @include padding-lr(1,1);
     @include block-skin;
 
     // Only add margin top when 2 elements follow each other

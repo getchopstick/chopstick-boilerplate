@@ -4,6 +4,8 @@
 //  Set your amount of columns and gutter width
 //
 
+$px-fallback: true;
+
 $columns-gutter: 1 !default; // This number is based on the baseline
 
 $columns: (

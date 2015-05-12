@@ -120,11 +120,11 @@
     position: relative;
 
     .c-button--fll {
-        @include px-margin-right(1);
+        @include margin-right(1);
     }
 
     .c-button--flr {
-        @include px-margin-right(1);
+        @include margin-right(1);
     }
 
     @include clearfix;

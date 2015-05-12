@@ -29,14 +29,14 @@
 }
 
     .linenos {
-        @include px-padding-lr(.5,.5);
+        @include padding-lr(.5,.5);
         color: $beta-text-color;
         background-color: lighten($gamma-ui-color,10);
         border-right: 1px solid $gamma-ui-color;
     }
 
     .code {
-        @include px-padding-lr(1,0);
+        @include padding-lr(1,0);
     }
 
 .highlight .c { color: #586e75 } /* Comment */

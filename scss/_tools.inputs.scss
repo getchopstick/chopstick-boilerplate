@@ -25,16 +25,16 @@
 }
 
 @mixin input-lg {
-    @include px-padding-lr(1,1);
+    @include padding-lr(1,1);
     @include input-dimensions($ms-1,1,0,1,1);
 }
 
 @mixin input-md {
-    @include px-padding-lr(.75,.75);
+    @include padding-lr(.75,.75);
     @include input-dimensions($ms-1,1,0,.75,.75);
 }
 
 @mixin input-sm {
-    @include px-padding-lr(.5,.5);
+    @include padding-lr(.5,.5);
     @include input-dimensions($ms-2,1,0,.5,.5);
 }
