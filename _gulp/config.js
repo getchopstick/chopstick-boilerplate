@@ -22,14 +22,8 @@ module.exports = {
         'ie 9',
         'ios 6',
         'android 4'
-    ],
-    settings : {
-      errLogToConsole: true, // sass errors will be logged to the console instead of generating a gutil.PluginError object.
-      sync: true, // sass.renderSync will be called, help when memory and/or cpu usage
-      indentedSyntax: true, // Enable .sass syntax!
-    }
+    ]
   },
-
 
   js : {
     src : [  // source js file
