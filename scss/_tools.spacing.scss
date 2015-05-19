@@ -10,25 +10,25 @@
 // use: @include padding-lr(#left, #right);
 
 @mixin padding-lr($left: 1, $right: $left) {
-  @if $px-fallback {
-    padding-left: $left * $alpha-font-size  * 1px;
-    padding-right: $right * $alpha-font-size  * 1px;
-  }
+    @if $px-fallback {
+        padding-left: $left * $alpha-font-size  * 1px;
+        padding-right: $right * $alpha-font-size  * 1px;
+    }
     padding-left: $left * 1rem;
     padding-right: $right * 1rem;
 }
 
 @mixin padding-left($left: 1) {
-  @if $px-fallback {
-    padding-left: $left * $alpha-font-size  * 1px;
-  }
+    @if $px-fallback {
+        padding-left: $left * $alpha-font-size  * 1px;
+    }
     padding-left: $left * 1rem;
 }
 
 @mixin padding-right($right: 1) {
-  @if $px-fallback {
-    padding-right: $right * $alpha-font-size * 1px;
-  }
+    @if $px-fallback {
+        padding-right: $right * $alpha-font-size * 1px;
+    }
     padding-right: $right * 1rem;
 }
 
@@ -36,25 +36,25 @@
 // use: @include margin-lr(#left, #right);
 
 @mixin margin-lr($left: 1, $right: $left) {
-  @if $px-fallback {
-    margin-left: $left * $alpha-font-size * 1px;
-    margin-right: $right * $alpha-font-size * 1px;
-  }
+    @if $px-fallback {
+        margin-left: $left * $alpha-font-size * 1px;
+        margin-right: $right * $alpha-font-size * 1px;
+    }
     margin-left: $left * 1rem;
     margin-right: $right * 1rem;
 }
 
 @mixin margin-left($left: 1) {
-  @if $px-fallback {
-    margin-left: $left * $alpha-font-size * 1px;
-  }
-  margin-left: $left * 1rem;
+    @if $px-fallback {
+        margin-left: $left * $alpha-font-size * 1px;
+    }
+    margin-left: $left * 1rem;
 }
 
 @mixin margin-right($right: 1) {
-  @if $px-fallback {
-    margin-right: $right * $alpha-font-size * 1px;
-  }
+    @if $px-fallback {
+        margin-right: $right * $alpha-font-size * 1px;
+    }
     margin-right: $right * 1rem;
 }
 
@@ -64,25 +64,25 @@
 // use: @include padding-tb(#top, #bottom);
 
 @mixin padding-tb($top: 1, $bottom: 0) {
-  @if $px-fallback {
-    padding-top: $top * $alpha-font-size * 1px;
-    padding-bottom: $bottom * $alpha-font-size * 1px;
-  }
+    @if $px-fallback {
+        padding-top: $top * $alpha-font-size * 1px;
+        padding-bottom: $bottom * $alpha-font-size * 1px;
+    }
     padding-top: $top * 1rem;
     padding-bottom: $bottom * 1rem;
 }
 
 @mixin padding-bottom($bottom: 1) {
-  @if $px-fallback {
-    padding-bottom: $bottom * $alpha-font-size * 1px;
-  }
+    @if $px-fallback {
+        padding-bottom: $bottom * $alpha-font-size * 1px;
+    }
     padding-bottom: $bottom * 1rem;
 }
 
 @mixin padding-top($top: 1) {
-  @if $px-fallback {
-    padding-top: $top * $alpha-font-size * 1px;
-  }
+    @if $px-fallback {
+        padding-top: $top * $alpha-font-size * 1px;
+    }
     padding-top: $top * 1rem;
 }
 
@@ -90,24 +90,24 @@
 // use: @include margin-tb(#top, #bottom);
 
 @mixin margin-tb($top: 1, $bottom: 0) {
-  @if $px-fallback {
-    margin-top: $top * $alpha-font-size * 1px;
-    margin-bottom: $bottom * $alpha-font-size * 1px;
-  }
+    @if $px-fallback {
+        margin-top: $top * $alpha-font-size * 1px;
+        margin-bottom: $bottom * $alpha-font-size * 1px;
+    }
     margin-top: $top * 1rem;
     margin-bottom: $bottom * 1rem;
 }
 
 @mixin margin-bottom($bottom: 1) {
-  @if $px-fallback {
-    margin-bottom: $bottom * $alpha-font-size * 1px;
-  }
+    @if $px-fallback {
+        margin-bottom: $bottom * $alpha-font-size * 1px;
+    }
     margin-bottom: $bottom * 1rem;
 }
 
 @mixin margin-top($top: 1) {
-  @if $px-fallback {
-    margin-top: $top * $alpha-font-size * 1px;
-  }
+    @if $px-fallback {
+        margin-top: $top * $alpha-font-size * 1px;
+    }
     margin-top: $top * 1rem;
 }

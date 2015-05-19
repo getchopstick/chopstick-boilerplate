@@ -5,21 +5,18 @@
 */
 
 .o-nav {
-	list-style: none;
+    list-style: none;
     padding-left: 0;
-    @include clearfix;    
+    @include clearfix;
 }
 
 .o-nav__item,
-.o-nav__link { 
-	display: block;
+.o-nav__link {
+    display: block;
 
-	.o-nav--horizontal & {
-
-		@include mq($bp3) {
-			float: left;
-		}
-
-	}
-
+    .o-nav--horizontal & {
+        @include mq($bp3) {
+            float: left;
+        }
+    }
 }
