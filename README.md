@@ -10,6 +10,9 @@ Chopstick Boilerplate is a mobile-first responsive Design Boilerplate built with
 
 ## Install
 
+For automated install just run `./install.sh` from project root.  
+This will check if package managers are installed and download required packages for you. For manual installation follow the below method.
+
 You only need to do this once in a new project.
 First, `cd` into the project root (where this file is).
 Install [bundler](http://bundler.io) and the necessary Ruby dependencies:
@@ -18,7 +21,7 @@ Install [bundler](http://bundler.io) and the necessary Ruby dependencies:
     bundle install
 
 Install [bower](http://bower.io) and the necessary JavaScript dependencies:
-	
+
 	npm install -g bower
 	bower install
 
