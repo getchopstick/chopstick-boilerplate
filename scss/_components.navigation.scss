@@ -54,8 +54,8 @@
         }
 
         &:hover,
-        .is-selected > a {
-    	   color: darken($alpha-link-color,0);
+        .is-selected & {
+    	   color: darken($alpha-link-color,50);
         }
     }
 
