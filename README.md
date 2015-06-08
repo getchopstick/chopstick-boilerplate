@@ -104,31 +104,14 @@ The origin of the Chopstick name:
 
 ## Roadmap
 
-### v0.4
-Stable current version.
-
-### v0.5
-1. convert to ITCSS architecture
-2. use only single depth BEM classnames
-- no nesting
-- no extends > only mixins
-3. namespaced self-documenting classnames
-- .o- for object classes
-- .c- for component classes
-- .t- for theming classes
-- .u- for utility classes
-- .is-/.has- for stateful classes
-- .js for javascript hooks
-- ._ for temporary hacks/fixes
-
 ### v0.6
+1. Add necessary/missing objects
+2. Optimize existing objects
+
+### v0.7
 1. make everything modular and configurable
 - start with the basics, options are default off
 - everything is a variable
-
-### v0.7
-1. Add necessary/missing objects
-2. Optimize existing objects
 
 ### v0.8
 1. Add configurable components (API like ui-kit)
