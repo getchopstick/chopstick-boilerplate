@@ -53,19 +53,16 @@
 // Button sizes
 
 .c-button--sm {
-    // padding: em(5) em(10);
     @include padding-lr(.75,.75);
-    @include input-dimensions($ms-2,1,0,.5,.5);    
+    @include input-dimensions($ms-2,1,0,.5,.5);
 }
 
 .c-button--md {
-    // padding: em(10.5) em(15);
-    @include padding-lr(1,1);    
-    @include input-dimensions($ms-1,1,0,.75,.75);    
+    @include padding-lr(1,1);
+    @include input-dimensions($ms-1,1,0,.75,.75);
 }
 
 .c-button--lg {
-    // padding: em(14.5) em(20);
     @include padding-lr(1.25,1.25);
     @include input-dimensions($alpha-font-size,1,0,1,1);
 }
@@ -73,43 +70,43 @@
 // Button colors
 
 .c-button--alpha {
-    background-color: $alpha-ui-color;
-    border-color: $alpha-ui-color;
+    background-color: palette(color-alpha);
+    border-color: palette(color-alpha);
 
     &,
     &:visited {
-        color: $white;
+        color: palette(color-neutral,x-light);
     }
 
     &:hover,
     &:focus {
-        background-color: lighten($alpha-ui-color,10);
-        color: $white;
+        background-color: palette(color-alpha,light);
+        color: palette(color-neutral,x-light);
     }
 
     &:active {
-        background-color: $alpha-ui-color;
+        background-color: palette(color-alpha);
     }
 
 }
 
 .c-button--beta {
-    background-color: $beta-ui-color;
-    border-color: $beta-ui-color;
+    background-color: palette(color-beta);
+    border-color: palette(color-beta);
 
     &,
     &:visited {
-        color: $white;
+        color: palette(color-neutral,x-light);
     }
 
     &:hover,
     &:focus {
-        background-color: lighten($beta-ui-color,10);
-        color: $white;
+        background-color: palette(color-beta,light);
+        color: palette(color-neutral,light);
     }
 
     &:active {
-        background-color: $beta-ui-color;
+        background-color: palette(color-beta);
     }
 }
 

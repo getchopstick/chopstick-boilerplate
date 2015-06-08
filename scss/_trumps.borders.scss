@@ -5,10 +5,7 @@
 */
 
 // Predefine the variables below in order to alter and enable specific features.
-
-// @TODO: define namespace variable
-
-$border-color: $gamma-ui-color !default;
+$border-color: palette(color-alpha) !default;
 $border-width: 1px !default;
 $border-style: solid !default;
 

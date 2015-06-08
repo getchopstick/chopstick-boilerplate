@@ -4,42 +4,18 @@
     Background color utilities
 */
 
-.u-bgcolor-alpha-neutral { background-color: $alpha-neutral}
-.u-bgcolor-beta-neutral { background-color: $beta-neutral}
+.u-bgcolor-neutral-x-light { background-color: palette(color-neutral,x-light)}
+.u-bgcolor-neutral-light { background-color: palette(color-neutral,light)}
+.u-bgcolor-neutral { background-color: palette(color-neutral)}
+.u-bgcolor-neutral-dark { background-color: palette(color-neutral,dark)}
+.u-bgcolor-neutral-x-dark { background-color: palette(color-neutral,x-dark)}
 
-.u-bgcolor-alpha-text { background-color: $alpha-text-color}
-.u-bgcolor-alpha-text-light { background-color: $alpha-text-color-light}
-.u-bgcolor-alpha-text-dark { background-color: $alpha-text-color-dark}
+.u-bgcolor-alpha-light { background-color: palette(color-alpha,light)}
+.u-bgcolor-alpha { background-color: palette(color-alpha)}
+.u-bgcolor-alpha-dark { background-color: palette(color-alpha,dark)}
+.u-bgcolor-alpha-x-dark { background-color: palette(color-alpha,x-dark)}
 
-.u-bgcolor-beta-text { background-color: $beta-text-color}
-.u-bgcolor-beta-text-light { background-color: $beta-text-color-light}
-.u-bgcolor-beta-text-dark { background-color: $beta-text-color-dark}
-
-.u-bgcolor-alpha-ui { background-color: $alpha-ui-color}
-.u-bgcolor-alpha-ui-light { background-color: $alpha-ui-color-light}
-.u-bgcolor-alpha-ui-dark { background-color: $alpha-ui-color-dark}
-
-.u-bgcolor-beta-ui { background-color: $beta-ui-color}
-.u-bgcolor-beta-ui-light { background-color: $beta-ui-color-light}
-.u-bgcolor-beta-ui-dark { background-color: $beta-ui-color-dark}
-
-.u-bgcolor-gamma-ui { background-color: $gamma-ui-color}
-.u-bgcolor-gamma-ui-light { background-color: $gamma-ui-color-light}
-.u-bgcolor-gamma-ui-dark { background-color: $gamma-ui-color-dark}
-
-.u-bgcolor-delta-ui { background-color: $delta-ui-color}
-.u-bgcolor-delta-ui-light { background-color: $delta-ui-color-light}
-.u-bgcolor-delta-ui-dark { background-color: $delta-ui-color-dark}
-
-.u-bgcolor-alpha-link { background-color: $alpha-link-color}
-.u-bgcolor-alpha-link-hover { background-color: $alpha-link-colorhover}
-.u-bgcolor-alpha-link-focus { background-color: $alpha-link-colorfocus}
-.u-bgcolor-alpha-link-active { background-color: $alpha-link-coloractive}
-.u-bgcolor-alpha-link-visited { background-color: $alpha-link-colorvisited}
-
-.u-bgcolor-grey-00 { background-color: $grey-00 }
-.u-bgcolor-grey-01 { background-color: $grey-01 }
-.u-bgcolor-grey-02 { background-color: $grey-02 }
-.u-bgcolor-grey-03 { background-color: $grey-03 }
-.u-bgcolor-grey-04 { background-color: $grey-04 }
-.u-bgcolor-grey-05 { background-color: $grey-05 }
+.u-bgcolor-beta-light { background-color: palette(color-beta,light)}
+.u-bgcolor-beta { background-color: palette(color-beta)}
+.u-bgcolor-beta-dark { background-color: palette(color-beta,dark)}
+.u-bgcolor-beta-x-dark { background-color: palette(color-beta,x-dark)}

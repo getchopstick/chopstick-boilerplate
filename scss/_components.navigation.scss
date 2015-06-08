@@ -22,7 +22,7 @@
 }
 
     .c-nav-main__list {
-        border-top: 1px dotted $grey-04;
+        border-top: 1px dotted palette(color-neutral,light);
 
         @include mq($bp3) {
             border-top: none;
@@ -32,7 +32,7 @@
 
     .c-nav-main__item {
         & + & {
-            border-top: 1px dotted $grey-04;
+            border-top: 1px dotted palette(color-neutral,light);
         }
 
         @include mq($bp3) {
@@ -44,7 +44,7 @@
     }
 
     .c-nav-main__link {
-        color: lighten($alpha-text-color,50);
+        color: palette(color-alpha);
         text-decoration: none;
         font-weight: $beta-font-weight;
         @include text-dimensions($alpha-font-size,1,0,.25,.25);
@@ -55,7 +55,7 @@
 
         &:hover,
         .is-selected & {
-    	   color: darken($alpha-link-color,50);
+    	   color: palette(color-alpha,dark);
         }
     }
 
@@ -69,7 +69,7 @@
     height: 2em;
     width: 2em;
     text-indent: -9999px;
-    background-color: $alpha-text-color;
+    background-color: palette(color-neutral,dark);
     background-repeat: no-repeat;
     background-position: 50%;
     @include text-dimensions($alpha-font-size,1,0);
@@ -83,6 +83,6 @@
     }
 
     &.is-active {
-        background-color: $alpha-link-color;
+        background-color: palette(color-alpha);
     }
 }

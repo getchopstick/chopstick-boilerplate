@@ -1,106 +1,58 @@
 //
 //  Settings: colors
 //  ---
-// Set your colors
-//
-//  Defaults by https://github.com/mrmrs/colors
-//  - Cool
-//  - Warm
-//  - Gray Scale
-//  - Semantic
+//  The palette function works with a base color and a tint.
 //
 
-// Cool
+// Palette function > eg. palette(color-alpha,base)
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
 
-$aqua                       : #7FDBFF;
-$blue                       : #0074D9;
-$navy                       : #001F3F;
-$teal                       : #39CCCC;
-$green                      : #2ECC40;
-$olive                      : #3D9970;
-$lime                       : #01FF70;
+// Base colors
+$color-neutral              : #aaa;
 
-// Warm
+$color-alpha                : #0074D9;
+$color-beta                 : #FF4136;
 
-$yellow                     : #FFDC00;
-$orange                     : #FF851B;
-$red                        : #FF4136;
-$fuchsia                    : #F012BE;
-$purple                     : #B10DC9;
-$maroon                     : #85144B;
+$color-error                : #FF4136;
+$color-success              : #2ECC40;
+$color-notice               : #FF851B;
 
-// Gray Scale
-
-$white                      : #fff;
-$silver                     : #ddd;
-$grey                       : #aaa;
-$gray                       : $grey;
-$black                      : #111;
-
-// Neutral colors
-
-$alpha-neutral              : $white;
-$beta-neutral               : $black;
-
-// Text colors
-
-$alpha-text-color           : $black;
-$alpha-text-color-light     : mix($alpha-text-color, $alpha-neutral, 50%);
-$alpha-text-color-dark      : mix($alpha-text-color, $beta-neutral, 50%);
-
-$beta-text-color            : $alpha-text-color-light;
-$beta-text-color-light      : mix($beta-text-color, $alpha-neutral, 50%);
-$beta-text-color-dark       : mix($beta-text-color, $beta-neutral, 50%);
-
-// Alpha colors
-
-$alpha-ui-color             : $blue;
-$alpha-ui-color-light       : mix($alpha-ui-color, $alpha-neutral, 50%);
-$alpha-ui-color-dark        : mix($alpha-ui-color, $beta-neutral, 50%);
-
-// Beta colors
-
-$beta-ui-color              : $gray;
-$beta-ui-color-light        : mix($beta-ui-color, $alpha-neutral, 50%);
-$beta-ui-color-dark         : mix($beta-ui-color, $beta-neutral, 50%);
-
-// Gamma colors
-
-$gamma-ui-color             : $silver;
-$gamma-ui-color-light       : mix($gamma-ui-color, $alpha-neutral, 50%);
-$gamma-ui-color-dark        : mix($gamma-ui-color, $beta-neutral, 50%);
-
-// Delta colors
-
-$delta-ui-color             : $white;
-$delta-ui-color-light       : mix($delta-ui-color, $alpha-neutral, 50%);
-$delta-ui-color-dark        : mix($delta-ui-color, $beta-neutral, 50%);
-
-// Notification colors
-
-$error-color                : $red;
-$success-color              : $green;
-$notice-color               : $yellow;
-
-// Greyscale of alpha-ui-color
-
-$grey-00 : hsl(hue($alpha-ui-color),10,45);
-$gray-00 : $grey-00;
-$grey-01 : hsl(hue($alpha-ui-color),10,55);
-$gray-01 : $grey-01;
-$grey-02 : hsl(hue($alpha-ui-color),15,65);
-$gray-02 : $grey-02;
-$grey-03 : hsl(hue($alpha-ui-color),15,75);
-$gray-03 : $grey-03;
-$grey-04 : hsl(hue($alpha-ui-color),15,85);
-$gray-04 : $grey-04;
-$grey-05 : hsl(hue($alpha-ui-color),25,95);
-$gray-05 : $grey-05;
-
-// Link colors
-
-$alpha-link-color           : $alpha-ui-color;
-$alpha-link-colorhover      : darken($alpha-link-color, 10);
-$alpha-link-colorfocus      : darken($alpha-link-color, 10);
-$alpha-link-coloractive     : lighten($alpha-link-color, 10);
-$alpha-link-colorvisited    : darken($alpha-link-color, 5);
+// Palletes
+$palettes: (
+    color-neutral: (
+        x-light             : hsl(hue($color-neutral),0,100),
+        light               : hsl(hue($color-neutral),0,90),
+        base                : $color-neutral,
+        dark                : hsl(hue($color-neutral),0,30),
+        x-dark              : hsl(hue($color-neutral),0,10)
+    ),
+    color-alpha: (
+        light               : hsl(hue($color-alpha),70,60),
+        base                : $color-alpha,
+        dark                : hsl(hue($color-alpha),100,25),
+        x-dark              : hsl(hue($color-alpha),100,15)
+    ),
+    color-beta: (
+        light               : hsl(hue($color-beta),70,60),
+        base                : $color-beta,
+        dark                : hsl(hue($color-beta),100,25),
+        x-dark              : hsl(hue($color-beta),100,15)
+    ),
+    color-error: (
+        light               : hsl(hue($color-error),70,60),
+        base                : $color-error,
+        dark                : hsl(hue($color-error),100,35),
+    ),
+    color-success: (
+        light               : hsl(hue($color-success),70,60),
+        base                : $color-success,
+        dark                : hsl(hue($color-success),100,35),
+    ),
+    color-notice: (
+        light               : hsl(hue($color-notice),70,60),
+        base                : $color-notice,
+        dark                : hsl(hue($color-notice),100,35),
+    )
+);

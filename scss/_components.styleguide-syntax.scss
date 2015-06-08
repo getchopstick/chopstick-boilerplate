@@ -23,16 +23,16 @@
     overflow: auto;
     font-size: 90%;
     width: 100%;
-    color: $alpha-text-color;
-    border: $border-width $border-style $gamma-ui-color;
+    color: palette(color-neutral,dark);
+    border: $border-width $border-style palette(color-neutral);
     border-radius: $radius;
 }
 
     .linenos {
         @include padding-lr(.5,.5);
-        color: $beta-text-color;
-        background-color: lighten($gamma-ui-color,10);
-        border-right: 1px solid $gamma-ui-color;
+        color: palette(color-neutral,dark);
+        background-color: palette(color-neutral,light);
+        border-right: 1px solid palette(color-neutral);
     }
 
     .code {

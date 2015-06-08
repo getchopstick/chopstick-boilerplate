@@ -19,10 +19,10 @@
     .c-logo__link {
         display: block;
         text-decoration: none;
-        color: $beta-text-color;
+        color: palette(color-alpha);
 
         &:hover,
         &:focus {
-            color: $alpha-text-color;
+            color: palette(color-alpha,light);
         }
     }

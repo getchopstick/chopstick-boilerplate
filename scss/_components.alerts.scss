@@ -12,31 +12,31 @@
     @include margin-bottom(1);
 
     & .c-alert-box__link {
-        @include text-color($gamma-ui-color);
+        @include text-color(palette(color-neutral));
     }
 }
 
 .c-alert-box--error {
-    @include block-skin($error-color);
+    @include block-skin(palette(color-error));
 
     & .c-alert-box__link {
-        @include text-color($error-color);
+        @include text-color(palette(color-error));
     }
 }
 
 .c-alert-box--success {
-    @include block-skin($success-color);
+    @include block-skin(palette(color-success));
 
     & .c-alert-box__link {
-        @include text-color($success-color);
+        @include text-color(palette(color-success));
     }
 }
 
 .c-alert-box--notice {
-    @include block-skin($notice-color);
+    @include block-skin(palette(color-notice));
 
     & .c-alert-box__link {
-        @include text-color($notice-color);
+        @include text-color(palette(color-notice));
     }
 }
 

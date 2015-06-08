@@ -12,10 +12,10 @@
     -ms-appearance:     none;
     appearance:         none;
     font-smoothing: antialiased;
-    background-color: $delta-ui-color;
+    background-color: palette(color-neutral,x-light);
     border-radius: $radius;
-    border: $border-width $border-style $gamma-ui-color;
-    color: lighten($alpha-text-color, 30);
+    border: $border-width $border-style palette(color-neutral);
+    color: palette(color-neutral,dark);
     font-family: $alpha-font-family;
     margin: 0;
     width: 100%;
@@ -26,17 +26,17 @@
     @include input-md;
 
     &:focus {
-        color: $alpha-text-color;
-        border-color: $alpha-ui-color;
-        box-shadow: 0 0 2px rgba($alpha-ui-color,.5);
+        color: palette(color-neutral,dark);
+        border-color: palette(color-alpha);
+        box-shadow: 0 0 2px palette(color-alpha,x-light);
     }
 
     &.has-error {
-        border: 1px solid $error-color;
+        border: 1px solid palette(color-error);
 
         &:focus {
-            border-color: $error-color;
-            box-shadow: 0 0 2px rgba($error-color,.5);
+            border-color: palette(color-error);
+            box-shadow: 0 0 2px palette(color-error,x-light);
         }
     }
 }
@@ -64,21 +64,21 @@
 
 // Input states
 .c-input-text.has-error  {
-    border: 1px solid $error-color;
+    border: 1px solid palette(color-error);
 
     &:focus {
-        border-color: $error-color;
-        box-shadow: 0 0 2px rgba($error-color,.5);
+        border-color: palette(color-error);
+        box-shadow: 0 0 2px palette(color-error,x-light);
     }
 }
 
 // Labels
 .c-label {
-    color: $beta-text-color;
+    color: palette(color-neutral);
     @include text-dimensions($ms-1,1);
 
     &.has-error {
-        color: $error-color;
+        color: palette(color-error);
     }
 }
 
@@ -96,5 +96,5 @@
     @include text-dimensions($ms-2,1);
 }
 .c-alert-inline--error {
-    color: $error-color;
+    color: palette(color-error);
 }

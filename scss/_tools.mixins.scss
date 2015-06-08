@@ -44,7 +44,7 @@
 // Make a block with various properties
 // @include block-skin;
 
-@mixin block-skin($bgcolor: $gamma-ui-color, $fgcolor: $alpha-text-color, $block-radius: $radius, $block-border-width: $border-width, $block-border-style: $border-style) {
+@mixin block-skin($bgcolor: palette(color-neutral,light), $fgcolor: palette(color-neutral,dark), $block-radius: $radius, $block-border-width: $border-width, $block-border-style: $border-style) {
 
     background-color: $bgcolor;
     border-color: darken($bgcolor,100%-$contrast);

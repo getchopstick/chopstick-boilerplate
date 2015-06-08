@@ -14,7 +14,7 @@
 
     .c-pagination__item {
         & + & {
-            border-left: 1px dotted $gamma-ui-color;
+            border-left: 1px dotted palette(color-neutral);
         }
     }
 
