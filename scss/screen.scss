@@ -5,71 +5,18 @@
  *  architecture and a series of principles. It creates a structure
  *  to easily set-up and build bespoke web projects.
  *  ---
- *  The settings and tools layer don't compile any code.
- *  Therefore they get the number 0 and are put in single line comments.
- *  ---
  *
- *  0. Settings
- *      - settings.global
- *      - settings.breakpoints
- *      - settings.grid
- *      - settings.colors
- *      - settings.typography
- *      - settings.ms
- *      - settings.ui
- *
- *  0. Tools
- *      - tools.functions
- *      - tools.mixins
- *      - tools.grid
- *      - tools.spacing
- *      - tools.typography
- *      - tools.buttons
- *      - tools.inputs
- *
- *  1. Generic
- *      - generic.normalize
- *      - generic.reset
- *      - generic.box-sizing
- *
- *  2. Elements
- *      - elements.page
- *      - elements.typography
- *      - elements.images
- *      - elements.forms
- *      - elements.tables
- *
- *  3. Objects
- *      - objects.grid
- *      - objects.media
- *      - objects.media-embed
- *
- *  4. Components
- *      - components.navigation
- *      - components.brand
- *      - components.forms
- *      - components.holder
- *      - components.icons
- *      - components.alerts
- *      - components.buttons
- *      - components.pagination
- *      - components.styleguide
- *      - components.styleguide-syntax
- *
- *  5. Trumps
- *      - trumps.widths
- *      - trumps.push
- *      - trumps.spacing
- *      - trumps.colors
- *      - trumps.borders
- *      - trumps.states
- *      - trumps.shame
- *      - trumps.debug
- *      - trumps.baseline-grid
- *      - trumps.print
+ *  Settings: contains global variables and config switches
+ *  Tools: contains default mixins and functions
+ *  Generic: contains ground-zero styles (Normalize.css, resets, box-sizing)
+ *  Elements: contains unclassed HTML elements (type selectors)
+ *  Objects: contains cosmetic-free design patterns
+ *  Components: contains designed components, chunks of UI
+ *  Plugins: contains third-party plugin styles
+ *  Trumps: contains helpers and overrides
  */
 
-    // 0. Settings
+    // Settings
     @import "settings.global";
     @import "settings.breakpoints";
     @import "settings.grid";
@@ -78,7 +25,7 @@
     @import "settings.ms";
     @import "settings.ui";
 
-    // 0. Tools
+    // Tools
     @import "tools.functions";
     @import "tools.mixins";
     @import "tools.grid";
@@ -87,26 +34,26 @@
     @import "tools.buttons";
     @import "tools.inputs";
 
-    /* 1. Generic */
+    /* Generic */
     @import "generic.normalize";
     @import "generic.reset";
     @import "generic.box-sizing";
 
-    /* 2. Elements */
+    /* Elements */
     @import "elements.page";
     @import "elements.typography";
     @import "elements.images";
     @import "elements.forms";
     @import "elements.tables";
 
-    /* 3. Objects */
+    /* Objects */
     @import "objects.grid";
     @import "objects.media";
     @import "objects.media-embed";
     @import "objects.navigation";
     @import "objects.inline-list";
 
-    /* 4. Components */
+    /* Components */
     @import "components.navigation";
     @import "components.brand";
     @import "components.forms";
@@ -119,7 +66,10 @@
     @import "components.styleguide";
     @import "components.styleguide-syntax";
 
-    /* 5. Trumps */
+    /* Plugins */
+    @import "plugins.googlemaps";
+
+    /* Trumps */
     @import "trumps.widths";
     @import "trumps.push";
     @import "trumps.spacing";
