@@ -86,10 +86,16 @@
 
 @mixin mdrn-svg { .svg & { @content } }
 
-@mixin svg-bg($filename, $folder:'../img/', $extension: '.png', $bg-color: transparent, $position: 0 0, $repeat: no-repeat, $size: auto) {
-    background: $bg-color url($folder + 'png/' + $filename + $extension) $position $repeat;
+@mixin svg-bg($filename, $folder:'../img/', $bg-color: transparent, $position: 0 0, $repeat: no-repeat, $size: auto) {
+    background-image: url($folder + 'png/' + $filename + '.png');
+    background-repeat: $repeat;
     background-size: $size;
-    @include mdrn-svg { background: $bg-color url($folder + 'svg/' + $filename + '.svg') $position $repeat; background-size: $size; }
+    background-position: $position;
+    background-color: $bg-color;
+
+    @include mdrn-svg {
+        background-image: url($folder + 'svg/' + $filename + '.svg');
+    }
 }
 
 //

@@ -6,12 +6,20 @@
 
 .c-logo {
     float: left;
-    width: 230px;
-    text-indent: -9999px;
-    @include margin-top(1.25);
-    @include svg-bg("logo");
+    display: block;
+    width: 157px;
+    margin-bottom: 0;
+    background-image: url('../img/png/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -99999px;
+    @include text-dimensions($alpha-font-size,1,0,1.25,1.25);
+
+    .svg & {
+        background-image: url('../img/svg/logo.svg');
+    }
 }
 
-.c-logo__link {
-    display: block;
-}
+    .c-logo__link {
+        display: block;
+    }
