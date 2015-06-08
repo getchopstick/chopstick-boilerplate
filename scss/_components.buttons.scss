@@ -43,11 +43,13 @@
 }
 
 .c-button--fll {
-    @include button-float(left);
+    display: block;
+    float: left;
 }
 
 .c-button--flr {
-    @include button-float(right);
+    display: block;
+    float: right;
 }
 
 // Button sizes
