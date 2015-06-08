@@ -63,26 +63,12 @@
     cursor: pointer;
     user-select: none;
     position: absolute;
-    top: 1.5em;
-    right: 1.5em;
+    top: 2em;
+    right: 2em;
     display: block;
-    height: 2em;
-    width: 2em;
-    text-indent: -9999px;
-    background-color: palette(color-neutral,dark);
-    background-repeat: no-repeat;
-    background-position: 50%;
     @include text-dimensions($alpha-font-size,1,0);
-
-    .svg & {
-        background-image: url('../img/svg/icon-menu.svg');
-    }
 
     @include mq($bp3) {
         display: none;
-    }
-
-    &.is-active {
-        background-color: palette(color-alpha);
     }
 }
