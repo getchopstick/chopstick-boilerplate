@@ -4,17 +4,17 @@
     Navigation object with no bullets
 */
 
-.o-nav {
+.o-list-ui {
     list-style: none;
     padding-left: 0;
     @include clearfix;
 }
 
-.o-nav__item,
-.o-nav__link {
+.o-list-ui__item,
+.o-list-ui__link {
     display: block;
 
-    .o-nav--horizontal & {
+    .o-list-ui--horizontal & {
         @include mq($bp3) {
             float: left;
         }
