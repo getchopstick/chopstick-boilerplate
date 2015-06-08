@@ -10,9 +10,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 # Inuit CSS License
 
-Inuit is used for: 
+Inuit is used for:
 
-- _base.box-sizing.scss
+- _generic.box-sizing.scss
+- _generic.reset.scss
+- _trumps.debug.scss
 
 Copyright 2014 Harry Roberts
 
