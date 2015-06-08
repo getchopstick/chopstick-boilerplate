@@ -12,7 +12,6 @@ h5,
 h6 {
     font-family: $beta-font-family;
     font-weight: $alpha-font-weight;
-    text-rendering: optimizelegibility;
     @include margin-bottom(1);
 }
 
