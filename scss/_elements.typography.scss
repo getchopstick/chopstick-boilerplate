@@ -58,16 +58,6 @@ blockquote {
     font-style: italic;
 }
 
-caption {
-    font-family: $alpha-font-family;
-    text-align: left;
-    border-bottom: 1px solid palette(color-neutral,light);
-    font-weight: $beta-font-weight;
-    text-align: center;
-    @include padding-bottom(1);
-    @include margin-bottom(1);
-}
-
 small {
     @include text-dimensions($ms-1,1,$alpha-line-height);
 }
