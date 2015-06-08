@@ -60,13 +60,21 @@
     }
 
 .c-nav-main-trigger {
-    cursor: pointer;
     user-select: none;
     position: absolute;
     top: 2em;
-    right: 2em;
+    right: 1em;
     display: block;
-    @include text-dimensions($alpha-font-size,1,0);
+    color: palette(color-alpha);
+    background-color: palette(color-neutral,x-light);
+    border: 1px solid palette(color-alpha);
+    outline: 0;
+    border-radius: $radius;
+
+    &.is-active {
+        color: palette(color-neutral,x-light);
+        background-color: palette(color-alpha);
+    }
 
     @include mq($bp3) {
         display: none;
