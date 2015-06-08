@@ -5,11 +5,11 @@
 */
 
 .c-panel {
-  @include padding-tb(1,0);
-  @include padding-lr(1,1);
-  @include margin-bottom(1);
+    @include padding-tb(1,0);
+    @include padding-lr(1,1);
+    @include margin-bottom(1);
 }
 
 .c-panel--alpha {
-  @include block-skin;
+    @include block-skin;
 }
