@@ -1,0 +1,41 @@
+/*
+    Object: media
+    ---
+    http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+    ---
+    The media object is an image to the left, with descriptive content to the right.
+    Use a grid class to determine the size of the image. The content will take the remaining space.
+    ---
+    Example usage:
+    <article class="media">
+      <div class="media__img grid-4">
+        <img src="http://placekitten.com/200/300" alt="placekitten" />
+      </div>
+      <div class="media__body">
+        The media object is an image to the left, with descriptive content to the right.
+      </div>
+    </article>
+*/
+
+.o-media {
+    @include clearfix;
+}
+
+    .o-media__img {
+        float: left;
+        @include padding-lr(0,1);
+        @include margin-bottom(1);
+
+        img {
+            display: block;
+        }
+    }
+
+    .o-media__img--reverse {
+        float: right;
+        @include padding-lr(1,0);
+    }
+
+    .o-media__body {
+        overflow: hidden;
+    }

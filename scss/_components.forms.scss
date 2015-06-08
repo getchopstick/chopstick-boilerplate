@@ -1,0 +1,100 @@
+/*
+    Component: forms
+    ---
+    Form styling, input sizes, etc.
+*/
+
+// Input elements
+
+.c-input-text {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    -ms-appearance:     none;
+    appearance:         none;
+    font-smoothing: antialiased;
+    background-color: $delta-ui-color;
+    border-radius: $radius;
+    border: $border-width $border-style $gamma-ui-color;
+    color: lighten($alpha-text-color, 30);
+    font-family: $alpha-font-family;
+    margin: 0;
+    width: 100%;
+    display: block;
+    outline: none;
+    line-height: normal;
+    border-radius: $radius;
+    @include input-md;
+
+    &:focus {
+        color: $alpha-text-color;
+        border-color: $alpha-ui-color;
+        box-shadow: 0 0 2px rgba($alpha-ui-color,.5);
+    }
+
+    &.has-error {
+        border: 1px solid $error-color;
+
+        &:focus {
+            border-color: $error-color;
+            box-shadow: 0 0 2px rgba($error-color,.5);
+        }
+    }
+}
+
+.c-input-option {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+// Input sizes
+.c-input-text--sm {
+    @include input-sm;
+}
+
+.c-input-text--lg {
+    @include input-lg;
+}
+
+// Input modifiers
+.c-input-text--prefix {
+    border-radius: $radius 0 0 $radius;
+    border-right: 0;
+}
+
+// Input states
+.c-input-text.has-error  {
+    border: 1px solid $error-color;
+
+    &:focus {
+        border-color: $error-color;
+        box-shadow: 0 0 2px rgba($error-color,.5);
+    }
+}
+
+// Labels
+.c-label {
+    color: $beta-text-color;
+    @include text-dimensions($ms-1,1);
+
+    &.has-error {
+        color: $error-color;
+    }
+}
+
+.c-label--option {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: inline-block;
+}
+
+// Errors
+.c-alert-inline {
+    display: block;
+    text-align: right;
+    @include text-dimensions($ms-2,1);
+}
+.c-alert-inline--error {
+    color: $error-color;
+}

@@ -1,0 +1,88 @@
+/*
+    Component: navigation
+    ---
+    Site navigation, breadcrumbs, etc.
+*/
+
+.c-nav-main {
+    width: 100%;
+    float: left;
+    display: none;
+    font-family: $alpha-font-family;
+
+    @include mq($bp3) {
+        display: block;
+        width: auto;
+        float: right;
+    }
+
+    &.is-visible {
+        display: block;
+    }
+}
+
+    .c-nav-main__list {
+        border-top: 1px dotted $grey-04;
+
+        @include mq($bp3) {
+            border-top: none;
+            margin-bottom: 0;
+        }
+    }
+
+    .c-nav-main__item {
+        & + & {
+            border-top: 1px dotted $grey-04;
+        }
+
+        @include mq($bp3) {
+            & + & {
+                border-top: 0;
+                @include margin-lr(2,0);
+            }
+        }
+    }
+
+    .c-nav-main__link {
+        color: lighten($alpha-text-color,50);
+        text-decoration: none;
+        font-weight: $beta-font-weight;
+        @include text-dimensions($alpha-font-size,1,0,.25,.25);
+
+        @include mq($bp3) {
+            @include padding-tb(1.25,1.25);
+        }
+
+        &:hover,
+        .is-selected & {
+    	   color: darken($alpha-link-color,50);
+        }
+    }
+
+.c-nav-main-trigger {
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+    display: block;
+    height: 2em;
+    width: 2em;
+    text-indent: -9999px;
+    background-color: $alpha-text-color;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    @include text-dimensions($alpha-font-size,1,0);
+
+    .svg & {
+        background-image: url('../img/svg/icon-menu.svg');
+    }
+
+    @include mq($bp3) {
+        display: none;
+    }
+
+    &.is-active {
+        background-color: $alpha-link-color;
+    }
+}

@@ -1,0 +1,145 @@
+/*
+    Components: buttons
+    ---
+    Button sizes, styles, etc.
+*/
+
+.c-button {
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid transparent;
+    white-space: nowrap;
+    border-radius: $radius;
+    transition: all .1s ease-in-out;
+    transition-property: background, color, border;
+    outline: none;
+    line-height: normal;
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    -webkit-font-smoothing: antialiased;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
+    &:active {
+        outline: 0;
+        background-image: none;
+    }
+}
+
+// Button display
+
+.c-button--block {
+    display: block;
+    width: 100%;
+}
+
+.c-button--fll {
+    @include button-float(left);
+}
+
+.c-button--flr {
+    @include button-float(right);
+}
+
+// Button sizes
+
+.c-button--sm {
+    // padding: em(5) em(10);
+    @include padding-lr(.75,.75);
+    @include input-dimensions($ms-2,1,0,.5,.5);    
+}
+
+.c-button--md {
+    // padding: em(10.5) em(15);
+    @include padding-lr(1,1);    
+    @include input-dimensions($ms-1,1,0,.75,.75);    
+}
+
+.c-button--lg {
+    // padding: em(14.5) em(20);
+    @include padding-lr(1.25,1.25);
+    @include input-dimensions($alpha-font-size,1,0,1,1);
+}
+
+// Button colors
+
+.c-button--alpha {
+    background-color: $alpha-ui-color;
+    border-color: $alpha-ui-color;
+
+    &,
+    &:visited {
+        color: $white;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: lighten($alpha-ui-color,10);
+        color: $white;
+    }
+
+    &:active {
+        background-color: $alpha-ui-color;
+    }
+
+}
+
+.c-button--beta {
+    background-color: $beta-ui-color;
+    border-color: $beta-ui-color;
+
+    &,
+    &:visited {
+        color: $white;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: lighten($beta-ui-color,10);
+        color: $white;
+    }
+
+    &:active {
+        background-color: $beta-ui-color;
+    }
+}
+
+// Modifiers
+
+.c-button--postfix {
+    border-radius: 0 $radius $radius 0;
+}
+
+// Button-group
+
+.c-button-group {
+    position: relative;
+
+    .c-button--fll {
+        @include margin-right(1);
+    }
+
+    .c-button--flr {
+        @include margin-right(1);
+    }
+
+    @include clearfix;
+}
+
+// firefox inner border fix
+
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}

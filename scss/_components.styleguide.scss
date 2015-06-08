@@ -1,0 +1,47 @@
+/*
+    Component: styleguide
+    ---
+    Styleguide specific scaffolding and demo styles
+*/
+
+.c-section-title {
+    color: $beta-text-color;
+    border-bottom: 1px solid $gamma-ui-color;
+    @include padding-bottom(1);
+    @include padding-top(1);
+    @include text-dimensions($alpha-font-size,1,2);
+}
+
+.c-scss {
+    display: block;
+    color: $alpha-text-color;
+    background-color: lighten($gamma-ui-color,10);
+    border: $border-width $border-style $gamma-ui-color;
+    border-radius: $radius;
+    @include margin-tb(0, 1);
+    @include padding-tb(.5, .5);
+    @include padding-lr(1,1);
+}
+
+.c-swatch {
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 0 1px 3px $white, 0 0 5px 2px rgba($black,.33);
+}
+
+.c-swatch-caption {
+    color: $beta-text-color;
+    min-height: 55px;
+    @include text-dimensions(14,.8,0,.5,.3);
+}
+
+.c-grid-test {
+
+}
+
+    .c-grid-test__item {
+        background-color: $grey-05;
+        text-align: center;
+        @include padding-tb(.5,.5);
+        @include margin-tb(1,1);
+    }

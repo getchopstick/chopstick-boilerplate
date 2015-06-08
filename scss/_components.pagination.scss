@@ -1,0 +1,25 @@
+/*
+    Component: pagination
+    ---
+    Pagination
+*/
+
+.c-pagination {
+    border: 1px solid $gamma-ui-color;
+}
+
+.c-pagination--centered {
+    text-align: center;
+}
+
+    .c-pagination__item {
+        & + & {
+            border-left: 1px dotted $gamma-ui-color;
+        }
+    }
+
+    .c-pagination__link {
+        display: block;
+        @include padding-lr(.3,.3);
+        @include padding-tb(.3,.3);
+    }

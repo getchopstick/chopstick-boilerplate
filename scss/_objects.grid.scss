@@ -1,0 +1,33 @@
+/*
+    Object: grid
+    ---
+    Grid system objects, works together with utility width classes
+*/
+
+.o-container {
+    margin: 0 auto;
+    max-width: $bp5;
+}
+
+// No gutters
+
+.o-grid {
+    @include clearfix;
+}
+
+// Default gutter
+
+.o-grid--gutter {
+    @include margin-lr(-($columns-gutter),-($columns-gutter));
+}
+
+    // Grid item, takes the full width by default
+
+    .o-grid__item {
+        float: left;
+        width: 100%;
+
+        .o-grid--gutter > & {
+            @include padding-lr($columns-gutter,$columns-gutter);
+        }
+    }

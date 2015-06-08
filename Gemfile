@@ -3,9 +3,9 @@
 source "http://rubygems.org"
 
 group :development do
-	# CSS Preprocessing
-	gem 'sass'
+    # CSS Preprocessing
+    gem 'sass'
 
-	# Jekyll
-	gem 'jekyll'
+    # Jekyll
+    gem 'jekyll'
 end

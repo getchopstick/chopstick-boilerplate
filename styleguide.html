@@ -3,153 +3,195 @@ layout: default
 title: Patterns
 section: styleguide
 ---
-<div class="holder main-holder">
-	<div class="row main-row">
-		<div class="main-content">
+<div class="c-holder c-holder--alpha">
+    <div class="o-container">
+        <div class="c-section">
+            <h2 class="c-section-title">Base Elements</h2>
 
-			<h2 class="section-title">Base Elements</h2>
-			<div class="row">
-				<div class="grid-7">
-					{% include patterns/base.html %}
-				</div>
-				<div class="grid-5">
-					<pre class="scss">_base.scss</pre>
-					<a href="#" class="js-toggle" data-target=".snippet--base">
-						<i class="icon icon--toggle"></i>HTML snippet
-					</a>
-					<div class="snippet snippet--base is-hidden">
-						{% highlight html linenos=table %}
-							{% include patterns/base.html %}
-						{% endhighlight %}
-					</div>
-				</div>
-			</div>
+            <div class="o-grid o-grid--gutter">
+                <div class="o-grid__item u-2-of-3-bp4">
+                    {% include elements.base.html %}
+                </div>
+                <div class="o-grid__item u-1-of-3-bp4">
+                    <pre class="c-scss">_elements.base.scss</pre>
+                    <a href="#" class="js-toggle" data-target=".js-snippet-base">
+                        <i class="c-icon c-icon--toggle"></i>HTML snippet
+                    </a>
+                    <div class="js-snippet-base is-hidden">
+                        {% highlight html linenos=table %}
+                            {% include elements.base.html %}
+                        {% endhighlight %}
+                    </div>
+                </div>
+            </div>
+        </div>
 
-			<h2 class="section-title">Colors</h2>
-			<div class="row">
-				<div class="grid-7">
-					{% include patterns/colors.html %}
-				</div>
-				<div class="grid-5">
-					<pre class="scss">_colors.scss</pre>
-					<a href="#" class="js-toggle" data-target=".snippet--colors">
-						<i class="icon icon--toggle"></i>HTML snippet
-					</a>
-					<div class="snippet snippet--colors is-hidden">
-						{% highlight html linenos=table %}
-							{% include patterns/colors.html %}
-						{% endhighlight %}
-					</div>
-				</div>
-			</div>
+        <div class="c-section">
+            <h2 class="c-section-title">Colors</h2>
 
-			<h2 class="section-title">Buttons</h2>
-			<div class="row">
-				<div class="grid-7">
-					{% include patterns/buttons.html %}
-				</div>
-				<div class="grid-5">
-					<pre class="scss">patterns/_buttons.scss</pre>
-					<a href="#" class="js-toggle" data-target=".snippet--buttons">
-						<i class="icon icon--toggle"></i>HTML snippet
-					</a>
-					<div class="snippet snippet--buttons is-hidden">
-						{% highlight html linenos=table %}
-							{% include patterns/buttons.html %}
-						{% endhighlight %}
-					</div>
-				</div>
-			</div>
+            <div class="o-grid o-grid--gutter">
+                <div class="o-grid__item u-2-of-3-bp4">
+                    {% include trumps.colors.html %}
+                </div>
+                <div class="o-grid__item u-1-of-3-bp4">
+                    <pre class="c-scss">_trumps.colors.scss</pre>
+                    <a href="#" class="js-toggle" data-target=".js-snippet-colors">
+                        <i class="c-icon c-icon--toggle"></i>HTML snippet
+                    </a>
+                    <div class="js-snippet-colors is-hidden">
+                        {% highlight html linenos=table %}
+                            {% include trumps.colors.html %}
+                        {% endhighlight %}
+                    </div>
+                </div>
+            </div>
+        </div>
 
-			<h2 class="section-title">Forms</h2>
-			<div class="row">
-				<div class="grid-7">
-					{% include patterns/forms.html %}
-				</div>
-				<div class="grid-5">
-					<pre class="scss">patterns/_forms.scss</pre>
-					<a href="#" class="js-toggle" data-target=".snippet--forms">
-						<i class="icon icon--toggle"></i>HTML snippet
-					</a>
-					<div class="snippet snippet--forms is-hidden">
-						{% highlight html linenos=table %}
-							{% include patterns/forms.html %}
-						{% endhighlight %}
-					</div>
-				</div>
-			</div>
+        <div class="c-section">
+            <h2 class="c-section-title">Buttons</h2>
 
-			<h2 class="section-title">Alerts</h2>
-			<div class="row">
-				<div class="grid-7">
-					{% include patterns/alerts.html %}
-				</div>
-				<div class="grid-5">
-					<pre class="scss">patterns/_alerts.scss</pre>
-					<a href="#" class="js-toggle" data-target=".snippet--alerts">
-						<i class="icon icon--toggle"></i>HTML snippet
-					</a>
-					<div class="snippet snippet--alerts is-hidden">
-						{% highlight html linenos=table %}
-							{% include patterns/alerts.html %}
-						{% endhighlight %}
-					</div>
-				</div>
-			</div>
+            <div class="o-grid o-grid--gutter">
+                <div class="o-grid__item u-2-of-3-bp4">
+                    {% include components.buttons.html %}
+                </div>
+                <div class="o-grid__item u-1-of-3-bp4">
+                    <pre class="c-scss">._components.buttons.scss</pre>
+                    <a href="#" class="js-toggle" data-target=".js-snippet-buttons">
+                        <i class="c-icon c-icon--toggle"></i>HTML snippet
+                    </a>
+                    <div class="js-snippet-buttons is-hidden">
+                        {% highlight html linenos=table %}
+                            {% include components.buttons.html %}
+                        {% endhighlight %}
+                    </div>
+                </div>
+            </div>
+        </div>
 
-			<h2 class="section-title">Pagination</h2>
-			<div class="row">
-				<div class="grid-7">
-					{% include patterns/pagination.html %}
-				</div>
-				<div class="grid-5">
-					<pre class="scss">patterns/_pagination.scss</pre>
-					<a href="#" class="js-toggle" data-target=".snippet--pagination">
-						<i class="icon icon--toggle"></i>HTML snippet
-					</a>
-					<div class="snippet snippet--pagination is-hidden">
-						{% highlight html linenos=table %}
-							{% include patterns/pagination.html %}
-						{% endhighlight %}
-					</div>
-				</div>
-			</div>
+        <div class="c-section">
+            <h2 class="c-section-title">Forms</h2>
 
-			<h2 class="section-title">Helpers</h2>
-			<div class="row">
-				<div class="grid-7">
-					{% include patterns/helpers.html %}
-				</div>
-				<div class="grid-5">
-					<pre class="scss">patterns/_helpers.scss</pre>
-					<a href="#" class="js-toggle" data-target=".snippet--helpers">
-						<i class="icon icon--toggle"></i>HTML snippet
-					</a>
-					<div class="snippet snippet--helpers is-hidden">
-						{% highlight html linenos=table %}
-							% include patterns/helpers.html %}
-						{% endhighlight %}
-					</div>
-				</div>
-			</div>
+            <div class="o-grid o-grid--gutter">
+                <div class="o-grid__item u-2-of-3-bp4">
+                    {% include components.forms.html %}
+                </div>
+                <div class="o-grid__item u-1-of-3-bp4">
+                    <pre class="c-scss">._components.forms.scss</pre>
+                    <a href="#" class="js-toggle" data-target=".js-snippet-forms">
+                        <i class="c-icon c-icon--toggle"></i>HTML snippet
+                    </a>
+                    <div class="js-snippet-forms is-hidden">
+                        {% highlight html linenos=table %}
+                            {% include components.forms.html %}
+                        {% endhighlight %}
+                    </div>
+                </div>
+            </div>
+        </div>
 
-			<h2 class="section-title">Media object</h2>
-			<div class="row">
-				<div class="grid-7">
-					{% include patterns/media.html %}
-				</div>
-				<div class="grid-5">
-					<pre class="scss">patterns/_media.scss</pre>
-					<a href="#" class="js-toggle" data-target=".snippet--media">
-						<i class="icon icon--toggle"></i>HTML snippet
-					</a>
-					<div class="snippet snippet--media is-hidden">
-						{% highlight html linenos=table %}
-							{% include patterns/media.html %}
-						{% endhighlight %}
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="c-section">
+            <h2 class="c-section-title">Alerts</h2>
+
+            <div class="o-grid o-grid--gutter">
+                <div class="o-grid__item u-2-of-3-bp4">
+                    {% include components.alerts.html %}
+                </div>
+                <div class="o-grid__item u-1-of-3-bp4">
+                    <pre class="c-scss">._components.alerts.scss</pre>
+                    <a href="#" class="js-toggle" data-target=".js-snippet-alerts">
+                        <i class="c-icon c-icon--toggle"></i>HTML snippet
+                    </a>
+                    <div class="js-snippet-alerts is-hidden">
+                        {% highlight html linenos=table %}
+                            {% include components.alerts.html %}
+                        {% endhighlight %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-section">
+            <h2 class="c-section-title">Pagination</h2>
+
+            <div class="o-grid o-grid--gutter">
+                <div class="o-grid__item u-2-of-3-bp4">
+                    {% include components.pagination.html %}
+                </div>
+                <div class="o-grid__item u-1-of-3-bp4">
+                    <pre class="c-scss">._components.pagination.scss</pre>
+                    <a href="#" class="js-toggle" data-target=".js-snippet-pagination">
+                        <i class="c-icon c-icon--toggle"></i>HTML snippet
+                    </a>
+                    <div class="js-snippet-pagination is-hidden">
+                        {% highlight html linenos=table %}
+                            {% include components.pagination.html %}
+                        {% endhighlight %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-section">
+            <h2 class="c-section-title">Helpers</h2>
+
+            <div class="o-grid o-grid--gutter">
+                <div class="o-grid__item u-2-of-3-bp4">
+                    {% include trumps.helpers.html %}
+                </div>
+                <div class="o-grid__item u-1-of-3-bp4">
+                    <pre class="c-scss">._trumps.helpers.scss</pre>
+                    <a href="#" class="js-toggle" data-target=".js-snippet-helpers">
+                        <i class="c-icon c-icon--toggle"></i>HTML snippet
+                    </a>
+                    <div class="js-snippet-helpers is-hidden">
+                        {% highlight html linenos=table %}
+                            % include trumps.helpers.html %}
+                        {% endhighlight %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-section">
+            <h2 class="c-section-title">Media object</h2>
+
+            <div class="o-grid o-grid--gutter">
+                <div class="o-grid__item u-2-of-3-bp4">
+                    {% include objects.media.html %}
+                </div>
+                <div class="o-grid__item u-1-of-3-bp4">
+                    <pre class="c-scss">._objects.media.scss</pre>
+                    <a href="#" class="js-toggle" data-target=".js-snippet-media">
+                        <i class="c-icon c-icon--toggle"></i>HTML snippet
+                    </a>
+                    <div class="js-snippet-media is-hidden">
+                        {% highlight html linenos=table %}
+                            {% include objects.media.html %}
+                        {% endhighlight %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-section">
+            <h2 class="c-section-title">Panels</h2>
+
+            <div class="o-grid o-grid--gutter">
+                <div class="o-grid__item u-2-of-3-bp4">
+                    {% include components.panels.html %}
+                </div>
+                <div class="o-grid__item u-1-of-3-bp4">
+                    <pre class="c-scss">._components.panels.scss</pre>
+                    <a href="#" class="js-toggle" data-target=".js-snippet-media">
+                        <i class="c-icon c-icon--toggle"></i>HTML snippet
+                    </a>
+                    <div class="js-snippet-media is-hidden">
+                        {% highlight html linenos=table %}
+                            {% include components.panels.html %}
+                        {% endhighlight %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

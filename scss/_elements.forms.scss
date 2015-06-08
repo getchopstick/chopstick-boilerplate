@@ -1,0 +1,46 @@
+/*
+    Elements: forms
+    ---
+    Default markup for the form elements
+*/
+
+fieldset {
+    @include margin-bottom(1);
+}
+
+legend,
+label {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    @include text-dimensions($alpha-font-size,1,0,0,.25);
+}
+
+textarea {
+    height: auto;
+    resize: none;
+}
+
+// Select, depends on the project. Use a custom select plugin to properly style these.
+
+select,
+select[multiple] {
+
+}
+
+// Placeholders
+
+::-webkit-input-placeholder {
+    font-family: $beta-font-family;
+    font-style: italic;
+}
+
+::-moz-placeholder {
+    font-family: $beta-font-family;
+    font-style: italic;
+}
+
+:-ms-input-placeholder {
+    font-family: $beta-font-family;
+    font-style: italic;
+}
