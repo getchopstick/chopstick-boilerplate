@@ -6,23 +6,12 @@
 
 .c-logo {
     float: left;
-    font-family: $alpha-font-family;
-    font-weight: $alpha-font-weight;
-    margin-bottom: 0;
-    @include text-dimensions($alpha-font-size,1,0,1,1);
+    width: 230px;
+    text-indent: -9999px;
+    @include margin-top(1.25);
+    @include svg-bg("logo");
 
-    @include mq($bp3) {
-        @include padding-tb(1.25,1.25);
+    a {
+        display: block;
     }
 }
-
-    .c-logo__link {
-        display: block;
-        text-decoration: none;
-        color: palette(color-alpha);
-
-        &:hover,
-        &:focus {
-            color: palette(color-alpha,light);
-        }
-    }
