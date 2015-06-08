@@ -1,19 +1,19 @@
 /*
-    Object: holder
+    Object: row
     ---
     Creates a horizontal row with padding
 */
 
-.c-holder {
+.c-row {
     @include padding-tb(1,0);
     @include padding-lr(1,1);
 }
 
-    .c-holder--alpha {
+    .c-row--alpha {
         background-color: palette(color-neutral,x-light);
     }
 
-    .c-holder--beta {
+    .c-row--beta {
         color: palette(color-neutral,light);
         background-color: palette(color-neutral,dark);
     }
