@@ -4,30 +4,6 @@
 //  Global mixins
 //
 
-// Horizontal responsive navigation.
-// @include list-nav on <ul> or <ol>;
-// @include horizontal-nav on <ul> or <ol>;
-
-@mixin list-nav {
-    list-style: none;
-    padding-left: 0;
-}
-
-@mixin horizontal-nav {
-    list-style: none;
-    padding-right: 0;
-
-    > li {
-        float: left;
-        display: block;
-    }
-
-    > li > a {
-        display: block;
-        float: left;
-    }
-}
-
 // Calculate text-color based on background-color
 
 @mixin text-color($c1) {
@@ -71,13 +47,6 @@
     background-color: $rgba;
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
     zoom: 1;
-}
-
-// Border-box polyfill helper.
-// @include border-box;
-
-@mixin border-box {
-    box-sizing: border-box;
 }
 
 // Progressive svg backgrounds with png fallback.
