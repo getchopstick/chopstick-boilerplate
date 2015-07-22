@@ -11,5 +11,8 @@
 }
 
 .c-panel--alpha {
-    @include block-skin;
+    color: palette(color-neutral,base);
+    background-color: palette(color-neutral,light);
+    border: $border-width $border-style palette(color-neutral,dark);
+    border-radius: $radius;
 }
