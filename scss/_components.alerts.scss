@@ -6,37 +6,43 @@
 
 .c-alert-box {
     position: relative;
+    border-radius: $radius;
     @include padding-top(1);
     @include padding-lr(1,1);
-    @include block-skin;
     @include margin-bottom(1);
 
     & .c-alert-box__link {
-        @include text-color(palette(color-neutral));
+        color: palette(color-neutral, dark);
     }
 }
 
 .c-alert-box--error {
-    @include block-skin(palette(color-error));
+    color: palette(color-neutral, x-light);
+    background-color: palette(color-error);
+    border: $border-width $border-style palette(color-error, dark);
 
     & .c-alert-box__link {
-        @include text-color(palette(color-error));
+        color: palette(color-neutral, x-light);
     }
 }
 
 .c-alert-box--success {
-    @include block-skin(palette(color-success));
+    color: palette(color-neutral, x-light);
+    background-color: palette(color-success);
+    border: $border-width $border-style palette(color-success, dark);
 
     & .c-alert-box__link {
-        @include text-color(palette(color-success));
+        color: palette(color-neutral, x-light);
     }
 }
 
 .c-alert-box--notice {
-    @include block-skin(palette(color-notice));
+    color: palette(color-neutral, x-light);
+    background-color: palette(color-notice);
+    border: $border-width $border-style palette(color-notice, dark);
 
     & .c-alert-box__link {
-        @include text-color(palette(color-notice));
+        color: palette(color-neutral, x-light);
     }
 }
 
