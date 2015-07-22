@@ -13,7 +13,7 @@
 
     // Orientation
 
-    .o-flex-horizontal--rev {
+    .o-flex--horizontal-rev {
         flex-direction: row-reverse;
     }
 
@@ -47,9 +47,7 @@
 
     .o-flex__item {
         display: flex;
-        flex-direction: column;
-        flex-grow: 0;
-        flex-shrink: 0;
+        flex-direction: column; // Fill out child elements
     }
 
     .o-flex__item--justify {
