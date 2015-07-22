@@ -49,7 +49,7 @@ chopstick.hide =
 
     init: function()
     {
-        hideSettings = this.settings;
+        hideSettings = chopstick.hide.settings;
         chopstick.hide.hideContent();
     },
 
@@ -74,7 +74,7 @@ chopstick.mobileNav =
 
     init: function()
     {
-        mobileNavSettings = this.settings;
+        mobileNavSettings = chopstick.mobileNav.settings;
 
         chopstick.mobileNav.enableMobileNav();
         chopstick.mobileNav.buildMobileNav();

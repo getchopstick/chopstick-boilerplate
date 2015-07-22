@@ -8,7 +8,7 @@ chopstick.hide =
 
     init: function()
     {
-        hideSettings = this.settings;
+        hideSettings = chopstick.hide.settings;
         chopstick.hide.hideContent();
     },
 
