@@ -52,3 +52,9 @@
         @include padding-tb(.5,.5);
         @include margin-tb(1,1);
     }
+
+    .c-flex-test__item {
+        border: 1px solid palette(color-neutral, light);
+        padding: .5rem 1rem;
+        @include margin-lr(.5,.5);
+    }
