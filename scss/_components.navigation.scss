@@ -44,6 +44,7 @@
     }
 
     .c-nav-main__link {
+        display: block;
         color: palette(color-alpha);
         text-decoration: none;
         font-weight: $beta-font-weight;
