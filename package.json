@@ -25,6 +25,6 @@
     "gulp-sourcemaps": "1.5.2",
     "gulp-svg2png": "0.3.0",
     "gulp-uglyfly": "1.4.2",
-    "require-dir": "0.3.0",
+    "require-dir": "0.3.0"
   }
 }
