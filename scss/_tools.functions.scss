@@ -12,36 +12,6 @@
     @return ($pxval / $base) * 1em;
 }
 
-// Strip units
-@function su($value) {
-    @return $value / ($value * 0 + 1);
-}
-
-// Modular scale
-// use ms($value, $increment, $ratio)
-// Example:
-//    div {
-//        // Increment Up GR with positive value
-//        font-size: ms(14px,   1, 1.618); // returns: 22.652px
-//
-//        // Increment Down GR with negative value
-//        font-size: ms(14px,  -1, 1.618); // returns: 8.653px
-//    }
-//
-
-@function ms($increment, $value: $alpha-font-size, $ratio: $ratio) {
-    @if $increment > 0 {
-        @for $i from 1 through $increment {
-            $value: ($value * $ratio);
-        }
-    }
-
-    @if $increment < 0 {
-        $increment: abs($increment);
-        @for $i from 1 through $increment {
-            $value: ($value / $ratio);
-        }
-    }
-
-    @return $value;
+@function rem($pxval, $base: $alpha-font-size) {
+    @return ($pxval / $base) * 1rem;
 }
