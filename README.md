@@ -64,6 +64,8 @@ It uses a settings file + mixins + patterns. You can remove the default theme fo
 
 For more information and examples please refer to the [documentation on our website](http://getchopstick.com/docs).
 
+## Browser support
+Chopstick aims to support all modern browsers. This includes latest versions of Chrome, Firefox and Safari and the latest mobile browsers on Android, iPhone and Windows Phone. Internet explorer is currently supported starting from IE9 and up.
 
 ## What is the Chopstick framework
 Chopstick is a framework based on the [ITCSS](http://itcss.io/) architecture and a series of principles. It creates a structure to easily set-up and build bespoke web projects.
