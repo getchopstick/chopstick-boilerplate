@@ -27,14 +27,14 @@
     counter-reset: li;
 
     > li {
-        position:relative;
+        position: relative;
         @include padding-lr(1,0);
     }
 
     > li:before {
-        content:counter(li); /* Use the counter as content */
-        counter-increment:li; /* Increment the counter by 1 */
-        position:absolute;
+        content: counter(li); /* Use the counter as content */
+        counter-increment: li; /* Increment the counter by 1 */
+        position: absolute;
         top: 0;
         left: 0;
         font-size: 80%;
