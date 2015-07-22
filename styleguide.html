@@ -69,6 +69,27 @@ section: styleguide
         </div>
 
         <div class="c-section">
+            <h2 class="c-section-title">Lists</h2>
+
+            <div class="o-grid o-grid--gutter">
+                <div class="o-grid__item u-2-of-3-bp4">
+                    {% include components.lists.html %}
+                </div>
+                <div class="o-grid__item u-1-of-3-bp4">
+                    <pre class="c-scss">._components.lists.scss</pre>
+                    <button class="c-toggle js-toggle" data-target=".js-snippet-lists">
+                        <i class="c-icon c-icon--toggle"></i>HTML snippet
+                    </button>
+                    <div class="js-snippet-lists is-hidden">
+                        {% highlight html linenos=table %}
+                            {% include components.lists.html %}
+                        {% endhighlight %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-section">
             <h2 class="c-section-title">Forms</h2>
 
             <div class="o-grid o-grid--gutter">
