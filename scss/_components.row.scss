@@ -9,11 +9,11 @@
     @include padding-lr(1,1);
 }
 
-    .c-row--alpha {
-        background-color: palette(color-neutral,x-light);
-    }
+.c-row--alpha {
+    background-color: palette(color-neutral,x-light);
+}
 
-    .c-row--beta {
-        color: palette(color-neutral,light);
-        background-color: palette(color-neutral,dark);
-    }
+.c-row--beta {
+    color: palette(color-neutral,light);
+    background-color: palette(color-neutral,dark);
+}

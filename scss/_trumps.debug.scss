@@ -21,14 +21,12 @@
      * upon entirely. Validate your markup!
      */
 
-
     /**
      * Are there any empty elements in your page?
      */
     :empty {
         outline: 5px solid yellow;
     }
-
 
     /**
      * Images require `alt` attributes, empty `alt`s are fine but should be
@@ -37,13 +35,14 @@
     img {
         outline: 5px solid red;
     }
+
     img[alt] {
         outline: none;
     }
+
     img[alt=""] {
         outline: 5px solid yellow;
     }
-
 
     /**
      * Links sometimes, though not always, benefit from `title` attributes. Links
@@ -52,10 +51,10 @@
     a {
         outline: 5px solid yellow;
     }
+
     a[title] {
         outline: none;
     }
-
 
     /**
      * Double-check any links whose `href` is something questionable.
@@ -65,14 +64,12 @@
         outline: 5px solid yellow;
     }
 
-
     /**
      * The `target` attribute ain’t too nice...
      */
     a[target] {
         outline: 5px solid yellow;
     }
-
 
     /**
      * Ensure any lists only contain `li`s as children.
@@ -84,17 +81,16 @@
         }
     }
 
-
     /**
      * It’s always nice to give `th`s `scope` attributes.
      */
     th {
         outline: 5px solid yellow;
     }
+
     th[scope] {
         outline: none;
     }
-
 
     /**
      * `tr`s as children of `table`s ain’t great, did you need a `thead`/`tbody`?
@@ -103,7 +99,6 @@
         outline: 5px solid yellow;
     }
 
-
     /**
      * `tfoot` needs to come *before* `tbody`.
      */
@@ -111,17 +106,16 @@
         outline: 5px solid yellow;
     }
 
-
     /**
      * Forms require `action` attributes
      */
     form {
         outline: 5px solid red;
     }
+
     form[action] {
         outline: none;
     }
-
 
     /**
      * Various form-field types have required attributes. `input`s need `type`
@@ -132,19 +126,22 @@
     input {
         outline: 5px solid red;
     }
+
     input[type] {
         outline: none;
     }
+
     textarea[rows][cols] {
         outline: none;
     }
+
     input[type=submit] {
         outline: 5px solid red;
     }
+
     input[type=submit][value] {
         outline: none;
     }
-
 
     /**
      * Avoid inline styles where possible.
@@ -160,11 +157,5 @@
     [id] {
         outline: 5px solid yellow;
     }
-
-
-    /**
-     * Todo: Are you using the grid system correctly?
-     */
-
 
 }/* endif */

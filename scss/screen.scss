@@ -16,66 +16,66 @@
  *  Trumps: contains helpers and overrides
  */
 
-    // Settings
-    @import "settings.global";
-    @import "settings.breakpoints";
-    @import "settings.grid";
-    @import "settings.colors";
-    @import "settings.typography";
-    @import "settings.ms";
-    @import "settings.ui";
+// Settings
+@import 'settings.global';
+@import 'settings.breakpoints';
+@import 'settings.grid';
+@import 'settings.colors';
+@import 'settings.typography';
+@import 'settings.ms';
+@import 'settings.ui';
 
-    // Tools
-    @import "tools.functions";
-    @import "tools.mixins";
-    @import "tools.grid";
-    @import "tools.spacing";
-    @import "tools.typography";
+// Tools
+@import 'tools.functions';
+@import 'tools.mixins';
+@import 'tools.grid';
+@import 'tools.spacing';
+@import 'tools.typography';
 
-    /* Generic */
-    @import "generic.normalize";
-    @import "generic.reset";
-    @import "generic.box-sizing";
+/* Generic */
+@import 'generic.normalize';
+@import 'generic.reset';
+@import 'generic.box-sizing';
 
-    /* Elements */
-    @import "elements.page";
-    @import "elements.typography";
-    @import "elements.images";
-    @import "elements.forms";
-    @import "elements.tables";
+/* Elements */
+@import 'elements.page';
+@import 'elements.typography';
+@import 'elements.images';
+@import 'elements.forms';
+@import 'elements.tables';
 
-    /* Objects */
-    @import "objects.grid";
-    @import "objects.media";
-    @import "objects.media-embed";
-    @import "objects.list";
-    @import "objects.tables";
+/* Objects */
+@import 'objects.grid';
+@import 'objects.media';
+@import 'objects.media-embed';
+@import 'objects.list';
+@import 'objects.tables';
 
-    /* Components */
-    @import "components.navigation";
-    @import "components.brand";
-    @import "components.forms";
-    @import "components.row";
-    @import "components.icons";
-    @import "components.alerts";
-    @import "components.buttons";
-    @import "components.pagination";
-    @import "components.panels";
-    @import "components.styleguide";
-    @import "components.styleguide-syntax";
+/* Components */
+@import 'components.navigation';
+@import 'components.brand';
+@import 'components.forms';
+@import 'components.row';
+@import 'components.icons';
+@import 'components.alerts';
+@import 'components.buttons';
+@import 'components.pagination';
+@import 'components.panels';
+@import 'components.styleguide';
+@import 'components.styleguide-syntax';
 
-    /* Plugins */
-    @import "plugins.googlemaps";
+/* Plugins */
+@import 'plugins.googlemaps';
 
-    /* Trumps */
-    @import "trumps.widths";
-    @import "trumps.push";
-    @import "trumps.pull";
-    @import "trumps.spacing";
-    @import "trumps.colors";
-    @import "trumps.states";
-    @import "trumps.shame";
-    @import "trumps.debug";
-    @import "trumps.baseline-grid";
-    @import "trumps.print";
-    @import "trumps.layers";
+/* Trumps */
+@import 'trumps.widths';
+@import 'trumps.push';
+@import 'trumps.pull';
+@import 'trumps.spacing';
+@import 'trumps.colors';
+@import 'trumps.states';
+@import 'trumps.shame';
+@import 'trumps.debug';
+@import 'trumps.baseline-grid';
+@import 'trumps.print';
+@import 'trumps.layers';

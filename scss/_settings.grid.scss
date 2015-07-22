@@ -4,7 +4,6 @@
 //  Set your amount of columns and gutter width
 //
 
-$px-fallback: true; // pixel fallback for browsers that don't support rem
 $columns-gutter: 1 !default; // 1 times the $alpha-font-size. It's calculated in rem in _tools.spacing.scss
 
 $columns: (

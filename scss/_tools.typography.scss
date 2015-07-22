@@ -12,8 +12,7 @@ $basefontpercent: $alpha-font-size/16 * 100;
 $fs: 1;
 $lh: 1;
 
-@mixin text-dimensions($fs: 16, $lh: 1, $mb: 0, $pt: 0, $pb: 0, $mt: 0){
-    font-size: #{$fs}px;
+@mixin text-dimensions($fs: 16, $lh: 1, $mb: 0, $pt: 0, $pb: 0, $mt: 0) {
     font-size: #{$fs / $alpha-font-size}rem;
     line-height: #{($baseline-unit / $fs) * $lh}em;
 
@@ -35,8 +34,7 @@ $lh: 1;
 
 }
 
-@mixin input-dimensions($fs: 1, $lh: 1, $mb: 0, $pt: 0, $pb: 0, $mt: 0){
-    font-size: #{$fs}px;
+@mixin input-dimensions($fs: 1, $lh: 1, $mb: 0, $pt: 0, $pb: 0, $mt: 0) {
     font-size: $fs/$alpha-font-size*1rem;
 
     @if $mb > 0 {

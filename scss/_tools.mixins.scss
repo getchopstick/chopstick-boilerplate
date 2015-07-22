@@ -9,9 +9,9 @@
 @mixin text-color($c1) {
     // Calculations based on https://vimeo.com/60224584
     @if (.2126*red($c1) + .7152*green($c1) + .0722*blue($c1))/255 <= .5 {
-        color: mix(#FFF,$c1,95%);
+        color: mix(#FFF, $c1, 95%);
     } @else {
-        color: mix(#000,$c1,70%);
+        color: mix(#000, $c1, 70%);
     }
 }
 
@@ -22,9 +22,8 @@
 @mixin background-opacity($color, $alpha) {
     $rgba: rgba($color, $alpha);
     $ie-hex-str: ie-hex-str($rgba);
-    background-color: transparent;
     background-color: $rgba;
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
     zoom: 1;
 }
 
@@ -51,16 +50,16 @@
 // @mixin clearfix
 
 @mixin clearfix {
-    *zoom : 1;
+    *zoom: 1;
 
     &:before,
     &:after {
         display: table;
-        content : "";
+        content: '';
     }
 
     &:after {
-        clear : both;
+        clear: both;
     }
 }
 

@@ -10,7 +10,7 @@
     margin-bottom: 0;
 }
 
-.u-mb-0_5 {
+.u-mb-0-5 {
     @include margin-bottom(.5);
 }
 
@@ -28,7 +28,7 @@
     padding-bottom: 0;
 }
 
-.u-pb-0_5 {
+.u-pb-0-5 {
     @include padding-bottom(.5);
 }
 
@@ -46,7 +46,7 @@
     padding-top: 0;
 }
 
-.u-pt-0_5 {
+.u-pt-0-5 {
     @include padding-top(.5);
 }
 

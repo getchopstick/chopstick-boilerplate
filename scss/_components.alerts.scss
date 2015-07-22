@@ -11,7 +11,7 @@
     @include padding-lr(1,1);
     @include margin-bottom(1);
 
-    & .c-alert-box__link {
+    .c-alert-box__link {
         color: palette(color-neutral, dark);
     }
 }
@@ -21,7 +21,7 @@
     background-color: palette(color-error);
     border: $border-width $border-style palette(color-error, dark);
 
-    & .c-alert-box__link {
+    .c-alert-box__link {
         color: palette(color-neutral, x-light);
     }
 }
@@ -31,7 +31,7 @@
     background-color: palette(color-success);
     border: $border-width $border-style palette(color-success, dark);
 
-    & .c-alert-box__link {
+    .c-alert-box__link {
         color: palette(color-neutral, x-light);
     }
 }
@@ -41,7 +41,7 @@
     background-color: palette(color-notice);
     border: $border-width $border-style palette(color-notice, dark);
 
-    & .c-alert-box__link {
+    .c-alert-box__link {
         color: palette(color-neutral, x-light);
     }
 }

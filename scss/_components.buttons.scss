@@ -15,14 +15,13 @@
     border: 1px solid transparent;
     white-space: nowrap;
     border-radius: $radius;
-    transition: all .1s ease-in-out;
+    transition-duration: .1s;
+    transition-timing-function: ease-in-out;
     transition-property: background, color, border;
     outline: none;
     line-height: normal;
-    -webkit-appearance: none;
-    -moz-appearance:    none;
-    appearance:         none;
-    -webkit-font-smoothing: antialiased;
+    appearance: none;
+    font-smoothing: antialiased;
 
     &:hover,
     &:focus {

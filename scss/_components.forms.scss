@@ -6,10 +6,7 @@
 
 // Input elements
 .c-input-text {
-    -webkit-appearance: none;
-    -moz-appearance:    none;
-    -ms-appearance:     none;
-    appearance:         none;
+    appearance: none;
     font-smoothing: antialiased;
     background-color: palette(color-neutral,x-light);
     border-radius: $radius;
@@ -21,7 +18,6 @@
     display: block;
     outline: none;
     line-height: normal;
-    border-radius: $radius;
     @include padding-lr(.75,.75);
     @include input-dimensions($ms-1,1,0,.75,.75);
 
@@ -64,16 +60,6 @@
     border-right: 0;
 }
 
-// Input states
-.c-input-text.has-error  {
-    border: 1px solid palette(color-error);
-
-    &:focus {
-        border-color: palette(color-error);
-        box-shadow: 0 0 2px palette(color-error,x-light);
-    }
-}
-
 // Labels
 .c-label {
     color: palette(color-neutral);
@@ -97,6 +83,7 @@
     text-align: right;
     @include text-dimensions($ms-2,1);
 }
+
 .c-alert-inline--error {
     color: palette(color-error);
 }
