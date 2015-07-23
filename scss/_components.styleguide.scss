@@ -5,8 +5,8 @@
 */
 
 .c-section-title {
-    color: $beta-text-color;
-    border-bottom: 1px solid $gamma-ui-color;
+    color: palette(color-neutral);
+    border-bottom: 1px solid palette(color-neutral);
     @include padding-bottom(1);
     @include padding-top(1);
     @include text-dimensions($alpha-font-size,1,2);
@@ -14,33 +14,38 @@
 
 .c-scss {
     display: block;
-    color: $alpha-text-color;
-    background-color: lighten($gamma-ui-color,10);
-    border: $border-width $border-style $gamma-ui-color;
+    color: palette(color-neutral,dark);
+    background-color: palette(color-neutral,light);
+    border: $border-width $border-style palette(color-neutral);
     border-radius: $radius;
     @include margin-tb(0, 1);
     @include padding-tb(.5, .5);
     @include padding-lr(1,1);
 }
 
+.c-toggle {
+    background: white;
+    border: 0;
+    outline: 0;
+    color: palette(color-alpha);
+}
+
 .c-swatch {
     width: 100%;
     height: 60px;
-    box-shadow: 0 0 1px 3px $white, 0 0 5px 2px rgba($black,.33);
+    box-shadow: 0 0 1px 3px palette(color-neutral,x-light), 0 0 2px 4px palette(color-neutral,light);
 }
 
 .c-swatch-caption {
-    color: $beta-text-color;
+    color: palette(color-neutral);
     min-height: 55px;
     @include text-dimensions(14,.8,0,.5,.3);
 }
 
-.c-grid-test {
-
-}
+//.c-grid-test {}
 
     .c-grid-test__item {
-        background-color: $grey-05;
+        background-color: palette(color-neutral,light);
         text-align: center;
         @include padding-tb(.5,.5);
         @include margin-tb(1,1);

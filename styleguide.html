@@ -3,7 +3,7 @@ layout: default
 title: Patterns
 section: styleguide
 ---
-<div class="c-holder c-holder--alpha">
+<div class="c-row c-row--alpha">
     <div class="o-container">
         <div class="c-section">
             <h2 class="c-section-title">Base Elements</h2>
@@ -14,9 +14,9 @@ section: styleguide
                 </div>
                 <div class="o-grid__item u-1-of-3-bp4">
                     <pre class="c-scss">_elements.base.scss</pre>
-                    <a href="#" class="js-toggle" data-target=".js-snippet-base">
+                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-base">
                         <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </a>
+                    </button>
                     <div class="js-snippet-base is-hidden">
                         {% highlight html linenos=table %}
                             {% include elements.base.html %}
@@ -35,9 +35,9 @@ section: styleguide
                 </div>
                 <div class="o-grid__item u-1-of-3-bp4">
                     <pre class="c-scss">_trumps.colors.scss</pre>
-                    <a href="#" class="js-toggle" data-target=".js-snippet-colors">
+                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-colors">
                         <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </a>
+                    </button>
                     <div class="js-snippet-colors is-hidden">
                         {% highlight html linenos=table %}
                             {% include trumps.colors.html %}
@@ -56,12 +56,33 @@ section: styleguide
                 </div>
                 <div class="o-grid__item u-1-of-3-bp4">
                     <pre class="c-scss">._components.buttons.scss</pre>
-                    <a href="#" class="js-toggle" data-target=".js-snippet-buttons">
+                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-buttons">
                         <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </a>
+                    </button>
                     <div class="js-snippet-buttons is-hidden">
                         {% highlight html linenos=table %}
                             {% include components.buttons.html %}
+                        {% endhighlight %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-section">
+            <h2 class="c-section-title">Lists</h2>
+
+            <div class="o-grid o-grid--gutter">
+                <div class="o-grid__item u-2-of-3-bp4">
+                    {% include components.lists.html %}
+                </div>
+                <div class="o-grid__item u-1-of-3-bp4">
+                    <pre class="c-scss">._components.lists.scss</pre>
+                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-lists">
+                        <i class="c-icon c-icon--toggle"></i>HTML snippet
+                    </button>
+                    <div class="js-snippet-lists is-hidden">
+                        {% highlight html linenos=table %}
+                            {% include components.lists.html %}
                         {% endhighlight %}
                     </div>
                 </div>
@@ -77,9 +98,9 @@ section: styleguide
                 </div>
                 <div class="o-grid__item u-1-of-3-bp4">
                     <pre class="c-scss">._components.forms.scss</pre>
-                    <a href="#" class="js-toggle" data-target=".js-snippet-forms">
+                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-forms">
                         <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </a>
+                    </button>
                     <div class="js-snippet-forms is-hidden">
                         {% highlight html linenos=table %}
                             {% include components.forms.html %}
@@ -98,9 +119,9 @@ section: styleguide
                 </div>
                 <div class="o-grid__item u-1-of-3-bp4">
                     <pre class="c-scss">._components.alerts.scss</pre>
-                    <a href="#" class="js-toggle" data-target=".js-snippet-alerts">
+                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-alerts">
                         <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </a>
+                    </button>
                     <div class="js-snippet-alerts is-hidden">
                         {% highlight html linenos=table %}
                             {% include components.alerts.html %}
@@ -119,9 +140,9 @@ section: styleguide
                 </div>
                 <div class="o-grid__item u-1-of-3-bp4">
                     <pre class="c-scss">._components.pagination.scss</pre>
-                    <a href="#" class="js-toggle" data-target=".js-snippet-pagination">
+                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-pagination">
                         <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </a>
+                    </button>
                     <div class="js-snippet-pagination is-hidden">
                         {% highlight html linenos=table %}
                             {% include components.pagination.html %}
@@ -140,9 +161,9 @@ section: styleguide
                 </div>
                 <div class="o-grid__item u-1-of-3-bp4">
                     <pre class="c-scss">._trumps.helpers.scss</pre>
-                    <a href="#" class="js-toggle" data-target=".js-snippet-helpers">
+                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-helpers">
                         <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </a>
+                    </button>
                     <div class="js-snippet-helpers is-hidden">
                         {% highlight html linenos=table %}
                             % include trumps.helpers.html %}
@@ -161,9 +182,9 @@ section: styleguide
                 </div>
                 <div class="o-grid__item u-1-of-3-bp4">
                     <pre class="c-scss">._objects.media.scss</pre>
-                    <a href="#" class="js-toggle" data-target=".js-snippet-media">
+                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-media">
                         <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </a>
+                    </button>
                     <div class="js-snippet-media is-hidden">
                         {% highlight html linenos=table %}
                             {% include objects.media.html %}
@@ -182,10 +203,10 @@ section: styleguide
                 </div>
                 <div class="o-grid__item u-1-of-3-bp4">
                     <pre class="c-scss">._components.panels.scss</pre>
-                    <a href="#" class="js-toggle" data-target=".js-snippet-media">
+                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-panels">
                         <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </a>
-                    <div class="js-snippet-media is-hidden">
+                    </button>
+                    <div class="js-snippet-panels is-hidden">
                         {% highlight html linenos=table %}
                             {% include components.panels.html %}
                         {% endhighlight %}

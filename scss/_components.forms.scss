@@ -5,38 +5,34 @@
 */
 
 // Input elements
-
 .c-input-text {
-    -webkit-appearance: none;
-    -moz-appearance:    none;
-    -ms-appearance:     none;
-    appearance:         none;
+    appearance: none;
     font-smoothing: antialiased;
-    background-color: $delta-ui-color;
+    background-color: palette(color-neutral,x-light);
     border-radius: $radius;
-    border: $border-width $border-style $gamma-ui-color;
-    color: lighten($alpha-text-color, 30);
+    border: $border-width $border-style palette(color-neutral);
+    color: palette(color-neutral,dark);
     font-family: $alpha-font-family;
     margin: 0;
     width: 100%;
     display: block;
     outline: none;
     line-height: normal;
-    border-radius: $radius;
-    @include input-md;
+    @include padding-lr(.75,.75);
+    @include input-dimensions($ms-1,1,0,.75,.75);
 
     &:focus {
-        color: $alpha-text-color;
-        border-color: $alpha-ui-color;
-        box-shadow: 0 0 2px rgba($alpha-ui-color,.5);
+        color: palette(color-neutral,dark);
+        border-color: palette(color-alpha);
+        box-shadow: 0 0 2px palette(color-alpha,x-light);
     }
 
     &.has-error {
-        border: 1px solid $error-color;
+        border: 1px solid palette(color-error);
 
         &:focus {
-            border-color: $error-color;
-            box-shadow: 0 0 2px rgba($error-color,.5);
+            border-color: palette(color-error);
+            box-shadow: 0 0 2px palette(color-error,x-light);
         }
     }
 }
@@ -49,11 +45,13 @@
 
 // Input sizes
 .c-input-text--sm {
-    @include input-sm;
+    @include padding-lr(.5,.5);
+    @include input-dimensions($ms-2,1,0,.5,.5);
 }
 
 .c-input-text--lg {
-    @include input-lg;
+    @include padding-lr(1,1);
+    @include input-dimensions($alpha-font-size,1,0,1,1);
 }
 
 // Input modifiers
@@ -62,23 +60,13 @@
     border-right: 0;
 }
 
-// Input states
-.c-input-text.has-error  {
-    border: 1px solid $error-color;
-
-    &:focus {
-        border-color: $error-color;
-        box-shadow: 0 0 2px rgba($error-color,.5);
-    }
-}
-
 // Labels
 .c-label {
-    color: $beta-text-color;
+    color: palette(color-neutral);
     @include text-dimensions($ms-1,1);
 
     &.has-error {
-        color: $error-color;
+        color: palette(color-error);
     }
 }
 
@@ -95,6 +83,7 @@
     text-align: right;
     @include text-dimensions($ms-2,1);
 }
+
 .c-alert-inline--error {
-    color: $error-color;
+    color: palette(color-error);
 }

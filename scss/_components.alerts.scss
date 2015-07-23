@@ -10,37 +10,44 @@
  */
 .c-alert-box {
     position: relative; /* [1] */
+    position: relative;
+    border-radius: $radius;
     @include padding-top(1);
     @include padding-lr(1,1);
-    @include block-skin;
     @include margin-bottom(1);
 
-    & .c-alert-box__link {
-        @include text-color($gamma-ui-color);
+    .c-alert-box__link {
+        color: palette(color-neutral, dark);
     }
 }
 
 .c-alert-box--error {
-    @include block-skin($error-color);
+    color: palette(color-neutral, x-light);
+    background-color: palette(color-error);
+    border: $border-width $border-style palette(color-error, dark);
 
-    & .c-alert-box__link {
-        @include text-color($error-color);
+    .c-alert-box__link {
+        color: palette(color-neutral, x-light);
     }
 }
 
 .c-alert-box--success {
-    @include block-skin($success-color);
+    color: palette(color-neutral, x-light);
+    background-color: palette(color-success);
+    border: $border-width $border-style palette(color-success, dark);
 
-    & .c-alert-box__link {
-        @include text-color($success-color);
+    .c-alert-box__link {
+        color: palette(color-neutral, x-light);
     }
 }
 
 .c-alert-box--notice {
-    @include block-skin($notice-color);
+    color: palette(color-neutral, x-light);
+    background-color: palette(color-notice);
+    border: $border-width $border-style palette(color-notice, dark);
 
-    & .c-alert-box__link {
-        @include text-color($notice-color);
+    .c-alert-box__link {
+        color: palette(color-neutral, x-light);
     }
 }
 

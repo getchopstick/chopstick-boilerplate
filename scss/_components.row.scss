@@ -1,0 +1,19 @@
+/*
+    Object: row
+    ---
+    Creates a horizontal row with padding
+*/
+
+.c-row {
+    @include padding-tb(1,0);
+    @include padding-lr(1,1);
+}
+
+.c-row--alpha {
+    background-color: palette(color-neutral,x-light);
+}
+
+.c-row--beta {
+    color: palette(color-neutral,light);
+    background-color: palette(color-neutral,dark);
+}

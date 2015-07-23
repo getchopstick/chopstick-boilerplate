@@ -6,54 +6,54 @@
 
 // margin-bottom
 
-.u-mb0 {
+.u-mb-0 {
     margin-bottom: 0;
 }
 
-.u-mb0_5 {
+.u-mb-0-5 {
     @include margin-bottom(.5);
 }
 
-.u-mb1 {
+.u-mb-1 {
     @include margin-bottom(1);
 }
 
-.u-mb2 {
+.u-mb-2 {
     @include margin-bottom(2);
 }
 
 // padding-bottom
 
-.u-pb0 {
+.u-pb-0 {
     padding-bottom: 0;
 }
 
-.u-pb0_5 {
+.u-pb-0-5 {
     @include padding-bottom(.5);
 }
 
-.u-pb1 {
+.u-pb-1 {
     @include padding-bottom(1);
 }
 
-.u-pb2 {
+.u-pb-2 {
     @include padding-bottom(2);
 }
 
 // padding-top
 
-.u-pt0 {
+.u-pt-0 {
     padding-top: 0;
 }
 
-.u-pt0_5 {
+.u-pt-0-5 {
     @include padding-top(.5);
 }
 
-.u-pt1 {
+.u-pt-1 {
     @include padding-top(1);
 }
 
-.u-pt2 {
+.u-pt-2 {
     @include padding-top(2);
 }

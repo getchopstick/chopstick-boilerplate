@@ -1,3 +1,4 @@
+var mobileNavSettings
 chopstick.mobileNav =
 {
     settings:
@@ -8,7 +9,7 @@ chopstick.mobileNav =
 
     init: function()
     {
-        settings = this.settings;
+        mobileNavSettings = chopstick.mobileNav.settings;
 
         chopstick.mobileNav.enableMobileNav();
         chopstick.mobileNav.buildMobileNav();
@@ -22,7 +23,7 @@ chopstick.mobileNav =
     // build mobile nav
     buildMobileNav: function()
     {
-        settings.trigger.on('click', function() {
+        mobileNavSettings.trigger.on('click', function() {
             $('.js-nav').toggleClass('is-visible');
             $(this).toggleClass('is-active');
         });

@@ -12,7 +12,6 @@ h5,
 h6 {
     font-family: $beta-font-family;
     font-weight: $alpha-font-weight;
-    text-rendering: optimizelegibility;
     @include margin-bottom(1);
 }
 
@@ -59,22 +58,12 @@ blockquote {
     font-style: italic;
 }
 
-caption {
-    font-family: $alpha-font-family;
-    text-align: left;
-    border-bottom: 1px solid lighten($alpha-text-color,50);
-    font-weight: $beta-font-weight;
-    text-align: center;
-    @include padding-bottom(1);
-    @include margin-bottom(1);
-}
-
 small {
     @include text-dimensions($ms-1,1,$alpha-line-height);
 }
 
 hr {
-    border: 1px solid $beta-ui-color-light;
+    border: 1px solid palette(color-neutral,light);
     border-width: 1px 0 0;
     clear: both;
     margin-top: 0;
@@ -85,21 +74,21 @@ hr {
 
 a {
     text-decoration: none;
-    color: $alpha-link-color;
+    color: palette(color-alpha);
     transition: color .22s ease-in-out;
 
     &:visited {
-        color: $alpha-link-colorvisited;
+        color: palette(color-alpha);
     }
 
     &:hover {
         text-decoration: underline;
-        color: $alpha-link-colorhover;
+        color: palette(color-alpha,light);
     }
 
     &:focus {
         outline: thin dotted;
-        color: $alpha-link-colorfocus;
+        color: palette(color-alpha,light);
     }
 
     &:hover,

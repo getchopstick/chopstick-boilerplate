@@ -22,17 +22,17 @@
 }
 
     .c-nav-main__list {
-        border-top: 1px dotted $grey-04;
+        border-top: 1px dotted palette(color-neutral,light);
 
         @include mq($bp3) {
-            border-top: none;
+            border-top: 0;
             margin-bottom: 0;
         }
     }
 
     .c-nav-main__item {
         & + & {
-            border-top: 1px dotted $grey-04;
+            border-top: 1px dotted palette(color-neutral,light);
         }
 
         @include mq($bp3) {
@@ -44,7 +44,8 @@
     }
 
     .c-nav-main__link {
-        color: lighten($alpha-text-color,50);
+        display: block;
+        color: palette(color-alpha);
         text-decoration: none;
         font-weight: $beta-font-weight;
         @include text-dimensions($alpha-font-size,1,0,.25,.25);
@@ -55,34 +56,28 @@
 
         &:hover,
         .is-selected & {
-    	   color: darken($alpha-link-color,50);
+            color: palette(color-alpha,dark);
         }
     }
 
 .c-nav-main-trigger {
-    cursor: pointer;
     user-select: none;
     position: absolute;
-    top: 1.5em;
-    right: 1.5em;
+    top: 2em;
+    right: 1em;
     display: block;
-    height: 2em;
-    width: 2em;
-    text-indent: -9999px;
-    background-color: $alpha-text-color;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    @include text-dimensions($alpha-font-size,1,0);
+    color: palette(color-alpha);
+    background-color: palette(color-neutral,x-light);
+    border: 1px solid palette(color-alpha);
+    outline: 0;
+    border-radius: $radius;
 
-    .svg & {
-        background-image: url('../img/svg/icon-menu.svg');
+    &.is-active {
+        color: palette(color-neutral,x-light);
+        background-color: palette(color-alpha);
     }
 
     @include mq($bp3) {
         display: none;
-    }
-
-    &.is-active {
-        background-color: $alpha-link-color;
     }
 }

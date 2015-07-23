@@ -1,0 +1,44 @@
+/*
+    Component: List
+    ---
+    All sorts of lists
+*/
+
+.c-list--bullet {
+    > li {
+        position: relative;
+        @include padding-lr(1,0);
+
+        &:before {
+            content: '\2022';
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: palette(color-neutral, base);
+        }
+
+        > ul > li:before {
+            content: '\203A';
+        }
+    }
+}
+
+.c-list--number {
+    counter-reset: li;
+
+    > li {
+        position: relative;
+        @include padding-lr(1,0);
+    }
+
+    > li:before {
+        content: counter(li); /* Use the counter as content */
+        counter-increment: li; /* Increment the counter by 1 */
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 80%;
+        font-weight: bold;
+        color: palette(color-neutral, base);
+    }
+}
