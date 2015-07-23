@@ -4,11 +4,15 @@
     All sorts of lists
 */
 
-.c-list--bullet {
+.c-list {
     > li {
         position: relative;
         @include padding-lr(1,0);
+    }
+}
 
+.c-list--bullet {
+    > li {
         &:before {
             content: '\2022';
             position: absolute;
@@ -25,11 +29,6 @@
 
 .c-list--number {
     counter-reset: li;
-
-    > li {
-        position: relative;
-        @include padding-lr(1,0);
-    }
 
     > li:before {
         content: counter(li); /* Use the counter as content */
