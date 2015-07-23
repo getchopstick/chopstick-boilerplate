@@ -19,7 +19,7 @@
         // denominator.
         @for $numerator from 1 through $denominator {
 
-            // Build a class in the format `.u-3/4`
+            // Build a class in the format `.u-4-of-6`
             .u-#{$numerator}-of-#{$denominator}#{$breakpoint} {
                 width: ($numerator / $denominator) * 100% !important;
             }
