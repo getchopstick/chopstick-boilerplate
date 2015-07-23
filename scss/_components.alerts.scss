@@ -1,56 +1,29 @@
 /*
-    Components: alerts
+    COMPONENTS.ALERTS
     ---
     Alert boxes: contextual feedback messages for typical user actions.
 */
 
 /**
- * 1. The element is positioned relative to its normal position, so "left:20" adds 20
-   pixels to the element's LEFT position.
+ *  1. The element is positioned relative to its normal position, so "left:20" adds 20
+    pixels to the element's LEFT position.
+
+
+    Example:
+
+    <div class="c-alert-box">
+        <p>Text <a href="#" class="c-alert-box__link">link</a></p>
+        <span class="c-alert-box__close js-hide">&times;</span>
+    </div>
  */
+
 .c-alert-box {
     position: relative; /* [1] */
-    position: relative;
     border-radius: $radius;
     @include padding-top(1);
     @include padding-lr(1,1);
     @include margin-bottom(1);
-
-    .c-alert-box__link {
-        color: palette(color-neutral, dark);
-    }
 }
-
-.c-alert-box--error {
-    color: palette(color-neutral, x-light);
-    background-color: palette(color-error);
-    border: $border-width $border-style palette(color-error, dark);
-
-    .c-alert-box__link {
-        color: palette(color-neutral, x-light);
-    }
-}
-
-.c-alert-box--success {
-    color: palette(color-neutral, x-light);
-    background-color: palette(color-success);
-    border: $border-width $border-style palette(color-success, dark);
-
-    .c-alert-box__link {
-        color: palette(color-neutral, x-light);
-    }
-}
-
-.c-alert-box--notice {
-    color: palette(color-neutral, x-light);
-    background-color: palette(color-notice);
-    border: $border-width $border-style palette(color-notice, dark);
-
-    .c-alert-box__link {
-        color: palette(color-neutral, x-light);
-    }
-}
-
     .c-alert-box__link {
         text-decoration: underline;
 
@@ -58,8 +31,24 @@
         &:focus {
             text-decoration: none;
         }
-    }
 
+        .c-alert-box & {
+            color: palette(color-neutral, dark);
+        }
+
+        .c-alert-box--error & {
+            color: palette(color-neutral, x-light);
+        }
+
+        .c-alert-box--success & {
+            color: palette(color-neutral, x-light);
+        }
+
+        .c-alert-box--notice & {
+            color: palette(color-neutral, x-light);
+        }
+    }
+    
     .c-alert-box__close {
         cursor: pointer;
         position: absolute;
@@ -68,3 +57,21 @@
         line-height: 1;
         text-decoration: none;
     }
+
+.c-alert-box--error {
+    color: palette(color-neutral, x-light);
+    background-color: palette(color-error);
+    border: $border-width $border-style palette(color-error, dark);
+}
+
+.c-alert-box--success {
+    color: palette(color-neutral, x-light);
+    background-color: palette(color-success);
+    border: $border-width $border-style palette(color-success, dark);
+}
+
+.c-alert-box--notice {
+    color: palette(color-neutral, x-light);
+    background-color: palette(color-notice);
+    border: $border-width $border-style palette(color-notice, dark);
+}
