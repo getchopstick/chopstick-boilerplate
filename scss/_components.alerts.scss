@@ -1,20 +1,21 @@
 /*
     COMPONENTS.ALERTS
     ---
-    Alert boxes: contextual feedback messages for typical user actions.
+    Alerts: contextual feedback messages for typical user actions.
 */
 
 /**
  *  1. The element is positioned relative to its normal position, so "left:20" adds 20
-    pixels to the element's LEFT position.
-
-
-    Example:
+ *     pixels to the element's LEFT position.
+ *
+ *
+ *  Example:
 
     <div class="c-alert-box">
         <p>Text <a href="#" class="c-alert-box__link">link</a></p>
         <span class="c-alert-box__close js-hide">&times;</span>
     </div>
+ *
  */
 
 .c-alert-box {
@@ -24,6 +25,7 @@
     @include padding-lr(1,1);
     @include margin-bottom(1);
 }
+
     .c-alert-box__link {
         text-decoration: underline;
 
@@ -74,4 +76,14 @@
     color: palette(color-neutral, x-light);
     background-color: palette(color-notice);
     border: $border-width $border-style palette(color-notice, dark);
+}
+
+.c-alert-inline {
+    display: block;
+    text-align: right;
+    @include text-dimensions($ms-2,1);
+}
+
+.c-alert-inline--error {
+    color: palette(color-error);
 }
