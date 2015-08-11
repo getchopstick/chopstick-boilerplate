@@ -1,36 +1,45 @@
 /*
     Component: List
     ---
-    All sorts of lists
+    All sorts of lists.
+    Replacements for default bullet and numbered lists.
 */
 
-.c-list {
-    > li {
-        position: relative;
-        @include padding-lr(1,0);
-    }
+.c-list-bullet {
+    @include margin-tb(0,1);
 }
 
-.c-list--bullet {
-    > li {
-        &:before {
-            content: '\2022';
-            position: absolute;
-            top: 0;
-            left: 0;
-            color: palette(color-neutral, base);
-        }
+    .c-list-bullet--sub {
+        @include padding-lr(1,0);
+    }
 
-        > ul > li:before {
+.c-list-bullet__item {
+    position: relative;
+    @include padding-lr(1,0);
+
+    &:before {
+        content: '\2022';
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: palette(color-neutral, base);
+
+        .c-list-bullet--sub & {
             content: '\203A';
         }
     }
 }
 
-.c-list--number {
+.c-list-number {
     counter-reset: li;
+    @include margin-tb(0,1);
+}
 
-    > li:before {
+.c-list-number__item {
+    position: relative;
+    @include padding-lr(1,0);
+
+    &:before {
         content: counter(li); /* Use the counter as content */
         counter-increment: li; /* Increment the counter by 1 */
         position: absolute;
@@ -39,5 +48,5 @@
         font-size: 80%;
         font-weight: bold;
         color: palette(color-neutral, base);
-    }
+   }
 }
