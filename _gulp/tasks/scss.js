@@ -8,7 +8,6 @@ var gulp = require('gulp');
     sass = require('gulp-sass'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer-core'),
-    scsslint = require('gulp-scss-lint'),
     filesize = require('gulp-filesize'),
     browserSync = require('browser-sync'),
     sourcemaps  = require('gulp-sourcemaps');
@@ -24,9 +23,6 @@ var processors = [
 // // task
 gulp.task('scss', function () {
     gulp.src(config.src)
-        .pipe(scsslint({
-            'config': 'lint.yml'
-        }))
         .pipe(sourcemaps.init())
         .pipe(sass.sync({
             outputStyle: 'compressed'

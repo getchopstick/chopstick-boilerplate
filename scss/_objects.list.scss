@@ -10,10 +10,10 @@
     @include clearfix;
 }
 
-.o-list__item {
-    .o-list--horizontal & {
-        @include mq($bp3) {
-            float: left;
+    .o-list__item {
+        .o-list--horizontal & {
+            @include mq($bp3) {
+                float: left;
+            }
         }
     }
-}

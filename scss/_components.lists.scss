@@ -9,44 +9,44 @@
     @include margin-tb(0,1);
 }
 
-    .c-list-bullet--sub {
-        @include padding-lr(1,0);
-    }
-
-.c-list-bullet__item {
-    position: relative;
+.c-list-bullet--sub {
     @include padding-lr(1,0);
+}
 
-    &:before {
-        content: '\2022';
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: palette(color-neutral, base);
+    .c-list-bullet__item {
+        position: relative;
+        @include padding-lr(1,0);
 
-        .c-list-bullet--sub & {
-            content: '\203A';
+        &:before {
+            content: '\2022';
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: palette(color-neutral, base);
+
+            .c-list-bullet--sub & {
+                content: '\203A';
+            }
         }
     }
-}
 
 .c-list-number {
     counter-reset: li;
     @include margin-tb(0,1);
 }
 
-.c-list-number__item {
-    position: relative;
-    @include padding-lr(1,0);
+    .c-list-number__item {
+        position: relative;
+        @include padding-lr(1,0);
 
-    &:before {
-        content: counter(li); /* Use the counter as content */
-        counter-increment: li; /* Increment the counter by 1 */
-        position: absolute;
-        top: 0;
-        left: 0;
-        font-size: 80%;
-        font-weight: bold;
-        color: palette(color-neutral, base);
-   }
-}
+        &:before {
+            content: counter(li); /* Use the counter as content */
+            counter-increment: li; /* Increment the counter by 1 */
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 80%;
+            font-weight: bold;
+            color: palette(color-neutral, base);
+       }
+    }
