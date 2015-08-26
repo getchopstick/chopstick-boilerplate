@@ -5,13 +5,19 @@
     Replacements for default bullet and numbered lists.
 */
 
+// TODO: review nested lists
+
 .c-list-bullet {
     @include margin-tb(0,1);
+
+    li > & {
+        @include padding-lr(1,0);
+    }
 }
 
-.c-list-bullet--sub {
-    @include padding-lr(1,0);
-}
+//.c-list-bullet--sub {
+//    @include padding-lr(1,0);
+//}
 
     .c-list-bullet__item {
         position: relative;
@@ -24,7 +30,7 @@
             left: 0;
             color: palette(color-neutral, base);
 
-            .c-list-bullet--sub & {
+            li > ul > & {
                 content: '\203A';
             }
         }
