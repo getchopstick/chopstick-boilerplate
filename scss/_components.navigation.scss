@@ -36,6 +36,8 @@
         }
 
         @include mq($bp3) {
+            float: left;
+            
             & + & {
                 border-top: 0;
                 @include margin-lr(2,0);
