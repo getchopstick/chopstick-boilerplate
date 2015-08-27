@@ -37,7 +37,7 @@ var chopstick =
             }
         }
     }
- };
+};
 
 var hideSettings
 chopstick.hide =

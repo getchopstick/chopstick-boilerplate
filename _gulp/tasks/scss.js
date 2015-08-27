@@ -3,7 +3,7 @@
 // ---
 
 // plugins
-var gulp = require('gulp');
+var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     sass = require('gulp-sass'),
     postcss = require('gulp-postcss'),
