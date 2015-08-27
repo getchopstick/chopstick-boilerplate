@@ -38,3 +38,12 @@ textarea {
     font-family: $beta-font-family;
     font-style: italic;
 }
+
+// Firefox inner border fix
+
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}

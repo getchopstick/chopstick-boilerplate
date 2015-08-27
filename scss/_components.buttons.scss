@@ -145,12 +145,3 @@
 
     @include clearfix;
 }
-
-// firefox inner border fix
-
-button::-moz-focus-inner,
-input[type="button"]::-moz-focus-inner,
-input[type="submit"]::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-}
