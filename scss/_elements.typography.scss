@@ -54,6 +54,13 @@ blockquote {
     padding-left: 2em;
 }
 
+li {
+    > ul,
+    > ol {
+        margin-bottom: 0;
+    }
+}
+
 blockquote {
     font-style: italic;
 }

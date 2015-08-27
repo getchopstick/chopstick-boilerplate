@@ -4,8 +4,6 @@
     Navigation object with no bullets
 */
 
-// TODO: review breakpoints in list object
-
 .o-list {
     list-style: none;
     padding-left: 0;
@@ -17,8 +15,6 @@
 
     .o-list__item {
         .o-list--horizontal & {
-            @include mq($bp3) {
-                float: left;
-            }
+            float: left;
         }
     }
