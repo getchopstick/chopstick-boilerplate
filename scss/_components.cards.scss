@@ -1,10 +1,10 @@
 /*
-    Component: panels
+    Component: cards
     ---
-    Panels, aka callout aka islands aka wells
+    A card displays site content in a manner similar to a playing card.
 */
 
-.c-panel {
+.c-card {
     @include padding-tb(1,1);
     @include padding-lr(1,1);
     @include margin-bottom(1);
@@ -16,7 +16,7 @@
         margin-bottom: 0;
     }
 
-.c-panel--alpha {
+.c-card--alpha {
     color: palette(color-neutral,dark);
     background-color: palette(color-neutral,light);
     border: $border-width $border-style palette(color-neutral,base);
