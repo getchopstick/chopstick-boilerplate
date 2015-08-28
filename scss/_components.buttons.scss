@@ -28,6 +28,7 @@
     white-space: nowrap; /* [3] */
     border-radius: $radius;
     border-style: solid;
+    border-width: 1px;
     transition-duration: .1s;
     transition-timing-function: ease-in-out;
     transition-property: background, color, border;
@@ -56,14 +57,22 @@
     width: 100%;
 }
 
-.c-button--fll {
+.c-button--float-left {
     display: block;
     float: left;
+
+    .c-button-group > & {
+        @include margin-right(1);
+    }
 }
 
-.c-button--flr {
+.c-button--float-right {
     display: block;
     float: right;
+
+    .c-button-group > & {
+        @include margin-right(1);
+    }
 }
 
 // Button sizes
@@ -136,14 +145,5 @@
 
 .c-button-group {
     position: relative;
-
-    .c-button--fll {
-        @include margin-right(1);
-    }
-
-    .c-button--flr {
-        @include margin-right(1);
-    }
-
     @include clearfix;
 }

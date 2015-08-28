@@ -1,0 +1,22 @@
+/*
+    Components: Forms
+    ---
+    Label styles
+*/
+
+// Labels
+.c-label {
+    color: palette(color-neutral);
+    @include text-dimensions($ms-1,1);
+
+    &.has-error {
+        color: palette(color-error);
+    }
+}
+
+.c-label--option {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: inline-block;
+}

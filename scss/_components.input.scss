@@ -1,7 +1,7 @@
 /*
-    Components: Forms
+    Components: Input
     ---
-    Form styling, input types, input sizes, lables, etc.
+    Input styles & sizes.
 */
 
 /**
@@ -28,8 +28,6 @@
     display: block;
     outline: none;
     line-height: normal;
-    @include padding-lr(.75,.75);
-    @include input-dimensions($ms-1,1,0,.75,.75);
 
     &:focus {
         color: palette(color-neutral,dark);
@@ -53,6 +51,11 @@
     @include input-dimensions($ms-2,1,0,.5,.5);
 }
 
+.c-input-text--md {
+    @include padding-lr(.75,.75);
+    @include input-dimensions($ms-1,1,0,.75,.75);
+}
+
 .c-input-text--lg {
     @include padding-lr(1,1);
     @include input-dimensions($alpha-font-size,1,0,1,1);
@@ -69,21 +72,4 @@
     margin: 0;
     display: inline-block;
     vertical-align: middle;
-}
-
-// Labels
-.c-label {
-    color: palette(color-neutral);
-    @include text-dimensions($ms-1,1);
-
-    &.has-error {
-        color: palette(color-error);
-    }
-}
-
-.c-label--option {
-    margin: 0;
-    padding: 0;
-    width: auto;
-    display: inline-block;
 }
