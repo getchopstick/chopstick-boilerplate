@@ -1,5 +1,5 @@
 //
-//  Settings: colors
+//  Settings: Colors
 //  ---
 //  The palette function works with a base color and a tint.
 //
@@ -19,7 +19,7 @@ $color-error                : #FF4136;
 $color-success              : #2ECC40;
 $color-notice               : #FF851B;
 
-// Palletes
+// Palettes
 $palettes: (
     color-neutral: (
         x-light             : hsl(hue($color-neutral),0,100),
