@@ -4,9 +4,22 @@
     Grid system objects, works together with utility width classes
 */
 
+
+// ---
+// Variables
+// ---
+
+$grid-max-width : $bp5 !default;
+$grid-gutter    : $columns-gutter !default;
+
+// ---
+// Styles
+// ---
+
 .o-container {
-    margin: 0 auto;
-    max-width: $bp5;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $grid-max-width;
 }
 
 // No gutters
@@ -18,7 +31,7 @@
 // Default gutter
 
 .o-grid--gutter {
-    @include margin-lr(-($columns-gutter),-($columns-gutter));
+    @include margin-lr(-($grid-gutter),-($grid-gutter));
 }
 
     // Grid item, takes the full width by default
@@ -28,6 +41,6 @@
         width: 100%;
 
         .o-grid--gutter > & {
-            @include padding-lr($columns-gutter,$columns-gutter);
+            @include padding-lr($grid-gutter,$grid-gutter);
         }
     }
