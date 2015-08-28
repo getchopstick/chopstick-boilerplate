@@ -6,6 +6,39 @@
     http://ethanschoonover.com/solarized
 */
 
+// ---
+// Variables
+// ---
+
+$syntax-color         : palette(color-neutral,dark) !default;
+
+$syntax-border-width  : $border-width !default;
+$syntax-border-style  : $border-style !default;
+$syntax-border-radius : $radius !default;
+$syntax-border-color  : palette(color-neutral) !default;
+
+$syntax-margin-top    : .5 !default;
+$syntax-margin-bottom : .5 !default;
+
+$syntax-font-size     : 90% !default;
+
+$linenos-color: palette(color-neutral,dark) !default;
+$linenos-background-color: palette(color-neutral,light) !default;$
+
+$linenos-border-width: 1px !default;
+$linenos-border-style: solid !default;
+$linenos-border-color: palette(color-neutral) !default;
+
+$linenos-padding-left: .5 !default;
+$linenos-padding-right: .5 !default;
+
+$code-padding-left: 1 !default;
+$code-padding-right: 0 !default;
+
+// ---
+// Styles
+// ---
+
 // SOLARIZED HEX      ROLE
 // --------- -------- ------------------------------------------
 // base01    #586e75  comments / secondary content
@@ -17,26 +50,26 @@
 // green     #859900  operators, other keywords
 
 .highlighttable {
-    @include padding-tb(0,0);
-    @include margin-tb(.5,.5);
     display: block;
     overflow: auto;
-    font-size: 90%;
+    font-size: $syntax-font-size;
     width: 100%;
-    color: palette(color-neutral,dark);
-    border: $border-width $border-style palette(color-neutral);
-    border-radius: $radius;
+    color: $syntax-color;
+    border: $syntax-border-width $syntax-border-style $syntax-border-color;
+    border-radius: $syntax-border-radius;
+    @include padding-tb(0,0);
+    @include margin-tb($syntax-margin-top,$syntax-margin-bottom);
 }
 
 .linenos {
-    @include padding-lr(.5,.5);
-    color: palette(color-neutral,dark);
-    background-color: palette(color-neutral,light);
-    border-right: 1px solid palette(color-neutral);
+    color: $linenos-color;
+    background-color: $linenos-background-color;
+    border-right: $linenos-border-width $linenos-border-style $linenos-border-color;
+    @include padding-lr($linenos-padding-left,$linenos-padding-right);
 }
 
 .code {
-    @include padding-lr(1,0);
+    @include padding-lr($code-padding-left,$code-padding-right);
 }
 
 .highlight .c { color: #586e75; } /* Comment */
