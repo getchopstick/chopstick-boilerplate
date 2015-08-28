@@ -14,7 +14,7 @@ Inuit is used for:
 
 - _generic.box-sizing.scss
 - _generic.reset.scss
-- _trumps.debug.scss
+- _utilities.debug.scss
 
 Copyright 2014 Harry Roberts
 

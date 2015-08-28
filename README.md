@@ -110,22 +110,18 @@ The origin of the Chopstick name:
 
 ## Roadmap
 
-### v0.6
-1. Add necessary/missing objects
-2. Optimize existing objects
-
 ### v0.7
 1. make everything modular and configurable
 - start with the basics, options are default off
 - everything is a variable
 
 ### v0.8
+1. convert chopstick .scss to a dependency (npm and bower) and integrate it into the boilerplate
+
+### v0.9
 1. Add configurable components (API like ui-kit)
 2. Add configurable theming layer
 3. Redesign/optimize start theme
-
-### v0.9
-1. convert chopstick .scss to a dependency (npm and bower) and integrate it into the boilerplate
 
 ### v0.10
 1. Add configurable javascript patterns
