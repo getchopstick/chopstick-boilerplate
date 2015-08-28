@@ -1,23 +1,25 @@
 /*
-    Trumps: Print
+    Utilities: Print
     ---
     Print stylesheet
 */
 
 @media print {
+
+    // ---
+    // Reset
+    // ---
+
     * {
         background: transparent !important;
-        color: black !important;
+        color: palette(color-neutral,x-dark) !important;
         box-shadow: none !important;
         text-shadow: none !important;
         filter: none !important;
     }
 
-    @page {
-        margin: 0.5cm;
-    }
-
-    h2, h3 {
+    h2,
+    h3 {
         orphans: 3;
         widows: 3;
         page-break-after: avoid;
@@ -28,26 +30,28 @@
         widows: 3;
     }
 
-    pre, blockquote {
-        border: 1px solid #ccc;
+    pre,
+    blockquote {
+        border: 1px solid palette(color-neutral,light);
         page-break-inside: avoid;
     }
 
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: ' (' attr(title) ')';
     }
 
-    a, a:visited {
+    a,
+    a:visited {
         text-decoration: underline;
     }
 
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: ' (' attr(href) ')';
     }
 
     a[href^="javascript:"]:after,
     a[href^="#"]:after {
-        content: "";
+        content: '';
     }
 
     img {
@@ -61,5 +65,13 @@
 
     tr {
         page-break-inside: avoid;
+    }
+
+    // ---
+    // Utility classes
+    // ---
+
+    .noprint {
+        display: hidden;
     }
 }

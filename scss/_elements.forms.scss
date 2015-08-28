@@ -1,10 +1,11 @@
 /*
-    Elements: forms
+    Elements: Forms
     ---
     Default markup for the form elements
 */
 
 fieldset {
+    border: 0;
     @include margin-bottom(1);
 }
 
@@ -19,13 +20,6 @@ label {
 textarea {
     height: auto;
     resize: none;
-}
-
-// Select, depends on the project. Use a custom select plugin to properly style these.
-
-select,
-select[multiple] {
-
 }
 
 // Placeholders
@@ -43,4 +37,13 @@ select[multiple] {
 :-ms-input-placeholder {
     font-family: $beta-font-family;
     font-style: italic;
+}
+
+// Firefox inner border fix
+
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+    border: 0;
+    padding: 0;
 }

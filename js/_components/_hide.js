@@ -1,3 +1,4 @@
+var hideSettings
 chopstick.hide =
 {
     settings:
@@ -7,16 +8,16 @@ chopstick.hide =
 
     init: function()
     {
-        settings = this.settings;
+        hideSettings = chopstick.hide.settings;
         chopstick.hide.hideContent();
     },
 
     hideContent: function ()
     {
-        settings.hide.on('click', function(e)
+        hideSettings.hide.on('click', function(e)
         {
             e.preventDefault();
-            $(this).closest(settings.hide).parent().addClass('is-hidden');
+            $(this).closest(hideSettings.hide).parent().addClass('is-hidden');
         });
     }
 };

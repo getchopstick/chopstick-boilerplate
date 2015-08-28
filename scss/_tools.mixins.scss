@@ -4,92 +4,27 @@
 //  Global mixins
 //
 
-// Horizontal responsive navigation.
-// @include list-nav on <ul> or <ol>;
-// @include horizontal-nav on <ul> or <ol>;
-
-@mixin list-nav {
-    list-style: none;
-    padding-left: 0;
-}
-
-@mixin horizontal-nav {
-    list-style: none;
-    padding-right: 0;
-
-    > li {
-        float: left;
-        display: block;
-    }
-
-    > li > a {
-        display: block;
-        float: left;
-    }
-}
-
 // Calculate text-color based on background-color
 
 @mixin text-color($c1) {
     // Calculations based on https://vimeo.com/60224584
     @if (.2126*red($c1) + .7152*green($c1) + .0722*blue($c1))/255 <= .5 {
-        color: mix(#FFF,$c1,95%);
+        color: mix(#FFF, $c1, 95%);
     } @else {
-        color: mix(#000,$c1,70%);
+        color: mix(#000, $c1, 70%);
     }
 }
 
 // UI mixins.
-
-// Make a block with various properties
-// @include block-skin;
-
-@mixin block-skin($bgcolor: $gamma-ui-color, $fgcolor: $alpha-text-color, $block-radius: $radius, $block-border-width: $border-width, $block-border-style: $border-style) {
-
-    background-color: $bgcolor;
-    border-color: darken($bgcolor,100%-$contrast);
-    border-style: $border-style;
-
-    @if (su($block-radius) > 0) {
-        border-radius: $block-radius;
-    }
-
-    @if (su($block-border-width) > 0) {
-        border-width: $block-border-width;
-    }
-
-    @include text-color($bgcolor);
-
-}
 
 // Cross browser background opacity.
 
 @mixin background-opacity($color, $alpha) {
     $rgba: rgba($color, $alpha);
     $ie-hex-str: ie-hex-str($rgba);
-    background-color: transparent;
     background-color: $rgba;
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
     zoom: 1;
-}
-
-// Border-box polyfill helper.
-// @include border-box;
-
-@mixin border-box {
-    box-sizing: border-box;
-}
-
-// Progressive svg backgrounds with png fallback.
-// Requires modernizr class .svg.
-// @include svg-bg("path/file", ".extension", $delta-ui-color, 0 50%, no-repeat);
-
-@mixin mdrn-svg { .svg & { @content } }
-
-@mixin svg-bg($filename, $folder:'../img/', $extension: '.png', $bg-color: transparent, $position: 0 0, $repeat: no-repeat, $size: auto) {
-    background: $bg-color url($folder + 'png/' + $filename + $extension) $position $repeat;
-    background-size: $size;
-    @include mdrn-svg { background: $bg-color url($folder + 'svg/' + $filename + '.svg') $position $repeat; background-size: $size; }
 }
 
 //
@@ -99,34 +34,6 @@
 @mixin mq($point, $query1: min, $query2: width) {
     @media (#{$query1}-#{$query2}: $point) {
         @content;
-    }
-}
-
-//
-// Media Query mixin (new version)
-// @include mq(#point);
-//
-
-@mixin media-query($mq) {
-    // Loop through the list of breakpoints we’ve provided in our settings file.
-    @each $breakpoint in $breakpoints {
-
-        // Grab the alias and the condition from their respective locations in
-        // the list.
-        $alias:     nth($breakpoint, 1);
-        $condition: nth($breakpoint, 2);
-
-        // If the media query we’ve specified has an alias and a condition...
-        @if ($mq == $alias and $condition) {
-
-            // ...tell the mixin that we’ve found it...
-            $breakpoint-found: true;
-
-            // ...and spit it out here.
-            @media #{$condition} {
-                @content;
-            }
-        }
     }
 }
 
@@ -143,16 +50,16 @@
 // @mixin clearfix
 
 @mixin clearfix {
-    *zoom : 1;
+    *zoom: 1;
 
     &:before,
     &:after {
         display: table;
-        content : "";
+        content: '';
     }
 
     &:after {
-        clear : both;
+        clear: both;
     }
 }
 

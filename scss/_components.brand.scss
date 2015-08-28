@@ -1,28 +1,27 @@
 /*
-    Components: brand
+    Components: Brand
     ---
-    Logo, brand elements, etc.
+    Brand image/logo
 */
+
+/**
+ *  1. Needs to be the width of the logo you are using.
+ *  2. Logo is set as background-image.
+ *     Text-indent is set to prevent text from showing on top of the background-image.
+ */
 
 .c-logo {
     float: left;
-    font-family: $alpha-font-family;
-    font-weight: $alpha-font-weight;
+    display: block;
+    width: 157px; /* [1] */
     margin-bottom: 0;
-    @include text-dimensions($alpha-font-size,1,0,1,1);
-
-    @include mq($bp3) {
-        @include padding-tb(1.25,1.25);
-    }
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../img/svg/logo.svg');
+    text-indent: -99999px; /* [2] */
+    @include text-dimensions($alpha-font-size,1,0,1.25,1.25);
 }
 
     .c-logo__link {
         display: block;
-        text-decoration: none;
-        color: $beta-text-color;
-
-        &:hover,
-        &:focus {
-            color: $alpha-text-color;
-        }
     }

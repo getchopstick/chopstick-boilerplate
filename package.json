@@ -1,6 +1,7 @@
 {
   "name": "Chopstick-boilerplate",
-  "version": "0.5.0",
+  "version": "0.6.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:getchopstick/chopstick-boilerplate.git"
@@ -19,6 +20,8 @@
     "gulp-plumber": "1.0.0",
     "gulp-postcss": "^5.1.8",
     "gulp-ruby-sass": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-scss-lint": "^0.2.2",
     "gulp-sourcemaps": "1.5.2",
     "gulp-svg2png": "0.3.0",
     "gulp-uglyfly": "1.4.2",

@@ -1,0 +1,10 @@
+/*
+    Plugins: Google maps
+    ---
+    Google map styles
+*/
+
+/* Google maps images fix https://coderwall.com/p/nl1lba/img-max-width-100-breaks-google-maps */
+.gmap img {
+    max-width: none !important;
+}

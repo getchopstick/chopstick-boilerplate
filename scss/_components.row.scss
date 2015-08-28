@@ -1,0 +1,19 @@
+/*
+    Components: Row
+    ---
+    Creates a horizontal row with padding
+*/
+
+.c-row {
+    @include padding-tb($alpha-leading,0);
+    @include padding-lr($columns-gutter,$columns-gutter);
+}
+
+.c-row--alpha {
+    background-color: palette(color-neutral,x-light);
+}
+
+.c-row--beta {
+    color: palette(color-neutral,light);
+    background-color: palette(color-neutral,dark);
+}

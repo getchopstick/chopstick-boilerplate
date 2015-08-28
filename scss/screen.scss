@@ -5,128 +5,79 @@
  *  architecture and a series of principles. It creates a structure
  *  to easily set-up and build bespoke web projects.
  *  ---
- *  The settings and tools layer don't compile any code.
- *  Therefore they get the number 0 and are put in single line comments.
- *  ---
  *
- *  0. Settings
- *      - settings.global
- *      - settings.breakpoints
- *      - settings.grid
- *      - settings.colors
- *      - settings.typography
- *      - settings.ms
- *      - settings.ui
- *
- *  0. Tools
- *      - tools.functions
- *      - tools.mixins
- *      - tools.grid
- *      - tools.spacing
- *      - tools.typography
- *      - tools.buttons
- *      - tools.inputs
- *
- *  1. Generic
- *      - generic.normalize
- *      - generic.reset
- *      - generic.box-sizing
- *
- *  2. Elements
- *      - elements.page
- *      - elements.typography
- *      - elements.images
- *      - elements.forms
- *      - elements.tables
- *
- *  3. Objects
- *      - objects.grid
- *      - objects.media
- *      - objects.media-embed
- *
- *  4. Components
- *      - components.navigation
- *      - components.brand
- *      - components.forms
- *      - components.holder
- *      - components.icons
- *      - components.alerts
- *      - components.buttons
- *      - components.pagination
- *      - components.styleguide
- *      - components.styleguide-syntax
- *
- *  5. Trumps
- *      - trumps.widths
- *      - trumps.push
- *      - trumps.spacing
- *      - trumps.colors
- *      - trumps.borders
- *      - trumps.states
- *      - trumps.shame
- *      - trumps.debug
- *      - trumps.baseline-grid
- *      - trumps.print
+ *  Settings: contains global variables and config switches
+ *  Tools: contains default mixins and functions
+ *  Generic: contains ground-zero styles (Normalize.css, resets, box-sizing)
+ *  Elements: contains unclassed HTML elements (type selectors)
+ *  Objects: contains cosmetic-free design patterns
+ *  Components: contains designed components, chunks of UI
+ *  Plugins: contains third-party plugin styles
+ *  Utilities: contains helpers and overrides
  */
 
-    // 0. Settings
-    @import "settings.global";
-    @import "settings.breakpoints";
-    @import "settings.grid";
-    @import "settings.colors";
-    @import "settings.typography";
-    @import "settings.ms";
-    @import "settings.ui";
+// Settings
+@import 'settings.global';
+@import 'settings.breakpoints';
+@import 'settings.grid';
+@import 'settings.colors';
+@import 'settings.ms';
+@import 'settings.typography';
+@import 'settings.ui';
 
-    // 0. Tools
-    @import "tools.functions";
-    @import "tools.mixins";
-    @import "tools.grid";
-    @import "tools.spacing";
-    @import "tools.typography";
-    @import "tools.buttons";
-    @import "tools.inputs";
+// Tools
+@import 'tools.functions';
+@import 'tools.mixins';
+@import 'tools.grid';
+@import 'tools.spacing';
+@import 'tools.typography';
 
-    /* 1. Generic */
-    @import "generic.normalize";
-    @import "generic.reset";
-    @import "generic.box-sizing";
+/* Generic */
+@import 'generic.normalize';
+@import 'generic.reset';
+@import 'generic.box-sizing';
 
-    /* 2. Elements */
-    @import "elements.page";
-    @import "elements.typography";
-    @import "elements.images";
-    @import "elements.forms";
-    @import "elements.tables";
+/* Elements */
+@import 'elements.page';
+@import 'elements.typography';
+@import 'elements.images';
+@import 'elements.forms';
+@import 'elements.tables';
 
-    /* 3. Objects */
-    @import "objects.grid";
-    @import "objects.media";
-    @import "objects.media-embed";
-    @import "objects.navigation";
-    @import "objects.inline-list";
+/* Objects */
+@import 'objects.grid';
+@import 'objects.flexbox';
+@import 'objects.media';
+@import 'objects.media-embed';
+@import 'objects.list';
+@import 'objects.tables';
 
-    /* 4. Components */
-    @import "components.navigation";
-    @import "components.brand";
-    @import "components.forms";
-    @import "components.holder";
-    @import "components.icons";
-    @import "components.alerts";
-    @import "components.buttons";
-    @import "components.pagination";
-    @import "components.panels";
-    @import "components.styleguide";
-    @import "components.styleguide-syntax";
+/* Components */
+@import 'components.navigation';
+@import 'components.brand';
+@import 'components.row';
+@import 'components.icons';
+@import 'components.alerts';
+@import 'components.buttons';
+@import 'components.input';
+@import 'components.label';
+@import 'components.lists';
+@import 'components.pagination';
+@import 'components.cards';
+@import 'components.styleguide';
 
-    /* 5. Trumps */
-    @import "trumps.widths";
-    @import "trumps.push";
-    @import "trumps.spacing";
-    @import "trumps.colors";
-    @import "trumps.borders";
-    @import "trumps.states";
-    @import "trumps.shame";
-    @import "trumps.debug";
-    @import "trumps.baseline-grid";
-    @import "trumps.print";
+/* Plugins */
+@import 'plugins.syntax';
+@import 'plugins.googlemaps';
+
+/* Utilities */
+@import 'utilities.widths';
+@import 'utilities.push';
+@import 'utilities.pull';
+@import 'utilities.spacing';
+@import 'utilities.colors';
+@import 'utilities.layers';
+@import 'utilities.states';
+@import 'utilities.print';
+@import 'utilities.shame';
+@import 'utilities.debug';

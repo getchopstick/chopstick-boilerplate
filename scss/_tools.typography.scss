@@ -9,9 +9,10 @@
 
 $baseline-unit: $alpha-font-size * $alpha-line-height;
 $basefontpercent: $alpha-font-size/16 * 100;
+$fs: 1;
+$lh: 1;
 
-@mixin text-dimensions($fs: 16, $lh: 1, $mb: 0, $pt: 0, $pb: 0, $mt: 0){
-    font-size: #{$fs}px;
+@mixin text-dimensions($fs: $alpha-font-size, $lh: $alpha-line-height, $mb: 0, $pt: 0, $pb: 0, $mt: 0) {
     font-size: #{$fs / $alpha-font-size}rem;
     line-height: #{($baseline-unit / $fs) * $lh}em;
 
@@ -33,8 +34,7 @@ $basefontpercent: $alpha-font-size/16 * 100;
 
 }
 
-@mixin input-dimensions($fs: 1, $lh: 1, $mb: 0, $pt: 0, $pb: 0, $mt: 0){
-    font-size: #{$fs}px;
+@mixin input-dimensions($fs: 1, $lh: 1, $mb: 0, $pt: 0, $pb: 0, $mt: 0) {
     font-size: $fs/$alpha-font-size*1rem;
 
     @if $mb > 0 {
@@ -52,65 +52,4 @@ $basefontpercent: $alpha-font-size/16 * 100;
     @if $pb > 0 {
         @include padding-bottom($pb);
     }
-}
-
-@mixin button-dimensions($fs: 1, $lh: 1, $mb: 0, $pt: 0, $pb: 0, $mt: 0){
-    font-size: #{$fs}px;
-    font-size: $fs/$alpha-font-size*1rem;
-    height: #{($baseline-unit / $fs) * $lh}em;
-    // line-height: #{($baseline-unit / $fs) * $lh}em;
-    line-height: #{$baseline-unit * $lh - 2}px;
-
-    @if $mb > 0 {
-        margin-bottom: $mb * $alpha-font-size * 1px;
-        margin-bottom: $mb * 1rem;
-    }
-
-    @if $mt > 0 {
-        margin-top: $mt * $alpha-font-size * 1px;
-        margin-top: $mt * 1rem;
-    }
-
-    @if $pt > 0 {
-        padding-top: $pt * $alpha-font-size * 1px;
-        padding-top: $pt * 1rem;
-    }
-    @if $pb > 0 {
-        padding-bottom: $pb * $alpha-font-size * 1px;
-        padding-bottom: $pb * 1rem;
-    }
-}
-
-
-// baseline formulas based on the $alpha-baseline-grid variable
-// use: @include baseline-dimensions(#modular-scale-increment, #padding-top, #padding-bottom, #leading)
-
-@mixin baseline-dimensions($msi: 0, $pt: 0, $pb: 0, $l: $alpha-leading) {
-
-    @if $msi == 0 {
-        font-size: 1em;
-        line-height: ((ceil($alpha-font-size/$alpha-baseline-grid)*$alpha-baseline-grid)+($alpha-baseline-grid*$l))/$alpha-font-size;
-
-        @if $pt > 0 {
-            padding-top: $alpha-baseline-grid/$alpha-font-size*$pt*1em;
-        }
-
-        @if $pb > 0 {
-            padding-bottom: $alpha-baseline-grid/$alpha-font-size*$pb*1em;
-        }
-    }
-
-    @if $msi != 0 {
-        font-size: ms($msi)/$alpha-font-size*1em;
-        line-height: ((ceil(ms($msi)/$alpha-baseline-grid)*$alpha-baseline-grid)+($alpha-baseline-grid*$l))/(ms($msi));
-
-        @if $pt > 0 {
-            padding-top: $alpha-baseline-grid*$pt/ms($msi)*1em;
-        }
-
-        @if $pb > 0 {
-            padding-bottom: $alpha-baseline-grid*$pb/ms($msi)*1em;
-        }
-    }
-
 }

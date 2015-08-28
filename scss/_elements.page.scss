@@ -1,13 +1,13 @@
 /*
-    Elements: forms
+    Elements: Page
     ---
     Default markup for page level elements
 */
 
 html {
-    font: $alpha-font-weight $alpha-font-size/16*100%/#{$alpha-line-height} $alpha-font-family ;
+    font: $alpha-font-weight $alpha-font-size/16*100%/#{$alpha-line-height} $alpha-font-family;
     -webkit-overflow-scrolling: touch;
-    background-color: darken($delta-ui-color-dark,40%);
+    background-color: palette(color-neutral,dark);
 
     @include mq($bp5) {
         font-size: $alpha-font-size/16*112.5%;
@@ -16,18 +16,17 @@ html {
 
 body {
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizelegibility;
-    color: $alpha-text-color;
+    color: palette(color-neutral,dark);
 }
 
 ::-moz-selection {
-    background-color: $alpha-text-color;
-    color: lighten($alpha-text-color, 65%);
+    background-color: palette(color-neutral,dark);
+    color: palette(color-neutral,light);
     text-shadow: none;
 }
 
 ::selection {
-    background-color: $alpha-text-color;
-    color: lighten($alpha-text-color, 65%);
+    background-color: palette(color-neutral,dark);
+    color: palette(color-neutral,light);
     text-shadow: none;
 }

@@ -9,6 +9,10 @@ It uses the following tools
 - [Jekyll](http://jekyllrb.com/) as a static site generator
 - [Gulp](http://gulpjs.com/) as a build system
 
+## Need  help?
+- Ask your question on twitter: [@GetChopstick](https://twitter.com/GetChopstick)
+- Join the [Slack channel](https://getchopstick.slack.com)
+
 ## Setup and usage
 
 ### Requirements
@@ -19,9 +23,6 @@ It uses the following tools
 ### Install
 
 For automated install just run ./install.sh from project root.
-This will check if package managers are installed and download required packages for you. For manual installation follow the below method.
-
-For automated install just run `./install.sh` from project root.  
 This will check if package managers are installed and download required packages for you. For manual installation follow the below method.
 
 You only need to do this once in a new project.
@@ -67,6 +68,8 @@ It uses a settings file + mixins + patterns. You can remove the default theme fo
 
 For more information and examples please refer to the [documentation on our website](http://getchopstick.com/docs).
 
+## Browser support
+Chopstick aims to support all modern browsers. This includes latest versions of Chrome, Firefox and Safari and the latest mobile browsers on Android, iPhone and Windows Phone. Internet explorer is currently supported starting from IE9 and up.
 
 ## What is the Chopstick framework
 Chopstick is a framework based on the [ITCSS](http://itcss.io/) architecture and a series of principles. It creates a structure to easily set-up and build bespoke web projects.
@@ -107,22 +110,18 @@ The origin of the Chopstick name:
 
 ## Roadmap
 
-### v0.6
-1. Add necessary/missing objects
-2. Optimize existing objects
-
 ### v0.7
 1. make everything modular and configurable
 - start with the basics, options are default off
 - everything is a variable
 
 ### v0.8
+1. convert chopstick .scss to a dependency (npm and bower) and integrate it into the boilerplate
+
+### v0.9
 1. Add configurable components (API like ui-kit)
 2. Add configurable theming layer
 3. Redesign/optimize start theme
-
-### v0.9
-1. convert chopstick .scss to a dependency (npm and bower) and integrate it into the boilerplate
 
 ### v0.10
 1. Add configurable javascript patterns

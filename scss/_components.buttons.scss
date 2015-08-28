@@ -1,28 +1,43 @@
 /*
-    Components: buttons
+    Components: Buttons
     ---
-    Button sizes, styles, etc.
+    Button styles, sizes, etc.
 */
+
+/**
+ *  1. The user agent may consider touches that begin on the element
+ *     only for the purposes of scrolling and continuous zooming.
+ *  2. Reset unusual Firefox-on-Android default style.
+ *     see https://github.com/necolas/normalize.css/issues/214
+ *  3. Sequences of whitespace will collapse into a single whitespace.
+ *     Text will never wrap to the next line.
+ *     The text continues on the same line until a <br> tag is encountered.
+ *  4. Controls the application of anti-aliasing when fonts are rendered.
+ *     Webkit & Firefox implements.
+ *     Works only on Mac OS X platform.
+ */
 
 .c-button {
     display: inline-block;
     margin: 0;
     text-align: center;
     vertical-align: middle;
-    touch-action: manipulation;
+    touch-action: manipulation; /* [1] */
     cursor: pointer;
-    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-    border: 1px solid transparent;
-    white-space: nowrap;
+    background-image: none; /* [2] */
+    white-space: nowrap; /* [3] */
     border-radius: $radius;
-    transition: all .1s ease-in-out;
+    border-style: solid;
+    border-width: 1px;
+    transition-duration: .1s;
+    transition-timing-function: ease-in-out;
     transition-property: background, color, border;
     outline: none;
     line-height: normal;
-    -webkit-appearance: none;
-    -moz-appearance:    none;
-    appearance:         none;
-    -webkit-font-smoothing: antialiased;
+    appearance: none;
+    box-shadow: none;
+    -webkit-font-smoothing: antialiased; /* [4] */
+    -moz-osx-font-smoothing: grayscale; /* [4] */
 
     &:hover,
     &:focus {
@@ -42,30 +57,37 @@
     width: 100%;
 }
 
-.c-button--fll {
-    @include button-float(left);
+.c-button--float-left {
+    display: block;
+    float: left;
+
+    .c-button-group > & {
+        @include margin-right(1);
+    }
 }
 
-.c-button--flr {
-    @include button-float(right);
+.c-button--float-right {
+    display: block;
+    float: right;
+
+    .c-button-group > & {
+        @include margin-right(1);
+    }
 }
 
 // Button sizes
 
 .c-button--sm {
-    // padding: em(5) em(10);
     @include padding-lr(.75,.75);
-    @include input-dimensions($ms-2,1,0,.5,.5);    
+    @include input-dimensions($ms-2,1,0,.5,.5);
 }
 
 .c-button--md {
-    // padding: em(10.5) em(15);
-    @include padding-lr(1,1);    
-    @include input-dimensions($ms-1,1,0,.75,.75);    
+    @include padding-lr(1,1);
+    @include input-dimensions($ms-1,1,0,.75,.75);
 }
 
 .c-button--lg {
-    // padding: em(14.5) em(20);
     @include padding-lr(1.25,1.25);
     @include input-dimensions($alpha-font-size,1,0,1,1);
 }
@@ -73,43 +95,43 @@
 // Button colors
 
 .c-button--alpha {
-    background-color: $alpha-ui-color;
-    border-color: $alpha-ui-color;
+    background-color: palette(color-alpha);
+    border-color: palette(color-alpha);
 
     &,
     &:visited {
-        color: $white;
+        color: palette(color-neutral,x-light);
     }
 
     &:hover,
     &:focus {
-        background-color: lighten($alpha-ui-color,10);
-        color: $white;
+        background-color: palette(color-alpha,light);
+        color: palette(color-neutral,x-light);
     }
 
     &:active {
-        background-color: $alpha-ui-color;
+        background-color: palette(color-alpha);
     }
 
 }
 
 .c-button--beta {
-    background-color: $beta-ui-color;
-    border-color: $beta-ui-color;
+    background-color: palette(color-beta);
+    border-color: palette(color-beta);
 
     &,
     &:visited {
-        color: $white;
+        color: palette(color-neutral,x-light);
     }
 
     &:hover,
     &:focus {
-        background-color: lighten($beta-ui-color,10);
-        color: $white;
+        background-color: palette(color-beta,light);
+        color: palette(color-neutral,x-light);
     }
 
     &:active {
-        background-color: $beta-ui-color;
+        background-color: palette(color-beta);
     }
 }
 
@@ -123,23 +145,5 @@
 
 .c-button-group {
     position: relative;
-
-    .c-button--fll {
-        @include margin-right(1);
-    }
-
-    .c-button--flr {
-        @include margin-right(1);
-    }
-
     @include clearfix;
-}
-
-// firefox inner border fix
-
-button::-moz-focus-inner,
-input[type="button"]::-moz-focus-inner,
-input[type="submit"]::-moz-focus-inner {
-    border: 0;
-    padding: 0;
 }

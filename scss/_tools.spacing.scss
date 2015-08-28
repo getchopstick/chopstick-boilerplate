@@ -9,52 +9,32 @@
 // horizontal padding based on the alpha font size in rem
 // use: @include padding-lr(#left, #right);
 
-@mixin padding-lr($left: 1, $right: $left) {
-    @if $px-fallback {
-        padding-left: $left * $alpha-font-size  * 1px;
-        padding-right: $right * $alpha-font-size  * 1px;
-    }
+@mixin padding-lr($left: $columns-gutter, $right: $left) {
     padding-left: $left * 1rem;
     padding-right: $right * 1rem;
 }
 
-@mixin padding-left($left: 1) {
-    @if $px-fallback {
-        padding-left: $left * $alpha-font-size  * 1px;
-    }
+@mixin padding-left($left: $columns-gutter) {
     padding-left: $left * 1rem;
 }
 
-@mixin padding-right($right: 1) {
-    @if $px-fallback {
-        padding-right: $right * $alpha-font-size * 1px;
-    }
+@mixin padding-right($right: $columns-gutter) {
     padding-right: $right * 1rem;
 }
 
 // horizontal margin based on the alpha font size in rem
 // use: @include margin-lr(#left, #right);
 
-@mixin margin-lr($left: 1, $right: $left) {
-    @if $px-fallback {
-        margin-left: $left * $alpha-font-size * 1px;
-        margin-right: $right * $alpha-font-size * 1px;
-    }
+@mixin margin-lr($left: $columns-gutter, $right: $left) {
     margin-left: $left * 1rem;
     margin-right: $right * 1rem;
 }
 
-@mixin margin-left($left: 1) {
-    @if $px-fallback {
-        margin-left: $left * $alpha-font-size * 1px;
-    }
+@mixin margin-left($left: $columns-gutter) {
     margin-left: $left * 1rem;
 }
 
 @mixin margin-right($right: 1) {
-    @if $px-fallback {
-        margin-right: $right * $alpha-font-size * 1px;
-    }
     margin-right: $right * 1rem;
 }
 
@@ -63,51 +43,31 @@
 // vertical padding based on the alpha font size in rem
 // use: @include padding-tb(#top, #bottom);
 
-@mixin padding-tb($top: 1, $bottom: 0) {
-    @if $px-fallback {
-        padding-top: $top * $alpha-font-size * 1px;
-        padding-bottom: $bottom * $alpha-font-size * 1px;
-    }
+@mixin padding-tb($top: $alpha-leading, $bottom: 0) {
     padding-top: $top * 1rem;
     padding-bottom: $bottom * 1rem;
 }
 
-@mixin padding-bottom($bottom: 1) {
-    @if $px-fallback {
-        padding-bottom: $bottom * $alpha-font-size * 1px;
-    }
+@mixin padding-bottom($bottom: $alpha-leading) {
     padding-bottom: $bottom * 1rem;
 }
 
-@mixin padding-top($top: 1) {
-    @if $px-fallback {
-        padding-top: $top * $alpha-font-size * 1px;
-    }
+@mixin padding-top($top: $alpha-leading) {
     padding-top: $top * 1rem;
 }
 
 // vertical margin based on the alpha font size in rem
 // use: @include margin-tb(#top, #bottom);
 
-@mixin margin-tb($top: 1, $bottom: 0) {
-    @if $px-fallback {
-        margin-top: $top * $alpha-font-size * 1px;
-        margin-bottom: $bottom * $alpha-font-size * 1px;
-    }
+@mixin margin-tb($top: $alpha-leading, $bottom: 0) {
     margin-top: $top * 1rem;
     margin-bottom: $bottom * 1rem;
 }
 
-@mixin margin-bottom($bottom: 1) {
-    @if $px-fallback {
-        margin-bottom: $bottom * $alpha-font-size * 1px;
-    }
+@mixin margin-bottom($bottom: $alpha-leading) {
     margin-bottom: $bottom * 1rem;
 }
 
 @mixin margin-top($top: 1) {
-    @if $px-fallback {
-        margin-top: $top * $alpha-font-size * 1px;
-    }
     margin-top: $top * 1rem;
 }
