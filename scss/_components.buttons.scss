@@ -27,12 +27,14 @@
     background-image: none; /* [2] */
     white-space: nowrap; /* [3] */
     border-radius: $radius;
+    border-style: solid;
     transition-duration: .1s;
     transition-timing-function: ease-in-out;
     transition-property: background, color, border;
     outline: none;
     line-height: normal;
     appearance: none;
+    box-shadow: none;
     -webkit-font-smoothing: antialiased; /* [4] */
     -moz-osx-font-smoothing: grayscale; /* [4] */
 

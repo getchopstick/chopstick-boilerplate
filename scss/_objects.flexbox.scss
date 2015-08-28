@@ -1,0 +1,56 @@
+/*
+    Object: flexbox
+    ---
+    Flexbox system. Control the widths with utility classes
+*/
+
+// Flexbox container
+
+.o-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    // Orientation
+
+    .o-flex--horizontal-rev {
+        flex-direction: row-reverse;
+    }
+
+    .o-flex--vertical {
+        flex-direction: column;
+    }
+
+    .o-flex--vertical-rev {
+        flex-direction: column-reverse;
+    }
+
+    // Alignment
+
+    .o-flex--v-center {
+        align-items: center;
+    }
+
+    .o-flex--h-center {
+        justify-content: center;
+    }
+
+    .o-flex--v-end {
+        align-items: flex-end;
+    }
+
+    .o-flex--h-end {
+        justify-content: flex-end;
+    }
+
+    // Children
+
+    .o-flex__item {
+        display: flex;
+        flex-direction: column; // Fill out child elements
+    }
+
+    .o-flex__item--justify {
+        flex-grow: 1;
+        max-width: 100%;
+    }
