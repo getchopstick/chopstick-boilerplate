@@ -1,5 +1,5 @@
 /*
-    Component: styleguide
+    Components: Styleguide
     ---
     Styleguide specific scaffolding and demo styles
 */
@@ -41,12 +41,3 @@
     min-height: 55px;
     @include text-dimensions(14,.8,0,.5,.3);
 }
-
-//.c-grid-test {}
-
-    .c-grid-test__item {
-        background-color: palette(color-neutral,light);
-        text-align: center;
-        @include padding-tb(.5,.5);
-        @include margin-tb(1,1);
-    }

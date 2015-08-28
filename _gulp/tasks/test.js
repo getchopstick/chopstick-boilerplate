@@ -9,11 +9,6 @@ var gulp = require('gulp');
 // configfile
 var config = require('../config').scss;
 
-// Postcss processors
-var processors = [
-    autoprefixer(config.prefix)
-];
-
 // // task
 gulp.task('test', function () {
     gulp.src(config.src)

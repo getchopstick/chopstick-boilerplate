@@ -1,5 +1,5 @@
 // ---
-// COMPRESSJS TASK 
+// COMPRESSJS TASK
 // (puts files together, minifies and saves as 'scripts.min.js')
 // ---
 
@@ -9,9 +9,9 @@ var gulp = require('gulp'),
 
 var config = require('../config').compressjs;
 
-//task 
+//task
 gulp.task('compressjs', function() {
   gulp.src(config.src)
     .pipe(uglyfly())
-    .pipe(gulp.dest(config.dest))
+    .pipe(gulp.dest(config.dest));
 });

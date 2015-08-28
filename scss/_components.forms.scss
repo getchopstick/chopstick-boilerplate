@@ -1,13 +1,23 @@
 /*
-    Component: forms
+    Components: Forms
     ---
-    Form styling, input sizes, etc.
+    Form styling, input types, input sizes, lables, etc.
 */
+
+/**
+ *  1. The appearance property defines how elements appear by default.
+ *     By setting the value to none the default appearance can be entirely redefined using other CSS properties.
+ *
+ *  2. Controls the application of anti-aliasing when fonts are rendered.
+ *     Both Webkit & Firefox implements.
+ *     Works only on Mac OS X platform.
+ */
 
 // Input elements
 .c-input-text {
-    appearance: none;
-    font-smoothing: antialiased;
+    appearance: none; /* [1] */
+    -webkit-font-smoothing: antialiased; /* [2] */
+    -moz-osx-font-smoothing: grayscale; /* [2] */
     background-color: palette(color-neutral,x-light);
     border-radius: $radius;
     border: $border-width $border-style palette(color-neutral);
@@ -37,12 +47,6 @@
     }
 }
 
-.c-input-option {
-    margin: 0;
-    display: inline-block;
-    vertical-align: middle;
-}
-
 // Input sizes
 .c-input-text--sm {
     @include padding-lr(.5,.5);
@@ -60,6 +64,13 @@
     border-right: 0;
 }
 
+// Input option
+.c-input-option {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 // Labels
 .c-label {
     color: palette(color-neutral);
@@ -75,15 +86,4 @@
     padding: 0;
     width: auto;
     display: inline-block;
-}
-
-// Errors
-.c-alert-inline {
-    display: block;
-    text-align: right;
-    @include text-dimensions($ms-2,1);
-}
-
-.c-alert-inline--error {
-    color: palette(color-error);
 }

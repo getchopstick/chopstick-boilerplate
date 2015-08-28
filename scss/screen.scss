@@ -13,7 +13,7 @@
  *  Objects: contains cosmetic-free design patterns
  *  Components: contains designed components, chunks of UI
  *  Plugins: contains third-party plugin styles
- *  Trumps: contains helpers and overrides
+ *  Utilities: contains helpers and overrides
  */
 
 // Settings
@@ -46,6 +46,7 @@
 
 /* Objects */
 @import 'objects.grid';
+@import 'objects.flexbox';
 @import 'objects.media';
 @import 'objects.media-embed';
 @import 'objects.list';
@@ -68,15 +69,15 @@
 /* Plugins */
 @import 'plugins.googlemaps';
 
-/* Trumps */
-@import 'trumps.widths';
-@import 'trumps.push';
-@import 'trumps.pull';
-@import 'trumps.spacing';
-@import 'trumps.colors';
-@import 'trumps.states';
-@import 'trumps.shame';
-@import 'trumps.debug';
-@import 'trumps.baseline-grid';
-@import 'trumps.print';
-@import 'trumps.layers';
+/* Utilities */
+@import 'utilities.widths';
+@import 'utilities.push';
+@import 'utilities.pull';
+@import 'utilities.spacing';
+@import 'utilities.colors';
+@import 'utilities.layers';
+@import 'utilities.states';
+@import 'utilities.print';
+@import 'utilities.shame';
+@import 'utilities.debug';
+@import 'utilities.baseline-grid';

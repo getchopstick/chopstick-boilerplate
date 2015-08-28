@@ -1,9 +1,11 @@
 /*
-    Component: List
+    Components: List
     ---
     All sorts of lists.
     Replacements for default bullet and numbered lists.
 */
+
+// Custom bulleted list
 
 .c-list-bullet {
     @include margin-tb(0,1);
@@ -30,6 +32,8 @@
             }
         }
     }
+
+// Custom numbered list
 
 .c-list-number {
     counter-reset: li;
