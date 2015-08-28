@@ -10,14 +10,14 @@
 }
 
 // Base colors
-$color-neutral              : #aaa;
+$color-neutral              : #aaa !default;
 
-$color-alpha                : #0074D9;
-$color-beta                 : #2ECC40;
+$color-alpha                : #0074D9 !default;
+$color-beta                 : #2ECC40 !default;
 
-$color-error                : #FF4136;
-$color-success              : #2ECC40;
-$color-notice               : #FF851B;
+$color-error                : #FF4136 !default;
+$color-success              : #2ECC40 !default;
+$color-notice               : #FF851B !default;
 
 // Palettes
 $palettes: (

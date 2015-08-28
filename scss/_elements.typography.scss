@@ -10,9 +10,9 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $beta-font-family;
+    font-family: $alpha-font-family;
     font-weight: $alpha-font-weight;
-    @include margin-bottom(1);
+    @include margin-bottom($alpha-leading);
 }
 
 h1 {
@@ -40,8 +40,7 @@ ul,
 dl,
 table,
 address {
-    @include text-dimensions($alpha-font-size,1);
-    @include margin-bottom(1);
+    @include margin-bottom($beta-leading);
 }
 
 pre {

@@ -4,25 +4,23 @@
 //  Set your modular scale setting and define a fixed modular scale
 //
 
-$leading                    : 1;
-$base-size                  : $alpha-font-size/16*1em;
-
 // manual modular scale font sizes
 // based on http://modularscale.com/scale/?px1=16&px2=18&ra1=1.333&ra2=0
 
-$ms-3                       : 11;
-$ms-2                       : 12;
-$ms-1                       : 14;
-$ms1                        : 18;
-$ms2                        : 21;
-$ms3                        : 23;
-$ms4                        : 28;
-$ms5                        : 31;
-$ms6                        : 37;
-$ms7                        : 42;
-$ms8                        : 50;
-$ms10                       : 56;
-$ms11                       : 67;
-$ms12                       : 75;
-$ms13                       : 89;
-$ms14                       : 100;
+$ms-3                       : 11 !default;
+$ms-2                       : 12 !default;
+$ms-1                       : 14 !default;
+$ms0                        : 16 !default;
+$ms1                        : 18 !default;
+$ms2                        : 21 !default;
+$ms3                        : 23 !default;
+$ms4                        : 28 !default;
+$ms5                        : 31 !default;
+$ms6                        : 37 !default;
+$ms7                        : 42 !default;
+$ms8                        : 50 !default;
+$ms10                       : 56 !default;
+$ms11                       : 67 !default;
+$ms12                       : 75 !default;
+$ms13                       : 89 !default;
+$ms14                       : 100 !default;

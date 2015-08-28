@@ -5,16 +5,17 @@
 */
 
 @media print {
+
+    // ---
+    // Reset
+    // ---
+
     * {
         background: transparent !important;
         color: palette(color-neutral,x-dark) !important;
         box-shadow: none !important;
         text-shadow: none !important;
         filter: none !important;
-    }
-
-    @page {
-        margin: .5cm;
     }
 
     h2,
@@ -64,5 +65,13 @@
 
     tr {
         page-break-inside: avoid;
+    }
+
+    // ---
+    // Utility classes
+    // ---
+
+    .noprint {
+        display: hidden;
     }
 }

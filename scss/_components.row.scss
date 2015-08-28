@@ -5,8 +5,8 @@
 */
 
 .c-row {
-    @include padding-tb(1,0);
-    @include padding-lr(1,1);
+    @include padding-tb($alpha-leading,0);
+    @include padding-lr($columns-gutter,$columns-gutter);
 }
 
 .c-row--alpha {

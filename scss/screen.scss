@@ -21,8 +21,8 @@
 @import 'settings.breakpoints';
 @import 'settings.grid';
 @import 'settings.colors';
-@import 'settings.typography';
 @import 'settings.ms';
+@import 'settings.typography';
 @import 'settings.ui';
 
 // Tools
@@ -81,4 +81,3 @@
 @import 'utilities.print';
 @import 'utilities.shame';
 @import 'utilities.debug';
-@import 'utilities.baseline-grid';
