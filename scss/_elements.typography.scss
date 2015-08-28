@@ -1,37 +1,127 @@
 /*
-    Elements: Typography
+    Elements: typography
     ---
     Default markup for typographic elements
 */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: $alpha-font-family;
-    font-weight: $alpha-font-weight;
-    @include margin-bottom($alpha-leading);
-}
+// ---
+// Variables
+// ---
+
+$h1-font-family                : $alpha-font-family !default;
+$h1-font-weight                : $alpha-font-weight !default;
+$h1-font-size                  : $ms6 !default;
+$h1-line-height                : 2 !default;
+$h1-margin-bottom              : $alpha-leading !default;
+
+$h2-font-family                : $alpha-font-family !default;
+$h2-font-weight                : $alpha-font-weight !default;
+$h2-font-size                  : $ms4 !default;
+$h2-line-height                : 1.5 !default;
+$h2-margin-bottom              : $alpha-leading !default;
+
+$h3-font-family                : $alpha-font-family !default;
+$h3-font-weight                : $alpha-font-weight !default;
+$h3-font-size                  : $ms3 !default;
+$h3-line-height                : 1.25 !default;
+$h3-margin-bottom              : $alpha-leading !default;
+
+$h4-font-family                : $alpha-font-family !default;
+$h4-font-weight                : $alpha-font-weight !default;
+$h4-font-size                  : $ms2 !default;
+$h4-line-height                : 1.25 !default;
+$h4-margin-bottom              : $alpha-leading !default;
+
+$h5-font-family                : $alpha-font-family !default;
+$h5-font-weight                : $alpha-font-weight !default;
+$h5-font-size                  : $ms2 !default;
+$h5-line-height                : 1 !default;
+$h5-margin-bottom              : $alpha-leading !default;
+
+$h6-font-family                : $alpha-font-family !default;
+$h6-font-weight                : $alpha-font-weight !default;
+$h6-font-size                  : $ms1 !default;
+$h6-line-height                : 1 !default;
+$h6-margin-bottom              : $alpha-leading !default;
+
+$base-font-size                : $alpha-font-size !default;
+$base-line-height              : 1 !default;
+$base-margin-bottom            : $beta-leading !default;
+$base-indent                   : 2 !default;
+
+$blockquote-font-style         : italic !default;
+$blockquote-font-size          : $ms1 !default;
+$blockquote-line-height        : 1 !default;
+$blockquote-margin-bottom      : $alpha-leading !default;
+
+$small-font-size               : $ms1 !default;
+$small-line-height             : 1 !default;
+$small-margin-bottom           : $alpha-leading !default;
+
+$horizontal-rule-border-width  : 1px 0 0 !default;
+$horizontal-rule-border-style  : solid !default;
+$horizontal-rule-border-color  : palette(color-neutral,light) !default;
+
+$horizontal-rule-margin-top    : 0 !default;
+$horizontal-rule-margin-bottom : $alpha-leading !default;
+
+$link-transition               : none !default;
+
+$link-decoration               : none !default;
+$link-decoration--hover        : underline !default;
+
+$link-color                    : palette(color-alpha) !default;
+$link-color--visited           : palette(color-alpha) !default;
+$link-color--hover             : palette(color-alpha,light) !default;
+$link-color--focus             : palette(color-alpha,light) !default;
+
+$link-outline                  : 0 !default;
+$link-outline--focus           : thin dotted !default;
+
+// ---
+// Styles
+// ---
 
 h1 {
-    @include text-dimensions($ms6,2);
+    font-family: $h1-font-family;
+    font-weight: $h1-font-weight;
+    @include text-dimensions($h1-font-size,$h1-line-height);
+    @include margin-bottom($h1-margin-bottom);
 }
 
 h2 {
-    @include text-dimensions($ms4,1.5);
+    font-family: $h2-font-family;
+    font-weight: $h2-font-weight;
+    @include text-dimensions($h2-font-size,$h2-line-height);
+    @include margin-bottom($h2-margin-bottom);
 }
 
 h3 {
-    @include text-dimensions($ms2,1.25);
+    font-family: $h3-font-family;
+    font-weight: $h3-font-weight;
+    @include text-dimensions($h3-font-size,$h3-line-height);
+    @include margin-bottom($h3-margin-bottom);
 }
 
-h4,
-h5,
+h4 {
+    font-family: $h4-font-family;
+    font-weight: $h4-font-weight;
+    @include text-dimensions($h4-font-size,$h4-line-height);
+    @include margin-bottom($h4-margin-bottom);
+}
+
+h5 {
+    font-family: $h5-font-family;
+    font-weight: $h5-font-weight;
+    @include text-dimensions($h5-font-size,$h5-line-height);
+    @include margin-bottom($h5-margin-bottom);
+}
+
 h6 {
-    font-weight: $beta-font-weight;
-    @include text-dimensions($alpha-font-size,1);
+    font-family: $h6-font-family;
+    font-weight: $h6-font-weight;
+    @include text-dimensions($h6-font-size,$h6-line-height);
+    @include margin-bottom($h6-margin-bottom);
 }
 
 p,
@@ -40,17 +130,18 @@ ul,
 dl,
 table,
 address {
-    @include margin-bottom($beta-leading);
+    @include text-dimensions($base-font-size,$base-line-height);
+    @include margin-bottom($base-margin-bottom);
 }
 
 pre {
-    tab-size: 2;
+    tab-size: $base-indent;
 }
 
 ul,
 ol,
 blockquote {
-    padding-left: 2em;
+    padding-left: #{$base-indent}em;
 }
 
 li {
@@ -61,44 +152,47 @@ li {
 }
 
 blockquote {
-    font-style: italic;
+    font-style: $blockquote-font-style;
+    @include text-dimensions($blockquote-font-size,$blockquote-line-height);
+    @include margin-bottom($blockquote-margin-bottom);
 }
 
 small {
-    @include text-dimensions($ms-1,1,$alpha-line-height);
+    @include text-dimensions($small-font-size,$small-line-height);
+    @include margin-bottom($small-margin-bottom);
 }
 
 hr {
-    border: 1px solid palette(color-neutral,light);
-    border-width: 1px 0 0;
+    border-width: $horizontal-rule-border-width;
+    border-style: $horizontal-rule-border-style;
+    border-color: $horizontal-rule-border-color;
     clear: both;
-    margin-top: 0;
-    @include margin-bottom(1);
+    @include margin-tb($horizontal-rule-margin-top,$horizontal-rule-margin-bottom);
 }
 
 // Links
 
 a {
-    text-decoration: none;
-    color: palette(color-alpha);
-    transition: color .22s ease-in-out;
+    text-decoration: $link-decoration;
+    color: $link-color;
+    transition: $link-transition;
 
     &:visited {
-        color: palette(color-alpha);
+        color: $link-color--visited;
     }
 
     &:hover {
-        text-decoration: underline;
-        color: palette(color-alpha,light);
+        text-decoration: $link-decoration--hover;
+        color: $link-color--hover;
     }
 
     &:focus {
-        outline: thin dotted;
-        color: palette(color-alpha,light);
+        outline: $link-outline--focus;
+        color: $link-color--focus;
     }
 
     &:hover,
     &:active {
-        outline: 0;
+        outline: $link-outline;
     }
 }
