@@ -65,9 +65,9 @@
 @import 'components.pagination';
 @import 'components.cards';
 @import 'components.styleguide';
-@import 'components.styleguide-syntax';
 
 /* Plugins */
+@import 'plugins.syntax';
 @import 'plugins.googlemaps';
 
 /* Utilities */
