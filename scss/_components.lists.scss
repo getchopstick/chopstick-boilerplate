@@ -5,6 +5,12 @@
     Replacements for default bullet and numbered lists.
 */
 
+/**
+ *  1. Use the counter as content
+ *
+ *  2. Increment the counter by 1
+ */
+
 // Custom bulleted list
 
 .c-list-bullet {
@@ -50,8 +56,8 @@
         @include padding-lr(1,0);
 
         &:before {
-            content: counter(li); /* Use the counter as content */
-            counter-increment: li; /* Increment the counter by 1 */
+            content: counter(li); /* [1] */
+            counter-increment: li; /* [2] */
             position: absolute;
             top: 0;
             left: 0;
