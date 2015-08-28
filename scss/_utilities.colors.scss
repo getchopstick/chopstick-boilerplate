@@ -5,8 +5,16 @@
 */
 
 // ---
-// Colors
+// Variables
 // ---
+
+
+
+// ---
+// Styles
+// ---
+
+// Colors
 
 .u-color-neutral-x-light { color: palette(color-neutral,x-light); }
 .u-color-neutral-light { color: palette(color-neutral,light); }
@@ -24,9 +32,7 @@
 .u-color-beta-dark { color: palette(color-beta,dark); }
 .u-color-beta-x-dark { color: palette(color-beta,x-dark); }
 
-// ---
 // Background colors
-// ---
 
 .u-bgcolor-neutral-x-light { background-color: palette(color-neutral,x-light); }
 .u-bgcolor-neutral-light { background-color: palette(color-neutral,light); }
