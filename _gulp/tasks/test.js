@@ -1,5 +1,5 @@
 // ---
-// SCSS TASK
+// TEST TASK
 // ---
 
 // plugins
