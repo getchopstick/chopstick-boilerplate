@@ -24,9 +24,7 @@ var processors = [
 gulp.task('scss', function () {
     gulp.src(config.src)
         .pipe(sourcemaps.init())
-        .pipe(sass.sync({
-            outputStyle: 'compressed'
-        })
+        .pipe(sass.sync(config.settings)
         .on('error', sass.logError))
         .pipe(postcss(processors))
         .pipe(filesize())

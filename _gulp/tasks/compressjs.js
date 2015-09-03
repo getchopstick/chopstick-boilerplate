@@ -11,7 +11,7 @@ var config = require('../config').compressjs;
 
 //task
 gulp.task('compressjs', function() {
-  gulp.src(config.src)
-    .pipe(uglyfly())
-    .pipe(gulp.dest(config.dest));
+    gulp.src(config.src)
+        .pipe(uglyfly())
+        .pipe(gulp.dest(config.dest));
 });
