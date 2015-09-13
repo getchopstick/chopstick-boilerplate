@@ -3,17 +3,17 @@
 // Define your tasks & variables here
 // ---
 
+var path = './';
+
 module.exports = {
 
-    base: '/',
-
     scss: {
-        src: module.exports.base + 'scss/**/*.scss',
+        src: path + 'scss/**/*.scss',
         settings: {
             outputStyle: 'compressed'
         },
-        cssDest: module.exports.base + 'css/',
-        jekyllCssDes: module.exports.base + '_site/css/',
+        cssDest: path + 'css/',
+        jekyllCssDes: path + '_site/css/',
         prefix: [                          // Autoprefixer supported browsers
             'last 2 version',
             '> 1%',
@@ -25,7 +25,7 @@ module.exports = {
     },
 
     lint: {
-        src: module.exports.base + 'scss/**/*.scss',
+        src: path + 'scss/**/*.scss',
         settings: {
             'config': 'lint.yml'
         }
@@ -33,14 +33,14 @@ module.exports = {
 
     js: {
         src : [  // source js file
-            module.exports.base + 'js/theme.js',
-            module.exports.base + 'js/_components/*.js',
-            module.exports.base + 'js/loader.js'
+          path + 'js/theme.js',
+          path + 'js/_components/*.js',
+          path + 'js/loader.js'
 
         ],
-        concatFilename: module.exports.base + 'theme.concat.js', // result filename
-        jekyllJsDest: module.exports.base + '_site/js/',
-        jsDest: module.exports.base + 'js/'
+        concatFilename: 'theme.concat.js', // result filename
+        jekyllJsDest: path + '_site/js/',
+        jsDest: path + 'js/'
     },
 
     jekyll: {
@@ -49,7 +49,7 @@ module.exports = {
 
     browsersync: {
         server: {
-            baseDir: './_site',
+            baseDir: path + '_site',
             reloadDelay: 2000,
             debounce: 200,
             notify: true,
@@ -64,29 +64,29 @@ module.exports = {
 
     watch: {
         jekyllSource: [    // Files that trigger a Jekyll rebuild
-            'img/*.png',
-            'img/*.jpg',
-            'img/*.svg',
-            '_includes/**/*.html',
-            '_layouts/*.html',
-            '_posts/*.md',
-            '_data/*.yml',
-            '*.html'
+            path + 'img/*.png',
+            path + 'img/*.jpg',
+            path + 'img/*.svg',
+            path + '_includes/**/*.html',
+            path + '_layouts/*.html',
+            path + '_posts/*.md',
+            path + '_data/*.yml',
+            path + '*.html'
         ]
     },
 
     compressjs: {
-        src: module.exports.base + 'js/*.js',
-        dest: module.exports.base + '_site/js/'
+        src: path + 'js/*.js',
+        dest: path + '_site/js/'
     },
 
     svg2png: {
-        src: module.exports.base + "./img/svg/*.svg",
+        src: path + "img/svg/*.svg",
         settings : {
             scaling : 2, // The scaling factor (optional; default=1.0)
             verbose: false // Logs progress information (optional; default=false)
         },
-        dest: module.exports.base + "./img/png"
+        dest: path + "img/png"
     }
 
 };
