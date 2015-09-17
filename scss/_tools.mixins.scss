@@ -28,12 +28,21 @@
 }
 
 //
-// Media Query mixin (old version)
+// Media Query mixin
 // @include mq(#point, #query1, #query2);
 //
-@mixin mq($point, $query1: min, $query2: width) {
-    @media (#{$query1}-#{$query2}: $point) {
-        @content;
+
+@mixin mq($breakpoint, $query1: min, $query2: width) {
+    $query: map-get($breakpoints, $breakpoint);
+
+    @if $query != null {
+        @media (#{$query1}-#{$query2}: #{$query}) {
+            @content;
+        }
+    } @else {
+        @media (#{$query1}-#{$query2}: $breakpoint) {
+            @content;
+        }
     }
 }
 

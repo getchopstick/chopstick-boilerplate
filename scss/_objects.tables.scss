@@ -22,7 +22,7 @@
         }
     }
 
-    @include mq($bp2) {
+    @include mq(bp2) {
         > thead {
             display: table-header-group; // default table layout
         }
