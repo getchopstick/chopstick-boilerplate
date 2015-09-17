@@ -52,6 +52,19 @@ $radius                     : 5px;
 $border-width               : 1px;
 $border-style               : solid;
 
+
+// ---
+// Z-indexes
+// ---
+
+$z-indexes: (
+    alpha                   : 1,
+    beta                    : 2,
+    gamma                   : 3,
+    delta                   : 4,
+    epsilon                 : 5
+) !default;
+
 // ---
 // Breakpoints
 // ---
@@ -62,17 +75,13 @@ $bp3                        : 680/16*1em !default;
 $bp4                        : 960/16*1em !default;
 $bp5                        : 1140/16*1em !default;
 
-// ---
-// Z-indexes
-// ---
-
-$z-indexes: (
-    alpha: 1,
-    beta: 2,
-    gamma: 3,
-    delta: 4,
-    epsilon: 5
-);
+$breakpoints: (
+    bp1                     : 320/16*1em,
+    bp2                     : 480/16*1em,
+    bp3                     : 680/16*1em,
+    bp4                     : 960/16*1em,
+    bp5                     : 1140/16*1em,
+) !default;
 
 // ---
 // Grid
@@ -81,22 +90,13 @@ $z-indexes: (
 // 1 times the $alpha-font-size. It's calculated in rem in _tools.spacing.scss
 $columns-gutter             : 1 !default;
 
+// Define the amount of columns in the grid
 $columns: (
     2,
     3,
     4,
-    5,
-    6
+    5
 ) !default;
-
-// TODO: make breakpoints variable
-//$grid: (
-//    $bp1: 2,
-//    $bp2: 4,
-//    $bp3: 6,
-//    $bp4: 6,
-//    $bp5: 6
-//) !default;
 
 // ---
 // Tools
