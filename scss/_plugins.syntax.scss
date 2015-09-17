@@ -10,30 +10,30 @@
 // Variables
 // ---
 
-$syntax-color         : palette(color-neutral,dark) !default;
+$syntax-color             : palette(color-neutral,dark) !default;
 
-$syntax-border-width  : $border-width !default;
-$syntax-border-style  : $border-style !default;
-$syntax-border-radius : $radius !default;
-$syntax-border-color  : palette(color-neutral) !default;
+$syntax-border-width      : $border-width !default;
+$syntax-border-style      : $border-style !default;
+$syntax-border-radius     : $radius !default;
+$syntax-border-color      : palette(color-neutral) !default;
 
-$syntax-margin-top    : .5 !default;
-$syntax-margin-bottom : .5 !default;
+$syntax-margin-top        : .5 !default;
+$syntax-margin-bottom     : .5 !default;
 
-$syntax-font-size     : 90% !default;
+$syntax-font-size         : 90% !default;
 
-$linenos-color: palette(color-neutral,dark) !default;
-$linenos-background-color: palette(color-neutral,light) !default;
+$linenos-color            : palette(color-neutral,dark) !default;
+$linenos-background-color : palette(color-neutral,light) !default;
 
-$linenos-border-width: 1px !default;
-$linenos-border-style: solid !default;
-$linenos-border-color: palette(color-neutral) !default;
+$linenos-border-width     : 1px !default;
+$linenos-border-style     : solid !default;
+$linenos-border-color     : palette(color-neutral) !default;
 
-$linenos-padding-left: .5 !default;
-$linenos-padding-right: .5 !default;
+$linenos-padding-left     : .5 !default;
+$linenos-padding-right    : .5 !default;
 
-$code-padding-left: 1 !default;
-$code-padding-right: 0 !default;
+$code-padding-left        : 1 !default;
+$code-padding-right       : 0 !default;
 
 // ---
 // Styles
@@ -48,6 +48,8 @@ $code-padding-right: 0 !default;
 // blue      #268bd2  reserved keywords
 // cyan      #2aa198  strings, numbers
 // green     #859900  operators, other keywords
+
+// TODO: make colors variable
 
 .highlighttable {
     display: block;

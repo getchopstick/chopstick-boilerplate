@@ -63,6 +63,18 @@ $bp4                        : 960/16*1em !default;
 $bp5                        : 1140/16*1em !default;
 
 // ---
+// Z-indexes
+// ---
+
+$z-indexes: (
+    alpha: 1,
+    beta: 2,
+    gamma: 3,
+    delta: 4,
+    epsilon: 5
+);
+
+// ---
 // Grid
 // ---
 
@@ -76,6 +88,15 @@ $columns: (
     5,
     6
 ) !default;
+
+// TODO: make breakpoints variable
+//$grid: (
+//    $bp1: 2,
+//    $bp2: 4,
+//    $bp3: 6,
+//    $bp4: 6,
+//    $bp5: 6
+//) !default;
 
 // ---
 // Tools
