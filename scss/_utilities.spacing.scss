@@ -4,22 +4,6 @@
     Utility classes for spacing
 */
 
-// ---
-// Variables
-// ---
-
-$increments: (
-    alpha                       : 0,
-    beta                        : .5,
-    gamma                       : 1,
-    delta                       : 1.5,
-    epsilon                     : 2
-) !default;
-
-// ---
-// Styles
-// ---
-
 // Loop through the increments map and get the value.
 @each $increment, $value in $increments {
 
