@@ -9,7 +9,7 @@
 // Variables
 // ---
 
-$grid-max-width : bp5 !default;
+$grid-max-width : map-get($breakpoints,bp5) !default;
 $grid-gutter    : $columns-gutter !default;
 
 // ---
