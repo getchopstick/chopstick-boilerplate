@@ -8,62 +8,23 @@
 // Variables
 // ---
 
-
+$increments: (
+    alpha                       : 0,
+    beta                        : .5,
+    gamma                       : 1,
+    delta                       : 1.5,
+    epsilon                     : 2
+) !default;
 
 // ---
 // Styles
 // ---
 
-// Margin-bottom
+// Loop through the increments map and get the value.
+@each $increment, $value in $increments {
 
-.u-mb-0 {
-    margin-bottom: 0;
-}
-
-.u-mb-0-5 {
-    @include margin-bottom(.5);
-}
-
-.u-mb-1 {
-    @include margin-bottom(1);
-}
-
-.u-mb-2 {
-    @include margin-bottom(2);
-}
-
-// padding-bottom
-
-.u-pb-0 {
-    padding-bottom: 0;
-}
-
-.u-pb-0-5 {
-    @include padding-bottom(.5);
-}
-
-.u-pb-1 {
-    @include padding-bottom(1);
-}
-
-.u-pb-2 {
-    @include padding-bottom(2);
-}
-
-// Padding-top
-
-.u-pt-0 {
-    padding-top: 0;
-}
-
-.u-pt-0-5 {
-    @include padding-top(.5);
-}
-
-.u-pt-1 {
-    @include padding-top(1);
-}
-
-.u-pt-2 {
-    @include padding-top(2);
+    // Increment utility class (e.g. .u-mb-alpha)
+    .u-mb-#{$increment} {
+        @include margin-bottom($value);
+    }
 }
