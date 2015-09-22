@@ -1,9 +1,12 @@
 {
   "name": "chopstick-boilerplate",
   "dependencies": {
-    "jquery": "~1.11.1",
+    "chopstick-elements": "~0.7.0",
+    "chopstick-generic": "~0.7.0",
+    "chopstick-tools": "chopstick-elements#~0.7.0",
     "html5shiv": "~3.7.0",
-    "respond": "~1.4.1",
-    "modernizr": "~2.8.3"
+    "jquery": "~1.11.1",
+    "modernizr": "~2.8.3",
+    "respond": "~1.4.1"
   }
 }

@@ -17,26 +17,26 @@
  */
 
 // Settings
-@import 'settings.global';
-@import 'settings.colors';
+@import '../vendor/chopstick-settings/settings.global';
+@import '../vendor/chopstick-settings/settings.colors';
 
 // Tools
-@import 'tools.functions';
-@import 'tools.mixins';
-@import 'tools.spacing';
-@import 'tools.typography';
+@import '../vendor/chopstick-tools/tools.functions';
+@import '../vendor/chopstick-tools/tools.mixins';
+@import '../vendor/chopstick-tools/tools.spacing';
+@import '../vendor/chopstick-tools/tools.typography';
 
 /* Generic */
-@import 'generic.normalize';
-@import 'generic.reset';
-@import 'generic.box-sizing';
+@import '../vendor/chopstick-generic/generic.normalize';
+@import '../vendor/chopstick-generic/generic.reset';
+@import '../vendor/chopstick-generic/generic.box-sizing';
 
 /* Elements */
-@import 'elements.page';
-@import 'elements.typography';
-@import 'elements.images';
-@import 'elements.forms';
-@import 'elements.tables';
+@import '../vendor/chopstick-elements/elements.page';
+@import '../vendor/chopstick-elements/elements.typography';
+@import '../vendor/chopstick-elements/elements.images';
+@import '../vendor/chopstick-elements/elements.forms';
+@import '../vendor/chopstick-elements/elements.tables';
 
 /* Objects */
 @import 'objects.grid';
