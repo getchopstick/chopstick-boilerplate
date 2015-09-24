@@ -4,29 +4,58 @@
     Default markup for page level elements
 */
 
-html {
-    font: $alpha-font-weight $alpha-font-size/16*100%/#{$alpha-line-height} $alpha-font-family;
-    -webkit-overflow-scrolling: touch;
-    background-color: palette(color-neutral,dark);
+// ---
+// Variables
+// ---
 
-    @include mq($bp5) {
-        font-size: $alpha-font-size/16*112.5%;
+$html-font-family                   : $alpha-font-family !default;
+$html-font-weight                   : $alpha-font-weight !default;
+$html-font-size                     : $alpha-font-size !default;
+$html-line-height                   : $alpha-line-height !default;
+
+$html-responsive-font-size          : false !default;
+$html-responsive-font-breakpoint    : bp5 !default;
+$html-responsive-font-magnification : 112.5% !default;
+
+$html-background-color              : palette(color-neutral,dark) !default;
+$body-color                         : palette(color-neutral,dark) !default;
+
+$body-font-smoothing                : true !default;
+
+$body-selection-background-color    : palette(color-neutral,dark) !default;
+$body-selection-color               : palette(color-neutral,light) !default;
+$body-selection-text-shadow         : none !default;
+
+// Styles
+
+html {
+    font: $html-font-weight $html-font-size/16*100%/#{$html-line-height} $html-font-family;
+    -webkit-overflow-scrolling: touch;
+    background-color: $html-background-color;
+
+    @if $html-responsive-font-size == true {
+        @include mq($html-responsive-font-breakpoint) {
+            font-size: $alpha-font-size/16*$html-responsive-font-magnification;
+        }
     }
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
-    color: palette(color-neutral,dark);
+    color: $body-color;
+
+    @if $body-font-smoothing == true {
+        -webkit-font-smoothing: antialiased;
+    }
 }
 
 ::-moz-selection {
-    background-color: palette(color-neutral,dark);
-    color: palette(color-neutral,light);
-    text-shadow: none;
+    background-color: $body-selection-background-color;
+    color: $body-selection-color;
+    text-shadow: $body-selection-text-shadow;
 }
 
 ::selection {
-    background-color: palette(color-neutral,dark);
-    color: palette(color-neutral,light);
-    text-shadow: none;
+    background-color: $body-selection-background-color;
+    color: $body-selection-color;
+    text-shadow: $body-selection-text-shadow;
 }

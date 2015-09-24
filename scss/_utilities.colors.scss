@@ -4,42 +4,21 @@
     Foreground & background color utilities
 */
 
-// ---
-// Colors
-// ---
+// Loop through the different colors in palettes map
+@each $palette, $value in $palettes {
 
-.u-color-neutral-x-light { color: palette(color-neutral,x-light); }
-.u-color-neutral-light { color: palette(color-neutral,light); }
-.u-color-neutral { color: palette(color-neutral); }
-.u-color-neutral-dark { color: palette(color-neutral,dark); }
-.u-color-neutral-x-dark { color: palette(color-neutral,x-dark); }
+    // Loop through the different shades in colors map
+    @each $shade, $i in $value {
 
-.u-color-alpha-light { color: palette(color-alpha,light); }
-.u-color-alpha { color: palette(color-alpha); }
-.u-color-alpha-dark { color: palette(color-alpha,dark); }
-.u-color-alpha-x-dark { color: palette(color-alpha,x-dark); }
+        // Colors (e.g .u-color-alpha-base)
+        .u-#{$palette}-#{$shade} {
+            color: $i;
+        }
 
-.u-color-beta-light { color: palette(color-beta,light); }
-.u-color-beta { color: palette(color-beta); }
-.u-color-beta-dark { color: palette(color-beta,dark); }
-.u-color-beta-x-dark { color: palette(color-beta,x-dark); }
+        // Background colors (e.g .u-bgcolor-alpha-base)
+        .u-bg#{$palette}-#{$shade} {
+            background-color: $i;
+        }
 
-// ---
-// Background colors
-// ---
-
-.u-bgcolor-neutral-x-light { background-color: palette(color-neutral,x-light); }
-.u-bgcolor-neutral-light { background-color: palette(color-neutral,light); }
-.u-bgcolor-neutral { background-color: palette(color-neutral); }
-.u-bgcolor-neutral-dark { background-color: palette(color-neutral,dark); }
-.u-bgcolor-neutral-x-dark { background-color: palette(color-neutral,x-dark); }
-
-.u-bgcolor-alpha-light { background-color: palette(color-alpha,light); }
-.u-bgcolor-alpha { background-color: palette(color-alpha); }
-.u-bgcolor-alpha-dark { background-color: palette(color-alpha,dark); }
-.u-bgcolor-alpha-x-dark { background-color: palette(color-alpha,x-dark); }
-
-.u-bgcolor-beta-light { background-color: palette(color-beta,light); }
-.u-bgcolor-beta { background-color: palette(color-beta); }
-.u-bgcolor-beta-dark { background-color: palette(color-beta,dark); }
-.u-bgcolor-beta-x-dark { background-color: palette(color-beta,x-dark); }
+    }
+}

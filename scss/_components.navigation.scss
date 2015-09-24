@@ -10,7 +10,7 @@
     display: none;
     font-family: $alpha-font-family;
 
-    @include mq($bp3) {
+    @include mq(bp3) {
         display: block;
         width: auto;
         float: right;
@@ -24,7 +24,7 @@
     .c-nav-main__list {
         border-top: 1px dotted palette(color-neutral,light);
 
-        @include mq($bp3) {
+        @include mq(bp3) {
             border-top: 0;
             margin-bottom: 0;
         }
@@ -35,7 +35,7 @@
             border-top: 1px dotted palette(color-neutral,light);
         }
 
-        @include mq($bp3) {
+        @include mq(bp3) {
             float: left;
 
             & + & {
@@ -52,7 +52,7 @@
         font-weight: $beta-font-weight;
         @include text-dimensions($alpha-font-size,1,0,.25,.25);
 
-        @include mq($bp3) {
+        @include mq(bp3) {
             @include padding-tb(1.25,1.25);
         }
 
@@ -79,7 +79,7 @@
         background-color: palette(color-alpha);
     }
 
-    @include mq($bp3) {
+    @include mq(bp3) {
         display: none;
     }
 }

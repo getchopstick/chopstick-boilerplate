@@ -110,11 +110,6 @@ The origin of the Chopstick name:
 
 ## Roadmap
 
-### v0.7
-1. make everything modular and configurable
-- start with the basics, options are default off
-- everything is a variable
-
 ### v0.8
 1. convert chopstick .scss to a dependency (npm and bower) and integrate it into the boilerplate
 

@@ -17,14 +17,26 @@
     </article>
 */
 
+
+// ---
+// Variables
+// ---
+
+$media-object-gutter        : $columns-gutter !default;
+$media-object-margin-bottom : $alpha-leading !default;
+
+// ---
+// Styles
+// ---
+
 .o-media {
     @include clearfix;
 }
 
     .o-media__img {
         float: left;
-        @include padding-lr(0,1);
-        @include margin-bottom(1);
+        @include padding-lr(0,$media-object-gutter);
+        @include margin-bottom($media-object-margin-bottom);
 
         img {
             display: block;
@@ -33,7 +45,7 @@
 
     .o-media__img--reverse {
         float: right;
-        @include padding-lr(1,0);
+        @include padding-lr($media-object-gutter,0);
     }
 
     .o-media__body {

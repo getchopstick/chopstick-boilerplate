@@ -5,7 +5,17 @@
     https://github.com/csswizardry/inuit.css
 */
 
-@if $debug-mode == true{
+// ---
+// Variables
+// ---
+
+
+
+// ---
+// Styles
+// ---
+
+@if $debug-mode == true {
     /*------------------------------------*\
         $DEBUG
     \*------------------------------------*/

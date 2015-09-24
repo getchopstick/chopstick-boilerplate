@@ -7,7 +7,6 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     concat = require('gulp-concat');
 
-
 // configfile
 var config = require('../config').js;
 

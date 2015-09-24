@@ -7,7 +7,6 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     cp = require('child_process');
 
-
 // configfile
 var config = require('../config').jekyll;
 

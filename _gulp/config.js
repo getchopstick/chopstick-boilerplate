@@ -3,47 +3,53 @@
 // Define your tasks & variables here
 // ---
 
+var path = './';
+
 module.exports = {
 
-  scss: {
-    screen : 'scss/screen.scss',
-    src : 'scss/**/*.scss',
-    settings : {
-        bundleExec: true,
-        sourcemap: true,
-        style: 'compact'
+    scss: {
+        src: path + 'scss/**/*.scss',
+        settings: {
+            outputStyle: 'compressed'
+        },
+        cssDest: path + 'css/',
+        jekyllCssDes: path + '_site/css/',
+        prefix: [                          // Autoprefixer supported browsers
+            'last 2 version',
+            '> 1%',
+            'ie 8',
+            'ie 9',
+            'ios 6',
+            'android 4'
+        ]
     },
-    cssDest : 'css/',
-    jekyllCssDes : '_site/css/',
-    prefix : [                          // Autoprefixer supported browsers
-        'last 2 version',
-        '> 1%',
-        'ie 8',
-        'ie 9',
-        'ios 6',
-        'android 4'
-    ]
-  },
 
-  js : {
-    src : [  // source js file
-        'js/theme.js',
-        'js/_components/*.js',
-        'js/loader.js'
+    lint: {
+        src: path + 'scss/**/*.scss',
+        settings: {
+            'config': 'lint.yml'
+        }
+    },
 
-    ],
-    concatFilename : 'theme.concat.js', // result filename
-    jekyllJsDest : '_site/js/',
-    jsDest : 'js/'
-  },
+    js: {
+        src : [  // source js file
+          path + 'js/theme.js',
+          path + 'js/_components/*.js',
+          path + 'js/loader.js'
 
-  jekyll : {
-    buildMessage: '<span style="color: grey">Building</span> jekyll'
-  },
+        ],
+        concatFilename: 'theme.concat.js', // result filename
+        jekyllJsDest: path + '_site/js/',
+        jsDest: path + 'js/'
+    },
 
-  browsersync : {
-    server: {
-            baseDir: './_site',
+    jekyll: {
+        buildMessage: '<span style="color: grey">Building</span> jekyll'
+    },
+
+    browsersync: {
+        server: {
+            baseDir: path + '_site',
             reloadDelay: 2000,
             debounce: 200,
             notify: true,
@@ -54,33 +60,33 @@ module.exports = {
                 scroll: false
             }
         }
-  },
-
-  watch : {
-    jekyllSource : [    // Files that trigger a Jekyll rebuild
-        'img/*.png',
-        'img/*.jpg',
-        'img/*.svg',
-        '_includes/**/*.html',
-        '_layouts/*.html',
-        '_posts/*.md',
-        '_data/*.yml',
-        '*.html'
-    ]
-  },
-
-  compressjs : {
-    src : 'js/*.js',
-    dest : '_site/js/'
-  },
-
-  svg2png : {
-    src: "./img/svg/*.svg",
-    settings : {
-        scaling : 2, // The scaling factor (optional; default=1.0)
-        verbose: false // Logs progress information (optional; default=false)
     },
-    dest : "./img/png"
-  }
+
+    watch: {
+        jekyllSource: [    // Files that trigger a Jekyll rebuild
+            path + 'img/*.png',
+            path + 'img/*.jpg',
+            path + 'img/*.svg',
+            path + '_includes/**/*.html',
+            path + '_layouts/*.html',
+            path + '_posts/*.md',
+            path + '_data/*.yml',
+            path + '*.html'
+        ]
+    },
+
+    compressjs: {
+        src: path + 'js/*.js',
+        dest: path + '_site/js/'
+    },
+
+    svg2png: {
+        src: path + "img/svg/*.svg",
+        settings : {
+            scaling : 2, // The scaling factor (optional; default=1.0)
+            verbose: false // Logs progress information (optional; default=false)
+        },
+        dest: path + "img/png"
+    }
 
 };
