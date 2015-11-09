@@ -29,7 +29,7 @@ $body-selection-text-shadow         : none !default;
 // Styles
 
 html {
-    font: $html-font-weight $html-font-size/16*100%/#{$html-line-height} $html-font-family;
+    font: $html-font-weight #{$html-font-size/16*100%}/#{$html-line-height} $html-font-family;
     -webkit-overflow-scrolling: touch;
     background-color: $html-background-color;
 
