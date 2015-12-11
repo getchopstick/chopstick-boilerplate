@@ -106,6 +106,16 @@ $increments: (
 ) !default;
 
 // ---
+// Animations
+// ---
+
+$animation-duration-alpha   : .1s;
+$animation-duration-beta    : .2s;
+$animation-duration-gamma   : .3s;
+$animation-easing-alpha     : ease-in-out;
+$animation-easing-beta      : cubic-bezier(.68, -.55, .265, 1.55); // bouncy
+
+// ---
 // Tools
 // ---
 

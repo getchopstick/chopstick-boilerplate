@@ -29,8 +29,8 @@
     border-radius: $radius;
     border-style: solid;
     border-width: 1px;
-    transition-duration: .1s;
-    transition-timing-function: ease-in-out;
+    transition-duration: $animation-duration-alpha;
+    transition-timing-function: $animation-easing-alpha;
     transition-property: background, color, border;
     outline: none;
     line-height: normal;
