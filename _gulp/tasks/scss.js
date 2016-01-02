@@ -30,6 +30,6 @@ gulp.task('scss', function () {
         .pipe(filesize())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(config.jekyllCssDes))
-        .pipe(browserSync.reload({stream:true}))
+        .pipe(browserSync.stream({match: '**/*.css'}))
         .pipe(gulp.dest(config.cssDest))
 });
