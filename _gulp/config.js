@@ -67,11 +67,10 @@ module.exports = {
             path + 'img/*.png',
             path + 'img/*.jpg',
             path + 'img/*.svg',
-            path + '_includes/**/*.html',
-            path + '_layouts/*.html',
             path + '_posts/*.md',
             path + '_data/*.yml',
-            path + '*.html'
+            path + '**/*.html',
+            '!' + path + '_site/**/*.*'
         ]
     },
 
