@@ -42,6 +42,27 @@ Install [gulp](http://gulpjs.com/) and the necessary gulp dependencies:
     npm install -g gulp
     npm install
 
+## Chopstick `.scss` structure.
+
+The Chopstick Scss is maintained in separate repositories which are loaded with [Bower](http://bower.io/). We believe these partials should be easy to update and configurable without writing new code.
+
+
+We use the following partials according to the [ITcss](http://itcss.io/) structure.
+1. [chopstick-settings](https://github.com/getchopstick/chopstick-settings): contains global variables and config switches to get you started. These can be overwritten in your project. Simply duplicate the variables you want to change or replace this file.
+2. [chopstick-tools](https://github.com/getchopstick/chopstick-tools):  contains mixins and functions.
+3. [chopstick-generic](https://github.com/getchopstick/chopstick-generic): contains ground-zero styles (Normalize.css, resets, box-sizing)
+4. [chopstick-elements](https://github.com/getchopstick/chopstick-elements): contains unclassed HTML elements (type selectors)
+5. [chopstick-objects](https://github.com/getchopstick/chopstick-objects): contains cosmetic-free design patterns
+6. [chopstick-utilities](https://github.com/getchopstick/chopstick-objects): contains helper classes
+
+### Usage
+If you want to change something within these partials you have 3 options:
+1. Change the settings and default appearance by overriding the variables in your project.
+2. Create a pull request on the source code in the correct repository.
+3. Copy the original file in you own project. This means you will have to do manual updates in the future.
+
+Project specific code should be written in the components layer.
+
 ### Use
 
 We use Gulp as our task runner. There are some basic tasks defined but these can be easily extended by changing the `gulpfile.js`.
