@@ -1,12 +1,12 @@
 {
   "name": "chopstick-boilerplate",
   "dependencies": {
-    "chopstick-settings": "~0.7.1",
-    "chopstick-tools": "~0.7.1",
-    "chopstick-generic": "~0.7.1",
-    "chopstick-elements": "~0.7.1",
-    "chopstick-objects": "~0.7.1",
-    "chopstick-utilities": "~0.7.1",
+    "chopstick-settings": ">=0.7.3",
+    "chopstick-tools": ">=0.7.2",
+    "chopstick-generic": ">=0.7.2",
+    "chopstick-elements": ">=0.7.4",
+    "chopstick-objects": ">=0.7.4",
+    "chopstick-utilities": ">=0.7.3",
     "html5shiv": "~3.7.0",
     "jquery": "~1.11.1",
     "modernizr": "~2.8.3",
