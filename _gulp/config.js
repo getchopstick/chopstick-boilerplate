@@ -64,9 +64,9 @@ module.exports = {
 
     watch: {
         jekyllSource: [    // Files that trigger a Jekyll rebuild
-            path + 'img/*.png',
-            path + 'img/*.jpg',
-            path + 'img/*.svg',
+            path + 'img/**/*.png',
+            path + 'img/**/*.jpg',
+            path + 'img/**/*.svg',
             path + '_posts/*.md',
             path + '_data/*.yml',
             path + '**/*.html',
