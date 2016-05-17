@@ -17,8 +17,8 @@
  */
 
 // Settings
-@import '../vendor/chopstick-settings/settings.global';
-@import '../vendor/chopstick-settings/settings.colors';
+@import 'settings.colors';
+@import 'settings.global';
 
 // Tools
 @import '../vendor/chopstick-tools/tools.functions';
@@ -68,6 +68,7 @@
 @import '../vendor/chopstick-utilities/utilities.widths';
 @import '../vendor/chopstick-utilities/utilities.push';
 @import '../vendor/chopstick-utilities/utilities.pull';
+@import '../vendor/chopstick-utilities/utilities.align';
 @import '../vendor/chopstick-utilities/utilities.spacing';
 @import '../vendor/chopstick-utilities/utilities.colors';
 @import '../vendor/chopstick-utilities/utilities.layers';
