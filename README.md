@@ -18,7 +18,7 @@ It uses the following tools
 ### Requirements
 
 1. [Ruby](https://www.ruby-lang.org) and [rubygems](https://rubygems.org)
-2. [Node 0.12.2](http://nodejs.org) and [npm](https://npmjs.org) or [NVM](https://github.com/creationix/nvm)
+2. [Node 4.4.4](http://nodejs.org) and [npm 2.15.1](https://npmjs.org) or [NVM](https://github.com/creationix/nvm)
 
 ### Install
 
