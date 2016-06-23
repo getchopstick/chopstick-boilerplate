@@ -119,12 +119,6 @@ Avoid reliance on other bits.
 - Murphy’s Law: Pick the option that is the most resilient, even if it is the most boring one
 
 
-## What’s in a name
-The origin of the Chopstick name:
-- Chopstick originated as front-end companion of Fork CMS. Both are developed and maintained by [Wijs](https://wijs.be/en)
-- Inspired by the Karate Kid movies, Chopstick is a deadly and precise [fly squating tool](https://www.youtube.com/watch?v=J1gAHil89Z4).
-
-
 ## Roadmap
 
 ### v0.9
@@ -142,7 +136,7 @@ The origin of the Chopstick name:
 
 ## Credits
 
-Chopstick is maintained by [Wijs](https://wijs.be/en). You are free to contribute to Chopstick via GitHub Pull Requests. We have a couple of simple guidelines we try to follow, of which most are taken from the [CSS Tricks Sass Style Guide](http://css-tricks.com/sass-style-guide). Please refer to the [CONTRIBUTING.md](https://github.com/getchopstick/chopstick-boilerplate/blob/master/CONTRIBUTING.md) for more information
+You are free to contribute to Chopstick via GitHub Pull Requests. We have a couple of simple guidelines we try to follow, of which most are taken from the [CSS Tricks Sass Style Guide](http://css-tricks.com/sass-style-guide). Please refer to the [CONTRIBUTING.md](https://github.com/getchopstick/chopstick-boilerplate/blob/master/CONTRIBUTING.md) for more information
 
 We owe a ton of credits to the following projects for inspiration:
 
