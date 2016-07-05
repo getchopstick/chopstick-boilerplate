@@ -3,11 +3,11 @@ var chopstick =
     // init, something like a constructor
     init: function()
     {
-        chopstick.loadObject(chopstick.mobileNav, 'chopstick.mobileNav');
+        // chopstick.loadObject(chopstick.mobileNav, 'chopstick.mobileNav');
         chopstick.loadObject(chopstick.hide, 'chopstick.hide');
         chopstick.loadObject(chopstick.toggle, 'chopstick.toggle');
 
-        console.log("javascript is locked and loaded!") // for testing purposes. Check your console. Delete after you finished reading this. :-)
+        // console.log("javascript is locked and loaded!") // for testing purposes. Check your console. Delete after you finished reading this. :-)
     },
 
     /**

@@ -3,11 +3,11 @@ var chopstick =
     // init, something like a constructor
     init: function()
     {
-        chopstick.loadObject(chopstick.mobileNav, 'chopstick.mobileNav');
+        // chopstick.loadObject(chopstick.mobileNav, 'chopstick.mobileNav');
         chopstick.loadObject(chopstick.hide, 'chopstick.hide');
         chopstick.loadObject(chopstick.toggle, 'chopstick.toggle');
 
-        console.log("javascript is locked and loaded!") // for testing purposes. Check your console. Delete after you finished reading this. :-)
+        // console.log("javascript is locked and loaded!") // for testing purposes. Check your console. Delete after you finished reading this. :-)
     },
 
     /**
@@ -149,7 +149,6 @@ chopstick.toggle =
     // Define the constructor
     this.ChopstickToggle = function() {
         // Global element references
-        chopstickToggle = this;
 
         // Create default values (super basic toggle)
         var defaults = {
@@ -165,43 +164,41 @@ chopstick.toggle =
         this.options = $.extend(defaults, arguments[0]); //https://api.jquery.com/jquery.extend/
         // console.log(this.options);
         // }
-
+        console.log(this.options);
         bindUIEvents.call(this);
     }
 
     // public methods
     ChopstickToggle.prototype.applyState = function() {
         // Apply a certain classname on a certain target
-
+        var _ = this;
+        $(_.options.target).addClass(_.options.className);
     }
 
     ChopstickToggle.prototype.removeState = function() {
         // Remove a certain classname on a certain target
+        var _ = this;
+        $(_.options.target).removeClass(_.options.className);
     }
 
     ChopstickToggle.prototype.toggleState = function() {
         // toggle a certain classname on a certain target
-        var target = $(this.options.target),
-            className = $(this.options.className);
-
-        target.toggleClass(className);
+        var _ = this;
+        $(_.options.target).toggleClass(_.options.className);
     }
 
     // Private methods
     function bindUIEvents() {
-        console.log(this);
-        var toggle = this;
+        var _ = this;
+        // console.log(_.options.eventName);
 
-        $(this.options.trigger).on(this.options.eventName, function(e) {
+        $(_.options.trigger).on(_.options.eventName, function(e) {
             // Toggle the default classname on the default target
-            // this.toggleState.bind(this);
-
-            if (toggle.options.preventDefault) {
+            if (_.options.preventDefault) {
                 e.preventDefault();
             }
-            toggle.toggleState();
-            // console.log(this);
-            // toggleState.call(toggle);
+
+            _.toggleState();
         });
     }
 
@@ -246,8 +243,73 @@ chopstick.toggle =
 
 $(chopstick.init);
 
-var toggle = new ChopstickToggle();
+var toggleButton2 = new ChopstickToggle({
+        eventName: 'mouseover'
+});
+// toggleButton2.toggleState();
+var toggleButton2 = new ChopstickToggle({
+        trigger: '.js-toggle-button-alpha'
+});
 
-toggle.applyState();
 
-console.log("javascript.js loaded");
+// var toggleButton1 = new ChopstickToggle();
+// toggleButton1.hello();
+// toggleButton1.toggleState();
+
+// toggle.applyState();
+
+// setTimeout(function(){
+//     toggleButton2.removeState();
+// }, 3000);
+
+var mobileNavToggle = new ChopstickToggle({
+    trigger: '.js-nav-trigger',
+    target: '.js-nav',
+    className: 'is-visible'
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if ($('js-nav').hasClass('is-visible')) {
+    console.log(mobileNavToggle.trigger);
+}
+
+
+/* ISSUES */
+/*
+    1. If 2 different instances of ChopstickToggle have the same target, and another event: both events are linked.
+
+
+
+
+
+
+
+
+
+
+*/

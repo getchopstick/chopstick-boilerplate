@@ -15,7 +15,6 @@
     // Define the constructor
     this.ChopstickToggle = function() {
         // Global element references
-        chopstickToggle = this;
 
         // Create default values (super basic toggle)
         var defaults = {
@@ -31,43 +30,41 @@
         this.options = $.extend(defaults, arguments[0]); //https://api.jquery.com/jquery.extend/
         // console.log(this.options);
         // }
-
+        console.log(this.options);
         bindUIEvents.call(this);
     }
 
     // public methods
     ChopstickToggle.prototype.applyState = function() {
         // Apply a certain classname on a certain target
-
+        var _ = this;
+        $(_.options.target).addClass(_.options.className);
     }
 
     ChopstickToggle.prototype.removeState = function() {
         // Remove a certain classname on a certain target
+        var _ = this;
+        $(_.options.target).removeClass(_.options.className);
     }
 
     ChopstickToggle.prototype.toggleState = function() {
         // toggle a certain classname on a certain target
-        var target = $(this.options.target),
-            className = $(this.options.className);
-
-        target.toggleClass(className);
+        var _ = this;
+        $(_.options.target).toggleClass(_.options.className);
     }
 
     // Private methods
     function bindUIEvents() {
-        console.log(this);
-        var toggle = this;
+        var _ = this;
+        // console.log(_.options.eventName);
 
-        $(this.options.trigger).on(this.options.eventName, function(e) {
+        $(_.options.trigger).on(_.options.eventName, function(e) {
             // Toggle the default classname on the default target
-            // this.toggleState.bind(this);
-            if (toggle.options.preventDefault) {
+            if (_.options.preventDefault) {
                 e.preventDefault();
             }
 
-            toggle.toggleState();
-            // console.log(this);
-            // toggleState.call(toggle);
+            _.toggleState();
         });
     }
 
