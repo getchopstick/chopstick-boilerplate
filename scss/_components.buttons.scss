@@ -48,6 +48,13 @@
         outline: 0;
         background-image: none;
     }
+
+    &[disabled],
+    &[disabled]:hover {
+        background: palette(color-neutral,light);
+        color: palette(color-neutral);
+        border: palette(color-neutral);
+    }
 }
 
 // Button display
