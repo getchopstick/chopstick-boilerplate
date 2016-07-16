@@ -70,7 +70,7 @@ module.exports = {
             path + '_posts/*.md',
             path + '_data/*.yml',
             path + '**/*.html',
-            '!' + path + '_site/**/*.*'
+            '!' + path + '_site/**/*'
         ]
     },
 
@@ -86,6 +86,10 @@ module.exports = {
             verbose: false // Logs progress information (optional; default=false)
         },
         dest: path + "img/png"
-    }
+    },
+
+    dependencies: {
+        dest: path + "vendor/"
+    },
 
 };
