@@ -23,7 +23,8 @@
     "gulp-sourcemaps": "1.6.0",
     "gulp-svg2png": "1.0.0",
     "gulp-uglyfly": "1.4.2",
-    "require-dir": "0.3.0"
+    "require-dir": "0.3.0",
+    "run-sequence": "^1.2.2"
   },
   "dependencies": {
     "chopstick-elements": "^0.7.8",
