@@ -11,7 +11,7 @@ It uses the following tools
 
 ## Need  help?
 - Ask your question on twitter: [@GetChopstick](https://twitter.com/GetChopstick)
-- Join the [Slack channel](https://getchopstick.slack.com)
+- Join the [Slack channel](https://getchopstick.herokuapp.com/)
 
 ## Installation
 
@@ -134,6 +134,8 @@ Avoid reliance on other bits.
 
 
 ## Credits
+
+Chopstick is built by a [bunch of people](https://github.com/getchopstick/chopstick-boilerplate/graphs/contributors) who gladly donate their time to build something better.
 
 You are free to contribute to Chopstick via GitHub Pull Requests. We have a couple of simple guidelines we try to follow, of which most are taken from the [CSS Tricks Sass Style Guide](http://css-tricks.com/sass-style-guide). Please refer to the [CONTRIBUTING.md](https://github.com/getchopstick/chopstick-boilerplate/blob/master/CONTRIBUTING.md) for more information
 
