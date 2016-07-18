@@ -143,8 +143,9 @@ chopstick.toggle =
  * - Toggle a class
  */
 
+
+//* to create a closure (scoping)
 (function() {
-    // 'use strict';
 
     // Define the constructor
     this.ChopstickToggle = function() {
@@ -164,6 +165,7 @@ chopstick.toggle =
         this.options = $.extend(defaults, arguments[0]); //https://api.jquery.com/jquery.extend/
         // console.log(this.options);
         // }
+
         console.log(this.options);
         bindUIEvents.call(this);
     }
@@ -243,30 +245,33 @@ chopstick.toggle =
 
 $(chopstick.init);
 
-var toggleButton2 = new ChopstickToggle({
-        eventName: 'mouseover'
+var toggleButton = new ChopstickToggle({
+    target: '.js-toggle-target'
 });
-// toggleButton2.toggleState();
-var toggleButton2 = new ChopstickToggle({
-        trigger: '.js-toggle-button-alpha'
-});
-
-
-// var toggleButton1 = new ChopstickToggle();
-// toggleButton1.hello();
-// toggleButton1.toggleState();
-
-// toggle.applyState();
-
-// setTimeout(function(){
-//     toggleButton2.removeState();
-// }, 3000);
 
 var mobileNavToggle = new ChopstickToggle({
     trigger: '.js-nav-trigger',
     target: '.js-nav',
     className: 'is-visible'
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

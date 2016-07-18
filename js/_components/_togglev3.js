@@ -9,8 +9,9 @@
  * - Toggle a class
  */
 
+
+//* to create a closure (scoping)
 (function() {
-    // 'use strict';
 
     // Define the constructor
     this.ChopstickToggle = function() {
@@ -30,6 +31,7 @@
         this.options = $.extend(defaults, arguments[0]); //https://api.jquery.com/jquery.extend/
         // console.log(this.options);
         // }
+
         console.log(this.options);
         bindUIEvents.call(this);
     }
