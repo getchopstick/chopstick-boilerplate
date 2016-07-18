@@ -3,11 +3,11 @@ Chopstick Boilerplate
 
 By [these people](https://github.com/getchopstick/chopstick-boilerplate/graphs/contributors)
 
-[Chopstick Boilerplate](https://github.com/getchopstick/chopstick-boilerplate) is a mobile-first responsive design boilerplate. It creates a structure and gives you the tools that allow you to easily design bespoke web projects.
+[Chopstick Boilerplate](https://github.com/getchopstick/chopstick-boilerplate) creates a structure and gives you the tools that allow you to easily design bespoke web projects.
 
-Chopstick Boilerplate makes heavy use of the [Chopstick `SCSS` framework](https://github.com/getchopstick/chopstick). It adds tools like [Jekyll](http://jekyllrb.com/) and [Gulp](http://gulpjs.com/) to simplify designing and building in the browser. The boilerplate can be used as a **styleguide**, to build **static websites** or to speed up making **HTML prototypes**.
+Chopstick Boilerplate makes use of the [Chopstick `SCSS` framework](https://github.com/getchopstick/chopstick). It adds tools like [Jekyll](http://jekyllrb.com/) and [Gulp](http://gulpjs.com/) to simplify designing and building in the browser. The boilerplate can be used as a **styleguide**, to build **static websites** or to speed up making **HTML prototypes**.
 
-## Need  help?
+## Need help?
 
 - Ask your question on twitter: [@GetChopstick](https://twitter.com/GetChopstick)
 - Join the [Slack channel](https://getchopstick.herokuapp.com/)
@@ -17,7 +17,7 @@ Chopstick Boilerplate makes heavy use of the [Chopstick `SCSS` framework](https:
 ### Requirements
 
 1. [Ruby](https://www.ruby-lang.org) and [rubygems](https://rubygems.org)
-2. [Node 4.4.4](http://nodejs.org) and [npm 2.15.1](https://npmjs.org) or [NVM](https://github.com/creationix/nvm)
+2. [Node](http://nodejs.org) and [npm](https://npmjs.org)
 
 ### Install
 
@@ -27,25 +27,19 @@ Run the following command from the project root:
 
 This will check if package managers are installed and download required packages for you. If you prefer to install manually, please see [manual installation](https://github.com/getchopstick/chopstick-boilerplate/wiki/Installation#manual-installation).
 
-## Use
+### Use
 
-To compile Chopstick Boilerplate once, `cd` into the project root and run:
-
-    gulp
-
-This will compile the `scss` and build the Jekyll site.
-
-For development there is also a watch task wich will load a browsersync server and watch your all your files for changes:
+Run the following command to load a browsersync server and watch your your files for changes:
 
     gulp watch
 
-We use Gulp as our task runner. There are some basic tasks defined but these can be easily extended by changing the `gulpfile.js`. Browsersync also works as a server for your devices. More info can be found on the [browsersync site](http://www.browsersync.io/).
+[More gulp commands are available](https://github.com/getchopstick/chopstick-boilerplate/wiki/Gulp-Commands)
 
-### SCSS structure.
+## SCSS structure.
 
-The Chopstick SCSS is maintained in separate repositories which are loaded with [Bower](http://bower.io/). We believe these partials should be easy to update and configurable without writing new code. Project specific code should be written in the components layer.
+Project specific code should be written in the components layer. The Chopstick SCSS is maintained in separate repositories which are loaded with [Bower](http://bower.io/). We believe these partials should be easy to update and configurable without writing new code. 
 
-#### Partials
+## Partials
 
 We use the following partials according to the [ITCss](http://itcss.io/) structure.
 
@@ -57,7 +51,7 @@ We use the following partials according to the [ITCss](http://itcss.io/) structu
 6. chopstick-components: contains designed components, chunks of UI (these are maintained in the boilerplate as they are specific to this)
 6. [chopstick-utilities](https://github.com/getchopstick/chopstick-utilities): contains helper classes
 
-#### Usage
+### Changing something in the partials
 
 We try to keep the code as modular as possible. So you can comment out what you don’t use.
 
@@ -71,24 +65,12 @@ If you want to change something within the external partials you have 3 options:
 
 Chopstick aims to support all modern browsers. This includes latest versions of Chrome, Firefox and Safari and the latest mobile browsers on Android, iPhone and Windows Phone. Internet explorer is currently supported starting from IE10 and up.
 
-## Why do we make Chopstick framework
+## Why we make Chopstick framework
 
 - Maintain sensible defaults
 - Enforce a global coding style
 - Create a scalable system for both small and big web projects
 
-## Credits
-
-Chopstick is built by a [bunch of people](https://github.com/getchopstick/chopstick-boilerplate/graphs/contributors) who gladly donate their time to build something better.
-
 ## Contributions
 
 You are free to contribute to Chopstick via GitHub Pull Requests. We have a couple of simple guidelines we try to follow, of which most are taken from the [CSS Tricks Sass Style Guide](http://css-tricks.com/sass-style-guide). Please refer to the [CONTRIBUTING.md](https://github.com/getchopstick/chopstick-boilerplate/blob/master/CONTRIBUTING.md) for more information
-
-We owe a ton of credits to the following projects for inspiration:
-
-* [ITCSS](http://itcss.io/)
-* [SMACSS](https://smacss.com/)
-* [OOCSS](http://oocss.org/)
-* [HTML5 Boilerplate](https://html5boilerplate.com/)
-* [Inuit CSS](http://inuitcss.com/), [Foundation](http://foundation.zurb.com/) and [Bootstrap](http://getbootstrap.com/)
