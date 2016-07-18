@@ -5,7 +5,7 @@ By [these people](https://github.com/getchopstick/chopstick-boilerplate/graphs/c
 
 [Chopstick Boilerplate](https://github.com/getchopstick/chopstick-boilerplate) is a mobile-first responsive design boilerplate. It creates a structure and gives you the tools that allow you to easily design bespoke web projects.
 
-Chopstick Boilerplate makes heavy use of the [Chopstick `scss` framework](https://github.com/getchopstick/chopstick). It adds tools like [Jekyll](http://jekyllrb.com/) and [Gulp](http://gulpjs.com/) to simplify designing and building in the browser.
+Chopstick Boilerplate makes heavy use of the [Chopstick `SCSS` framework](https://github.com/getchopstick/chopstick). It adds tools like [Jekyll](http://jekyllrb.com/) and [Gulp](http://gulpjs.com/) to simplify designing and building in the browser. The boilerplate can be used as a **styleguide**, to build **static websites** or to speed up making **HTML prototypes**.
 
 ## Need  help?
 
@@ -21,32 +21,29 @@ Chopstick Boilerplate makes heavy use of the [Chopstick `scss` framework](https:
 
 ### Install
 
-For automated install just run `sh install.sh` from the project root.
-This will check if package managers are installed and download required packages for you. If you prefer to do it manually, please see [manual installation](https://github.com/getchopstick/chopstick-boilerplate/wiki/Installation#manual-installation).
+Run the following command from the project root:
+
+`sh install.sh`
+
+This will check if package managers are installed and download required packages for you. If you prefer to install manually, please see [manual installation](https://github.com/getchopstick/chopstick-boilerplate/wiki/Installation#manual-installation).
 
 ## Use
 
-We use Gulp as our task runner. There are some basic tasks defined but these can be easily extended by changing the `gulpfile.js`.
-
-To compile Chopstick Boilerplate, `cd` into the project root and run:
+To compile Chopstick Boilerplate once, `cd` into the project root and run:
 
     gulp
 
 This will compile the `scss` and build the Jekyll site.
 
-For development there is also a watch task wich will load a browsersync server and watch your all your files (`*.html, *.md, *.scss, *.js, *.jpg, *.png, *.svg`) for changes:
+For development there is also a watch task wich will load a browsersync server and watch your all your files for changes:
 
     gulp watch
 
-Browsersync also works as a server for your devices. More info can be found on the [browsersync site](http://www.browsersync.io/).
+We use Gulp as our task runner. There are some basic tasks defined but these can be easily extended by changing the `gulpfile.js`. Browsersync also works as a server for your devices. More info can be found on the [browsersync site](http://www.browsersync.io/).
 
-### Boilerplate
+### SCSS structure.
 
-The boilerplate can be used as a **styleguide**, to build **static websites** or to speed up making **HTML prototypes**.
-
-### `.scss` structure.
-
-The Chopstick Scss is maintained in separate repositories which are loaded with [Bower](http://bower.io/). We believe these partials should be easy to update and configurable without writing new code. Project specific code should be written in the components layer.
+The Chopstick SCSS is maintained in separate repositories which are loaded with [Bower](http://bower.io/). We believe these partials should be easy to update and configurable without writing new code. Project specific code should be written in the components layer.
 
 #### Partials
 
@@ -83,6 +80,8 @@ Chopstick aims to support all modern browsers. This includes latest versions of 
 ## Credits
 
 Chopstick is built by a [bunch of people](https://github.com/getchopstick/chopstick-boilerplate/graphs/contributors) who gladly donate their time to build something better.
+
+## Contributions
 
 You are free to contribute to Chopstick via GitHub Pull Requests. We have a couple of simple guidelines we try to follow, of which most are taken from the [CSS Tricks Sass Style Guide](http://css-tricks.com/sass-style-guide). Please refer to the [CONTRIBUTING.md](https://github.com/getchopstick/chopstick-boilerplate/blob/master/CONTRIBUTING.md) for more information
 
