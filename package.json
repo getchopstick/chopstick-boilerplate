@@ -34,7 +34,6 @@
     "chopstick-tools": "^0.7.4",
     "chopstick-utilities": "^0.7.5",
     "jquery": "^3.1.0",
-    "modernizr": "^3.3.1",
-    "respond.js": "^1.4.2"
+    "modernizr": "^3.3.1"
   }
 }
