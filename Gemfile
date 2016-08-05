@@ -7,5 +7,5 @@ group :development do
     gem 'scss_lint'
 
     # Jekyll
-    gem 'jekyll'
+    gem 'jekyll', '~> 3.2', '>= 3.2.1'
 end

@@ -14,7 +14,7 @@ var config = require('../config').jekyll;
 gulp.task('jekyll--build', function (done) {
     browserSync.notify(config.buildMessage);
     return cp
-        .spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml'], {
+        .spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml', '--incremental'], {
             stdio: 'inherit'
         })
         .on('close', done);
