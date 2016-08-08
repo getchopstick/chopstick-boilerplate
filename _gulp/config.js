@@ -70,6 +70,7 @@ module.exports = {
             path + '_posts/*.md',
             path + '_data/*.yml',
             path + '**/*.html',
+            path + '_config.yml',
             '!' + path + '_site/**/*.*'
         ]
     },
