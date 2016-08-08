@@ -1,4 +1,21 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Meta data
 title: 'Chopstick'
 author: ''
 description: 'Chopstick is a framework based on the ITCSS architecture and a series of principles. It creates a structure to easily set-up and build bespoke web projects.'
+
+# Site navigation
+navigation:
+  - title: styleguide
+    url: /styleguide.html
+  - title: grid
+    url: /grid.html
+
+# Exclude these files from the build process
 exclude: ['_site','scss','*scss','Gem*','Guard*','*rb','.sass-cache','.git*','config.rb','*.md','*.json','docroot','node_modules','gulpfile.js','install.sh','lint.yml']

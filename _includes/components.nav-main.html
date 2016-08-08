@@ -1,14 +1,16 @@
 <nav class="c-nav-main js-nav">
     <ul class="o-list c-nav-main__list">
-        <li class="c-nav-main__item {% if page.url contains "index" %}is-selected{% endif %}">
-            <a href="index.html" class="c-nav-main__link">Home</a>
+        <!-- Manually define homepage link -->
+        <li class="c-nav-main__item{% if page.section == "home" %} is-selected{% endif %}">
+            <a href="/" class="c-nav-main__link">Home</a>
         </li>
-        <li class="c-nav-main__item {% if page.url contains "styleguide" %}is-selected{% endif %}">
-            <a href="styleguide.html" class="c-nav-main__link">Styleguide</a>
+
+        <!-- Define your site navigation in _config.yml -->
+        {% for item in site.navigation %}
+        <li class="c-nav-main__item{% if page.url contains item.url %} is-selected{% endif %}">
+            <a href="{{ item.url }}" class="c-nav-main__link">{{ item.title | capitalize }}</a>
         </li>
-        <li class="c-nav-main__item {% if page.url contains "grid" %}is-selected{% endif %}">
-            <a href="grid.html" class="c-nav-main__link">Grid</a>
-        </li>
+        {% endfor %}
     </ul>
 </nav>
 
