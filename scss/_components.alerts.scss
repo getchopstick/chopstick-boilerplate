@@ -52,7 +52,7 @@
     }
 
     .c-alert-box__close {
-        cursor: pointer;
+        cursor: default;
         position: absolute;
         top: #{$alpha-line-height/6}em;
         right: #{$alpha-line-height/3}em;
