@@ -1,218 +1,85 @@
 ---
-layout: default
-title: Patterns
+layout: styleguide
+title: Style guide
 section: styleguide
 ---
-<div class="c-row c-row--alpha">
-    <div class="o-container">
-        <div class="c-section">
-            <h2 class="c-section-title">Base Elements</h2>
 
-            <div class="o-grid o-grid--gutter">
-                <div class="o-grid__item u-2-of-3-bp4">
-                    {% include elements.base.html %}
-                </div>
-                <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">_elements.base.scss</pre>
-                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-base">
-                        <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </button>
-                    <div class="js-snippet-base is-hidden">
-                        {% highlight html linenos=table %}
-                            {% include elements.base.html %}
-                        {% endhighlight %}
+<div class="o-flex-bp3 o-flex--justify-space-between">
+    {% assign items = site.styleguide | sort:"position"  %}
+
+    <nav class="c-row c-row--beta">
+        {% include components.logo.html %}
+
+        <h2>Elements</h2>
+        <ul class="o-list">
+        {% for item in items %}
+            {% if item.section == 'elements' %}
+            <li><a href="#{{ item.title | downcase | remove:' ' }}">{{ item.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+
+        <h2>Components</h2>
+        <ul class="o-list">
+        {% for item in items %}
+            {% if item.section == 'components' %}
+            <li><a href="#{{ item.title | downcase | remove:' ' }}">{{ item.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </nav>
+
+    <section>
+        {% for item in items %}
+        {% if item.section == 'elements' %}
+        <article class="c-row c-row--alpha" id="{{ item.title | downcase | remove:' ' }}">
+            <div class="c-section">
+                <h2 class="c-section-title">{{ item.title }}</h2>
+
+                <div class="o-grid o-grid--gutter">
+                    <div class="o-grid__item">
+                        {{ item }}
+                    </div>
+                    <div class="o-grid__item">
+                        <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-{{ item.title | downcase | remove:' ' }}">
+                            <i class="c-icon c-icon--toggle"></i>HTML snippet
+                        </button>
+                        <div class="js-snippet-{{ item.title | downcase | remove:' ' }} is-hidden">
+{% highlight html linenos=table %}
+{{ item }}
+{% endhighlight %}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
+        {% endif %}
+        {% endfor %}
 
-        <div class="c-section">
-            <h2 class="c-section-title">Colors</h2>
+        {% for item in items %}
+        {% if item.section == 'components' %}
+        <article class="c-row c-row--alpha" id="{{ item.title | downcase | remove:' ' }}">
+            <div class="c-section">
+                <h2 class="c-section-title">{{ item.title }}</h2>
 
-            <div class="o-grid o-grid--gutter">
-                <div class="o-grid__item u-2-of-3-bp4">
-                    {% include trumps.colors.html %}
-                </div>
-                <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">_trumps.colors.scss</pre>
-                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-colors">
-                        <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </button>
-                    <div class="js-snippet-colors is-hidden">
-                        {% highlight html linenos=table %}
-                            {% include trumps.colors.html %}
-                        {% endhighlight %}
+                <div class="o-grid o-grid--gutter">
+                    <div class="o-grid__item">
+                        {{ item }}
+                    </div>
+                    <div class="o-grid__item">
+                        <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-{{ item.title | downcase | remove:' ' }}">
+                            <i class="c-icon c-icon--toggle"></i>HTML snippet
+                        </button>
+                        <div class="js-snippet-{{ item.title | downcase | remove:' ' }} is-hidden">
+{% highlight html linenos=table %}
+{{ item }}
+{% endhighlight %}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="c-section">
-            <h2 class="c-section-title">Buttons</h2>
-
-            <div class="o-grid o-grid--gutter">
-                <div class="o-grid__item u-2-of-3-bp4">
-                    {% include components.buttons.html %}
-                </div>
-                <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">._components.buttons.scss</pre>
-                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-buttons">
-                        <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </button>
-                    <div class="js-snippet-buttons is-hidden">
-                        {% highlight html linenos=table %}
-                            {% include components.buttons.html %}
-                        {% endhighlight %}
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="c-section">
-            <h2 class="c-section-title">Lists</h2>
-
-            <div class="o-grid o-grid--gutter">
-                <div class="o-grid__item u-2-of-3-bp4">
-                    {% include components.lists.html %}
-                </div>
-                <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">._components.lists.scss</pre>
-                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-lists">
-                        <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </button>
-                    <div class="js-snippet-lists is-hidden">
-                        {% highlight html linenos=table %}
-                            {% include components.lists.html %}
-                        {% endhighlight %}
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="c-section">
-            <h2 class="c-section-title">Forms</h2>
-
-            <div class="o-grid o-grid--gutter">
-                <div class="o-grid__item u-2-of-3-bp4">
-                    {% include components.forms.html %}
-                </div>
-                <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">._components.forms.scss</pre>
-                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-forms">
-                        <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </button>
-                    <div class="js-snippet-forms is-hidden">
-                        {% highlight html linenos=table %}
-                            {% include components.forms.html %}
-                        {% endhighlight %}
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="c-section">
-            <h2 class="c-section-title">Alerts</h2>
-
-            <div class="o-grid o-grid--gutter">
-                <div class="o-grid__item u-2-of-3-bp4">
-                    {% include components.alerts.html %}
-                </div>
-                <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">._components.alerts.scss</pre>
-                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-alerts">
-                        <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </button>
-                    <div class="js-snippet-alerts is-hidden">
-                        {% highlight html linenos=table %}
-                            {% include components.alerts.html %}
-                        {% endhighlight %}
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="c-section">
-            <h2 class="c-section-title">Pagination</h2>
-
-            <div class="o-grid o-grid--gutter">
-                <div class="o-grid__item u-2-of-3-bp4">
-                    {% include components.pagination.html %}
-                </div>
-                <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">._components.pagination.scss</pre>
-                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-pagination">
-                        <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </button>
-                    <div class="js-snippet-pagination is-hidden">
-                        {% highlight html linenos=table %}
-                            {% include components.pagination.html %}
-                        {% endhighlight %}
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="c-section">
-            <h2 class="c-section-title">Helpers</h2>
-
-            <div class="o-grid o-grid--gutter">
-                <div class="o-grid__item u-2-of-3-bp4">
-                    {% include trumps.helpers.html %}
-                </div>
-                <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">._trumps.helpers.scss</pre>
-                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-helpers">
-                        <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </button>
-                    <div class="js-snippet-helpers is-hidden">
-                        {% highlight html linenos=table %}
-                            % include trumps.helpers.html %}
-                        {% endhighlight %}
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="c-section">
-            <h2 class="c-section-title">Media object</h2>
-
-            <div class="o-grid o-grid--gutter">
-                <div class="o-grid__item u-2-of-3-bp4">
-                    {% include objects.media.html %}
-                </div>
-                <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">._objects.media.scss</pre>
-                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-media">
-                        <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </button>
-                    <div class="js-snippet-media is-hidden">
-                        {% highlight html linenos=table %}
-                            {% include objects.media.html %}
-                        {% endhighlight %}
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="c-section">
-            <h2 class="c-section-title">Cards</h2>
-
-            <div class="o-grid o-grid--gutter">
-                <div class="o-grid__item u-2-of-3-bp4">
-                    {% include components.cards.html %}
-                </div>
-                <div class="o-grid__item u-1-of-3-bp4">
-                    <pre class="c-scss">._components.cards.scss</pre>
-                    <button class="c-toggle js-show-hide" data-target-selector=".js-snippet-cards">
-                        <i class="c-icon c-icon--toggle"></i>HTML snippet
-                    </button>
-                    <div class="js-snippet-cards is-hidden">
-                        {% highlight html linenos=table %}
-                            {% include components.cards.html %}
-                        {% endhighlight %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        </article>
+        {% endif %}
+        {% endfor %}
+    </section>
 </div>

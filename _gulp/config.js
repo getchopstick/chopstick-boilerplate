@@ -3,12 +3,12 @@
 // Define your tasks & variables here
 // ---
 
-var path = './';
+var path = '';
 
 module.exports = {
 
     scss: {
-        src: path + 'scss/**/*.scss',
+        src: path + '_scss/**/*.scss',
         settings: {
             outputStyle: 'compressed'
         },
@@ -25,7 +25,7 @@ module.exports = {
     },
 
     lint: {
-        src: path + 'scss/**/*.scss',
+        src: path + '_scss/**/*.scss',
         settings: {
             'config': 'lint.yml'
         }

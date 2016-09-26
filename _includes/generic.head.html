@@ -17,7 +17,11 @@
     <script src="vendor/modernizr/modernizr.js"></script>
 
     <!-- Stylesheets -->
+    {% if page.section == 'styleguide' %}
+    <link rel="stylesheet" href="css/styleguide.css">
+    {% else %}
     <link rel="stylesheet" href="css/screen.css">
+    {% endif %}
 
     <link rel="icon" href="/favicon.png">
     <!--

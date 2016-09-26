@@ -6,7 +6,7 @@
 
 .c-row {
     @include padding-tb($alpha-leading,0);
-    @include padding-lr($columns-gutter,$columns-gutter);
+    @include padding-lr($columns-gutter*2,$columns-gutter*2);
 }
 
 .c-row--alpha {

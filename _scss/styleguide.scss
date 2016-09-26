@@ -1,0 +1,22 @@
+/*
+ *  Styleguide
+ *  ---
+ *  Extends the screen.scss with styleguide specific components
+ *  ---
+ *
+ *  Settings: contains global variables and config switches
+ *  Tools: contains default mixins and functions
+ *  Generic: contains ground-zero styles (Normalize.css, resets, box-sizing)
+ *  Elements: contains unclassed HTML elements (type selectors)
+ *  Objects: contains cosmetic-free design patterns
+ *  Components: contains designed components, chunks of UI
+ *  Plugins: contains third-party plugin styles
+ *  Utilities: contains helpers and overrides
+ */
+
+
+// Settings
+@import 'screen';
+
+// Components
+@import 'components.styleguide';
