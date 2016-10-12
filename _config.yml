@@ -13,9 +13,12 @@ description: 'Chopstick is a framework based on the ITCSS architecture and a ser
 # Site navigation
 navigation:
   - title: styleguide
-    url: /styleguide.html
+    url: styleguide/
   - title: grid
-    url: /grid.html
+    url: grid/
+
+# Jekyll settings
+permalink: pretty
 
 # Exclude these files from the build process
 exclude: ['_site','scss','*scss','Gem*','Guard*','*rb','.sass-cache','.git*','config.rb','*.md','*.json','docroot','node_modules','gulpfile.js','install.sh','lint.yml']
