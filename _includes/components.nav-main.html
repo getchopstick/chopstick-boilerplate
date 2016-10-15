@@ -2,13 +2,13 @@
     <ul class="o-list c-nav-main__list">
         <!-- Manually define homepage link -->
         <li class="c-nav-main__item{% if page.section == "home" %} is-selected{% endif %}">
-            <a href="/" class="c-nav-main__link">Home</a>
+            <a href="{{ site.github.url }}/" class="c-nav-main__link">Home</a>
         </li>
 
         <!-- Define your site navigation in _config.yml -->
         {% for item in site.navigation %}
         <li class="c-nav-main__item{% if page.url contains item.url %} is-selected{% endif %}">
-            <a href="{{ item.url }}" class="c-nav-main__link">{{ item.title | capitalize }}</a>
+            <a href="{{ site.github.url }}/{{ item.url }}" class="c-nav-main__link">{{ item.title | capitalize }}</a>
         </li>
         {% endfor %}
     </ul>
