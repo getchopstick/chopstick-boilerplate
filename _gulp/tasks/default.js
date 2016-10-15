@@ -10,6 +10,7 @@ var gulp = require('gulp'),
 gulp.task('default', [
     'dependencies',
     'test',
+    'symbols',
     'scss',
     'js',
     'jekyll--build'

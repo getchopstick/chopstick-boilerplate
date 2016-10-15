@@ -28,6 +28,16 @@
     border: 0;
     outline: 0;
     color: palette(color-alpha);
+
+    > .c-symbol {
+        position: relative;
+        top: -2px;
+        transition: transform .1s ease-in-out;
+    }
+
+    &.is-toggled > .c-symbol {
+        transform: rotate(90deg);
+    }
 }
 
 .c-swatch {

@@ -1,0 +1,14 @@
+{
+  "name": "chopstick-boilerplate",
+  "dependencies": {
+    "chopstick-settings": ">=0.7.4",
+    "chopstick-tools": ">=0.7.4",
+    "chopstick-generic": ">=0.7.4",
+    "chopstick-elements": ">=0.7.8",
+    "chopstick-objects": ">=0.7.6",
+    "chopstick-utilities": ">=0.7.5",
+    "jquery": "~1.11.1",
+    "modernizr": "~2.8.3",
+    "svgxuse": "^1.1.21"
+  }
+}
