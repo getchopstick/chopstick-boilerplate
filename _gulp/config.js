@@ -15,12 +15,10 @@ module.exports = {
         cssDest: path + 'css/',
         jekyllCssDes: path + '_site/css/',
         prefix: [                          // Autoprefixer supported browsers
-            'last 2 version',
-            '> 1%',
-            'ie 8',
-            'ie 9',
-            'ios 6',
-            'android 4'
+            'last 2 versions',
+            'ie 9-11',
+            'ios 8-10',
+            'android 4-5'
         ]
     },
 
