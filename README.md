@@ -12,14 +12,14 @@ Chopstick Boilerplate makes use of the [Chopstick `SCSS` framework](https://gith
 - Ask your question on twitter: [@GetChopstick](https://twitter.com/GetChopstick)
 - Join the [Slack channel](https://getchopstick.herokuapp.com/)
 
-## Setup and usage
+## Installation
 
 ### Requirements
 
 1. [Ruby](https://www.ruby-lang.org) and [rubygems](https://rubygems.org)
 2. [Node](http://nodejs.org) and [npm](https://npmjs.org)
 
-### Install
+### Automated Installation
 
 Run the following command from the project root:
 
@@ -37,7 +37,7 @@ Run the following command to load a browsersync server and watch your your files
 
 ## SCSS structure.
 
-Project specific code should be written in the components layer. The Chopstick SCSS is maintained in separate repositories which are loaded with [Bower](http://bower.io/). We believe these partials should be easy to update and configurable without writing new code.
+Project specific code should be written in the components layer. The Chopstick SCSS is maintained in separate repositories which are loaded with `npm`. We believe these partials should be easy to update and configurable without writing new code.
 
 [Read more about partials](https://github.com/getchopstick/chopstick-boilerplate/wiki/SCSS-Partials)
 
