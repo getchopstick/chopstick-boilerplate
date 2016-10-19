@@ -1,0 +1,368 @@
+//
+//  Default settings
+//  ---
+//
+//  Global
+//  ---
+//  Colors
+//  Modular scale
+//  Font settings
+//  UI (border-radius, -width, -style)
+//  Z-indexes
+//  Breakpoints
+//  Grid
+//  Increments
+//  Animations
+//
+//  Element settings
+//  ---
+//  Page
+//  Typography
+//  Images
+//  Forms
+//  Tables
+//
+//  Object settings
+//  ---
+//  Grid
+//  Media
+//
+//  Utilities
+//  ---
+//  Debug
+//
+
+// ---
+// Colors
+// ---
+
+// Palette function > eg. palette(color-alpha,base)
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+// Base colors
+$color-neutral                      : #aaa !default;
+
+$color-alpha                        : #0074D9 !default;
+$color-beta                         : #2ECC40 !default;
+
+$color-error                        : #FF4136 !default;
+$color-success                      : #2ECC40 !default;
+$color-notice                       : #FF851B !default;
+
+// Palettes
+$palettes: (
+    color-neutral: (
+        x-light                     : hsl(hue($color-neutral),0,100),
+        light                       : hsl(hue($color-neutral),0,90),
+        base                        : $color-neutral,
+        dark                        : hsl(hue($color-neutral),0,30),
+        x-dark                      : hsl(hue($color-neutral),0,10)
+    ),
+    color-alpha: (
+        light                       : hsl(hue($color-alpha),70,60),
+        base                        : $color-alpha,
+        dark                        : hsl(hue($color-alpha),100,25),
+        x-dark                      : hsl(hue($color-alpha),100,15)
+    ),
+    color-beta: (
+        light                       : hsl(hue($color-beta),70,60),
+        base                        : $color-beta,
+        dark                        : hsl(hue($color-beta),100,25),
+        x-dark                      : hsl(hue($color-beta),100,15)
+    ),
+    color-error: (
+        light                       : hsl(hue($color-error),70,60),
+        base                        : $color-error,
+        dark                        : hsl(hue($color-error),100,35),
+    ),
+    color-success: (
+        light                       : hsl(hue($color-success),70,60),
+        base                        : $color-success,
+        dark                        : hsl(hue($color-success),100,35),
+    ),
+    color-notice: (
+        light                       : hsl(hue($color-notice),70,60),
+        base                        : $color-notice,
+        dark                        : hsl(hue($color-notice),100,35),
+    )
+) !default;
+
+
+// ---
+// Modular scale
+// ---
+
+// manual modular scale font sizes
+// based on http://modularscale.com/scale/?px1=16&px2=18&ra1=1.333&ra2=0
+
+$ms-3                               : 11 !default;
+$ms-2                               : 12 !default;
+$ms-1                               : 14 !default;
+$ms0                                : 16 !default;
+$ms1                                : 18 !default;
+$ms2                                : 21 !default;
+$ms3                                : 23 !default;
+$ms4                                : 28 !default;
+$ms5                                : 31 !default;
+$ms6                                : 37 !default;
+$ms7                                : 42 !default;
+$ms8                                : 50 !default;
+$ms9                                : 56 !default;
+$ms10                               : 67 !default;
+$ms11                               : 75 !default;
+$ms12                               : 89 !default;
+$ms13                               : 100 !default;
+
+// ---
+// Font settings
+// ---
+
+$alpha-font-family                  : sans-serif !default;
+$beta-font-family                   : serif !default;
+
+$alpha-font-size                    : $ms0 !default;
+
+$alpha-font-weight                  : 400 !default;
+$beta-font-weight                   : 700 !default;
+
+$alpha-line-height                  : 1.5 !default;
+
+$alpha-leading                      : 1 !default;
+$beta-leading                       : 2 !default;
+
+// ---
+// UI
+// ---
+
+$radius                             : 5px !default;
+$border-width                       : 1px !default;
+$border-style                       : solid !default;
+
+
+// ---
+// Z-indexes
+// ---
+
+$z-indexes: (
+    alpha                           : 1,
+    beta                            : 2,
+    gamma                           : 3,
+    delta                           : 4,
+    epsilon                         : 5
+) !default;
+
+// ---
+// Breakpoints
+// ---
+
+$breakpoints: (
+    bp1                             : 320/16*1em,
+    bp2                             : 480/16*1em,
+    bp3                             : 680/16*1em,
+    bp4                             : 960/16*1em,
+    bp5                             : 1140/16*1em
+) !default;
+
+// ---
+// Grid
+// ---
+
+// 1 times the $alpha-font-size. It's calculated in rem in _tools.spacing.scss
+$columns-gutter                     : 1 !default;
+
+// Define the amount of columns in the grid
+$columns: (
+    2,
+    3,
+    4,
+    5,
+    6
+) !default;
+
+// ---
+// Increments
+// ---
+
+$increments: (
+    alpha                           : 0,
+    beta                            : .5,
+    gamma                           : 1,
+    delta                           : 1.5,
+    epsilon                         : 2
+) !default;
+
+// ---
+// Animations
+// ---
+
+$animation-duration-alpha           : .1s !default;
+$animation-duration-beta            : .2s !default;
+$animation-duration-gamma           : .3s !default;
+$animation-easing-alpha             : ease-in-out !default;
+$animation-easing-beta              : cubic-bezier(.68, -.55, .265, 1.55) !default; // bouncy
+
+// ---
+// Page
+// ---
+
+$html-font-family                   : $alpha-font-family !default;
+$html-font-weight                   : $alpha-font-weight !default;
+$html-font-size                     : $alpha-font-size !default;
+$html-line-height                   : $alpha-line-height !default;
+
+$html-responsive-font-size          : false !default;
+$html-responsive-font-breakpoint    : bp5 !default;
+$html-responsive-font-magnification : 112.5% !default;
+
+$html-background-color              : palette(color-neutral,dark) !default;
+$body-color                         : palette(color-neutral,dark) !default;
+
+$body-font-smoothing                : true !default;
+
+$body-selection-background-color    : palette(color-neutral,dark) !default;
+$body-selection-color               : palette(color-neutral,light) !default;
+$body-selection-text-shadow         : none !default;
+
+// ---
+// Typography
+// ---
+
+$h1-font-family                     : $alpha-font-family !default;
+$h1-font-weight                     : $alpha-font-weight !default;
+$h1-font-size                       : $ms6 !default;
+$h1-line-height                     : 2 !default;
+$h1-margin-bottom                   : $alpha-leading !default;
+
+$h2-font-family                     : $alpha-font-family !default;
+$h2-font-weight                     : $alpha-font-weight !default;
+$h2-font-size                       : $ms4 !default;
+$h2-line-height                     : 1.5 !default;
+$h2-margin-bottom                   : $alpha-leading !default;
+
+$h3-font-family                     : $alpha-font-family !default;
+$h3-font-weight                     : $alpha-font-weight !default;
+$h3-font-size                       : $ms3 !default;
+$h3-line-height                     : 1.25 !default;
+$h3-margin-bottom                   : $alpha-leading !default;
+
+$h4-font-family                     : $alpha-font-family !default;
+$h4-font-weight                     : $alpha-font-weight !default;
+$h4-font-size                       : $ms2 !default;
+$h4-line-height                     : 1.25 !default;
+$h4-margin-bottom                   : $alpha-leading !default;
+
+$h5-font-family                     : $alpha-font-family !default;
+$h5-font-weight                     : $alpha-font-weight !default;
+$h5-font-size                       : $ms2 !default;
+$h5-line-height                     : 1 !default;
+$h5-margin-bottom                   : $alpha-leading !default;
+
+$h6-font-family                     : $alpha-font-family !default;
+$h6-font-weight                     : $alpha-font-weight !default;
+$h6-font-size                       : $ms1 !default;
+$h6-line-height                     : 1 !default;
+$h6-margin-bottom                   : $alpha-leading !default;
+
+$base-font-size                     : $alpha-font-size !default;
+$base-line-height                   : 1 !default;
+$base-margin-bottom                 : $beta-leading !default;
+$base-indent                        : 2 !default;
+
+$blockquote-font-style              : italic !default;
+$blockquote-font-size               : $ms1 !default;
+$blockquote-line-height             : 1 !default;
+$blockquote-margin-bottom           : $alpha-leading !default;
+
+$small-font-size                    : $ms-1 !default;
+$small-line-height                  : 1 !default;
+$small-margin-bottom                : $alpha-leading !default;
+
+$horizontal-rule-border-width       : 1px 0 0 !default;
+$horizontal-rule-border-style       : solid !default;
+$horizontal-rule-border-color       : palette(color-neutral,light) !default;
+
+$horizontal-rule-margin-top         : 0 !default;
+$horizontal-rule-margin-bottom      : $alpha-leading !default;
+
+$link-transition                    : none !default;
+
+$link-decoration                    : none !default;
+$link-decoration--hover             : underline !default;
+
+$link-color                         : palette(color-alpha) !default;
+$link-color--visited                : palette(color-alpha) !default;
+$link-color--hover                  : palette(color-alpha,light) !default;
+$link-color--focus                  : palette(color-alpha,light) !default;
+
+$link-outline                       : 0 !default;
+$link-outline--focus                : thin dotted !default;
+
+// ---
+// Images
+// ---
+
+$img-max-width                      : 100% !default;
+$img-border                         : 0 !default;
+
+// ---
+// Forms
+// ---
+
+$fieldset-border                    : 0 !default;
+$fieldset-margin-bottom             : $alpha-leading !default;
+
+$legend-font-size                   : $alpha-font-size !default;
+$legend-line-height                 : $alpha-line-height !default;
+$legend-margin-bottom               : $alpha-leading !default;
+
+$label-font-size                    : $alpha-font-size !default;
+$label-line-height                  : $alpha-line-height !default;
+$label-margin-bottom                : $alpha-leading !default;
+
+$placeholder-font-family            : $alpha-font-family !default;
+$placeholder-font-style             : italic !default;
+$placeholder-color                  : palette(color-neutral, light) !default;
+
+$firefox-inner-border-fix           : true !default;
+
+// ---
+// Tables
+// ---
+
+$table-font-family                  : $alpha-font-family !default;
+$table-align                        : left !default;
+
+$caption-font-family                : $alpha-font-family !default;
+$caption-font-weight                : $beta-font-weight;
+$caption-align                      : center !default;
+$caption-margin-bottom              : $alpha-leading !default;
+$caption-padding-bottom             : $alpha-leading !default;
+
+// ---
+// Grid
+// ---
+
+$grid-max-width                     : map-get($breakpoints,bp5) !default;
+$grid-gutter                        : $columns-gutter !default;
+
+// ---
+// Media
+// ---
+
+$media-object-gutter                : $columns-gutter !default;
+$media-object-margin-bottom         : $alpha-leading !default;
+
+// ---
+// Media-embed
+// ---
+
+$media-embed-ratio                  : 62.5% !default;
+$media-embed-margin-bottom          : $alpha-leading !default;
+
+// ---
+// Debug
+// ---
+
+$debug-mode                         : false !default; // toggles the debug mode
