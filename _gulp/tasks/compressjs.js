@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 
 var config = require('../config').compressjs;
 
-//task
+// task
 gulp.task('compressjs', function() {
     gulp.src(config.src)
         .pipe(uglyfly())

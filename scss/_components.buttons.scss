@@ -23,14 +23,13 @@
     text-align: center;
     vertical-align: middle;
     touch-action: manipulation; /* [1] */
-    cursor: pointer;
     background-image: none; /* [2] */
     white-space: nowrap; /* [3] */
     border-radius: $radius;
     border-style: solid;
     border-width: 1px;
-    transition-duration: .1s;
-    transition-timing-function: ease-in-out;
+    transition-duration: $animation-duration-alpha;
+    transition-timing-function: $animation-easing-alpha;
     transition-property: background, color, border;
     outline: none;
     line-height: normal;
@@ -47,6 +46,13 @@
     &:active {
         outline: 0;
         background-image: none;
+    }
+
+    &[disabled],
+    &[disabled]:hover {
+        background: palette(color-neutral,light);
+        color: palette(color-neutral);
+        border: palette(color-neutral);
     }
 }
 

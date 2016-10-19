@@ -1,7 +1,13 @@
 # Contributing
 
-You are free to contribute to Chopstick via GitHub Pull Requests. We have a couple of simple guidelines we try to follow, of which most are taken from the [CSS Tricks Sass Style Guide](http://css-tricks.com/sass-style-guide)
+You are free to contribute to Chopstick via GitHub Pull Requests (more on that later). Be like a good scout: if you find something you can improve, however small, fix it and send us a pull request. Many small improvements over time attribute to something greater!
 
+We have a couple of simple guidelines we try to follow, of which most are taken from the [CSS Tricks Sass Style Guide](http://css-tricks.com/sass-style-guide)
+
+## Issues and pull requests
+
+- We close issues after 14 days of inactivity
+- You can comment on pull requests during 7 days
 
 ## Git branch model
 [A successful git branching model](http://nvie.com/posts/a-successful-git-branching-model/)

@@ -1,9 +1,9 @@
+<!-- A simple polyfill that fetches external SVGs referenced in <use> elements when the browser itself fails to do so. -->
+<script defer src="{{ site.github.url }}/vendor/svgxuse/svgxuse.min.js"></script>
+
 <!-- Always Load jQuery First -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="/vendor/jquery/dist/jquery.min.js"><\/script>')</script>
-
-<!-- Make responsive website responsive in IE7 & 8 -->
-<!--[if IE 8 | IE 7]><script src="/vendor/respond/dest/respond.min.js"></script><![endif]-->
+<script>window.jQuery || document.write('<script src="{{ site.github.url }}/vendor/jquery/dist/jquery.min.js"><\/script>')</script>
 
 <!-- Theme specific JavaScript. Add your other scripts here -->
-<script src="js/theme.concat.js"></script>
+<script src="{{ site.github.url }}/js/theme.concat.js"></script>

@@ -9,7 +9,7 @@ var gulp = require('gulp');
 // configfile
 var config = require('../config').lint;
 
-// // task
+// task
 gulp.task('test', function () {
     gulp.src(config.src)
         .pipe(scsslint(config.settings))

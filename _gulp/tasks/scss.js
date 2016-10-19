@@ -20,8 +20,8 @@ var processors = [
     autoprefixer(config.prefix)
 ];
 
-// // task
-gulp.task('scss', function () {
+// task
+gulp.task('scss', ['dependencies'], function () {
     gulp.src(config.src)
         .pipe(sourcemaps.init())
         .pipe(sass.sync(config.settings)
@@ -30,6 +30,6 @@ gulp.task('scss', function () {
         .pipe(filesize())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(config.jekyllCssDes))
-        .pipe(browserSync.reload({stream:true}))
+        .pipe(browserSync.stream({match: '**/*.css'}))
         .pipe(gulp.dest(config.cssDest))
 });

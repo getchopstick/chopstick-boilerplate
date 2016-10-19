@@ -3,7 +3,7 @@
 // Define your tasks & variables here
 // ---
 
-var path = './';
+var path = '';
 
 module.exports = {
 
@@ -15,12 +15,10 @@ module.exports = {
         cssDest: path + 'css/',
         jekyllCssDes: path + '_site/css/',
         prefix: [                          // Autoprefixer supported browsers
-            'last 2 version',
-            '> 1%',
-            'ie 8',
-            'ie 9',
-            'ios 6',
-            'android 4'
+            'last 2 versions',
+            'ie 9-11',
+            'ios 8-10',
+            'android 4-5'
         ]
     },
 
@@ -64,14 +62,15 @@ module.exports = {
 
     watch: {
         jekyllSource: [    // Files that trigger a Jekyll rebuild
-            path + 'img/*.png',
-            path + 'img/*.jpg',
-            path + 'img/*.svg',
-            path + '_includes/**/*.html',
-            path + '_layouts/*.html',
+            path + 'img/**/*.png',
+            path + 'img/**/*.jpg',
+            path + 'img/**/*.svg',
+            path + '_includes/**/*.svg',
             path + '_posts/*.md',
             path + '_data/*.yml',
-            path + '*.html'
+            path + '**/*.html',
+            path + '_config.yml',
+            '!' + path + '_site/**/*'
         ]
     },
 
@@ -80,13 +79,15 @@ module.exports = {
         dest: path + '_site/js/'
     },
 
-    svg2png: {
-        src: path + "img/svg/*.svg",
-        settings : {
-            scaling : 2, // The scaling factor (optional; default=1.0)
-            verbose: false // Logs progress information (optional; default=false)
-        },
-        dest: path + "img/png"
+    dependencies: {
+        dest: path + "vendor/"
+    },
+
+    symbols: {
+        src: path + '_artwork/symbols/**/*.svg', // Location of source icons
+        dest: path + 'img/svg', // Destination of main SVG
+        prefix: 'c-symbol-', // SVG symbols ID prefix e.g. `c-symbol-right`
+        class: 'c-symbolset' // Main SVG import classname
     }
 
 };
