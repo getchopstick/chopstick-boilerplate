@@ -14,6 +14,7 @@
  *  Components: contains designed components, chunks of UI
  *  Plugins: contains third-party plugin styles
  *  Utilities: contains helpers and overrides
+ *  Shame: nasty, hacky, quick-fix CSS
  */
 
 // scss-lint:disable StringQuotes
@@ -21,34 +22,33 @@
 // scss-lint:enable StringQuotes
 
 // Settings
-@import 'settings.colors';
-@import 'settings.global';
+@import 'settings.default';
 
 // Tools
-@import '../vendor/chopstick-tools/tools.functions';
-@import '../vendor/chopstick-tools/tools.mixins';
-@import '../vendor/chopstick-tools/tools.spacing';
-@import '../vendor/chopstick-tools/tools.typography';
+@import '../vendor/chopstick-sass/scss/tools.functions';
+@import '../vendor/chopstick-sass/scss/tools.mixins';
+@import '../vendor/chopstick-sass/scss/tools.spacing';
+@import '../vendor/chopstick-sass/scss/tools.typography';
 
 /* Generic */
-@import '../vendor/chopstick-generic/generic.normalize';
-@import '../vendor/chopstick-generic/generic.reset';
-@import '../vendor/chopstick-generic/generic.box-sizing';
+@import '../vendor/chopstick-sass/scss/generic.normalize';
+@import '../vendor/chopstick-sass/scss/generic.reset';
+@import '../vendor/chopstick-sass/scss/generic.box-sizing';
 
 /* Elements */
-@import '../vendor/chopstick-elements/elements.page';
-@import '../vendor/chopstick-elements/elements.typography';
-@import '../vendor/chopstick-elements/elements.images';
-@import '../vendor/chopstick-elements/elements.forms';
-@import '../vendor/chopstick-elements/elements.tables';
+@import '../vendor/chopstick-sass/scss/elements.page';
+@import '../vendor/chopstick-sass/scss/elements.typography';
+@import '../vendor/chopstick-sass/scss/elements.images';
+@import '../vendor/chopstick-sass/scss/elements.forms';
+@import '../vendor/chopstick-sass/scss/elements.tables';
 
 /* Objects */
-@import '../vendor/chopstick-objects/objects.grid';
-@import '../vendor/chopstick-objects/objects.flexbox';
-@import '../vendor/chopstick-objects/objects.media';
-@import '../vendor/chopstick-objects/objects.media-embed';
-@import '../vendor/chopstick-objects/objects.list';
-@import '../vendor/chopstick-objects/objects.tables';
+@import '../vendor/chopstick-sass/scss/objects.grid';
+@import '../vendor/chopstick-sass/scss/objects.flexbox';
+@import '../vendor/chopstick-sass/scss/objects.media';
+@import '../vendor/chopstick-sass/scss/objects.media-embed';
+@import '../vendor/chopstick-sass/scss/objects.list';
+@import '../vendor/chopstick-sass/scss/objects.tables';
 
 /* Components */
 @import 'components.navigation';
@@ -70,15 +70,16 @@
 @import 'plugins.googlemaps';
 
 /* Utilities */
-@import '../vendor/chopstick-utilities/utilities.widths';
-@import '../vendor/chopstick-utilities/utilities.push';
-@import '../vendor/chopstick-utilities/utilities.pull';
-@import '../vendor/chopstick-utilities/utilities.align';
-@import '../vendor/chopstick-utilities/utilities.spacing';
-@import '../vendor/chopstick-utilities/utilities.colors';
-@import '../vendor/chopstick-utilities/utilities.layers';
-@import '../vendor/chopstick-utilities/utilities.states';
-@import '../vendor/chopstick-utilities/utilities.print';
-@import '../vendor/chopstick-utilities/utilities.debug';
+@import '../vendor/chopstick-sass/scss/utilities.widths';
+@import '../vendor/chopstick-sass/scss/utilities.push';
+@import '../vendor/chopstick-sass/scss/utilities.pull';
+@import '../vendor/chopstick-sass/scss/utilities.align';
+@import '../vendor/chopstick-sass/scss/utilities.spacing';
+@import '../vendor/chopstick-sass/scss/utilities.colors';
+@import '../vendor/chopstick-sass/scss/utilities.layers';
+@import '../vendor/chopstick-sass/scss/utilities.states';
+@import '../vendor/chopstick-sass/scss/utilities.print';
+@import '../vendor/chopstick-sass/scss/utilities.debug';
 
+/* Nasty, hacky, quick-fix CSS: http://csswizardry.com/2013/04/shame-css/ */
 @import 'shame';

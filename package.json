@@ -30,13 +30,8 @@
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
-    "chopstick-elements": "^0.7.8",
-    "chopstick-generic": "^0.7.4",
-    "chopstick-objects": "^0.7.6",
-    "chopstick-settings": "^0.7.4",
-    "chopstick-tools": "^0.7.4",
-    "chopstick-utilities": "^0.7.5",
-    "svgxuse": "^1.1.22",
-    "jquery": "^3.1.0"
+    "chopstick-sass": "^1.0.1",
+    "jquery": "^3.1.0",
+    "svgxuse": "^1.1.22"
   }
 }
