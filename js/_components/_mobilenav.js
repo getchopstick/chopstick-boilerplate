@@ -1,31 +1,8 @@
-var mobileNavSettings
-chopstick.mobileNav =
-{
-    settings:
-    {
-        navigation: $('.js-nav'),
-        trigger: $('.js-nav-trigger')
-    },
+export default function mobileNav(navigation = $('.js-nav'), trigger = $('.js-nav-trigger')) {
 
-    init: function()
-    {
-        // Initialize mobile nav settings
-        mobileNavSettings = chopstick.mobileNav.settings;
-        // Bind toggle events
-        chopstick.mobileNav.bindUIEvents();
-    },
+    trigger.on('click', function() {
+        navigation.toggleClass('is-visible');
+        trigger.toggleClass('is-active');
+    });
 
-    bindUIEvents: function()
-    {
-        mobileNavSettings.trigger.on('click', function() {
-            chopstick.mobileNav.toggleNavigation();
-        });
-    },
-
-    // build mobile nav
-    toggleNavigation: function()
-    {
-        mobileNavSettings.navigation.toggleClass('is-visible');
-        mobileNavSettings.trigger.toggleClass('is-active');
-    }
-};
+}

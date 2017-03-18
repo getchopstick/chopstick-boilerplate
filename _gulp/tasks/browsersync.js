@@ -15,6 +15,6 @@ gulp.task('browsersync', function() {
     browserSync.init(config);
 });
 
-gulp.task('browsersyncReload', function() {
+gulp.task('browsersyncReload', ['webpack'], function() {
     browserSync.reload();
 });

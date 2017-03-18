@@ -29,12 +29,17 @@ module.exports = {
         }
     },
 
+    webpack: {
+        src: 'js/app.js',
+        concatFilename: 'bundle.js',
+        dest: 'js/',
+        jekyllDest: '_site/js/',
+    },
+
     js: {
         src : [  // source js file
-          path + 'js/theme.js',
-          path + 'js/_components/*.js',
-          path + 'js/loader.js'
-
+          path + 'js/_components/*',
+          path + 'js/app.js'
         ],
         concatFilename: 'theme.concat.js', // result filename
         jekyllJsDest: path + '_site/js/',

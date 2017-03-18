@@ -10,6 +10,9 @@
   "main": "gulpfile.js",
   "devDependencies": {
     "autoprefixer": "6.3.6",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015-native-modules": "^6.9.4",
     "browser-sync": "2.12.8",
     "del": "^2.2.1",
     "gulp": "3.9.1",
@@ -26,8 +29,10 @@
     "gulp-svg-symbols": "^2.0.0",
     "gulp-svgmin": "^1.2.3",
     "gulp-uglyfly": "1.4.2",
+    "gulp-webpack": "^1.5.0",
     "require-dir": "0.3.0",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "webpack": "^2.1.0-beta.25"
   },
   "dependencies": {
     "chopstick-sass": "^1.0.1",
