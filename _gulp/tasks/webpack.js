@@ -1,8 +1,6 @@
 var gulp = require('gulp');
 var webpack = require('gulp-webpack');
-
 var config = require('../config').webpack;
-
 var webpackConfig = require('../webpack.config');
 
 gulp.task('webpack', function () {
